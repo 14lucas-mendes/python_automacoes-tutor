@@ -1,14 +1,44 @@
 ---
 feature: ai-tutor-hardening-migration
-status: designed
+status: delivered
 updated: 2026-09-12
 branch: migrate/ai-tutor-hardening
-commits: 7e4a891..
+commits: 7e4a891..c460270
 ---
 
 # Migração do estudo para o núcleo ai-tutor endurecido
 
 ## Report
+
+**O que foi construído** — O estudo `python_automacoes-tutor`, criado sobre a versão de 03/09 da skill, agora satisfaz o contrato endurecido de 12/09. Os 105 IDs de entidade (7 tópicos, 61 evidências, 9 sessões, 14 lições, 3 pontos fracos, 4 projetos, 7 fontes) passaram ao prefixo canônico com sublinhado, e a renomeação cobriu listas de IDs, referências e prosa (`next_step`, `checkpoint`, além da abreviação `lesson-02`). As lições trocaram `topic_ids` pelo `topic_id` único, os pontos fracos passaram a `entered_at` com `open` → `active`, e cada evidência ganhou `reference: {type, id}` preservando o `location` original.
+
+Os dois registries que o contrato tornou canônicos existem agora: `.ai-tutor/cards.json` (vazio, sem cards no estudo) e `.ai-tutor/sources.json` com as 7 fontes que antes moravam dentro de `state.json`, já com `author_or_institution`, `authority_reason`, `topic_ids`, `lesson_ids` e `publication_date`. Todo JSON canônico carrega `revision`, e `state.json` avançou de 79 para 80 como token CAS. Nenhum dado foi perdido: as contagens de entidades são idênticas às de antes, e a narrativa de 21 KB do `session-log.md` foi preservada byte a byte, com o `curriculum.md` recebendo apenas a troca de IDs.
+
+A skill endurecida está instalada no MiMo Desktop em `~/.config/mimocode/skills/ai-tutor/`, com os três `locales/*.json` que a página de Plugins lê.
+
+**Verificação** — do `skill_root` (`ai-tutor-base`), com todas as varreduras próprias do estudo:
+
+| Comando | Resultado |
+| --- | --- |
+| `py -m scripts.validate_study <study>` | PASS — `STUDY VALIDATION: PASS` |
+| `py scripts/validate_study.py <study>` | PASS — mesmo resultado pelo entrypoint direto |
+| `py scripts/validate_skill.py <skill_root>` | PASS — `VALIDATION: PASS` |
+| `py -m pytest tests -q` (skill_root) | PASS — 82 passed, 5 subtests |
+| `py <installed>/scripts/validate_skill.py <installed>` | PASS |
+| `py -m pytest tests -q` (installed) | PASS — 82 passed, 5 subtests |
+| migração `--dry-run` sobre candidato em staging | PASS — valida limpo, nada escrito |
+| replay do script corrigido sobre cópia limpa do baseline | PASS — 10 arquivos com SHA256 idêntico ao entregue |
+| varredura de tokens legados no estudo | 0 tokens legados vivos |
+
+A revisão independente não encontrou achado crítico: nenhum ID deixado para trás, nenhuma referência quebrada, nenhum campo perdido, nenhuma prosa corrompida. Os três achados de robustez e as duas divergências pré-existentes estão registrados em D4/D5 e no journey log.
+
+**Journey log**
+
+- O primeiro corte da migração validou limpo nos dois entrypoints do `validate_study` e ainda assim deixou 9 IDs obsoletos: `topics[].prerequisite_topic_ids` e as menções em prosa não eram conferidos por nenhum validador. Renomear só os campos que o validador olha é uma armadilha real — a verificação tem de varrer a árvore inteira.
+- `validate_study` retorna cedo quando falta `cards.json` ou `sources.json`, então a contagem inicial de 258 não conformidades só apareceu depois de montar um candidato em staging com os arquivos vazios no lugar.
+- A abreviação `lesson-02` na prosa não era chave do mapa de 105 IDs e escapou da primeira passagem; passou a exigir uma segunda regra de prefixo, com guarda para não reescrever o nome de arquivo `session-log.md`.
+- `scripts/projections.py` reescreve `flashcards.md` e `session-log.md` incondicionalmente, apesar de `references/architecture.md` descrever a escrita como seletiva. Num estudo com log escrito à mão, rodar o comando documentado destrói a narrativa — por isso o estudo carrega um aviso no topo do arquivo.
+- Divergências pré-existentes que a migração não introduziu e não corrigiu: o `session-log.md` marca a sessão de debugging como "em andamento" enquanto o estado canônico diz `completed`; e as fontes FastAPI apontam para tópicos cujo escopo foi renomeado na migração curricular (SQL relacional, HTTP e APIs REST).
 
 ## [S1] Problem
 
@@ -99,11 +129,11 @@ Payload copiado do snapshot endurecido para `~/.config/mimocode/skills/ai-tutor/
 
 ## Tasks
 
-- [ ] T1: Preparar workspace (git init, commit de baseline, branch) — aceite: `main` com o estudo intacto em `7e4a891` e branch `migrate/ai-tutor-hardening` ativa (covers: S1)
-- [ ] T2: Escrever esta spec — aceite: documento presente em `docs/compose/spec/` (covers: S2)
-- [ ] T3: Migrar o estado canônico — aceite: `validate_state` e `_validate_config` sem erros sobre os payloads migrados; `cards.json`/`sources.json`/`revision` criados; `sources` removido de `state.json` (covers: D1, D2, D3; depends: T1)
-- [ ] T4: Renomear IDs nas projeções Markdown — aceite: nenhum ID legado com `prefix-` resta em `curriculum.md`, `session-log.md`, `lessons/00-diagnostico-e-ambiente.md` e `.cursor/rules/obsidian-lesson-diary.mdc`; `session-log.md` preserva a narrativa (covers: D2, D4; depends: T3)
-- [ ] T5: Criar `.ai-tutor/migrations/` com backup pré-migração e o script da migração, e regenerar `flashcards.md` — aceite: backup contém os arquivos originais; `flashcards.md` corresponde à saída de `render_flashcards` (covers: D1, D4; depends: T3)
-- [ ] T6: Validar com o validador oficial — aceite: `python -m scripts.validate_study "<study_root>"` imprime `STUDY VALIDATION: PASS` (covers: D5; depends: T3, T4, T5)
-- [ ] T7: Instalar a skill no MiMo Desktop — aceite: `~/.config/mimocode/skills/ai-tutor/` com SKILL.md, references, assets, scripts, agents, tests e os três `locales/*.json`; `validate_skill.py` retorna `PASS` sobre o diretório instalado (covers: D6; depends: T1)
-- [ ] T8: Revisão independente e relatório final — aceite: revisão separada de conformidade e consistência, achados críticos tratados (covers: S2; depends: T6, T7)
+- [x] T1: Preparar workspace (git init, commit de baseline, branch) — aceite: `main` com o estudo intacto em `7e4a891` e branch `migrate/ai-tutor-hardening` ativa (covers: S1)
+- [x] T2: Escrever esta spec — aceite: documento presente em `docs/compose/spec/` (covers: S2)
+- [x] T3: Migrar o estado canônico — aceite: `validate_state` e `_validate_config` sem erros sobre os payloads migrados; `cards.json`/`sources.json`/`revision` criados; `sources` removido de `state.json` (covers: D1, D2, D3; depends: T1)
+- [x] T4: Renomear IDs nas projeções Markdown — aceite: nenhum ID legado com `prefix-` resta em `curriculum.md`, `session-log.md`, `lessons/00-diagnostico-e-ambiente.md` e `.cursor/rules/obsidian-lesson-diary.mdc`; `session-log.md` preserva a narrativa (covers: D2, D4; depends: T3)
+- [x] T5: Criar `.ai-tutor/migrations/` com backup pré-migração e o script da migração, e regenerar `flashcards.md` — aceite: backup contém os arquivos originais; `flashcards.md` corresponde à saída de `render_flashcards` (covers: D1, D4; depends: T3)
+- [x] T6: Validar com o validador oficial — aceite: `python -m scripts.validate_study "<study_root>"` imprime `STUDY VALIDATION: PASS` (covers: D5; depends: T3, T4, T5)
+- [x] T7: Instalar a skill no MiMo Desktop — aceite: `~/.config/mimocode/skills/ai-tutor/` com SKILL.md, references, assets, scripts, agents, tests e os três `locales/*.json`; `validate_skill.py` retorna `PASS` sobre o diretório instalado (covers: D6; depends: T1)
+- [x] T8: Revisão independente e relatório final — aceite: revisão separada de conformidade e consistência, achados críticos tratados (covers: S2; depends: T6, T7)

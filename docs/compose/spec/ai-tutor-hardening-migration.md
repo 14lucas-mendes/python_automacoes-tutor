@@ -53,7 +53,7 @@ O efeito prático é que o estudo está fora do contrato: a skill atualizada nã
 
 Formato obrigatório: `^(topic|evidence|session|lesson|weak|project|card|source)_`. Apenas o **separador inicial** muda de `-` para `_`; o restante é preservado para manter datas e slugs legíveis (`session_2026-08-31-diagnostico`, `lesson_03-testes-git`, `evidence_debugging-diagnosis-01`).
 
-O mapeamento é gerado a partir dos IDs realmente presentes em `state.json` (7 tópicos, 61 evidências, 9 sessões, 14 lições, 3 pontos fracos, 4 projetos, 7 fontes) e aplicado por substituição exata de token, nunca por regex genérica — `session-log.md`, por exemplo, não pode virar `session_log.md`.
+O mapeamento é gerado a partir dos IDs realmente presentes em `state.json` (7 tópicos, 61 evidências, 9 sessões, 14 lições, 3 pontos fracos, 4 projetos, 7 fontes). A aplicação tem duas passagens: substituição **exata** dos 105 IDs conhecidos, token-delimitada; e, depois, uma passagem que normaliza **referências parciais** ao mesmo separador (a prosa usava `lesson-02` como abreviação), desativada para nomes de arquivo como `session-log.md`. O `-`→`_` só troca o separador inicial, preservando datas e slugs legíveis (`session_2026-08-31-diagnostico`, `lesson_03-testes-git`). O resultado é verificado por pós-condições sobre os JSON **e** sobre as projeções Markdown, e por uma varredura independente de tokens legados.
 
 ### D3 — Renomes de campo por entidade
 
@@ -68,7 +68,9 @@ O mapeamento é gerado a partir dos IDs realmente presentes em `state.json` (7 t
 
 ### D4 — Política de projeções
 
-`session-log.md` **não é regenerado**: mantém a narrativa escrita à mão (checkpoints, 13 evidências da sessão de debugging, ajuste pedagógico, seção de migração curricular). O validador exige apenas que o arquivo exista; o conteúdo não é conferido. Uma cópia pré-migração fica em `.ai-tutor/migrations/`. `flashcards.md` é regenerado a partir de `cards.json` porque hoje é apenas um stub — não há narrativa a perder. `curriculum.md` mantém a narrativa e recebe só a renomeação de IDs. `scripts/projections.py` **não** é executado contra `session-log.md`.
+`session-log.md` **não é regenerado**: mantém a narrativa escrita à mão (checkpoints, 13 evidências da sessão de debugging, ajuste pedagógico, seção de migração curricular). O validador exige apenas que o arquivo exista; o conteúdo não é conferido. Cópias pré-migração dos 8 arquivos alterados ficam em `.ai-tutor/migrations/pre-hardening/`. `flashcards.md` é regenerado a partir de `cards.json` porque hoje é apenas um stub — não há narrativa a perder. `curriculum.md` mantém a narrativa e recebe só a renomeação de IDs.
+
+`scripts/projections.py` **não** é executado contra `session-log.md`, e isso é uma exceção consciente ao contrato: `sync_projections` reescreve `flashcards.md` **e** `session-log.md` incondicionalmente, então o comando documentado em `references/architecture.md` destruiria a narrativa. O `session-log.md` do estudo carrega um aviso no topo para impedir a execução acidental. Quem quiser o formato mecânico precisa arquivar a narrativa antes.
 
 ### D5 — Verificação
 
@@ -80,6 +82,8 @@ python -m scripts.validate_skill <skill_root>       # pacote da skill íntegro
 ```
 
 Critério de aceite: `validate_study` retorna `PASS` para `python_automacoes-tutor`, com os 258 erros de [S1] zerados e os arquivos canônicos novos presentes.
+
+Desvios conscientes, registrados porque o revisor os levantou: a migração escreve com `atomic_write` em vez do lock/CAS de `scripts/state_io.py` — é uma operação offline de um único escritor, e o script aplica sua própria atomicidade entre arquivos, restaurando do backup os arquivos já substituídos se qualquer escrita falhar. Ela também não é re-executável: aborta se `cards.json` e `sources.json` já existirem. Verificado por replay que as correções de robustez não mudam a saída: o script corrigido, rodado sobre uma cópia limpa do baseline, produz os 10 arquivos com hash idêntico ao entregue.
 
 ### D6 — Instalação no MiMo Desktop
 

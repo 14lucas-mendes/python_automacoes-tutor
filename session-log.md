@@ -1,5 +1,9 @@
 # Registro de sessões
 
+<!-- Projeção legível mantida à mão. NÃO execute `python -m scripts.projections` neste
+     estudo: o gerador reescreve session-log.md sem condição e substituiria toda esta
+     narrativa por um resumo mecânico de 6 linhas por sessão. -->
+
 ## `session_2026-09-10-debugging-01`
 
 - Status: em andamento

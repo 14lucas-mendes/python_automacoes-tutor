@@ -42,6 +42,8 @@ BACKUP_FILES = (
     "curriculum.md",
     "session-log.md",
     "flashcards.md",
+    "lessons/00-diagnostico-e-ambiente.md",
+    ".cursor/rules/obsidian-lesson-diary.mdc",
 )
 MARKDOWN_RENAME_TARGETS = (
     "curriculum.md",
@@ -145,6 +147,33 @@ def assert_no_legacy(node, mapping: dict[str, str], path: str = "root") -> None:
         if shorthand:
             raise MigrationError(
                 f"legacy ID prefix survived at {path}: {shorthand.group(0)}"
+            )
+
+
+def assert_markdown_clean(study_root: Path, mapping: dict[str, str]) -> None:
+    """Verify every markdown projection is free of legacy identifiers.
+
+    ``validate_study`` only checks that the three projections exist, never their
+    content, so the ID rename needs its own post-condition.
+    """
+
+    targets = set(MARKDOWN_RENAME_TARGETS) | {
+        str(path.relative_to(study_root))
+        for path in study_root.rglob("*.md")
+        if ".ai-tutor" not in path.parts
+    }
+    for relative in sorted(targets):
+        path = study_root / relative
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for old in mapping:
+            if re.search(rf"(?<![A-Za-z0-9_-]){re.escape(old)}(?![A-Za-z0-9_-])", text):
+                raise MigrationError(f"legacy ID survived in {relative}: {old}")
+        shorthand = SHORTHAND_PREFIX.search(text)
+        if shorthand:
+            raise MigrationError(
+                f"legacy ID prefix survived in {relative}: {shorthand.group(0)}"
             )
 
 
@@ -325,16 +354,42 @@ def main() -> int:
         if source.is_file():
             shutil.copy2(source, backup / Path(relative).name)
 
-    for name, payload in payloads.items():
-        atomic_write(metadata / name, json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+    # Cross-file atomicity: if any write fails, restore every file already replaced
+    # so the study is never left half-migrated (architecture.md, safe update protocol).
+    written: list[Path] = []
+    try:
+        for name, payload in payloads.items():
+            destination = metadata / name
+            atomic_write(destination, json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+            written.append(destination)
 
-    for relative in MARKDOWN_RENAME_TARGETS:
-        path = study_root / relative
-        if path.is_file():
-            changed = rename_markdown(path, mapping)
-            print(f"{'updated' if changed else 'unchanged'}: {relative}")
+        for relative in MARKDOWN_RENAME_TARGETS:
+            path = study_root / relative
+            if path.is_file():
+                changed = rename_markdown(path, mapping)
+                print(f"{'updated' if changed else 'unchanged'}: {relative}")
+                if changed:
+                    written.append(path)
 
-    atomic_write(study_root / "flashcards.md", render_flashcards(new_cards))
+        flashcards = study_root / "flashcards.md"
+        atomic_write(flashcards, render_flashcards(new_cards))
+        written.append(flashcards)
+    except (OSError, TypeError, ValueError) as exc:
+        restored: list[str] = []
+        for destination in written:
+            original = backup / destination.name
+            if original.is_file():
+                shutil.copy2(original, destination)
+                restored.append(destination.name)
+        for name in ("cards.json", "sources.json"):
+            target = metadata / name
+            if not (backup / name).is_file() and target.is_file():
+                target.unlink()
+        raise MigrationError(
+            f"write failed ({exc}); restored from backup: {sorted(restored)}"
+        ) from exc
+
+    assert_markdown_clean(study_root, mapping)
 
     errors = validate_study(study_root)
     for error in errors:

@@ -1,0 +1,14 @@
+---
+description: Formação deste repositório usa só ai-tutor; não misturar accelerated-learning
+alwaysApply: true
+---
+
+# Fonte pedagógica
+
+Este workspace é um programa persistente da skill `ai-tutor`.
+
+- Use apenas `ai-tutor` (workflows, contratos de estado, evidência, escada de ajuda e domínio).
+- Não use `accelerated-learning` (formatos seção/explicar/agora/curto, diário N0–N5, Recursos YouTube obrigatórios, blocos daquela skill).
+- Só misture as duas skills se o aluno pedir isso de forma explícita nesta conversa.
+
+Estado canônico: `.ai-tutor/state.json`. Markdown (`curriculum.md`, `session-log.md`, `lessons/`) é projeção.

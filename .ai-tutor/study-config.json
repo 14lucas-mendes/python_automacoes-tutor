@@ -12,11 +12,12 @@
   ],
   "initial_level": "básico",
   "language": "pt-BR com inglês técnico progressivo",
-  "accessibility": "nenhuma",
+  "accessibility": [],
   "source_policy": {
     "prefer": "documentação oficial e fontes técnicas primárias",
     "freshness": "verificar quando o conteúdo puder mudar",
     "external_upload": "exigir consentimento específico"
   },
-  "external_consents": {}
+  "external_consents": {},
+  "accessibility_notes": "nenhuma"
 }

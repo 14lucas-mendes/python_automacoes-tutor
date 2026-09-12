@@ -1,3 +1,5 @@
 # Flashcards
 
-<!-- Cards são adicionados pelo workflow de revisão e mantêm o card_id. -->
+<!-- Generated from .ai-tutor/cards.json. Edit the canonical JSON, then sync. -->
+
+Nenhum card canônico registrado.

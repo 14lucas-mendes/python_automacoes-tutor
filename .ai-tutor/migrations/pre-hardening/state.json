@@ -1,0 +1,2082 @@
+{
+  "schema_version": 2,
+  "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
+  "revision": 79,
+  "updated_at": "2026-09-10T20:00:19.3746917-03:00",
+  "topics": [
+    {
+      "topic_id": "topic-python-fundamentos",
+      "name": "Logica, decomposicao e Python core",
+      "phase": 1,
+      "objective": "Decompor problemas e escrever programas Python pequenos, legiveis e testaveis sem depender de codigo copiado.",
+      "prerequisite_topic_ids": [],
+      "mastery": 80,
+      "retention": "medium",
+      "status": "mastered",
+      "last_practice": "2026-09-07",
+      "evidence_ids": [
+        "evidence-python-core-pares-01",
+        "evidence-python-core-modulo-01",
+        "evidence-python-core-modulo-02",
+        "evidence-python-core-modulo-03",
+        "evidence-python-core-lista-01",
+        "evidence-python-core-item-01",
+        "evidence-python-core-funcao-01",
+        "evidence-python-core-transfer-01",
+        "evidence-python-core-cli-choice-01",
+        "evidence-python-core-cli-implementation-01",
+        "evidence-python-core-import-01",
+        "evidence-python-core-import-02",
+        "evidence-python-core-structure-01",
+        "evidence-python-core-structure-02",
+        "evidence-python-core-structure-03",
+        "evidence-python-core-structure-04",
+        "evidence-python-core-structure-05",
+        "evidence-python-core-structure-06",
+        "evidence-python-core-structure-07",
+        "evidence-python-core-structure-08",
+        "evidence-python-core-structure-09",
+        "evidence-python-core-structure-10",
+        "evidence-python-core-tests-01",
+        "evidence-python-core-tests-02",
+        "evidence-python-core-tests-03",
+        "evidence-python-core-tests-04",
+        "evidence-python-core-tests-05",
+        "evidence-python-core-tests-06",
+        "evidence-python-core-tests-07",
+        "evidence-python-core-tests-08",
+        "evidence-python-core-pytest-01",
+        "evidence-python-core-csv-json-01",
+        "evidence-python-core-csv-json-02",
+        "evidence-python-core-csv-json-03",
+        "evidence-python-core-csv-read-errors-01",
+        "evidence-python-core-csv-read-errors-02",
+        "evidence-python-core-csv-read-errors-03",
+        "evidence-python-core-csv-read-errors-04",
+        "evidence-python-core-csv-read-errors-05",
+        "evidence-python-core-csv-read-errors-06",
+        "evidence-python-core-csv-read-errors-07",
+        "evidence-debugging-diagnosis-01",
+        "evidence-debugging-diagnosis-02",
+        "evidence-debugging-diagnosis-03",
+        "evidence-debugging-diagnosis-04",
+        "evidence-debugging-diagnosis-05",
+        "evidence-debugging-diagnosis-06",
+        "evidence-debugging-diagnosis-07",
+        "evidence-debugging-diagnosis-08",
+        "evidence-debugging-diagnosis-09",
+        "evidence-debugging-diagnosis-10",
+        "evidence-debugging-diagnosis-11",
+        "evidence-debugging-diagnosis-12",
+        "evidence-debugging-diagnosis-13"
+      ],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "programa executavel",
+        "testes das regras centrais",
+        "README",
+        "commit do estudante"
+      ]
+    },
+    {
+      "topic_id": "topic-workflow-profissional",
+      "name": "Git, GitHub e fluxo profissional",
+      "phase": 0,
+      "objective": "Criar um fluxo reproduzivel de desenvolvimento, versionamento e colaboracao com Git e GitHub.",
+      "prerequisite_topic_ids": [],
+      "mastery": 80,
+      "retention": "medium",
+      "status": "mastered",
+      "last_practice": "2026-09-02",
+      "evidence_ids": [
+        "evidence-diagnostico-workflow-01",
+        "evidence-diagnostico-workflow-02",
+        "evidence-diagnostico-workflow-03",
+        "evidence-diagnostico-workflow-04",
+        "evidence-diagnostico-pytest-01",
+        "evidence-diagnostico-remoto-01",
+        "evidence-diagnostico-transfer-01"
+      ],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "ambiente virtual",
+        "repositorio Git",
+        "suite pytest",
+        "registro de debugging"
+      ]
+    },
+    {
+      "topic_id": "topic-automacao-confiavel",
+      "name": "Arquivos, CSV, JSON e excecoes",
+      "phase": 4,
+      "objective": "Ler, validar e transformar arquivos CSV e JSON com erros explicitos e estrutura modular.",
+      "prerequisite_topic_ids": [
+        "topic-python-fundamentos"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "arquivo CSV lido por completo",
+        "JSON valido transformado",
+        "erros de entrada tratados"
+      ]
+    },
+    {
+      "topic_id": "topic-apis-backend",
+      "name": "SQL relacional",
+      "phase": 5,
+      "objective": "Modelar e consultar dados relacionais com SQL, usando chaves, filtros, joins e agregacoes.",
+      "prerequisite_topic_ids": [
+        "topic-automacao-confiavel"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "schema relacional explicado",
+        "consultas com filtros e joins",
+        "caso de manutencao simulado"
+      ]
+    },
+    {
+      "topic_id": "topic-llm-aplicacoes",
+      "name": "HTTP e APIs REST",
+      "phase": 6,
+      "objective": "Consumir APIs REST e interpretar contratos HTTP, respostas, erros, timeout e paginacao.",
+      "prerequisite_topic_ids": [
+        "topic-apis-backend"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "cliente HTTP pelo terminal",
+        "erros de rede tratados",
+        "resposta JSON interpretada"
+      ]
+    },
+    {
+      "topic_id": "topic-agentes-ferramentas",
+      "name": "Integracao de sistemas e automacao operacional",
+      "phase": 7,
+      "objective": "Integrar arquivos, banco simulado e APIs em automacoes operacionais rastreaveis.",
+      "prerequisite_topic_ids": [
+        "topic-llm-aplicacoes"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "fluxo entre sistemas documentado",
+        "falhas registradas",
+        "resultado verificavel"
+      ]
+    },
+    {
+      "topic_id": "topic-producao-empregabilidade",
+      "name": "Selenium, qualidade e testes tecnicos",
+      "phase": 8,
+      "objective": "Automatizar navegacao web de forma controlada e demonstrar qualidade com pytest, debugging, refatoracao e testes tecnicos.",
+      "prerequisite_topic_ids": [
+        "topic-agentes-ferramentas"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "automacao Selenium com dados ficticios",
+        "testes pytest relevantes",
+        "README e historico GitHub",
+        "simulacoes de testes tecnicos"
+      ]
+    }
+  ],
+  "evidences": [
+    {
+      "evidence_id": "evidence-diagnostico-workflow-01",
+      "topic_id": "topic-workflow-profissional",
+      "session_id": "session-2026-08-31-diagnostico",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "explicacao do fluxo local de projeto Python, ambiente virtual e Git",
+      "recorded_at": "2026-08-31T17:50:48.5919253-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Confundiu mkdir com git init (ideia central do repositorio). Nao lembrou o comando de criacao/ativacao do venv. Omissoes de git status e configuracao de remoto nao sao erro: nao eram requisito explicito da tarefa."
+    },
+    {
+      "evidence_id": "evidence-diagnostico-workflow-02",
+      "topic_id": "topic-workflow-profissional",
+      "session_id": "session-2026-08-31-diagnostico",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "reescrita guiada da sequencia de criacao de projeto, ambiente virtual e primeiro commit",
+      "recorded_at": "2026-08-31T18:06:33.3513655-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Ainda tratou mkdir como repositorio e escreveu commit add em vez de git add. deactivate e remoto foram omissoes opcionais nesta reescrita, nao falhas materiais do objetivo."
+    },
+    {
+      "evidence_id": "evidence-diagnostico-workflow-03",
+      "topic_id": "topic-workflow-profissional",
+      "session_id": "session-2026-08-31-diagnostico",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "execucao guiada em C:/Users/lucka/Documents/projects/sandbox-diagnostico: pasta, .venv, hello.py, git init, .gitignore, commit 2d4864a, deactivate",
+      "recorded_at": "2026-09-01T14:44:32.9564626-03:00",
+      "reference": {
+        "type": "git_commit",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-diagnostico@2d4864a"
+      },
+      "result": "correct",
+      "error": "Objetivo local cumprido com ajuda: comandos de venv/Activate.ps1/deactivate fornecidos; cd apos mkdir exigiu pista direcional. pytest e git remote add estavam fora do objetivo desta tentativa."
+    },
+    {
+      "evidence_id": "evidence-diagnostico-workflow-04",
+      "topic_id": "topic-workflow-profissional",
+      "session_id": "session-2026-08-31-diagnostico",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "git push envia o historico local a um remoto; sem GitHub ainda e preciso criar o repositorio e registra-lo. Leitura literal: sincronizar nao afirma que o remoto ja existe. git remote add guarda nome e URL.",
+      "recorded_at": "2026-09-01T14:44:32.9564626-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-diagnostico-pytest-01",
+      "topic_id": "topic-workflow-profissional",
+      "session_id": "session-2026-09-01-pytest",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "pytest 9.1.1 no venv; saudacao(); test_hello.py; 1 passed; commit e1df64b; .gitignore com __pycache__/",
+      "recorded_at": "2026-09-01T15:13:53.3772349-03:00",
+      "reference": {
+        "type": "git_commit",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-diagnostico@e1df64b"
+      },
+      "result": "correct",
+      "error": "Primeiro assert sem comparacao, corrigido apos feedback. A linha from hello import saudacao foi fornecida (ajuda nivel 5). Mensagem de commit generica e melhoria opcional, nao erro."
+    },
+    {
+      "evidence_id": "evidence-diagnostico-remoto-01",
+      "topic_id": "topic-workflow-profissional",
+      "session_id": "session-2026-09-02-remoto",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "repositorio vazio no GitHub; git remote add origin; git push -u origin master; master rastreia origin/master; commit e1df64b em https://github.com/14lucas-mendes/sandbox-diagnostico",
+      "recorded_at": "2026-09-02T15:53:27.773305-03:00",
+      "reference": {
+        "type": "git_commit",
+        "location": "https://github.com/14lucas-mendes/sandbox-diagnostico@e1df64b"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-diagnostico-transfer-01",
+      "topic_id": "topic-workflow-profissional",
+      "session_id": "session-2026-09-02-transfer",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Novo diretorio C:/Users/lucka/Documents/projects/sandbox-transferencia: mkdir+cd, python -m venv .venv, Activate.ps1, informacoes_aluno.py, pytest 1 passed, commit 54320a2, remoto vazio GitHub, git push origin master, deactivate",
+      "recorded_at": "2026-09-02T16:41:54.233992-03:00",
+      "reference": {
+        "type": "git_commit",
+        "location": "https://github.com/14lucas-mendes/sandbox-transferencia@54320a2"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-transfer-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Transferencia para filtrar valores maiores ou iguais a 10 em uma lista diferente.",
+      "recorded_at": "2026-09-03T19:24:57.6415582-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-funcao-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Explicacao do papel de uma funcao, iteracao, filtragem, append e retorno de resultado em Python.",
+      "recorded_at": "2026-09-03T19:18:49.4467121-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-pares-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Decomposicao e implementacao de um filtro de numeros pares em uma lista Python.",
+      "recorded_at": "2026-09-03T18:53:05.9124442-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Nome filtra_pares seria mais preciso que conta_par; melhoria opcional sem impacto na classificacao."
+    },
+    {
+      "evidence_id": "evidence-python-core-modulo-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Explicacao do operador modulo para identificar divisibilidade por 2.",
+      "recorded_at": "2026-09-03T19:00:15.0749766-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "A ideia de resto zero esta correta, mas o exemplo usou 7 / 2 = 3,5 e tratou 0,5 como resto. E preciso distinguir divisao comum de quociente inteiro e resto; a classificacao permanece parcial ate a autocorrecao."
+    },
+    {
+      "evidence_id": "evidence-python-core-modulo-02",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Autocorrecao da explicacao de quociente e resto na divisao de 7 por 2.",
+      "recorded_at": "2026-09-03T19:06:13.2336888-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Identificou corretamente o multiplo 6 e o resto 1, mas informou quociente 1; o quociente e a quantidade de vezes que 2 cabe no multiplo 6."
+    },
+    {
+      "evidence_id": "evidence-python-core-modulo-03",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Autocorrecao do quociente de 7 por 2 apos pista direcional sobre 2 vezes ? = 6.",
+      "recorded_at": "2026-09-03T19:08:15.4328866-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Correcao obtida apos ajuda direcional; confirma o conceito, mas nao e evidencia autonoma plena."
+    },
+    {
+      "evidence_id": "evidence-python-core-lista-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Identificacao do papel de uma lista de numeros em um programa Python.",
+      "recorded_at": "2026-09-03T19:10:17.0430143-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Afirmar que a lista e nao ordenada e uma observacao desnecessaria; listas mantem ordem, mas isso nao era requisito desta pergunta."
+    },
+    {
+      "evidence_id": "evidence-python-core-item-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Identificacao do item corrente durante a iteracao de uma lista Python.",
+      "recorded_at": "2026-09-03T19:13:04.5417838-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-cli-choice-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Escolha e justificativa de uma interface de entrada digitada para um CLI introdutorio e testavel.",
+      "recorded_at": "2026-09-03T19:29:50.6371259-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-cli-implementation-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-03-python-core-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Programa tarefas-01.py executado pelo estudante: leitura de seis inteiros separados por espaco, conversao, filtragem de valores >= 10 e impressao do resultado.",
+      "recorded_at": "2026-09-03T20:46:08.6406146-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "tarefas-01.py; comando python tarefas-01.py"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-import-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Explicacao de from tarefas_01 import maior_igual: acreditou que so a funcao e carregada e que input solto nao executa.",
+      "recorded_at": "2026-09-07T15:34:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "incorrect",
+      "error": "from import ainda executa o modulo inteiro; so escolhe o nome ligado no destino. Inferir que importar a funcao evita o input no topo do arquivo contradiz o mecanismo do Python."
+    },
+    {
+      "evidence_id": "evidence-python-core-import-02",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Apos pista parcial: input solto fora da funcao executa no import porque o Python percorre o arquivo de cima a baixo.",
+      "recorded_at": "2026-09-07T15:36:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Correcao apos ajuda nivel 4; confirma o conceito, mas nao e evidencia autonoma plena."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Organizacao de maior_igual e input para o teste importar sem digitacao: propôs input dentro da funcao e def no topo do arquivo.",
+      "recorded_at": "2026-09-07T15:38:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Colocar input dentro de uma funcao evita disparo no import, mas se estiver dentro de maior_igual o teste ainda espera digitacao ao chama-la. A funcao testavel deve receber a lista; o CLI e quem le o teclado. Posicao da def no topo nao e o requisito."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-02",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Apos pergunta direcional: ao chamar maior_igual, o input dentro dela tambem executa.",
+      "recorded_at": "2026-09-07T15:40:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Correcao apos ajuda nivel 3; confirma o efeito da chamada, mas nao e evidencia autonoma plena da organizacao CLI vs funcao."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-03",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "maior_igual deve receber uma lista de inteiros; input fica na chamada (CLI passa o valor), nao no corpo da funcao.",
+      "recorded_at": "2026-09-07T15:43:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "O limite do import (chamada com input nao pode ficar solta no arquivo) ficou para a pergunta seguinte; nao rebaixa esta resposta."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-04",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Chamada com input solta no arquivo tambem executa no from tarefas_01 import maior_igual.",
+      "recorded_at": "2026-09-07T15:45:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-05",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Diferenca entre rodar o arquivo como programa e importa-lo: descreveu proposito (executar vs reutilizar), nao um sinal que o arquivo possa consultar.",
+      "recorded_at": "2026-09-07T15:49:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Os dois usos estao certos, mas o import tambem executa o arquivo. Falta um criterio observavel para o CLI rodar so no caso 'este arquivo foi o programa iniciado'."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-06",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Apos pista sobre __name__: a chamada com input deve rodar quando name for main.",
+      "recorded_at": "2026-09-07T16:00:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Correcao apos ajuda nivel 4. A notacao exata e __name__ == \"__main__\"; a omissao dos underscores nao rebaixa a ideia central."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-07",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Escreveu if __name__ == \"__main__\" com input e print da chamada; maior_igual ainda faz split/int sobre a string do CLI.",
+      "recorded_at": "2026-09-07T16:02:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "A guarda pedida esta correta (ajuda previa na notacao). split/int no corpo de maior_igual e ajuste para o teste com lista; nao rebaixa a guarda."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-08",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "maior_igual([5, 10, 20]) quebra porque a funcao ainda converte a entrada; se ja recebe inteiros o split/int no corpo falha.",
+      "recorded_at": "2026-09-07T16:07:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Refinamento: .split() e metodo de string; a funcao espera o texto do input, nao uma lista de strings. A ideia central (nao aceita lista de inteiros) permanece correta."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-09",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Reescrita: maior_igual percorre a lista e filtra; CLI tem numeros.split sem chamada. int permanece no corpo da funcao.",
+      "recorded_at": "2026-09-07T16:10:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "A funcao agora aceitaria [5, 10, 20]. No CLI, split nao e chamado, entao list_numbers nao e a lista de pedacos do texto; o programa quebra ao iterar."
+    },
+    {
+      "evidence_id": "evidence-python-core-structure-10",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Autocorrecao: numeros.split() no CLI; maior_igual percorre a lista, converte com int e filtra >= 10; guarda __main__ mantida.",
+      "recorded_at": "2026-09-07T16:13:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Correcao do () apos pergunta direcional. int() ainda no corpo da funcao e compativel com lista de inteiros; nao bloqueia o teste da regra."
+    },
+    {
+      "evidence_id": "evidence-python-core-tests-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Rascunho de teste: from tarefas_01 import maior_igual; test_maior_igual(lista) com maior_igual() == int([lista]). Sem lista concreta na chamada nem casos da regra.",
+      "recorded_at": "2026-09-07T16:19:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "O import e o assert estao no caminho certo. A def nao deve ter parametro lista; maior_igual precisa receber a lista; o esperado e a lista filtrada, nao int(...)."
+    },
+    {
+      "evidence_id": "evidence-python-core-tests-02",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "def test_maior_igual() sem parametro; assert maior_igual(str([])) == int([]). Assinatura do teste corrigida; ainda sem lista concreta de inteiros.",
+      "recorded_at": "2026-09-07T16:22:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "A def sem parametro esta correta. str([]) e o texto '[]'; int([]) nao e a lista filtrada. O teste precisa de literais como uma lista de numeros, sem str/int em volta."
+    },
+    {
+      "evidence_id": "evidence-python-core-tests-03",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Sintaxe de lista de inteiros em Python: [10, 20, 30].",
+      "recorded_at": "2026-09-07T16:24:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-tests-04",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "maior_igual([10, 20, 30]) devolve a lista completa porque todos atendem >= 10.",
+      "recorded_at": "2026-09-07T16:26:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-tests-05",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Voltou a assert maior_igual(str([])) == int([]) depois de ter produzido [10, 20, 30] e a lista completa como resultado esperado.",
+      "recorded_at": "2026-09-07T16:29:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "incorrect",
+      "error": "Reapresentou o padrao ja recusado (str/int em volta de []). Nao usou as listas concretas que ele mesmo acabara de definir."
+    },
+    {
+      "evidence_id": "evidence-python-core-tests-06",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "O teste entrega lista de numeros ja pronta porque nao chama input; compara entrada e saida sem o terminal.",
+      "recorded_at": "2026-09-07T16:33:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-tests-07",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "test_maior_igual: assert maior_igual([10, 20, 30]) == [10, 20, 30]. Import, def sem parametro e literais de lista corretos.",
+      "recorded_at": "2026-09-07T16:35:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Montagem apos pista nivel 4 com as listas ja nomeadas. Prova que valores >= 10 permanecem; ainda nao prova exclusao abaixo de 10."
+    },
+    {
+      "evidence_id": "evidence-python-core-tests-08",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "test_menor_que_dez: maior_igual([10, 6, 8, 20]) == [10, 20]. Exclui < 10, mantem o limite 10 e o valor acima, preserva ordem.",
+      "recorded_at": "2026-09-07T16:38:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-pytest-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-07-python-core-tests",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "py -m pytest test_tarefas_01.py em E:/Lucas/Documents/formacao_python/src/tarefas: 2 passed. SHA-256 tarefas_01.py=1949798cfeb55a29ab8fddf52345b5ab47558c32ad9b7eff0a7e2be1cce7b2cc test_tarefas_01.py=94eab4ca4a1434c8b9bbdf744fe07bf7de786af2425c2006aec38bca5b291f41",
+      "recorded_at": "2026-09-07T16:47:30-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "E:/Lucas/Documents/formacao_python/src/tarefas; py -m pytest test_tarefas_01.py"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-json-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Distincao entre CSV e JSON e escolha de JSON para clientes com varios telefones.",
+      "recorded_at": "2026-09-08T19:49:12.6091691-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-json-02",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Representacao de uma cliente com dois telefones em JSON e tentativa de representacao equivalente em CSV.",
+      "recorded_at": "2026-09-08T19:56:08.5186364-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "JSON preservou a lista de telefones; CSV foi estruturado como pares campo/valor e nao como tabela consistente de cabecalho e registros."
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-json-03",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Correcao de representacao CSV para uma tabela de cliente com dois telefones em uma celula.",
+      "recorded_at": "2026-09-08T19:59:19.1785014-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Agrupar dois telefones na celula e valido para a representacao pedida; separar cada telefone seria refinamento se a leitura automatica individual fosse requisito."
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-read-errors-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Identificacao do modulo csv e da excecao FileNotFoundError para leitura de arquivo inexistente.",
+      "recorded_at": "2026-09-08T20:04:06.7523591-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "O termo modulo foi esclarecido antes da resposta; a identificacao de csv e FileNotFoundError foi produzida pelo estudante."
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-read-errors-02",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Primeira tentativa de ler CSV com try, with open e tratamento de FileNotFoundError.",
+      "recorded_at": "2026-09-08T20:10:00.8930703-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "A estrutura de abertura e tratamento esta adequada, mas csv.load nao existe e a funcao nao processa nem retorna os dados no caminho de sucesso."
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-read-errors-03",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Uso de csv.reader para percorrer linhas de CSV com tratamento de FileNotFoundError.",
+      "recorded_at": "2026-09-08T20:14:46.7720031-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Leitura e iteracao estao corretas, mas print(linha) produz efeito colateral e a funcao ainda nao retorna os dados lidos."
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-read-errors-04",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Tentativa de retornar linhas lidas de um CSV com csv.reader.",
+      "recorded_at": "2026-09-08T20:16:16.4533202-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "return linha dentro do for encerra a funcao na primeira linha; e preciso acumular as linhas e retornar apos a iteracao."
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-read-errors-05",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Explicacao do efeito de return dentro do for ao ler CSV e da necessidade de retornar apos a iteracao.",
+      "recorded_at": "2026-09-08T20:19:20.9689591-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-read-errors-06",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Tentativa de acumular linhas de CSV e retornar depois da iteracao.",
+      "recorded_at": "2026-09-08T20:24:22.8834149-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "return foi movido para depois do for, mas result = linha.copy() sobrescreve o resultado em cada ciclo e devolve apenas a ultima linha."
+    },
+    {
+      "evidence_id": "evidence-python-core-csv-read-errors-07",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-08-arquivos-erros-02",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Correcao da leitura CSV: inicializa result antes do for, adiciona copia de cada linha e retorna apos a iteracao.",
+      "recorded_at": "2026-09-08T20:26:35.2201361-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Correcao produzida apos pistas direcionais sobre retorno e acumulacao; pratica guiada, ainda sem execucao com arquivo CSV real."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-01",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Diagnostico inicial de NameError antes de alterar o codigo.",
+      "recorded_at": "2026-09-10T19:14:25.7962380-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Identificou corretamente que o erro vem de uma variavel sem atribuicao, mas chamou a variavel de name; a mensagem aponta quantidade. Ainda falta usar a linha indicada para localizar o uso."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-02",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Diagnostico de NameError em funcao calcular_total com nomes de parametro divergentes.",
+      "recorded_at": "2026-09-10T19:23:35.4504051-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Identificou corretamente a divergencia entre quantidade e qtd. A explicacao adicionou incorretamente que uma variavel nao definida vira None; NameError ocorre antes de qualquer multiplicacao."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-03",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Correcao minima de NameError em calcular_total e previsao do resultado.",
+      "recorded_at": "2026-09-10T19:25:21.7481518-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": null
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-04",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Diagnostico de TypeError por retorno implicito None em calcular_desconto(50).",
+      "recorded_at": "2026-09-10T19:31:53.0999996-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": null
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-05",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Correcao de retorno ausente em calcular_desconto e previsao de resultado.",
+      "recorded_at": "2026-09-10T19:34:42.0748588-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "A correcao tecnica garante retorno numerico, mas return 5 para preco menor que 100 introduz uma nova regra de negocio. A correcao proporcional depende de preservar ou alterar essa regra explicitamente."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-06",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Correcao proporcional de calcular_desconto para preco menor que 100.",
+      "recorded_at": "2026-09-10T19:37:25.1390033-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "A intencao de nao aplicar desconto esta correta, mas return preco faz desconto receber 50 e produz 50 - 50 = 0. Falta retornar o valor que representa ausencia de desconto."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-07",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Identificacao do desconto zero como elemento neutro da subtracao apos pista algebrica.",
+      "recorded_at": "2026-09-10T19:38:47.4064217-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Pratica guiada apos pergunta direcional; precisa de nova aplicacao sem pista para ser evidencia autonoma."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-08",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Implementacao e previsao dos dois caminhos de calcular_desconto apos pistas sobre retorno 0.",
+      "recorded_at": "2026-09-10T19:40:25.7271338-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Pratica guiada: implementou corretamente retorno 10 ou 0 e previu 90 e 50; proxima variacao deve ocorrer sem pista."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-09",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Diagnostico autonomo de retorno implicito None em classificar_falhas(0).",
+      "recorded_at": "2026-09-10T19:47:35.9800965-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Identificou None, a causa e a necessidade de um segundo caminho, mas ainda nao definiu a string retornada para quantidade menor ou igual a zero."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-10",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Reconstrucao de classificar_falhas com retorno de string em todos os caminhos apos pista sobre o tipo esperado.",
+      "recorded_at": "2026-09-10T19:50:47.6437166-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Pratica guiada apos criterio direcionado: implementou corretamente sem falhas registradas e previu a mensagem completa."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-11",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Distincao entre NameError e TypeError causado por None nos exemplos praticados.",
+      "recorded_at": "2026-09-10T19:54:10.5075770-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Definiu corretamente NameError e TypeError em termos gerais, mas nao explicou que no exemplo TypeError a variavel existe e contem None, valor incompativel com a subtracao."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-12",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Completou a distincao entre NameError e TypeError por None com estrutura de frase fornecida.",
+      "recorded_at": "2026-09-10T19:56:10.2272979-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Pratica guiada apos estrutura de frase; precisa explicar a distincao novamente sem esse suporte para evidencia autonoma."
+    },
+    {
+      "evidence_id": "evidence-debugging-diagnosis-13",
+      "topic_id": "topic-python-fundamentos",
+      "session_id": "session-2026-09-10-debugging-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Diagnostico de retorno implicito None em obter_limite(visitante) e previsao de retorno padrao.",
+      "recorded_at": "2026-09-10T20:00:19.3746917-03:00",
+      "reference": {
+        "type": "session_response",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Identificou corretamente None e a necessidade de retorno padrao, mas chamou a operacao de concatenacao; o erro ocorre em None + 1, uma soma entre tipos incompatíveis."
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "session-2026-08-31-diagnostico",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-08-31T17:42:43.0857307-03:00",
+      "ended_at": "2026-09-01T14:44:32.9564626-03:00",
+      "resumable": false,
+      "lesson_ids": [
+        "lesson-00-diagnostico"
+      ],
+      "topic_ids": [
+        "topic-workflow-profissional"
+      ],
+      "objective": "Medir a autonomia atual para criar, executar, testar e versionar um projeto Python minimo.",
+      "checkpoint": "Fluxo local executado em sandbox-diagnostico: hello.py rodou no venv, commit 2d4864a com .gitignore e hello.py, deactivate conferido. Remoto e pytest ainda nao executados.",
+      "evidence_ids": [
+        "evidence-diagnostico-workflow-01",
+        "evidence-diagnostico-workflow-02",
+        "evidence-diagnostico-workflow-03",
+        "evidence-diagnostico-workflow-04"
+      ],
+      "difficulty": "diagnostico",
+      "next_step": "Na proxima sessao: pytest minimo no sandbox e, se houver repo no GitHub, git remote add + push.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md"
+      ]
+    },
+    {
+      "session_id": "session-2026-09-01-pytest",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-01T14:54:10.9254983-03:00",
+      "ended_at": "2026-09-01T15:13:53.3772349-03:00",
+      "resumable": false,
+      "lesson_ids": [
+        "lesson-00-diagnostico"
+      ],
+      "topic_ids": [
+        "topic-workflow-profissional"
+      ],
+      "objective": "Instalar pytest no venv do sandbox, escrever um teste minimo e ve-lo passar.",
+      "checkpoint": "pytest 1 passed; commit e1df64b com hello.py, test_hello.py e .gitignore. Remoto ainda nao configurado.",
+      "evidence_ids": [
+        "evidence-diagnostico-pytest-01"
+      ],
+      "difficulty": "standard",
+      "next_step": "Criar repo vazio no GitHub, git remote add origin e git push. Depois, repetir o fluxo noutro contexto com menos ajuda.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md"
+      ]
+    },
+    {
+      "session_id": "session-2026-09-02-remoto",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-02T11:39:15.650714-03:00",
+      "resumable": false,
+      "lesson_ids": [
+        "lesson-00-diagnostico"
+      ],
+      "topic_ids": [
+        "topic-workflow-profissional"
+      ],
+      "objective": "Conectar o repositorio local do sandbox a um remoto vazio no GitHub com git remote add e git push.",
+      "checkpoint": "Repositorio vazio criado em https://github.com/14lucas-mendes/sandbox-diagnostico. origin adicionado. git push -u origin master enviou e1df64b. master rastreia origin/master.",
+      "evidence_ids": [
+        "evidence-diagnostico-remoto-01"
+      ],
+      "difficulty": "standard",
+      "next_step": "Transferencia: repetir o fluxo (pasta, venv, programa, pytest, Git local e remoto) em outro diretorio, com menos ajuda.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md"
+      ],
+      "ended_at": "2026-09-02T15:53:27.773305-03:00"
+    },
+    {
+      "session_id": "session-2026-09-02-transfer",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-02T15:56:11.092085-03:00",
+      "ended_at": "2026-09-02T16:41:54.233992-03:00",
+      "resumable": false,
+      "lesson_ids": [
+        "lesson-00-diagnostico"
+      ],
+      "topic_ids": [
+        "topic-workflow-profissional"
+      ],
+      "objective": "Transferir o fluxo profissional para outro diretorio: pasta, venv, programa, pytest, Git local e remoto, com menos ajuda.",
+      "checkpoint": "Fluxo transferido em sandbox-transferencia: programa+teste, pytest 1 passed, commit 54320a2, origin em https://github.com/14lucas-mendes/sandbox-transferencia, push origin master, deactivate conferido.",
+      "evidence_ids": [
+        "evidence-diagnostico-transfer-01"
+      ],
+      "difficulty": "transfer",
+      "next_step": "Proxima licao: lesson-01-python-core (tipos, fluxo, colecoes e funcoes).",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md",
+        "curriculum.md"
+      ]
+    },
+    {
+      "session_id": "session-2026-09-03-python-core-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-03T18:21:16.3759884-03:00",
+      "ended_at": "2026-09-03T20:47:28.3203875-03:00",
+      "resumable": false,
+      "lesson_ids": [
+        "lesson-01-python-core"
+      ],
+      "topic_ids": [
+        "topic-python-fundamentos"
+      ],
+      "objective": "Resolver problemas decompondo entradas, regras e saidas com tipos, fluxo, colecoes e funcoes.",
+      "cognitive_core": "Decompor um problema em entrada, regras e saida e escolher estruturas Python proporcionais.",
+      "mode": "assessment",
+      "checkpoint": "Sessao encerrada. Aplicacao, transferencia e implementacao do CLI corretas; tarefas-01.py executou e produziu [10, 20, 65]. Testes pytest ainda pendentes.",
+      "evidence_ids": [
+        "evidence-python-core-pares-01",
+        "evidence-python-core-modulo-01",
+        "evidence-python-core-modulo-02",
+        "evidence-python-core-modulo-03",
+        "evidence-python-core-lista-01",
+        "evidence-python-core-item-01",
+        "evidence-python-core-funcao-01",
+        "evidence-python-core-transfer-01",
+        "evidence-python-core-cli-choice-01",
+        "evidence-python-core-cli-implementation-01"
+      ],
+      "difficulty": "standard",
+      "next_step": "Escrever testes pytest para a regra central de maior_igual e executa-los.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md"
+      ]
+    },
+    {
+      "session_id": "session-2026-09-07-python-core-tests",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-07T12:55:21.307182-03:00",
+      "ended_at": "2026-09-07T16:47:30-03:00",
+      "resumable": false,
+      "lesson_ids": [
+        "lesson-01-python-core"
+      ],
+      "topic_ids": [
+        "topic-python-fundamentos"
+      ],
+      "objective": "Escrever e executar testes pytest da regra central de maior_igual.",
+      "cognitive_core": "Escolher casos que provam a regra de filtragem, inclusive o limite, e deixar a funcao importavel sem disparar o CLI.",
+      "mode": "assessment",
+      "checkpoint": "Sessao encerrada. pytest 2 passed em formacao_python/src/tarefas (test_maior_igual e test_menor_que_dez). Lição lesson-01-python-core concluida.",
+      "evidence_ids": [
+        "evidence-python-core-import-01",
+        "evidence-python-core-import-02",
+        "evidence-python-core-structure-01",
+        "evidence-python-core-structure-02",
+        "evidence-python-core-structure-03",
+        "evidence-python-core-structure-04",
+        "evidence-python-core-structure-05",
+        "evidence-python-core-structure-06",
+        "evidence-python-core-structure-07",
+        "evidence-python-core-structure-08",
+        "evidence-python-core-structure-09",
+        "evidence-python-core-structure-10",
+        "evidence-python-core-tests-01",
+        "evidence-python-core-tests-02",
+        "evidence-python-core-tests-03",
+        "evidence-python-core-tests-04",
+        "evidence-python-core-tests-05",
+        "evidence-python-core-tests-06",
+        "evidence-python-core-tests-07",
+        "evidence-python-core-tests-08",
+        "evidence-python-core-pytest-01"
+      ],
+      "difficulty": "standard",
+      "next_step": "Proxima licao: lesson-02-arquivos-erros (CSV/JSON, erros explicitos e modulos).",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md",
+        "curriculum.md"
+      ]
+    },
+    {
+      "session_id": "session-2026-09-08-arquivos-erros-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-08T19:42:42.4561487-03:00",
+      "ended_at": "2026-09-08T20:24:22.8834149-03:00",
+      "resumable": false,
+      "time_budget_minutes": 40,
+      "lesson_ids": [
+        "lesson-02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic-python-fundamentos"
+      ],
+      "objective": "Distinguir CSV e JSON e escolher o formato adequado para um caso simples de automacao.",
+      "cognitive_core": "Reconhecer a estrutura dos formatos, relaciona-la ao tipo de dado e justificar uma escolha.",
+      "mode": "assessment",
+      "checkpoint": "Sessao encerrada. return foi movido para depois do for, mas result = linha.copy() sobrescreve o valor em cada ciclo e devolve apenas a ultima linha. Acumulacao real de todas as linhas permanece pendente.",
+      "evidence_ids": [
+        "evidence-python-core-csv-json-01",
+        "evidence-python-core-csv-json-02",
+        "evidence-python-core-csv-json-03",
+        "evidence-python-core-csv-read-errors-01",
+        "evidence-python-core-csv-read-errors-02",
+        "evidence-python-core-csv-read-errors-03",
+        "evidence-python-core-csv-read-errors-04"
+        ,"evidence-python-core-csv-read-errors-05",
+        "evidence-python-core-csv-read-errors-06"
+      ],
+      "difficulty": "standard",
+      "next_step": "Retomar lesson-02: iniciar uma colecao antes do for, adicionar cada linha sem sobrescrever e retorna-la apos a iteracao; depois executar com CSV real.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md"
+      ]
+    },
+    {
+      "session_id": "session-2026-09-08-arquivos-erros-02",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-08T20:26:35.2201361-03:00",
+      "ended_at": "2026-09-08T20:29:42.2242619-03:00",
+      "resumable": false,
+      "lesson_ids": [
+        "lesson-02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic-python-fundamentos"
+      ],
+      "objective": "Executar a funcao corrigida com um CSV real e verificar que devolve todas as linhas.",
+      "cognitive_core": "Verificar a acumulacao de linhas por meio de uma entrada real e distinguir codigo correto de resultado comprovado.",
+      "mode": "assessment",
+      "checkpoint": "Sessao encerrada a pedido do estudante. A correcao de acumulacao foi registrada como pratica guiada; a execucao com um CSV real permanece pendente.",
+      "evidence_ids": [
+        "evidence-python-core-csv-read-errors-07"
+      ],
+      "difficulty": "standard",
+      "next_step": "Na proxima sessao, criar um CSV com mais de uma linha, chamar ler_clientes e mostrar o retorno completo.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md"
+      ]
+    },
+    {
+      "session_id": "session-2026-09-10-debugging-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-10T18:02:12.9735937-03:00",
+      "ended_at": "2026-09-10T20:00:19.3746917-03:00",
+      "time_budget_minutes": 60,
+      "resumable": false,
+      "lesson_ids": [
+        "lesson-03-testes-git"
+      ],
+      "topic_ids": [
+        "topic-python-fundamentos"
+      ],
+      "objective": "Diagnosticar uma falha Python por observacao, hipotese e verificacao da correcao.",
+      "cognitive_core": "Separar sintoma, hipotese e teste de verificacao sem pular diretamente para uma alteracao de codigo.",
+      "mode": "assessment",
+      "checkpoint": "Sessao encerrada ao atingir o limite de 60 minutos. Diagnosticou varios NameError/TypeError e retornos implicitos None; na ultima variacao identificou None, mas chamou incorretamente a soma de concatenacao.",
+      "evidence_ids": [
+        "evidence-debugging-diagnosis-01",
+        "evidence-debugging-diagnosis-02",
+        "evidence-debugging-diagnosis-03",
+        "evidence-debugging-diagnosis-04",
+        "evidence-debugging-diagnosis-05",
+        "evidence-debugging-diagnosis-06",
+        "evidence-debugging-diagnosis-07",
+        "evidence-debugging-diagnosis-08",
+        "evidence-debugging-diagnosis-09",
+        "evidence-debugging-diagnosis-10",
+        "evidence-debugging-diagnosis-11",
+        "evidence-debugging-diagnosis-12",
+        "evidence-debugging-diagnosis-13"
+      ],
+      "difficulty": "standard",
+      "next_step": "Revisar a diferenca entre concatenacao de strings e soma numerica ao diagnosticar None + 1.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_id": "lesson-00-diagnostico",
+      "title": "Diagnostico e ambiente profissional",
+      "topic_ids": [
+        "topic-workflow-profissional"
+      ],
+      "objective": "Executar, testar e versionar um programa minimo.",
+      "prerequisite_lesson_ids": [],
+      "status": "completed",
+      "session_ids": [
+        "session-2026-08-31-diagnostico",
+        "session-2026-09-01-pytest",
+        "session-2026-09-02-remoto",
+        "session-2026-09-02-transfer"
+      ],
+      "required_evidence_types": [
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "programa executavel",
+        "pytest",
+        "commit do estudante"
+      ]
+    },
+    {
+      "lesson_id": "lesson-01-python-core",
+      "title": "Tipos, fluxo, colecoes e funcoes",
+      "topic_ids": [
+        "topic-python-fundamentos"
+      ],
+      "objective": "Resolver problemas decompondo entradas, regras e saidas.",
+      "prerequisite_lesson_ids": [
+        "lesson-00-diagnostico"
+      ],
+      "status": "completed",
+      "session_ids": [
+        "session-2026-09-03-python-core-01",
+        "session-2026-09-07-python-core-tests"
+      ],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "programa CLI",
+        "funcoes pequenas",
+        "testes"
+      ]
+    },
+    {
+      "lesson_id": "lesson-02-arquivos-erros",
+      "title": "Arquivos, CSV, JSON e excecoes",
+      "topic_ids": [
+        "topic-automacao-confiavel"
+      ],
+      "objective": "Processar CSV e JSON com erros explicitos, estrutura modular e retorno completo dos dados.",
+      "prerequisite_lesson_ids": [
+        "lesson-04-descoberta-processo"
+      ],
+      "status": "planned",
+      "session_ids": [
+        "session-2026-09-08-arquivos-erros-01",
+        "session-2026-09-08-arquivos-erros-02"
+      ],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "entrada invalida tratada",
+        "modulos separados",
+        "README"
+      ]
+    },
+    {
+      "lesson_id": "lesson-03-testes-git",
+      "title": "Debugging sistematico e logica aplicada",
+      "topic_ids": [
+        "topic-python-fundamentos"
+      ],
+      "objective": "Diagnosticar falhas passo a passo, formular hipoteses e corrigir programas Python pequenos.",
+      "prerequisite_lesson_ids": [
+        "lesson-01-python-core"
+      ],
+      "status": "in_progress",
+      "session_ids": [
+        "session-2026-09-10-debugging-01"
+      ],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "hipotese de falha registrada",
+        "debugging registrado",
+        "correcao verificada"
+      ]
+    },
+    {
+      "lesson_id": "lesson-04-descoberta-processo",
+      "title": "Git e GitHub para trabalho profissional",
+      "topic_ids": [
+        "topic-workflow-profissional"
+      ],
+      "objective": "Organizar mudancas locais, commits e remoto GitHub de modo legivel e verificavel.",
+      "prerequisite_lesson_ids": [
+        "lesson-03-testes-git"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "repositorio organizado",
+        "historico Git legivel",
+        "push para GitHub quando aplicavel"
+      ]
+    },
+    {
+      "lesson_id": "lesson-05-automacao-confiavel",
+      "title": "SQL relacional para dados operacionais",
+      "topic_ids": [
+        "topic-apis-backend"
+      ],
+      "objective": "Modelar dados de manutencao e consultar registros com SQL relacional.",
+      "prerequisite_lesson_ids": [
+        "lesson-02-arquivos-erros"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "tabelas relacionadas",
+        "consultas com join",
+        "resultado explicado"
+      ]
+    },
+    {
+      "lesson_id": "lesson-06-http-apis",
+      "title": "HTTP, REST e consumo de APIs",
+      "topic_ids": [
+        "topic-llm-aplicacoes"
+      ],
+      "objective": "Consumir APIs REST pelo terminal e tratar contratos, respostas e falhas HTTP.",
+      "prerequisite_lesson_ids": [
+        "lesson-05-automacao-confiavel"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "cliente de API pelo terminal",
+        "erros de rede tratados",
+        "testes com mock"
+      ]
+    },
+    {
+      "lesson_id": "lesson-07-fastapi-dados",
+      "title": "Integracao de sistemas operacionais",
+      "topic_ids": [
+        "topic-agentes-ferramentas"
+      ],
+      "objective": "Conectar dados de arquivos, SQL e APIs em um fluxo operacional com falhas rastreaveis.",
+      "prerequisite_lesson_ids": [
+        "lesson-06-http-apis"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "mapeamento de entradas e saidas",
+        "integracao simulada",
+        "falhas tratadas",
+        "registro de execucao"
+      ]
+    },
+    {
+      "lesson_id": "lesson-08-llm-estruturado",
+      "title": "Automacao web com Selenium",
+      "topic_ids": [
+        "topic-producao-empregabilidade"
+      ],
+      "objective": "Automatizar uma tarefa web controlada com Selenium usando dados ficticios e verificacoes explicitas.",
+      "prerequisite_lesson_ids": [
+        "lesson-07-fastapi-dados"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "navegacao automatizada",
+        "esperas explicitas",
+        "dados ficticios",
+        "falha diagnosticada"
+      ]
+    },
+    {
+      "lesson_id": "lesson-09-seguranca-custo",
+      "title": "Demo de manutencao: modelo de dados e regras",
+      "topic_ids": [
+        "topic-agentes-ferramentas"
+      ],
+      "objective": "Modelar registros ficticios de falhas, reincidencias e atividades de manutencao para a demo.",
+      "prerequisite_lesson_ids": [
+        "lesson-08-llm-estruturado"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "dados ficticios ou anonimizados",
+        "regras de reincidencia",
+        "README de dominio"
+      ]
+    },
+    {
+      "lesson_id": "lesson-10-agente-ferramentas",
+      "title": "Demo de manutencao: coleta e processamento",
+      "topic_ids": [
+        "topic-agentes-ferramentas"
+      ],
+      "objective": "Implementar, passo a passo, a importacao e o processamento de registros operacionais da demo.",
+      "prerequisite_lesson_ids": [
+        "lesson-09-seguranca-custo"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "funcao de importacao",
+        "validacao de dados",
+        "resultado verificavel"
+      ]
+    },
+    {
+      "lesson_id": "lesson-11-agente-controle",
+      "title": "Demo de manutencao: relatorios e integracao",
+      "topic_ids": [
+        "topic-agentes-ferramentas"
+      ],
+      "objective": "Gerar relatorios de falhas e reincidencias e integrar uma fonte simulada sem expor dados reais.",
+      "prerequisite_lesson_ids": [
+        "lesson-10-agente-ferramentas"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "relatorio de reincidencias",
+        "integracao simulada",
+        "limites conhecidos documentados"
+      ]
+    },
+    {
+      "lesson_id": "lesson-12-docker-ci",
+      "title": "Qualidade: pytest, debugging e refatoracao",
+      "topic_ids": [
+        "topic-producao-empregabilidade"
+      ],
+      "objective": "Cobrir regras centrais da demo com pytest, investigar falhas e refatorar sem alterar o comportamento.",
+      "prerequisite_lesson_ids": [
+        "lesson-11-agente-controle"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "testes pytest relevantes",
+        "debugging registrado",
+        "refatoracao verificada"
+      ]
+    },
+    {
+      "lesson_id": "lesson-13-deploy-portfolio",
+      "title": "GitHub, testes tecnicos e preparacao seletiva",
+      "topic_ids": [
+        "topic-producao-empregabilidade"
+      ],
+      "objective": "Organizar a demo no GitHub, resolver testes tecnicos de entrada e explicar decisoes tecnicas com clareza.",
+      "prerequisite_lesson_ids": [
+        "lesson-12-docker-ci"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "README",
+        "repositorio GitHub legivel",
+        "simulacoes de testes tecnicos",
+        "demo de tres a cinco minutos"
+      ]
+    }
+  ],
+  "weak_points": [
+    {
+      "weak_point_id": "weak-workflow-pasta-repositorio",
+      "topic_id": "topic-workflow-profissional",
+      "category": "precision",
+      "cause": "Confusao recorrente entre pasta do sistema e repositorio Git local; ordem de mkdir/cd e nomes de comandos ainda nao estao firmes. A distincao local vs remoto deixou de ser evidenciada como erro apos reavaliacao literal.",
+      "supporting_evidence_ids": [
+        "evidence-diagnostico-workflow-01",
+        "evidence-diagnostico-workflow-02",
+        "evidence-diagnostico-workflow-03",
+        "evidence-diagnostico-remoto-01",
+        "evidence-diagnostico-transfer-01"
+      ],
+      "entry_date": "2026-08-31",
+      "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes, incluindo configuracao de remoto e encerramento do venv.",
+      "status": "resolved"
+    },
+    {
+      "weak_point_id": "weak-python-test-literal-lista",
+      "topic_id": "topic-python-fundamentos",
+      "category": "application",
+      "cause": "No teste, volta a envolver [] com str/int em vez de usar as listas literais de inteiros ja produzidas na conversa.",
+      "supporting_evidence_ids": [
+        "evidence-python-core-tests-02",
+        "evidence-python-core-tests-05"
+      ],
+      "entry_date": "2026-09-07",
+      "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes, com lista literal na chamada e no assert, sem str/int em volta.",
+      "status": "open"
+    },
+    {
+      "weak_point_id": "weak-csv-return-flow",
+      "topic_id": "topic-python-fundamentos",
+      "category": "procedural",
+      "cause": "Ao ler CSV, o retorno dos dados ainda nao esta separado da iteracao: primeiro faltou retorno e depois return foi colocado dentro do for, interrompendo a leitura na primeira linha.",
+      "supporting_evidence_ids": [
+        "evidence-python-core-csv-read-errors-02",
+        "evidence-python-core-csv-read-errors-03",
+        "evidence-python-core-csv-read-errors-04"
+      ],
+      "entry_date": "2026-09-08",
+      "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes que acumulem todas as linhas e retornem apos a iteracao.",
+      "status": "open"
+    }
+  ],
+  "projects": [
+    {
+      "project_id": "project-automacao-processo-real",
+      "name": "Sistema de Automacao de Manutencao — Demo",
+      "phase": 8,
+      "lesson_ids": [
+        "lesson-07-fastapi-dados",
+        "lesson-08-llm-estruturado",
+        "lesson-09-seguranca-custo",
+        "lesson-10-agente-ferramentas",
+        "lesson-11-agente-controle",
+        "lesson-12-docker-ci",
+        "lesson-13-deploy-portfolio"
+      ],
+      "status": "planned",
+      "objective": "Demonstrar automacao e integracao de sistemas sobre falhas, reincidencias, atividades e relatorios de manutencao com dados ficticios ou anonimizados.",
+      "delivery_criteria": [
+        "dados ficticios ou anonimizados",
+        "fluxo operacional documentado",
+        "codigo testado",
+        "relatorio de falhas e reincidencias",
+        "integracao simulada",
+        "README",
+        "commit do estudante"
+      ]
+    },
+    {
+      "project_id": "project-api-llm-servico",
+      "name": "Cliente de API pelo terminal",
+      "phase": 6,
+      "lesson_ids": [
+        "lesson-06-http-apis"
+      ],
+      "status": "planned",
+      "objective": "Consumir uma API REST pelo terminal, tratar falhas e apresentar resultados em formato legivel.",
+      "delivery_criteria": [
+        "cliente HTTP",
+        "timeout e erro tratados",
+        "README",
+        "testes isolados"
+      ]
+    },
+    {
+      "project_id": "project-agente-operacional",
+      "name": "Backlog pos-transicao — agentes com ferramentas",
+      "phase": 99,
+      "lesson_ids": [],
+      "status": "planned",
+      "objective": "Possivel especializacao posterior; fora do nucleo de transicao atual.",
+      "delivery_criteria": [
+        "tres a cinco ferramentas",
+        "estado",
+        "guardrails",
+        "aprovacao humana",
+        "avaliacao"
+      ]
+    },
+    {
+      "project_id": "project-capstone-producao",
+      "name": "Backlog pos-transicao — deploy e cloud",
+      "phase": 99,
+      "lesson_ids": [],
+      "status": "planned",
+      "objective": "Possivel especializacao posterior; fora do nucleo de transicao atual.",
+      "delivery_criteria": [
+        "Docker",
+        "CI",
+        "deploy",
+        "logs",
+        "README",
+        "demo",
+        "limitacoes conhecidas",
+        "registro de delegacao e verificacao"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "source-github-octoverse-2025",
+      "title": "What the fastest-growing tools reveal about how software is being built",
+      "institution": "GitHub",
+      "url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
+      "accessed_at": "2026-08-31",
+      "source_type": "industry report",
+      "linked_topic_ids": [
+        "topic-workflow-profissional",
+        "topic-producao-empregabilidade"
+      ],
+      "why_authoritative": "Dados primarios publicados pelo proprio GitHub sobre repositorios e contribuidores."
+    },
+    {
+      "source_id": "source-fastapi-tutorial",
+      "title": "FastAPI Tutorial - User Guide",
+      "institution": "FastAPI",
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "linked_topic_ids": [
+        "topic-apis-backend"
+      ],
+      "why_authoritative": "Documentacao oficial do framework usado no curso."
+    },
+    {
+      "source_id": "source-fastapi-testing",
+      "title": "Testing",
+      "institution": "FastAPI",
+      "url": "https://fastapi.tiangolo.com/tutorial/testing/",
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "linked_topic_ids": [
+        "topic-apis-backend"
+      ],
+      "why_authoritative": "Referencia oficial para testes de endpoints e HTTPX."
+    },
+    {
+      "source_id": "source-openai-agents-quickstart",
+      "title": "OpenAI Agents SDK Quickstart",
+      "institution": "OpenAI",
+      "url": "https://openai.github.io/openai-agents-python/quickstart/",
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "linked_topic_ids": [
+        "topic-agentes-ferramentas"
+      ],
+      "why_authoritative": "Documentacao oficial do SDK de agentes escolhido."
+    },
+    {
+      "source_id": "source-openai-agents-tools",
+      "title": "OpenAI Agents SDK Tools",
+      "institution": "OpenAI",
+      "url": "https://openai.github.io/openai-agents-python/tools/",
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "linked_topic_ids": [
+        "topic-agentes-ferramentas"
+      ],
+      "why_authoritative": "Referencia oficial para function tools, guardrails e agentes como ferramentas."
+    },
+    {
+      "source_id": "source-fastapi-docker",
+      "title": "FastAPI in Containers - Docker",
+      "institution": "FastAPI",
+      "url": "https://fastapi.tiangolo.com/deployment/docker/",
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "linked_topic_ids": [
+        "topic-producao-empregabilidade"
+      ],
+      "why_authoritative": "Guia oficial de containerizacao e deploy de aplicacoes FastAPI."
+    },
+    {
+      "source_id": "source-github-actions-python",
+      "title": "Building and testing Python",
+      "institution": "GitHub",
+      "url": "https://docs.github.com/en/actions/tutorials/build-and-test-code/python",
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "linked_topic_ids": [
+        "topic-producao-empregabilidade"
+      ],
+      "why_authoritative": "Documentacao oficial para CI de projetos Python."
+    }
+  ],
+  "next_focus": "lesson-03-testes-git"
+}

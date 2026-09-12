@@ -16,25 +16,25 @@ O núcleo não introduz FastAPI, Docker, n8n, cloud, MCP, agentes, RAG, framewor
 
 | Ciclo | Foco | Lição canônica | Marco observável |
 |---|---|---|---|
-| 1 | Lógica, decomposição e Python core | `lesson-01-python-core` | Resolver entradas, regras e saídas com funções e testes simples. Concluído por evidência prévia válida. |
-| 2 | Debugging sistemático | `lesson-03-testes-git` | Formular hipóteses, isolar uma falha e verificar a correção. |
-| 3 | Git e GitHub | `lesson-04-descoberta-processo` | Histórico legível e remoto quando aplicável. |
-| 4 | Arquivos, CSV e JSON | `lesson-02-arquivos-erros` | Ler arquivos completos, tratar erros e modularizar. |
-| 5 | SQL relacional | `lesson-05-automacao-confiavel` | Consultar dados operacionais com filtros, joins e agregações. |
-| 6 | HTTP e APIs REST | `lesson-06-http-apis` | Cliente de API pelo terminal com falhas tratadas. |
-| 7 | Integração de sistemas | `lesson-07-fastapi-dados` | Conectar fontes simuladas e registrar falhas do fluxo. |
-| 8 | Selenium | `lesson-08-llm-estruturado` | Automatizar navegação controlada com dados fictícios. |
-| 9 | Demo: dados e regras | `lesson-09-seguranca-custo` | Modelar falhas, reincidências e atividades de manutenção. |
-| 10 | Demo: coleta e processamento | `lesson-10-agente-ferramentas` | Importar e validar registros operacionais. |
-| 11 | Demo: relatórios e integração | `lesson-11-agente-controle` | Gerar relatório de reincidências e integrar fonte simulada. |
-| 12 | Qualidade | `lesson-12-docker-ci` | pytest, debugging e refatoração comprovados. |
-| 13 | GitHub e processos seletivos | `lesson-13-deploy-portfolio` | Repositório legível, explicação técnica e testes de entrada. |
+| 1 | Lógica, decomposição e Python core | `lesson_01-python-core` | Resolver entradas, regras e saídas com funções e testes simples. Concluído por evidência prévia válida. |
+| 2 | Debugging sistemático | `lesson_03-testes-git` | Formular hipóteses, isolar uma falha e verificar a correção. |
+| 3 | Git e GitHub | `lesson_04-descoberta-processo` | Histórico legível e remoto quando aplicável. |
+| 4 | Arquivos, CSV e JSON | `lesson_02-arquivos-erros` | Ler arquivos completos, tratar erros e modularizar. |
+| 5 | SQL relacional | `lesson_05-automacao-confiavel` | Consultar dados operacionais com filtros, joins e agregações. |
+| 6 | HTTP e APIs REST | `lesson_06-http-apis` | Cliente de API pelo terminal com falhas tratadas. |
+| 7 | Integração de sistemas | `lesson_07-fastapi-dados` | Conectar fontes simuladas e registrar falhas do fluxo. |
+| 8 | Selenium | `lesson_08-llm-estruturado` | Automatizar navegação controlada com dados fictícios. |
+| 9 | Demo: dados e regras | `lesson_09-seguranca-custo` | Modelar falhas, reincidências e atividades de manutenção. |
+| 10 | Demo: coleta e processamento | `lesson_10-agente-ferramentas` | Importar e validar registros operacionais. |
+| 11 | Demo: relatórios e integração | `lesson_11-agente-controle` | Gerar relatório de reincidências e integrar fonte simulada. |
+| 12 | Qualidade | `lesson_12-docker-ci` | pytest, debugging e refatoração comprovados. |
+| 13 | GitHub e processos seletivos | `lesson_13-deploy-portfolio` | Repositório legível, explicação técnica e testes de entrada. |
 
 ## Projeto principal
 
-`project-automacao-processo-real` é agora o **Sistema de Automação de Manutenção — Demo**. Ele será construído progressivamente, nunca entregue pronto pela IA, usando somente dados fictícios ou anonimizados. O domínio inclui registros de falhas, reincidências, atividades de manutenção, relatórios, informações operacionais e integração simulada entre sistemas.
+`project_automacao-processo-real` é agora o **Sistema de Automação de Manutenção — Demo**. Ele será construído progressivamente, nunca entregue pronto pela IA, usando somente dados fictícios ou anonimizados. O domínio inclui registros de falhas, reincidências, atividades de manutenção, relatórios, informações operacionais e integração simulada entre sistemas.
 
-O cliente de API pelo terminal já planejado foi preservado em `project-api-llm-servico` e reposicionado para o Ciclo 6, após os fundamentos necessários. Não será excluído nem antecipado.
+O cliente de API pelo terminal já planejado foi preservado em `project_api-llm-servico` e reposicionado para o Ciclo 6, após os fundamentos necessários. Não será excluído nem antecipado.
 
 ## Estado inicial no novo currículo
 
@@ -42,6 +42,6 @@ O cliente de API pelo terminal já planejado foi preservado em `project-api-llm-
 - Competência validada: Git, testes básicos e fluxo profissional — domínio 80.
 - Trabalho preservado e reposicionado: CSV/JSON tem tentativas e explicações válidas, mas a leitura de um CSV real com retorno completo ainda precisa ser demonstrada no Ciclo 4.
 - Pontos fracos preservados: lista literal em testes e fluxo de acumulação/retorno em CSV.
-- Ciclo atual: 2, debugging sistemático. A próxima lição é `lesson-03-testes-git`.
+- Ciclo atual: 2, debugging sistemático. A próxima lição é `lesson_03-testes-git`.
 
 <!-- IDs, evidências, sessões e critérios canônicos estão em .ai-tutor/state.json. -->

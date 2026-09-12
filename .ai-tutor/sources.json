@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
+  "revision": 0,
+  "sources": [
+    {
+      "source_id": "source_github-octoverse-2025",
+      "title": "What the fastest-growing tools reveal about how software is being built",
+      "author_or_institution": "GitHub",
+      "url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
+      "publication_date": null,
+      "accessed_at": "2026-08-31",
+      "source_type": "industry report",
+      "lesson_ids": [],
+      "topic_ids": [
+        "topic_workflow-profissional",
+        "topic_producao-empregabilidade"
+      ],
+      "authority_reason": "Dados primarios publicados pelo proprio GitHub sobre repositorios e contribuidores."
+    },
+    {
+      "source_id": "source_fastapi-tutorial",
+      "title": "FastAPI Tutorial - User Guide",
+      "author_or_institution": "FastAPI",
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "publication_date": null,
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "lesson_ids": [],
+      "topic_ids": [
+        "topic_apis-backend"
+      ],
+      "authority_reason": "Documentacao oficial do framework usado no curso."
+    },
+    {
+      "source_id": "source_fastapi-testing",
+      "title": "Testing",
+      "author_or_institution": "FastAPI",
+      "url": "https://fastapi.tiangolo.com/tutorial/testing/",
+      "publication_date": null,
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "lesson_ids": [],
+      "topic_ids": [
+        "topic_apis-backend"
+      ],
+      "authority_reason": "Referencia oficial para testes de endpoints e HTTPX."
+    },
+    {
+      "source_id": "source_openai-agents-quickstart",
+      "title": "OpenAI Agents SDK Quickstart",
+      "author_or_institution": "OpenAI",
+      "url": "https://openai.github.io/openai-agents-python/quickstart/",
+      "publication_date": null,
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "lesson_ids": [],
+      "topic_ids": [
+        "topic_agentes-ferramentas"
+      ],
+      "authority_reason": "Documentacao oficial do SDK de agentes escolhido."
+    },
+    {
+      "source_id": "source_openai-agents-tools",
+      "title": "OpenAI Agents SDK Tools",
+      "author_or_institution": "OpenAI",
+      "url": "https://openai.github.io/openai-agents-python/tools/",
+      "publication_date": null,
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "lesson_ids": [],
+      "topic_ids": [
+        "topic_agentes-ferramentas"
+      ],
+      "authority_reason": "Referencia oficial para function tools, guardrails e agentes como ferramentas."
+    },
+    {
+      "source_id": "source_fastapi-docker",
+      "title": "FastAPI in Containers - Docker",
+      "author_or_institution": "FastAPI",
+      "url": "https://fastapi.tiangolo.com/deployment/docker/",
+      "publication_date": null,
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "lesson_ids": [],
+      "topic_ids": [
+        "topic_producao-empregabilidade"
+      ],
+      "authority_reason": "Guia oficial de containerizacao e deploy de aplicacoes FastAPI."
+    },
+    {
+      "source_id": "source_github-actions-python",
+      "title": "Building and testing Python",
+      "author_or_institution": "GitHub",
+      "url": "https://docs.github.com/en/actions/tutorials/build-and-test-code/python",
+      "publication_date": null,
+      "accessed_at": "2026-08-31",
+      "source_type": "official documentation",
+      "lesson_ids": [],
+      "topic_ids": [
+        "topic_producao-empregabilidade"
+      ],
+      "authority_reason": "Documentacao oficial para CI de projetos Python."
+    }
+  ]
+}

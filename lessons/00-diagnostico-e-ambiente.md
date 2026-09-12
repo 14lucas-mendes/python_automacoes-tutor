@@ -1,4 +1,4 @@
-# Lição `lesson-00-diagnostico`
+# Lição `lesson_00-diagnostico`
 
 ## Objetivo observável
 

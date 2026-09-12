@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
+  "topic": "Formação de transição para Automação e Integração de Sistemas com Python",
+  "goal": "Fazer uma transição segura para funções de Automação e Integração de Sistemas utilizando Python, com autonomia real de programação e uso progressivamente menos dependente de vibe coding.",
+  "deadline": "9 meses — 13 ciclos de 21 dias",
+  "weekly_hours": 8,
+  "preferred_times": [
+    "segunda, terça, quinta, sexta e domingo",
+    "dia de trabalho: até 1h30; dia de folga: até 2h",
+    "ciclo de 21 dias alinhado à escala de trabalho"
+  ],
+  "initial_level": "básico",
+  "language": "pt-BR com inglês técnico progressivo",
+  "accessibility": "nenhuma",
+  "source_policy": {
+    "prefer": "documentação oficial e fontes técnicas primárias",
+    "freshness": "verificar quando o conteúdo puder mudar",
+    "external_upload": "exigir consentimento específico"
+  },
+  "external_consents": {}
+}

@@ -10,8 +10,8 @@ Quando uma lição passar a `completed` no estado canônico (`.ai-tutor/state.js
 Vault: `C:\Users\lucka\Documents\Projeto Transição de Carreira`  
 Pasta: `20 - Áreas/Sistema de Estudos/`  
 Nome: `AI Tutor - Python automações - <lesson_id>.md`  
-Exemplo: `AI Tutor - Python automações - lesson-01-python-core.md`
+Exemplo: `AI Tutor - Python automações - lesson_01-python-core.md`
 
-Siga o formato da nota já existente da `lesson-01-python-core`: frontmatter (title, modified, tags `estudos`/`ai-tutor`/`python`, category `area`, status `concluida`, tipo `diario-licao`, licao, programa), entrega verificável, sessões da lição, tentativas e nível de ajuda, pontos fracos, o que revisar, próximo passo, wikilinks. Atualize `[[MOC - Sistema de Estudos]]` com o link da nova nota.
+Siga o formato da nota já existente da `lesson_01-python-core`: frontmatter (title, modified, tags `estudos`/`ai-tutor`/`python`, category `area`, status `concluida`, tipo `diario-licao`, licao, programa), entrega verificável, sessões da lição, tentativas e nível de ajuda, pontos fracos, o que revisar, próximo passo, wikilinks. Atualize `[[MOC - Sistema de Estudos]]` com o link da nova nota.
 
 O diário é **projeção**. Não é evidência. Não use o formato N0–N5 de `accelerated-learning`. Estado canônico continua em `.ai-tutor/state.json`.

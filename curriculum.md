@@ -17,8 +17,8 @@ O núcleo não introduz FastAPI, Docker, n8n, cloud, MCP, agentes, RAG, framewor
 | Ciclo | Foco | Lição canônica | Marco observável |
 |---|---|---|---|
 | 1 | Lógica, decomposição e Python core | `lesson_01-python-core` | Resolver entradas, regras e saídas com funções e testes simples. Concluído por evidência prévia válida. |
-| 2 | Debugging sistemático | `lesson_03-testes-git` | Formular hipóteses, isolar uma falha e verificar a correção. |
-| 3 | Git e GitHub | `lesson_04-descoberta-processo` | Histórico legível e remoto quando aplicável. |
+| 2 | Debugging sistemático | `lesson_03-testes-git` | Formular hipóteses, isolar uma falha e verificar a correção. Concluído em 2026-09-12, com correção verificada por execução. |
+| 3 | Git e GitHub | `lesson_04-descoberta-processo` | Histórico legível e remoto quando aplicável. Concluído em 2026-09-17, com preflight reconstruído sem comandos fornecidos. |
 | 4 | Arquivos, CSV e JSON | `lesson_02-arquivos-erros` | Ler arquivos completos, tratar erros e modularizar. |
 | 5 | SQL relacional | `lesson_05-automacao-confiavel` | Consultar dados operacionais com filtros, joins e agregações. |
 | 6 | HTTP e APIs REST | `lesson_06-http-apis` | Cliente de API pelo terminal com falhas tratadas. |
@@ -41,7 +41,10 @@ O cliente de API pelo terminal já planejado foi preservado em `project_api-llm-
 - Competência validada: lógica, decomposição e Python core — domínio 80.
 - Competência validada: Git, testes básicos e fluxo profissional — domínio 80.
 - Trabalho preservado e reposicionado: CSV/JSON tem tentativas e explicações válidas, mas a leitura de um CSV real com retorno completo ainda precisa ser demonstrada no Ciclo 4.
-- Pontos fracos preservados: lista literal em testes e fluxo de acumulação/retorno em CSV.
-- Ciclo atual: 2, debugging sistemático. A próxima lição é `lesson_03-testes-git`.
+- Pontos fracos preservados: lista literal em testes, fluxo de acumulação/retorno em CSV e o modelo de dois tempos do Python (momento em que cada tipo de erro é detectado).
+- Ciclo concluído: 2, debugging sistemático (`lesson_03-testes-git`), em 2026-09-12, com correção verificada por execução.
+- Ciclo concluído: 3, Git e GitHub (`lesson_04-descoberta-processo`), em 2026-09-17. O preflight foi reconstruído sem comandos fornecidos e a forma exata dos comandos de remoto foi fechada no ciclo de erro; permanece aberto apenas o ponto de precisão `weak_git-formas-exatas-comandos`, agora observável no uso real.
+- Regra do aluno registrada em 2026-09-17: fechamento de lição não exige contexto novo sintético quando o tópico já sustenta o domínio exigido com evidência autônoma real de transferência.
+- Ciclo atual: 4, Arquivos, CSV e JSON. A próxima lição é `lesson_02-arquivos-erros`, que também fecha o ponto fraco `weak_csv-return-flow`.
 
 <!-- IDs, evidências, sessões e critérios canônicos estão em .ai-tutor/state.json. -->

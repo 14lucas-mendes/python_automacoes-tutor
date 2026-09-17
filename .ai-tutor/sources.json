@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 0,
+  "revision": 1,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -101,6 +101,38 @@
         "topic_producao-empregabilidade"
       ],
       "authority_reason": "Documentacao oficial para CI de projetos Python."
+    },
+    {
+      "source_id": "source_python-errors-exceptions",
+      "title": "8. Errors and Exceptions (The Python Tutorial)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/tutorial/errors.html",
+      "publication_date": null,
+      "accessed_at": "2026-09-12",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_03-testes-git"
+      ],
+      "topic_ids": [
+        "topic_python-fundamentos"
+      ],
+      "authority_reason": "Documentacao oficial do Python. Define que a ultima linha da mensagem nomeia o tipo da excecao e que o bloco anterior e o stack traceback; traz os exemplos NameError (4 + spam*3) e TypeError ('2' + 2)."
+    },
+    {
+      "source_id": "source_python-traceback",
+      "title": "traceback - Print or retrieve a stack traceback",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/library/traceback.html",
+      "publication_date": null,
+      "accessed_at": "2026-09-12",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_03-testes-git"
+      ],
+      "topic_ids": [
+        "topic_python-fundamentos"
+      ],
+      "authority_reason": "Referencia oficial da biblioteca padrao para extrair e formatar tracebacks, usada para inspecionar a cadeia de chamadas da falha."
     }
   ]
 }

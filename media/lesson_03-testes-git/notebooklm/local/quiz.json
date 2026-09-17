@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "lesson_id": "lesson_03-testes-git",
+  "topic_id": "topic_python-fundamentos",
+  "draft": true,
+  "note": "Rascunho de quiz do pacote de aprendizagem. A chave de resposta fica separada das perguntas: revelar somente depois da tentativa. Midia gerada nao conta como evidencia.",
+  "questions": [
+    {
+      "question_id": "q1",
+      "question": "Um arquivo tem `print(\"total\": total)` na linha 2 e `print(\"Total: \" + total)` na linha 7. O que aparece no terminal?",
+      "options": [
+        "As duas mensagens, a de sintaxe primeiro",
+        "Somente o SyntaxError da linha 2",
+        "Somente o TypeError da linha 7",
+        "Nenhuma mensagem"
+      ],
+      "misconception": "Acreditar que a execucao comeca antes de a analise terminar."
+    },
+    {
+      "question_id": "q2",
+      "question": "A mensagem e `TypeError: can only concatenate str (not \"NoneType\") to str`. O que a variavel continha?",
+      "options": ["Um numero float", "None", "Uma string vazia", "Um nome nao definido"],
+      "misconception": "Tratar None como ausencia de valor e descrever a operacao pela intencao, nao pelo valor presente."
+    },
+    {
+      "question_id": "q3",
+      "question": "`NameError: name 'total' is not defined`. O que isso significa?",
+      "options": [
+        "`total` existe, mas com tipo incompativel",
+        "`total` nao foi definido naquele ponto",
+        "`total` vale None",
+        "Falta um `return` na funcao"
+      ],
+      "misconception": "Trocar NameError por TypeError, tratando os dois como erro de compatibilidade."
+    },
+    {
+      "question_id": "q4",
+      "question": "Uma funcao calcula `media` mas termina sem `return`. Quem a chama recebe o que?",
+      "options": ["0", "O ultimo valor calculado", "None", "Um erro de sintaxe"],
+      "misconception": "Acreditar que o ultimo valor local vaza para o chamador."
+    },
+    {
+      "question_id": "q5",
+      "question": "O traceback aponta `line 11, in relatorio`. O defeito pode estar na linha 6, dentro de `tempo_medio`?",
+      "options": [
+        "Nao: o defeito e sempre a linha apontada",
+        "Sim: a linha apontada e onde quebrou, nao necessariamente onde esta a causa",
+        "So se o erro for TypeError",
+        "So se houver um `return` na funcao"
+      ],
+      "misconception": "Confundir o sintoma, indicado pelo traceback, com a causa do defeito."
+    },
+    {
+      "question_id": "q6",
+      "question": "Qual destes NAO traz o cabecalho `Traceback (most recent call last)`?",
+      "options": ["ZeroDivisionError", "TypeError", "SyntaxError", "NameError"],
+      "misconception": "Nao usar a presenca ou ausencia do cabecalho como criterio observavel do momento do erro."
+    }
+  ],
+  "answer_key": [
+    { "question_id": "q1", "answer_index": 1, "why": "A analise reprova o arquivo inteiro antes de qualquer execucao, entao a linha 7 nunca roda." },
+    { "question_id": "q2", "answer_index": 1, "why": "A mensagem nomeia NoneType: o valor presente e None, independentemente do que a operacao pretendia fazer." },
+    { "question_id": "q3", "answer_index": 1, "why": "NameError e nome inexistente. Tipo incompativel seria TypeError." },
+    { "question_id": "q4", "answer_index": 2, "why": "Sem `return`, a funcao devolve None automaticamente." },
+    { "question_id": "q5", "answer_index": 1, "why": "O traceback marca onde a operacao falhou; a causa pode estar numa funcao anterior da cadeia." },
+    { "question_id": "q6", "answer_index": 2, "why": "SyntaxError e detectado na analise, antes de executar, por isso nao ha stack traceback." }
+  ]
+}

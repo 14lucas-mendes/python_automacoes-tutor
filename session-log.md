@@ -4,9 +4,104 @@
      estudo: o gerador reescreve session-log.md sem condição e substituiria toda esta
      narrativa por um resumo mecânico de 6 linhas por sessão. -->
 
+## `session_2026-09-17-arquivos-csv-01` — fechamento em 2026-09-17
+
+- Status: concluída, encerrada acima do orçamento (72 min de 45 planejados)
+- Lição: `lesson_02-arquivos-erros` — Ciclo 4, Arquivos, CSV e JSON. Permanece **em andamento**.
+- Objetivo: ler um CSV real com mais de uma linha e devolver todos os registros, provando a leitura pelo retorno completo.
+- Modo: `assessment` seguido de prática guiada; núcleo cognitivo: separar leitura de acumulação e devolver a coleção inteira depois da iteração, em vez de devolver o último item lido.
+- Cenário: `E:/Lucas/Documents/formação_python/src` — `exercicios/exercicios_03.py` (código de 2026-09-08) e `dados.csv`, que tinha cabeçalho e **um** registro.
+- Por que o item ficou pendente desde 08/09: com um registro só, "devolver o último" e "devolver todos" dão o mesmo resultado. A verificação era impossível de observar naquele arquivo.
+- Evidência: `evidence_csv-ciclo4-01` — aplicação **autônoma parcial**. Ampliou o CSV para cinco registros, previu a forma do retorno e executou a leitura: `exited with code=0`, seis listas na saída (cabeçalho + 5 registros). O retorno completo ficou provado. Falhas materiais: afirmou que a função devolve `FileNotFoundError` quando ela imprime uma mensagem e devolve `None` implicitamente; justificou a adequação pelo mecanismo (`usar try-except`) e não pela consequência para quem chama. Refinamento: descreveu a estrutura em vez de escrever os valores literais pedidos, repetindo o padrão do `weak_python-test-literal-lista` agora na verificação.
+- Aula entregue com execução real: `print` não é retorno (canais diferentes — a mensagem vai para a tela, o valor sai para quem chama); `.strip()` para os espaços que o `csv.reader` não limpa; e `csv.reader` já entrega uma lista nova por linha, o que torna o `.copy()` do código redundante (ensinado assim em sessão anterior — lacuna do material, não do aluno).
+- Evidência: `evidence_csv-ciclo4-02` — aplicação **correta e guiada** (a forma do reprojeto veio do tutor no ciclo de erro). O ponto central foi cumprido: a função passou a **devolver** em vez de imprimir, com três execuções reais (arquivo com dados, arquivo ausente, arquivo vazio). Quatro lacunas verificadas por execução: a justificativa sobre como quem chama distingue os casos não foi escrita; a limpeza dos espaços foi feita reescrevendo o próprio `dados.csv` em vez de tratar na leitura (resolve arquivo próprio, não arquivo de terceiro); a detecção de vazio **conta o cabeçalho como dado**, então um CSV só com cabeçalho devolve `[['nome','email','telefone']]` como se tivesse conteúdo, com zero registros reais; e o `print` solto no fim do arquivo dispara no import, impedindo usá-lo como módulo — regressão da guarda `__main__` de `lesson_01`, e o critério "módulos separados" desta lição continua aberto.
+- Observação de ambiente: no terminal do aluno a mensagem com acento saiu como `Arquivo n?o encontrado` — é a página de código do console, não o código. As demonstrações da aula usaram texto sem acento por isso.
+- Domínio de `topic_automacao-confiavel`: 0 → **20** na primeira tentativa (tentativa autônoma parcial) e → **40** no fechamento (aplicação parcial com ajuda direcional). `status: in_progress`.
+- Ponto fraco `weak_csv-return-flow` segue **ativo**, com progresso registrado: a verificação com arquivo real de várias linhas, pendente desde 08/09, foi feita. Falta a **produção autônoma** da acumulação para satisfazer a saída do ponto.
+- `next_focus`: `lesson_02-arquivos-erros`, aberto com "entrada inválida tratada", "módulos separados" e "README" pendentes.
+- Checkpoint: encerrada. Sem toque nesta sessão: `weak_python-test-literal-lista` (reapareceu em forma de descrição), `weak_error-model-tempo-deteccao` (1 de 2 explicações) e `weak_git-formas-exatas-comandos`.
+
+## `session_2026-09-17-git-preflight` — fechamento em 2026-09-17
+
+- Status: concluída
+- Duração planejada: 60 minutos. A janela real de relógio passou disso (aberta 13:20, encerrada no fim do dia), mas o trabalho da sessão foram dois turnos: a reconstrução e a correção.
+- Lição: `lesson_04-descoberta-processo` — Ciclo 3, Git e GitHub. **Concluída** nesta sessão.
+- Objetivo: reconstruir, sem comandos fornecidos, o preflight completo de um repositório Git real e a configuração exata de `origin` antes de publicar.
+- Modo: `assessment`; núcleo cognitivo: decidir a ordem e a função de cada verificação antes de publicar, distinguindo repositório local, histórico e remoto.
+- Cenário: `C:/Users/lucka/Documents/projects/sandbox-historico`, remoto `https://github.com/14lucas-mendes/sandbox-testelab`.
+- Evidência: `evidence_git-preflight-01` — aplicação **autônoma parcial**. Ordem correta (raiz → branch → working tree → remoto → referências remotas), `git ls-remote origin` colocado **depois** de garantir o remoto configurado, `-u` explicado como upstream, publicação verificada sem sobrescrever nada. Duas falhas materiais de forma exata: `git remote edit origin <URL>` (subcomando inexistente — `error: unknown subcommand`) e `git log -1 --one-line` (flag inexistente — `fatal: unrecognized argument`). O item de histórico foi escrito e não executado.
+- Aula do ciclo de erro, com execução real e não descrição: a família `git remote` (`add` cria, `set-url` corrige a URL de um remoto existente, `remove` apaga, `-v` lê) e a flag `--oneline`; diagrama das quatro camadas mostrando que `git status` é a única verificação que atravessa área de trabalho, índice e remoto.
+- Evidência: `evidence_git-preflight-02` — aplicação **correta e guiada** (a forma exata veio do tutor, então confirma o mecanismo e não conta como autônoma). `git remote add origin <URL>` escrito corretamente de primeira; **previsão própria**, feita antes de executar, de que o `git status` deixaria de mostrar o vínculo com o upstream — e a saída real confirmou a ausência da linha `Your branch is up to date with 'origin/master'`, que voltou depois do `push -u` como `## master...origin/master`. Autocorreção em linha do erro de digitação `git remote - v`.
+- Refinamento registrado, sem rebaixar: o plano prometia `git log --oneline origin/master..HEAD` ("o que ainda não subiu") e a execução usou `git log --oneline origin/master` (histórico do lado remoto). O `..` foi explicado nesta sessão como conteúdo novo, portanto fora de avaliação.
+- O `git log` final imprimiu o critério da lição ao vivo: `4d7357f alteracoes` ao lado de `d41cc1f Adiciona media() com guarda...` e `699de67 ... para desconsiderar o arquivo debug.log dos meus commits`.
+- Ponto fraco aberto: `weak_git-formas-exatas-comandos` (`precision`) — a forma exata falhou duas vezes (2026-09-14 e 2026-09-17) e só ficou correta com o comando fornecido.
+- **Regra nova do aluno (2026-09-17), gravada em `AGENTS.md`:** não exigir contexto novo sintético — repositório ou pasta criada só para a avaliação — como condição de fechamento de lição; o uso real em repositórios que já existem é contexto de transferência válido e preferível. Contexto sintético segue permitido como prática, nunca como exigência. Se o que falta é apenas a forma exata de um comando, o tutor ensina, registra `precision` e segue. O ponto fraco foi reescopado para ser observado no uso real.
+- Motivo do fechamento: a entrega estava cumprida (repositório organizado, histórico legível, push para GitHub verificado) e os tipos exigidos de evidência já existiam no tópico com trabalho real — `feynman` autônomo correto (`evidence_git-historico-04`), aplicação autônoma correta (`evidence_git-historico-03`, `-05`) e **transferência autônoma real** (`evidence_diagnostico-transfer-01`, `evidence_git-transfer-real-01`). A exigência de um repositório novo era aplicação redundante da matriz de domínio pelo tutor, não requisito do contrato — a objeção do aluno está correta.
+- Mantido com honestidade: o que falhou nesta sessão **não** era transferência, era forma exata de comando. A lição fecha; o ponto fraco permanece ativo, porque uma forma que falhou duas vezes não vira domínio por decisão de fechamento.
+- Domínio de `topic_workflow-profissional` mantido em **80**; `retention` em `medium` (tentativa parcial não avança nem recua a retenção).
+- `next_focus`: `lesson_02-arquivos-erros` — Ciclo 4, Arquivos, CSV e JSON.
+- Checkpoint: encerrada. Sem toque nesta sessão: `weak_python-test-literal-lista`, `weak_error-model-tempo-deteccao` (1 de 2 explicações) e `weak_csv-return-flow`, cuja execução com CSV real é justamente o material do Ciclo 4.
+
+## `session_2026-09-14-git-transferencia-01` — fechamento em 2026-09-15
+
+- Status: concluída
+- Duração planejada: 90 minutos
+- Lição: `lesson_04-descoberta-processo` — Git e GitHub para trabalho profissional. A lição permanece **em andamento** porque a reconstrução autônoma do preflight ainda precisa incluir todas as verificações e a forma exata de `git remote add`.
+- Objetivo: transferir o fluxo Git para um repositório real, verificando o estado local, o histórico legível e o remoto sem sobrescrever mudanças alheias.
+- Modo: `assessment`; núcleo cognitivo: escolher uma sequência segura de verificação e publicação, distinguindo estado local, histórico e remoto.
+- Cenário real: `C:/Users/lucka/Documents/projects/sandbox-historico`, branch `master`, working tree limpa, último commit `699de67` (`git log -1 --oneline`), nenhum remoto inicialmente.
+- Execução: foi criado o remoto vazio `https://github.com/14lucas-mendes/sandbox-testelab.git`; `origin` foi configurado; `git ls-remote origin` não retornou refs; `git push -u origin master` publicou a branch; `git status -sb` terminou em `## master...origin/master`, sem `[ahead]` ou `[behind]`.
+- Evidência: `evidence_git-transfer-real-01` — aplicação autônoma **correta com transferência**: executou `git rev-parse --show-toplevel`, `git branch`, `git status`, `git remote -v`, `git log -1 --oneline` e `git ls-remote origin` para inspecionar o repositório real antes do envio.
+- Evidência: `evidence_git-transfer-real-02` — aplicação **correta guiada**: corrigiu o remoto, publicou `master` com `git push -u origin master` e verificou o upstream com `git status -sb`; os comandos de correção/publicação foram fornecidos após a dificuldade com a sintaxe de link.
+- Evidência: `evidence_git-transfer-real-03` — Feynman autônomo **parcial**: explicou branch rastreada, remoto e push, mas omitiu branch/histórico/working tree na sequência final e não escreveu o formato completo `git remote add origin <URL>`.
+- Feedback: a saída capturada pelo estudante mostrou o remoto correto e o push bem-sucedido; uma tentativa de verificação pelo ambiente do Codex foi bloqueada por `detected dubious ownership`, sem alteração global de segurança.
+- Próximo passo: reconstruir em uma nova sessão, sem comandos fornecidos, o preflight completo (raiz, branch, working tree, histórico, remoto e refs) e a configuração exata de `origin` antes de publicar.
+
+## `session_2026-09-13-git-historico`
+
+- Status: concluída
+- Duração planejada: 45 minutos
+- Lição: `lesson_04-descoberta-processo` — Ciclo 3, Git e GitHub. Permanece **em andamento**.
+- Objetivo: montar um histórico Git legível — ler o estado do repositório antes de commitar, decidir o que entra em cada commit e escrever a mensagem que explica o porquê.
+- Modo: `learning` seguido de aplicação autônoma. Pela regra nova do `AGENTS.md`, `git status`, `git diff`, staging seletivo e mensagem de commit nunca haviam sido ensinados nesta formação, então a aula explicativa veio antes de qualquer avaliação.
+- Cenário: `C:/Users/lucka/Documents/projects/sandbox-historico`, fora do estudo — commit inicial `4d7357f` com mensagem pobre (`alteracoes`), `registros.py` modificado e `debug.log` não rastreado.
+- Aula entregue: analogia da foto e do álbum, diagrama das três áreas e dois exemplos executados de verdade (`log`/`status`/`diff`, e a diferença entre `diff` e `diff --staged`). Também ensinado o *pager* do Git, que apareceu na colagem do estudante (`q` para sair, `git --no-pager` para evitar).
+- Evidência: `evidence_git-historico-01` — explicação autônoma **parcial**: leu as duas seções do `status` corretamente (modificado fora do preparo × não rastreado), mas descreveu o `git diff` pelo formato da saída, sem nomear a comparação.
+- Evidência: `evidence_git-historico-02` — explicação **correta e guiada**: após pergunta direcional, afirmou que o `git diff` compara árvore de trabalho × índice, e tirou a consequência prática. Refinamento aplicado: o índice não é um commit.
+- Evidência: `evidence_git-historico-03` — aplicação autônoma **correta**: preparou só `registros.py` (sem `git add .`), verificou com `git diff --staged`, commitou com a mensagem de porquê `d41cc1f` e justificou recusar o `debug.log`.
+- Evidência: `evidence_git-historico-04` — explicação autônoma **correta** do `.gitignore` como registro da decisão; o refinamento de que o próprio `.gitignore` precisa ser commitado foi apresentado depois.
+- Evidência: `evidence_git-historico-05` — aplicação autônoma **correta**: criou o `.gitignore`, confirmou que o `debug.log` saiu do `status`, commitou em commit separado (`699de67`) e terminou com *working tree clean*. Verificado fora: o arquivo continua no disco e `git check-ignore` confirma a regra.
+- O `git log` final mostra o contraste que é o critério da lição: `alteracoes` ao lado de duas mensagens de porquê.
+- Refinamentos opcionais, sem rebaixar a classificação: o prefixo `fix:` é convenção de correção de bug e não foi ensinado nesta formação (para esta mudança seria manutenção), o estilo diverge entre os dois commits e há erros de digitação em texto lido por humanos.
+- Domínio de `topic_workflow-profissional` mantido em **80**. Subir para 100 exigiria detecção de limite ou autocorreção demonstrada, que não ocorreu.
+- Próximo passo: transferir o fluxo para um repositório real (por exemplo o do próprio estudo) e, quando aplicável, remoto no GitHub. Fechar `lesson_04` exige evidência de **transferência**.
+
+## `session_2026-09-12-debugging-02`
+
+- Status: concluída. A linha dizia "em andamento" por desatualização do diário; `.ai-tutor/state.json` já registrava `completed` com `ended_at`.
+- Duração planejada: 60 minutos (inicialmente 90; ajustada a pedido do estudante antes do início da tarefa)
+- Lição: `lesson_03-testes-git` — Ciclo 2, debugging sistemático.
+- Objetivo: diagnosticar autonomamente uma falha nova, separando sintoma, hipótese e verificação, e explicar sem apoio a diferença entre `NameError` e `TypeError` causado por `None`.
+- Modo: `assessment`; núcleo cognitivo: separar sintoma, hipótese e teste de verificação sem pular para a correção, e classificar o defeito entre nome inexistente, valor ausente (`None`) e tipo incompatível na operação.
+- Herdado da sessão anterior: `evidence_debugging-diagnosis-11` (Feynman parcial), `diagnosis-12` (prática guiada) e `diagnosis-13` (transferência parcial — chamou `None + 1` de concatenação).
+- Material de estudo: `lessons/03-testes-git.md`; fontes registradas `source_python-errors-exceptions` e `source_python-traceback`.
+- Evidência: `evidence_debugging-diagnosis-14` — explicação autônoma **parcial**: ordem de leitura do traceback e identificação dos frames de chamada corretas; executou os dois casos no terminal (`TypeError` no código original, `SyntaxError` na substituição que ele próprio propôs). Não nomeou o tipo da exceção na primeira resposta e tratou o `TypeError` como "sintaxe errada".
+- Correção pedagógica (a pedido do estudante): a sessão abriu com pergunta gerativa sobre o modelo de dois tempos do Python (análise do código vs execução), que **nunca foi ensinado** nesta formação. A pergunta "por que `SyntaxError` não tem traceback" foi **retirada da avaliação** e a lacuna virou ponto fraco conceitual.
+- Regras duráveis gravadas: `AGENTS.md` na raiz do estudo e espelho em `.cursor/rules/pedagogia-progressiva.mdc` — aula explicativa antes de avaliar, nunca assumir termo não estudado, conteúdo não ensinado não vira nota baixa, mais de um exemplo por conceito, concretizar antes de abstrair.
+- Ponto fraco aberto: `weak_error-model-tempo-deteccao` (conceitual) — momento de detecção de cada tipo de erro.
+- Evidência: `evidence_debugging-diagnosis-15` — explicação autônoma **correta com transferência**: previu que, num arquivo com `SyntaxError` e `TypeError` ao mesmo tempo, só a mensagem de `SyntaxError` aparece; verificou por conta própria trocando a ordem dos `prints` e reexecutando.
+- Evidência: `evidence_debugging-diagnosis-16` — aplicação autônoma **parcial** em contexto novo (programa de manutenção com retorno implícito `None`): achou a causa real fora da linha apontada pelo traceback e propôs correção adequada, mas descreveu o valor recebido como `str + float` quando a mensagem indicava `NoneType`, e não apresentou a etapa de verificação.
+- Evidência: `evidence_debugging-diagnosis-17` — explicação autônoma **correta**: `media` vale `None` no programa com defeito, confirmado pela própria mensagem de erro e pela linha apontada. Refinamento de redação: `None` é um valor, não ausência de inicialização.
+- Evidência: `evidence_debugging-diagnosis-18` — aplicação autônoma **correta com transferência**: `return media` em `tempo_medio` + f-string em `relatorio`; execução real no VS Code com `Tempo medio: 60.0 min` e `exited with code=0`. Saída `60.0` em vez de `60` é refinamento opcional.
+- Evidência: `evidence_debugging-diagnosis-19` — explicação Feynman autônoma **correta** do alvo da lição: função que termina sem `return` devolve `None` ao chamador, a variável do outro escopo recebe esse `None`, e a operação incompatível (concatenação ou soma) gera `TypeError`.
+- Lição `lesson_03-testes-git`: **concluída** — hipótese registrada, debugging registrado e correção verificada por execução. `next_focus` passa a `lesson_04-descoberta-processo` (Ciclo 3, Git e GitHub).
+- Diário gravado no vault Obsidian: `20 - Áreas/Sistema de Estudos/AI Tutor - Python automações - lesson-03-testes-git.md`, com o link adicionado ao `MOC - Sistema de Estudos`.
+- Ponto fraco `weak_error-model-tempo-deteccao` segue **ativo**: tem 1 das 2 explicações autônomas exigidas, e a segunda precisa ocorrer em sessão diferente.
+- Checkpoint: sessão encerrada. Ficaram sem toque nesta sessão `weak_csv-return-flow` (execução com CSV real ainda pendente) e `weak_python-test-literal-lista`.
+
 ## `session_2026-09-10-debugging-01`
 
-- Status: em andamento
+- Status: concluída (encerrada ao atingir o limite de 60 minutos). A linha de status anterior dizia "em andamento" por desatualização do diário; `.ai-tutor/state.json` já registrava `completed` com `ended_at`.
 - Duração planejada: 60 minutos
 - Lição: `lesson_03-testes-git` — Ciclo 2, debugging sistemático.
 - Objetivo: diagnosticar uma falha Python por observação, hipótese e verificação da correção.

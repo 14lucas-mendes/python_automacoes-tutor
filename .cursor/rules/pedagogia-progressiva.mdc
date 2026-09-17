@@ -1,0 +1,18 @@
+---
+description: Aula explicativa antes de avaliar; nunca assumir termo não estudado
+alwaysApply: true
+---
+
+# Pedagogia progressiva
+
+O aluno está aprendendo Python do início. Termo desconhecido não é falha dele: é lacuna do material.
+
+1. **Aula explicativa antes de avaliar.** Conceito ainda não ensinado recebe primeiro: definição → analogia → exemplo concreto executado → só então pergunta. Nunca abrir com pergunta gerativa sobre conteúdo novo.
+2. **Nunca assumir conhecimento.** Definir cada termo técnico na primeira vez que ele aparece na conversa e registrá-lo na lição. Não inferir domínio de temas vizinhos nem do campo `mastery` do `state.json`.
+3. **Conteúdo não ensinado não vira nota baixa.** Se a pergunta dependia de algo nunca introduzido, a resposta não é `incorrect` nem `partial` do aluno. Ensine, registre a lacuna como ponto fraco (`category: "conceptual"`) e siga.
+4. **Mais de um exemplo por conceito**, variando o contexto.
+5. **Concretizar antes de abstrair:** analogia, diagrama, imagem ou execução real antes de definição abstrata.
+
+Estado canônico: `.ai-tutor/state.json`. Este arquivo é espelho de `AGENTS.md` na raiz do estudo.
+
+Formato de seção e fluxo de ajuda continuam sendo os da skill `ai-tutor`.

@@ -1,0 +1,121 @@
+{
+  "schema_version": 2,
+  "artifact_id": "media_011da207-4d7f-4002-85d2-4c13a7d7aded",
+  "lesson_id": "lesson_03-testes-git",
+  "objective": "Consolidar o modelo de dois tempos do Python (analise do codigo antes de executar vs execucao) e a distincao entre SyntaxError, NameError e TypeError causado por None, cobrindo o ponto fraco weak_error-model-tempo-deteccao.",
+  "source_ids": [
+    "source_python-errors-exceptions",
+    "source_python-traceback"
+  ],
+  "source_hashes": {
+    "source_python-errors-exceptions": "84443b587e6ec0b99c5e37f4cbff94e3e738cc45368247beca76ff44eab123a1",
+    "source_python-traceback": "c328a42a9677b8712254613aaa7da27e63f0a1818692106819ea9d4282d8a5f6"
+  },
+  "requested_formats": [
+    "cards",
+    "quiz",
+    "mind_map",
+    "image",
+    "audio",
+    "study_guide"
+  ],
+  "external_upload": {
+    "provider": "notebooklm",
+    "consented": false,
+    "consented_at": "2026-09-12T20:33:19.4278352Z",
+    "files": [
+      "source-pack.md",
+      "prompts.md"
+    ],
+    "decision": "nao_usar_neste_desktop",
+    "decided_at": "2026-09-13T17:55:58.881540-03:00",
+    "decided_by": "aluno",
+    "decision_note": "Este desktop nao usa NotebookLM nem Gemini. O aluno gera midia externa no Cursor ou no Codex e traz o resultado; o tutor confere contra as fontes e atualiza media-index.json. Regra durável em AGENTS.md e em .cursor/rules/sem-geracao-externa.mdc.",
+    "executed_elsewhere": {
+      "notebook_url": "https://notebook.google.com/notebook/d93998f2-dd4c-4f4f-81bd-ba11099a7873",
+      "notebook_title": "Guia de Erros, Excecoes e Tracebacks no Python",
+      "recorded_by": "outro ambiente (Cursor ou Codex)",
+      "recorded_at": "2026-09-12T20:33:19.4278352Z",
+      "note": "Upload feito fora deste desktop. Nao foi verificado aqui contra as fontes."
+    }
+  },
+  "evidence_eligible": false,
+  "status": "uploaded",
+  "outputs": [
+    {
+      "format": "cards",
+      "type": "draft",
+      "local_path": "local/cards.json",
+      "note": "Rascunho. O registro canonico e .ai-tutor/cards.json (8 cards promovidos).",
+      "evidence_eligible": false
+    },
+    {
+      "format": "quiz",
+      "type": "draft",
+      "local_path": "local/quiz.json",
+      "note": "Chave de resposta separada das perguntas.",
+      "evidence_eligible": false
+    },
+    {
+      "format": "mind_map",
+      "type": "draft",
+      "local_path": "local/concept-map.mmd",
+      "note": "Mermaid com relacoes rotuladas.",
+      "evidence_eligible": false
+    },
+    {
+      "format": "image",
+      "type": "local",
+      "local_path": "local/didactic-image.svg",
+      "note": "SVG vetorial com texto correto; alt text em local/image-brief.md.",
+      "accessibility": {
+        "alt_text": true
+      },
+      "evidence_eligible": false
+    },
+    {
+      "format": "audio",
+      "type": "script",
+      "local_path": "local/audio-script.md",
+      "note": "Transcript/roteiro em pt-BR. Nenhum audio foi sintetizado.",
+      "evidence_eligible": false
+    },
+    {
+      "format": "study_guide",
+      "type": "local",
+      "local_path": "local/study_guide.md",
+      "note": "Perguntas de recuperacao com citacao de fonte.",
+      "evidence_eligible": false
+    }
+  ],
+  "provider_detection": {
+    "checked_at": "2026-09-12T17:16:20.457870-03:00",
+    "provider": "notebooklm",
+    "outcome": "authenticated-upload-verified",
+    "attempts": [
+      {
+        "method": "playwright-cli (npx @playwright/cli@0.1.19)",
+        "result": "falhou",
+        "detail": "O daemon interno e iniciado com um argumento a mais do que aceita (playwright-core 1.63.0-alpha-2026-08-31): 'too many arguments. Expected 1 argument but got 2'. Nenhum comando (open, snapshot, upload) chega a rodar nesta maquina."
+      },
+      {
+        "method": "playwright-core via connectOverCDP",
+        "result": "funcionou",
+        "detail": "Chrome aberto com --user-data-dir dedicado e --remote-debugging-port=9222. O NotebookLM carregou AUTENTICADO (notebook.google.com, titulo 'Gemini Notebook'), ou seja, o caminho de upload existe."
+      },
+      {
+        "method": "cua_repl browser UI",
+        "result": "funcionou",
+        "detail": "No notebook d93998f2-dd4c-4f4f-81bd-ba11099a7873, as fontes '# Verified Source Pack' e '# Grounded Generation Prompts' foram inseridas por 'Texto copiado' com o conteudo exato autorizado e ambas terminaram o processamento."
+      }
+    ],
+    "stopped_reason": "Apesar de ser um processo isolado (PID 12428, --user-data-dir=mimocode-notebooklm-profile, confirmado pela linha de comando), o perfil carregava a sessao do Google do usuario ativa e abas privadas alheias ao estudo. Execucao interrompida por decisao do usuario.",
+    "incident": "Um comando goto do driver atuou sobre a ultima aba da instancia e navegou uma pagina de consentimento de verificacao de identidade (myaccount.google.com/verification/selfie/...). A URL completa, incluindo attempt_token, ficou registrada no transcript da conversa. Nao ha evidencia de que a aba do navegador pessoal do usuario tenha sido afetada, ja que a aba pertencia a instancia controlada.",
+    "residual_cleanup": [
+      "Perfil dedicado: C:\\Users\\lucka\\AppData\\Local\\mimocode-notebooklm-profile",
+      "Driver temporario: %TEMP%\\ai-tutor-pw.js",
+      "Chrome PID 12428 com --remote-debugging-port=9222 segue aberto e autenticado no NotebookLM; fechar essa janela remove a porta de depuracao."
+    ],
+    "note": "O pack local foi enviado para o notebook autenticado do usuario por entrada de texto equivalente aos dois arquivos autorizados. Nenhum artefato de Studio foi gerado nesta etapa."
+  }
+}

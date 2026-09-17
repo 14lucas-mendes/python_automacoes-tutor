@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "lesson_id": "lesson_03-testes-git",
+  "topic_id": "topic_python-fundamentos",
+  "draft": true,
+  "canonical_registry": ".ai-tutor/cards.json",
+  "note": "Rascunho de flashcards do pacote de aprendizagem. Nao e o registro canonico: o registro vence em .ai-tutor/cards.json e o deck flashcards.md e projecao dele. Promover exige o workflow /flashcards. Midia gerada nao conta como evidencia.",
+  "cards": [
+    {
+      "card_id": "draft_tempos-01",
+      "front": "Quais sao os dois tipos de erro que o Python distingue?",
+      "back": "Erros de sintaxe, detectados na analise do codigo antes de executar, e excecoes, levantadas durante a execucao.",
+      "source_ids": ["source_python-errors-exceptions"]
+    },
+    {
+      "card_id": "draft_tempos-02",
+      "front": "A mensagem de erro nao traz o cabecalho \"Traceback (most recent call last)\". O que isso prova?",
+      "back": "Que o codigo foi reprovado na analise. Nenhuma linha executou, por isso nao existe rastro de chamadas.",
+      "source_ids": ["source_python-errors-exceptions", "source_python-traceback"]
+    },
+    {
+      "card_id": "draft_tempos-03",
+      "front": "O que a ultima linha de uma mensagem de erro informa, e o que informa o bloco acima dela?",
+      "back": "A ultima linha informa o tipo da excecao e o detalhe. O bloco acima e o stack traceback: arquivo, linha e a cadeia de chamadas, lida de cima para baixo.",
+      "source_ids": ["source_python-errors-exceptions", "source_python-traceback"]
+    },
+    {
+      "card_id": "draft_tempos-04",
+      "front": "NameError significa o que?",
+      "back": "O nome usado nao existe ou nao foi definido naquele ponto. Exemplo da documentacao: 4 + spam*3 levanta NameError: name 'spam' is not defined.",
+      "source_ids": ["source_python-errors-exceptions"]
+    },
+    {
+      "card_id": "draft_tempos-05",
+      "front": "TypeError significa o que?",
+      "back": "O nome existe, mas o valor tem tipo incompativel com a operacao. Exemplo da documentacao: '2' + 2 levanta TypeError: can only concatenate str (not \"int\") to str.",
+      "source_ids": ["source_python-errors-exceptions"]
+    },
+    {
+      "card_id": "draft_tempos-06",
+      "front": "O que uma funcao Python devolve quando termina sem `return`?",
+      "back": "None, automaticamente. O calculo pode ter acontecido, mas nao sai da funcao, e o chamador recebe None sem nenhum aviso.",
+      "source_ids": ["source_python-errors-exceptions"]
+    },
+    {
+      "card_id": "draft_tempos-07",
+      "front": "Uma variavel recebeu None de uma funcao. O que acontece ao concatena-la com um texto?",
+      "back": "TypeError: can only concatenate str (not \"NoneType\") to str. None e um valor, do tipo NoneType, nao a ausencia de uma atribuicao.",
+      "source_ids": ["source_python-errors-exceptions"]
+    },
+    {
+      "card_id": "draft_tempos-08",
+      "front": "A linha apontada pelo traceback e sempre a linha do defeito?",
+      "back": "Nao. A linha apontada e onde a operacao falhou; a causa pode estar em outra funcao. No caso praticado, o erro apareceu em `relatorio` e o defeito era o `return` ausente em `tempo_medio`.",
+      "source_ids": ["source_python-errors-exceptions"]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+flowchart TB
+  CODE["Codigo Python"] --> AN["1. ANALISE — confere a forma"]
+  AN -->|"forma invalida"| SYN["SyntaxError<br/>nada executa<br/>sem traceback"]
+  AN -->|"forma valida"| EX["2. EXECUCAO — confere os valores"]
+  EX -->|"o nome nao existe"| NAME["NameError<br/>com traceback"]
+  EX -->|"o valor nao serve para a operacao"| TYPE["TypeError<br/>com traceback"]
+  NR["funcao terminou sem return<br/>devolveu None"] -->|"o None chega ao chamador"| TYPE
+  MIX["str + float<br/>str + None<br/>None + 1"] -.->|"exemplos de tipo incompativel"| TYPE
+  SYN -.->|"a execucao nunca comeca"| EX

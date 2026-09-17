@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 80,
-  "updated_at": "2026-09-10T20:00:19.3746917-03:00",
+  "revision": 104,
+  "updated_at": "2026-09-17T19:48:39.237022-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -68,7 +68,13 @@
         "evidence_debugging-diagnosis-10",
         "evidence_debugging-diagnosis-11",
         "evidence_debugging-diagnosis-12",
-        "evidence_debugging-diagnosis-13"
+        "evidence_debugging-diagnosis-13",
+        "evidence_debugging-diagnosis-14",
+        "evidence_debugging-diagnosis-15",
+        "evidence_debugging-diagnosis-16",
+        "evidence_debugging-diagnosis-17",
+        "evidence_debugging-diagnosis-18",
+        "evidence_debugging-diagnosis-19"
       ],
       "required_evidence_types": [
         "feynman",
@@ -91,7 +97,7 @@
       "mastery": 80,
       "retention": "medium",
       "status": "mastered",
-      "last_practice": "2026-09-02",
+      "last_practice": "2026-09-17",
       "evidence_ids": [
         "evidence_diagnostico-workflow-01",
         "evidence_diagnostico-workflow-02",
@@ -99,7 +105,19 @@
         "evidence_diagnostico-workflow-04",
         "evidence_diagnostico-pytest-01",
         "evidence_diagnostico-remoto-01",
-        "evidence_diagnostico-transfer-01"
+        "evidence_diagnostico-transfer-01",
+        "evidence_git-historico-01",
+        "evidence_git-historico-02",
+        "evidence_git-historico-03",
+        "evidence_git-historico-04",
+        "evidence_git-historico-05",
+        "evidence_git-transferencia-01",
+        "evidence_git-transferencia-02",
+        "evidence_git-transfer-real-01",
+        "evidence_git-transfer-real-02",
+        "evidence_git-transfer-real-03",
+        "evidence_git-preflight-01",
+        "evidence_git-preflight-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -121,11 +139,14 @@
       "prerequisite_topic_ids": [
         "topic_python-fundamentos"
       ],
-      "mastery": 0,
+      "mastery": 40,
       "retention": "unknown",
-      "status": "not_started",
-      "last_practice": null,
-      "evidence_ids": [],
+      "status": "in_progress",
+      "last_practice": "2026-09-17",
+      "evidence_ids": [
+        "evidence_csv-ciclo4-01",
+        "evidence_csv-ciclo4-02"
+      ],
       "required_evidence_types": [
         "feynman",
         "application",
@@ -1060,7 +1081,7 @@
       "autonomous": true,
       "transfer": false,
       "context": "Diagnostico inicial de NameError antes de alterar o codigo.",
-      "recorded_at": "2026-09-10T19:14:25.7962380-03:00",
+      "recorded_at": "2026-09-10T19:14:25.796238-03:00",
       "reference": {
         "type": "session",
         "id": "session_2026-09-10-debugging-01",
@@ -1230,7 +1251,7 @@
       "autonomous": true,
       "transfer": false,
       "context": "Distincao entre NameError e TypeError causado por None nos exemplos praticados.",
-      "recorded_at": "2026-09-10T19:54:10.5075770-03:00",
+      "recorded_at": "2026-09-10T19:54:10.507577-03:00",
       "reference": {
         "type": "session",
         "id": "session_2026-09-10-debugging-01",
@@ -1272,6 +1293,349 @@
       },
       "result": "partial",
       "error": "Identificou corretamente None e a necessidade de retorno padrao, mas chamou a operacao de concatenacao; o erro ocorre em None + 1, uma soma entre tipos incompatíveis."
+    },
+    {
+      "evidence_id": "evidence_debugging-diagnosis-14",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-09-12-debugging-02",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Leitura de mensagem de erro. Identificou que a operacao era concatenacao (str + float) e executou os dois casos no terminal: o codigo original levantou TypeError e a propria substituicao proposta levantou SyntaxError. Acertou a ordem de leitura do traceback e identificou os frames de chamada, mas nao nomeou o tipo da excecao na primeira resposta e classificou o TypeError como 'sintaxe errada'.",
+      "recorded_at": "2026-09-12T16:02:59.693044-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-12-debugging-02",
+        "location": "E:/Lucas/Documents/formacao_python/src/exercicios/exercicios_05.py"
+      },
+      "result": "partial",
+      "error": "Leitura do traceback e execucao real corretas. A classificacao 'sintaxe errada' e a ausencia do momento de deteccao nao entram como falha de dominio: o modelo de dois tempos do Python (analise do codigo vs execucao) nunca foi ensinado nesta formacao. Registrado como lacuna conceitual em weak_error-model-tempo-deteccao, nao como perda de dominio do aluno."
+    },
+    {
+      "evidence_id": "evidence_debugging-diagnosis-15",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-09-12-debugging-02",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Caso novo com dois defeitos no mesmo arquivo (SyntaxError em uma linha e TypeError em outra). Previu que somente a mensagem de SyntaxError aparece e explicou que a analise reprova o arquivo antes de qualquer linha rodar. Verificou por conta propria, trocando a ordem dos prints e reexecutando o programa, e relatou a saida observada.",
+      "recorded_at": "2026-09-12T16:20:00.623379-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-12-debugging-02",
+        "location": "E:/Lucas/Documents/formacao_python/src/exercicios/exercicios_05.py"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence_debugging-diagnosis-16",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-09-12-debugging-02",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Programa novo com retorno implicito None em tempo_medio e uso desse retorno em relatorio. Nomeou o erro (TypeError), localizou a linha apontada pelo traceback, identificou a causa real em outra funcao (tempo_medio sem return), nomeou a operacao como concatenacao e propos correcao com return media mais f-string.",
+      "recorded_at": "2026-09-12T16:36:07.248272-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-12-debugging-02",
+        "location": "E:/Lucas/Documents/formacao_python/src/exercicios/exercicios_05.py"
+      },
+      "result": "partial",
+      "error": "Localizou a causa real fora da linha apontada pelo traceback e a correcao proposta esta adequada. Dois pontos materiais: descreveu o valor recebido como str + float quando a mensagem de erro indica NoneType, contradizendo a propria conclusao de que falta o return; e nao respondeu o item de verificacao antes de alterar o codigo. A correcao ainda nao foi verificada por execucao."
+    },
+    {
+      "evidence_id": "evidence_debugging-diagnosis-17",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-09-12-debugging-02",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Identificou que, no programa com defeito, a variavel media dentro de relatorio vale None, e usou a propria mensagem de erro (que nomeia NoneType) junto com a linha apontada pelo traceback como metodo de verificacao antes de alterar o codigo.",
+      "recorded_at": "2026-09-12T16:41:38.975082-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-12-debugging-02",
+        "location": "E:/Lucas/Documents/formacao_python/src/exercicios/exercicios_05.py"
+      },
+      "result": "correct",
+      "error": "Imprecisao de redacao: disse que media 'nao tem um valor iniciado'. A variavel recebe sim um valor, o None devolvido por tempo_medio; None e um valor, nao ausencia de inicializacao. A conclusao e a causa apontada permanecem corretas."
+    },
+    {
+      "evidence_id": "evidence_debugging-diagnosis-18",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-09-12-debugging-02",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Corrigiu o programa de manutencao: return media em tempo_medio e f-string em relatorio. Executou no VS Code e obteve a saida 'Tempo medio: 60.0 min' com exited with code=0.",
+      "recorded_at": "2026-09-12T16:55:42.281744-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-12-debugging-02",
+        "location": "E:/Lucas/Documents/formacao_python/src/exercicios/exercicios_05.py"
+      },
+      "result": "correct",
+      "error": "Saida 60.0 em vez de 60 por uso de divisao comum; refinamento opcional, nao erro."
+    },
+    {
+      "evidence_id": "evidence_debugging-diagnosis-19",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-09-12-debugging-02",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Explicou autonomamente de onde vem o None: funcao que termina sem return devolve None ao chamador, a variavel do outro escopo recebe esse None, e qualquer acao com ela (soma ou concatenacao) gera TypeError. Explicacao correta e autossuficiente.",
+      "recorded_at": "2026-09-12T16:55:42.281744-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-12-debugging-02",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence_git-historico-01",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-13-git-historico",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Leitura de git status e git diff. Distinguiu corretamente as duas secoes do status: registros.py modificado e fora do preparo, debug.log nao rastreado; usou os termos ambiente de preparo e nao rastreado. Descreveu o git diff pelo formato da saida.",
+      "recorded_at": "2026-09-13T21:31:33.377953-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-13-git-historico",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico"
+      },
+      "result": "partial",
+      "error": "Faltou o elemento material: a comparacao que o git diff faz (arvore de trabalho x indice). Sem ela nao ha como garantir o que entra no commit, que era o objetivo da sessao. Corrigido em seguida, apos pergunta direcional."
+    },
+    {
+      "evidence_id": "evidence_git-historico-02",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-13-git-historico",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Depois de pergunta direcional, afirmou que o git diff compara a arvore de trabalho com o indice e tirou a consequencia pratica: o que ja esta no indice deixa de aparecer no diff.",
+      "recorded_at": "2026-09-13T21:31:33.377953-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-13-git-historico",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico"
+      },
+      "result": "correct",
+      "error": "Correcao obtida apos ajuda nivel 3; confirma o conceito, mas nao e evidencia autonoma plena. Refinamento aplicado: o indice nao e um commit."
+    },
+    {
+      "evidence_id": "evidence_git-historico-03",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-13-git-historico",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Decidiu o conteudo do commit lendo o status e o diff, preparou apenas registros.py (nao usou git add .), conferiu com git diff --staged e commitou com mensagem de porque: d41cc1f 'Adiciona media() com guarda para lista vazia, evitando divisao por zero no relatorio'. Justificou recusar debug.log por ser artefato local sem relacao com a logica do programa.",
+      "recorded_at": "2026-09-13T21:31:33.377953-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-13-git-historico",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico"
+      },
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence_git-historico-04",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-13-git-historico",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Explicou que a decisao de nao acompanhar um arquivo se registra num .gitignore com o caminho relativo, e que nem git add . passa a busca-lo.",
+      "recorded_at": "2026-09-13T21:31:33.377953-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-13-git-historico",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico"
+      },
+      "result": "correct",
+      "error": "Omissao apresentada depois, nao penalizada: o proprio .gitignore precisa ser commitado, senao a decisao fica apenas na maquina local. Refinamento de redacao: ignorar nao ocorre na hora do commit, o arquivo deixa de ser candidato."
+    },
+    {
+      "evidence_id": "evidence_git-historico-05",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-13-git-historico",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Criou .gitignore excluindo debug.log, confirmou que o git status deixou de lista-lo, commitou o .gitignore em commit separado (699de67) com mensagem de porque, e terminou com working tree clean. Verificado: debug.log continua no disco e git check-ignore confirma a regra .gitignore:1.",
+      "recorded_at": "2026-09-13T21:31:33.377953-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-13-git-historico",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico"
+      },
+      "result": "correct",
+      "error": "Refinamentos opcionais: o prefixo 'fix:' e convencao de correcao de bug e nao foi ensinado nesta formacao (para esta mudanca, um prefixo de manutencao ou nenhum seria mais preciso); o estilo da mensagem diverge do commit anterior; ha erros de digitacao em texto lido por humanos."
+    },
+    {
+      "evidence_id": "evidence_git-transferencia-01",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-14-git-transferencia-01",
+      "kind": "transfer",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Em um cenario novo, planejou preparar apenas relatorio.py, conferir o staging com git status e git diff --staged, criar commit com mensagem descritiva e enviar a branch. Excluiu corretamente debug.log do commit.",
+      "recorded_at": "2026-09-14T18:14:04.7159348-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-14-git-transferencia-01",
+        "location": "cenario hipotetico de transferencia"
+      },
+      "result": "partial",
+      "error": "O nome da branch foi escrito com acento (feature/relatório-falhas), diferente do identificador exato fornecido (feature/relatorio-falhas). Tambem faltou uma verificacao explicita do commit local, como git log -1 --oneline, antes do push."
+    },
+    {
+      "evidence_id": "evidence_git-transferencia-02",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-14-git-transferencia-01",
+      "kind": "transfer",
+      "autonomous": false,
+      "transfer": true,
+      "context": "Apos feedback, corrigiu a grafia exata do comando git push origin feature/relatorio-falhas e identificou git log -1 --oneline como verificacao do commit local antes do envio.",
+      "recorded_at": "2026-09-14T18:14:04.7159348-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-14-git-transferencia-01",
+        "location": "cenario hipotetico de transferencia"
+      },
+      "result": "correct",
+      "error": "Autocorrecao obtida depois de feedback direcional; ainda falta executar o fluxo em um repositorio real."
+    },
+    {
+      "evidence_id": "evidence_git-transfer-real-01",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-14-git-transferencia-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "context": "No repositorio real sandbox-historico, executou o preflight de raiz, branch, working tree, historico local, remoto e refs antes da publicacao.",
+      "recorded_at": "2026-09-15T20:12:09.8401259-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-14-git-transferencia-01",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico"
+      },
+      "result": "correct",
+      "error": null,
+      "limit_or_self_correction": false
+    },
+    {
+      "evidence_id": "evidence_git-transfer-real-02",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-14-git-transferencia-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": true,
+      "context": "No repositorio real sandbox-historico, corrigiu a URL de origin, publicou master com git push -u origin master e confirmou master...origin/master sem divergencia.",
+      "recorded_at": "2026-09-15T20:12:09.8401259-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-14-git-transferencia-01",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico"
+      },
+      "result": "correct",
+      "error": "A configuracao exata do remoto e o comando de publicacao foram fornecidos apos dificuldade com a sintaxe de link; portanto esta evidencia e guiada.",
+      "limit_or_self_correction": false
+    },
+    {
+      "evidence_id": "evidence_git-transfer-real-03",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-14-git-transferencia-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Explicacao final do estudante sobre branch rastreada, remoto, git push e verificacao pos-publicacao em contexto de repositorio real.",
+      "recorded_at": "2026-09-15T20:12:09.8401259-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-14-git-transferencia-01",
+        "location": "resumo autonomo no fechamento da sessao"
+      },
+      "result": "partial",
+      "error": "A sequencia final omitiu branch, working tree e ultimo commit, e escreveu git remote add sem o nome origin nem a forma exata da URL.",
+      "limit_or_self_correction": false
+    },
+    {
+      "evidence_id": "evidence_git-preflight-01",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-17-git-preflight",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Reconstrucao escrita e executada do preflight completo (raiz, branch, working tree, historico, remoto e refs remotos) e da configuracao de origin, a partir do prompt apenas, sem comandos fornecidos.",
+      "recorded_at": "2026-09-17T17:58:03.366511-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-17-git-preflight",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico; git rev-parse --show-toplevel; git branch; git status; git remote -v; git ls-remote origin; git push -u origin master; git status -sb"
+      },
+      "result": "partial",
+      "error": "Ordem e justificativas corretas, sem acao destrutiva e com publicacao verificada. Duas falhas materiais de forma exata: git remote edit origin <URL> nao existe (o subcomando correto e git remote add; git responde unknown subcommand) e git log -1 --one-line tem hifen errado (a flag e --oneline; git responde fatal: unrecognized argument). O item de historico foi escrito mas nao executado. Refinamento, sem rebaixar: git status foi descrito como estado local, sem citar a comparacao com o upstream que a propria saida mostra; e o push foi feito com -u quando a branch ja rastreava origin/master."
+    },
+    {
+      "evidence_id": "evidence_git-preflight-02",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-17-git-preflight",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Execucao guiada da correcao em sandbox-historico: remocao do origin, registro de origin com a forma exata, conferencia, previsao do upstream perdido, reestabelecimento do rastreamento e verificacao final em master...origin/master.",
+      "recorded_at": "2026-09-17T18:09:49.610206-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-17-git-preflight",
+        "location": "C:/Users/lucka/Documents/projects/sandbox-historico; git remote remove origin; git remote -v; git remote add origin https://github.com/14lucas-mendes/sandbox-testelab.git; git status; git push -u origin master; git status -sb; git log --oneline origin/master"
+      },
+      "result": "correct",
+      "error": "Guiada: a forma exata de git remote add e a flag --oneline foram fornecidas pelo tutor no ciclo de erro, entao esta execucao confirma o mecanismo e nao conta como evidencia autonoma. Aspectos proprios do estudante que ficaram corretos: previu, antes de executar, que o git status deixaria de mostrar o vinculo com o upstream depois de recolocar o origin sem refazer o rastreamento, e a saida confirmou. Refinamentos: o plano prometia git log --oneline origin/master..HEAD para responder 'o que ainda nao esta no remoto', mas a execucao usou git log --oneline origin/master, que lista o historico do lado remoto; e digitou git remote - v (com espaco), corrigindo na linha seguinte."
+    },
+    {
+      "evidence_id": "evidence_csv-ciclo4-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-17-arquivos-csv-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Ampliou src/dados.csv para cinco registros, previu a forma do retorno e executou ler_clientes com print, obtendo a lista completa (cabecalho + cinco registros) com exited with code=0. Fecha o item pendente desde 2026-09-08: verificar a acumulacao com um CSV real de varias linhas.",
+      "recorded_at": "2026-09-17T18:39:32.223859-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-17-arquivos-csv-01",
+        "location": "E:/Lucas/Documents/formação_python/src; python -u src/exercicios/exercicios_03.py"
+      },
+      "result": "partial",
+      "error": "A leitura completa esta provada: seis listas, cabecalho mais cinco registros. Duas falhas materiais: (1) afirmou que, sem o arquivo, a funcao devolve FileNotFoundError, quando o except captura a excecao, imprime uma mensagem e devolve None implicitamente, de modo que quem chama nao distingue arquivo ausente de leitura vazia; (2) justificou a adequacao do comportamento pelo mecanismo usado (ter try-except) e nao pela consequencia para quem chama. Refinamento: a previsao descreveu a estrutura ('lista de listas, cabecalho primeiro') em vez de escrever os valores literais que o proprio pedido exigia, repetindo o padrao do ponto fraco weak_python-test-literal-lista."
+    },
+    {
+      "evidence_id": "evidence_csv-ciclo4-02",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-17-arquivos-csv-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Reprojetou o caminho de erro de ler_clientes depois da aula: a funcao passou a devolver valores em vez de imprimir, com 'Arquivo nao encontrado' no except e 'Arquivo vazio' quando nao ha linhas, e executou tres casos reais (com dados, arquivo ausente, arquivo vazio) colando as saidas cruas.",
+      "recorded_at": "2026-09-17T19:48:39.237022-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-17-arquivos-csv-01",
+        "location": "E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py; python -u src/exercicios/exercicios_03.py"
+      },
+      "result": "partial",
+      "error": "Guiada: a forma do reprojeto veio do tutor no ciclo de erro, entao confirma o mecanismo e nao conta como evidencia autonoma. O ponto central foi cumprido: quem chama agora recebe valores em vez de uma mensagem perdida na tela. Incompleto em quatro pontos, todos verificados por execucao: (1) a justificativa pedida sobre por que quem chama distingue os casos nao foi escrita; (2) escolheu limpar os espacos reescrevendo o proprio dados.csv, o que resolve arquivo proprio mas nao arquivo de terceiro; (3) a deteccao de vazio conta o cabecalho como dado, entao um CSV so com cabecalho devolve [['nome','email','telefone']] como se houvesse conteudo, com zero registros reais; (4) o print solto no fim do arquivo dispara no import, impedindo usar o arquivo como modulo - conteudo ja ensinado em lesson_01 (guarda __main__) e exigido pelo criterio 'modulos separados' desta licao."
     }
   ],
   "sessions": [
@@ -1302,8 +1666,7 @@
       "difficulty": "diagnostico",
       "next_step": "Na proxima sessao: pytest minimo no sandbox e, se houver repo no GitHub, git remote add + push.",
       "files_changed": [
-        ".ai-tutor/state.json",
-        "session-log.md"
+        ".ai-tutor/state.json"
       ]
     },
     {
@@ -1592,6 +1955,182 @@
         ".ai-tutor/state.json",
         "session-log.md"
       ]
+    },
+    {
+      "session_id": "session_2026-09-12-debugging-02",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-12T13:23:47.48394-03:00",
+      "ended_at": "2026-09-12T16:55:42.281744-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_03-testes-git"
+      ],
+      "topic_ids": [
+        "topic_python-fundamentos"
+      ],
+      "objective": "Diagnosticar autonomamente uma falha nova em codigo Python, separando sintoma, hipotese e verificacao, e explicar sem apoio a diferenca entre NameError e TypeError causado por None.",
+      "cognitive_core": "Separar sintoma, hipotese e teste de verificacao sem pular para a correcao, e classificar o defeito corretamente entre nome inexistente, valor ausente (None) e tipo incompativel na operacao.",
+      "mode": "assessment",
+      "checkpoint": "Sessao encerrada. Aula explicativa sobre o modelo de dois tempos do Python entregue depois da correcao pedagogica pedida pelo estudante. Diagnosticos autonomos em contexto novo (SyntaxError vs TypeError, retorno implicito None), correcao minima em tempo_medio verificada por execucao (exited with code=0, saida 'Tempo medio: 60.0 min') e explicacao autonoma do TypeError causado por None concluida. Licao lesson_03-testes-git concluida.",
+      "evidence_ids": [
+        "evidence_debugging-diagnosis-14",
+        "evidence_debugging-diagnosis-15",
+        "evidence_debugging-diagnosis-16",
+        "evidence_debugging-diagnosis-17",
+        "evidence_debugging-diagnosis-18",
+        "evidence_debugging-diagnosis-19"
+      ],
+      "difficulty": "standard",
+      "next_step": "Proxima licao: lesson_04-descoberta-processo (Git e GitHub, Ciclo 3).",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/sources.json",
+        "session-log.md",
+        "curriculum.md",
+        "lessons/03-testes-git.md",
+        "AGENTS.md",
+        ".cursor/rules/pedagogia-progressiva.mdc",
+        "projects/diagnostico-erros/caso_a_syntax.py",
+        "projects/diagnostico-erros/caso_b_type.py",
+        "projects/diagnostico-erros/caso_c_name.py",
+        "projects/diagnostico-erros/exemplo_sem_return.py",
+        "projects/diagnostico-erros/manutencao_relatorio.py"
+      ]
+    },
+    {
+      "session_id": "session_2026-09-13-git-historico",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-13T20:36:59.659927-03:00",
+      "ended_at": "2026-09-13T21:31:33.377953-03:00",
+      "resumable": false,
+      "time_budget_minutes": 45,
+      "lesson_ids": [
+        "lesson_04-descoberta-processo"
+      ],
+      "topic_ids": [
+        "topic_workflow-profissional"
+      ],
+      "objective": "Montar um historico Git legivel: ler o estado do repositorio antes de commitar, decidir o que entra em cada commit e escrever a mensagem que explica o porque.",
+      "cognitive_core": "Decidir o conteudo de cada commit a partir da leitura de git status e git diff, e escrever uma mensagem que registre o porque da mudanca, nao apenas o que mudou.",
+      "mode": "learning",
+      "checkpoint": "Sessao encerrada em 45 minutos. Modo learning seguido de aplicacao autonoma. Leu git status e git diff, decidiu o conteudo do commit, preparou seletivamente, conferiu com git diff --staged, fez dois commits com mensagem de porque (d41cc1f e 699de67) e registrou a exclusao de debug.log no .gitignore. Historico final: 'alteracoes' ao lado de duas mensagens legiveis. Working tree clean. Transferencia e remoto GitHub ficam para a proxima sessao; lesson_04-descoberta-processo continua in_progress.",
+      "evidence_ids": [
+        "evidence_git-historico-01",
+        "evidence_git-historico-02",
+        "evidence_git-historico-03",
+        "evidence_git-historico-04",
+        "evidence_git-historico-05"
+      ],
+      "difficulty": "standard",
+      "next_step": "Proxima sessao: transferir o fluxo de historico legivel para um repositorio real (por exemplo o proprio repositorio do estudo) e, quando aplicavel, remoto no GitHub. Fechar lesson_04 exige evidencia de transferencia.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md",
+        "sandbox externo: C:/Users/lucka/Documents/projects/sandbox-historico (registros.py, .gitignore, commits 4d7357f, d41cc1f, 699de67)"
+      ]
+    },
+    {
+      "session_id": "session_2026-09-14-git-transferencia-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-14T17:43:00.041395-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_04-descoberta-processo"
+      ],
+      "topic_ids": [
+        "topic_workflow-profissional"
+      ],
+      "objective": "Transferir o fluxo Git para um repositorio real, verificando o estado local, o historico legivel e o remoto sem sobrescrever mudancas alheias.",
+      "cognitive_core": "Escolher uma sequencia segura de verificacao e publicacao a partir do repositorio correto, distinguindo estado local, historico e remoto.",
+      "mode": "assessment",
+      "checkpoint": "Execucao real concluida em sandbox-historico: preflight confirmou raiz, master, working tree limpa, commit 699de67 e remoto inicialmente ausente; origin foi configurado, o remoto vazio recebeu master e status -sb terminou sincronizado. A explicacao final ainda omitiu verificacoes e a forma exata de git remote add.",
+      "evidence_ids": [
+        "evidence_git-transferencia-01",
+        "evidence_git-transferencia-02",
+        "evidence_git-transfer-real-01",
+        "evidence_git-transfer-real-02",
+        "evidence_git-transfer-real-03"
+      ],
+      "difficulty": "transfer",
+      "next_step": "Reconstruir em nova sessao, sem comandos fornecidos, o preflight completo e a configuracao exata de origin antes de publicar.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md"
+      ],
+      "ended_at": "2026-09-15T20:12:34.7562069-03:00"
+    },
+    {
+      "session_id": "session_2026-09-17-git-preflight",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-17T13:20:38.320678-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_04-descoberta-processo"
+      ],
+      "topic_ids": [
+        "topic_workflow-profissional"
+      ],
+      "objective": "Reconstruir, sem comandos fornecidos, o preflight completo de um repositorio Git real e a configuracao exata de origin antes de publicar.",
+      "cognitive_core": "Decidir a ordem e a funcao de cada verificacao antes de publicar, distinguindo repositorio local, historico e remoto, sem receber comandos.",
+      "mode": "assessment",
+      "checkpoint": "Sessao encerrada com lesson_04-descoberta-processo concluida. O aluno reformulou a regra de fechamento: nao se exige contexto novo sintetico (repositorio criado so para avaliar) quando o topico ja sustenta dominio 80 com evidencia autonoma real de transferencia. A exigencia de repositorio novo era aplicacao redundante da matriz, nao requisito do contrato. A lacuna real nao era transferencia, era forma exata de comando: weak_git-formas-exatas-comandos segue ativo, agora observavel no uso real. Registro em AGENTS.md.",
+      "evidence_ids": [
+        "evidence_git-preflight-01",
+        "evidence_git-preflight-02"
+      ],
+      "difficulty": "transfer",
+      "next_step": "Abrir lesson_02-arquivos-erros (Ciclo 4, Arquivos, CSV e JSON), que tambem fecha o ponto fraco weak_csv-return-flow: criar um CSV real com mais de uma linha e mostrar o retorno completo da leitura.",
+      "files_changed": [],
+      "ended_at": "2026-09-17T18:15:05.593060-03:00"
+    },
+    {
+      "session_id": "session_2026-09-17-arquivos-csv-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-17T18:28:56.116660-03:00",
+      "ended_at": "2026-09-17T19:48:39.237022-03:00",
+      "resumable": false,
+      "time_budget_minutes": 45,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Ler um CSV real com mais de uma linha e devolver todos os registros, provando a leitura pelo retorno completo da funcao.",
+      "cognitive_core": "Separar leitura de acumulacao e devolver a colecao inteira depois da iteracao, em vez de devolver o ultimo item lido.",
+      "mode": "assessment",
+      "checkpoint": "Segunda tentativa, guiada. O caminho de erro foi reprojetado e a separacao entre imprimir e devolver ficou correta: tres execucoes reais comprovaram com dados, arquivo ausente e arquivo vazio. Ficaram quatro lacunas verificadas por execucao: justificativa nao escrita, limpeza feita no arquivo em vez da leitura, cabecalho contado como dado na deteccao de vazio, e o print de topo que dispara no import (regressao da guarda __main__ de lesson_01). Sessao encerrada acima do orcamento (72 min de 45). lesson_02 segue in_progress: faltam entrada invalida, modulos separados e README.",
+      "evidence_ids": [
+        "evidence_csv-ciclo4-01",
+        "evidence_csv-ciclo4-02"
+      ],
+      "difficulty": "application",
+      "next_step": "Retomar lesson_02 por: separar o cabecalho dos registros na leitura, guardar o arquivo com a guarda __main__ para poder ser importado e testado, tratar entrada invalida e transformar JSON. weak_csv-return-flow continua ativo: precisa da producao autonoma da acumulacao, nao apenas da verificacao com arquivo real, que ja foi feita.",
+      "files_changed": [],
+      "cancelled_by_student": []
     }
   ],
   "lessons": [
@@ -1649,10 +2188,11 @@
       "prerequisite_lesson_ids": [
         "lesson_04-descoberta-processo"
       ],
-      "status": "planned",
+      "status": "in_progress",
       "session_ids": [
         "session_2026-09-08-arquivos-erros-01",
-        "session_2026-09-08-arquivos-erros-02"
+        "session_2026-09-08-arquivos-erros-02",
+        "session_2026-09-17-arquivos-csv-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -1673,9 +2213,10 @@
       "prerequisite_lesson_ids": [
         "lesson_01-python-core"
       ],
-      "status": "in_progress",
+      "status": "completed",
       "session_ids": [
-        "session_2026-09-10-debugging-01"
+        "session_2026-09-10-debugging-01",
+        "session_2026-09-12-debugging-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -1696,8 +2237,12 @@
       "prerequisite_lesson_ids": [
         "lesson_03-testes-git"
       ],
-      "status": "planned",
-      "session_ids": [],
+      "status": "completed",
+      "session_ids": [
+        "session_2026-09-13-git-historico",
+        "session_2026-09-14-git-transferencia-01",
+        "session_2026-09-17-git-preflight"
+      ],
       "required_evidence_types": [
         "feynman",
         "application",
@@ -1941,11 +2486,41 @@
       "supporting_evidence_ids": [
         "evidence_python-core-csv-read-errors-02",
         "evidence_python-core-csv-read-errors-03",
-        "evidence_python-core-csv-read-errors-04"
+        "evidence_python-core-csv-read-errors-04",
+        "evidence_csv-ciclo4-01",
+        "evidence_csv-ciclo4-02"
       ],
       "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes que acumulem todas as linhas e retornem apos a iteracao.",
       "status": "active",
       "entered_at": "2026-09-08"
+    },
+    {
+      "weak_point_id": "weak_error-model-tempo-deteccao",
+      "topic_id": "topic_python-fundamentos",
+      "category": "conceptual",
+      "cause": "O modelo de dois tempos do Python nunca foi ensinado: erros detectados na analise do codigo antes de executar (SyntaxError) e excecoes levantadas durante a execucao (TypeError, NameError). Sem esse modelo, tratou o TypeError como erro de sintaxe e nao soube explicar por que a mensagem de SyntaxError nao traz traceback.",
+      "supporting_evidence_ids": [
+        "evidence_debugging-diagnosis-14",
+        "evidence_debugging-diagnosis-15",
+        "evidence_debugging-diagnosis-19"
+      ],
+      "exit_condition": "Duas explicacoes autonomas corretas em sessoes diferentes sobre o momento em que cada tipo de erro e detectado, sendo uma delas em contexto novo.",
+      "status": "active",
+      "entered_at": "2026-09-12"
+    },
+    {
+      "weak_point_id": "weak_git-formas-exatas-comandos",
+      "topic_id": "topic_workflow-profissional",
+      "category": "precision",
+      "cause": "Formas exatas de comandos Git, subcomando e flags. Em 2026-09-14 a forma completa de git remote add origin <URL> nao foi reconstruida e os comandos de correcao e publicacao precisaram ser fornecidos. Em 2026-09-17 escreveu git remote edit origin <URL> (subcomando inexistente) e git log -1 --one-line (flag inexistente). A ideia central de registrar nome e URL do remoto e comparar local com remoto esta correta; falta a forma exata que o Git aceita.",
+      "supporting_evidence_ids": [
+        "evidence_git-transfer-real-02",
+        "evidence_git-transfer-real-03",
+        "evidence_git-preflight-01"
+      ],
+      "exit_condition": "Duas evidencias autonomas corretas em sessoes diferentes, em uso real de repositorios distintos (novos ou ja existentes, criados por necessidade de trabalho), com a forma exata dos comandos de configuracao e leitura escrita corretamente sem o tutor fornecer o comando. Consulta a documentacao e permitida.",
+      "status": "active",
+      "entered_at": "2026-09-17"
     }
   ],
   "projects": [
@@ -2024,5 +2599,5 @@
       ]
     }
   ],
-  "next_focus": "lesson_03-testes-git"
+  "next_focus": "lesson_02-arquivos-erros"
 }

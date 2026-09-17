@@ -1,0 +1,14 @@
+---
+description: NotebookLM nao e usado neste estudo a partir do MiMo Desktop
+alwaysApply: true
+---
+
+# Geracao externa de midia fora deste desktop
+
+Decisao do aluno, 2026-09-12: **este desktop nao usa NotebookLM nem Gemini**. Nao ha MCP, integracao ou automacao de navegador para midia externa neste estudo.
+
+- O workflow `/media` aqui para na criacao do pacote local: fontes verificadas, prompts ancorados, manifest e fallbacks locais.
+- Nunca pedir consentimento de upload, nunca automatizar navegador, nunca afirmar que artefato externo existe a partir daqui.
+- O aluno gera midia externa por conta propria, **no Cursor ou no Codex**. Quando trouxer o resultado, o tutor confere o artefato contra as fontes registradas e atualiza `.ai-tutor/media-index.json`.
+
+Estado canonico: `.ai-tutor/state.json`. Este arquivo e espelho de `AGENTS.md` na raiz do estudo.

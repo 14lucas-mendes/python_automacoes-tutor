@@ -1,6 +1,51 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "artifacts": [],
-  "revision": 0
+  "artifacts": [
+    {
+      "artifact_id": "media_011da207-4d7f-4002-85d2-4c13a7d7aded",
+      "lesson_id": "lesson_03-testes-git",
+      "type": "learning_pack",
+      "provider": "local+notebooklm",
+      "source_ids": [
+        "source_python-errors-exceptions",
+        "source_python-traceback"
+      ],
+      "objective": "Consolidar o modelo de dois tempos do Python (analise do codigo antes de executar vs execucao) e a distincao entre SyntaxError, NameError e TypeError causado por None, cobrindo o ponto fraco weak_error-model-tempo-deteccao.",
+      "requested_formats": [
+        "cards",
+        "quiz",
+        "mind_map",
+        "image",
+        "audio",
+        "study_guide"
+      ],
+      "local_path": "media/lesson_03-testes-git/notebooklm",
+      "url": "https://notebook.google.com/notebook/d93998f2-dd4c-4f4f-81bd-ba11099a7873",
+      "status": "generated",
+      "verified": false,
+      "created_at": "2026-09-12T20:00:40.359108Z",
+      "verified_at": null,
+      "external_upload": {
+        "provider": "notebooklm",
+        "consented": true,
+        "consented_at": "2026-09-12T20:33:19.4278352Z",
+        "files": [
+          "source-pack.md",
+          "prompts.md"
+        ],
+        "notebook_title": "Guia de Erros, Exceções e Tracebacks no Python",
+        "upload_verified": true
+      },
+      "accessibility": {
+        "visuals_require_alt_text": true,
+        "audio_video_require_transcript": true
+      },
+      "evidence_eligible": false,
+      "provider_status": "uploaded",
+      "status_normalized_at": "2026-09-13T18:00:09.078991-03:00",
+      "status_normalized_note": "Dois ajustes de contrato. (1) O status literal 'uploaded' foi gravado em 2026-09-12 por outro ambiente (Cursor ou Codex) e nao pertence ao contrato desta skill; normalizado para 'generated' (existe artefato externo: notebook com as fontes), com o literal preservado em provider_status. (2) 'verified' foi rebaixado para false por decisao do aluno: no contrato, verified exige comparacao das afirmacoes com o material de origem, e o que se confirmou foi o upload, nao o conteudo. A conferencia cabe ao ambiente que tem acesso ao NotebookLM. A gravacao original tambem nao usou o helper CAS."
+    }
+  ],
+  "revision": 4
 }

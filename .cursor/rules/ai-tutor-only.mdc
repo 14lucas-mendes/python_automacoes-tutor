@@ -11,4 +11,6 @@ Este workspace é um programa persistente da skill `ai-tutor`.
 - Não use `accelerated-learning` (formatos seção/explicar/agora/curto, diário N0–N5, Recursos YouTube obrigatórios, blocos daquela skill).
 - Só misture as duas skills se o aluno pedir isso de forma explícita nesta conversa.
 
-Estado canônico: `.ai-tutor/state.json`. Markdown (`curriculum.md`, `session-log.md`, `lessons/`) é projeção.
+Estado canônico: `.ai-tutor/` — `state.json`, `study-config.json`, `cards.json`, `sources.json`, `media-index.json`, `learner-profile.json`. Markdown (`curriculum.md`, `session-log.md`, `flashcards.md`, `lessons/`) é projeção. `session-log.md` é mantido à mão; não rodar `scripts.projections` sobre ele.
+
+A skill instalada em `C:\Users\lucka\.config\mimocode\skills\ai-tutor` é a onda adaptativa (diagnóstico, learner profile, `retrieval_first`, protocolo de aula de programação). Ver `AGENTS.md` § Operação com a skill.

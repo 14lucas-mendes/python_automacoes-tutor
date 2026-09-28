@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "lesson_id": "lesson_02-arquivos-erros",
+  "note": "Rascunho do pacote de midia. A chave de resposta fica separada das perguntas, como manda o contrato de saida. Nada aqui e evidencia.",
+  "questions": [
+    {
+      "question_id": "q_posicao-ou-nome",
+      "question": "Voce precisa ler uma planilha e acessar a coluna pelo NOME da coluna, sem depender da ordem. Qual leitor usar?",
+      "options": ["csv.reader", "csv.DictReader", "csv.writer", "csv.Sniffer"],
+      "targets_misconception": "Confundir leitor posicional com leitor por nome."
+    },
+    {
+      "question_id": "q_guard-main",
+      "question": "Um arquivo termina com print(ler_clientes(\"dados.csv\")) na ultima linha, sem guarda. O que acontece quando outro arquivo faz from exercicios_03 import ler_clientes?",
+      "options": [
+        "Nada roda: so a funcao e carregada",
+        "O print da ultima linha roda, mesmo sem ninguem chamar a funcao",
+        "O import falha com ImportError",
+        "A funcao roda uma vez e guarda o resultado em cache"
+      ],
+      "targets_misconception": "Acreditar que importar carrega apenas a definicao e nao executa o arquivo."
+    },
+    {
+      "question_id": "q_so-cabecalho",
+      "question": "Um CSV tem cabecalho e ZERO registros, lido com DictReader. O que sai?",
+      "options": [
+        "Lista vazia de registros, e fieldnames com os nomes das colunas",
+        "Lista vazia de registros, e fieldnames None",
+        "Um erro de arquivo vazio",
+        "Uma lista com o cabecalho como se fosse um registro"
+      ],
+      "targets_misconception": "Tratar cabecalho como registro; foi exatamente o defeito observado na sessao de 2026-09-17."
+    },
+    {
+      "question_id": "q_linha-curta",
+      "question": "Numa linha com menos celulas que o cabecalho, o que aparece na chave que ficou sem valor?",
+      "options": ["None", "String vazia", "A linha e descartada", "KeyError"],
+      "targets_misconception": "Esperar erro ou descarte onde o leitor entrega None silenciosamente."
+    },
+    {
+      "question_id": "q_linha-longa",
+      "question": "Numa linha com mais celulas que o cabecalho, onde o excedente aparece no dicionario?",
+      "options": [
+        "Numa chave chamada None, com a lista de excedentes",
+        "Numa chave chamada restkey",
+        "Numa chave chamada extra",
+        "O excedente e descartado sem aviso"
+      ],
+      "targets_misconception": "Inventar o nome da chave: restkey e o nome do parametro, nao o nome da chave."
+    },
+    {
+      "question_id": "q_next-vazio",
+      "question": "Por que next(leitor) sem segundo argumento pode quebrar num arquivo vazio, e qual e a saida?",
+      "options": [
+        "Levanta StopIteration; next(leitor, None) devolve None no lugar",
+        "Levanta FileNotFoundError; basta ampliar o except",
+        "Devolve None; nao precisa de nada",
+        "Levanta IndexError; use try/except IndexError"
+      ],
+      "targets_misconception": "Achar que o except de arquivo ausente cobre o arquivo vazio."
+    },
+    {
+      "question_id": "q_fatiar-ou-pop",
+      "question": "Voce quer tirar o cabecalho de uma lista ja montada e NAO se importa em perder a lista original. Qual a diferenca entre as duas opcoes?",
+      "options": [
+        "result[1:] devolve lista nova e mantem a original; result.pop(0) modifica a lista original",
+        "As duas modificam a lista original",
+        "As duas devolvem lista nova",
+        "result[1:] modifica a lista e result.pop(0) devolve copia"
+      ],
+      "targets_misconception": "Supor que fatiar modifica a lista, ou que pop devolve uma copia."
+    },
+    {
+      "question_id": "q_tipo-do-valor",
+      "question": "A coluna horas_paradas traz 4.5. Depois de ler com DictReader, qual o tipo desse valor?",
+      "options": ["str", "float", "int", "Decimal"],
+      "targets_misconception": "Presumir conversao automatica por o conteudo parecer numero."
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "q_posicao-ou-nome",
+      "answer": "csv.DictReader",
+      "why": "Ele mapeia cada linha para um dict cujas chaves sao os nomes das colunas. O csv.reader devolve listas, nas quais o acesso depende da posicao.",
+      "source_ids": ["source_python-csv-module"]
+    },
+    {
+      "question_id": "q_guard-main",
+      "answer": "O print da ultima linha roda, mesmo sem ninguem chamar a funcao",
+      "why": "Importar executa o arquivo; so a guarda __name__ == \"__main__\" impede que o bloco de entrada rode no import.",
+      "source_ids": ["source_python-modules"]
+    },
+    {
+      "question_id": "q_so-cabecalho",
+      "answer": "Lista vazia de registros, e fieldnames com os nomes das colunas",
+      "why": "A primeira linha e consumida como nomes das colunas e omitida dos resultados, entao nao sobra registro. Num arquivo totalmente vazio, fieldnames fica None.",
+      "source_ids": ["source_python-csv-module"]
+    },
+    {
+      "question_id": "q_linha-curta",
+      "answer": "None",
+      "why": "Os valores faltantes sao preenchidos com restval, que por padrao e None.",
+      "source_ids": ["source_python-csv-module"]
+    },
+    {
+      "question_id": "q_linha-longa",
+      "answer": "Numa chave chamada None, com a lista de excedentes",
+      "why": "restkey e o NOME do parametro; o valor padrao dele e None, e e isso que vira a chave. restkey nao e o nome da chave.",
+      "source_ids": ["source_python-csv-module"]
+    },
+    {
+      "question_id": "q_next-vazio",
+      "answer": "Levanta StopIteration; next(leitor, None) devolve None no lugar",
+      "why": "next devolve o valor padrao quando o iterador esta esgotado; sem valor padrao, levanta StopIteration, que nao e capturada pelo except FileNotFoundError.",
+      "source_ids": ["source_python-builtins"]
+    },
+    {
+      "question_id": "q_fatiar-ou-pop",
+      "answer": "result[1:] devolve lista nova e mantem a original; result.pop(0) modifica a lista original",
+      "why": "Fatiar com a[1:] produz uma copia do trecho; pop remove o item da lista e devolve o item retirado.",
+      "source_ids": ["source_python-datastructures"]
+    },
+    {
+      "question_id": "q_tipo-do-valor",
+      "answer": "str",
+      "why": "Nenhuma conversao de tipo e automatica no leitor; a conversao para float ou int e responsabilidade de quem le.",
+      "source_ids": ["source_python-csv-module"]
+    }
+  ]
+}

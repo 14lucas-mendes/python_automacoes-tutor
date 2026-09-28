@@ -45,7 +45,69 @@
       "provider_status": "uploaded",
       "status_normalized_at": "2026-09-13T18:00:09.078991-03:00",
       "status_normalized_note": "Dois ajustes de contrato. (1) O status literal 'uploaded' foi gravado em 2026-09-12 por outro ambiente (Cursor ou Codex) e nao pertence ao contrato desta skill; normalizado para 'generated' (existe artefato externo: notebook com as fontes), com o literal preservado em provider_status. (2) 'verified' foi rebaixado para false por decisao do aluno: no contrato, verified exige comparacao das afirmacoes com o material de origem, e o que se confirmou foi o upload, nao o conteudo. A conferencia cabe ao ambiente que tem acesso ao NotebookLM. A gravacao original tambem nao usou o helper CAS."
+    },
+    {
+      "artifact_id": "media_eefbf673-6430-4d3c-a314-7f66db7b70f8",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "type": "learning_pack",
+      "provider": "local+notebooklm",
+      "source_ids": [
+        "source_python-csv-module",
+        "source_python-modules",
+        "source_python-datastructures",
+        "source_python-builtins"
+      ],
+      "objective": "Fixar a leitura de arquivos tabulares do Ciclo 4: a diferenca entre csv.reader (listas, por posicao) e csv.DictReader (dicionarios, por nome de coluna), o papel de fieldnames e do cabecalho omitido, a conversao manual de texto para numero, as linhas irregulares (restval/restkey), next() com valor padrao contra StopIteration, a diferenca entre fatiar e pop, e a guarda __name__ == \"__main__\" para o arquivo ser importavel. Cobre indirectamente o ponto fraco weak_csv-return-flow.",
+      "requested_formats": [
+        "cards",
+        "quiz",
+        "mind_map",
+        "image",
+        "audio",
+        "study_guide"
+      ],
+      "local_path": "media/lesson_02-arquivos-erros/notebooklm",
+      "url": "https://notebook.google.com/notebook/9971b3fb-74e1-43a2-9bae-47f62803b788",
+      "status": "generated",
+      "verified": false,
+      "created_at": "2026-09-19T00:02:37.728931Z",
+      "verified_at": null,
+      "accessibility": {
+        "visuals_require_alt_text": true,
+        "audio_video_require_transcript": true
+      },
+      "evidence_eligible": false,
+      "decision": "usar_no_cursor",
+      "decision_note": "Xiaomi Mi Modem Desktop continua sem NotebookLM. Neste Cursor, o aluno autenticou a sessao e autorizou o envio das duas fontes. Navegador isolado do Cursor; credenciais nao foram digitadas. Compartilhamento nao foi alterado.",
+      "external_upload": {
+        "provider": "notebooklm",
+        "consented": true,
+        "consented_at": "2026-09-18T21:14:00-03:00",
+        "files": [
+          "source-pack.md",
+          "prompts.md"
+        ],
+        "notebook_title": "Guia de Referência: Módulos, Listas e Manipulação de CSV",
+        "upload_verified": true,
+        "studio_observed": [
+          "Python Flashcards",
+          "Python Quiz",
+          "Python Mapa",
+          "Guia de Estudo: Manipulação de Arquivos CSV e Estruturas de Módulos em Python Study Guide"
+        ],
+        "studio_pending": [
+          "Resumo em Áudio"
+        ]
+      },
+      "local_files": [
+        "local/cards.json",
+        "local/quiz.json",
+        "local/concept-map.mmd",
+        "local/didactic-image.svg",
+        "local/audio-script.md",
+        "local/study_guide.md"
+      ]
     }
   ],
-  "revision": 4
+  "revision": 8
 }

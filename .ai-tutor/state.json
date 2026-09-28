@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 104,
-  "updated_at": "2026-09-17T19:48:39.237022-03:00",
+  "revision": 129,
+  "updated_at": "2026-09-24T19:57:38-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -139,13 +139,24 @@
       "prerequisite_topic_ids": [
         "topic_python-fundamentos"
       ],
-      "mastery": 40,
+      "mastery": 60,
       "retention": "unknown",
       "status": "in_progress",
-      "last_practice": "2026-09-17",
+      "last_practice": "2026-09-23",
       "evidence_ids": [
         "evidence_csv-ciclo4-01",
-        "evidence_csv-ciclo4-02"
+        "evidence_csv-ciclo4-02",
+        "evidence_csv-duas-vias-01",
+        "evidence_csv-duas-vias-02",
+        "evidence_csv-duas-vias-03",
+        "evidence_csv-explicacao-01",
+        "evidence_csv-justificativa-01",
+        "evidence_csv-justificativa-02",
+        "evidence_csv-justificativa-03",
+        "evidence_csv-justificativa-04",
+        "evidence_csv-justificativa-05",
+        "evidence_csv-entrada-invalida-01",
+        "evidence_csv-feynman-reader-dictreader-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -156,7 +167,8 @@
         "arquivo CSV lido por completo",
         "JSON valido transformado",
         "erros de entrada tratados"
-      ]
+      ],
+      "progress_note": "2026-09-22: dominio 60 alcancado. Metade Feynman autonoma: evidence_csv-justificativa-02 (21/09). Metade aplicacao autonoma independente: evidence_csv-entrada-invalida-01 (deteccao por contagem em csv.reader, retorno explicito sem dado corrompido, cinco casos verificados por execucao). Para 80 falta aplicacao autonoma com transferencia a contexto novo. Para fechar lesson_02 faltam modulos separados, JSON e README. 2026-09-24: pratica guiada de modularizacao CSV concluida; nenhuma evidencia autonoma nova e nenhum ajuste de dominio. Proximo: JSON e README; para 80 falta transferencia autonoma."
     },
     {
       "topic_id": "topic_apis-backend",
@@ -1636,6 +1648,193 @@
       },
       "result": "partial",
       "error": "Guiada: a forma do reprojeto veio do tutor no ciclo de erro, entao confirma o mecanismo e nao conta como evidencia autonoma. O ponto central foi cumprido: quem chama agora recebe valores em vez de uma mensagem perdida na tela. Incompleto em quatro pontos, todos verificados por execucao: (1) a justificativa pedida sobre por que quem chama distingue os casos nao foi escrita; (2) escolheu limpar os espacos reescrevendo o proprio dados.csv, o que resolve arquivo proprio mas nao arquivo de terceiro; (3) a deteccao de vazio conta o cabecalho como dado, entao um CSV so com cabecalho devolve [['nome','email','telefone']] como se houvesse conteudo, com zero registros reais; (4) o print solto no fim do arquivo dispara no import, impedindo usar o arquivo como modulo - conteudo ja ensinado em lesson_01 (guarda __main__) e exigido pelo criterio 'modulos separados' desta licao."
+    },
+    {
+      "evidence_id": "evidence_csv-duas-vias-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-20-arquivos-duas-vias-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Via posicional (csv.reader) entregue na tarefa das duas vias: separou o cabecalho com result[0] e result[1:], testou arquivo vazio antes de indexar e devolveu cabecalho e registros como tupla. Os tres casos da tarefa rodaram com exited with code=0.",
+      "recorded_at": "2026-09-20T20:57:47.105499-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-20-arquivos-duas-vias-01",
+        "location": "E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py; python -u src/exercicios/exercicios_03.py"
+      },
+      "result": "partial",
+      "error": "Direcao correta: o cabecalho saiu dos registros, a checagem de vazio vem antes de indexar (o que evita IndexError) e o mecanismo foi escolha propria. Problema material no contrato de retorno: quatro desfechos com quatro formatos em tres tipos - tupla com dados, str 'Arquivo nao encontrado', str 'Arquivo vazio' e list no caso so cabecalho. (1) Os dois erros tem o mesmo tipo, entao quem chama so separa 'vazio' de 'ausente' comparando o texto da mensagem. (2) O caso so cabecalho devolve uma lista que parece um registro e desempacota em silencio: titulo, corpo = ler_clientes('so_cabecalho.csv') nao levanta erro e produz titulo='nome' e corpo='email'. A justificativa nao foi escrita e a via por nome ainda nao foi entregue."
+    },
+    {
+      "evidence_id": "evidence_csv-duas-vias-02",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-20-arquivos-duas-vias-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Via por nome entregue na tarefa das duas vias: usou csv.DictReader, leu leitor.fieldnames DENTRO do bloco with para devolver os nomes das colunas, acumulou os registros como dicionarios e devolveu a tupla (nomes, registros). Os tres casos rodaram com exited with code=0.",
+      "recorded_at": "2026-09-20T21:14:35.488485-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-20-arquivos-duas-vias-01",
+        "location": "E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py; python -u src/exercicios/exercicios_03.py"
+      },
+      "result": "partial",
+      "error": "Mecanismo correto e bem escolhido: o fieldnames foi lido dentro do with, o que evita o ValueError de arquivo fechado, e a deteccao de arquivo vazio usa fieldnames is None, exatamente a distincao documentada. O contrato, porem, repete os mesmos dois problemas da via posicional e agora com sintoma mensuravel: os quatro desfechos tem quatro formatos em tres tipos (tuple com dados, str nas duas falhas, list no caso so cabecalho), os dois erros continuam no mesmo tipo str, e o caso so cabecalho devolve uma lista crua de nomes de coluna cujo sintoma ao desempacotar DEPENDE do numero de colunas - com 3 colunas levanta ValueError: too many values to unpack, com 2 colunas nao levanta erro e produz titulo='nome' e corpo='email'. O mesmo defeito se reproduz nas duas vias. A justificativa nao foi escrita."
+    },
+    {
+      "evidence_id": "evidence_csv-duas-vias-03",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-20-arquivos-duas-vias-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Terceira iteracao, sem ajuda: corrigiu o retorno para que os quatro desfechos devolvam sempre uma tupla de dois itens, com os nomes das colunas no primeiro slot e os registros no segundo.",
+      "recorded_at": "2026-09-20T21:40:03.359966-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-20-arquivos-duas-vias-01",
+        "location": "E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py"
+      },
+      "result": "partial",
+      "error": "A correcao e real e verificada: titulo, corpo = ler_clientes(...) agora funciona nos quatro casos, sem ValueError e sem corrupcao silenciosa. Dois pontos ficam. (1) Os tres ramos devolvem exatamente o mesmo valor, entao o laco que calcula possui_dados e os dois if/else nao influenciam a saida: comparando com uma versao sem esses ramos, as saidas sao identicas nos quatro casos. (2) O contrato ficou implicito: separar os casos passou a exigir olhar o tipo de cada slot e conhecer a convencao - titulo None para arquivo vazio, e uma string no segundo slot para arquivo ausente, com o CAMINHO ocupando o slot do titulo - e a frase 'Arquivo vazio' desapareceu de todas as saidas. O fluxo de acumulacao e retorno em si esta correto e autonomo, o que conta como 1 das 2 evidencias autonomas exigidas para a saida do weak_csv-return-flow. A justificativa do contrato segue nao escrita."
+    },
+    {
+      "evidence_id": "evidence_csv-explicacao-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-20-arquivos-duas-vias-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Justificativa autonoma das duas vias, respondendo as quatro perguntas do study guide. Para a terceira pergunta o aluno nao especulou: editou o dados.csv, inseriu a coluna sobrenome no cabecalho e executou, trazendo a saida real.",
+      "recorded_at": "2026-09-20T21:55:35.028816-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-20-arquivos-duas-vias-01",
+        "location": "E:/Lucas/Documents/formação_python/src/dados.csv; E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py"
+      },
+      "result": "partial",
+      "error": "P1: o mecanismo de cada via esta correto (v1 recortando a lista, v2 transformando cada linha em dicionario com os titulos como chave), mas a razao de seguranca esta trocada - atribuiu a seguranca a 'nao modificar a lista original', que nao e o motivo pedido nem diferencia as versoes, ja que a v1 usa fatiar e fatiar tambem nao modifica a lista. E foram pedidos os valores literais do retorno; a resposta descreveu, terceira ocorrencia do padrao do weak_python-test-literal-lista. P2: respondida por referencia a P1; o conteudo esta la, falta a consolidacao em uma linha. P3: experimento real e achado verdadeiro - o conteudo se desloca uma coluna e o ultimo vira None - mas nao notou que nada quebrou (exited with code=0): houve corrupcao silenciosa, nao erro. E testou apenas a via por nome; a metade posicional da pergunta ficou sem resposta. P4: escolha correta (DictReader) com a razao mais fraca das disponiveis para a pergunta feita, que era sobre risco em arquivo de terceiro."
+    },
+    {
+      "evidence_id": "evidence_csv-justificativa-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-21-csv-contrato-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Reconstrucao autonoma da razao de seguranca da via por nome (DictReader). Acertou o mecanismo: a primeira linha vira cabecalho e cada linha seguinte vira um dicionario com o titulo da coluna como chave. Falha material: afirmou que 'o DictReader nao desloca o conteudo' quando o cabecalho ganha uma coluna sem valor correspondente nas linhas - contradito pelo proprio print colado no terceiro anexo, onde sobrenome recebe o e-mail, email recebe o telefone e a ultima coluna sai None. A razao de seguranca pedida (acesso pela chave, resiliente a mudanca de ordem das colunas do arquivo) nao foi formulada.",
+      "recorded_at": "2026-09-21T20:18:58.044347-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-21-csv-contrato-01",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Mecanismo de chave correto, mas a conclusao sobre a coluna nova nao se sustenta no proprio dado do aluno. Falta distinguir duas coisas: como o leitor preenche as chaves (por ordem, dentro da linha) e o que o acesso por nome protege (mudanca de ordem/posicao das colunas no arquivo de terceiro)."
+    },
+    {
+      "evidence_id": "evidence_csv-justificativa-02",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-21-csv-contrato-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Reconstrucao autonoma da metade posicional (csv.reader) que ficou sem resposta em 2026-09-20. Respondeu que o csv.reader devolve o arquivo como listas cruas, que a coluna a mais aparece no cabecalho, que as linhas de dados permanecem iguais e na ordem do arquivo, e que na tela nada quebra. Confirmado por execucao propria colada no segundo anexo: cabecalho com quatro itens, linhas com tres, exited with code=0.",
+      "recorded_at": "2026-09-21T20:18:58.044347-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-21-csv-contrato-01",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Conteudo ja ensinado pelo tutor em 2026-09-20 no ciclo de explicacao pedido pelo aluno (regra 8); esta resposta e a reconstrucao propria exigida por aquele registro, com execucao real. Refinamento apresentado depois, sem rebaixar: as listas cruas estao intactas, mas o SIGNIFICADO dado por posicao muda - quem le linha[1] como e-mail passa a receber o telefone."
+    },
+    {
+      "evidence_id": "evidence_csv-justificativa-03",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-21-csv-contrato-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Valores literais do retorno dos quatro desfechos. Executou tres deles e colou as saidas reais no terceiro anexo (arquivo com dados, arquivo ausente, arquivo so com cabecalho), mas respondeu em texto descritivo em vez de escrever os valores, e unificou 'so cabecalho' e 'arquivo vazio' como o mesmo desfecho ('devolve uma lista com os titulos do cabecalho e uma lista vazia').",
+      "recorded_at": "2026-09-21T20:18:58.044347-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-21-csv-contrato-01",
+        "location": "conversation"
+      },
+      "result": "partial",
+      "error": "Falha material: os dois ultimos desfechos nao devolvem o mesmo valor. Um arquivo de 0 byte nao tem cabecalho, entao leitor.fieldnames e None e o codigo do proprio aluno cai em 'if not titulo_tabela', devolvendo None no primeiro slot. O caso de 0 byte nao foi executado. Padrao do weak_python-test-literal-lista reaparece em forma branda: os valores existem nos prints colados, mas foram descritos em vez de escritos."
+    },
+    {
+      "evidence_id": "evidence_csv-justificativa-04",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-21-csv-contrato-01",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Reconstrucao da razao de seguranca da via por nome, segunda rodada. Formulou: csv.reader entrega listas por posicao, DictReader entrega dicionario com o titulo como chave; uma coluna nova desloca o indice, e com csv.reader nao da para saber se linha[2] representa o mesmo dado procurado; com a chave, linha['email'] busca pelo rotulo e nao pela posicao; fechou com 'chamar pelo nome amarra o programa ao significado da coluna, nao so ao lugar dela na linha'.",
+      "recorded_at": "2026-09-21T20:44:11.891141-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-21-csv-contrato-01",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Correta e obtida depois de pergunta direcional do tutor (degrau 3 da escada), portanto guiada e com teto 40: confirma o conceito, mas nao conta como evidencia autonoma. A autonomia deste item permanece parcial (evidence_csv-justificativa-01) e exige uma instancia nova, sem direcionamento, para contar no requisito de 60."
+    },
+    {
+      "evidence_id": "evidence_csv-justificativa-05",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-21-csv-contrato-01",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Os quatro desfechos do retorno, com execucao real dos quatro. Colou as saidas cruas: arquivo com dados (lista de titulos + lista de dicionarios), arquivo ausente (caminho + mensagem), so cabecalho (titulos + lista vazia) e arquivo de 0 byte (None + lista vazia), explicando a causa do ultimo: fieldnames devolve None quando nao existe primeira linha.",
+      "recorded_at": "2026-09-21T20:44:11.891141-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-21-csv-contrato-01",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "A falha material da rodada anterior esta resolvida: os dois desfechos deixaram de ser tratados como equivalentes e o caso de 0 byte foi executado, com a causa correta. Registro honesto: o mecanismo do fieldnames None foi fornecido pelo tutor no turno anterior (degrau 4), entao esta correcao e guiada. Refinamento, sem rebaixar: as saidas vieram coladas em print e o texto seguiu descritivo, forma branda do padrao do weak_python-test-literal-lista."
+    },
+    {
+      "evidence_id": "evidence_csv-entrada-invalida-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-22-csv-entrada-invalida-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Implementacao autonoma de validacao de entrada no leitor: next(csv.reader(arquivo), None) para o cabecalho, contagem de len(linha) vs cabecalho em passada csv.reader, retorno PACOTE_ERROR + msg_incompatible quando ha divergencia (sem entregar dado corrompido), seek(0) e DictReader para o pacote nomeado. StopIteration de arquivo vazio tratado com default None. Verificado por execucao em cinco casos: CSV valido com mapeamento correto, arquivo ausente, so cabecalho, arquivo vazio e CSV incompativel (quatro titulos e tres valores) devolvendo a mensagem de incompatibilidade.",
+      "recorded_at": "2026-09-22T14:50:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-22-csv-entrada-invalida-01",
+        "location": "E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py; python -u src/exercicios/exercicios_03.py"
+      },
+      "result": "correct",
+      "error": "Refinamentos opcionais, sem rebaixar: a mensagem nao indica qual linha falhou nem os contadores; PACOTE_ERROR devolve as mesmas listas mutaveis em todos os erros; linha em branco seria classificada como incompativel (comportamento seguro)."
+    },
+    {
+      "evidence_id": "evidence_csv-feynman-reader-dictreader-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-23-csv-modulos-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Pergunta de Feynman aberta em 22/09, respondida so com o prompt (suporte 0): csv.reader devolve cada linha como lista, entao comparar len do cabecalho com len da linha detecta a incompatibilidade; DictReader mapeia cada linha para os fieldnames e reflete as colunas do cabecalho mesmo sem valor correspondente, escondendo a diferenca. Confirmado pelo tutor por execucao depois da resposta: linha com 3 valores vira dict de 4 com telefone=None.",
+      "recorded_at": "2026-09-23T17:08:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-23-csv-modulos-01",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": "Refinamento opcional, sem rebaixar: nao mencionou que valores a mais vao para a chave None (restkey) do DictReader."
     }
   ],
   "sessions": [
@@ -2131,6 +2330,184 @@
       "next_step": "Retomar lesson_02 por: separar o cabecalho dos registros na leitura, guardar o arquivo com a guarda __main__ para poder ser importado e testado, tratar entrada invalida e transformar JSON. weak_csv-return-flow continua ativo: precisa da producao autonoma da acumulacao, nao apenas da verificacao com arquivo real, que ja foi feita.",
       "files_changed": [],
       "cancelled_by_student": []
+    },
+    {
+      "session_id": "session_2026-09-18-arquivos-modulo-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-18T20:28:21.448177-03:00",
+      "ended_at": "2026-09-18T21:04:16.629448-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Deixar o leitor de CSV pronto para ser importado por outro programa: sem efeito no import, com os registros separados do cabecalho e com erro explicito que quem chama consiga distinguir.",
+      "cognitive_core": "Decidir o que a funcao devolve (registros, e nao o cabecalho) e onde o programa comeca a rodar, separando o modulo do ponto de entrada.",
+      "mode": "assessment",
+      "checkpoint": "Sessao encerrada sem concluir a tarefa, a pedido do aluno. O aluno pediu auditoria de pre-requisitos antes de tentar; a auditoria encontrou mecanismos nunca ensinados (next, fatiar, pop) e a ferramenta csv.DictReader, e a aula foi dada com execucao real, conforme a regra 1. O aluno contestou a classificacao de pratica guiada e teve razao: a escada de ajuda mede ajuda sobre o nucleo, e ensinar pre-requisito obrigatorio nao rebaixa a tentativa. Regra gravada em AGENTS.md item 7, com o limite de que comportamento executado pela propria ferramenta nao ganha credito independente nesta tentativa. Nada foi implementado nesta sessao: a tarefa segue aberta. Pacote de midia local criado para lesson_02-arquivos-erros com 4 fontes oficiais registradas em sources.json (revision 2) e 6 formatos em media-index.json; nenhum artefato externo existe.",
+      "evidence_ids": [],
+      "difficulty": "learning",
+      "next_step": "Retomar a tarefa de fechamento do modulo: implementar a leitura DOS DOIS JEITOS (leitor posicional e leitor por nome), com a guarda __main__, os tres desfechos distinguiveis (dados, ausente, so cabecalho) e a justificativa de projeto. O aluno declarou que fara os dois caminhos e trara a justificativa. Consumir o pacote de midia antes nao substitui a execucao.",
+      "files_changed": [
+        "media/lesson_02-arquivos-erros/notebooklm/manifest.json",
+        "media/lesson_02-arquivos-erros/notebooklm/source-pack.md",
+        "media/lesson_02-arquivos-erros/notebooklm/prompts.md",
+        "media/lesson_02-arquivos-erros/notebooklm/local/",
+        ".ai-tutor/sources.json",
+        ".ai-tutor/media-index.json",
+        ".ai-tutor/state.json",
+        "AGENTS.md",
+        "session-log.md"
+      ]
+    },
+    {
+      "session_id": "session_2026-09-20-arquivos-duas-vias-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-20T20:16:38.315608-03:00",
+      "ended_at": "2026-09-20T22:03:11.034210-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Fechar o modulo de leitura de CSV nas duas vias: separar o cabecalho dos registros na via posicional, escrever a via por nome com DictReader e justificar o trade-off entre elas.",
+      "cognitive_core": "Decidir o contrato de retorno (registros, e nao cabecalho) e resolver o mesmo problema com duas ferramentas diferentes, justificando o que cada uma resolve sozinha e o que custa.",
+      "mode": "assessment",
+      "checkpoint": "Encerrada a pedido do aluno, sem fechar a licao. Quatro evidencias autonomas registradas: tres de aplicacao (via posicional com o cabecalho separado; via por nome com DictReader; correcao do contrato para aridade uniforme) e uma de explicacao Feynman, todas parciais. Achados verificados por execucao: os tres ramos da ultima versao sao inertes; o contrato ficou implicito, exigindo que quem chama conheca a convencao, com o caminho ocupando o slot do titulo; e o experimento do proprio aluno provou que entrada invalida NAO e tratada - a coluna inserida no cabecalho deslocou o conteudo uma posicao e gerou None no fim, com codigo 0 e nenhum erro. A justificativa autonoma acertou o mecanismo das duas vias e a escolha do DictReader, errou a razao de seguranca (atribuiu a nao modificar a lista), nao notou que a falha foi silenciosa e testou uma via so. O tutor reexplicou com linguagem simples e tecnica de Feynman a pedido do aluno; essa aula torna guiadas a razao de seguranca e a metade posicional, que precisam de reconstrucao propria. Regra 8 gravada em AGENTS.md. weak_csv-return-flow em 1 de 2 evidencias autonomas: falta a segunda em outra sessao.",
+      "evidence_ids": [
+        "evidence_csv-duas-vias-01",
+        "evidence_csv-duas-vias-02",
+        "evidence_csv-duas-vias-03",
+        "evidence_csv-explicacao-01"
+      ],
+      "difficulty": "application",
+      "next_step": "Reescrever a justificativa com as proprias palavras: a razao de seguranca pela chave, a metade posicional da terceira pergunta (rodar o arquivo com a coluna inserida pela via posicional) e os valores literais do retorno. Depois fechar os criterios de entrega da lesson_02: entrada invalida tratada, modulos separados e README.",
+      "files_changed": [
+        "E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py (fora do estudo)",
+        "E:/Lucas/Documents/formação_python/src/dados.csv (coluna sobrenome inserida, fora do estudo)",
+        ".ai-tutor/state.json",
+        "AGENTS.md",
+        "session-log.md"
+      ]
+    },
+    {
+      "session_id": "session_2026-09-21-csv-contrato-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-21T19:38:13.548407-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Reconstruir com as proprias palavras a justificativa do contrato de retorno das duas vias de leitura de CSV, com os valores literais de cada desfecho, e tratar entrada invalida no leitor com verificacao por execucao.",
+      "cognitive_core": "Justificar autonomamente o contrato de retorno (o que quem chama recebe em cada desfecho) e decidir o tratamento de entrada invalida a partir do proprio experimento da sessao anterior.",
+      "mode": "assessment",
+      "evidence_ids": [
+        "evidence_csv-justificativa-01",
+        "evidence_csv-justificativa-02",
+        "evidence_csv-justificativa-03",
+        "evidence_csv-justificativa-04",
+        "evidence_csv-justificativa-05"
+      ],
+      "difficulty": "application",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "AGENTS.md",
+        ".cursor/rules/pedagogia-progressiva.mdc",
+        "session-log.md"
+      ],
+      "ended_at": "2026-09-21T20:57:12.869138-03:00",
+      "checkpoint": "Encerrada a pedido do aluno, sem iniciar a tarefa 2. Tarefa 1 fechada: a metade posicional do contrato foi reconstruida de forma autonoma e correta (evidence_csv-justificativa-02), o que cumpre a metade Feynman do requisito de 60 do topico; a razao de seguranca (evidence_csv-justificativa-04) e os quatro desfechos (evidence_csv-justificativa-05) vieram corretas depois de ajuda direcional, com teto 40 pela escada de ajuda. Objecao do aluno de 2026-09-21 aceita na parte em que a devolutiva nao declarou a metade ja cumprida: regra 9 gravada em AGENTS.md, espelho do Cursor sincronizado (regras 6 a 9) e nota de progresso gravada no topico. Mastery de topic_automacao-confiavel mantido em 40 - falta a aplicacao autonoma independente. A tarefa 2 (entrada invalida tratada) nao foi iniciada: o src/dados.csv do aluno segue com quatro titulos no cabecalho e tres valores por linha.",
+      "next_step": "Abrir a proxima sessao pela tarefa 2 da lesson_02: fazer o leitor reconhecer e informar entrada invalida (numero de valores da linha diferente do cabecalho) sem entregar dado corrompido, com verificacao por execucao. Se sair autonoma e correta, ela cumpre a aplicacao autonoma independente que falta para o dominio 60 de topic_automacao-confiavel. Depois: modulos separados, JSON e README. Sugestao de abertura: /review - os 8 cards de lesson_03-testes-git estao vencidos desde 2026-09-13 e nenhuma revisao rodou."
+    },
+    {
+      "session_id": "session_2026-09-22-csv-entrada-invalida-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-22T14:32:25-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Fazer o leitor de CSV reconhecer e informar entrada invalida (numero de valores da linha diferente do cabecalho) sem entregar dado corrompido, com verificacao por execucao.",
+      "cognitive_core": "Decidir o que fazer quando a linha nao bate com o cabecalho: rejeitar ou sinalizar antes de devolver dados corrompidos, e provar por execucao que o caso invalido nao passa em silencio.",
+      "mode": "learning",
+      "checkpoint": "Encerrada a pedido do aluno apos concluir a tarefa de entrada invalida. evidence_csv-entrada-invalida-01 autonoma e correta: deteccao por contagem com csv.reader, retorno explicito sem dado corrompido, cinco casos verificados por execucao. Dominio de topic_automacao-confiavel em 60 (Feynman de 21/09 + aplicacao de hoje). weak_csv-return-flow resolvido (2/2). A pergunta de Feynman de fechamento (por que a contagem usou csv.reader e nao DictReader) ficou sem resposta. lesson_02-arquivos-erros segue in_progress: faltam modulos separados, JSON e README. Suporte mais recente sobre o nucleo: 0 (apenas o prompt).",
+      "evidence_ids": [
+        "evidence_csv-entrada-invalida-01"
+      ],
+      "difficulty": "application",
+      "next_step": "Proxima sessao: responder a pergunta de Feynman aberta e implementar modulos separados. Depois JSON e README para fechar lesson_02. Opcional: /review dos 8 cards de lesson_03-testes-git vencidos desde 2026-09-13. Para dominio 80: aplicacao autonoma com transferencia a contexto novo.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/learner-profile.json",
+        "session-log.md",
+        "fora do estudo: E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py"
+      ],
+      "ended_at": "2026-09-22T16:13:29-03:00"
+    },
+    {
+      "session_id": "session_2026-09-23-csv-modulos-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "interrupted",
+        "resumed",
+        "completed"
+      ],
+      "started_at": "2026-09-23T14:30:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Separar o leitor de CSV em um modulo reutilizavel e um script que o importa e apresenta o resultado, verificado por execucao; antes, responder a pergunta de Feynman aberta de 22/09.",
+      "cognitive_core": "Decidir o que pertence ao modulo (leitura e contrato de retorno) e o que pertence ao script (apresentacao), e provar por execucao que importar o modulo nao dispara saida.",
+      "mode": "learning",
+      "checkpoint": "Sessao retomada e fechada em 2026-09-24. A etapa do leitor modular foi concluida com pratica guiada: leitor_csv.py compara a quantidade de campos de cada linha com o cabecalho usando csv.reader, volta ao inicio com seek(0) e monta os dicionarios com DictReader; distingue arquivo ausente, CSV vazio e incompatibilidade. mostrar_clientes.py importa ler_clientes, apresenta o retorno e executa a chamada sob a guarda __main__. Cinco cenarios observados: dados validos -> sucesso com cabecalho e cinco registros; caminho ausente -> mensagem de arquivo inexistente; apenas cabecalho -> sucesso com lista vazia; arquivo vazio -> 'Arquivo csv vazio'; contagem incompatível -> mensagem de incompatibilidade. A execucao do script apresentou os dados; python -c 'import mostrar_clientes' no diretorio src/tarefas/modulos terminou sem saida. A primeira tentativa de import a partir da raiz nao localizou o modulo; mudar para o diretorio do modulo resolveu o contexto de busca. As implementacoes foram feitas apos pistas e feedback do tutor; nenhuma evidencia autonoma nova foi criada e o dominio permaneceu em 60.",
+      "evidence_ids": [
+        "evidence_csv-feynman-reader-dictreader-01"
+      ],
+      "difficulty": "application",
+      "next_step": "Proxima sessao: transformar os registros CSV em JSON no projeto real; depois preparar o README da licao. Para dominio 80, ainda falta aplicacao autonoma transferida a contexto novo.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "fora do estudo: src/tarefas/modulos/leitor_csv.py (novo, parcial)",
+        "fora do estudo: E:/Lucas/Documents/formacao_python/src/tarefas/modulos/leitor_csv.py",
+        "fora do estudo: E:/Lucas/Documents/formacao_python/src/tarefas/modulos/mostrar_clientes.py"
+      ],
+      "ended_at": "2026-09-24T19:57:38-03:00"
     }
   ],
   "lessons": [
@@ -2192,7 +2569,12 @@
       "session_ids": [
         "session_2026-09-08-arquivos-erros-01",
         "session_2026-09-08-arquivos-erros-02",
-        "session_2026-09-17-arquivos-csv-01"
+        "session_2026-09-17-arquivos-csv-01",
+        "session_2026-09-18-arquivos-modulo-01",
+        "session_2026-09-20-arquivos-duas-vias-01",
+        "session_2026-09-21-csv-contrato-01",
+        "session_2026-09-22-csv-entrada-invalida-01",
+        "session_2026-09-23-csv-modulos-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2204,7 +2586,8 @@
         "modulos separados",
         "README"
       ],
-      "topic_id": "topic_automacao-confiavel"
+      "topic_id": "topic_automacao-confiavel",
+      "progress_note": "2026-09-24: modulos CSV concluidos e verificados em pratica guiada: leitor e script separados, cinco cenarios de leitura exercitados e import silencioso verificado no diretorio do modulo. Dominio permanece 60; para 80 falta aplicacao autonoma transferida. Para fechar a licao faltam transformacao em JSON e README."
     },
     {
       "lesson_id": "lesson_03-testes-git",
@@ -2472,7 +2855,9 @@
       "cause": "No teste, volta a envolver [] com str/int em vez de usar as listas literais de inteiros ja produzidas na conversa.",
       "supporting_evidence_ids": [
         "evidence_python-core-tests-02",
-        "evidence_python-core-tests-05"
+        "evidence_python-core-tests-05",
+        "evidence_csv-explicacao-01",
+        "evidence_csv-justificativa-03"
       ],
       "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes, com lista literal na chamada e no assert, sem str/int em volta.",
       "status": "active",
@@ -2488,10 +2873,14 @@
         "evidence_python-core-csv-read-errors-03",
         "evidence_python-core-csv-read-errors-04",
         "evidence_csv-ciclo4-01",
-        "evidence_csv-ciclo4-02"
+        "evidence_csv-ciclo4-02",
+        "evidence_csv-duas-vias-01",
+        "evidence_csv-duas-vias-02",
+        "evidence_csv-duas-vias-03",
+        "evidence_csv-entrada-invalida-01"
       ],
       "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes que acumulem todas as linhas e retornem apos a iteracao.",
-      "status": "active",
+      "status": "resolved",
       "entered_at": "2026-09-08"
     },
     {
@@ -2599,5 +2988,17 @@
       ]
     }
   ],
-  "next_focus": "lesson_02-arquivos-erros"
+  "next_focus": "lesson_02-arquivos-erros",
+  "diagnostics": [],
+  "retrieval_attempts": [
+    {
+      "retrieval_id": "retrieval_csv-deslocamento-01",
+      "session_id": "session_2026-09-22-csv-entrada-invalida-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Quando o leitor encontra linha com 3 valores e cabecalho com 4, o que acontece no codigo e na tela?",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-09-22T14:40:00-03:00"
+    }
+  ]
 }

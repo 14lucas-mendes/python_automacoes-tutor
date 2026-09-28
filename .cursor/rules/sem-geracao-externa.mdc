@@ -1,14 +1,14 @@
 ---
-description: NotebookLM nao e usado neste estudo a partir do MiMo Desktop
+description: NotebookLM nao e usado a partir do Xiaomi Mi Modem Desktop; no Cursor, so com consentimento
 alwaysApply: true
 ---
 
-# Geracao externa de midia fora deste desktop
+# Geracao externa de midia
 
-Decisao do aluno, 2026-09-12: **este desktop nao usa NotebookLM nem Gemini**. Nao ha MCP, integracao ou automacao de navegador para midia externa neste estudo.
+Decisao do aluno, 2026-09-18: o **Xiaomi Mi Modem Desktop nao usa NotebookLM nem Gemini**. A conexao externa acontece no **Cursor**, com consentimento especifico imediato antes do envio.
 
-- O workflow `/media` aqui para na criacao do pacote local: fontes verificadas, prompts ancorados, manifest e fallbacks locais.
-- Nunca pedir consentimento de upload, nunca automatizar navegador, nunca afirmar que artefato externo existe a partir daqui.
-- O aluno gera midia externa por conta propria, **no Cursor ou no Codex**. Quando trouxer o resultado, o tutor confere o artefato contra as fontes registradas e atualiza `.ai-tutor/media-index.json`.
+- No Xiaomi, o workflow `/media` para na criacao do pacote local: fontes verificadas, prompts ancorados, manifest e fallbacks locais. Nenhuma automacao de navegador la.
+- No Cursor: listar os arquivos exatos, obter consentimento, usar o navegador isolado do Cursor depois de o aluno entrar na conta. Nunca digitar credenciais. Nunca alterar compartilhamento. Nunca usar o perfil `mimocode-notebooklm-profile`.
+- So afirmar que artefato externo existe depois de observar a URL ou o arquivo baixado. Conferir contra as fontes e atualizar `.ai-tutor/media-index.json`.
 
 Estado canonico: `.ai-tutor/state.json`. Este arquivo e espelho de `AGENTS.md` na raiz do estudo.

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 1,
+  "revision": 3,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -26,11 +26,13 @@
       "publication_date": null,
       "accessed_at": "2026-08-31",
       "source_type": "official documentation",
-      "lesson_ids": [],
-      "topic_ids": [
-        "topic_apis-backend"
+      "lesson_ids": [
+        "lesson_07-fastapi-dados"
       ],
-      "authority_reason": "Documentacao oficial do framework usado no curso."
+      "topic_ids": [
+        "topic_agentes-ferramentas"
+      ],
+      "authority_reason": "Documentacao oficial do framework usado no curso. Relinkado em 2026-09-20: o topico topic_apis-backend foi renomeado para SQL relacional na migracao curricular, e o material FastAPI serve o ciclo 7 (lesson_07-fastapi-dados, integracao de sistemas operacionais)."
     },
     {
       "source_id": "source_fastapi-testing",
@@ -40,11 +42,13 @@
       "publication_date": null,
       "accessed_at": "2026-08-31",
       "source_type": "official documentation",
-      "lesson_ids": [],
-      "topic_ids": [
-        "topic_apis-backend"
+      "lesson_ids": [
+        "lesson_07-fastapi-dados"
       ],
-      "authority_reason": "Referencia oficial para testes de endpoints e HTTPX."
+      "topic_ids": [
+        "topic_agentes-ferramentas"
+      ],
+      "authority_reason": "Referencia oficial para testes de endpoints e HTTPX. Relinkado em 2026-09-20: o topico topic_apis-backend foi renomeado para SQL relacional na migracao curricular, e o material FastAPI serve o ciclo 7 (lesson_07-fastapi-dados, integracao de sistemas operacionais)."
     },
     {
       "source_id": "source_openai-agents-quickstart",
@@ -55,10 +59,8 @@
       "accessed_at": "2026-08-31",
       "source_type": "official documentation",
       "lesson_ids": [],
-      "topic_ids": [
-        "topic_agentes-ferramentas"
-      ],
-      "authority_reason": "Documentacao oficial do SDK de agentes escolhido."
+      "topic_ids": [],
+      "authority_reason": "Documentacao oficial do SDK de agentes escolhido. Sem competencia corrente desde a migracao curricular de 2026-09-09: agentes e LLMs ficaram no backlog pos-transicao (project_agente-operacional), fora do nucleo."
     },
     {
       "source_id": "source_openai-agents-tools",
@@ -69,10 +71,8 @@
       "accessed_at": "2026-08-31",
       "source_type": "official documentation",
       "lesson_ids": [],
-      "topic_ids": [
-        "topic_agentes-ferramentas"
-      ],
-      "authority_reason": "Referencia oficial para function tools, guardrails e agentes como ferramentas."
+      "topic_ids": [],
+      "authority_reason": "Referencia oficial para function tools, guardrails e agentes como ferramentas. Sem competencia corrente desde a migracao curricular de 2026-09-09: agentes e LLMs ficaram no backlog pos-transicao (project_agente-operacional), fora do nucleo."
     },
     {
       "source_id": "source_fastapi-docker",
@@ -133,6 +133,71 @@
         "topic_python-fundamentos"
       ],
       "authority_reason": "Referencia oficial da biblioteca padrao para extrair e formatar tracebacks, usada para inspecionar a cadeia de chamadas da falha."
+    },
+    {
+      "source_id": "source_python-csv-module",
+      "title": "csv - CSV File Reading and Writing (Biblioteca padrao)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/library/csv.html",
+      "publication_date": null,
+      "accessed_at": "2026-09-18",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "authority_reason": "Documentacao oficial da biblioteca padrao. Define o contrato do DictReader: as chaves vem da primeira linha quando fieldnames nao e passado, a linha do cabecalho e omitida dos resultados, o excedente vai para restkey (None por padrao) e o faltante e preenchido com restval (None por padrao). Tambem registra que nenhuma conversao de tipo e automatica no reader."
+    },
+    {
+      "source_id": "source_python-modules",
+      "title": "6. Modules (The Python Tutorial)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/tutorial/modules.html",
+      "publication_date": null,
+      "accessed_at": "2026-09-18",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "authority_reason": "Tutorial oficial. 6.1.1 e a fonte do padrao __name__ == \"__main__\" e afirma explicitamente que o codigo abaixo da guarda nao roda quando o modulo e importado."
+    },
+    {
+      "source_id": "source_python-datastructures",
+      "title": "5. Data Structures - More on Lists (The Python Tutorial)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "publication_date": null,
+      "accessed_at": "2026-09-18",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "authority_reason": "Tutorial oficial, secao More on Lists. Descreve pop (remove e devolve, com IndexError no limite) e registra que fatiar como a[:] produz copia, base da comparacao entre fatiar e pop."
+    },
+    {
+      "source_id": "source_python-builtins",
+      "title": "Built-in Functions - next()",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/library/functions.html",
+      "publication_date": null,
+      "accessed_at": "2026-09-18",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel"
+      ],
+      "authority_reason": "Referencia oficial das funcoes embutidas. Define next(iterator, default) e o comportamento com StopIteration quando o iterador esta esgotado."
     }
-  ]
+  ],
+  "updated_at": "2026-09-21T19:30:58.234981-03:00"
 }

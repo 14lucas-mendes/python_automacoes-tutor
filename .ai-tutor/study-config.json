@@ -19,5 +19,9 @@
     "external_upload": "exigir consentimento específico"
   },
   "external_consents": {},
-  "accessibility_notes": "nenhuma"
+  "accessibility_notes": "nenhuma",
+  "spacing_policy": {
+    "mode": "fixed",
+    "target_horizon_days": null
+  }
 }

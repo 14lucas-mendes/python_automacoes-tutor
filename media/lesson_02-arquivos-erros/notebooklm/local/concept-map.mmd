@@ -1,0 +1,28 @@
+mindmap
+  root((Ler arquivo tabular))
+    csv.reader
+      devolve listas
+      acesso por posicao
+      o cabecalho entra como primeira linha
+    csv.DictReader
+      devolve dicionarios
+      acesso por nome da coluna
+      chaves vem do cabecalho
+        campo fieldnames guarda os nomes
+        cabecalho omitido dos resultados
+      linhas irregulares
+        faltou celula preenche None restval
+        sobrou celula vai para chave None restkey
+    tipos
+      toda celula chega como texto
+      converter com int ou float
+    pegar o cabecalho a mao
+      next leitor avanca uma linha
+        sem valor padrao levanta StopIteration
+        next leitor None devolve None
+      fatiar cria lista nova
+      pop remove da lista original
+    modulo importavel
+      guarda name main
+        executado direto roda o bloco
+        importado nao roda o bloco

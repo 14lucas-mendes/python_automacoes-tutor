@@ -4,6 +4,181 @@
      estudo: o gerador reescreve session-log.md sem condição e substituiria toda esta
      narrativa por um resumo mecânico de 6 linhas por sessão. -->
 
+## `session_2026-09-23-csv-modulos-01` — retomada e fechamento em 2026-09-24
+
+- Status: concluida; a licao `lesson_02-arquivos-erros` continua em andamento.
+- Objetivo: separar o leitor CSV e o script de apresentacao e verificar que importar o modulo nao executa o fluxo.
+- Retomada: a pergunta Feynman aberta sobre `csv.reader` versus `DictReader` ja havia sido respondida corretamente e de forma autonoma em 23/09 (`evidence_csv-feynman-reader-dictreader-01`).
+- Pratica guiada: o aluno implementou em `E:/Lucas/Documents/formacao_python/src/tarefas/modulos/leitor_csv.py` a contagem de campos com `csv.reader`, reposicionamento com `seek(0)`, leitura de dicionarios com `DictReader` e mensagens distintas para arquivo ausente, vazio e incompatibilidade.
+- Verificacao observada: cinco cenarios — CSV completo (cabecalho + cinco registros, sucesso); caminho incorreto (arquivo nao existe); apenas cabecalho (sucesso com lista vazia); arquivo vazio (`Arquivo csv vazio`); colunas incompatíveis (mensagem de incompatibilidade).
+- `mostrar_clientes.py` importa `ler_clientes`, apresenta o retorno com `print` no fluxo principal e usa `if __name__ == "__main__"`. Execucao com CSV valido mostrou os dados esperados. `python -c "import mostrar_clientes"` no diretorio `src/tarefas/modulos` encerrou sem saida. A tentativa inicial na raiz nao encontrou o modulo; repetir no diretorio correto funcionou.
+- A implementacao recebeu pistas e feedback do tutor; registrar como pratica guiada, sem criar evidencia autonoma nem elevar dominio. `topic_automacao-confiavel` permanece em 60.
+- Proximo passo: nova sessao para transformar os registros em JSON; depois README. Para dominio 80 ainda falta aplicacao autonoma em contexto de transferencia.
+- Arquivos do projeto alterados fora do estudo: `leitor_csv.py` e `mostrar_clientes.py`.
+
+
+## `session_2026-09-22-csv-entrada-invalida-01` — fechamento em 2026-09-22
+
+- Status: concluída, encerrada a pedido do aluno **depois** de concluir a tarefa de entrada inválida.
+- Duração: 14:32 às 16:13 (~101 min de relógio; orçamento declarado 60 min). Excedente em parte tempo de resposta do aluno entre turnos.
+- Lição: `lesson_02-arquivos-erros` — Ciclo 4. Permanece **em andamento**.
+- Objetivo: fazer o leitor reconhecer e informar entrada inválida (valores da linha ≠ cabeçalho) sem entregar dado corrompido, com verificação por execução.
+- Modo: `learning`; núcleo cognitivo: decidir o contrato nesse caso e implementar a detecção sem devolver o dado torto. Suporte sobre o núcleo: **0** (apenas o prompt).
+- Cenário: `E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py`.
+- Sonda (`retrieval_csv-deslocamento-01`): descreveu corretamente o deslocamento e o `None` final no `DictReader`. Outcome `correct`, support 0. Não é evidência de domínio.
+- Observação de material: o pacote torto ainda saía com `msg_success` — quem chama recebia dado corrompido ao lado de “Sucesso”.
+- Evidência: `evidence_csv-entrada-invalida-01` — aplicação **autônoma correta**. Duas passadas: `next(csv.reader(arquivo), None)` para o cabeçalho (StopIteration tratado), comparação `len(linha)` × cabeçalho em `csv.reader` (contagem real, antes do `DictReader` mascarar com `None`), retorno `PACOTE_ERROR` + `msg_incompatible` no primeiro desvio, `seek(0)` e `DictReader` só no caminho válido. Cinco casos verificados por execução: CSV válido com mapeamento correto, arquivo ausente, só cabeçalho, arquivo vazio e o caso-alvo (quatro títulos e três valores) devolvendo a mensagem de incompatibilidade. O `next(..., None)` do vazio é mecanismo ensinado em 18/09 e não ganha crédito independente; o núcleo (contagem + contrato de erro) é do aluno.
+- Refinamentos opcionais registrados sem rebaixar: mensagem sem número da linha/contadores; `PACOTE_ERROR` com listas mutáveis compartilhadas; linha em branco classificada como incompatível.
+- **Domínio de `topic_automacao-confiavel`: 60.** Regra 9 — Feynman autônoma: `evidence_csv-justificativa-02` (21/09); aplicação autônoma independente: `evidence_csv-entrada-invalida-01` (hoje). Para 80 falta transferência a contexto novo. Para fechar a lição: módulos separados, JSON e README.
+- `weak_csv-return-flow`: **resolvido** (2/2 autônomas corretas em sessões diferentes: `evidence_csv-duas-vias-03` e `evidence_csv-entrada-invalida-01`).
+- Perfil: 1 observação factual (`autonomous_attempt`, result `correct`, support 0). Nenhuma inferência (sinal isolado).
+- Pergunta de Feynman de fechamento **ficou sem resposta**: por que a contagem usou `csv.reader` e não `DictReader`. Levar para a próxima sessão.
+- `next_focus`: `lesson_02-arquivos-erros`. Próximo passo: Feynman aberta + módulos separados; depois JSON e README. Opcional: `/review` dos 8 cards de `lesson_03-testes-git` vencidos desde 2026-09-13.
+- Sem diário no Obsidian: a lição não foi concluída.
+
+## Revisão do contrato AI Tutor — onda adaptativa de 21–22/09, aplicada em 2026-09-22
+
+- Motivo: o aluno informou que a skill `ai-tutor` recebeu uma versão nova e mais completa e pediu alinhamento do estudo ao funcionamento novo.
+- Fonte da versão nova: repositório `E:\Lucas\Documents\Faculdade AI\ai-tutor-base` (HEAD `1beabd4`, 2026-09-21, com alterações de trabalho até 22/09). A instalação em `~/.config/mimocode/skills/ai-tutor/` ainda era a onda de 12/09.
+- O que a onda nova acrescenta: **diagnóstico** (`/diagnostic`, `references/diagnostic-contract.md`, `state.diagnostics`), **learner profile** (`/profile`, `references/learner-profile-contract.md`, canônico `.ai-tutor/learner-profile.json`), **estratégias** (`references/learning-strategies.md`, `retrieval_attempts`, `spacing_policy`, `practice_strategy` em sessões), **protocolo adaptativo de aula de programação** (`references/programming.md`, fases 60–90 min flexíveis), e scripts novos (`learner_profile`, `practice_strategy`, `representation`, `retrieval`, `spaced_repetition`). Contratos de aprendizagem e delegação mantêm a matriz de domínio; diagnóstico e perfil **não** são evidência.
+- **Migração aplicada** (idempotente, oficial): `python -m scripts.migrate_state --study-root <study_root>` a partir de `ai-tutor-base` → `changed: true`, `valid: true`, `warnings: []`. Efeito:
+  - criado `.ai-tutor/learner-profile.json` (vazio, `revision` 0, summary em `unknown`);
+  - `state.json` ganhou `diagnostics: []` e `retrieval_attempts: []` (revision permaneceu **119**; nenhuma sessão, evidência, tópico ou lição foi criada/alterada/reclassificada);
+  - `study-config.json` ganhou `spacing_policy: { mode: "fixed", target_horizon_days: null }` (compatível com a escada 1/3/7/16/35/60 já em uso).
+- **Skill instalada sincronizada** com o conteúdo de `ai-tutor-base` (payload `SKILL.md`, `references/`, `assets/`, `scripts/`, `agents/`, `tests/`, `README.md`), preservando os três `locales/*.json` do MiMo Desktop.
+- Verificação de hoje (2026-09-22):
+  - `python -m scripts.validate_study "<study_root>"` → **STUDY VALIDATION: PASS** (com a skill nova, que exige `learner-profile.json`);
+  - `python -m scripts.validate_skill "<skill_root>"` sobre `ai-tutor-base` e sobre a instalação → **VALIDATION: PASS** nos dois;
+  - os seis JSONs canônicos em `schema_version: 2` e `study_id` coerente.
+- **Conclusão:** o estudo opera sobre a onda adaptativa. Nenhum domínio, evidência, lição ou sessão foi alterado. Restam itens de prática da conferência anterior (cards de `lesson_03-testes-git` vencidos desde 13/09; 12 lições sem arquivo em `lessons/`), não de migração.
+- **Operação (mesma data):** `AGENTS.md` ganhou o § *Operação com a skill `/ai-tutor` (onda adaptativa)* — retomar sessão, uma pergunta por vez, protocolo de `programming.md`, `retrieval_first`, observação de perfil no fechamento, interleaving só com gate do `practice_strategy`, validação após cada virada, `spacing_policy` fixa. Espelhos `.cursor/rules/ai-tutor-only.mdc` e `pedagogia-progressiva.mdc` sincronizados (arquivos canônicos completos; regra 10: diagnóstico e perfil não são nota).
+- Hashes registrados (SHA-256, skill instalada em `~/.config/mimocode/skills/ai-tutor/`, espelho de `ai-tutor-base`):
+
+| Arquivo da skill | SHA-256 |
+|---|---|
+| `SKILL.md` | `97c690e46f31dd1b8001fe9cc38b05ca1702c459ff2998810fac3b34da9efe5d` |
+| `references/architecture.md` | `ae74bfa4a7951f1e80c318769b57330c60b32809e4c8a9b88150fc66bcad97d6` |
+| `references/learning-contract.md` | `e3c6e689db1d4ba7ede5ff61e9728d0932ab57e1ac6c5c38a11eb67680c691f2` |
+| `references/state-contract.md` | `a74e0312256960584a554411cea8e34c4043926b8fcc018658bcbeefd510b3f6` |
+| `references/delegation-contract.md` | `cdaaf4390e0965fac3d3a6d86e104bbc9572e30307e9f885b92eb2ee38cadd58` |
+| `references/output-contract.md` | `becc886c1602beefe89eac58ebc8c57e10b31073b2d60b24cd53a6fd4f3bb42d` |
+| `references/diagnostic-contract.md` | `8d17f429041d3e8c6c186dbc2b269c5ed5e658113eef284ea3d85ed1fe4b241b` |
+| `references/learner-profile-contract.md` | `76a9555fb1b5d2c481d33d73d03fb5b73e3be49a110fc48313d56a4b1b5f350e` |
+| `references/learning-strategies.md` | `bdb34fe3127a7eb5dbb64a63786e89526a540c12b97059a0d31ddc5f0ac853d3` |
+| `references/programming.md` | `0d5010b626a4d9a49b10adeb8cbcb700e420e1bebabb8a630851d1bc8a33087b` |
+| `references/workflows/session.md` | `328f97d2ec5dd431441bd3ba598ee81420646c3550c5d2eefaea007e45c875a4` |
+| `references/workflows/diagnostic.md` | `d992d9d82a529d3a5808393a46243508693b7cc13314d148ed066177d399c52c` |
+| `references/workflows/profile.md` | `1c3d4027e94f2a5187a3e163d4438531edd6452834231c5e7dc4aac552390468` |
+| `scripts/validate_study.py` | `0f9fe13868fddda311f73a94ed455d2d76ebaadc6cb7c85d6906b9b83c65c420` |
+| `scripts/migrate_state.py` | `b93f50c60743a46b04de079281a85d9bca8c1117f4ed660fa8dda72731cc305f` |
+| `scripts/learner_profile.py` | `80dedf07ca190e69abb0a50390f1f7ffa9fe85f3b190fd731fd44ea60caab99b` |
+| `scripts/practice_strategy.py` | `fedc302b01d66a3efd233019173e669c7844d5fd626ca66c678f85d29a65c12d` |
+| `scripts/retrieval.py` | `f372cd0b801a1f1301fcb1b226b9207bfe57a868b1e40edd959df7e53456f557` |
+| `scripts/spaced_repetition.py` | `f1ad87ac518397c740232e3f9fd54891cfd7ad4f64ea84de12be57ad629e8dcc` |
+| `scripts/representation.py` | `cc44bc8b38b2cb7e9ace5df6aede1706b83ce01a2a3b8358d16427bfcc27f481` |
+
+## Mídia — NotebookLM no Cursor, 2026-09-18
+
+- Não é sessão de aprendizagem. A sessão `session_2026-09-18-arquivos-modulo-01` permanece concluída.
+- Pacote `media_eefbf673-6430-4d3c-a314-7f66db7b70f8` (`lesson_02-arquivos-erros`) passou de `prepared` para `generated`.
+- Notebook observado: [Guia de Referência: Módulos, Listas e Manipulação de CSV](https://notebook.google.com/notebook/9971b3fb-74e1-43a2-9bae-47f62803b788). Fontes inseridas por texto copiado: `source-pack.md` e `prompts.md`. Estúdio observado: `Python Flashcards`, `Python Quiz`, `Python Mapa` e o guia de estudo. Áudio pedido e ainda em geração no painel (`Volte em alguns minutos`). Conteúdo **não verificado** contra as fontes (`verified: false`).
+- Decisão: Xiaomi Mi Modem Desktop continua sem NotebookLM; a conexão externa fica neste Cursor. Gravada em `AGENTS.md` e `.cursor/rules/sem-geracao-externa.mdc`.
+- Nada disto é evidência. A tarefa da lição 2 segue aberta.
+
+## Revisão do contrato AI Tutor — onda de 12/09 (v2 endurecido), confirmada em 2026-09-20
+
+- Motivo da conferência: o aluno informou que a skill `ai-tutor` recebeu uma versão nova e pediu que o estudo fosse atualizado ao funcionamento novo.
+- O registro anterior de alinhamento era de **03/09** ("Revisão do contrato AI Tutor (`revision` 14)"), que guardava o hash do `learning-contract.md` como `80f51c29431d603f61f43d7afad5b5865819c7cb42b79966ad3e288cb1f40218`.
+- O que mudou na skill: onda de **11–12/09/2026**. Em 11/09, `architecture.md` (novo) e `output-contract.md`. Em 12/09, `learning-contract.md`, `state-contract.md` e todos os scripts (`init_study`, `projections`, `validate_study`, `create_learning_pack`, `migrate_state`, `state_io`, `validate_skill`). O hash atual do `learning-contract.md` é `9f69322f119eafe686e60b3d4278d8c9b88f074b90face80753c642e18d66c0e`, ou seja, o registro de 03/09 ficou para trás.
+- **Como o estudo absorveu a onda:** pela migração de endurecimento de 12/09 — `docs/compose/spec/ai-tutor-hardening-migration.md` com `status: delivered`, commits `7e4a891..c460270` na branch `migrate/ai-tutor-hardening`, backup pré-migração em `.ai-tutor/migrations/pre-hardening/`, revisão independente sem achado crítico e 82 testes da skill passando na época.
+- Verificação de hoje (2026-09-20):
+  - `python -m scripts.validate_study "<study_root>"` → **PASS**, com o estado em `revision` 113.
+  - `python -m scripts.validate_skill "<skill_root>"` sobre o pacote instalado → **PASS**.
+  - Os cinco JSONs canônicos (`state`, `study-config`, `cards`, `sources`, `media-index`) em `schema_version: 2`.
+- **Conclusão: nenhuma migração de dados era necessária.** O estudo já opera sobre o contrato endurecido desde 12/09. Nenhum domínio, evidência, lição ou sessão foi criado, alterado ou reclassificado por esta conferência.
+- Itens remanescentes da onda, registrados para não se perderem:
+  - **Fontes com tópico desatualizado** (apontado no journey log da migração): corrigido nesta conferência. `source_fastapi-tutorial` e `source_fastapi-testing` saíram de `topic_apis-backend` (que hoje é SQL relacional) e foram para `topic_agentes-ferramentas` + `lesson_07-fastapi-dados` (ciclo 7). `source_openai-agents-quickstart` e `-tools` ficaram sem competência corrente (`topic_ids` e `lesson_ids` vazios): agentes e LLMs estão no backlog pós-transição, `project_agente-operacional`. `sources.json` avançou para `revision` 3.
+  - **Lições sem arquivo de material:** 12 de 14 lições do estado não têm arquivo em `lessons/`. Item deliberadamente fora de escopo da migração de 12/09 (trabalho de conteúdo, não de formato). Entra lição por lição, quando cada uma abrir.
+  - **Repetição espaçada pendente:** os 8 cards canônicos de `lesson_03-testes-git` vencem desde 13/09 e nenhuma revisão rodou. Prática pendente, não migração.
+  - Divergência pré-existente "session-log em andamento × state completed" — corrigida em 12/09, confirmada hoje.
+- Hashes registrados para detectar a próxima deriva (SHA-256, skill instalada em `~/.config/mimocode/skills/ai-tutor/`):
+
+| Arquivo da skill | SHA-256 |
+|---|---|
+| `SKILL.md` | `b9da8b358df2bd01bce828185e5c6c8247f133df6673af8eebc5511c6e1ae931` |
+| `references/architecture.md` | `6781ef9fbe0fd20ab4afb6cdc0343bed298f028d50907cebaae6cf9d2e404724` |
+| `references/learning-contract.md` | `9f69322f119eafe686e60b3d4278d8c9b88f074b90face80753c642e18d66c0e` |
+| `references/state-contract.md` | `cccab4723fd83cce4e0c56b2662311fdcbc4f4029958ae600e7bb9d18ede90c5` |
+| `references/delegation-contract.md` | `cdaaf4390e0965fac3d3a6d86e104bbc9572e30307e9f885b92eb2ee38cadd58` |
+| `references/output-contract.md` | `5cb50ec37f9682f024786daf4f2926d9f87944fdff15b32a03a4a52a5e43ae45` |
+| `references/workflows/session.md` | `77e09b6f858460737e62a78edefb374b1d627c4b60b815e203f93604bd5e0b79` |
+| `references/media-providers.md` | `da026dff7509a7bbbc847973f40ddf192acb5cd936caedabc252dea48ee227b2` |
+| `scripts/validate_study.py` | `63196802ca9327aee6e13d16e502d16bdd1ebeb3db6084cb7e1f9c8fecf85662` |
+| `scripts/migrate_state.py` | `b817c7601b5af5619405d827d571faa14aeb0964accca255ef7bd83ec5726546` |
+| `scripts/init_study.py` | `2bf04d0bd4120118df2af4d58f60807d44572ecab354981f7568a3e14acf786d` |
+| `scripts/projections.py` | `2d402b9e2d277b4210a51a7bca0a1982da094b323a8b026ff23af98bc578410a` |
+| `scripts/state_io.py` | `8f87d4134bf1687406fff3132f22f032e6aee1fc56776aeb0336187c678a0d7b` |
+| `scripts/create_learning_pack.py` | `51a2be49c77804c52601137f2e158fabbc5bde2ed5ce517d758aa084ca3c0e56` |
+| `scripts/validate_skill.py` | `17f8f06abeafe0fb72d54d9668a42c932a954786ff18047fb7d4fb8cc87dc241` |
+
+## `session_2026-09-21-csv-contrato-01` — fechamento em 2026-09-21
+
+- Status: concluída, encerrada a pedido do aluno, **sem iniciar a tarefa 2**. Acima do orçamento: 79 minutos de 60 planejados (19:38 às 20:57), o excedente consumido pela discussão de avaliação e pela correção da regra 9.
+- Duração planejada: 60 minutos (sessão aberta às 19:38).
+- Lição: `lesson_02-arquivos-erros` — Ciclo 4. Permanece **em andamento**.
+- Objetivo: reconstruir com as próprias palavras a justificativa do contrato de retorno das duas vias, com os valores literais de cada desfecho, e tratar entrada inválida com verificação por execução.
+- Modo: `assessment`; núcleo cognitivo: justificar autonomamente o contrato de retorno e decidir o tratamento de entrada inválida a partir do próprio experimento da sessão anterior.
+- Cenário: `E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py` e `src/dados.csv` — o arquivo ficou com quatro títulos no cabeçalho e três valores por linha, estado do experimento de 20/09 que nunca foi restaurado.
+- Evidência: `evidence_csv-justificativa-01` — Feynman **autônoma parcial**. Mecanismo de chave correto, mas afirmou que o `DictReader` "não desloca o conteúdo" quando o cabeçalho ganha coluna sem valor correspondente, contradito pelo próprio print colado (a chave `sobrenome` recebeu o e-mail e `telefone` saiu `None`). A razão de segurança não foi formulada.
+- Evidência: `evidence_csv-justificativa-02` — Feynman **autônoma correta**: a metade posicional que ficou sem resposta em 20/09. `csv.reader` devolve listas cruas, a coluna extra aparece no cabeçalho, as linhas de dados permanecem iguais e na ordem do arquivo, e nada quebra na tela — confirmado por execução própria, `exited with code=0`. **Esta evidência cumpre a metade Feynman do requisito de domínio 60 do tópico.**
+- Evidência: `evidence_csv-justificativa-03` — Feynman **autônoma parcial**: executou três desfechos e colou as saídas reais, mas respondeu em texto descritivo e unificou "só cabeçalho" com "arquivo vazio". Forma branda do padrão do `weak_python-test-literal-lista`.
+- Devolutiva: o erro material foi explicado começando simples (regra 8), com o print do próprio aluno como exemplo e a analogia da ficha com quatro campos impressos para três informações ditadas — as informações entram na ordem dos campos, tudo depois do campo vago cai na casa errada e o programa não reclama.
+- Evidência: `evidence_csv-justificativa-04` — Feynman **correta e guiada** (degrau 3 da escada). Razão de segurança formulada: a posição é endereço, a chave é rótulo; sem a chave não dá para saber se `linha[2]` ainda representa o dado procurado; e "chamar pelo nome amarra o programa ao significado da coluna, não só ao lugar dela na linha".
+- Evidência: `evidence_csv-justificativa-05` — Feynman **correta e guiada** (degrau 4). Os quatro desfechos com execução real dos quatro, incluindo o arquivo de 0 byte (`None []`), com a causa correta: sem primeira linha, `fieldnames` devolve `None`. O erro material da rodada anterior (tratar os dois casos como equivalentes) está resolvido.
+- **Objeção do aluno (2026-09-21) — aceita em parte.** O aluno contestou o desfecho da tarefa 1 pedindo avanço do domínio de 40 para 60, argumentando que parte da tarefa foi autônoma e que as partes guiadas não invalidam o conjunto. O tutor reconheceu a imprecisão: a evidência `-02` já havia cumprido a metade Feynman do 60 e a devolutiva **não declarou isso**, dando a entender que nada tinha contado.
+- O número não subiu porque o 60 exige **as duas** metades — explicação Feynman autônoma **e** aplicação autônoma independente. A segunda não existe: as aplicações do tópico são todas parciais, e entrada inválida, módulos separados e JSON seguem sem execução. Rigidez sobre os itens guiados não foi o motivo; eles não são o obstáculo.
+- **Regra 9 gravada em `AGENTS.md`**: prestação de contas do domínio — declarar qual elemento do nível está cumprido e qual falta, em vez de tratar o tópico como zerado; a calibragem legítima está na forma, nunca em contar conteúdo fornecido pelo tutor como trabalho autônomo. O espelho `.cursor/rules/pedagogia-progressiva.mdc` estava parado em 12/09 (sem as regras 6, 7 e 8) e foi sincronizado com as regras 6 a 9.
+- Nota de progresso gravada no `topic_automacao-confiavel` no estado canônico, dizendo explicitamente qual metade do 60 está cumprida.
+- Domínio de `topic_automacao-confiavel`: **mantido em 40**.
+- `next_focus`: `lesson_02-arquivos-erros`. Próximo passo: a tarefa 2 (entrada inválida tratada), candidata direta à aplicação autônoma independente que falta para o 60.
+- Checkpoint: encerrada sem iniciar a tarefa 2. Sem toque nesta sessão: `weak_csv-return-flow` (segue com 1 de 2 evidências autônomas), `weak_git-formas-exatas-comandos` e `weak_error-model-tempo-deteccao` (1 de 2 explicações). Os 8 cards de `lesson_03-testes-git` seguem vencidos desde 2026-09-13 — sugerida a abertura da próxima sessão por `/review`.
+
+## `session_2026-09-20-arquivos-duas-vias-01` — fechamento em 2026-09-20
+
+- Status: concluída, encerrada a pedido do aluno, **sem fechar a lição**.
+- Lição: `lesson_02-arquivos-erros` — Ciclo 4. Domingo, dia de projeto e revisão. Permanece **em andamento**.
+- Objetivo: fechar o módulo de leitura de CSV nas duas vias — separar o cabeçalho dos registros na via posicional, escrever a via por nome com `DictReader` e justificar o trade-off.
+- Modo: `assessment`; núcleo cognitivo: decidir o contrato de retorno e resolver o mesmo problema com duas ferramentas, justificando o que cada uma resolve sozinha e o que custa.
+- Achado de partida: a guarda `__main__` havia sido implementada pelo aluno em **18/09 às 20:42**, durante a sessão anterior e depois da última conferência do tutor. O critério 1 (importar sem efeito) estava cumprido — a regressão de quinta, consertada sem o tutor dizer como.
+- Evidência: `evidence_csv-duas-vias-01` — aplicação **autônoma parcial**, via posicional. Cabeçalho separado com `result[0]` e `result[1:]`, e a checagem de vazio colocada **antes** de indexar, o que evita `IndexError` em cima do `except FileNotFoundError`. Contrato frágil: quatro desfechos em quatro formatos de três tipos.
+- Evidência: `evidence_csv-duas-vias-02` — aplicação **autônoma parcial**, via por nome. `leitor.fieldnames` lido **dentro** do `with`, evitando o `ValueError` de arquivo fechado, e detecção de vazio por `fieldnames is None`, que é a distinção documentada. Contrato paralelo ao da outra via, com os mesmos dois problemas — o que torna a comparação entre as vias válida.
+- Achado do tutor, verificado por execução: o sintoma do desempacotamento **depende do dado**, não do código — com 3 colunas levanta `ValueError: too many values to unpack`, com 2 colunas não levanta nada e devolve `titulo='nome'`, `corpo='email'`. O tutor corrigiu a própria demonstração anterior, que usara um arquivo de 2 colunas, e registrou a correção.
+- Evidência: `evidence_csv-duas-vias-03` — aplicação **autônoma parcial**, terceira iteração. O retorno passou a ser sempre uma tupla de dois itens e o desempacotamento funciona nos quatro desfechos; o defeito material demonstrado antes está resolvido. Verificações que ficaram: os três ramos devolvem exatamente o mesmo valor (saídas idênticas com os ramos removidos) e a frase "Arquivo vazio" desapareceu de todas as saídas, deixando o contrato implícito.
+- Evidência: `evidence_csv-explicacao-01` — Feynman **autônoma parcial**. Acertos: mecanismo das duas vias, escolha do `DictReader`, e um **experimento real** na terceira pergunta — editou o `dados.csv`, inseriu a coluna `sobrenome` e executou, em vez de especular. Erros: atribuiu a segurança a "não modificar a lista original" (razão de outra pergunta, e verdadeira para as duas vias), não percebeu que a falha foi **silenciosa** (`exited with code=0`) e testou uma via só.
+- **Correção de material (regra 8).** A devolutiva entregue com tabela e nome de conceito **não foi entendida**, e o aluno pediu reexplicação pela técnica de Feynman, dizendo que impactava diretamente o entendimento dele. O tutor refez a explicação com frase curta e analogia: a chamada de turma (posição × nome), o funcionário preenchendo a ficha na ordem, e o termômetro que mostra 39° quando a medida é 41° — dado errado e silencioso é pior que programa quebrado. Gravado em `AGENTS.md` item 8: **explicar o erro do aluno começando simples**. Efeito no registro: a razão de segurança e a metade posicional passaram a ser conteúdo ensinado, portanto **guiadas**, e precisam de reconstrução própria.
+- O experimento do aluno é também a prova de que o critério "**entrada inválida tratada**" segue aberto: a coluna inserida só no cabeçalho deslocou o conteúdo uma posição — o e-mail caiu em `sobrenome`, o telefone caiu em `email` — e a última coluna virou `None`, sem nenhum erro.
+- `weak_csv-return-flow`: **1 de 2** evidências autônomas. O fluxo de acumulação e retorno está correto e autônomo; falta a segunda, em outra sessão.
+- Domínio de `topic_automacao-confiavel` mantido em **40**. Nenhum requisito de 60 foi fechado: as aplicações são parciais e a explicação tem erro material.
+- `next_focus`: `lesson_02-arquivos-erros`. Próximo passo: reescrever a justificativa com as próprias palavras e depois fechar entrada inválida, módulos separados e README.
+- Checkpoint: encerrada. Sem toque nesta sessão: `weak_python-test-literal-lista` (reapareceu no pedido dos valores literais) e `weak_git-formas-exatas-comandos`.
+
+## `session_2026-09-18-arquivos-modulo-01` — fechamento em 2026-09-18
+
+- Status: concluída, encerrada **sem concluir a tarefa**, a pedido do aluno.
+- Lição: `lesson_02-arquivos-erros` — Ciclo 4. Permanece **em andamento**.
+- Objetivo: deixar o leitor de CSV pronto para ser importado por outro programa — sem efeito no import, com os registros separados do cabeçalho e com erro explícito que quem chama consiga distinguir.
+- Modo: `assessment`; núcleo cognitivo: decidir o que a função devolve (registros, e não o cabeçalho) e onde o programa começa a rodar.
+- Cenário: `E:/Lucas/Documents/formação_python/src/exercicios/exercicios_03.py`.
+- **Auditoria de pré-requisitos, pedida pelo aluno.** Já ensinados: a guarda `__name__ == "__main__"` (`lesson_01`, 07/09, evidências `python-core-structure-06/07`), `import`/`from`, `for`/`if`, listas e `append`, `csv.reader`, `try/except` e flag booleana. **Nunca ensinados:** `next()`, fatiar `[1:]`, `pop(0)` e o `csv.DictReader`. A aula veio antes de qualquer avaliação, com execução real e mais de um exemplo por mecanismo.
+- Aula entregue, tudo executado: os dois leitores na mesma planilha (listas por posição × dicionários por nome); `fieldnames`; o cabeçalho omitido dos resultados e por que isso resolve o defeito de 17/09; `next()` avançando uma linha por chamada e o custo de chamá-lo duas vezes; a armadilha do `StopIteration` em arquivo vazio e a saída `next(leitor, None)`; fatiar criando lista nova contra `pop(0)` modificando a lista; linhas irregulares (`restval` → `None` na célula faltante, excedente → chave literalmente chamada `None`); e o leitor preso ao arquivo aberto (`ValueError: I/O operation on closed file`, descoberto por erro do próprio tutor ao montar a demonstração).
+- **Decisão do aluno (2026-09-18), gravada em `AGENTS.md` item 7:** ensinar um pré-requisito que a regra 1 obriga a ensinar **não** rebaixa a tentativa seguinte a prática guiada. A escada de ajuda mede ajuda sobre o núcleo cognitivo, não conhecimento de documentação convencional. Fundamento no contrato de aprendizagem ("documentação convencional não invalida a autonomia automaticamente") e no degrau 2 da escada (recuperar pré-requisito não aplica teto). Limites registrados: continua guiada quando o tutor entrega o núcleo — critérios, análise, conclusão ou implementação essencial —, e comportamento que a ferramenta ensinada executa sozinha, como o `DictReader` pulando o cabeçalho, não ganha crédito independente naquela tentativa.
+- Nada foi implementado nesta sessão: o aluno encerrou antes de escrever o código. **Sem evidência nova**, e a tarefa segue aberta.
+- Pacote de mídia local criado para `lesson_02-arquivos-erros` (`media/lesson_02-arquivos-erros/notebooklm/`), artefato `media_eefbf673-6430-4d3c-a314-7f66db7b70f8`, status `prepared`: `source-pack.md`, `prompts.md`, `manifest.json`, `local/cards.json` (10 rascunhos com fonte citada), `local/quiz.json` (8 perguntas, chave de resposta separada, um distrator por confusão registrada), `local/concept-map.mmd`, `local/didactic-image.svg` com alt text em `local/image-brief.md`, `local/audio-script.md` (transcript em 5 blocos) e `local/study_guide.md`.
+- Fontes novas em `.ai-tutor/sources.json` (revision 2): `source_python-csv-module`, `source_python-modules`, `source_python-datastructures`, `source_python-builtins` — documentação oficial, consultada em 2026-09-18. Cada trecho do source pack declara explicitamente o que **não** cobre, para nenhuma afirmação ficar sem lastro.
+- **Nenhum artefato externo existe.** Nenhuma automação de navegador foi tentada nesta sessão; a decisão de não usar NotebookLM nem Gemini neste desktop segue valendo.
+- `next_focus`: `lesson_02-arquivos-erros`. Próximo passo: implementar a leitura **dos dois jeitos** — leitor posicional e leitor por nome — com a guarda `__main__`, os três desfechos distinguíveis (dados, ausente, só cabeçalho) e a justificativa de projeto. O aluno declarou que fará os dois caminhos.
+- Checkpoint: encerrada sem conclusão. Sem toque nesta sessão: `weak_python-test-literal-lista`, `weak_error-model-tempo-deteccao` (1 de 2 explicações) e `weak_git-formas-exatas-comandos`.
+
 ## `session_2026-09-17-arquivos-csv-01` — fechamento em 2026-09-17
 
 - Status: concluída, encerrada acima do orçamento (72 min de 45 planejados)

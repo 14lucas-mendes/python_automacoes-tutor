@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_id": "media_eefbf673-6430-4d3c-a314-7f66db7b70f8",
+  "lesson_id": "lesson_02-arquivos-erros",
+  "objective": "Fixar a leitura de arquivos tabulares do Ciclo 4: a diferenca entre csv.reader (listas, por posicao) e csv.DictReader (dicionarios, por nome de coluna), o papel de fieldnames e do cabecalho omitido, a conversao manual de texto para numero, as linhas irregulares (restval/restkey), next() com valor padrao contra StopIteration, a diferenca entre fatiar e pop, e a guarda __name__ == \"__main__\" para o arquivo ser importavel. Cobre indirectamente o ponto fraco weak_csv-return-flow.",
+  "source_ids": [
+    "source_python-csv-module",
+    "source_python-modules",
+    "source_python-datastructures",
+    "source_python-builtins"
+  ],
+  "source_hashes": {
+    "source_python-csv-module": "dae19af84daaf4885c5807722089c15068b1848a8cc2819d4b07f43ebf19da7a",
+    "source_python-modules": "a6ade1cf91fd9479a6aa7ffcaa6f20f3c469e0d4b689ed1b4b099f113a70d069",
+    "source_python-datastructures": "5fcedc151f57eee1024b839cab91cb19b4f69aebc3d2e96ef39f7a2e8adcbfcf",
+    "source_python-builtins": "ce774305b5af614772a51087ae733d8ecc5f5a0befe94cd0bcd5f6508ad00d37"
+  },
+  "requested_formats": [
+    "cards",
+    "quiz",
+    "mind_map",
+    "image",
+    "audio",
+    "study_guide"
+  ],
+  "external_upload": {
+    "provider": "notebooklm",
+    "consented": true,
+    "consented_at": "2026-09-18T21:14:00-03:00",
+    "files": [
+      "source-pack.md",
+      "prompts.md"
+    ],
+    "decision": "usar_no_cursor",
+    "decided_at": "2026-09-18T21:14:00-03:00",
+    "decided_by": "aluno",
+    "decision_note": "Xiaomi Mi Modem Desktop continua sem NotebookLM. Neste Cursor, o aluno autenticou a sessao e autorizou o envio das duas fontes. Navegador isolado do Cursor; credenciais nao foram digitadas.",
+    "notebook_url": "https://notebook.google.com/notebook/9971b3fb-74e1-43a2-9bae-47f62803b788",
+    "notebook_title": "Guia de Referência: Módulos, Listas e Manipulação de CSV",
+    "executed_elsewhere": null
+  },
+  "evidence_eligible": false,
+  "status": "generated",
+  "outputs": [
+    {
+      "format": "cards",
+      "type": "draft",
+      "local_path": "local/cards.json",
+      "note": "10 rascunhos com fonte citada. O registro canonico e .ai-tutor/cards.json; estes nao foram promovidos.",
+      "evidence_eligible": false
+    },
+    {
+      "format": "quiz",
+      "type": "draft",
+      "local_path": "local/quiz.json",
+      "note": "8 perguntas com chave de resposta separada; cada distrator ataca uma confusao registrada.",
+      "evidence_eligible": false
+    },
+    {
+      "format": "mind_map",
+      "type": "draft",
+      "local_path": "local/concept-map.mmd",
+      "note": "Mermaid com dois ramos de leitor, tipos, mecanismos de corte e a guarda de modulo.",
+      "evidence_eligible": false
+    },
+    {
+      "format": "image",
+      "type": "local",
+      "local_path": "local/didactic-image.svg",
+      "note": "SVG vetorial com texto selecionavel; alt text completo em local/image-brief.md.",
+      "accessibility": {
+        "alt_text": true,
+        "text_selectable": true
+      },
+      "evidence_eligible": false
+    },
+    {
+      "format": "audio",
+      "type": "script",
+      "local_path": "local/audio-script.md",
+      "note": "Transcript em pt-BR, 5 blocos. Nenhum audio foi sintetizado.",
+      "evidence_eligible": false
+    },
+    {
+      "format": "study_guide",
+      "type": "local",
+      "local_path": "local/study_guide.md",
+      "note": "9 perguntas de recuperacao, os tres desfechos da tarefa e a tarefa de transferencia em dois caminhos.",
+      "evidence_eligible": false
+    }
+  ]
+}

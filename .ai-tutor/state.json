@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 129,
-  "updated_at": "2026-09-24T19:57:38-03:00",
+  "revision": 172,
+  "updated_at": "2026-10-05T12:00:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -13,7 +13,7 @@
       "mastery": 80,
       "retention": "medium",
       "status": "mastered",
-      "last_practice": "2026-09-07",
+      "last_practice": "2026-10-01",
       "evidence_ids": [
         "evidence_python-core-pares-01",
         "evidence_python-core-modulo-01",
@@ -74,7 +74,10 @@
         "evidence_debugging-diagnosis-16",
         "evidence_debugging-diagnosis-17",
         "evidence_debugging-diagnosis-18",
-        "evidence_debugging-diagnosis-19"
+        "evidence_debugging-diagnosis-19",
+        "evidence_condicionais-ordem-feynman-01",
+        "evidence_condicionais-ordem-aplicacao-01",
+        "evidence_condicionais-guarda-aplicacao-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -92,12 +95,12 @@
       "topic_id": "topic_workflow-profissional",
       "name": "Git, GitHub e fluxo profissional",
       "phase": 0,
-      "objective": "Criar um fluxo reproduzivel de desenvolvimento, versionamento e colaboracao com Git e GitHub.",
+      "objective": "Criar um fluxo reproduzivel de desenvolvimento, versionamento e colaboracao com Git e GitHub, incluindo branches de producao e desenvolvimento, pull requests, CI e releases.",
       "prerequisite_topic_ids": [],
       "mastery": 80,
       "retention": "medium",
       "status": "mastered",
-      "last_practice": "2026-09-17",
+      "last_practice": "2026-09-28",
       "evidence_ids": [
         "evidence_diagnostico-workflow-01",
         "evidence_diagnostico-workflow-02",
@@ -117,7 +120,8 @@
         "evidence_git-transfer-real-02",
         "evidence_git-transfer-real-03",
         "evidence_git-preflight-01",
-        "evidence_git-preflight-02"
+        "evidence_git-preflight-02",
+        "evidence_git-uso-real-formacao-python-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -139,10 +143,10 @@
       "prerequisite_topic_ids": [
         "topic_python-fundamentos"
       ],
-      "mastery": 60,
+      "mastery": 80,
       "retention": "unknown",
-      "status": "in_progress",
-      "last_practice": "2026-09-23",
+      "status": "mastered",
+      "last_practice": "2026-10-05",
       "evidence_ids": [
         "evidence_csv-ciclo4-01",
         "evidence_csv-ciclo4-02",
@@ -156,7 +160,15 @@
         "evidence_csv-justificativa-04",
         "evidence_csv-justificativa-05",
         "evidence_csv-entrada-invalida-01",
-        "evidence_csv-feynman-reader-dictreader-01"
+        "evidence_csv-feynman-reader-dictreader-01",
+        "evidence_csv-json-transformacao-01",
+        "evidence_csv-json-limite-verificacao-01",
+        "evidence_ordens-transformacao-01",
+        "evidence_ordens-verificacao-esperado-01",
+        "evidence_ordens-falhas-ordem-01",
+        "evidence_ordens-falhas-ordem-02",
+        "evidence_ordens-falhas-feynman-01",
+        "evidence_ordens-falhas-feynman-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -168,7 +180,7 @@
         "JSON valido transformado",
         "erros de entrada tratados"
       ],
-      "progress_note": "2026-09-22: dominio 60 alcancado. Metade Feynman autonoma: evidence_csv-justificativa-02 (21/09). Metade aplicacao autonoma independente: evidence_csv-entrada-invalida-01 (deteccao por contagem em csv.reader, retorno explicito sem dado corrompido, cinco casos verificados por execucao). Para 80 falta aplicacao autonoma com transferencia a contexto novo. Para fechar lesson_02 faltam modulos separados, JSON e README. 2026-09-24: pratica guiada de modularizacao CSV concluida; nenhuma evidencia autonoma nova e nenhum ajuste de dominio. Proximo: JSON e README; para 80 falta transferencia autonoma."
+      "progress_note": "2026-09-22: dominio 60 alcancado. Metade Feynman autonoma: evidence_csv-justificativa-02 (21/09). Metade aplicacao autonoma independente: evidence_csv-entrada-invalida-01 (deteccao por contagem em csv.reader, retorno explicito sem dado corrompido, cinco casos verificados por execucao). Para 80 falta aplicacao autonoma com transferencia a contexto novo. Para fechar lesson_02 faltam modulos separados, JSON e README. 2026-09-24: pratica guiada de modularizacao CSV concluida; nenhuma evidencia autonoma nova e nenhum ajuste de dominio. Proximo: JSON e README; para 80 falta transferencia autonoma. 2026-09-28: CSV->JSON implementado em pratica guiada (evidence_csv-json-transformacao-01, teto 40 nesta tentativa) e Feynman autonoma de limite da verificacao (evidence_csv-json-limite-verificacao-01). Dominio permanece 60: para 80 falta aplicacao autonoma com transferencia. 2026-10-05: dominio 60 -> 80. Aplicacao autonoma transferida ao projeto real ordens (formacao_python) agora inteira nos criterios de entrega: transformacao/vazio/caminhos (evidence_ordens-transformacao-01) + tratamento de falhas e ordem verificar-antes-de-gravar (evidence_ordens-falhas-ordem-02, 6 cenarios). Feynman autonomo da falha (feynman-01 parcial, feynman-02 correto). Verificacao com valor esperado ainda tem origem guiada (01/10). Para 100: repetir em outra sessao e outro contexto com deteccao de limite ou autocorrecao."
     },
     {
       "topic_id": "topic_apis-backend",
@@ -222,7 +234,7 @@
       "topic_id": "topic_agentes-ferramentas",
       "name": "Integracao de sistemas e automacao operacional",
       "phase": 7,
-      "objective": "Integrar arquivos, banco simulado e APIs em automacoes operacionais rastreaveis.",
+      "objective": "Integrar arquivos, banco e APIs em automacoes operacionais rastreaveis e servir uma API propria com FastAPI.",
       "prerequisite_topic_ids": [
         "topic_llm-aplicacoes"
       ],
@@ -266,6 +278,32 @@
         "README e historico GitHub",
         "simulacoes de testes tecnicos"
       ]
+    },
+    {
+      "topic_id": "topic_frontend-react",
+      "name": "React e TypeScript consumindo API",
+      "phase": 10,
+      "objective": "Construir interfaces React em TypeScript que consomem uma API propria, com tipos dos dados, estado, carregamento e erros tratados.",
+      "prerequisite_topic_ids": [
+        "topic_agentes-ferramentas"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "componentes tipados",
+        "chamada a API tipada",
+        "erros da API tratados na tela",
+        "tsc sem erros"
+      ],
+      "progress_note": "2026-10-05: topico criado pela revisao de roadmap segundo-cerebro. Conhecimento previo de React/Next (Mate Academy) declarado pelo aluno; nao conta como dominio. Diagnostico antes da lesson_10."
     }
   ],
   "evidences": [
@@ -1835,6 +1873,208 @@
       },
       "result": "correct",
       "error": "Refinamento opcional, sem rebaixar: nao mencionou que valores a mais vao para a chave None (restkey) do DictReader."
+    },
+    {
+      "evidence_id": "evidence_csv-json-transformacao-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "leitor_json.py: usa ler_clientes, desempacota cabecalho/linhas, percorre cada dict e troca telefone por item['telefone'].split(' e '), grava src/clientes.json com json.dump (ensure_ascii=False, indent=4) so quando a mensagem e de sucesso, rele com json.load e compara pacote == dados. Verificado por execucao na raiz do projeto: 5 clientes, telefone da Ana com 2 itens. Arquivos: E:/Lucas/Documents/formação_python/src/tarefas/modulos/leitor_json.py; leitor_json.py sha256 14b7e3103c511ae90aa576471c6550ec03944aa5da2e1b758aaa076d497c8ef0; src/clientes.json sha256 00968501ecebb868dece20614b4f092b4897a9fd3f39894a6801c13ad2b502e5.",
+      "recorded_at": "2026-09-28T18:33:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-28-csv-json-01",
+        "location": "E:/Lucas/Documents/formação_python/src/tarefas/modulos/leitor_json.py"
+      },
+      "result": "correct",
+      "error": "Pratica guiada: sobre o nucleo (transformacao do telefone) houve pergunta de pre-requisito (degrau 2: o que ha em pacote) e pergunta direcional (degrau 3: a '/' aparece no resultado do split?), teto 40 nesta tentativa. json.dump/json.load e caminho relativo/pasta de trabalho foram pre-requisitos ensinados (regra 7), nao rebaixam. Tentativas intermediarias: [].append (devolve None), split(',') e split() sem argumento; corrigidas pelo aluno apos a pista. Ideia propria: verificacao por ida-e-volta (pacote == dados) em vez do len sugerido. Refinamentos: falha continua devolvendo None em silencio no print final; mensagem impressa sempre antes do if."
+    },
+    {
+      "evidence_id": "evidence_csv-json-limite-verificacao-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Pergunta so com o prompt (suporte 0): se o split continuasse errado (lista de 1 item), o if pacote == dados daria True? Resposta: sim, porque compara o que foi gravado com o que foi lido e os dois seriam iguais; a verificacao prova que o arquivo guardou fielmente os dados, nao que os itens estejam corretos. Deteccao de limite da propria verificacao.",
+      "recorded_at": "2026-09-28T18:33:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-28-csv-json-01",
+        "location": "conversation"
+      },
+      "result": "correct",
+      "error": null
+    },
+    {
+      "evidence_id": "evidence_git-uso-real-formacao-python-01",
+      "topic_id": "topic_workflow-profissional",
+      "session_id": "session_2026-09-28-git-uso-real-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Uso real em repositorio distinto (formacao-python, criado em 28/09): git add ., git status para conferir o stage, git commit -m com mensagem convencional (feat:), git push para origin/main. Formas exatas corretas, sem comando fornecido. Resultado observado no print e nas refs: 28bc5e0 em main e origin/main.",
+      "recorded_at": "2026-09-28T18:50:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-28-git-uso-real-01",
+        "location": "E:/Lucas/Documents/formação_python"
+      },
+      "result": "correct",
+      "error": "Suporte: o tutor nomeou as etapas add, commit e push no pedido (degrau 1, reformulacao da tarefa), sem sintaxe; git status, '.', -m e a mensagem foram do aluno. Nao exercitou comandos de configuracao/leitura de remoto (remote add, remote -v, log com flags), foco do ponto fraco; o remoto ja estava configurado pelo tutor."
+    },
+    {
+      "evidence_id": "evidence_ordens-transformacao-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "kind": "transfer",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Tarefa nova (ordens de manutencao, src/ordens.csv -> src/ordens.json), modo assessment, so o prompt (tutor apenas apontou criterios faltantes, degrau 1). Comportamento restrito: transformacao de pecas em lista com split(';'), campo vazio -> [] testando == '' antes do split (decisao propria) e caminhos src/... a partir da raiz (escolha autonoma). Verificado por execucao: OS-101 com 3 pecas, OS-103 com []. NAO cobre tratamento de falhas nem verificacao da transformacao (ver as duas evidencias guiadas da mesma tarefa).",
+      "recorded_at": "2026-10-01T20:13:06-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-29-revisao-json-01",
+        "location": "E:/Lucas/Documents/formação_python/src/modulo-02/ordens_json.py"
+      },
+      "result": "correct",
+      "error": null
+    },
+    {
+      "evidence_id": "evidence_ordens-verificacao-esperado-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": true,
+      "context": "Criterio 4: verificar que a transformacao esta certa. Aluno declarou nao saber; tutor usou analogia do troco, pergunta direcional (degrau 3) e exemplos de valor esperado literal + == em outros contextos (degrau 4/5). Aluno escreveu esperado (OS-101) e comparou com ordens[0]; depois um booleano verificar_item para condicionar a impressao (decisao propria de saida). Tutor verificou numa copia com split(',') que a comparacao detecta o defeito.",
+      "recorded_at": "2026-10-01T20:13:06-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-29-revisao-json-01",
+        "location": "E:/Lucas/Documents/formação_python/src/modulo-02/ordens_json.py"
+      },
+      "result": "correct",
+      "error": "Pratica guiada (degrau 4/5, teto 20 para a verificacao). Primeiro apontou ler_ordens_servico (a entrada nao transformada) como fonte verdadeira; copiou o esperado do ordens.json gerado (justificou que ja sabia a estrutura)."
+    },
+    {
+      "evidence_id": "evidence_ordens-falhas-ordem-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": true,
+      "context": "Criterio 3: mensagem por falha e nao gravar sem sucesso. Versoes intermediarias: transformacao chamada antes de checar a mensagem (CSV ausente -> IndexError em ordens[0] e ordens.json sobrescrito com []); comparacao com 'Arquivo nao existe' sem o '!'. Versao final (sha256 38f62581...) com match/case: transformacao so no case de sucesso; ler_ordens.py passou a devolver STATUS_BLANK tambem para CSV so com cabecalho. Tutor verificou 5 cenarios em copias: certo, ausente, vazio e so-cabecalho corretos, com JSON intacto.",
+      "recorded_at": "2026-10-01T20:13:06-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-09-29-revisao-json-01",
+        "location": "E:/Lucas/Documents/formação_python/src/modulo-02/ordens_json.py"
+      },
+      "result": "partial",
+      "error": "Guiada pela pista parcial do tutor (degrau 4, teto 40). Implementacao final escrita pelo aluno por tentativa e erro; a explicacao de outra IA veio depois, para entender por que funcionou. Explicacao do traceback parcial: causa 'sem dados' certa, mas disse que ordens era o arquivo JSON (e a lista em memoria). Pendente: com defeito na transformacao nada e impresso e o JSON errado ja foi gravado (gravacao dentro de transformar_ordens_json, antes da verificacao)."
+    },
+    {
+      "evidence_id": "evidence_condicionais-ordem-feynman-01",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "kind": "feynman",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Explicacao Feynman das cenas 3/4 (nota 9.5, >=5 antes de >=9): analogia propria do armario com gavetas (achou na primeira, nao abre as outras); regra 'condicao mais restritiva primeiro'; causa: nota ja maior que 5 dava verdadeiro na primeira condicao e nunca caia no louvor. Antes, rastreou sem erro a cena 1 (chovendo/sol_forte, else pulado) e a cena 4 com nota = 6 (>=9 falso, >=5 verdadeiro, else pulado).",
+      "recorded_at": "2026-10-02T11:30:16-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-02-condicionais-01",
+        "location": "media/lesson_01-python-core/notebooklm/local/condicionais-passo-a-passo.html"
+      },
+      "result": "correct",
+      "error": "Guiada: o tutor havia explicado a causa e a regra 'especifica primeiro' minutos antes, na devolutiva do card_cond-02 (analise fornecida). A analogia das gavetas e propria. Limite nao mencionado: a regra so importa quando as condicoes se sobrepoem."
+    },
+    {
+      "evidence_id": "evidence_condicionais-ordem-aplicacao-01",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Exercicio 1, so o enunciado: classificar_temperatura(t) com >=39 'febre alta', >=37.5 'febre', senao 'normal'. Escreveu if/elif/else com a condicao mais restritiva primeiro e return em cada ramo (formacao_python/src/condicionais/exe_01.py, sha256 8f58aeb3...). Tutor testou 40, 39, 38.9, 38, 37.5, 37.4, 36: todos corretos, incluindo as fronteiras.",
+      "recorded_at": "2026-10-02T11:45:02-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-02-condicionais-01",
+        "location": "E:/Lucas/Documents/formação_python/src/condicionais/exe_01.py"
+      },
+      "result": "correct",
+      "error": "Sem erro. Estrutura proxima do exemplo das notas (cenas 3/4), por isso nao conta como transferencia."
+    },
+    {
+      "evidence_id": "evidence_condicionais-guarda-aplicacao-01",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Exercicio 2, so o enunciado: primeiro_e_urgente(pedidos) -> True/False olhando so o primeiro pedido, sem quebrar com lista vazia. 1a versao (so o prompt) ja trazia a guarda if len(pedidos) > 0 antes de qualquer acesso; mas percorria todos com for (devolvia a Ana no caso Rui->Ana), devolvia dict/texto e caia em None silencioso. Tutor so apontou os criterios nao cumpridos com a tabela de testes (degrau 1). 2a versao: guarda + pedidos[0] + True/False em todos os ramos (sha256 5b6ab77f...). Tutor testou [], [Ana urgente], [Rui, Ana], [Rui]: False, True, False, False - todos corretos.",
+      "recorded_at": "2026-10-02T12:06:49-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-02-condicionais-01",
+        "location": "E:/Lucas/Documents/formação_python/src/condicionais/exe_02.py"
+      },
+      "result": "correct",
+      "error": "Refinamentos opcionais: print de depuracao dentro da funcao; elif != True redundante (bastaria else). Guarda com if aninhado, nao com and/curto-circuito."
+    },
+    {
+      "evidence_id": "evidence_ordens-falhas-ordem-02",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "context": "Tarefa independente no projeto real formacao_python (src/modulo-02/ordens_json.py), so o enunciado de 02/10. 1a versao: verificacao antes do dump, mas open(w) antes do if (truncava o json: 572 -> 0 bytes no cenario split(,)), aviso devolvido por return sem print, case _ imprimia ordens indefinida (NameError). Tutor so apontou criterios falhos com a tabela dos 6 cenarios (degrau 1) e ensinou que open(w) trunca na abertura (pre-requisito de ferramenta, regra 7, lacuna do material). 2a versao (sha256 via git status, arquivo atual): if lista[0]==esperado envolvendo o with open; else devolve aviso impresso pelo main; case _ com mensagem propria. Tutor rodou os 6 cenarios numa copia: certo grava; split(,) avisa e json intacto (572); msg sem ! cai no case _; ausente, vazio, so cabecalho avisam e json intacto.",
+      "recorded_at": "2026-10-05T00:30:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-02-condicionais-01",
+        "location": "E:/Lucas/Documents/formação_python/src/modulo-02/ordens_json.py"
+      },
+      "result": "correct",
+      "error": "Refinamentos: texto do aviso diz erro de gravacao quando a falha e da transformacao; verificacao confere so a OS-101. Comportamento de truncar do open(w) foi ensinado, nao descoberto."
+    },
+    {
+      "evidence_id": "evidence_ordens-falhas-feynman-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Feynman sem ajuda: por que o ordens.json virou [] quando o CSV sumiu (versao de 01/10)? Resposta: a verificacao so acontecia depois da gravacao; analogia propria do bolo (conferir a receita depois de assado, sem volta). Explica a ordem (gravar antes de verificar), mas nao explica por que o conteudo era [] (sem CSV a lista ficou vazia, e a lista vazia foi gravada).",
+      "recorded_at": "2026-10-05T00:38:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-02-condicionais-01"
+      },
+      "result": "partial",
+      "error": "Causa da ordem correta; faltou ligar CSV ausente -> lista vazia -> [] gravado."
+    },
+    {
+      "evidence_id": "evidence_ordens-falhas-feynman-02",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Seguimento do feynman-01 (tutor so apontou o que faltava, degrau 1): o que havia na lista quando o CSV sumiu? Resposta: nao existiam dados dentro da lista, e a gravacao acontecia independente de o caminho estar correto, apagando os dados. Liga CSV ausente -> lista vazia -> gravacao sem verificacao.",
+      "recorded_at": "2026-10-05T00:45:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-02-condicionais-01"
+      },
+      "result": "correct",
+      "error": "Nao nomeou literalmente que a lista vazia e serializada como []."
     }
   ],
   "sessions": [
@@ -2508,6 +2748,165 @@
         "fora do estudo: E:/Lucas/Documents/formacao_python/src/tarefas/modulos/mostrar_clientes.py"
       ],
       "ended_at": "2026-09-24T19:57:38-03:00"
+    },
+    {
+      "session_id": "session_2026-09-28-csv-json-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-28T16:16:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_automacao-confiavel",
+        "topic_python-fundamentos"
+      ],
+      "objective": "Abertura com recuperacao dos cards vencidos de lesson_03 (retrieval_first); depois transformar os registros lidos do CSV em um arquivo JSON valido, com os telefones como lista, verificado lendo o JSON de volta.",
+      "cognitive_core": "Decidir a estrutura de cada registro no JSON (telefones separados em lista) e implementar a transformacao e a gravacao; o modulo json (dump/load) e pre-requisito ensinado, nao nucleo.",
+      "mode": "learning",
+      "checkpoint": "Recuperacao (retrieval_first) dos 8 cards de lesson_03: 5 corretos (03 com apoio 2), 01 parcial, 02 e 08 incorretos; confirma weak_error-model-tempo-deteccao (momento de deteccao e o que o traceback prova/nao prova). Projeto: leitor_json.py le via ler_clientes, transforma telefone com split(' e '), grava src/clientes.json e verifica por ida-e-volta. Ultimo comportamento proprio: detectou sozinho que a verificacao pacote == dados nao prova a transformacao (suporte 0). Suporte mais recente no nucleo: degrau 3 (pergunta direcional sobre o separador). Pre-requisitos ensinados: json.dump/load, split com separador, pasta de trabalho/os.getcwd. Sem bloqueio. Arquivos no repo do aluno ainda nao commitados (leitor_json.py, clientes.json).",
+      "evidence_ids": [
+        "evidence_csv-json-transformacao-01",
+        "evidence_csv-json-limite-verificacao-01"
+      ],
+      "difficulty": "application",
+      "next_step": "Commit/push do aluno em formacao-python sem comandos fornecidos (uso real, weak_git-formas-exatas-comandos); revisar cards vencidos 01/02/08 em 29/09; README da lesson_02; depois tarefa autonoma de transferencia (JSON->CSV ou outro arquivo operacional) para 80.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        "session-log.md",
+        "fora do estudo: E:/Lucas/Documents/formação_python/src/tarefas/modulos/leitor_json.py",
+        "fora do estudo: E:/Lucas/Documents/formação_python/src/clientes.json"
+      ],
+      "ended_at": "2026-09-28T18:33:00-03:00"
+    },
+    {
+      "session_id": "session_2026-09-28-git-uso-real-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-09-28T18:40:00-03:00",
+      "ended_at": "2026-09-28T18:50:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 10,
+      "lesson_ids": [
+        "lesson_04-descoberta-processo"
+      ],
+      "topic_ids": [
+        "topic_workflow-profissional"
+      ],
+      "objective": "Versionar e publicar sozinho o trabalho do dia em formacao-python (uso real).",
+      "cognitive_core": "Escrever a forma exata dos comandos Git do fluxo add/status/commit/push sem o tutor fornecer os comandos.",
+      "mode": "assessment",
+      "checkpoint": "Print do terminal enviado pelo aluno: git add . ; git status (conferencia por conta propria) ; git commit -m \"feat: add funcao que le um csv e transforma em json\" -> 28bc5e0 (3 arquivos) ; git push -> 0a00c47..28bc5e0 main -> main. Tutor conferiu refs locais: main e origin/main em 28bc5e0.",
+      "evidence_ids": [
+        "evidence_git-uso-real-formacao-python-01"
+      ],
+      "difficulty": "application",
+      "next_step": "Para weak_git-formas-exatas-comandos: em outra sessao e outro repositorio real, usar sem ajuda comandos de configuracao ou leitura de remoto (git remote -v, git remote add, git log --oneline).",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        "session-log.md",
+        "fora do estudo: E:/Lucas/Documents/formação_python (commit 28bc5e0 do aluno)"
+      ]
+    },
+    {
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "interrupted",
+        "resumed",
+        "completed"
+      ],
+      "started_at": "2026-09-29T18:46:15-03:00",
+      "ended_at": "2026-10-01T20:13:06-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_python-fundamentos",
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Recuperacao dos cards vencidos (tempos-01, 02, 08) sobre o modelo de dois tempos e o que o traceback prova; depois recriacao independente no projeto (terca: recriacao independente).",
+      "cognitive_core": "Explicar com as proprias palavras quando cada tipo de erro e detectado e o que o traceback prova ou nao prova; na parte de projeto, implementar sem ajuda.",
+      "mode": "assessment",
+      "checkpoint": "Interrompida a pedido do aluno. Revisao: tempos-01 parcial (citou TypeError no lugar da categoria excecao; volta 30/09), tempos-02 e tempos-08 corretos (voltam 06/10). Tarefa de transferencia em modo assessment, sem ajuda sobre o nucleo (apenas o tutor apontou quais criterios faltavam, degrau 1): src/ordens.csv (OS-101..104, pecas separadas por ';', OS-103 vazia) -> src/modulo-02/ler_ordens.py + ordens_json.py -> src/ordens.json. 1a versao (verificada pelo tutor numa copia, a partir da raiz): criterios 1 (lista), 2 (vazio -> [] com teste == '' antes do split, decisao propria) e 5 (caminhos src/... a partir da raiz, escolha autonoma) cumpridos; criterio 3 pela metade (grava so com sucesso, mas falha de arquivo ausente imprime so None); criterio 4 nao cumprido (repetiu a verificacao por ida-e-volta, que ele mesmo explicou em 28/09 nao provar a transformacao). 2a versao em andamento (sha256 ordens_json.py 5a8938ee...): mensagem para CSV vazio adicionada; arquivo ausente ainda sem mensagem; comparacao removida; o arquivo termina num if __name__ == '__main__': sem corpo (vai dar SyntaxError ao rodar). Faltam: criterio 3 para arquivo ausente, criterio 4 (aluno declarou nao saber resolver) e a frase Feynman sobre o criterio 2. Nenhuma evidencia registrada ainda: registrar ao concluir. Arquivos do aluno nao commitados (src/modulo-02, ordens.csv, ordens.json). | Retomada em 2026-10-01T18:37:19-03:00: ordens_json.py inalterado (sha256 5a8938ee...). Cards vencidos: tempos-01 (30/09), tempos-03..07 (01/10). | Fechada em 2026-10-01T20:13:06-03:00 a pedido do aluno. card_tempos-01 correto (volta 04/10). Criterio 4 guiado (degrau 4/5): esperado literal da OS-101 comparado com ordens[0] + booleano; detecta defeito. Criterio 3 guiado (aluno usou explicacao de outra IA sobre ordem das condicoes): versao final com match/case grava so no sucesso; ausente/vazio/so-cabecalho com mensagem e JSON intacto. Ultimo comportamento proprio: if not lista_ordem no leitor e saida condicionada ao booleano. Pendente: defeito na transformacao passa calado e JSON errado ja gravado (gravacao dentro de transformar_ordens_json); frase Feynman do criterio 2. Dominio de automacao-confiavel segue 60: transformacao transferida autonoma, mas verificacao e falhas guiadas. Arquivos do aluno ainda nao commitados. | CORRECAO 2026-10-01T20:17:37-03:00 (relato do aluno apos o fechamento): a versao final foi escrita pelo proprio aluno, por tentativa e erro (trocando a ordem e testando) depois da pista parcial do tutor (degrau 4: 'dois motivos, um na ordem das linhas e outro no texto de uma comparacao'). A explicacao da outra IA veio DEPOIS de o codigo funcionar, so para entender por que funcionou; nao forneceu a implementacao. Classificacao: implementacao do aluno com degrau 4 do tutor (teto 40), nao degrau 6. A lacuna real e de compreensao: acertou a ordem sem conseguir explicar a causa.",
+      "evidence_ids": [
+        "evidence_ordens-transformacao-01",
+        "evidence_ordens-verificacao-esperado-01",
+        "evidence_ordens-falhas-ordem-01"
+      ],
+      "difficulty": "application",
+      "next_step": "Nova sessao (pedido do aluno: aula explicativa + exercicios sobre condicionais). Roteiro: (1) retrieval_first nos cards cond-01..05 (e tempos-03..07 vencidos), registrar antes de explicar; (2) aula explicativa curta com o passo a passo media/lesson_01-python-core/notebooklm/local/condicionais-passo-a-passo.html (aluno preve antes de avancar; Feynman em linguagem simples, regra 8); (3) exercicios guiados em contextos novos com andaime que recua: escolher if separados x elif, ordenar condicoes sobrepostas, escrever guarda com and, mover acao irreversivel para depois da verificacao, case _; (4) tarefa independente, so o prompt: ordens_json.py - defeito avisa e nao grava; case _ para mensagem inesperada; (5) frase Feynman do criterio 2 e explicacao autonoma de por que ordens.json virou []. A cena 8 da midia termina com pergunta direcional sobre onde mora a gravacao (mesma direcao ja dada em sessao, degrau 3).",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/sources.json",
+        ".ai-tutor/learner-profile.json",
+        "session-log.md",
+        "fora do estudo: E:/Lucas/Documents/formação_python/src/modulo-02/ (ler_ordens.py, ordens_json.py), src/ordens.csv, src/ordens.json"
+      ]
+    },
+    {
+      "session_id": "session_2026-10-02-condicionais-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "interrupted",
+        "resumed",
+        "completed"
+      ],
+      "started_at": "2026-10-02T10:51:48-03:00",
+      "ended_at": "2026-10-05T00:45:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_01-python-core",
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_python-fundamentos",
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Explicar e aplicar a estrutura de condicionais (if separados x if/elif/else/match, ordem com sobreposicao, guarda antes do uso, acao irreversivel depois da verificacao, case _) e corrigir ordens_json.py para que um defeito avise e nao grave.",
+      "cognitive_core": "Escolher e ordenar condicoes a partir das situacoes possiveis e explicar por que a ordem funciona; no projeto, implementar sem ajuda.",
+      "mode": "learning",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_python-fundamentos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Aquisicao de conteudo ainda nao ensinado formalmente (weak_condicionais-ordem-guarda ativo); interleaving nao se aplica."
+      },
+      "checkpoint": "Interrompida a pedido do aluno em 2026-10-02T12:10:41-03:00 (~1h20). Recuperacao: cond-01 parcial (or no lugar de if/elif para exclusivas), cond-02 parcial (causa atribuida ao '='), cond-03 incorreto (TypeError no lugar de IndexError; trocou o dado em vez de guarda), cond-04 parcial (ordem certa, sem o porque), cond-05 incorreto (comparar com o dado original) - todos voltam 03/10. Aula com o passo a passo (tema escuro pedido pelo aluno; acessibilidade registrada): rastreou corretamente cenas 1, 4 (nota 6), 6 (fila ['Bia'], curto-circuito) e 9 (case _; termo 'curinga' ensinado; sem case _ = silencio). Feynman guiado correto da ordem (analogia propria das gavetas). Exercicio 1 (temperatura) autonomo correto; exercicio 2 (primeiro_e_urgente) autonomo correto apos apontamento dos criterios (guarda presente desde a 1a versao). Tarefa independente do ordens_json.py APRESENTADA, nao iniciada (sha256 38f62581...): (1) defeito avisa e nao altera ordens.json - ponto ja com pergunta direcional degrau 3 em 01/10; (2) case _ para mensagem inesperada; (3) cenarios antigos mantidos. Testes previstos: certo, ausente, vazio, so cabecalho, copia com split(','), copia com mensagem de sucesso sem '!'. Cards tempos-03..07 adiados. | Retomada em 2026-10-05 com orcamento de 45 min pedido pelo aluno: prioridade na tarefa independente do ordens_json.py. | Fechada em 2026-10-05 (~45 min). Recuperacao livre correta (verificar antes de gravar). Tarefa independente do ordens_json.py: 1a versao falhou em split(,) (open(w) antes do if truncou o json) e no case _ (NameError); tutor apontou criterios (degrau 1) e ensinou truncamento do open(w) (pre-requisito). 2a versao passou nos 6 cenarios. Feynman do [] parcial -> correto no seguimento. topic_automacao-confiavel 60 -> 80.",
+      "evidence_ids": [
+        "evidence_condicionais-ordem-feynman-01",
+        "evidence_condicionais-ordem-aplicacao-01",
+        "evidence_condicionais-guarda-aplicacao-01",
+        "evidence_ordens-falhas-ordem-02",
+        "evidence_ordens-falhas-feynman-01",
+        "evidence_ordens-falhas-feynman-02"
+      ],
+      "difficulty": "application",
+      "next_step": "Revisar cards vencidos cond-01..05 e tempos-03..07 (retrieval_first). Lesson_02 segue: README. Refinamentos opcionais do ordens_json.py: texto do aviso (falha da transformacao, nao da gravacao) e conferir mais de uma OS.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/learner-profile.json",
+        "session-log.md",
+        "fora do estudo: E:/Lucas/Documents/formação_python/src/modulo-02/ordens_json.py (editado pelo aluno)"
+      ]
     }
   ],
   "lessons": [
@@ -2544,7 +2943,8 @@
       "status": "completed",
       "session_ids": [
         "session_2026-09-03-python-core-01",
-        "session_2026-09-07-python-core-tests"
+        "session_2026-09-07-python-core-tests",
+        "session_2026-10-02-condicionais-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2574,7 +2974,10 @@
         "session_2026-09-20-arquivos-duas-vias-01",
         "session_2026-09-21-csv-contrato-01",
         "session_2026-09-22-csv-entrada-invalida-01",
-        "session_2026-09-23-csv-modulos-01"
+        "session_2026-09-23-csv-modulos-01",
+        "session_2026-09-28-csv-json-01",
+        "session_2026-09-29-revisao-json-01",
+        "session_2026-10-02-condicionais-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2587,7 +2990,7 @@
         "README"
       ],
       "topic_id": "topic_automacao-confiavel",
-      "progress_note": "2026-09-24: modulos CSV concluidos e verificados em pratica guiada: leitor e script separados, cinco cenarios de leitura exercitados e import silencioso verificado no diretorio do modulo. Dominio permanece 60; para 80 falta aplicacao autonoma transferida. Para fechar a licao faltam transformacao em JSON e README."
+      "progress_note": "2026-09-24: modulos CSV concluidos e verificados em pratica guiada: leitor e script separados, cinco cenarios de leitura exercitados e import silencioso verificado no diretorio do modulo. Dominio permanece 60; para 80 falta aplicacao autonoma transferida. Para fechar a licao faltam transformacao em JSON e README. 2026-09-28: JSON gerado e verificado por ida-e-volta em pratica guiada (leitor_json.py -> src/clientes.json). Falta README; para 80, aplicacao autonoma transferida. 2026-10-01: transferencia ordens CSV->JSON - transformacao autonoma e transferida; verificacao com valor esperado e tratamento de falhas guiados. Para 80 falta aplicacao autonoma transferida completa (falhas + verificacao). Falta README. 2026-10-05: licao vinculada a project_segundo-cerebro; criterios inalterados. Ponte opcional (nao e criterio de fechamento): script que le o frontmatter das notas do cofre e gera indice.json."
     },
     {
       "lesson_id": "lesson_03-testes-git",
@@ -2624,7 +3027,8 @@
       "session_ids": [
         "session_2026-09-13-git-historico",
         "session_2026-09-14-git-transferencia-01",
-        "session_2026-09-17-git-preflight"
+        "session_2026-09-17-git-preflight",
+        "session_2026-09-28-git-uso-real-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2640,10 +3044,10 @@
     },
     {
       "lesson_id": "lesson_05-automacao-confiavel",
-      "title": "SQL relacional para dados operacionais",
-      "objective": "Modelar dados de manutencao e consultar registros com SQL relacional.",
+      "title": "SQL relacional: memorias versionadas do Segundo Cerebro",
+      "objective": "Modelar memorias versionadas, temas, fontes e o modulo de manutencao em SQLite e consultar por tema, data e texto.",
       "prerequisite_lesson_ids": [
-        "lesson_02-arquivos-erros"
+        "lesson_14-git-fluxo-profissional"
       ],
       "status": "planned",
       "session_ids": [],
@@ -2654,15 +3058,24 @@
       ],
       "delivery_criteria": [
         "tabelas relacionadas",
-        "consultas com join",
-        "resultado explicado"
+        "consultas com join e por data",
+        "busca de texto (FTS5)",
+        "resultado explicado",
+        "entrega por PR"
       ],
-      "topic_id": "topic_apis-backend"
+      "topic_id": "topic_apis-backend",
+      "programming_plan": {
+        "project_anchor": "banco SQLite do Segundo Cerebro",
+        "revisit": "indice.json do ciclo 4",
+        "new_constraint": "banco relacional com historico de versoes",
+        "expected_transfer": "modelar sozinho o dominio de manutencao"
+      },
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
       "lesson_id": "lesson_06-http-apis",
-      "title": "HTTP, REST e consumo de APIs",
-      "objective": "Consumir APIs REST pelo terminal e tratar contratos, respostas e falhas HTTP.",
+      "title": "HTTP e APIs REST: importador do GitHub",
+      "objective": "Consumir a API do GitHub para importar commits e repositorios do aluno, tratando contratos, paginacao e falhas HTTP.",
       "prerequisite_lesson_ids": [
         "lesson_05-automacao-confiavel"
       ],
@@ -2674,16 +3087,25 @@
         "transfer"
       ],
       "delivery_criteria": [
-        "cliente de API pelo terminal",
-        "erros de rede tratados",
-        "testes com mock"
+        "cliente HTTP",
+        "timeout e erros de rede tratados",
+        "paginacao",
+        "testes com mock",
+        "entrega por PR"
       ],
-      "topic_id": "topic_llm-aplicacoes"
+      "topic_id": "topic_llm-aplicacoes",
+      "programming_plan": {
+        "project_anchor": "importador GitHub do Segundo Cerebro",
+        "revisit": "leitura de arquivos e tratamento de excecoes",
+        "new_constraint": "fonte remota que pode falhar",
+        "expected_transfer": "consumir uma segunda API com outro contrato"
+      },
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
       "lesson_id": "lesson_07-fastapi-dados",
-      "title": "Integracao de sistemas operacionais",
-      "objective": "Conectar dados de arquivos, SQL e APIs em um fluxo operacional com falhas rastreaveis.",
+      "title": "Integracao de sistemas e API propria (FastAPI)",
+      "objective": "Servir a API do Segundo Cerebro com FastAPI, integrando cofre, tutor, GitHub e manutencao em um fluxo com falhas rastreaveis e modelos tipados.",
       "prerequisite_lesson_ids": [
         "lesson_06-http-apis"
       ],
@@ -2696,16 +3118,25 @@
       ],
       "delivery_criteria": [
         "mapeamento de entradas e saidas",
-        "integracao simulada",
+        "endpoints documentados",
+        "modelos Pydantic com type hints",
         "falhas tratadas",
-        "registro de execucao"
+        "registro de execucao",
+        "entrega por PR"
       ],
-      "topic_id": "topic_agentes-ferramentas"
+      "topic_id": "topic_agentes-ferramentas",
+      "programming_plan": {
+        "project_anchor": "API do Segundo Cerebro",
+        "revisit": "cliente HTTP do ciclo 6",
+        "new_constraint": "servir uma API em vez de consumir",
+        "expected_transfer": "explicar o contrato da propria API e diagnosticar uma falha de integracao"
+      },
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
       "lesson_id": "lesson_08-llm-estruturado",
-      "title": "Automacao web com Selenium",
-      "objective": "Automatizar uma tarefa web controlada com Selenium usando dados ficticios e verificacoes explicitas.",
+      "title": "Automacao web com Selenium: captura de paginas",
+      "objective": "Capturar paginas publicas para o Segundo Cerebro com Selenium, usando esperas explicitas e verificacoes.",
       "prerequisite_lesson_ids": [
         "lesson_07-fastapi-dados"
       ],
@@ -2719,15 +3150,23 @@
       "delivery_criteria": [
         "navegacao automatizada",
         "esperas explicitas",
-        "dados ficticios",
-        "falha diagnosticada"
+        "conteudo publico ou ficticio",
+        "falha diagnosticada",
+        "entrega por PR"
       ],
-      "topic_id": "topic_producao-empregabilidade"
+      "topic_id": "topic_producao-empregabilidade",
+      "programming_plan": {
+        "project_anchor": "captura web do Segundo Cerebro",
+        "revisit": "importador via API do ciclo 6",
+        "new_constraint": "site sem API",
+        "expected_transfer": "automatizar um segundo site sozinho"
+      },
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
       "lesson_id": "lesson_09-seguranca-custo",
-      "title": "Demo de manutencao: modelo de dados e regras",
-      "objective": "Modelar registros ficticios de falhas, reincidencias e atividades de manutencao para a demo.",
+      "title": "Modulo de manutencao e sintese periodica (sonhar)",
+      "objective": "Importar registros ficticios de manutencao, aplicar regras de reincidencia e gerar o relatorio periodico de padroes do Segundo Cerebro.",
       "prerequisite_lesson_ids": [
         "lesson_08-llm-estruturado"
       ],
@@ -2740,15 +3179,24 @@
       ],
       "delivery_criteria": [
         "dados ficticios ou anonimizados",
-        "regras de reincidencia",
-        "README de dominio"
+        "regras de reincidencia testadas",
+        "relatorio de padroes verificavel",
+        "README de dominio",
+        "entrega por PR"
       ],
-      "topic_id": "topic_agentes-ferramentas"
+      "topic_id": "topic_agentes-ferramentas",
+      "programming_plan": {
+        "project_anchor": "modulo de manutencao e relatorio sonhar",
+        "revisit": "consultas SQL do ciclo 5",
+        "new_constraint": "sintese periodica sobre todas as memorias",
+        "expected_transfer": "aplicar o mesmo sonhar a uma fonte diferente (registros de estudo)"
+      },
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
       "lesson_id": "lesson_10-agente-ferramentas",
-      "title": "Demo de manutencao: coleta e processamento",
-      "objective": "Implementar, passo a passo, a importacao e o processamento de registros operacionais da demo.",
+      "title": "Frontend React e TypeScript I",
+      "objective": "Criar a interface React em TypeScript (Vite) que consome a API do Segundo Cerebro para busca e linha do tempo, com estados de carregamento e erro.",
       "prerequisite_lesson_ids": [
         "lesson_09-seguranca-custo"
       ],
@@ -2760,16 +3208,27 @@
         "transfer"
       ],
       "delivery_criteria": [
-        "funcao de importacao",
-        "validacao de dados",
-        "resultado verificavel"
+        "componentes tipados",
+        "estado",
+        "chamada a API tipada",
+        "erro da API mostrado na tela",
+        "tsc sem erros",
+        "entrega por PR"
       ],
-      "topic_id": "topic_agentes-ferramentas"
+      "topic_id": "topic_frontend-react",
+      "programming_plan": {
+        "project_anchor": "interface web do Segundo Cerebro",
+        "revisit": "testes da API pelo terminal e modelos Pydantic",
+        "new_constraint": "consumir a API no navegador (inclui CORS)",
+        "expected_transfer": "criar uma tela nova sem modelo"
+      },
+      "diagnostic_note": "Antes da primeira sessao: /diagnostic curto de React e TypeScript (base previa da Mate Academy). Diagnostico posiciona; nao gera dominio nem evidencia.",
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
       "lesson_id": "lesson_11-agente-controle",
-      "title": "Demo de manutencao: relatorios e integracao",
-      "objective": "Gerar relatorios de falhas e reincidencias e integrar uma fonte simulada sem expor dados reais.",
+      "title": "Frontend React e TypeScript II e fluxo ponta a ponta",
+      "objective": "Completar a interface com captura, leitura do relatorio sonhar e navegacao, com o fluxo frontend-API-banco funcionando e falhas tratadas.",
       "prerequisite_lesson_ids": [
         "lesson_10-agente-ferramentas"
       ],
@@ -2781,16 +3240,24 @@
         "transfer"
       ],
       "delivery_criteria": [
-        "relatorio de reincidencias",
-        "integracao simulada",
-        "limites conhecidos documentados"
+        "fluxo ponta a ponta",
+        "falhas tratadas na tela",
+        "limites conhecidos documentados",
+        "entrega por PR"
       ],
-      "topic_id": "topic_agentes-ferramentas"
+      "topic_id": "topic_frontend-react",
+      "programming_plan": {
+        "project_anchor": "interface web do Segundo Cerebro",
+        "revisit": "telas de leitura do ciclo 10",
+        "new_constraint": "tela que escreve dados",
+        "expected_transfer": "diagnosticar uma falha que atravessa frontend, API e banco"
+      },
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
       "lesson_id": "lesson_12-docker-ci",
-      "title": "Qualidade: pytest, debugging e refatoracao",
-      "objective": "Cobrir regras centrais da demo com pytest, investigar falhas e refatorar sem alterar o comportamento.",
+      "title": "Qualidade: pytest, debugging, refatoracao e CI completo",
+      "objective": "Cobrir regras, API e importadores com pytest, refatorar sem mudar comportamento e ampliar o CI para lint, tipos e build do frontend.",
       "prerequisite_lesson_ids": [
         "lesson_11-agente-controle"
       ],
@@ -2804,14 +3271,22 @@
       "delivery_criteria": [
         "testes pytest relevantes",
         "debugging registrado",
-        "refatoracao verificada"
+        "refatoracao verificada",
+        "CI cobrindo backend e frontend"
       ],
-      "topic_id": "topic_producao-empregabilidade"
+      "topic_id": "topic_producao-empregabilidade",
+      "programming_plan": {
+        "project_anchor": "qualidade do Segundo Cerebro",
+        "revisit": "CI minimo do ciclo 5",
+        "new_constraint": "CI que barra PR quebrado",
+        "expected_transfer": "diagnosticar sozinho um PR com CI vermelho"
+      },
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
       "lesson_id": "lesson_13-deploy-portfolio",
-      "title": "GitHub, testes tecnicos e preparacao seletiva",
-      "objective": "Organizar a demo no GitHub, resolver testes tecnicos de entrada e explicar decisoes tecnicas com clareza.",
+      "title": "GitHub, testes tecnicos e portfolio do Segundo Cerebro",
+      "objective": "Publicar o MVP do Segundo Cerebro como portfolio, resolver testes tecnicos de entrada e explicar decisoes tecnicas com clareza.",
       "prerequisite_lesson_ids": [
         "lesson_12-docker-ci"
       ],
@@ -2824,11 +3299,47 @@
       ],
       "delivery_criteria": [
         "README",
-        "repositorio GitHub legivel",
+        "repositorio GitHub legivel com historico de PRs e releases",
+        "dados de exemplo ficticios",
         "simulacoes de testes tecnicos",
         "demo de tres a cinco minutos"
       ],
-      "topic_id": "topic_producao-empregabilidade"
+      "topic_id": "topic_producao-empregabilidade",
+      "programming_plan": {
+        "project_anchor": "MVP do Segundo Cerebro",
+        "revisit": "todo o projeto",
+        "new_constraint": "apresentacao para recrutador",
+        "expected_transfer": "explicar uma decisao tecnica nao ensaiada"
+      },
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+    },
+    {
+      "lesson_id": "lesson_14-git-fluxo-profissional",
+      "title": "Git profissional de dev solo: branches, PR, CI e releases",
+      "objective": "Criar o repositorio segundo-cerebro com main protegida e develop, entregar fatias por feature branch e pull request com CI e publicar releases com tag.",
+      "prerequisite_lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "branches main e develop criadas pelo aluno",
+        "PR com descricao e autorrevisao",
+        "CI executado no PR",
+        "tag de release publicada"
+      ],
+      "topic_id": "topic_workflow-profissional",
+      "programming_plan": {
+        "project_anchor": "repositorio segundo-cerebro",
+        "revisit": "commits e push do ciclo 3 (topic_workflow-profissional, dominio 80)",
+        "new_constraint": "branches separadas de producao e desenvolvimento, PR, CI e release",
+        "expected_transfer": "toda fatia seguinte entra por PR sem roteiro de comandos"
+      }
     }
   ],
   "weak_points": [
@@ -2910,6 +3421,42 @@
       "exit_condition": "Duas evidencias autonomas corretas em sessoes diferentes, em uso real de repositorios distintos (novos ou ja existentes, criados por necessidade de trabalho), com a forma exata dos comandos de configuracao e leitura escrita corretamente sem o tutor fornecer o comando. Consulta a documentacao e permitida.",
       "status": "active",
       "entered_at": "2026-09-17"
+    },
+    {
+      "weak_point_id": "weak_caminho-relativo-pasta-trabalho",
+      "topic_id": "topic_automacao-confiavel",
+      "category": "conceptual",
+      "cause": "Conceito de pasta de trabalho nunca ensinado antes de 28/09 (lacuna do material): caminho relativo e resolvido a partir de onde o terminal esta, nao da pasta do .py. Em 23/09 o import falhou ao rodar da raiz; em 28/09 tentou ../../dados.csv, tarefas/modulos/dados.csv e outros por tentativa e erro. Apos a explicacao com os.getcwd, escolheu sozinho src/dados.csv e src/clientes.json a partir da raiz.",
+      "supporting_evidence_ids": [
+        "evidence_csv-json-transformacao-01"
+      ],
+      "entered_at": "2026-09-28",
+      "exit_condition": "Duas escolhas autonomas corretas de caminho (leitura e gravacao) em sessoes diferentes, justificadas pela pasta de trabalho, uma delas em contexto novo.",
+      "status": "active"
+    },
+    {
+      "weak_point_id": "weak_condicionais-ordem-guarda",
+      "topic_id": "topic_python-fundamentos",
+      "category": "conceptual",
+      "cause": "Ordem e estrutura de condicionais nunca ensinadas explicitamente nesta formacao (lacuna do material): if solto x if/elif/else/match exclusivos, condicoes sobrepostas (especifica antes da geral), case _ por ultimo, curto-circuito de and/or e 'verificar antes de usar' (guarda antes de lista[0]; acao irreversivel so depois da checagem). Em 01/10 chegou a ordem certa por tentativa e erro, sem entender por que funcionou; buscou explicacao de outra IA depois. Aluno pediu aula explicativa, exercicios e midias.",
+      "supporting_evidence_ids": [
+        "evidence_ordens-falhas-ordem-01"
+      ],
+      "entered_at": "2026-10-01",
+      "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes estruturando condicoes com guarda antes do uso e acao so apos a verificacao, uma em contexto novo.",
+      "status": "active"
+    },
+    {
+      "weak_point_id": "weak_verificacao-valor-esperado",
+      "topic_id": "topic_automacao-confiavel",
+      "category": "conceptual",
+      "cause": "Construir verificacao com fonte independente (valor esperado escrito a mao comparado com o resultado) nao havia sido ensinado (lacuna do material). Em 28/09 explicou que ida-e-volta nao prova a transformacao, mas em 29/09-01/10 nao soube construir a alternativa; apontou a entrada (ler_ordens_servico) como fonte verdadeira.",
+      "supporting_evidence_ids": [
+        "evidence_ordens-verificacao-esperado-01"
+      ],
+      "entered_at": "2026-10-01",
+      "exit_condition": "Duas verificacoes autonomas corretas com valor esperado independente em sessoes diferentes, uma em contexto novo, incluindo saida explicita de falha.",
+      "status": "active"
     }
   ],
   "projects": [
@@ -2917,16 +3464,8 @@
       "project_id": "project_automacao-processo-real",
       "name": "Sistema de Automacao de Manutencao — Demo",
       "phase": 8,
-      "lesson_ids": [
-        "lesson_07-fastapi-dados",
-        "lesson_08-llm-estruturado",
-        "lesson_09-seguranca-custo",
-        "lesson_10-agente-ferramentas",
-        "lesson_11-agente-controle",
-        "lesson_12-docker-ci",
-        "lesson_13-deploy-portfolio"
-      ],
-      "status": "planned",
+      "lesson_ids": [],
+      "status": "archived",
       "objective": "Demonstrar automacao e integracao de sistemas sobre falhas, reincidencias, atividades e relatorios de manutencao com dados ficticios ou anonimizados.",
       "delivery_criteria": [
         "dados ficticios ou anonimizados",
@@ -2936,23 +3475,23 @@
         "integracao simulada",
         "README",
         "commit do estudante"
-      ]
+      ],
+      "archive_note": "2026-10-05: absorvido como modulo de manutencao de project_segundo-cerebro."
     },
     {
       "project_id": "project_api-llm-servico",
       "name": "Cliente de API pelo terminal",
       "phase": 6,
-      "lesson_ids": [
-        "lesson_06-http-apis"
-      ],
-      "status": "planned",
+      "lesson_ids": [],
+      "status": "archived",
       "objective": "Consumir uma API REST pelo terminal, tratar falhas e apresentar resultados em formato legivel.",
       "delivery_criteria": [
         "cliente HTTP",
         "timeout e erro tratados",
         "README",
         "testes isolados"
-      ]
+      ],
+      "archive_note": "2026-10-05: absorvido como importador GitHub (lesson_06) de project_segundo-cerebro."
     },
     {
       "project_id": "project_agente-operacional",
@@ -2960,7 +3499,7 @@
       "phase": 99,
       "lesson_ids": [],
       "status": "planned",
-      "objective": "Possivel especializacao posterior; fora do nucleo de transicao atual.",
+      "objective": "Possivel especializacao posterior; fora do nucleo atual. Inclui servidor MCP do Segundo Cerebro, busca por embeddings/RAG e LLM na sintese sonhar.",
       "delivery_criteria": [
         "tres a cinco ferramentas",
         "estado",
@@ -2986,6 +3525,49 @@
         "limitacoes conhecidas",
         "registro de delegacao e verificacao"
       ]
+    },
+    {
+      "project_id": "project_segundo-cerebro",
+      "name": "Segundo Cerebro - MVP",
+      "phase": 4,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros",
+        "lesson_14-git-fluxo-profissional",
+        "lesson_05-automacao-confiavel",
+        "lesson_06-http-apis",
+        "lesson_07-fastapi-dados",
+        "lesson_08-llm-estruturado",
+        "lesson_09-seguranca-custo",
+        "lesson_10-agente-ferramentas",
+        "lesson_11-agente-controle",
+        "lesson_12-docker-ci",
+        "lesson_13-deploy-portfolio"
+      ],
+      "status": "planned",
+      "objective": "Memoria pessoal em Python (memorias versionadas, busca, sintese periodica sonhar) com API FastAPI e interface React/TypeScript, sobre dados reais do aluno; modulo de manutencao com dados ficticios. Projeto de portfolio da formacao.",
+      "delivery_criteria": [
+        "importa cofre, registros do tutor, commits e manutencao",
+        "memorias versionadas consultaveis por data",
+        "busca de texto com trecho e link",
+        "relatorio sonhar",
+        "interface React/TypeScript",
+        "pytest e CI verde em main",
+        "repositorio separado segundo-cerebro com PRs e releases",
+        "dados de exemplo ficticios no repositorio publico",
+        "README e demo"
+      ],
+      "repository": "repositorio separado segundo-cerebro no GitHub do aluno (a criar na lesson_14)",
+      "modules": [
+        "importador do cofre Obsidian",
+        "importador dos registros do tutor",
+        "importador GitHub (absorve project_api-llm-servico)",
+        "modulo de manutencao (absorve project_automacao-processo-real)",
+        "captura web",
+        "sonhar",
+        "API FastAPI",
+        "interface React/TypeScript"
+      ],
+      "decision_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     }
   ],
   "next_focus": "lesson_02-arquivos-erros",
@@ -2999,6 +3581,168 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-09-22T14:40:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_69385849-6fc0-43b5-b846-a62b119fa2a6",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-01: Quais sao os dois tipos de erro que o Python distingue? | resposta: erro de sintaxe e erro de estrutura de codigo; acertou sintaxe, nao lembrou excecoes em tempo de execucao",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-09-28T16:20:41-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_dac769f5-c583-47b5-a4ea-a17b8f80d7ab",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-02: A mensagem de erro nao traz o cabecalho \"Traceback (most recent call last)\". O que isso prova? | resposta: disse que prova que a linha nao tem erro e que o codigo rodou; inverso: nada executou",
+      "outcome": "incorrect",
+      "support_level": 0,
+      "recorded_at": "2026-09-28T16:22:18-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_57c0f3a5-7e8f-4c5b-b7c1-96952ae14161",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-03: O que a ultima linha de uma mensagem de erro informa, e o que informa o bloco acima dela? | resposta: ultima linha = tipo do erro; bloco acima = onde o erro esta. Exemplo com traceback estava visivel na conversa",
+      "outcome": "correct",
+      "support_level": 2,
+      "recorded_at": "2026-09-28T16:25:03-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_86197ecf-3c75-4afb-981d-789cee51f980",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-04: NameError significa o que? | resposta: variavel com o nome errado; refinamento: nao citou o caso de nome usado antes de ser definido",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-09-28T16:26:02-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_cfac1afd-2488-4dc6-84ae-f5f8ab2a4b9b",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-05: TypeError significa o que? | resposta: erro de tipo: operacao entre dados de tipos incompativeis; exemplo de comparacao valido para < e >, nao para ==",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-09-28T16:28:10-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_c3ef23ef-1294-48fa-90ff-72ca15220230",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-06: O que uma funcao Python devolve quando termina sem `return`? | resposta: devolve None",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-09-28T16:29:28-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_05b4b3a6-add9-46a8-8367-71417dc866ed",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-07: Uma variavel recebeu None de uma funcao. O que acontece ao concatena-la com um texto? | resposta: traceback com TypeError na ultima linha; nao da para juntar string com None. Usou o modelo de traceback/ultima linha espontaneamente",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-09-28T16:32:27-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_53a878f2-14c6-4fc2-9bb9-217956db1f06",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-08: A linha apontada pelo traceback e sempre a linha do defeito? | resposta: disse que sim, o traceback mostra exatamente a linha do defeito; tutor havia sinalizado a palavra exatamente antes da pergunta",
+      "outcome": "incorrect",
+      "support_level": 3,
+      "recorded_at": "2026-09-28T16:34:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_3a3c5f0a-b8ff-4612-bc57-13f368c2c2c6",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-01: Quais sao os dois tipos de erro que o Python distingue? | resposta: sintaxe e compatibilidade (TypeError); nomeou um exemplo de excecao no lugar da categoria",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-09-29T18:47:24-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_61f281a0-5e78-4873-9fa1-820220626962",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-02: A mensagem de erro nao traz o cabecalho \"Traceback (most recent call last)\". O que isso prova? | resposta: sem traceback: o programa nem chegou a rodar, erro de sintaxe",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-09-29T18:48:57-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_ec08b7ed-fe6a-43b3-bbd4-aafa101a6855",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-08: A linha apontada pelo traceback e sempre a linha do defeito? | resposta: nao necessariamente; investiga de tras para frente. Refinamento: disse que a linha aponta onde provavelmente o erro comecou, quando aponta onde a operacao falhou",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-09-29T18:52:21-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_1053ffd3-e4b8-4773-8d1d-7a0b68c854d7",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_tempos-01: Quais sao os dois tipos de erro que o Python distingue? | resposta: erros de sintaxe e excecoes; sintaxe percebida antes de rodar ('o programa nem roda'), excecao no meio da execucao, com traceback. Primeira mensagem cortada; o tutor pediu para concluir a frase (sem pista).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-01T18:40:27-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_7c0f07c8-e9f1-449c-81cb-825c7f0f362c",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-01: cafe/pao -> if separados ou if/elif; e se for uma OU outra? | resposta: cafe/pao com if separados (correto, sem justificar que podem acontecer juntos); para 'uma ou outra' propos o operador or numa unica condicao com a mesma acao (if chuva or sol -> guarda-chuva), em vez de if/elif para situacoes exclusivas com acoes diferentes. Ambiguidade parcial do enunciado ('OU' maiusculo pode sugerir o operador).",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-02T11:00:06-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_7ab087c8-1e86-4f2f-b6fe-576ebaaa0bed",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-02: nota 9.5 com if >=5 antes de elif >=9 - o que aparece e por que o louvor nunca aparece? | resposta: saida 'Aprovado' correta; causa atribuida ao '=' do >= 9, e nao a condicao geral (>=5) vir antes e capturar todo caso >=9 (elif pulado).",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-02T11:02:04-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_07ffdb4b-1fbd-4ebd-9d88-40ede1be69fb",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-03: fila=[] com if fila[0]=='Ana' - o que acontece e reescrever a condicao para nao quebrar | resposta: causa correta (lista vazia, primeiro item nao existe), mas nomeou TypeError em vez de IndexError; na reescrita trocou o dado (fila = ['Ana'], com 'if' no lugar do nome da variavel) em vez de proteger a condicao - nenhuma guarda.",
+      "outcome": "incorrect",
+      "support_level": 0,
+      "recorded_at": "2026-10-02T11:05:06-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_37008635-b3f8-48a1-baba-a2c8f2874927",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-04: gravar relatorio.json antes de verificar - por que e problema e qual a ordem | resposta: ordem correta (verificar e depois gravar); o porque ficou ausente mesmo apos o tutor pedir: disse que 'nao devolve ou imprime os dados', sem identificar que o arquivo errado ja foi gravado por cima do bom (acao irreversivel).",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-02T11:12:45-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_03b5dfb3-6bd4-40ec-84fa-349ef03ab5e3",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "card_cond-05: ida-e-volta prova a transformacao? o que provaria? | resposta: 'nao prova, lista comparada com ela mesma sempre da True' (correto); o que provaria: 'comparar com o dado original, o csv em dict' - repete a confusao de 01/10 (entrada nao transformada como fonte verdadeira); intuicao de 'teste do formato desejado' aparece mas sem valor esperado independente.",
+      "outcome": "incorrect",
+      "support_level": 0,
+      "recorded_at": "2026-10-02T11:17:38-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_0b315ac6-1feb-44a6-b0e3-21a4c41a345c",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Recuperacao livre pedida pelo aluno antes da tarefa: ordem verificar x acao sem volta e por que. | resposta: verificar o resultado transformado antes de gravar, porque gravar nao tem volta (correto; chamou o resultado de arquivo transformado, quando antes de gravar ele e a lista na memoria - imprecisao ja vista em 01/10).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-05T00:00:00-03:00"
     }
   ]
 }

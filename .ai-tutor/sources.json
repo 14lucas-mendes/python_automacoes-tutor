@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 3,
+  "revision": 4,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -197,7 +197,39 @@
         "topic_automacao-confiavel"
       ],
       "authority_reason": "Referencia oficial das funcoes embutidas. Define next(iterator, default) e o comportamento com StopIteration quando o iterador esta esgotado."
+    },
+    {
+      "source_id": "source_python-controlflow",
+      "title": "4. More Control Flow Tools (The Python Tutorial)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html",
+      "publication_date": null,
+      "accessed_at": "2026-10-01",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_python-fundamentos"
+      ],
+      "authority_reason": "Tutorial oficial: if/elif/else e match/case, incluindo o padrao curinga _."
+    },
+    {
+      "source_id": "source_python-boolean-ops",
+      "title": "Built-in Types - Boolean Operations (and, or, not)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not",
+      "publication_date": null,
+      "accessed_at": "2026-10-01",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_python-fundamentos"
+      ],
+      "authority_reason": "Referencia oficial do curto-circuito: and so avalia o segundo operando se o primeiro for verdadeiro."
     }
   ],
-  "updated_at": "2026-09-21T19:30:58.234981-03:00"
+  "updated_at": "2026-10-01T20:13:06-03:00"
 }

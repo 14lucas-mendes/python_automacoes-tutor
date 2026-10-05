@@ -4,6 +4,132 @@
      estudo: o gerador reescreve session-log.md sem condição e substituiria toda esta
      narrativa por um resumo mecânico de 6 linhas por sessão. -->
 
+## Revisão de roadmap: Segundo Cérebro — 2026-10-05 (`revision` 171 → 172)
+
+- Não é sessão de aprendizagem. Nenhuma evidência, domínio, ponto fraco ou sessão foi alterado.
+- Origem: o aluno trouxe o vídeo [Super memória vs. Segundo Cérebro](https://youtu.be/3CBIhTVAGCE) (Vini Lana) e decidiu transformar o próprio segundo cérebro no projeto de portfólio da formação. Ideias aproveitadas: memória fora do agente, memórias versionadas no tempo, busca que traz só o trecho certo e síntese periódica ("sonhar").
+- Decisões do aluno: um cofre só (o vault "Projeto Transição de Carreira" virou `C:\Users\lucka\Documents\Segundo Cérebro` e recebeu as notas do antigo cofre "Segundo Cerebro", arquivado em `Segundo Cerebro - arquivado 2026-10-05`); a demo de manutenção vira módulo; interface web local em **React com TypeScript** (Vite), por já ter base de React/Next da Mate Academy e para se alinhar ao mercado; **fluxo Git profissional de dev solo** (`main`/`develop`, feature branches, PR, CI, releases); Selenium mantido no Ciclo 8; captura contínua de cada sessão no cofre.
+- Proposta e raciocínio: `docs/compose/spec/segundo-cerebro-roadmap.md` (aprovada).
+- `state.json`: `lesson_05` a `lesson_13` com novos títulos, objetivos, critérios e `programming_plan` (âncora, revisita, nova restrição, transferência esperada), IDs mantidos; nova `lesson_14-git-fluxo-profissional` (pré-requisito da `lesson_05`); novo `topic_frontend-react` (domínio 0, conhecimento prévio não conta); novo `project_segundo-cerebro`; `project_automacao-processo-real` e `project_api-llm-servico` arquivados como módulos absorvidos. `lesson_02` só ganhou a ligação ao projeto na `progress_note`, com os critérios inalterados. Gravação via `atomic_update_json` com `expected_revision=171`. `validate_study` PASS antes e depois.
+- `curriculum.md`, `AGENTS.md` (seções *Projeto Segundo Cérebro* e *Captura contínua*), skill `segundo-cerebro` e regra do Cursor atualizados à mão. `scripts.projections` não foi executado.
+- Observação: a cópia da skill `ai-tutor` em `~/.claude/skills/ai-tutor` está desatualizada em relação a `~/.config/mimocode/skills/ai-tutor` (faltam os contratos de diagnóstico, perfil e estratégias). Esta revisão seguiu a cópia oficial.
+- Próximo passo da formação não muda: fechar a `lesson_02-arquivos-erros` (README).
+
+## Calendário oficial — 2026-09-29
+
+- Não é sessão de aprendizagem. O aluno escolheu **2026-08-31** (primeira sessão) como data oficial de início.
+- `study-config.json` ganhou `program_start_date`, `program_start_note` e `cycle_calendar` (13 janelas de 21 dias, até 30/05/2027). Gravação feita com `FileLock` + `atomic_write`, porque o arquivo não tem `revision` e o `atomic_update_json` recusa esse caso. `validate_study` PASS.
+- `curriculum.md` ganhou a seção *Calendário de referência*. Leitura em 29/09: pelo calendário seria o Ciclo 2, dia 9; o trabalho real está no Ciclo 4, cerca de 6 semanas à frente. A folga veio dos ciclos 1 a 3, fechados com evidência prévia; os ciclos 5 em diante são conteúdo novo.
+
+## `session_2026-10-02-condicionais-01` — retomada e concluída em 2026-10-05
+
+- Retomada com orçamento de **45 min** pedido pelo aluno; prioridade na tarefa independente do `ordens_json.py`. Cards `cond-01..05` e `tempos-03..07` adiados.
+- O aluno perguntou se relembrar a aula contaria como ajuda. Resposta: não (pré-requisito, regra 7), desde que o tutor não diga onde mexer no código. Recuperação livre **correta** (verificar antes de gravar, porque gravar não tem volta); nome impreciso: chamou a lista na memória de "arquivo transformado".
+- Tarefa independente, 1ª versão: os 4 cenários antigos passaram; `split(',')` **truncou o `ordens.json` (572 → 0 bytes)**, porque o `open(..., "w")` vinha antes do `if`; o aviso saía por `return` sem `print`; o `case _` imprimia `ordens` indefinida (`NameError`). O tutor só apontou os critérios com a tabela dos 6 cenários (degrau 1) e ensinou que `open(..., "w")` apaga na abertura (pré-requisito, lacuna do material).
+- 2ª versão: `with open` dentro do `if lista[0] == esperado`, aviso impresso, `case _` com mensagem própria. **6/6 cenários** numa cópia, JSON intacto em todas as falhas.
+- Evidências (`topic_automacao-confiavel`):
+  - `evidence_ordens-falhas-ordem-02`: aplicação **autônoma correta**, transferida (projeto real).
+  - `evidence_ordens-falhas-feynman-01`: Feynman autônomo **parcial** (ordem certa, analogia do bolo; não explicou o `[]`).
+  - `evidence_ordens-falhas-feynman-02`: seguimento **correto** (CSV ausente → lista sem dados → gravada sem verificação).
+- **Regra 9 / domínio:** `topic_automacao-confiavel` **60 → 80**. Elementos cumpridos: aplicação autônoma transferida que agora cobre transformação, caso vazio, caminhos e tratamento de falhas. A verificação com valor esperado tem origem guiada (01/10). Para 100: repetir em outra sessão e outro contexto com detecção de limite ou autocorreção.
+- Refinamentos opcionais: o aviso diz "erro de gravação" quando a falha é da transformação; a conferência olha só a OS-101.
+- Perfil: 1 observação (`strategy_outcome`). A lição `lesson_02-arquivos-erros` continua em andamento (falta README), então não há diário no Obsidian.
+- Próximo passo: revisar os cards `cond-01..05` e `tempos-03..07` (`retrieval_first`); depois o README.
+
+### Interrupção de 2026-10-02
+
+- Status: **interrompida** a pedido do aluno, depois de cerca de 1h20 (`resumable: true`). Modo `learning`, prática em bloco (aquisição; o interleaving não se aplica).
+- Recuperação (`retrieval_first`, não é evidência). Todos os cards voltam em 03/10:
+  - `cond-01` **parcial**: usou `or` no lugar de `if/elif` para situações que se excluem. O enunciado era ambíguo.
+  - `cond-02` **parcial**: atribuiu a causa ao `=`. O tutor mostrou que `> 9` dá o mesmo resultado.
+  - `cond-03` **incorreto**: disse `TypeError` em vez de `IndexError` e trocou o dado em vez de escrever uma guarda.
+  - `cond-04` **parcial**: ordem certa, mas sem dizer por que gravar é sem volta.
+  - `cond-05` **incorreto**: repetiu a ideia de comparar com o dado original.
+- Aula com o passo a passo, agora em **tema escuro** a pedido do aluno. A sensibilidade à luminosidade alta foi registrada em `study-config.json`.
+  - O aluno rastreou sem erro as cenas 1, 4 (com `nota = 6`), 6 (com `fila = ["Bia"]`, curto-circuito) e 9 (`case _`).
+  - O termo **curinga** foi ensinado (lacuna do material).
+- Evidências (`topic_python-fundamentos`):
+  - `evidence_condicionais-ordem-feynman-01`: Feynman **guiado e correto**, com analogia própria das gavetas. Guiado porque o tutor tinha dado a causa no card `cond-02`.
+  - `evidence_condicionais-ordem-aplicacao-01`: exercício da temperatura, **autônomo e correto**, com fronteiras testadas.
+  - `evidence_condicionais-guarda-aplicacao-01`: exercício `primeiro_e_urgente`, **autônomo e correto**. A guarda já estava na primeira versão; o tutor só apontou os critérios que não batiam.
+  - Nenhuma conta como transferência, porque as estruturas são próximas dos exemplos.
+- **Regra 9:** `weak_condicionais-ordem-guarda` já tem uma aplicação autônoma correta (a guarda). Faltam outra em sessão diferente e uma em contexto novo. `weak_verificacao-valor-esperado` não avançou (`cond-05` incorreto).
+- Tarefa independente do `ordens_json.py` **apresentada, mas não iniciada**: o defeito deve avisar e não gravar (esse ponto tem degrau 3, de 01/10), um `case _` para mensagem inesperada, e os cenários antigos mantidos.
+- Perfil: 1 observação (`strategy_outcome`).
+- Retomada: a tarefa do `ordens_json.py` com 6 cenários de teste; depois Feynman sobre o `[]`; depois os cards `cond` e `tempos`.
+
+## `session_2026-09-29-revisao-json-01` — retomada e concluída em 2026-10-01
+
+- Status: **concluída** em 2026-10-01 às 20:13, a pedido do aluno (transições `in_progress → interrupted → resumed → completed`). A lição `lesson_02-arquivos-erros` continua em andamento.
+- Ambiente: Claude Code. A sessão foi conduzida pelo `skill_root` do `AGENTS.md` (`~/.config/mimocode/skills/ai-tutor`); o `~/.claude/skills/ai-tutor` continua sendo a versão pública anterior às ondas.
+
+### Retomada de 2026-10-01
+
+- `card_tempos-01`: **correto** (`retrieval_first`, suporte 0). Deu os dois nomes e o momento de cada erro: sintaxe "o programa nem roda"; exceção no meio da execução, com traceback. Volta em 04/10. Os cards `tempos-03` a `07`, vencidos em 01/10, ficaram para a próxima.
+- **Critério 4, verificar a transformação** (guiado, degraus 3 → 4/5): o aluno pediu explicação. O tutor usou a analogia do troco: conferir com a conta feita de cabeça, e não com o papel do caixa.
+  - Primeiro, o aluno apontou `ler_ordens_servico` como fonte verdadeira; mas ela é a entrada ainda não transformada.
+  - Depois, colou o esperado da OS-101 copiado do `ordens.json`, dizendo que já sabia a estrutura.
+  - Com exemplos de valor esperado literal + `==`, escreveu `esperado == ordens[0]` e, **por decisão própria**, um booleano `verificar_item` que condiciona a impressão.
+  - O tutor confirmou numa cópia com `split(",")` que a verificação detecta o defeito.
+- **Critério 3, falhas** (guiado, degrau 6): o CSV ausente gerava `IndexError` em `ordens[0]` e **sobrescrevia `ordens.json` com `[]`**, porque a transformação rodava antes de conferir a mensagem.
+  - O aluno explicou o traceback pela metade: "sem dados" está certo, mas disse que `ordens` era o arquivo JSON, quando é a lista na memória.
+  - Uma comparação usava `"Arquivo não existe"` sem o `!`.
+  - **Correção após o fechamento, pelo relato do aluno:** o aluno escreveu a versão final **sozinho, por tentativa e erro**, trocando a ordem e testando, depois da pista parcial do tutor (degrau 4: "dois motivos, um na ordem, outro no texto"). Só depois de o código funcionar ele pediu a **outra IA** uma explicação de *por que* funcionou. Por isso, a classificação é degrau 4 do tutor (teto 40), e não degrau 6. A lacuna é de **compreensão**, não de implementação. A versão final (`match`/`case`, sha256 `38f62581…`) só transforma no caso de sucesso. O `ler_ordens.py` passou a tratar o CSV só com cabeçalho.
+  - Cinco cenários verificados em cópias: certo, ausente, vazio e só-cabeçalho corretos, com o JSON intacto.
+- **Pendente:** com defeito na transformação, nada é impresso e o JSON errado **já foi gravado**, porque a gravação fica dentro de `transformar_ordens_json`, antes da verificação. Também falta a frase Feynman do critério 2.
+- Evidências:
+  - `evidence_ordens-transformacao-01`: transferência **autônoma correta**, restrita à transformação, ao caso vazio e aos caminhos.
+  - `evidence_ordens-verificacao-esperado-01`: guiada, correta.
+  - `evidence_ordens-falhas-ordem-01`: guiada, parcial.
+- **Regra 9:** `topic_automacao-confiavel` continua em **60**. O elemento do 80 já cumprido é a parte de transformação, aplicada sozinho num contexto novo. O que falta é uma aplicação transferida **inteira** autônoma, porque a verificação e o tratamento de falhas desta tarefa foram guiados.
+- Pontos fracos novos, ambos `conceptual` (lacuna do material): `weak_condicionais-ordem-guarda` (pedido explícito do aluno) e `weak_verificacao-valor-esperado`.
+- Cards novos `cond-01` a `05` (condicionais, guarda, gravar depois de verificar, valor esperado), com vencimento em 02/10. Fontes novas: `source_python-controlflow` e `source_python-boolean-ops`.
+- Perfil: 1 observação (`help_usage`, corrigida para degrau 4).
+- Mídias pedidas pelo aluno, geradas localmente e sem envio externo: `media/lesson_01-python-core/notebooklm/` (`media_5fa40819…`, status `verified`).
+  - Principal: `local/condicionais-passo-a-passo.html`, com 9 cenas que avançam linha por linha e pedem uma previsão antes de cada avanço.
+  - Complementar: `local/roteiro-condicoes.md`, um fluxograma de decisão com texto alternativo.
+  - Todos os exemplos foram executados em Python 3.11.15. O `prompts.md` está pronto caso o aluno queira um vídeo do NotebookLM, a ser feito pelo Cursor.
+- Próximo passo, uma nova sessão com cinco etapas:
+  1. `retrieval_first` nos cards `cond` e `tempos`.
+  2. Aula explicativa com o passo a passo.
+  3. Exercícios guiados em contextos novos.
+  4. Tarefa independente no `ordens_json.py`: o defeito avisa e não grava; acrescentar um `case _`.
+  5. Feynman.
+
+### Registro de 2026-09-29
+- Revisão (`retrieval_first`, não é evidência): `card_tempos-01` parcial (citou `TypeError`, que é um exemplo, no lugar da categoria exceção; volta em 30/09). `card_tempos-02` e `card_tempos-08` **corretos**, depois de terem sido incorretos em 28/09 (voltam em 06/10).
+- Tarefa de transferência (modo `assessment`, sem ajuda sobre o núcleo; o tutor só apontou quais critérios faltavam): ordens de manutenção `src/ordens.csv` → `src/modulo-02/ler_ordens.py` + `ordens_json.py` → `src/ordens.json`.
+  - Primeira versão, verificada numa cópia a partir da raiz. Critérios cumpridos por decisão própria: 1 (peças em lista), 2 (`== ""` antes do `split` → `[]`) e 5 (caminhos `src/...` escolhidos sozinho). Critério 3 pela metade (sem o CSV, a saída é só `None`). Critério 4 não cumprido (repetiu a verificação por ida e volta).
+  - Segunda versão, em andamento: mensagem para CSV vazio adicionada. Faltam a mensagem para arquivo ausente e o critério 4, que o aluno declarou não saber resolver. O arquivo termina num `if __name__ == "__main__":` sem corpo.
+- **Regra 9:** nenhuma evidência foi registrada ainda, porque a tarefa está aberta. Até agora estão cumpridos, de forma autônoma, a transformação, o caso de borda e a escolha de caminhos; faltam a verificação da transformação (critério 4), a mensagem de falha e a frase Feynman sobre o critério 2. O domínio continua 60.
+- Perfil: 1 observação (`autonomous_attempt`, parcial, suporte 0).
+- Retomada: rodar a versão atual, pedir a frase do critério 2, fechar o critério 3 e oferecer ao aluno a escolha para o critério 4 (nova tentativa só com o prompt, ou escada de ajuda; o degrau 3 em diante torna só a verificação guiada).
+
+## `session_2026-09-28-git-uso-real-01` — 2026-09-28 (gravada em 29/09)
+
+- Status: concluída (modo `assessment`, ~10 min). A gravação no estado ficou pendente em 28/09 porque o classificador de segurança do ambiente falhou; foi feita em 29/09 com o horário original.
+- O aluno versionou e publicou sozinho o trabalho do dia em `formacao-python`: `git add .`, `git status` (conferência por iniciativa própria), `git commit -m "feat: add função que lê um csv e transforma em json"` → `28bc5e0` e `git push` → `0a00c47..28bc5e0 main -> main`. O tutor conferiu as refs: `main` e `origin/main` estão em `28bc5e0`.
+- Evidência: `evidence_git-uso-real-formacao-python-01`, aplicação **autônoma, transferida e correta** em repositório real. O único suporte foi o tutor ter nomeado as etapas add, commit e push (degrau 1).
+- `topic_workflow-profissional` continua em 80. `weak_git-formas-exatas-comandos` **segue ativo**: a evidência não exercitou comandos de configuração e leitura de remoto (`remote add`, `remote -v`, `log` com flags), que são a causa do ponto fraco, e o remoto tinha sido configurado pelo tutor. Não criar tarefa sintética; aguardar o uso real.
+
+## `session_2026-09-28-csv-json-01` — 2026-09-28
+
+- Status: concluída. A lição `lesson_02-arquivos-erros` continua em andamento.
+- Ambiente: primeira sessão no Claude Code (desktop). O `/ai-tutor` do Claude Code carrega `C:\Users\lucka\.claude\skills\ai-tutor`, um clone da versão pública (`14lucas-mendes/ai-tutor-skill`, HEAD `5102ec9`), **anterior** às ondas endurecida e adaptativa (sem `delegation-contract`, `learning-strategies`, `learner_profile`, `retrieval`). A sessão foi conduzida pelo `skill_root` do `AGENTS.md` (`~/.config/mimocode/skills/ai-tutor`, `validate_skill` PASS). Os hashes de `references/state-contract.md` (`2aa3339d…`) e `scripts/retrieval.py` (`efb0a722…`) instalados diferem do registro de 22/09; os arquivos são de 22/09 12:23 e o `ai-tutor-base` não existe mais nesse caminho para conferir.
+- Duração: 16:16 às 18:33 (~2h17 de relógio; orçamento 90 min). O excedente inclui tempo de resposta entre turnos.
+- Objetivo: recuperar os cards vencidos de `lesson_03` e transformar os clientes do CSV em JSON válido com telefones em lista, verificado por leitura de volta.
+- **Recuperação** (`retrieval_first`, 8 tentativas em `retrieval_attempts`; não é evidência): corretos 03 (apoio 2: exemplo visível), 04, 05, 06, 07; parcial 01 ("sintaxe e estrutura de código", sem exceções); incorretos 02 (achou que a falta de traceback prova que o código rodou) e 08 (achou que o traceback aponta sempre o defeito). Confirma `weak_error-model-tempo-deteccao`. Os cards 01, 02 e 08 voltam em 29/09 e os demais em 01/10. Explicações dadas com a analogia da receita e do alarme de fumaça, mais execução real.
+- **Pré-requisitos ensinados** (regra 7, não rebaixam): `json.dump`/`json.load` (`ensure_ascii`, `indent`, modo `"w"` sobrescreve) com dois exemplos de falhas de equipamento; `split` com separador; **pasta de trabalho** (caminho relativo resolvido a partir do terminal, `os.getcwd`), com demonstração do mesmo script rodado de duas pastas.
+- Projeto: `E:/Lucas/Documents/formação_python/src/tarefas/modulos/leitor_json.py` → `src/clientes.json`. Trajetória: `[].append(...)` (devolve `None`), depois `split(",")`, depois `split()` e por fim `split(" e ")`. Caminho `../../dados.csv` falhava em silêncio a partir da raiz; o aluno diagnosticou pela `mensagem` e escolheu sozinho `src/dados.csv` e `src/clientes.json` após a explicação. Criou por conta própria a verificação por ida e volta (`pacote == dados`) no lugar do `len` sugerido.
+- Evidência: `evidence_csv-json-transformacao-01`, aplicação **guiada** correta. Sobre o núcleo houve o degrau 2 (o que há em `pacote`) e o degrau 3 (a `/` aparece no resultado do `split`?), com teto de 40 nesta tentativa.
+- Evidência: `evidence_csv-json-limite-verificacao-01`, Feynman **autônoma correta** (suporte 0). O aluno disse que `pacote == dados` daria `True` mesmo com o `split` errado, porque prova que o arquivo guardou fielmente os dados, não que a transformação esteja certa. É detecção de limite da própria verificação.
+- **Regra 9, prestação de contas:** `topic_automacao-confiavel` continua em **60**. A Feynman e a aplicação autônomas do 60 já estavam cumpridas desde 21 e 22/09. Hoje soma-se mais uma Feynman autônoma, que não muda o número. Para **80**, falta uma aplicação **autônoma com transferência**. Para fechar a lição falta o README (o JSON está entregue em prática guiada).
+- Ponto fraco novo: `weak_caminho-relativo-pasta-trabalho` (`conceptual`), por lacuna do material. Houve recorrência em 23/09 (import) e hoje (arquivo).
+- Perfil: 1 observação (`help_usage`, degrau 3).
+- Próximo passo: o aluno faz o commit e o push de `leitor_json.py` e `clientes.json` em `formacao-python` sem comandos fornecidos (uso real para `weak_git-formas-exatas-comandos`); cards 01, 02 e 08 em 29/09; README; depois tarefa autônoma de transferência.
+- Repositório do aluno: `formação_python` ganhou Git nesta data (commit inicial `0a00c47`, feito pelo tutor a pedido do aluno) e remoto privado `14lucas-mendes/formacao-python`. Como foi feito pelo tutor, **não é evidência**.
+- Sem diário no Obsidian: a lição não foi concluída.
+
 ## `session_2026-09-23-csv-modulos-01` — retomada e fechamento em 2026-09-24
 
 - Status: concluida; a licao `lesson_02-arquivos-erros` continua em andamento.

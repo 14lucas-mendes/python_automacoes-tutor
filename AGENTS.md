@@ -67,18 +67,45 @@ O aluno está aprendendo Python do início. Termo desconhecido **não é falha d
 
 Quando uma lição passar a `completed` no estado canônico, gravar o diário **na mesma virada de fechamento**, sem esperar pedido. Não gravar diário se a lição continuar `in_progress`.
 
-- Vault: `C:\Users\lucka\Documents\Projeto Transição de Carreira`
+- Vault: `C:\Users\lucka\Documents\Segundo Cérebro` (até 2026-10-05 chamado "Projeto Transição de Carreira"; unificado nessa data com o antigo cofre "Segundo Cerebro", hoje arquivado em `Segundo Cerebro - arquivado 2026-10-05`)
 - Pasta: `20 - Áreas/Sistema de Estudos/`
 - Arquivo: `AI Tutor - Python automações - <lesson-id-com-hífen>.md` — o vault usa hífen depois de `lesson` (`lesson-01-python-core`), enquanto o `lesson_id` canônico usa underscore (`lesson_01-python-core`). Manter o hífen no nome do arquivo.
 - Exemplo a seguir: `AI Tutor - Python automações - lesson-01-python-core.md`
 
 Atualizar `[[MOC - Sistema de Estudos]]`. O diário é projeção, não evidência.
 
+## Projeto Segundo Cérebro (decisão do aluno, 2026-10-05)
+
+O projeto de portfólio da formação é `project_segundo-cerebro`: o MVP do Segundo Cérebro (Python, SQLite, FastAPI e React com TypeScript), pronto até o fim do Ciclo 13. **Todo exercício se vincula a ele.** Roteiro e raciocínio: `docs/compose/spec/segundo-cerebro-roadmap.md`. A demo de manutenção e o cliente de API viraram módulos dele.
+
+- **Repositório separado** `segundo-cerebro` no GitHub do aluno, criado na `lesson_14-git-fluxo-profissional`. Este repositório continua só para o estado do tutor.
+- **Fluxo Git de dev solo:** `main` (produção, protegida, só recebe PR de `develop` com CI verde), `develop` (desenvolvimento) e `feature/<fatia>` ou `fix/<assunto>`. Toda fatia entra por PR com descrição e autorrevisão; no fim de cada ciclo, um PR `develop` → `main` publica uma release com tag. O aluno executa os comandos e abre os PRs; o tutor explica antes (regra 1), revisa e nunca faz commit pelo aluno. A proteção da `main` é configurada pelo próprio aluno.
+- **Dados:** o repositório público usa só dados de exemplo fictícios. O cofre real e os registros do tutor nunca vão para o repositório.
+- **React e TypeScript:** o conhecimento prévio da Mate Academy não conta como domínio. Antes da `lesson_10`, rodar um `/diagnostic` curto (que posiciona, sem gerar evidência) e seguir as regras 1 e 2 para todo conceito ainda não ensinado nesta formação.
+
+## Captura contínua no Segundo Cérebro (decisão do aluno, 2026-10-05)
+
+Ao **fechar ou interromper cada sessão de estudo**, gravar uma nota de sessão no cofre, na mesma virada do fechamento, sem esperar pedido.
+
+- Pasta: `C:\Users\lucka\Documents\Segundo Cérebro\70 - Sessões Claude\`. Nome: `AAAA-MM-DD Python - <assunto curto>.md`. Seguir o template `00 - Sistema/Templates/Sessão Claude.md`, o `CLAUDE.md` do cofre e a skill `segundo-cerebro`.
+- Frontmatter: `tipo: sessao`, `status: ativo`, `criado`, `origem` (este repositório), `projeto: "[[Segundo Cérebro]]"`, `session_id` canônico e `tags` (`python`, `formacao`, o tópico).
+- Conteúdo factual, nas palavras observadas da sessão: como o aluno raciocinou, dúvidas que surgiram, erros e como foram resolvidos, decisões de estrutura de código (com trechos curtos do código **do aluno**), o que ficou pendente e links para o diário da lição e os arquivos ou PRs.
+- A nota é **projeção, não evidência**: não altera `mastery`, não muda a escada de ajuda e não substitui o diário de lição nem o `session-log.md`. Não copiar segredos nem dados pessoais de terceiros.
+- Linkar a nota em `[[Segundo Cérebro]]` (pelo painel) e no `[[MOC - Sistema de Estudos]]` quando a sessão fechar uma lição.
+
 ## Mídia e geração externa
 
 **Decisão do aluno (2026-09-18):** o Xiaomi Mi Modem Desktop **não** usa NotebookLM nem Gemini. A conexão externa acontece **neste Cursor**, com consentimento específico imediato antes do envio.
 
+**Ampliação (decisão do aluno, 2026-10-02):** a conexão ao NotebookLM também pode acontecer pelo **navegador próprio do Claude Code** (painel do app desktop, isolado do Chrome pessoal), sob as mesmas regras do Cursor:
+- O aluno entra na conta Google no painel. O tutor nunca digita credenciais.
+- O tutor lista os arquivos exatos e obtém consentimento imediatamente antes de cada envio.
+- O tutor não altera o compartilhamento.
+- O tutor só afirma que um artefato existe depois de observá-lo.
+
+Mídias locais, sem envio externo, podem ser criadas em qualquer ambiente. O aluno pediu o estilo Excalidraw (`.excalidraw`) e o **tema escuro** (sensibilidade a luminosidade alta).
+
 - No Xiaomi, o workflow `/media` para na criação do pacote local (`media/<lesson-id>/notebooklm/`): fontes verificadas, prompts ancorados, manifest e fallbacks locais.
-- Neste Cursor: listar os arquivos exatos, obter consentimento, usar o navegador isolado do Cursor **depois** de o aluno entrar na conta Google. Nunca digitar credenciais. Nunca alterar compartilhamento. Nunca usar o perfil Chrome `mimocode-notebooklm-profile` (incidente de 2026-09-12: sessão pessoal e abas alheias ao estudo).
+- Neste Cursor ou no navegador próprio do Claude Code: listar os arquivos exatos, obter consentimento, usar o navegador isolado **depois** de o aluno entrar na conta Google. Nunca digitar credenciais. Nunca alterar compartilhamento. Nunca usar o perfil Chrome `mimocode-notebooklm-profile` (incidente de 2026-09-12: sessão pessoal e abas alheias ao estudo).
 - Só afirmar que o artefato externo existe depois de observar a URL ou o arquivo baixado. Conferir o conteúdo contra as fontes e atualizar `.ai-tutor/media-index.json`.
 - Contexto técnico: `@playwright/cli` está quebrado nesta máquina; o caminho por CDP no Chrome pessoal está proibido.

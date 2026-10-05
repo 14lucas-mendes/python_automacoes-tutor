@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 2,
-  "updated_at": "2026-09-24T19:57:38-03:00",
+  "revision": 8,
+  "updated_at": "2026-10-02T12:10:41-03:00",
   "declared_preferences": [],
   "observations": [
     {
@@ -27,12 +27,70 @@
         "note": "Concluiu a implementacao modular e verificou cinco cenarios CSV apos pistas e feedback direcionais."
       },
       "recorded_at": "2026-09-24T19:57:38-03:00"
+    },
+    {
+      "observation_id": "profile_observation_412694bf-7c37-4409-b6f4-922fc227a4c8",
+      "session_id": "session_2026-09-28-csv-json-01",
+      "topic_id": "topic_automacao-confiavel",
+      "type": "help_usage",
+      "value": {
+        "help_level": 3,
+        "note": "Na transformacao CSV->JSON travou no separador do split e no caminho relativo; avancou com pergunta de pre-requisito e pergunta direcional. Criou sozinho a verificacao por ida-e-volta e identificou sem ajuda o limite dela."
+      },
+      "recorded_at": "2026-09-28T18:33:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_307d7c74-c8d5-46bc-bde7-7a0d248dd693",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "topic_id": "topic_automacao-confiavel",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "partial",
+        "support_level": 0,
+        "note": "Tarefa de transferencia sem ajuda: transformacao e caso vazio corretos por decisao propria; caminhos escolhidos sozinho; verificacao da transformacao nao resolvida e mensagem de falha incompleta ate a interrupcao."
+      },
+      "recorded_at": "2026-09-29T20:49:39-03:00"
+    },
+    {
+      "observation_id": "profile_observation_bb06bd9f-dc00-49ad-94a3-e3ef095b96f4",
+      "session_id": "session_2026-09-29-revisao-json-01",
+      "topic_id": "topic_automacao-confiavel",
+      "type": "help_usage",
+      "value": {
+        "support_level": 4,
+        "note": "Correcao pelo relato do aluno: chegou a ordem certa das condicoes por tentativa e erro apos pista parcial do tutor (degrau 4); so depois pediu a outra IA uma explicacao de por que funcionou. Pediu aula explicativa, exercicios e midias sobre condicionais. Na verificacao com valor esperado precisou de degrau 4/5."
+      },
+      "recorded_at": "2026-10-01T20:13:06-03:00"
+    },
+    {
+      "observation_id": "profile_observation_49765d81-2d41-481f-b2d7-694ff3b66b10",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "topic_id": "topic_python-fundamentos",
+      "type": "strategy_outcome",
+      "value": {
+        "strategy": "retrieval_first + passo a passo com previsao",
+        "result": "positive",
+        "note": "Recuperacao fraca no inicio (2 incorretos, 3 parciais); depois da aula com previsao antes de avancar, rastreou todas as cenas corretamente e resolveu os 2 exercicios sem pista sobre o nucleo. Pediu tema escuro (sensibilidade a luz)."
+      },
+      "recorded_at": "2026-10-02T12:10:41-03:00"
+    },
+    {
+      "observation_id": "profile_observation_c1a8df1c-bf9e-41e6-8b38-b359b905ed00",
+      "session_id": "session_2026-10-02-condicionais-01",
+      "topic_id": "topic_automacao-confiavel",
+      "type": "strategy_outcome",
+      "value": {
+        "strategy": "tabela de cenarios executados + apontar so criterios falhos",
+        "result": "positive",
+        "note": "Com orcamento de 45 min, corrigiu sozinho em uma iteracao depois de ver a tabela dos 6 cenarios; pediu antes para saber se relembrar conteudo contaria como ajuda."
+      },
+      "recorded_at": "2026-10-05T00:45:00-03:00"
     }
   ],
   "inferences": [],
   "summary": {
     "autonomy": "low",
-    "help_dependency": "unknown",
+    "help_dependency": "medium",
     "confidence_pattern": "unknown"
   }
 }

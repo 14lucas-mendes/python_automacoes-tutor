@@ -107,7 +107,80 @@
         "local/audio-script.md",
         "local/study_guide.md"
       ]
+    },
+    {
+      "artifact_id": "media_5fa40819-f7bb-4f4c-ab61-32d646d7d9d5",
+      "lesson_id": "lesson_01-python-core",
+      "type": "learning_pack",
+      "provider": "local+notebooklm",
+      "source_ids": [
+        "source_python-controlflow",
+        "source_python-boolean-ops",
+        "source_python-errors-exceptions"
+      ],
+      "objective": "Entender como o Python le condicoes: if/elif/else exclusivos x if separados, ordem com condicoes sobrepostas (especifica antes da geral), match com case _ por ultimo, curto-circuito de and como guarda antes de usar um dado (lista[0]) e acao irreversivel (gravar arquivo) somente depois das verificacoes. Cobre weak_condicionais-ordem-guarda.",
+      "requested_formats": [
+        "video",
+        "mind_map"
+      ],
+      "local_path": "media/lesson_01-python-core/notebooklm",
+      "url": "https://notebook.google.com/notebook/85c02e2e-a661-4981-b12f-2ab12afcc87e",
+      "status": "verified",
+      "verified": true,
+      "created_at": "2026-10-01T23:18:26.116064Z",
+      "verified_at": "2026-10-01T20:21:19-03:00",
+      "accessibility": {
+        "visuals_require_alt_text": true,
+        "audio_video_require_transcript": true
+      },
+      "evidence_eligible": false,
+      "decision": "usar_no_claude_code",
+      "decision_note": "Aluno autorizou em 2026-10-02 incluir o navegador proprio do Claude Code (AGENTS.md atualizado). Aluno fez o login Google no painel; tutor nao digitou credenciais. Consentimento especifico para os 4 arquivos listados. Upload por 'Texto copiado' (o painel nao opera o seletor de arquivos do Windows); conteudo identico aos arquivos locais. Compartilhamento nao alterado.",
+      "local_files": [
+        "local/condicionais-passo-a-passo.html",
+        "local/roteiro-condicoes.md",
+        "local/concept-map.mmd",
+        "local/video-storyboard.md",
+        "local/condicionais.excalidraw"
+      ],
+      "representation_note": {
+        "primary": {
+          "file": "local/condicionais-passo-a-passo.html",
+          "format": "video (equivalente local interativo)",
+          "role": "processo: como o Python executa as condicoes linha por linha (9 cenas com previsao antes de avancar)"
+        },
+        "complementary": {
+          "file": "local/roteiro-condicoes.md",
+          "format": "mind_map (fluxograma Mermaid + texto alternativo)",
+          "rationale": "O passo a passo mostra a execucao; o roteiro mostra a decisao de projeto antes de escrever (qual estrutura, onde a guarda, onde a acao irreversivel).",
+          "distinct_contribution": "Criterio de escolha entre estruturas, que o passo a passo nao explicita."
+        }
+      },
+      "verification_note": "Todos os exemplos executados em Python 3.11.15 em 01/10/2026 (saidas, IndexError, curto-circuito, SyntaxError do case _ no meio, arquivo sobrescrito). Afirmacoes conferidas com os resumos das fontes. HTML aberto no navegador do Claude Code: navegacao e passos funcionando, sem erros no console.",
+      "accessibility_note": "Estado de cada linha indicado por texto/marcador (seta, riscado, rotulos 'verdadeiro'/'falso'), nao so por cor; tema claro/escuro; video-storyboard.md e o texto alternativo do roteiro servem de transcricao.",
+      "retrieval_prompt": "Sem olhar a midia: explique por que o ordens.json virou [] quando o CSV sumiu e escreva a guarda que impede o IndexError em lista[0].",
+      "excalidraw_note": "2026-10-02, pedido do aluno (estilo Excalidraw, tema escuro): condicionais.excalidraw com 4 paineis (corredor de portas if/elif/else; if separados; guarda com and/curto-circuito; ordem segura com gravar por ultimo). Mesmo conteudo verificado do passo a passo, em visao geral de uma tela; abre na extensao Excalidraw do VS Code e no plugin do Obsidian. Renderizado e conferido em 2026-10-02T12:12:22-03:00. Texto alternativo: video-storyboard.md e roteiro-condicoes.md.",
+      "external_upload": {
+        "provider": "notebooklm",
+        "consented": true,
+        "consented_at": "2026-10-02T12:20:57-03:00",
+        "files": [
+          "source-pack.md",
+          "prompts.md",
+          "local/video-storyboard.md",
+          "local/roteiro-condicoes.md"
+        ],
+        "method": "texto copiado",
+        "notebook_title": "Python - Condicionais: ordem, guarda e acao por ultimo",
+        "upload_verified": true,
+        "studio_observed": [
+          "Condicoes Python Mapa Mental (verificado contra as fontes: if/elif/else, if separados, match/case _, sobreposicao, guarda com and, acao sem volta - sem afirmacao fora das fontes)"
+        ],
+        "studio_pending": [
+          "Resumo em Video Explicativo (pt-BR, estilo personalizado: esboco Excalidraw com fundo escuro) - em geracao em 2026-10-02T12:20:57-03:00"
+        ]
+      }
     }
   ],
-  "revision": 8
+  "revision": 12
 }

@@ -7,7 +7,7 @@ alwaysApply: true
 
 Quando uma lição passar a `completed` no estado canônico (`.ai-tutor/state.json`), **na mesma virada de fechamento** grave o diário no vault. Não espere o aluno pedir de novo. Não grave diário só porque uma sessão fechou se a lição permanecer `in_progress`.
 
-Vault: `C:\Users\lucka\Documents\Projeto Transição de Carreira`  
+Vault: `C:\Users\lucka\Documents\Segundo Cérebro`  
 Pasta: `20 - Áreas/Sistema de Estudos/`  
 Nome: `AI Tutor - Python automações - <lesson_id>.md`  
 Exemplo: `AI Tutor - Python automações - lesson_01-python-core.md`

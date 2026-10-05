@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "artifact_id": "media_5fa40819-f7bb-4f4c-ab61-32d646d7d9d5",
+  "lesson_id": "lesson_01-python-core",
+  "objective": "Entender como o Python le condicoes: if/elif/else exclusivos x if separados, ordem com condicoes sobrepostas (especifica antes da geral), match com case _ por ultimo, curto-circuito de and como guarda antes de usar um dado (lista[0]) e acao irreversivel (gravar arquivo) somente depois das verificacoes. Cobre weak_condicionais-ordem-guarda.",
+  "source_ids": [
+    "source_python-controlflow",
+    "source_python-boolean-ops",
+    "source_python-errors-exceptions"
+  ],
+  "source_hashes": {
+    "source_python-controlflow": "5c1aea13fcf78200220ce5f3777b508e54c39ca6d1b0e87839d16cc08ea9b795",
+    "source_python-boolean-ops": "c78473bd6300f6539119d12aaa9b590ba8076b71a7e1a82bcdae8797b7baa502",
+    "source_python-errors-exceptions": "d6a968111d17cd06fb1aa9238fad40bcef2cadd9d1fd8b053a2d40d5e476a74a"
+  },
+  "requested_formats": [
+    "video",
+    "mind_map"
+  ],
+  "external_upload": {
+    "provider": "notebooklm",
+    "consented": false,
+    "consented_at": null,
+    "files": [
+      "source-pack.md",
+      "prompts.md"
+    ]
+  },
+  "evidence_eligible": false,
+  "status": "prepared",
+  "outputs": []
+}

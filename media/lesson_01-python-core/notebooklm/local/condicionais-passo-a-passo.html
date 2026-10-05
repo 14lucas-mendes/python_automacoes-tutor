@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Condições passo a passo</title>
+<style>
+:root{
+  --bg:#f7f6f2; --card:#ffffff; --ink:#1d1d1b; --muted:#5f5e58; --line:#e3e1d9;
+  --code-bg:#f1efe8; --now:#fff1c2; --now-edge:#c99a00; --ok:#1f7a4d; --bad:#b3261e; --skip:#9a988f;
+  --accent:#2f5bd3; --on-accent:#ffffff; --out-bg:#101418; --out-ink:#e6edf3;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15161a; --card:#1d1f24; --ink:#ecebe6; --muted:#a3a29b; --line:#2e3037;
+    --code-bg:#24262c; --now:#3d3413; --now-edge:#e0b22e; --ok:#5ccf93; --bad:#ff8a80; --skip:#6d6c66;
+    --accent:#8aa8ff; --on-accent:#0f1115; --out-bg:#0b0d10; --out-ink:#e6edf3;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15161a; --card:#1d1f24; --ink:#ecebe6; --muted:#a3a29b; --line:#2e3037;
+  --code-bg:#24262c; --now:#3d3413; --now-edge:#e0b22e; --ok:#5ccf93; --bad:#ff8a80; --skip:#6d6c66;
+  --accent:#8aa8ff; --on-accent:#0f1115; --out-bg:#0b0d10; --out-ink:#e6edf3;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.6rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 20px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+nav button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+nav button[aria-current="true"]{border-color:var(--accent);color:var(--accent);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.scene-title{font-size:1.25rem;margin:0 0 6px}
+.analogy{color:var(--muted);margin:0 0 14px}
+.predict{border-left:4px solid var(--accent);padding:8px 12px;background:var(--code-bg);border-radius:6px;margin-bottom:14px}
+.predict b{color:var(--accent)}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+pre{margin:0;background:var(--code-bg);border-radius:10px;padding:10px 0;overflow-x:auto;font:14px/1.6 ui-monospace,Consolas,"Cascadia Mono",monospace}
+.ln{display:flex;padding:0 12px;border-left:4px solid transparent;white-space:pre}
+.ln .n{width:2.2em;color:var(--skip);user-select:none;flex:none}
+.ln.now{background:var(--now);border-left-color:var(--now-edge)}
+.ln.now .n::before{content:"▶";color:var(--now-edge);margin-left:-1.1em;position:absolute}
+.ln .n{position:relative}
+.ln.done{opacity:1}
+.ln.skipped{color:var(--skip);text-decoration:line-through;text-decoration-color:var(--skip)}
+.panel h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 6px}
+.vars{background:var(--code-bg);border-radius:10px;padding:8px 12px;font:14px/1.6 ui-monospace,Consolas,monospace;min-height:44px;margin-bottom:12px}
+.out{background:var(--out-bg);color:var(--out-ink);border-radius:10px;padding:8px 12px;font:14px/1.6 ui-monospace,Consolas,monospace;min-height:64px;white-space:pre-wrap}
+.out .err{color:#ff8a80}
+.note{margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;min-height:64px}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;padding:1px 8px;border-radius:999px;margin-right:6px;border:1px solid}
+.tag.t{color:var(--ok);border-color:var(--ok)} .tag.f{color:var(--bad);border-color:var(--bad)} .tag.i{color:var(--accent);border-color:var(--accent)}
+.controls{display:flex;gap:8px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.controls button{font:inherit;padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.controls button.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:600}
+.controls button:disabled{opacity:.45;cursor:default}
+.step-count{color:var(--muted);font-size:.9rem;margin-left:auto}
+.lesson{margin-top:16px;padding:14px;border-radius:10px;background:var(--code-bg);display:none}
+.lesson.show{display:block}
+.lesson b{color:var(--accent)}
+footer{color:var(--muted);font-size:.85rem;margin-top:22px}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.92em}
+</style>
+</head>
+<body>
+<main>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><h1>Como o Python lê condições</h1><button id="theme" style="font:inherit;font-size:.9rem;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer">☀️ Tema claro</button></div>
+  <p class="sub">Avance linha por linha e veja o que o Python testa, o que ele pula e o que aparece na tela. Antes de cada cena, <b>faça a previsão</b>; depois confira.</p>
+  <nav id="nav" aria-label="Cenas"></nav>
+  <section class="card" aria-live="polite">
+    <h2 class="scene-title" id="title"></h2>
+    <p class="analogy" id="analogy"></p>
+    <div class="predict" id="predict"></div>
+    <div class="grid">
+      <pre id="code" aria-label="Código da cena"></pre>
+      <div class="panel">
+        <h3>Variáveis na memória</h3>
+        <div class="vars" id="vars"></div>
+        <h3>Tela (saída do programa)</h3>
+        <div class="out" id="out"></div>
+      </div>
+    </div>
+    <div class="note" id="note"></div>
+    <div class="controls">
+      <button id="prev">◀ Voltar</button>
+      <button id="next" class="primary">Próximo passo ▶</button>
+      <button id="reset">Recomeçar</button>
+      <span class="step-count" id="count"></span>
+    </div>
+    <div class="lesson" id="lesson"></div>
+  </section>
+  <footer>Todos os exemplos foram executados em Python 3.11 e as saídas conferem. Fontes: Python Tutorial, cap. 4 (<i>More Control Flow Tools</i>) e cap. 8 (<i>Errors and Exceptions</i>); Built-in Types, <i>Boolean Operations</i>. Material de estudo: não conta como evidência — o que conta é você explicar e aplicar depois.</footer>
+</main>
+<script>
+const T = (ok) => ok ? '<span class="tag t">✓ verdadeiro</span>' : '<span class="tag f">✗ falso</span>';
+const I = '<span class="tag i">executa</span>';
+const SCENES = [
+{
+  id:"elif", nav:"1 · Uma porta só",
+  title:"if / elif / else: o primeiro verdadeiro ganha",
+  analogy:"Pense num corredor com portas. O Python tenta a primeira; se ela abre, ele entra, faz o que tem lá e sai do corredor inteiro. As portas seguintes nem são tentadas.",
+  predict:"<b>Preveja:</b> com <code>chovendo = False</code> e <code>sol_forte = True</code>, o que aparece na tela? O <code>else</code> chega a rodar?",
+  code:["chovendo = False","sol_forte = True","","if chovendo:","    print(\"Levar guarda-chuva\")","elif sol_forte:","    print(\"Levar boné\")","else:","    print(\"Sair normal\")"],
+  steps:[
+    {l:0, v:{chovendo:"False"}, note:I+"Guarda <code>False</code> na variável <code>chovendo</code>."},
+    {l:1, v:{chovendo:"False",sol_forte:"True"}, note:I+"Guarda <code>True</code> em <code>sol_forte</code>."},
+    {l:3, note:"Testa a 1ª porta: <code>chovendo</code> → "+T(false)+" A porta não abre.", skip:[4]},
+    {l:5, note:"Testa a 2ª porta: <code>sol_forte</code> → "+T(true)+" A porta abre."},
+    {l:6, out:"Levar boné", note:I+"Roda o bloco da porta que abriu."},
+    {l:8, end:true, skip:[7,8], note:"<b>Fim do bloco.</b> O <code>else</code> foi <b>pulado</b>: uma porta já tinha aberto. Num <code>if/elif/else</code>, roda <b>no máximo um</b> bloco."}
+  ],
+  lesson:"<b>Regra:</b> num <code>if / elif / else</code>, o Python testa de cima para baixo e roda <b>só o primeiro</b> bloco verdadeiro. Use quando as situações são <b>uma OU outra</b>."
+},
+{
+  id:"ifs", nav:"2 · Ifs separados",
+  title:"if separados: todos são testados",
+  analogy:"Agora não é um corredor: são várias salas independentes. O Python passa por todas, uma depois da outra, e entra em cada uma cuja porta abrir.",
+  predict:"<b>Preveja:</b> com <code>tem_cafe = True</code> e <code>tem_pao = True</code>, quantas linhas aparecem na tela?",
+  code:["tem_cafe = True","tem_pao = True","","if tem_cafe:","    print(\"Fazer café\")","if tem_pao:","    print(\"Fazer torrada\")"],
+  steps:[
+    {l:0, v:{tem_cafe:"True"}, note:I+"Guarda <code>True</code> em <code>tem_cafe</code>."},
+    {l:1, v:{tem_cafe:"True",tem_pao:"True"}, note:I+"Guarda <code>True</code> em <code>tem_pao</code>."},
+    {l:3, note:"1º <code>if</code>: <code>tem_cafe</code> → "+T(true)},
+    {l:4, out:"Fazer café", note:I+"Roda o bloco do 1º <code>if</code>."},
+    {l:5, note:"2º <code>if</code>, <b>independente</b> do primeiro: <code>tem_pao</code> → "+T(true)+" Ele é testado mesmo o 1º tendo sido verdadeiro."},
+    {l:6, out:"Fazer torrada", end:true, note:I+"Roda também. <b>Dois blocos rodaram.</b>"}
+  ],
+  lesson:"<b>Pergunta para escolher:</b> as situações podem acontecer <b>juntas</b>? Sim → <code>if</code> separados. Não (é uma ou outra) → <code>if/elif/else</code> ou <code>match</code>.<br><br>Foi o que aconteceu na sua versão de 01/10: o <code>if</code> que avisava do arquivo ausente era <b>solto</b>, então o Python avisava e <b>continuava descendo</b> até o <code>ordens[0]</code>."
+},
+{
+  id:"sobre-ruim", nav:"3 · Sobreposição (errado)",
+  title:"Quando a ordem importa: condições que se sobrepõem",
+  analogy:"Toda nota maior ou igual a 9 também é maior ou igual a 5. Se a porta “≥ 5” vier primeiro, ela abre para o 9.5 e a porta do louvor nunca é alcançada.",
+  predict:"<b>Preveja:</b> com <code>nota = 9.5</code>, aparece “Aprovado” ou “Aprovado com louvor”?",
+  code:["nota = 9.5","","if nota >= 5:","    print(\"Aprovado\")","elif nota >= 9:","    print(\"Aprovado com louvor\")"],
+  steps:[
+    {l:0, v:{nota:"9.5"}, note:I+"Guarda <code>9.5</code> em <code>nota</code>."},
+    {l:2, note:"1ª porta: <code>9.5 >= 5</code> → "+T(true)},
+    {l:3, out:"Aprovado", note:I+"Roda “Aprovado”."},
+    {l:5, end:true, skip:[4,5], note:"O <code>elif nota >= 9</code> é <b>pulado</b>: uma porta já abriu. O louvor <b>nunca</b> aparece para ninguém, mesmo com nota 10."}
+  ],
+  lesson:"<b>Problema:</b> a condição <b>geral</b> (≥ 5) veio antes da <b>específica</b> (≥ 9) e “engoliu” todos os casos dela. Veja a próxima cena com a ordem trocada."
+},
+{
+  id:"sobre-bom", nav:"4 · Sobreposição (certo)",
+  title:"Da mais específica para a mais geral",
+  analogy:"Mesma nota, portas reordenadas: primeiro a mais exigente (≥ 9), depois a mais geral (≥ 5), e o else por último pega o resto.",
+  predict:"<b>Preveja:</b> e agora, com <code>nota = 9.5</code>?",
+  code:["nota = 9.5","","if nota >= 9:","    print(\"Aprovado com louvor\")","elif nota >= 5:","    print(\"Aprovado\")","else:","    print(\"Reprovado\")"],
+  steps:[
+    {l:0, v:{nota:"9.5"}, note:I+"Guarda <code>9.5</code> em <code>nota</code>."},
+    {l:2, note:"1ª porta: <code>9.5 >= 9</code> → "+T(true)},
+    {l:3, out:"Aprovado com louvor", note:I+"Roda “Aprovado com louvor”."},
+    {l:7, end:true, skip:[4,5,6,7], note:"O resto é pulado. Com <code>nota = 6</code>, a 1ª porta seria falsa e a 2ª abriria: “Aprovado”. Cada nota cai na porta certa."}
+  ],
+  lesson:"<b>Regra:</b> se uma condição está “dentro” de outra (todo ≥ 9 é ≥ 5), a <b>mais específica vem primeiro</b>. Se as condições <b>não</b> se sobrepõem (textos exatos e diferentes, como as mensagens do seu <code>match</code>), a ordem não muda o resultado — aí organize por legibilidade: falhas primeiro, sucesso por último."
+},
+{
+  id:"guarda-ruim", nav:"5 · Sem guarda",
+  title:"Usar o dado antes de saber se ele existe",
+  analogy:"Abrir uma caixa vazia e pedir “me dá o primeiro item”. Não existe primeiro item — o Python para tudo com uma exceção.",
+  predict:"<b>Preveja:</b> com <code>fila = []</code>, o que acontece na linha do <code>if</code>?",
+  code:["fila = []","","if fila[0] == \"Ana\":","    print(\"Chamar Ana\")","print(\"Fim\")"],
+  steps:[
+    {l:0, v:{fila:"[]  (vazia)"}, note:I+"Guarda uma lista <b>vazia</b> em <code>fila</code>."},
+    {l:2, out:"<span class='err'>IndexError: list index out of range</span>", end:true, skip:[3,4], note:"Para avaliar a condição, o Python precisa ler <code>fila[0]</code>. A lista está vazia → <b>exceção</b> no meio da execução. O programa <b>para aqui</b>: nem o “Fim” aparece."}
+  ],
+  lesson:"É exatamente o que aconteceu com <code>ordens[0]</code> quando o CSV não existia: <code>ordens</code> era a lista <code>[]</code> na memória. A exceção não veio da ordem dos <code>case</code> — veio de <b>usar um dado antes de verificar se ele existe</b>."
+},
+{
+  id:"guarda-bom", nav:"6 · Com guarda",
+  title:"A guarda: verificar antes de usar (curto-circuito do and)",
+  analogy:"Antes de enfiar a mão na caixa, você olha se tem algo dentro. Se está vazia, nem tenta pegar.",
+  predict:"<b>Preveja:</b> com <code>fila = []</code>, o Python chega a ler <code>fila[0]</code>?",
+  code:["fila = []","","if len(fila) > 0 and fila[0] == \"Ana\":","    print(\"Chamar Ana\")","else:","    print(\"Ninguém para chamar\")"],
+  steps:[
+    {l:0, v:{fila:"[]  (vazia)"}, note:I+"Lista vazia em <code>fila</code>."},
+    {l:2, note:"Lado <b>esquerdo</b> do <code>and</code>: <code>len(fila) > 0</code> → <code>0 > 0</code> → "+T(false)+" Como um <code>and</code> só é verdadeiro se <b>os dois</b> lados forem, o Python já sabe a resposta e <b>não lê o lado direito</b>. <code>fila[0]</code> nunca é tocado."},
+    {l:4, skip:[3], note:"A condição inteira deu falso → vai para o <code>else</code>."},
+    {l:5, out:"Ninguém para chamar", end:true, note:I+"Sem exceção. O programa segue normalmente."}
+  ],
+  lesson:"<b>Regra:</b> o que <b>protege</b> vem antes do que <b>usa</b>. O <code>and</code> lê da esquerda para a direita e para no primeiro falso (curto-circuito). Trocar a ordem — <code>fila[0] == \"Ana\" and len(fila) > 0</code> — volta a dar <code>IndexError</code>."
+},
+{
+  id:"acao-ruim", nav:"7 · Gravar cedo (errado)",
+  title:"Ação irreversível antes da verificação",
+  analogy:"Jogar fora o bolo velho antes de conferir se o novo deu certo. Se o novo queimou, você fica sem nenhum.",
+  predict:"<b>Preveja:</b> <code>boletim.txt</code> já tinha um boletim bom. A entrada veio vazia. O que fica gravado no arquivo no final?",
+  code:["notas = []   # a entrada veio vazia","","with open(\"boletim.txt\", \"w\") as f:","    f.write(str(notas))","","if len(notas) == 0:","    print(\"Sem notas!\")"],
+  steps:[
+    {l:0, v:{notas:"[]", "boletim.txt":"“boletim bom”"}, note:I+"A entrada chegou vazia. O arquivo ainda tem o boletim bom."},
+    {l:2, v:{notas:"[]", "boletim.txt":"(apagado)"}, note:"Abrir com <code>\"w\"</code> <b>apaga</b> o conteúdo do arquivo na hora."},
+    {l:3, v:{notas:"[]", "boletim.txt":"“[]”"}, note:I+"Grava <code>[]</code>. O boletim bom <b>já era</b>."},
+    {l:5, note:"Só agora verifica: <code>len(notas) == 0</code> → "+T(true)},
+    {l:6, out:"Sem notas!", end:true, note:"O aviso aparece — mas <b>tarde demais</b>: o arquivo bom foi substituído por <code>[]</code>. (Saída e arquivo conferidos executando o código.)"}
+  ],
+  lesson:"Foi o que aconteceu com o seu <code>ordens.json</code> virando <code>[]</code> quando o CSV sumiu: a gravação rodou <b>antes</b> de qualquer verificação."
+},
+{
+  id:"acao-bom", nav:"8 · Verificar, depois gravar",
+  title:"Ação irreversível por último",
+  analogy:"Primeiro confere se o bolo novo ficou bom; só então joga fora o velho.",
+  predict:"<b>Preveja:</b> com a mesma entrada vazia, o que acontece com <code>boletim.txt</code>?",
+  code:["notas = []   # a entrada veio vazia","","if len(notas) == 0:","    print(\"Sem notas! Arquivo mantido.\")","else:","    with open(\"boletim.txt\", \"w\") as f:","        f.write(str(notas))"],
+  steps:[
+    {l:0, v:{notas:"[]", "boletim.txt":"“boletim bom”"}, note:I+"Mesma entrada vazia, mesmo arquivo bom."},
+    {l:2, note:"Verifica <b>primeiro</b>: <code>len(notas) == 0</code> → "+T(true)},
+    {l:3, out:"Sem notas! Arquivo mantido.", note:I+"Avisa."},
+    {l:6, end:true, skip:[4,5,6], note:"O bloco que grava está no <code>else</code> e foi <b>pulado</b>. <code>boletim.txt</code> continua com o boletim bom."}
+  ],
+  lesson:"<b>Ordem segura:</b> 1) tratar os casos de falha; 2) fazer o trabalho; 3) <b>verificar o resultado</b>; 4) só então a ação que não tem volta (gravar, enviar, apagar). Uma pergunta para levar à próxima sessão: no seu <code>ordens_json.py</code>, a gravação mora <b>dentro</b> de <code>transformar_ordens_json</code>. Em que passo dessa ordem ela está acontecendo hoje?"
+},
+{
+  id:"match", nav:"9 · match e case _",
+  title:"match: o primeiro case que casa — e o _ pega o resto",
+  analogy:"Uma triagem: cada case é um guichê com um nome exato na porta. O <code>_</code> é o balcão de “outros assuntos”: atende qualquer um, por isso fica no fim da fila.",
+  predict:"<b>Preveja:</b> <code>status</code> vale <code>\"ok\"</code>, mas o case espera <code>\"ok!\"</code> (com exclamação). Qual linha aparece?",
+  code:["status = \"ok\"","","match status:","    case \"erro\":","        print(\"Deu erro\")","    case \"ok!\":","        print(\"Tudo certo\")","    case _:","        print(\"Status inesperado:\", status)"],
+  steps:[
+    {l:0, v:{status:"\"ok\""}, note:I+"Guarda o texto <code>\"ok\"</code>."},
+    {l:3, note:"<code>\"ok\" == \"erro\"</code>? "+T(false), skip:[4]},
+    {l:5, note:"<code>\"ok\" == \"ok!\"</code>? "+T(false)+" Falta o <code>!</code> — texto precisa ser <b>idêntico</b>, letra por letra.", skip:[6]},
+    {l:7, note:"<code>case _</code>: casa com <b>qualquer</b> valor → "+T(true)},
+    {l:8, out:"Status inesperado: ok", end:true, note:I+"Sem o <code>case _</code>, <b>nada</b> apareceria e o erro passaria calado — como o seu cenário de defeito em 01/10."}
+  ],
+  lesson:"<b>Regras do match:</b> testa os <code>case</code> na ordem e roda só o primeiro que casar. O <code>case _</code> aceita tudo, então precisa ser o <b>último</b>: no meio, o Python recusa o código com <code>SyntaxError: wildcard makes remaining patterns unreachable</code> (conferido executando). Foi o mesmo tipo de detalhe do <code>\"Arquivo não existe\"</code> sem o <code>!</code>."
+}
+];
+
+let si = 0, step = -1;
+const $ = (id) => document.getElementById(id);
+const esc = (s) => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+function buildNav(){
+  $("nav").innerHTML = SCENES.map((s,i)=>`<button data-i="${i}">${s.nav}</button>`).join("");
+  $("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{si=+b.dataset.i;step=-1;save();render();});
+}
+function state(){
+  const sc = SCENES[si]; let vars = {}, out = [], skipped = new Set(), done = new Set();
+  for(let k=0;k<=step;k++){
+    const st = sc.steps[k];
+    if(st.v) vars = st.v;
+    if(st.out) out.push(st.out);
+    (st.skip||[]).forEach(x=>skipped.add(x));
+    done.add(st.l);
+  }
+  return {vars,out,skipped,done};
+}
+function render(){
+  const sc = SCENES[si], st = state(), cur = step>=0 ? sc.steps[step] : null;
+  $("nav").querySelectorAll("button").forEach((b,i)=>b.setAttribute("aria-current", i===si));
+  $("title").textContent = sc.title;
+  $("analogy").innerHTML = sc.analogy;
+  $("predict").innerHTML = sc.predict;
+  $("code").innerHTML = sc.code.map((ln,i)=>{
+    let cls = "ln";
+    if(cur && cur.l===i && !cur.end) cls += " now";
+    else if(cur && cur.end && cur.l===i && !st.skipped.has(i)) cls += " now";
+    if(st.skipped.has(i)) cls += " skipped";
+    return `<span class="${cls}"><span class="n">${i+1}</span>${esc(ln)||" "}</span>`;
+  }).join("");
+  const vk = Object.keys(st.vars);
+  $("vars").innerHTML = vk.length ? vk.map(k=>`<div>${esc(k)} = ${esc(st.vars[k])}</div>`).join("") : "<span style='color:var(--muted)'>(nada ainda)</span>";
+  $("out").innerHTML = st.out.length ? st.out.join("\n") : "";
+  $("note").innerHTML = cur ? cur.note : "Faça sua previsão e clique em <b>Próximo passo</b>.";
+  $("count").textContent = `passo ${Math.max(step+1,0)} de ${sc.steps.length}`;
+  $("prev").disabled = step < 0;
+  $("next").disabled = step >= sc.steps.length-1;
+  const fin = step === sc.steps.length-1;
+  $("lesson").className = "lesson" + (fin ? " show" : "");
+  $("lesson").innerHTML = fin ? sc.lesson : "";
+}
+function save(){ try{ localStorage.setItem("cond-scene", si); }catch(e){} }
+$("next").onclick=()=>{ if(step<SCENES[si].steps.length-1){step++;render();} };
+$("prev").onclick=()=>{ if(step>=0){step--;render();} };
+$("reset").onclick=()=>{ step=-1; render(); };
+document.addEventListener("keydown",e=>{ if(e.key==="ArrowRight") $("next").click(); if(e.key==="ArrowLeft") $("prev").click(); });
+try{ const v = parseInt(localStorage.getItem("cond-scene")); if(v>=0 && v<SCENES.length) si=v; }catch(e){}
+function applyTheme(t){ document.documentElement.setAttribute("data-theme",t); $("theme").textContent = t==="dark" ? "☀️ Tema claro" : "🌙 Tema escuro"; try{localStorage.setItem("cond-theme",t);}catch(e){} }
+$("theme").onclick=()=>applyTheme(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark");
+let th="dark"; try{ th = localStorage.getItem("cond-theme") || "dark"; }catch(e){}
+applyTheme(th);
+buildNav(); render();
+</script>
+</body>
+</html>

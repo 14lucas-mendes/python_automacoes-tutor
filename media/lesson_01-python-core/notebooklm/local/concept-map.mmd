@@ -1,0 +1,17 @@
+flowchart TD
+    A["Vou escrever condições.<br/>Quais são TODAS as situações possíveis?"] --> B{"As situações podem<br/>acontecer juntas?"}
+    B -- "Sim (café e pão)" --> C["if separados<br/>o Python testa todos"]
+    B -- "Não, é uma OU outra" --> D["if / elif / else ou match<br/>roda só o primeiro verdadeiro"]
+    D --> E{"Alguma condição está<br/>'dentro' de outra?<br/>(todo ≥ 9 é ≥ 5)"}
+    E -- "Sim" --> F["Mais específica primeiro<br/>≥ 9 antes de ≥ 5"]
+    E -- "Não (textos exatos diferentes)" --> G["Ordem não muda o resultado<br/>falhas primeiro, sucesso por último"]
+    F --> H
+    G --> H
+    C --> H{"Algum dado pode estar<br/>faltando, vazio ou inválido?"}
+    H -- "Sim" --> I["Guarda ANTES do uso<br/>len(lista) > 0 and lista[0] ...<br/>o and para no primeiro falso"]
+    H -- "Não" --> J
+    I --> J{"Há ação sem volta?<br/>(gravar, enviar, apagar)"}
+    J -- "Sim" --> K["Por último:<br/>falhas → trabalho → verificar → gravar"]
+    J -- "Não" --> L
+    K --> L{"E se vier algo<br/>que eu não previ?"}
+    L --> M["else ou case _ no final<br/>com mensagem clara — nunca silêncio"]

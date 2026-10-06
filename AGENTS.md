@@ -21,6 +21,7 @@ Quando a skill `ai-tutor` for atualizada, **conferir o alinhamento antes de segu
 - O alinhamento à onda adaptativa de 21–22/09 (diagnóstico, learner profile, espaçamento, protocolo adaptativo de aula) está em `session-log.md`; a upgrade foi `scripts.migrate_state` (`_upgrade_v2_support_files`) e a skill em `C:\Users\lucka\.config\mimocode\skills\ai-tutor` foi sincronizada com `E:\Lucas\Documents\Faculdade AI\ai-tutor-base`.
 - Novos atalhos da skill: `/diagnostic` e `/profile`. Diagnóstico e observações de perfil **não** são evidência nem alteram `mastery`.
 - O `scripts/projections.py` continua proibido sobre `session-log.md` neste estudo.
+- **Uma só cópia ativa da skill** (decisão do aluno, 2026-10-06): a fonte única é `C:\Users\lucka\.config\mimocode\skills\ai-tutor`. Qualquer outra pasta de skills (`~/.claude/skills/ai-tutor` etc.) deve ser uma *junction* para ela, nunca uma cópia. O script `docs/compose/unificar-skill-ai-tutor.ps1` diagnostica (sem `-Apply`) e corrige (com `-Apply`), com backup fora das pastas de skills, conferência de hashes e `validate_skill`/`validate_study`.
 
 ## Operação com a skill `/ai-tutor` (onda adaptativa)
 

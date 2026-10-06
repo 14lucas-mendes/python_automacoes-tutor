@@ -18,7 +18,7 @@
 - **Regra 9:** `topic_automacao-confiavel` continua em **80**. Para 100, é preciso repetir o desempenho de 80 em outra sessão e outro contexto, com detecção de limite ou autocorreção.
 - **`lesson_02-arquivos-erros` concluída**: entrada inválida tratada, módulos separados e README. Diário no cofre: `AI Tutor - Python automações - lesson-02-arquivos-erros.md`, linkado no MOC. `next_focus` passou a ser `lesson_14-git-fluxo-profissional`.
 - Perfil: uma observação (`strategy_outcome`): pergunta direcional ancorada no código do aluno mais um contraexemplo já vivido.
-- Pendente: o aluno ainda vai commitar o `README.md` (`?? README.md`).
+- `README.md` commitado e enviado pelo aluno depois do fechamento: `1739cc4`.
 - Próximo passo: em 07/10, os cards `cond-01`, `cond-05` e `tempos-01..08`. Depois, a `lesson_14` com aula antes de avaliar.
 
 ## Unificação da skill `ai-tutor` — 2026-10-06

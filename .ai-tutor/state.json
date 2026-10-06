@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 182,
-  "updated_at": "2026-10-06T19:28:00-03:00",
+  "revision": 183,
+  "updated_at": "2026-10-06T19:45:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -2092,7 +2092,7 @@
         "location": "E:/Lucas/Documents/formação_python/README.md"
       },
       "result": "correct",
-      "error": "A redacao da secao Como rodar reaproveita o relato do teste feito pelo tutor; por isso nao conta para weak_caminho-relativo-pasta-trabalho. Arquivo ainda nao commitado (git status: ?? README.md)."
+      "error": "A redacao da secao Como rodar reaproveita o relato do teste feito pelo tutor; por isso nao conta para weak_caminho-relativo-pasta-trabalho. Commitado pelo aluno depois do fechamento: 1739cc4 (main sincronizada com origin/main)."
     }
   ],
   "sessions": [
@@ -2959,7 +2959,7 @@
         "evidence_lesson02-readme-01"
       ],
       "difficulty": "recall",
-      "next_step": "07/10: cards cond-01, cond-05 e tempos-01..08 (retrieval_first); commit do README.md pelo aluno; abrir lesson_14-git-fluxo-profissional com aula antes de avaliar (branch, main x develop, PR).",
+      "next_step": "07/10: cards cond-01, cond-05 e tempos-01..08 (retrieval_first); abrir lesson_14-git-fluxo-profissional com aula antes de avaliar (branch, main x develop, PR).",
       "files_changed": [
         ".ai-tutor/state.json",
         ".ai-tutor/cards.json",

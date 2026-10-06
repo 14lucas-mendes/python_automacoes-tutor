@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 172,
-  "updated_at": "2026-10-05T12:00:00-03:00",
+  "revision": 182,
+  "updated_at": "2026-10-06T19:28:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -146,7 +146,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-10-05",
+      "last_practice": "2026-10-06",
       "evidence_ids": [
         "evidence_csv-ciclo4-01",
         "evidence_csv-ciclo4-02",
@@ -168,7 +168,8 @@
         "evidence_ordens-falhas-ordem-01",
         "evidence_ordens-falhas-ordem-02",
         "evidence_ordens-falhas-feynman-01",
-        "evidence_ordens-falhas-feynman-02"
+        "evidence_ordens-falhas-feynman-02",
+        "evidence_lesson02-readme-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2075,6 +2076,23 @@
       },
       "result": "correct",
       "error": "Nao nomeou literalmente que a lista vazia e serializada como []."
+    },
+    {
+      "evidence_id": "evidence_lesson02-readme-01",
+      "topic_id": "topic_automacao-confiavel",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "README.md na raiz do repositorio formacao_python, documentando o modulo 02 (ordens CSV -> JSON). Aula previa sobre README/Markdown com dois exemplos de outros contextos (renomeador de fotos, backup), sem conteudo do projeto do aluno (pre-requisito, regra 7). 1a versao (sha256 4cf6ab6c...): o que faz, papel de cada arquivo, as tres mensagens da leitura identicas as constantes do ler_ordens.py, exemplo real OS-101 texto -> lista; faltavam como rodar, o comportamento da verificacao e o fechamento do bloco json. Tutor apontou os criterios faltantes (degrau 1) e relatou o teste na copia (raiz grava; de src/modulo-02 responde Arquivo nao encontrado). 2a versao (sha256 d54a6c63...): comando python src/modulo-02/ordens_json.py a partir da raiz com justificativa pelo caminho relativo, segundo exemplo OS-103 -> [], secao da verificacao com o esperado da OS-101 e json intacto. Tutor confirmou numa copia que a OS-101 alterada imprime Erro de gravacao do arquivo! e o hash do ordens.json nao muda.",
+      "recorded_at": "2026-10-06T19:25:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-06-revisao-cond-tempos-01",
+        "location": "E:/Lucas/Documents/formação_python/README.md"
+      },
+      "result": "correct",
+      "error": "A redacao da secao Como rodar reaproveita o relato do teste feito pelo tutor; por isso nao conta para weak_caminho-relativo-pasta-trabalho. Arquivo ainda nao commitado (git status: ?? README.md)."
     }
   ],
   "sessions": [
@@ -2907,6 +2925,51 @@
         "session-log.md",
         "fora do estudo: E:/Lucas/Documents/formação_python/src/modulo-02/ordens_json.py (editado pelo aluno)"
       ]
+    },
+    {
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-10-06T18:35:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "topic_ids": [
+        "topic_python-fundamentos",
+        "topic_automacao-confiavel"
+      ],
+      "objective": "Recuperar (retrieval_first) os 13 cards vencidos: cond-01..05 primeiro (weak_condicionais-ordem-guarda ativo), depois tempos-01..08; se houver tempo, iniciar o README da lesson_02.",
+      "cognitive_core": "Recuperar sem ajuda a estrutura e a ordem de condicionais, a guarda antes do uso, a verificacao antes de gravar e o modelo de erros/traceback.",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_python-fundamentos"
+        ],
+        "topic_label_visible": true,
+        "reason": "weak_condicionais-ordem-guarda ainda ativo; interleaving nao se aplica com pre-requisito ativo."
+      },
+      "checkpoint": "Aberta em 2026-10-06 com 90 min. Ordem: cond-01..05, tempos-01..08, README. | ~19:10 aluno pediu deixar tempos-01..08 para amanha (tempos-01 apresentado, nao respondido) e seguir para fechar a licao. Resultado cond: 02, 03, 04 corretos; 01 parcial; 05 incorreto (autocorrecao apos degrau 3). README entregue e conferido; lesson_02 concluida as 19:25. | Fechada a pedido do aluno em 2026-10-06T19:28 (~55 min de 90); aula introdutoria da lesson_14 oferecida e adiada. Ultimo comportamento proprio: README completo apos apontamento de criterios (degrau 1). Suporte mais recente no nucleo: degrau 3 (cond-05). Sem bloqueio. Aluno declarou que nao quer informar confianca nos cards.",
+      "evidence_ids": [
+        "evidence_lesson02-readme-01"
+      ],
+      "difficulty": "recall",
+      "next_step": "07/10: cards cond-01, cond-05 e tempos-01..08 (retrieval_first); commit do README.md pelo aluno; abrir lesson_14-git-fluxo-profissional com aula antes de avaliar (branch, main x develop, PR).",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        "fora do estudo: E:/Lucas/Documents/formação_python/README.md (criado pelo aluno)",
+        ".ai-tutor/learner-profile.json",
+        "curriculum.md",
+        "session-log.md",
+        "fora do estudo: diario lesson-02 e nota de sessao no cofre Segundo Cerebro"
+      ],
+      "ended_at": "2026-10-06T19:28:00-03:00"
     }
   ],
   "lessons": [
@@ -2965,7 +3028,7 @@
       "prerequisite_lesson_ids": [
         "lesson_04-descoberta-processo"
       ],
-      "status": "in_progress",
+      "status": "completed",
       "session_ids": [
         "session_2026-09-08-arquivos-erros-01",
         "session_2026-09-08-arquivos-erros-02",
@@ -2977,7 +3040,8 @@
         "session_2026-09-23-csv-modulos-01",
         "session_2026-09-28-csv-json-01",
         "session_2026-09-29-revisao-json-01",
-        "session_2026-10-02-condicionais-01"
+        "session_2026-10-02-condicionais-01",
+        "session_2026-10-06-revisao-cond-tempos-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2990,7 +3054,7 @@
         "README"
       ],
       "topic_id": "topic_automacao-confiavel",
-      "progress_note": "2026-09-24: modulos CSV concluidos e verificados em pratica guiada: leitor e script separados, cinco cenarios de leitura exercitados e import silencioso verificado no diretorio do modulo. Dominio permanece 60; para 80 falta aplicacao autonoma transferida. Para fechar a licao faltam transformacao em JSON e README. 2026-09-28: JSON gerado e verificado por ida-e-volta em pratica guiada (leitor_json.py -> src/clientes.json). Falta README; para 80, aplicacao autonoma transferida. 2026-10-01: transferencia ordens CSV->JSON - transformacao autonoma e transferida; verificacao com valor esperado e tratamento de falhas guiados. Para 80 falta aplicacao autonoma transferida completa (falhas + verificacao). Falta README. 2026-10-05: licao vinculada a project_segundo-cerebro; criterios inalterados. Ponte opcional (nao e criterio de fechamento): script que le o frontmatter das notas do cofre e gera indice.json."
+      "progress_note": "2026-09-24: modulos CSV concluidos e verificados em pratica guiada: leitor e script separados, cinco cenarios de leitura exercitados e import silencioso verificado no diretorio do modulo. Dominio permanece 60; para 80 falta aplicacao autonoma transferida. Para fechar a licao faltam transformacao em JSON e README. 2026-09-28: JSON gerado e verificado por ida-e-volta em pratica guiada (leitor_json.py -> src/clientes.json). Falta README; para 80, aplicacao autonoma transferida. 2026-10-01: transferencia ordens CSV->JSON - transformacao autonoma e transferida; verificacao com valor esperado e tratamento de falhas guiados. Para 80 falta aplicacao autonoma transferida completa (falhas + verificacao). Falta README. 2026-10-05: licao vinculada a project_segundo-cerebro; criterios inalterados. Ponte opcional (nao e criterio de fechamento): script que le o frontmatter das notas do cofre e gera indice.json. 2026-10-06: README.md entregue (evidence_lesson02-readme-01, sha256 d54a6c63...). Criterios cumpridos: entrada invalida tratada (evidence_csv-entrada-invalida-01, ordens_json 6/6 cenarios), modulos separados (ler_ordens.py + ordens_json.py), README. topic_automacao-confiavel em 80 com feynman, aplicacao e transferencia (evidence_ordens-falhas-ordem-02). Licao concluida."
     },
     {
       "lesson_id": "lesson_03-testes-git",
@@ -3570,7 +3634,7 @@
       "decision_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     }
   ],
-  "next_focus": "lesson_02-arquivos-erros",
+  "next_focus": "lesson_14-git-fluxo-profissional",
   "diagnostics": [],
   "retrieval_attempts": [
     {
@@ -3743,6 +3807,69 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-10-05T00:00:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_46299a53-542c-41ae-b6a8-a5139cf5b224",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-01 (reformulado: A cafe e pao podem ser verdade juntos; B semaforo verde ou vermelho, so um). | resposta A: 'um if so, porque para ter cafe da manha preciso de cafe e pao' - leitura valida de enunciado ambiguo (condicao combinada), falha do material, nao do aluno. B: 'if e elif para verificar duas condicoes independentes; verde prossiga, vermelho pare' - estrutura certa; justificativa ausente e termo 'independentes' contradiz 'exclusivas'.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-06T18:40:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_fb35fd7b-a133-4f70-9a4d-8e1293efe077",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-01 parte A reformulada (lista de compras: acabou cafe / acabou pao, podem ser juntos). | resposta: if separados (certo), mas acrescentou else 'se as duas nao forem verdadeiras anota os dois' - nao confia que os dois if rodam; else ligado so ao ultimo if e logica invertida. Card fechado como parcial.",
+      "outcome": "partial",
+      "support_level": 1,
+      "recorded_at": "2026-10-06T18:45:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_59facec8-51e7-431a-a07e-879aad9c5ba7",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-02 (nota=10; if nota>=5 aprovado / elif nota>=9 louvor). | resposta: 10 ja atende o primeiro, a cadeia para e o elif nao roda; regra mais restrita primeiro; inverte a ordem (>=9 louvor, depois >=5 aprovado). Correto. Na correcao disse 'se... se' sem explicitar elif (nao inferido como erro).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-06T18:50:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_64beed15-5d57-495f-8df5-82025d0262da",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-03 (guarda antes de pecas[0]). | resposta: conferir se a lista tem dados; codigo 'if len(pecas) > 0: return pecas[0]'. Correto (em 02/10 havia sido incorreto: TypeError e troca do dado). Caso vazio sem decisao explicita (cai em retorno implicito) - melhoria opcional.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-06T18:55:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_629e8b3a-c011-4502-ba95-4622ac2cdf2c",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "card_cond-04 (gravar antes de verificar). | resposta: gravar e acao sem volta; verificar primeiro se o dado esta correto/no formato desejado e so depois de aprovado gravar. Correto, agora com o porque (em 02/10: ordem certa sem justificativa).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-06T19:00:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_c694264d-6da5-49ab-8074-c352a354ef52",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "card_cond-05 (ida-e-volta prova a transformacao?). | resposta: nao prova, 'usa a mesma base de comparacao' (correto); o que provaria: 'comparar o arquivo fonte (CSV original) com o transformado' - repete pela 3a vez (01/10, 02/10) a confusao entrada nao transformada como fonte de verdade, embora o proprio ordens_json.py (05/10) ja use esperado escrito a mao para OS-101.",
+      "outcome": "incorrect",
+      "support_level": 0,
+      "recorded_at": "2026-10-06T19:05:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_cef43248-c3e7-403e-a5ba-bf20fd0aaa6f",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "card_cond-05 seguimento. Degrau 3: pergunta direcional sobre o proprio 'esperado' do ordens_json.py -> aluno disse que os valores 'vieram do meu JSON' (circular). Nova pergunta direcional (bug split(',') + esperado copiado do JSON gravado). | resposta: autocorrecao - esperado recebe o formato de saida que eu espero, comparado com a lista produzida, nao com o JSON gravado. Correto apos degrau 3 (teto 40); nao responde explicitamente True/False.",
+      "outcome": "correct",
+      "support_level": 3,
+      "recorded_at": "2026-10-06T19:15:00-03:00"
     }
   ]
 }

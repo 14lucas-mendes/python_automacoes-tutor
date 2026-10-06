@@ -4,6 +4,23 @@
      estudo: o gerador reescreve session-log.md sem condição e substituiria toda esta
      narrativa por um resumo mecânico de 6 linhas por sessão. -->
 
+## `session_2026-10-06-revisao-cond-tempos-01` — concluída em 2026-10-06 (`revision` 173 → 182)
+
+- Cerca de 55 min de 90 pedidos. Modo `assessment` na revisão, prática em bloco (`weak_condicionais-ordem-guarda` ativo).
+- Recuperação (`retrieval_first`, não é evidência):
+  - `cond-01` **parcial**. O enunciado do café da manhã era ambíguo de novo e a leitura com `and` era válida (falha do material). Na reformulação (lista de compras), escolheu `if` separados, mas acrescentou um `else` para "os dois". No semáforo, chamou de "independentes" situações que se excluem. Volta 07/10.
+  - `cond-02` **correto** (a cadeia para no primeiro verdadeiro; o mais restrito vem primeiro). `cond-03` **correto** (`if len(pecas) > 0:`; em 02/10 tinha sido incorreto). `cond-04` **correto**, agora com o porquê. Os três voltam 09/10.
+  - `cond-05` **incorreto** de primeira: pela 3ª vez propôs comparar com o CSV original. Depois de duas perguntas direcionais (degrau 3) — o `esperado` do próprio `ordens_json.py` e o contraexemplo `split(",")` com um esperado copiado do JSON —, autocorrigiu: o esperado é escrito à mão, com o formato de saída correto. Volta 07/10. `weak_verificacao-valor-esperado` segue ativo.
+- `tempos-01..08` adiados a pedido do aluno; o `tempos-01` foi apresentado e não foi respondido.
+- O aluno declarou que não quer informar confiança nos cards. Registrado como preferência em `learner-profile.json`; o tutor parou de pedir.
+- README: aula antes da tarefa (definição, analogia do manual na caixa, Markdown e dois exemplos de outros contextos). 1ª versão boa, mas faltavam como rodar, a verificação e o fechamento de um bloco de código. O tutor apontou os critérios (degrau 1) e relatou o teste numa cópia. 2ª versão completa (sha256 `d54a6c63…`). Conferido numa cópia: OS-101 alterada → `Erro de gravação do arquivo!` com o `ordens.json` intacto.
+- Evidência: `evidence_lesson02-readme-01`, aplicação **autônoma correta** (`topic_automacao-confiavel`). A seção "Como rodar" reaproveita o relato do tutor, por isso não conta para `weak_caminho-relativo-pasta-trabalho`.
+- **Regra 9:** `topic_automacao-confiavel` continua em **80**. Para 100, é preciso repetir o desempenho de 80 em outra sessão e outro contexto, com detecção de limite ou autocorreção.
+- **`lesson_02-arquivos-erros` concluída**: entrada inválida tratada, módulos separados e README. Diário no cofre: `AI Tutor - Python automações - lesson-02-arquivos-erros.md`, linkado no MOC. `next_focus` passou a ser `lesson_14-git-fluxo-profissional`.
+- Perfil: uma observação (`strategy_outcome`): pergunta direcional ancorada no código do aluno mais um contraexemplo já vivido.
+- Pendente: o aluno ainda vai commitar o `README.md` (`?? README.md`).
+- Próximo passo: em 07/10, os cards `cond-01`, `cond-05` e `tempos-01..08`. Depois, a `lesson_14` com aula antes de avaliar.
+
 ## Unificação da skill `ai-tutor` — 2026-10-06
 
 - Não é sessão de aprendizagem. Nenhum arquivo `.ai-tutor/*.json` foi alterado.

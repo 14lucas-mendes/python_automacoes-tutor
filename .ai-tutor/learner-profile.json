@@ -1,9 +1,19 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 8,
-  "updated_at": "2026-10-02T12:10:41-03:00",
-  "declared_preferences": [],
+  "revision": 9,
+  "updated_at": "2026-10-06T19:28:00-03:00",
+  "declared_preferences": [
+    {
+      "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
+      "dimension": "confidence_reporting",
+      "value": "nao informar confianca ao revisar cards; o tutor nao pede mais",
+      "source": "learner",
+      "recorded_at": "2026-10-06T19:28:00-03:00",
+      "status": "active",
+      "supersedes_id": null
+    }
+  ],
   "observations": [
     {
       "observation_id": "profile_observation_a5fb1f15-e9ab-4750-bb13-801bfdb45c57",
@@ -85,6 +95,18 @@
         "note": "Com orcamento de 45 min, corrigiu sozinho em uma iteracao depois de ver a tabela dos 6 cenarios; pediu antes para saber se relembrar conteudo contaria como ajuda."
       },
       "recorded_at": "2026-10-05T00:45:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_ba05172b-ed2a-47be-97b3-8b222ea715f6",
+      "session_id": "session_2026-10-06-revisao-cond-tempos-01",
+      "topic_id": "topic_automacao-confiavel",
+      "type": "strategy_outcome",
+      "value": {
+        "strategy": "pergunta direcional ancorada no proprio codigo do aluno + contraexemplo de defeito ja vivido (split(,))",
+        "result": "positive",
+        "note": "Erro repetido 3x em cond-05; com o proprio esperado do ordens_json.py e o contraexemplo, autocorrigiu em duas trocas."
+      },
+      "recorded_at": "2026-10-06T19:28:00-03:00"
     }
   ],
   "inferences": [],

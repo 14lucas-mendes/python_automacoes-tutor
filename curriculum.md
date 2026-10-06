@@ -35,7 +35,7 @@ Desde a revisão de roadmap de 2026-10-05, aprovada pelo aluno, o núcleo inclui
 | 1 | Lógica, decomposição e Python core | `lesson_01-python-core` | Resolver entradas, regras e saídas com funções e testes simples. Concluído por evidência prévia válida. |
 | 2 | Debugging sistemático | `lesson_03-testes-git` | Formular hipóteses, isolar uma falha e verificar a correção. Concluído em 2026-09-12, com correção verificada por execução. |
 | 3 | Git e GitHub | `lesson_04-descoberta-processo` | Histórico legível e remoto quando aplicável. Concluído em 2026-09-17, com preflight reconstruído sem comandos fornecidos. |
-| 4 | Arquivos, CSV e JSON | `lesson_02-arquivos-erros` | Ler arquivos completos, tratar erros e modularizar. Critérios inalterados; ponte opcional: ler o frontmatter das notas do cofre e gerar `indice.json`. |
+| 4 | Arquivos, CSV e JSON | `lesson_02-arquivos-erros` | Ler arquivos completos, tratar erros e modularizar. Concluído em 2026-10-06: entrada inválida tratada, módulos separados e README do módulo 02 (`evidence_lesson02-readme-01`). |
 | 5 (início) | Git profissional de dev solo | `lesson_14-git-fluxo-profissional` | Repositório `segundo-cerebro` com `main` protegida e `develop`, fatia entregue por feature branch e PR com CI, primeira tag `v0.1`. |
 | 5 | SQL relacional: memórias versionadas | `lesson_05-automacao-confiavel` | SQLite com memórias versionadas, consulta por data, busca FTS5 e tabelas de manutenção. |
 | 6 | HTTP e APIs REST: importador do GitHub | `lesson_06-http-apis` | Importar commits e repositórios pela API do GitHub com timeout, erros e paginação tratados. |
@@ -69,7 +69,8 @@ Busca por embeddings ou RAG, LLM na síntese "sonhar", servidor MCP e deploy fic
 - Ciclo concluído: 2, debugging sistemático (`lesson_03-testes-git`), em 2026-09-12, com correção verificada por execução.
 - Ciclo concluído: 3, Git e GitHub (`lesson_04-descoberta-processo`), em 2026-09-17. O preflight foi reconstruído sem comandos fornecidos e a forma exata dos comandos de remoto foi fechada no ciclo de erro; permanece aberto apenas o ponto de precisão `weak_git-formas-exatas-comandos`, agora observável no uso real.
 - Regra do aluno registrada em 2026-09-17: fechamento de lição não exige contexto novo sintético quando o tópico já sustenta o domínio exigido com evidência autônoma real de transferência.
-- Ciclo atual: 4, Arquivos, CSV e JSON. A próxima lição é `lesson_02-arquivos-erros`, que também fecha o ponto fraco `weak_csv-return-flow`.
+- Ciclo concluído: 4, Arquivos, CSV e JSON (`lesson_02-arquivos-erros`), em 2026-10-06. `topic_automacao-confiavel` em 80; o README do módulo 02 fechou o último critério de entrega. `weak_csv-return-flow` foi resolvido em 2026-09-22.
+- Próxima lição: `lesson_14-git-fluxo-profissional` (início do Ciclo 5).
 - Revisão de roadmap em 2026-10-05 (estado revisão 172): projeto principal passa a ser o Segundo Cérebro; nova `lesson_14-git-fluxo-profissional`; novo tópico `topic_frontend-react` (domínio 0; o conhecimento prévio de React/Next não conta como domínio e será medido por diagnóstico antes da `lesson_10`). Nenhuma evidência, domínio ou ponto fraco foi alterado.
 
 <!-- IDs, evidências, sessões e critérios canônicos estão em .ai-tutor/state.json. -->

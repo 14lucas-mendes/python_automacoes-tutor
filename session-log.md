@@ -4,6 +4,23 @@
      estudo: o gerador reescreve session-log.md sem condição e substituiria toda esta
      narrativa por um resumo mecânico de 6 linhas por sessão. -->
 
+## Unificação da skill `ai-tutor` — 2026-10-06
+
+- Não é sessão de aprendizagem. Nenhum arquivo `.ai-tutor/*.json` foi alterado.
+- Decisão do aluno: manter **uma só cópia ativa** da skill. A fonte única é `C:\Users\lucka\.config\mimocode\skills\ai-tutor`. A regra está no `AGENTS.md` e o script, em `docs/compose/unificar-skill-ai-tutor.ps1`. O script foi escrito numa sessão na nuvem (commit `38469cf`) e executado nesta máquina.
+- Diagnóstico: além de `~/.claude`, havia cópias em `~/.cursor`, `~/.agents` e `~/.codex`. As de `.claude` e `.agents` eram clones git da versão pública antiga, sem `learning-strategies`, `diagnostic-contract` e `retrieval.py`. As de `.cursor` e `.codex` eram subconjuntos da oficial (48 e 52 arquivos, contra 87). Nenhuma tinha conteúdo mais novo que a oficial.
+- Aplicado: as quatro cópias foram movidas para `C:\Users\lucka\skill-backups\{claude,cursor,agents,codex}-ai-tutor-20261006-182622`. No lugar de cada uma ficou uma *junction* para a fonte única. O `SKILL.md` lido pela junction do Claude Code é o mesmo da fonte única. A segunda execução do diagnóstico confirma uma única versão ativa.
+- `validate_skill` e `validate_study`: PASS antes e depois.
+- Hashes SHA-256 da fonte única em 06/10. Os 17 arquivos restantes do registro de 22/09 continuam iguais. Diferem estes 3, todos com data de modificação 22/09 12:23, a mesma hora da sincronização. A origem mais provável é uma edição feita depois de os hashes terem sido anotados naquele dia. Não foi possível confirmar, porque `ai-tutor-base` não existe mais em `E:\Lucas\Documents\Faculdade AI\`. Esta tabela resolve a pendência de 28/09.
+
+| Arquivo | 22/09 | 06/10 |
+|---|---|---|
+| `references/state-contract.md` | `a74e0312…` | `2aa3339db77647f6e6e072563d79e98dbe87ebc3e8c866e5c753b9aacfe5aec3` |
+| `references/diagnostic-contract.md` | `8d17f429…` | `f25cea3805ec0d56149f8a3479b3202a662ec916804df4db23b6da6bdc6776fb` |
+| `scripts/retrieval.py` | `f372cd0b…` | `efb0a722fa82a8e2923f6ed9c39759bafc14361fb22ded0bdde7bbf2b3d0f7ef` |
+
+- Pendente: reiniciar o Claude Code e o Cursor para recarregarem as skills.
+
 ## Revisão de roadmap: Segundo Cérebro — 2026-10-05 (`revision` 171 → 172)
 
 - Não é sessão de aprendizagem. Nenhuma evidência, domínio, ponto fraco ou sessão foi alterado.

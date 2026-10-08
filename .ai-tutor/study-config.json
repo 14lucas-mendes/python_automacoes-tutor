@@ -3,7 +3,7 @@
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
   "topic": "Formação de transição para Automação e Integração de Sistemas com Python",
   "goal": "Fazer uma transição segura para funções de Automação e Integração de Sistemas utilizando Python, com autonomia real de programação e uso progressivamente menos dependente de vibe coding.",
-  "deadline": "9 meses — 13 ciclos de 21 dias",
+  "deadline": "Cerca de 11 meses - 16 ciclos de 21 dias (estendido em 2026-10-06 com o bloco de logica; antes: 9 meses, 13 ciclos)",
   "weekly_hours": 8,
   "preferred_times": [
     "segunda, terça, quinta, sexta e domingo",
@@ -27,7 +27,7 @@
     "target_horizon_days": null
   },
   "program_start_date": "2026-08-31",
-  "program_start_note": "Data oficial escolhida pelo aluno em 2026-09-29: primeira sessao (session_2026-08-31-diagnostico). Ciclos de 21 dias contados a partir dela; calendario informativo, o avanco continua dependendo de evidencia.",
+  "program_start_note": "Data oficial escolhida pelo aluno em 2026-09-29: primeira sessao (session_2026-08-31-diagnostico). Ciclos de 21 dias contados a partir dela; calendario informativo, o avanco continua dependendo de evidencia. Em 2026-10-06 o aluno aprovou o bloco de logica (3 ciclos) e o calendario passou a 16 ciclos, ate 2027-08-01.",
   "cycle_calendar": [
     {
       "cycle": 1,
@@ -93,6 +93,21 @@
       "cycle": 13,
       "start": "2027-05-10",
       "end": "2027-05-30"
+    },
+    {
+      "cycle": 14,
+      "start": "2027-05-31",
+      "end": "2027-06-20"
+    },
+    {
+      "cycle": 15,
+      "start": "2027-06-21",
+      "end": "2027-07-11"
+    },
+    {
+      "cycle": 16,
+      "start": "2027-07-12",
+      "end": "2027-08-01"
     }
   ]
 }

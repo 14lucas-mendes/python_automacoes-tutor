@@ -84,6 +84,16 @@ O projeto de portfólio da formação é `project_segundo-cerebro`: o MVP do Seg
 - **Dados:** o repositório público usa só dados de exemplo fictícios. O cofre real e os registros do tutor nunca vão para o repositório.
 - **React e TypeScript:** o conhecimento prévio da Mate Academy não conta como domínio. Antes da `lesson_10`, rodar um `/diagnostic` curto (que posiciona, sem gerar evidência) e seguir as regras 1 e 2 para todo conceito ainda não ensinado nesta formação.
 
+## Bloco de lógica (decisão do aluno, 2026-10-06)
+
+Entre a `lesson_02` e a `lesson_14` há três ciclos de **lógica, decomposição, estruturas de dados e algoritmos** (`topic_logica-algoritmos`; `lesson_15` a `lesson_17`). Proposta: `docs/compose/spec/bloco-logica-roadmap.md`. A formação passa a ter 16 ciclos, até 01/08/2027.
+
+- **Decompor antes de codar:** todo exercício do bloco começa com entrada, regra, saída, exemplos com a saída esperada calculada à mão (incluindo casos-limite) e plano em português. Só depois vem o código.
+- **Método:** prever → rodar → investigar → modificar → criar, tabela de rastreio e exemplos resolvidos que vão sumindo.
+- **Prática sugerida:** missões do Python Lab (só referência, sem sincronizar), *Entendendo Algoritmos* (Bhargava) e *Estruturas de Dados e Algoritmos com JavaScript* (Groner; ler o conceito e implementar em Python).
+- **Lógica em espiral:** depois do bloco, toda sexta-feira tem um exercício curto de lógica até o fim da formação.
+- **O estágio** (GFI, análise e desenvolvimento de sistemas) pode virar contexto de transferência quando a stack for conhecida. Dados da empresa nunca entram no estudo.
+
 ## Captura contínua no Segundo Cérebro (decisão do aluno, 2026-10-05)
 
 Ao **fechar ou interromper cada sessão de estudo**, gravar uma nota de sessão no cofre, na mesma virada do fechamento, sem esperar pedido.

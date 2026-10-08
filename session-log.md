@@ -4,6 +4,22 @@
      estudo: o gerador reescreve session-log.md sem condição e substituiria toda esta
      narrativa por um resumo mecânico de 6 linhas por sessão. -->
 
+## Revisão de roadmap: bloco de lógica — 2026-10-06 (`revision` 183 → 184)
+
+- Não é sessão de aprendizagem. Nenhuma evidência, domínio, ponto fraco ou sessão foi alterado.
+- Pedido do aluno: muita dificuldade em lógica de programação, principalmente em juntar listas, dicionários, condicionais e laços, decompor um problema antes de começar, saber o que esperar de entrada e saída, e debugar. A dificuldade apareceu nas missões do Python Lab. Contexto: começou um estágio em análise e desenvolvimento de sistemas (departamento GFI, stack e carga horária ainda indefinidas). Está lendo *Entendendo Algoritmos* (Aditya Bhargava) e *Estruturas de Dados e Algoritmos com JavaScript* (Loiane Groner). Aceitou estender a formação.
+- Leitura do tutor: o 80 de `topic_python-fundamentos` mede peças isoladas; compor essas peças é outra capacidade, ainda não ensinada (lacuna do material). Sinais nos registros: 4 dos 6 pontos fracos ativos são conceituais, e o `cond-05` repetiu o mesmo raciocínio três vezes.
+- Aprovado pelo aluno (`docs/compose/spec/bloco-logica-roadmap.md`):
+  - novo `topic_logica-algoritmos`, com domínio 0;
+  - `lesson_15-logica-decomposicao`, `lesson_16-estruturas-dados` e `lesson_17-algoritmos-debugging`, uma por ciclo (ciclos 5 a 7);
+  - a `lesson_14` passa a depender da `lesson_17`, e `topic_apis-backend` passa a ter o novo tópico como pré-requisito;
+  - `next_focus` passa a ser a `lesson_15`.
+- Prática sugerida em cada lição: missões do Python Lab (só referência, sem sincronizar, conforme a decisão de 04/10) e capítulos dos dois livros.
+- `study-config.json`: 16 ciclos, até 01/08/2027 (antes, 13 ciclos até 30/05/2027). Gravado com `FileLock` mais substituição atômica, porque o arquivo não tem `revision`. `state.json` foi gravado via `atomic_update_json` com `expected_revision=183`. `validate_study`: PASS.
+- `curriculum.md` foi atualizado à mão (calendário e tabela de ciclos renumerada). `scripts.projections` não foi executado.
+- Em aberto: horas semanais (continuam 8 h até o estágio definir a carga) e o estágio como contexto de transferência quando a stack for conhecida. Dados da empresa nunca entram no estudo.
+- Próximo passo: `/diagnostic` curto de lógica, para posicionar o início da `lesson_15`.
+
 ## `session_2026-10-06-revisao-cond-tempos-01` — concluída em 2026-10-06 (`revision` 173 → 182)
 
 - Cerca de 55 min de 90 pedidos. Modo `assessment` na revisão, prática em bloco (`weak_condicionais-ordem-guarda` ativo).

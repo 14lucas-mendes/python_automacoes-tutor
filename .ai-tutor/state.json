@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 183,
-  "updated_at": "2026-10-06T19:45:00-03:00",
+  "revision": 185,
+  "updated_at": "2026-10-06T23:12:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -189,7 +189,8 @@
       "phase": 5,
       "objective": "Modelar e consultar dados relacionais com SQL, usando chaves, filtros, joins e agregacoes.",
       "prerequisite_topic_ids": [
-        "topic_automacao-confiavel"
+        "topic_automacao-confiavel",
+        "topic_logica-algoritmos"
       ],
       "mastery": 0,
       "retention": "unknown",
@@ -305,6 +306,33 @@
         "tsc sem erros"
       ],
       "progress_note": "2026-10-05: topico criado pela revisao de roadmap segundo-cerebro. Conhecimento previo de React/Next (Mate Academy) declarado pelo aluno; nao conta como dominio. Diagnostico antes da lesson_10."
+    },
+    {
+      "topic_id": "topic_logica-algoritmos",
+      "name": "Logica, decomposicao, algoritmos e estruturas de dados",
+      "phase": 4,
+      "objective": "Diante de um problema novo, decompor em entrada, regra e saida com exemplos esperados calculados a mao, escolher estruturas de dados, compor lacos/condicionais/funcoes sem ajuda, rastrear a execucao e diagnosticar defeitos por hipotese.",
+      "prerequisite_topic_ids": [
+        "topic_python-fundamentos"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "plano escrito antes do codigo",
+        "valor esperado calculado a mao",
+        "tabela de rastreio conferida por execucao",
+        "estrutura de dados justificada",
+        "defeito diagnosticado com hipotese"
+      ],
+      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15."
     }
   ],
   "evidences": [
@@ -3382,7 +3410,7 @@
       "title": "Git profissional de dev solo: branches, PR, CI e releases",
       "objective": "Criar o repositorio segundo-cerebro com main protegida e develop, entregar fatias por feature branch e pull request com CI e publicar releases com tag.",
       "prerequisite_lesson_ids": [
-        "lesson_02-arquivos-erros"
+        "lesson_17-algoritmos-debugging"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3403,7 +3431,95 @@
         "revisit": "commits e push do ciclo 3 (topic_workflow-profissional, dominio 80)",
         "new_constraint": "branches separadas de producao e desenvolvimento, PR, CI e release",
         "expected_transfer": "toda fatia seguinte entra por PR sem roteiro de comandos"
-      }
+      },
+      "roadmap_note": " | 2026-10-06: pre-requisito passou de lesson_02 para lesson_17 (bloco de logica)."
+    },
+    {
+      "lesson_id": "lesson_15-logica-decomposicao",
+      "title": "Decompor, planejar e rastrear",
+      "objective": "Antes do codigo, escrever entrada, regra e saida, 3 a 5 exemplos com saida esperada a mao (com casos-limite) e plano em portugues dividido em subproblemas; implementar cada subproblema como funcao e prever com tabela de rastreio o que um codigo com laco e condicional faz.",
+      "prerequisite_lesson_ids": [
+        "lesson_02-arquivos-erros"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "plano escrito antes do codigo em pelo menos 3 problemas",
+        "tabelas de rastreio conferidas por execucao",
+        "funcoes testadas com valor esperado a mao"
+      ],
+      "topic_id": "topic_logica-algoritmos",
+      "programming_plan": {
+        "project_anchor": "pasta de notas de exemplo no formato do cofre (ficticias no repositorio; cofre real so lido localmente)",
+        "revisit": "condicionais (weak_condicionais-ordem-guarda) e valor esperado (weak_verificacao-valor-esperado)",
+        "new_constraint": "problema novo decomposto antes de codar, com casos-limite",
+        "expected_transfer": "decompor sozinho um problema de outro contexto (Python Lab 006/007 ou tarefa do estagio sem dados da empresa)"
+      },
+      "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
+      "progress_note": null
+    },
+    {
+      "lesson_id": "lesson_16-estruturas-dados",
+      "title": "Estruturas de dados: listas, dicionarios e padroes",
+      "objective": "Escolher e justificar lista, dicionario, tupla ou conjunto e aplicar sem ajuda acumular, contar, agrupar por chave, filtrar, buscar, maior/menor e percorrer dados aninhados.",
+      "prerequisite_lesson_ids": [
+        "lesson_15-logica-decomposicao"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "indice.json das notas gerado e verificado com valor esperado",
+        "escolha de cada estrutura justificada por escrito",
+        "casos-limite tratados (vazio, chave ausente, empate)"
+      ],
+      "topic_id": "topic_logica-algoritmos",
+      "programming_plan": {
+        "project_anchor": "indice das notas de exemplo (tag -> notas, pasta -> quantidade, duplicadas, links quebrados): embriao do importador do Segundo Cerebro",
+        "revisit": "decomposicao e rastreio da lesson_15; CSV/JSON da lesson_02",
+        "new_constraint": "dados aninhados e escolha de estrutura por custo",
+        "expected_transfer": "aplicar os padroes em dados de outro dominio (Python Lab 001/002/003/005)"
+      },
+      "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
+      "progress_note": null
+    },
+    {
+      "lesson_id": "lesson_17-algoritmos-debugging",
+      "title": "Algoritmos classicos e debugging por hipotese",
+      "objective": "Implementar e explicar busca linear x binaria e uma ordenacao simples comparando passos; reconhecer recursao e dividir para conquistar num exemplo pequeno; diagnosticar defeitos com hipotese explicita (prever, rodar, comparar).",
+      "prerequisite_lesson_ids": [
+        "lesson_16-estruturas-dados"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "busca binaria e ordenacao implementadas e testadas com valor esperado",
+        "dois defeitos diagnosticados com hipotese escrita antes da correcao",
+        "comparacao de passos explicada"
+      ],
+      "topic_id": "topic_logica-algoritmos",
+      "programming_plan": {
+        "project_anchor": "ordenar e buscar nas notas de exemplo; defeitos plantados no indice da lesson_16",
+        "revisit": "estruturas da lesson_16 com restricao de custo; modelo de erros (weak_error-model-tempo-deteccao)",
+        "new_constraint": "custo em passos e diagnostico por hipotese",
+        "expected_transfer": "diagnosticar sozinho defeito em codigo alheio (Python Lab 004/008)"
+      },
+      "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
+      "progress_note": null
     }
   ],
   "weak_points": [
@@ -3634,8 +3750,22 @@
       "decision_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     }
   ],
-  "next_focus": "lesson_14-git-fluxo-profissional",
-  "diagnostics": [],
+  "next_focus": "lesson_15-logica-decomposicao",
+  "diagnostics": [
+    {
+      "diagnostic_id": "diagnostic_2026-10-06-logica-01",
+      "goal": "Posicionar o inicio da lesson_15: estimar decomposicao (entrada/regra/saida, exemplos esperados, plano), rastreio de laco com condicional, padroes com lista/dicionario e debugging por hipotese.",
+      "scope_topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "status": "in_progress",
+      "started_at": "2026-10-06T23:12:00-03:00",
+      "completed_at": null,
+      "observations": [],
+      "summary": [],
+      "checkpoint": "Plano de sondagens (uma por vez, sem nota): 1 decompor contagem de tags (sem codigo); 2 rastrear laco com acumulador e if; 3 implementar contagem com dicionario; 4 hipotese para defeito. Ajustar com probe_up/down/across."
+    }
+  ],
   "retrieval_attempts": [
     {
       "retrieval_id": "retrieval_csv-deslocamento-01",

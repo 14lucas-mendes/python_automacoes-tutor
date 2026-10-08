@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 187,
-  "updated_at": "2026-10-07T23:50:00-03:00",
+  "revision": 188,
+  "updated_at": "2026-10-08T00:20:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -185,7 +185,7 @@
       "progress_note": "2026-09-22: dominio 60 alcancado. Metade Feynman autonoma: evidence_csv-justificativa-02 (21/09). Metade aplicacao autonoma independente: evidence_csv-entrada-invalida-01 (deteccao por contagem em csv.reader, retorno explicito sem dado corrompido, cinco casos verificados por execucao). Para 80 falta aplicacao autonoma com transferencia a contexto novo. Para fechar lesson_02 faltam modulos separados, JSON e README. 2026-09-24: pratica guiada de modularizacao CSV concluida; nenhuma evidencia autonoma nova e nenhum ajuste de dominio. Proximo: JSON e README; para 80 falta transferencia autonoma. 2026-09-28: CSV->JSON implementado em pratica guiada (evidence_csv-json-transformacao-01, teto 40 nesta tentativa) e Feynman autonoma de limite da verificacao (evidence_csv-json-limite-verificacao-01). Dominio permanece 60: para 80 falta aplicacao autonoma com transferencia. 2026-10-05: dominio 60 -> 80. Aplicacao autonoma transferida ao projeto real ordens (formacao_python) agora inteira nos criterios de entrega: transformacao/vazio/caminhos (evidence_ordens-transformacao-01) + tratamento de falhas e ordem verificar-antes-de-gravar (evidence_ordens-falhas-ordem-02, 6 cenarios). Feynman autonomo da falha (feynman-01 parcial, feynman-02 correto). Verificacao com valor esperado ainda tem origem guiada (01/10). Para 100: repetir em outra sessao e outro contexto com deteccao de limite ou autocorrecao."
     },
     {
-      "topic_id": "topic_apis-backend",
+      "topic_id": "topic_sql-relacional",
       "name": "SQL relacional",
       "phase": 5,
       "objective": "Modelar e consultar dados relacionais com SQL, usando chaves, filtros, joins e agregacoes.",
@@ -207,15 +207,17 @@
         "schema relacional explicado",
         "consultas com filtros e joins",
         "caso de manutencao simulado"
-      ]
+      ],
+      "former_id": "topic_apis-backend",
+      "progress_note": "2026-10-08: ID renomeado de topic_apis-backend para topic_sql-relacional (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
-      "topic_id": "topic_llm-aplicacoes",
+      "topic_id": "topic_http-apis",
       "name": "HTTP e APIs REST",
       "phase": 6,
       "objective": "Consumir APIs REST e interpretar contratos HTTP, respostas, erros, timeout e paginacao.",
       "prerequisite_topic_ids": [
-        "topic_apis-backend"
+        "topic_sql-relacional"
       ],
       "mastery": 0,
       "retention": "unknown",
@@ -231,15 +233,17 @@
         "cliente HTTP pelo terminal",
         "erros de rede tratados",
         "resposta JSON interpretada"
-      ]
+      ],
+      "former_id": "topic_llm-aplicacoes",
+      "progress_note": "2026-10-08: ID renomeado de topic_llm-aplicacoes para topic_http-apis (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
-      "topic_id": "topic_agentes-ferramentas",
+      "topic_id": "topic_integracao-fastapi",
       "name": "Integracao de sistemas e automacao operacional",
       "phase": 7,
       "objective": "Integrar arquivos, banco e APIs em automacoes operacionais rastreaveis e servir uma API propria com FastAPI.",
       "prerequisite_topic_ids": [
-        "topic_llm-aplicacoes"
+        "topic_http-apis"
       ],
       "mastery": 0,
       "retention": "unknown",
@@ -255,15 +259,17 @@
         "fluxo entre sistemas documentado",
         "falhas registradas",
         "resultado verificavel"
-      ]
+      ],
+      "former_id": "topic_agentes-ferramentas",
+      "progress_note": "2026-10-08: ID renomeado de topic_agentes-ferramentas para topic_integracao-fastapi (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
-      "topic_id": "topic_producao-empregabilidade",
+      "topic_id": "topic_selenium-qualidade",
       "name": "Selenium, qualidade e testes tecnicos",
       "phase": 8,
       "objective": "Automatizar navegacao web de forma controlada e demonstrar qualidade com pytest, debugging, refatoracao e testes tecnicos.",
       "prerequisite_topic_ids": [
-        "topic_agentes-ferramentas"
+        "topic_integracao-fastapi"
       ],
       "mastery": 0,
       "retention": "unknown",
@@ -280,7 +286,9 @@
         "testes pytest relevantes",
         "README e historico GitHub",
         "simulacoes de testes tecnicos"
-      ]
+      ],
+      "former_id": "topic_producao-empregabilidade",
+      "progress_note": "2026-10-08: ID renomeado de topic_producao-empregabilidade para topic_selenium-qualidade (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
       "topic_id": "topic_frontend-react",
@@ -288,7 +296,7 @@
       "phase": 10,
       "objective": "Construir interfaces React em TypeScript que consomem uma API propria, com tipos dos dados, estado, carregamento e erros tratados.",
       "prerequisite_topic_ids": [
-        "topic_agentes-ferramentas"
+        "topic_integracao-fastapi"
       ],
       "mastery": 0,
       "retention": "unknown",
@@ -3136,7 +3144,7 @@
       "topic_id": "topic_workflow-profissional"
     },
     {
-      "lesson_id": "lesson_05-automacao-confiavel",
+      "lesson_id": "lesson_05-sql-memorias",
       "title": "SQL relacional: memorias versionadas do Segundo Cerebro",
       "objective": "Modelar memorias versionadas, temas, fontes e o modulo de manutencao em SQLite e consultar por tema, data e texto.",
       "prerequisite_lesson_ids": [
@@ -3156,21 +3164,23 @@
         "resultado explicado",
         "entrega por PR"
       ],
-      "topic_id": "topic_apis-backend",
+      "topic_id": "topic_sql-relacional",
       "programming_plan": {
         "project_anchor": "banco SQLite do Segundo Cerebro",
         "revisit": "indice.json do ciclo 4",
         "new_constraint": "banco relacional com historico de versoes",
         "expected_transfer": "modelar sozinho o dominio de manutencao"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "former_id": "lesson_05-automacao-confiavel",
+      "progress_note": "2026-10-08: ID renomeado de lesson_05-automacao-confiavel para lesson_05-sql-memorias (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
       "lesson_id": "lesson_06-http-apis",
       "title": "HTTP e APIs REST: importador do GitHub",
       "objective": "Consumir a API do GitHub para importar commits e repositorios do aluno, tratando contratos, paginacao e falhas HTTP.",
       "prerequisite_lesson_ids": [
-        "lesson_05-automacao-confiavel"
+        "lesson_05-sql-memorias"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3186,7 +3196,7 @@
         "testes com mock",
         "entrega por PR"
       ],
-      "topic_id": "topic_llm-aplicacoes",
+      "topic_id": "topic_http-apis",
       "programming_plan": {
         "project_anchor": "importador GitHub do Segundo Cerebro",
         "revisit": "leitura de arquivos e tratamento de excecoes",
@@ -3217,7 +3227,7 @@
         "registro de execucao",
         "entrega por PR"
       ],
-      "topic_id": "topic_agentes-ferramentas",
+      "topic_id": "topic_integracao-fastapi",
       "programming_plan": {
         "project_anchor": "API do Segundo Cerebro",
         "revisit": "cliente HTTP do ciclo 6",
@@ -3227,7 +3237,7 @@
       "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
     },
     {
-      "lesson_id": "lesson_08-llm-estruturado",
+      "lesson_id": "lesson_08-selenium-captura",
       "title": "Automacao web com Selenium: captura de paginas",
       "objective": "Capturar paginas publicas para o Segundo Cerebro com Selenium, usando esperas explicitas e verificacoes.",
       "prerequisite_lesson_ids": [
@@ -3247,21 +3257,23 @@
         "falha diagnosticada",
         "entrega por PR"
       ],
-      "topic_id": "topic_producao-empregabilidade",
+      "topic_id": "topic_selenium-qualidade",
       "programming_plan": {
         "project_anchor": "captura web do Segundo Cerebro",
         "revisit": "importador via API do ciclo 6",
         "new_constraint": "site sem API",
         "expected_transfer": "automatizar um segundo site sozinho"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "former_id": "lesson_08-llm-estruturado",
+      "progress_note": "2026-10-08: ID renomeado de lesson_08-llm-estruturado para lesson_08-selenium-captura (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
-      "lesson_id": "lesson_09-seguranca-custo",
+      "lesson_id": "lesson_09-manutencao-sonhar",
       "title": "Modulo de manutencao e sintese periodica (sonhar)",
       "objective": "Importar registros ficticios de manutencao, aplicar regras de reincidencia e gerar o relatorio periodico de padroes do Segundo Cerebro.",
       "prerequisite_lesson_ids": [
-        "lesson_08-llm-estruturado"
+        "lesson_08-selenium-captura"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3277,21 +3289,23 @@
         "README de dominio",
         "entrega por PR"
       ],
-      "topic_id": "topic_agentes-ferramentas",
+      "topic_id": "topic_integracao-fastapi",
       "programming_plan": {
         "project_anchor": "modulo de manutencao e relatorio sonhar",
         "revisit": "consultas SQL do ciclo 5",
         "new_constraint": "sintese periodica sobre todas as memorias",
         "expected_transfer": "aplicar o mesmo sonhar a uma fonte diferente (registros de estudo)"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "former_id": "lesson_09-seguranca-custo",
+      "progress_note": "2026-10-08: ID renomeado de lesson_09-seguranca-custo para lesson_09-manutencao-sonhar (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
-      "lesson_id": "lesson_10-agente-ferramentas",
+      "lesson_id": "lesson_10-react-typescript-1",
       "title": "Frontend React e TypeScript I",
       "objective": "Criar a interface React em TypeScript (Vite) que consome a API do Segundo Cerebro para busca e linha do tempo, com estados de carregamento e erro.",
       "prerequisite_lesson_ids": [
-        "lesson_09-seguranca-custo"
+        "lesson_09-manutencao-sonhar"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3316,14 +3330,16 @@
         "expected_transfer": "criar uma tela nova sem modelo"
       },
       "diagnostic_note": "Antes da primeira sessao: /diagnostic curto de React e TypeScript (base previa da Mate Academy). Diagnostico posiciona; nao gera dominio nem evidencia.",
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "former_id": "lesson_10-agente-ferramentas",
+      "progress_note": "2026-10-08: ID renomeado de lesson_10-agente-ferramentas para lesson_10-react-typescript-1 (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
-      "lesson_id": "lesson_11-agente-controle",
+      "lesson_id": "lesson_11-react-typescript-2",
       "title": "Frontend React e TypeScript II e fluxo ponta a ponta",
       "objective": "Completar a interface com captura, leitura do relatorio sonhar e navegacao, com o fluxo frontend-API-banco funcionando e falhas tratadas.",
       "prerequisite_lesson_ids": [
-        "lesson_10-agente-ferramentas"
+        "lesson_10-react-typescript-1"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3345,14 +3361,16 @@
         "new_constraint": "tela que escreve dados",
         "expected_transfer": "diagnosticar uma falha que atravessa frontend, API e banco"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "former_id": "lesson_11-agente-controle",
+      "progress_note": "2026-10-08: ID renomeado de lesson_11-agente-controle para lesson_11-react-typescript-2 (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
-      "lesson_id": "lesson_12-docker-ci",
+      "lesson_id": "lesson_12-qualidade-ci",
       "title": "Qualidade: pytest, debugging, refatoracao e CI completo",
       "objective": "Cobrir regras, API e importadores com pytest, refatorar sem mudar comportamento e ampliar o CI para lint, tipos e build do frontend.",
       "prerequisite_lesson_ids": [
-        "lesson_11-agente-controle"
+        "lesson_11-react-typescript-2"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3367,21 +3385,23 @@
         "refatoracao verificada",
         "CI cobrindo backend e frontend"
       ],
-      "topic_id": "topic_producao-empregabilidade",
+      "topic_id": "topic_selenium-qualidade",
       "programming_plan": {
         "project_anchor": "qualidade do Segundo Cerebro",
         "revisit": "CI minimo do ciclo 5",
         "new_constraint": "CI que barra PR quebrado",
         "expected_transfer": "diagnosticar sozinho um PR com CI vermelho"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "former_id": "lesson_12-docker-ci",
+      "progress_note": "2026-10-08: ID renomeado de lesson_12-docker-ci para lesson_12-qualidade-ci (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
-      "lesson_id": "lesson_13-deploy-portfolio",
+      "lesson_id": "lesson_13-portfolio",
       "title": "GitHub, testes tecnicos e portfolio do Segundo Cerebro",
       "objective": "Publicar o MVP do Segundo Cerebro como portfolio, resolver testes tecnicos de entrada e explicar decisoes tecnicas com clareza.",
       "prerequisite_lesson_ids": [
-        "lesson_12-docker-ci"
+        "lesson_12-qualidade-ci"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3397,14 +3417,16 @@
         "simulacoes de testes tecnicos",
         "demo de tres a cinco minutos"
       ],
-      "topic_id": "topic_producao-empregabilidade",
+      "topic_id": "topic_selenium-qualidade",
       "programming_plan": {
         "project_anchor": "MVP do Segundo Cerebro",
         "revisit": "todo o projeto",
         "new_constraint": "apresentacao para recrutador",
         "expected_transfer": "explicar uma decisao tecnica nao ensaiada"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "former_id": "lesson_13-deploy-portfolio",
+      "progress_note": "2026-10-08: ID renomeado de lesson_13-deploy-portfolio para lesson_13-portfolio (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
     },
     {
       "lesson_id": "lesson_14-git-fluxo-profissional",
@@ -3731,15 +3753,15 @@
       "lesson_ids": [
         "lesson_02-arquivos-erros",
         "lesson_14-git-fluxo-profissional",
-        "lesson_05-automacao-confiavel",
+        "lesson_05-sql-memorias",
         "lesson_06-http-apis",
         "lesson_07-fastapi-dados",
-        "lesson_08-llm-estruturado",
-        "lesson_09-seguranca-custo",
-        "lesson_10-agente-ferramentas",
-        "lesson_11-agente-controle",
-        "lesson_12-docker-ci",
-        "lesson_13-deploy-portfolio"
+        "lesson_08-selenium-captura",
+        "lesson_09-manutencao-sonhar",
+        "lesson_10-react-typescript-1",
+        "lesson_11-react-typescript-2",
+        "lesson_12-qualidade-ci",
+        "lesson_13-portfolio"
       ],
       "status": "planned",
       "objective": "Memoria pessoal em Python (memorias versionadas, busca, sintese periodica sonhar) com API FastAPI e interface React/TypeScript, sobre dados reais do aluno; modulo de manutencao com dados ficticios. Projeto de portfolio da formacao.",

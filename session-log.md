@@ -4,6 +4,29 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## IDs herdados renomeados — 2026-10-08 (`state` 187 → 188, `sources` 5 → 6)
+
+- Não é sessão de aprendizagem. Pedido do aluno, depois da revisão de 07/10: os IDs vinham do roteiro anterior a 05/10 e não diziam o que a lição ou o tópico cobrem. Nenhuma das lições tinha começado; nenhum dos tópicos tinha evidência.
+
+  | Antigo | Novo |
+  |---|---|
+  | `topic_apis-backend` | `topic_sql-relacional` |
+  | `topic_llm-aplicacoes` | `topic_http-apis` |
+  | `topic_agentes-ferramentas` | `topic_integracao-fastapi` |
+  | `topic_producao-empregabilidade` | `topic_selenium-qualidade` |
+  | `lesson_05-automacao-confiavel` | `lesson_05-sql-memorias` |
+  | `lesson_08-llm-estruturado` | `lesson_08-selenium-captura` |
+  | `lesson_09-seguranca-custo` | `lesson_09-manutencao-sonhar` |
+  | `lesson_10-agente-ferramentas` | `lesson_10-react-typescript-1` |
+  | `lesson_11-agente-controle` | `lesson_11-react-typescript-2` |
+  | `lesson_12-docker-ci` | `lesson_12-qualidade-ci` |
+  | `lesson_13-deploy-portfolio` | `lesson_13-portfolio` |
+
+- No `state.json` havia só referências exatas (35, em IDs, pré-requisitos e ligações lição → tópico), trocadas com `atomic_update_json`. Cada item renomeado ganhou `former_id` e uma nota em `progress_note`. Em `sources.json`, foram trocadas as ligações e duas menções em `authority_reason`. `validate_study`: PASS.
+- `curriculum.md` e `docs/compose/spec/segundo-cerebro-roadmap.md` foram atualizados. As entradas antigas deste log ficam com os IDs da época.
+- Fora deste repositório, não alterado: o Python Lab (`E:\Lucas\Documents\python-lab`, só referência por decisão de 04/10) ainda usa os IDs antigos em `data/roadmap.json` e nas missões 010 e 011.
+- Também em 07/10: plano de correção do estudo "Fundamentos da Engenharia de IA" escrito no próprio projeto (`docs/plano-correcao-estado.md`), para ser executado lá.
+
 ## Manutenção da formação e da skill — 2026-10-07 (`state` 185 → 187, `cards` → 25, `sources` → 5, `learner-profile` → 10)
 
 - Não é sessão de aprendizagem. Nenhuma evidência, domínio, sessão ou condição de saída de ponto fraco foi alterada. Executado a pedido do aluno, a partir de uma revisão da formação e da skill.

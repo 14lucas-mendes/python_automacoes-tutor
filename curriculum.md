@@ -41,15 +41,15 @@ Desde a revisão de roadmap de 2026-10-05, aprovada pelo aluno, o núcleo inclui
 | 6 | Estruturas de dados | `lesson_16-estruturas-dados` | Lista, dicionário, tupla e conjunto escolhidos e justificados; acumular, contar, agrupar, filtrar, buscar e dados aninhados no índice das notas. |
 | 7 | Algoritmos e debugging por hipótese | `lesson_17-algoritmos-debugging` | Busca binária e ordenação testadas com valor esperado, custo em passos explicado, defeitos diagnosticados com hipótese escrita. |
 | 8 (início) | Git profissional de dev solo | `lesson_14-git-fluxo-profissional` | Repositório `segundo-cerebro` com `main` protegida e `develop`, fatia entregue por feature branch e PR com CI, primeira tag `v0.1`. |
-| 8 | SQL relacional: memórias versionadas | `lesson_05-automacao-confiavel` | SQLite com memórias versionadas, consulta por data, busca FTS5 e tabelas de manutenção. |
+| 8 | SQL relacional: memórias versionadas | `lesson_05-sql-memorias` | SQLite com memórias versionadas, consulta por data, busca FTS5 e tabelas de manutenção. |
 | 9 | HTTP e APIs REST: importador do GitHub | `lesson_06-http-apis` | Importar commits e repositórios pela API do GitHub com timeout, erros e paginação tratados. |
 | 10 | Integração e API própria (FastAPI) | `lesson_07-fastapi-dados` | API do Segundo Cérebro com modelos tipados, integrando todas as fontes com falhas rastreáveis. |
-| 11 | Selenium: captura de páginas | `lesson_08-llm-estruturado` | Capturar páginas públicas para o cérebro com esperas explícitas e falha diagnosticada. |
-| 12 | Módulo de manutenção e "sonhar" | `lesson_09-seguranca-custo` | Regras de reincidência com dados fictícios e relatório periódico de padrões. |
-| 13 | React e TypeScript I | `lesson_10-agente-ferramentas` | Diagnóstico prévio; interface tipada consumindo a API (busca e linha do tempo). |
-| 14 | React e TypeScript II | `lesson_11-agente-controle` | Captura pela interface, relatório na tela e fluxo ponta a ponta com falhas tratadas. |
-| 15 | Qualidade e CI completo | `lesson_12-docker-ci` | pytest, debugging, refatoração e CI com lint, tipos e build do frontend. |
-| 16 | Portfólio e processos seletivos | `lesson_13-deploy-portfolio` | Repositório legível com PRs e releases, demo de 3 a 5 minutos e testes de entrada. |
+| 11 | Selenium: captura de páginas | `lesson_08-selenium-captura` | Capturar páginas públicas para o cérebro com esperas explícitas e falha diagnosticada. |
+| 12 | Módulo de manutenção e "sonhar" | `lesson_09-manutencao-sonhar` | Regras de reincidência com dados fictícios e relatório periódico de padrões. |
+| 13 | React e TypeScript I | `lesson_10-react-typescript-1` | Diagnóstico prévio; interface tipada consumindo a API (busca e linha do tempo). |
+| 14 | React e TypeScript II | `lesson_11-react-typescript-2` | Captura pela interface, relatório na tela e fluxo ponta a ponta com falhas tratadas. |
+| 15 | Qualidade e CI completo | `lesson_12-qualidade-ci` | pytest, debugging, refatoração e CI com lint, tipos e build do frontend. |
+| 16 | Portfólio e processos seletivos | `lesson_13-portfolio` | Repositório legível com PRs e releases, demo de 3 a 5 minutos e testes de entrada. |
 
 A partir da `lesson_14`, toda fatia do projeto entra por feature branch e pull request para `develop`; no fim de cada ciclo, um PR de `develop` para `main` publica uma release com tag.
 

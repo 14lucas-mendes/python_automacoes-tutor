@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 5,
+  "revision": 6,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -14,7 +14,7 @@
       "lesson_ids": [],
       "topic_ids": [
         "topic_workflow-profissional",
-        "topic_producao-empregabilidade"
+        "topic_selenium-qualidade"
       ],
       "authority_reason": "Dados primarios publicados pelo proprio GitHub sobre repositorios e contribuidores."
     },
@@ -30,9 +30,9 @@
         "lesson_07-fastapi-dados"
       ],
       "topic_ids": [
-        "topic_agentes-ferramentas"
+        "topic_integracao-fastapi"
       ],
-      "authority_reason": "Documentacao oficial do framework usado no curso. Relinkado em 2026-09-20: o topico topic_apis-backend foi renomeado para SQL relacional na migracao curricular, e o material FastAPI serve o ciclo 7 (lesson_07-fastapi-dados, integracao de sistemas operacionais)."
+      "authority_reason": "Documentacao oficial do framework usado no curso. Relinkado em 2026-09-20: o topico topic_sql-relacional foi renomeado para SQL relacional na migracao curricular, e o material FastAPI serve o ciclo 7 (lesson_07-fastapi-dados, integracao de sistemas operacionais)."
     },
     {
       "source_id": "source_fastapi-testing",
@@ -46,9 +46,9 @@
         "lesson_07-fastapi-dados"
       ],
       "topic_ids": [
-        "topic_agentes-ferramentas"
+        "topic_integracao-fastapi"
       ],
-      "authority_reason": "Referencia oficial para testes de endpoints e HTTPX. Relinkado em 2026-09-20: o topico topic_apis-backend foi renomeado para SQL relacional na migracao curricular, e o material FastAPI serve o ciclo 7 (lesson_07-fastapi-dados, integracao de sistemas operacionais)."
+      "authority_reason": "Referencia oficial para testes de endpoints e HTTPX. Relinkado em 2026-09-20: o topico topic_sql-relacional foi renomeado para SQL relacional na migracao curricular, e o material FastAPI serve o ciclo 7 (lesson_07-fastapi-dados, integracao de sistemas operacionais)."
     },
     {
       "source_id": "source_openai-agents-quickstart",
@@ -84,7 +84,7 @@
       "source_type": "official documentation",
       "lesson_ids": [],
       "topic_ids": [
-        "topic_producao-empregabilidade"
+        "topic_selenium-qualidade"
       ],
       "authority_reason": "Guia oficial de containerizacao e deploy de aplicacoes FastAPI."
     },
@@ -98,7 +98,7 @@
       "source_type": "official documentation",
       "lesson_ids": [],
       "topic_ids": [
-        "topic_producao-empregabilidade"
+        "topic_selenium-qualidade"
       ],
       "authority_reason": "Documentacao oficial para CI de projetos Python."
     },
@@ -295,5 +295,5 @@
       "authority_reason": "Referencia oficial de --oneline e da notacao de intervalo origin..HEAD."
     }
   ],
-  "updated_at": "2026-10-07T23:40:00-03:00"
+  "updated_at": "2026-10-08T00:20:00-03:00"
 }

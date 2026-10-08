@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 185,
-  "updated_at": "2026-10-06T23:12:00-03:00",
+  "revision": 187,
+  "updated_at": "2026-10-07T23:50:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
-      "name": "Logica, decomposicao e Python core",
+      "name": "Python core e programas pequenos testaveis",
       "phase": 1,
       "objective": "Decompor problemas e escrever programas Python pequenos, legiveis e testaveis sem depender de codigo copiado.",
       "prerequisite_topic_ids": [],
@@ -89,7 +89,8 @@
         "testes das regras centrais",
         "README",
         "commit do estudante"
-      ]
+      ],
+      "progress_note": "2026-10-07: nome trocado de 'Logica, decomposicao e Python core' para 'Python core e programas pequenos testaveis' para nao confundir com topic_logica-algoritmos (bloco de logica). Dominio, evidencias e objetivo inalterados."
     },
     {
       "topic_id": "topic_workflow-profissional",
@@ -3458,10 +3459,27 @@
         "project_anchor": "pasta de notas de exemplo no formato do cofre (ficticias no repositorio; cofre real so lido localmente)",
         "revisit": "condicionais (weak_condicionais-ordem-guarda) e valor esperado (weak_verificacao-valor-esperado)",
         "new_constraint": "problema novo decomposto antes de codar, com casos-limite",
-        "expected_transfer": "decompor sozinho um problema de outro contexto (Python Lab 006/007 ou tarefa do estagio sem dados da empresa)"
+        "expected_transfer": "decompor sozinho um problema de outro contexto (Python Lab 006/007 ou tarefa do estagio sem dados da empresa)",
+        "weak_point_exits": [
+          {
+            "weak_point_id": "weak_verificacao-valor-esperado",
+            "task": "Em cada problema, escrever a saida esperada a mao antes de executar e uma verificacao que imprime falha explicita quando o resultado difere.",
+            "counts_when": "O aluno escolhe o valor esperado e monta a verificacao sem o tutor fornecer nenhum dos dois. Sessao 1: notas de exemplo do cofre. Sessao 2, contexto novo: Python Lab 006/007 ou tarefa do estagio sem dados da empresa."
+          },
+          {
+            "weak_point_id": "weak_condicionais-ordem-guarda",
+            "task": "Incluir nos exemplos casos-limite que exigem guarda antes do uso (lista vazia, chave ausente, nota sem frontmatter) e regras sobrepostas (especifica antes da geral).",
+            "counts_when": "A guarda aparece antes do acesso e a ordem das condicoes esta correta sem pista do tutor, em duas sessoes, uma em contexto novo."
+          },
+          {
+            "weak_point_id": "weak_python-test-literal-lista",
+            "task": "Escrever os exemplos esperados como listas literais na chamada e no assert (ex.: assert filtrar([3, 8, 1]) == [8]).",
+            "counts_when": "Duas aplicacoes autonomas em sessoes diferentes com a lista literal escrita sem str/int em volta."
+          }
+        ]
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": null
+      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida."
     },
     {
       "lesson_id": "lesson_16-estruturas-dados",

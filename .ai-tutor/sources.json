@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 4,
+  "revision": 5,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -229,7 +229,71 @@
         "topic_python-fundamentos"
       ],
       "authority_reason": "Referencia oficial do curto-circuito: and so avalia o segundo operando se o primeiro for verdadeiro."
+    },
+    {
+      "source_id": "source_git-remote",
+      "title": "git-remote - Manage set of tracked repositories",
+      "author_or_institution": "Git project (git-scm.com)",
+      "url": "https://git-scm.com/docs/git-remote",
+      "publication_date": null,
+      "accessed_at": "2026-10-07",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_04-descoberta-processo"
+      ],
+      "topic_ids": [
+        "topic_workflow-profissional"
+      ],
+      "authority_reason": "Referencia oficial dos subcomandos add, set-url, remove e da opcao -v; nao existe subcomando edit."
+    },
+    {
+      "source_id": "source_git-diff",
+      "title": "git-diff - Show changes between commits, commit and working tree, etc",
+      "author_or_institution": "Git project (git-scm.com)",
+      "url": "https://git-scm.com/docs/git-diff",
+      "publication_date": null,
+      "accessed_at": "2026-10-07",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_04-descoberta-processo"
+      ],
+      "topic_ids": [
+        "topic_workflow-profissional"
+      ],
+      "authority_reason": "Referencia oficial: git diff compara arvore de trabalho e indice; --staged (sinonimo de --cached) compara indice e HEAD."
+    },
+    {
+      "source_id": "source_git-push",
+      "title": "git-push - Update remote refs along with associated objects",
+      "author_or_institution": "Git project (git-scm.com)",
+      "url": "https://git-scm.com/docs/git-push",
+      "publication_date": null,
+      "accessed_at": "2026-10-07",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_04-descoberta-processo"
+      ],
+      "topic_ids": [
+        "topic_workflow-profissional"
+      ],
+      "authority_reason": "Referencia oficial da opcao -u/--set-upstream, que registra a branch rastreada."
+    },
+    {
+      "source_id": "source_git-log",
+      "title": "git-log - Show commit logs",
+      "author_or_institution": "Git project (git-scm.com)",
+      "url": "https://git-scm.com/docs/git-log",
+      "publication_date": null,
+      "accessed_at": "2026-10-07",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_04-descoberta-processo"
+      ],
+      "topic_ids": [
+        "topic_workflow-profissional"
+      ],
+      "authority_reason": "Referencia oficial de --oneline e da notacao de intervalo origin..HEAD."
     }
   ],
-  "updated_at": "2026-10-01T20:13:06-03:00"
+  "updated_at": "2026-10-07T23:40:00-03:00"
 }

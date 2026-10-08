@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 24,
+  "revision": 25,
   "cards": [
     {
       "card_id": "card_tempos-01",
@@ -277,6 +277,344 @@
       "last_result": "incorrect",
       "confidence": null,
       "status": "learning"
+    },
+    {
+      "card_id": "card_dictreader-chaves-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-csv-module"
+      ],
+      "front": "No csv.DictReader, o que vira as CHAVES de cada linha?",
+      "back": "Os nomes das colunas, tirados da primeira linha do arquivo quando fieldnames nao e passado. Essa primeira linha e omitida dos resultados.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-08",
+      "difficulty": "easy",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_dictreader-fieldnames-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-csv-module"
+      ],
+      "front": "Se voce passa fieldnames explicitamente para o DictReader, o que acontece com a primeira linha do arquivo?",
+      "back": "Ela deixa de ser omitida: entra nos resultados como um registro, porque os nomes ja foram dados por voce.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-08",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_dictreader-restval-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-csv-module"
+      ],
+      "front": "Uma linha tem MENOS celulas que o cabecalho. O que o DictReader coloca na chave que ficou sem valor?",
+      "back": "None, que e o valor padrao de restval.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-08",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_dictreader-restkey-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-csv-module"
+      ],
+      "front": "Uma linha tem MAIS celulas que o cabecalho. Onde o excedente aparece no dicionario?",
+      "back": "Numa chave literalmente chamada None, que e o restkey padrao, guardando a lista de excedentes.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-09",
+      "difficulty": "hard",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_reader-tipos-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-csv-module"
+      ],
+      "front": "O leitor de CSV converte '4.5' em numero automaticamente?",
+      "back": "Nao. Toda celula chega como str, nos dois leitores; a conversao com int() ou float() e sua.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-09",
+      "difficulty": "easy",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_dictreader-fieldnames-02",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-csv-module"
+      ],
+      "front": "Como obter a lista de nomes das colunas de um DictReader, e o que ela vale num arquivo vazio?",
+      "back": "Pelo atributo fieldnames do leitor. Num arquivo vazio, fieldnames e None; num arquivo so com cabecalho, e a lista dos nomes.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-09",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_next-default-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-builtins",
+        "source_python-csv-module"
+      ],
+      "front": "O que acontece ao chamar next(leitor) num arquivo vazio, e como evitar?",
+      "back": "Levanta StopIteration, que nao e FileNotFoundError. Passando um valor padrao, next(leitor, None), o retorno e None em vez de erro.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-10",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_fatiar-pop-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-datastructures"
+      ],
+      "front": "Qual a diferenca entre result[1:] e result.pop(0)?",
+      "back": "Fatiar devolve uma lista nova e deixa a original inteira; pop modifica a lista e devolve o item retirado.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-10",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_main-guard-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-modules"
+      ],
+      "front": "Para que serve if __name__ == \"__main__\"?",
+      "back": "Para o arquivo servir como script e como modulo: o bloco abaixo roda quando o arquivo e executado direto e nao roda quando ele e importado.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-10",
+      "difficulty": "easy",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_print-return-01",
+      "topic_id": "topic_automacao-confiavel",
+      "lesson_id": "lesson_02-arquivos-erros",
+      "source_ids": [
+        "source_python-datastructures"
+      ],
+      "front": "Por que imprimir dentro da funcao nao substitui devolver o valor?",
+      "back": "Porque print so mostra a mensagem na tela: o codigo que chamou a funcao nao recebe nada, e a chamada devolve None. Para quem chamou usar o resultado, a funcao precisa de return.",
+      "created_at": "2026-09-18T21:00:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-11",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_git-remote-familia-01",
+      "topic_id": "topic_workflow-profissional",
+      "lesson_id": "lesson_04-descoberta-processo",
+      "source_ids": [
+        "source_git-remote"
+      ],
+      "front": "Qual subcomando cria um remoto novo e qual corrige a URL de um remoto que ja existe?",
+      "back": "git remote add origin <URL> cria; git remote set-url origin <URL> corrige a URL. Nao existe git remote edit.",
+      "created_at": "2026-10-07T23:40:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-11",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_git-remote-v-01",
+      "topic_id": "topic_workflow-profissional",
+      "lesson_id": "lesson_04-descoberta-processo",
+      "source_ids": [
+        "source_git-remote"
+      ],
+      "front": "Como listar os remotos do repositorio junto com as URLs?",
+      "back": "git remote -v (o -v vem entre remote e o subcomando, quando houver um).",
+      "created_at": "2026-10-07T23:40:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-11",
+      "difficulty": "easy",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_git-log-oneline-01",
+      "topic_id": "topic_workflow-profissional",
+      "lesson_id": "lesson_04-descoberta-processo",
+      "source_ids": [
+        "source_git-log"
+      ],
+      "front": "Qual flag do git log mostra cada commit numa linha so? Escreva a forma exata.",
+      "back": "--oneline, tudo junto (atalho de --pretty=oneline --abbrev-commit). --one-line nao existe.",
+      "created_at": "2026-10-07T23:40:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-12",
+      "difficulty": "easy",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_git-diff-staged-01",
+      "topic_id": "topic_workflow-profissional",
+      "lesson_id": "lesson_04-descoberta-processo",
+      "source_ids": [
+        "source_git-diff"
+      ],
+      "front": "O que git diff compara sem argumentos? E git diff --staged?",
+      "back": "Sem argumentos: arvore de trabalho x indice (o que ainda nao foi preparado). --staged (igual a --cached): indice x ultimo commit (o que vai entrar no proximo commit).",
+      "created_at": "2026-10-07T23:40:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-12",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_git-push-u-01",
+      "topic_id": "topic_workflow-profissional",
+      "lesson_id": "lesson_04-descoberta-processo",
+      "source_ids": [
+        "source_git-push"
+      ],
+      "front": "O que o -u faz em git push -u origin master?",
+      "back": "Registra origin/master como branch rastreada (upstream) da branch local; depois, git pull e git status usam esse vinculo sem precisar repetir o remoto.",
+      "created_at": "2026-10-07T23:40:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-12",
+      "difficulty": "medium",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
+    },
+    {
+      "card_id": "card_git-log-intervalo-01",
+      "topic_id": "topic_workflow-profissional",
+      "lesson_id": "lesson_04-descoberta-processo",
+      "source_ids": [
+        "source_git-log"
+      ],
+      "front": "O que mostra git log --oneline origin/master..HEAD?",
+      "back": "Os commits que estao no HEAD local e ainda nao estao em origin/master, ou seja, o que ainda nao subiu.",
+      "created_at": "2026-10-07T23:40:00-03:00",
+      "updated_at": "2026-10-07T23:40:00-03:00",
+      "due_at": "2026-10-12",
+      "difficulty": "hard",
+      "spaced_repetition_step": 0,
+      "interval_days": 1,
+      "review_count": 0,
+      "objective_correctness": null,
+      "last_result": null,
+      "confidence": null,
+      "status": "new"
     }
-  ]
+  ],
+  "updated_at": "2026-10-07T23:40:00-03:00"
 }

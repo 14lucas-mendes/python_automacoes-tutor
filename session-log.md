@@ -1,8 +1,24 @@
 # Registro de sessões
 
-<!-- Projeção legível mantida à mão. NÃO execute `python -m scripts.projections` neste
-     estudo: o gerador reescreve session-log.md sem condição e substituiria toda esta
-     narrativa por um resumo mecânico de 6 linhas por sessão. -->
+<!-- Projeção legível mantida à mão. Desde a skill bd567cd, `python -m scripts.projections`
+     preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
+     Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
+
+## Manutenção da formação e da skill — 2026-10-07 (`state` 185 → 187, `cards` → 25, `sources` → 5, `learner-profile` → 10)
+
+- Não é sessão de aprendizagem. Nenhuma evidência, domínio, sessão ou condição de saída de ponto fraco foi alterada. Executado a pedido do aluno, a partir de uma revisão da formação e da skill.
+- **Skill versionada.** A onda adaptativa existia só na pasta instalada; o GitHub (`14lucas-mendes/ai-tutor-skill`) tinha parado na v2. Publicada no PR [14lucas-mendes/ai-tutor-skill#1](https://github.com/14lucas-mendes/ai-tutor-skill/pull/1), com CI verde em Windows, Linux e macOS. A pasta instalada virou um clone do repositório (backup em `C:\Users\lucka\skill-backups\installed-pre-git-20261007-224824`). A junction do Claude continua apontando para ela.
+- **Correções na skill**, no PR [14lucas-mendes/ai-tutor-skill#2](https://github.com/14lucas-mendes/ai-tutor-skill/pull/2):
+  - o resumo do perfil passa a usar a taxa de acerto, e não a contagem;
+  - o validador rejeita observações com a chave errada;
+  - o gerador de projeções preserva arquivos escritos à mão.
+- **Skill em uso: commit `bd567cd`.** Na skill, 136 testes OK e `validate_skill` PASS; no estudo, `validate_study` PASS. Daqui em diante, o alinhamento registra o commit, não os hashes (histórico em `docs/compose/historico-alinhamento-skill.md`).
+- **Perfil:** a migração renomeou `support_level` → `help_level` numa observação de 01/10 e recalculou o resumo: `autonomy` foi de `low` para `medium` (uma tentativa autônoma correta e uma parcial); `help_dependency` segue `medium`. O perfil não é evidência e não muda domínio.
+- **Tópico renomeado:** `topic_python-fundamentos` passou de "Logica, decomposicao e Python core" para "Python core e programas pequenos testaveis", para não se confundir com `topic_logica-algoritmos`. Domínio 80 e evidências inalterados. Os IDs herdados do roteiro antigo (`topic_llm-aplicacoes` = HTTP e APIs, `lesson_08-llm-estruturado` = Selenium etc.) continuam; os nomes e as ligações lição → tópico já estavam corretos desde 05/10.
+- **Cards:** foram importados para `cards.json` os 10 cards de rascunho da `lesson_02` (pacote de mídia de 18/09). O verso de `card_print-return-01` foi corrigido: a mensagem do `print` aparece na tela; quem não recebe nada é o código que chamou. Foram criados 6 cards da `lesson_04` (família `git remote`, `-v`, `--oneline`, `diff` × `diff --staged`, `push -u` e `origin/master..HEAD`), conferidos na documentação oficial e registrados como 4 fontes novas (`source_git-*`). As primeiras revisões ficam espalhadas de 08/10 a 12/10. Cards não são evidência. O `flashcards.md` foi regenerado pelo script.
+- **`lesson_15`:** `programming_plan.weak_point_exits` liga `weak_verificacao-valor-esperado`, `weak_condicionais-ordem-guarda` e `weak_python-test-literal-lista` às tarefas da lição. As condições de saída não mudaram.
+- **Regras:** o `AGENTS.md` passou a ser a única fonte. Os quatro arquivos de `.cursor/rules/` (que tinham divergido: nome do diário com underscore, mídia sem a ampliação de 02/10, regra 10 só no Cursor) viraram um só, que aponta para ele. A regra 10 entrou no `AGENTS.md`.
+- Em aberto, para decisão do aluno: o estudo "Fundamentos da Engenharia de IA" falha no `validate_study` (diagnóstico gravado como evidência, referência `conversation`, campos do ponto fraco), e não foi alterado.
 
 ## Revisão de roadmap: bloco de lógica — 2026-10-06 (`revision` 183 → 184)
 

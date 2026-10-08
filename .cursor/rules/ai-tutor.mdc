@@ -1,0 +1,10 @@
+---
+description: Regras da formação Python com a skill ai-tutor — a fonte única é o AGENTS.md da raiz
+alwaysApply: true
+---
+
+# Fonte única das regras
+
+Antes de qualquer ação neste repositório, leia e siga o `AGENTS.md` da raiz. Ele é a **única** fonte das regras do tutor: skill `ai-tutor` (sem `accelerated-learning`), estado canônico em `.ai-tutor/`, regras pedagógicas 1 a 10, transferência, diário no Obsidian, captura no Segundo Cérebro, projeto, bloco de lógica e mídia externa.
+
+Este arquivo não repete regras de propósito. Até 2026-10-07 havia quatro arquivos aqui que copiavam partes do `AGENTS.md` e tinham divergido dele (nome do diário, mídia pelo navegador do Claude Code, regra 10). Para mudar uma regra, mude o `AGENTS.md`.

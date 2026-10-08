@@ -66,7 +66,7 @@ Busca por embeddings ou RAG, LLM na síntese "sonhar", servidor MCP e deploy fic
 
 ## Estado inicial no novo currículo
 
-- Competência validada: lógica, decomposição e Python core — domínio 80.
+- Competência validada: Python core e programas pequenos testáveis (`topic_python-fundamentos`) — domínio 80. Até 2026-10-07 o tópico se chamava "Lógica, decomposição e Python core"; o nome mudou para não se confundir com `topic_logica-algoritmos`, que começa em 0.
 - Competência validada: Git, testes básicos e fluxo profissional — domínio 80.
 - Trabalho preservado e reposicionado: CSV/JSON tem tentativas e explicações válidas, mas a leitura de um CSV real com retorno completo ainda precisa ser demonstrada no Ciclo 4.
 - Pontos fracos preservados: lista literal em testes, fluxo de acumulação/retorno em CSV e o modelo de dois tempos do Python (momento em que cada tipo de erro é detectado).

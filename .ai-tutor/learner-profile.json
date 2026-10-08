@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 9,
+  "revision": 10,
   "updated_at": "2026-10-06T19:28:00-03:00",
   "declared_preferences": [
     {
@@ -67,7 +67,7 @@
       "topic_id": "topic_automacao-confiavel",
       "type": "help_usage",
       "value": {
-        "support_level": 4,
+        "help_level": 4,
         "note": "Correcao pelo relato do aluno: chegou a ordem certa das condicoes por tentativa e erro apos pista parcial do tutor (degrau 4); so depois pediu a outra IA uma explicacao de por que funcionou. Pediu aula explicativa, exercicios e midias sobre condicionais. Na verificacao com valor esperado precisou de degrau 4/5."
       },
       "recorded_at": "2026-10-01T20:13:06-03:00"
@@ -111,7 +111,7 @@
   ],
   "inferences": [],
   "summary": {
-    "autonomy": "low",
+    "autonomy": "medium",
     "help_dependency": "medium",
     "confidence_pattern": "unknown"
   }

@@ -6,7 +6,7 @@ Este repositório é um programa persistente da skill **ai-tutor** (workflows, c
 
 Canônico: `.ai-tutor/state.json`, `study-config.json`, `cards.json`, `sources.json`, `media-index.json`, `learner-profile.json`.
 `state.json` também carrega `diagnostics` (append-only) e `retrieval_attempts` (opcional). `study-config.json` carrega `spacing_policy` (`fixed` por padrão; `adaptive` só se o aluno escolher — nunca altera domínio nem evidência).
-`curriculum.md`, `flashcards.md` e `lessons/` são projeção legível. `session-log.md` é mantido **à mão** — não rodar `python -m scripts.projections` neste estudo: o gerador reescreve `session-log.md` sem condição e substituiria a narrativa por um resumo mecânico.
+`curriculum.md`, `flashcards.md` e `lessons/` são projeção legível. `session-log.md` é mantido **à mão**. Desde o commit `bd567cd` da skill (2026-10-07), `python -m scripts.projections` preserva arquivos sem a marca de gerado: ele atualiza o `flashcards.md` e informa `SKIPPED` para o `session-log.md`. Nunca usar `--force` neste estudo, porque isso substituiria a narrativa por um resumo mecânico.
 
 Validar depois de qualquer mudança de estado, a partir da raiz da skill (`C:\Users\lucka\.config\mimocode\skills\ai-tutor`):
 
@@ -16,12 +16,13 @@ python -m scripts.validate_study "E:\Lucas\Documents\Faculdade AI\python_automac
 
 Atualizações em `.ai-tutor/*.json` usam `scripts/state_io.atomic_update_json` com `expected_revision`.
 
-Quando a skill `ai-tutor` for atualizada, **conferir o alinhamento antes de seguir**: hash dos contratos e scripts instalados contra o registro em `session-log.md`, `validate_skill` sobre o pacote instalado e `validate_study` sobre o estado; registrar o resultado com os hashes no log.
-- O alinhamento à onda de 12/09 (v2 endurecido) está em `session-log.md` e a migração, em `docs/compose/spec/ai-tutor-hardening-migration.md`.
-- O alinhamento à onda adaptativa de 21–22/09 (diagnóstico, learner profile, espaçamento, protocolo adaptativo de aula) está em `session-log.md`; a upgrade foi `scripts.migrate_state` (`_upgrade_v2_support_files`) e a skill em `C:\Users\lucka\.config\mimocode\skills\ai-tutor` foi sincronizada com `E:\Lucas\Documents\Faculdade AI\ai-tutor-base`.
-- Novos atalhos da skill: `/diagnostic` e `/profile`. Diagnóstico e observações de perfil **não** são evidência nem alteram `mastery`.
-- O `scripts/projections.py` continua proibido sobre `session-log.md` neste estudo.
-- **Uma só cópia ativa da skill** (decisão do aluno, 2026-10-06): a fonte única é `C:\Users\lucka\.config\mimocode\skills\ai-tutor`. Qualquer outra pasta de skills (`~/.claude/skills/ai-tutor` etc.) deve ser uma *junction* para ela, nunca uma cópia. O script `docs/compose/unificar-skill-ai-tutor.ps1` diagnostica (sem `-Apply`) e corrige (com `-Apply`), com backup fora das pastas de skills, conferência de hashes e `validate_skill`/`validate_study`.
+### A skill e as atualizações dela
+
+- **Fonte única versionada** (desde 2026-10-07): `C:\Users\lucka\.config\mimocode\skills\ai-tutor` é um clone git de [`14lucas-mendes/ai-tutor-skill`](https://github.com/14lucas-mendes/ai-tutor-skill), na branch `main`. Mudança na skill entra por branch e PR nesse repositório, com o CI verde (testes em Windows, Linux e macOS, `validate_skill` e `compileall`). Nunca editar a pasta instalada fora do git.
+- **Uma só cópia ativa** (decisão do aluno, 2026-10-06): qualquer outra pasta de skills (`~/.claude/skills/ai-tutor` etc.) é uma *junction* para a fonte única, nunca uma cópia. O script `docs/compose/unificar-skill-ai-tutor.ps1` confere e corrige as junctions.
+- **Alinhamento quando a skill mudar:** `git -C <skill_root> pull`, depois `python -m unittest discover -s tests -p "test_*.py"` e `python -m scripts.validate_skill .` na skill, e `validate_study` no estudo. Registrar no `session-log.md` o **commit** da skill em uso (`git -C <skill_root> log -1 --format=%h`). O commit substitui o registro manual de hashes.
+- O histórico dos alinhamentos anteriores (ondas de 12/09 e 21–22/09, hashes e a pasta `ai-tutor-base`, que não existe mais) está em `docs/compose/historico-alinhamento-skill.md`.
+- Atalhos `/diagnostic` e `/profile`: diagnóstico e observações de perfil **não** são evidência nem alteram `mastery`.
 
 ## Operação com a skill `/ai-tutor` (onda adaptativa)
 
@@ -54,6 +55,7 @@ O aluno está aprendendo Python do início. Termo desconhecido **não é falha d
    - Motivo: o tutor registrou as partes guiadas de uma sessão e **não informou** que a metade Feynman do 60 havia sido cumprida na mesma sessão, por evidência autônoma correta. O aluno contestou, com razão: a devolutiva deu a entender que nada tinha contado.
    - Escopo: esta regra muda a **prestação de contas**, não o limiar. O número de domínio continua governado pela matriz normativa da skill (`state-contract`/`learning-contract`), e a autonomia de cada evidência continua julgada pela escada de ajuda (degraus 3–4 aplicam teto 40; 5–6, teto 20).
    - Limites: o tutor não infla evidência guiada nem desqualifica evidência autônoma. A calibragem legítima está na **forma** — quantas evidências registrar, qual tarefa propor, formato da devolutiva, orçamento de tempo —, nunca em contar conteúdo fornecido pelo tutor como trabalho autônomo do aluno.
+10. **Diagnóstico e learner profile não são nota.** `/diagnostic` e `/profile` posicionam o ponto de partida e registram comportamento observável; nunca preenchem `mastery` nem `evidence_ids` e nunca fecham lição. A sondagem de conteúdo não ensinado vira lacuna do material (regra 3), não `incorrect`.
 
 ## Transferência e contexto (decisão do aluno, 2026-09-17)
 

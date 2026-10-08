@@ -1,14 +1,13 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "topic": "Formação de transição para Automação e Integração de Sistemas com Python",
-  "goal": "Fazer uma transição segura para funções de Automação e Integração de Sistemas utilizando Python, com autonomia real de programação e uso progressivamente menos dependente de vibe coding.",
-  "deadline": "Cerca de 11 meses - 16 ciclos de 21 dias (estendido em 2026-10-06 com o bloco de logica; antes: 9 meses, 13 ciclos)",
-  "weekly_hours": 7,
+  "topic": "Formacao de especialista em Python, automacao e IA",
+  "goal": "Tornar-se especialista em Python, automacao e IA aplicada (LLMs, RAG e agentes integrados a sistemas), com front-end (React + TypeScript) e DevOps (Docker, deploy) no nivel suficiente para construir e publicar um sistema completo, com autonomia real de programacao e uso de IA sem dependencia de vibe coding. A amplitude full stack vem da faculdade de ADS.",
+  "deadline": "20 ciclos de 21 dias, fim de referencia 2027-10-24 (formacao fechada em 2026-10-08; antes: 16 ciclos ate 2027-08-01)",
+  "weekly_hours": 10,
   "preferred_times": [
-    "segunda, terça, quinta, sexta e domingo",
-    "dia de trabalho: até 1h30; dia de folga: até 2h",
-    "ciclo de 21 dias alinhado à escala de trabalho"
+    "sem dias fixos: meta de 10 h por semana, distribuidas como o aluno puder (decisao de 2026-10-08)",
+    "ciclo de 21 dias alinhado a escala de trabalho"
   ],
   "initial_level": "básico",
   "language": "pt-BR com inglês técnico progressivo",
@@ -27,7 +26,7 @@
     "target_horizon_days": null
   },
   "program_start_date": "2026-08-31",
-  "program_start_note": "Data oficial escolhida pelo aluno em 2026-09-29: primeira sessao (session_2026-08-31-diagnostico). Ciclos de 21 dias contados a partir dela; calendario informativo, o avanco continua dependendo de evidencia. Em 2026-10-06 o aluno aprovou o bloco de logica (3 ciclos) e o calendario passou a 16 ciclos, ate 2027-08-01.",
+  "program_start_note": "Data oficial escolhida pelo aluno em 2026-09-29: primeira sessao (session_2026-08-31-diagnostico). Ciclos de 21 dias contados a partir dela; calendario informativo, o avanco continua dependendo de evidencia. Em 2026-10-06 o aluno aprovou o bloco de logica (3 ciclos) e o calendario passou a 16 ciclos, ate 2027-08-01. Em 2026-10-08 a formacao foi fechada (formacao-fechada.md): 20 ciclos, ate 2027-10-24, 10 h por semana sem dias fixos.",
   "cycle_calendar": [
     {
       "cycle": 1,
@@ -108,6 +107,26 @@
       "cycle": 16,
       "start": "2027-07-12",
       "end": "2027-08-01"
+    },
+    {
+      "cycle": 17,
+      "start": "2027-08-02",
+      "end": "2027-08-22"
+    },
+    {
+      "cycle": 18,
+      "start": "2027-08-23",
+      "end": "2027-09-12"
+    },
+    {
+      "cycle": 19,
+      "start": "2027-09-13",
+      "end": "2027-10-03"
+    },
+    {
+      "cycle": 20,
+      "start": "2027-10-04",
+      "end": "2027-10-24"
     }
   ]
 }

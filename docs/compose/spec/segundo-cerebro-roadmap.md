@@ -8,6 +8,9 @@ applied_revision: 172
 
 # Proposta de roteiro: o Segundo Cérebro como projeto da formação
 
+> [!warning] Substituído por [`formacao-fechada.md`](formacao-fechada.md) em 2026-10-08
+> Este roteiro fica só como histórico. O projeto passou a ser o app da própria formação, o MVP foi reduzido, a lição de manutenção foi arquivada e entraram Python intermediário, Docker/VPS e IA aplicada.
+
 > **Status: aprovada pelo aluno em 2026-10-05 e aplicada** (`state.json` revisão 172, `curriculum.md`, `AGENTS.md`).
 >
 > Em 2026-10-08 os IDs herdados do roteiro antigo foram renomeados neste documento e no estado (revisão 188), por exemplo `lesson_08-llm-estruturado` → `lesson_08-selenium-captura`. A tabela completa está no `session-log.md`, e cada item renomeado guarda o ID antigo em `former_id`.

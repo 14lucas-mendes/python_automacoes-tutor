@@ -77,28 +77,65 @@ Quando uma lição passar a `completed` no estado canônico, gravar o diário **
 
 Atualizar `[[MOC - Sistema de Estudos]]`. O diário é projeção, não evidência.
 
-## Projeto Segundo Cérebro (decisão do aluno, 2026-10-05)
+## Formação fechada (decisão do aluno, 2026-10-08)
 
-O projeto de portfólio da formação é `project_segundo-cerebro`: o MVP do Segundo Cérebro (Python, SQLite, FastAPI e React com TypeScript), pronto até o fim do Ciclo 13. **Todo exercício se vincula a ele.** Roteiro e raciocínio: `docs/compose/spec/segundo-cerebro-roadmap.md`. A demo de manutenção e o cliente de API viraram módulos dele.
+A formação está **fechada**. O plano único é `docs/compose/spec/formacao-fechada.md`: especialista em Python, automação e IA, em 20 ciclos até 24/10/2027 (referência), com 10 h por semana sem dias fixos.
 
-- **Repositório separado** `segundo-cerebro` no GitHub do aluno, criado na `lesson_14-git-fluxo-profissional`. Este repositório continua só para o estado do tutor.
-- **Fluxo Git de dev solo:** `main` (produção, protegida, só recebe PR de `develop` com CI verde), `develop` (desenvolvimento) e `feature/<fatia>` ou `fix/<assunto>`. Toda fatia entra por PR com descrição e autorrevisão; no fim de cada ciclo, um PR `develop` → `main` publica uma release com tag. O aluno executa os comandos e abre os PRs; o tutor explica antes (regra 1), revisa e nunca faz commit pelo aluno. A proteção da `main` é configurada pelo próprio aluno.
-- **Dados:** o repositório público usa só dados de exemplo fictícios. O cofre real e os registros do tutor nunca vão para o repositório.
+- **Congelado até a `lesson_13-portfolio` ser concluída:**
+  - tópicos e lições;
+  - ordem das lições;
+  - escopo e regras de negócio do MVP;
+  - stack: Python, FastAPI, PostgreSQL, React + TypeScript, Docker, Claude API;
+  - carga de 10 h por semana.
+- **Continua livre:**
+  - adaptar a aula dentro de cada lição;
+  - distribuir as sessões na semana;
+  - corrigir registros sem mudar a estrutura.
+- **Pedido de mudança estrutural:**
+  1. O tutor cita esta regra e registra o pedido no `session-log.md`.
+  2. **Não aplica o pedido na mesma conversa.**
+  3. Avalia só no fecho da lição atual, com justificativa escrita.
+  4. Só aceita diante de um bloqueio real: o estágio exigir outra stack, uma tecnologia ser descontinuada, ou a evidência mostrar que falta um pré-requisito.
+- O próprio aluno pediu este fechamento ("feche essa formação e não permita que eu mude até ela ser concluída"). A autoridade final continua sendo dele.
+
+## Projeto Segundo Cérebro: o app da formação (decisões de 2026-10-05 e 2026-10-08)
+
+O projeto é `project_segundo-cerebro`: **o app da própria formação**, construído sobre a skill `ai-tutor`. O aluno estuda dentro do app, e a aba "Segundo Cérebro" responde perguntas sobre o que a formação registrou, citando a origem. A base é o próprio estudo, não o Obsidian. **Todo exercício se vincula a ele.** MVP, regras de negócio e roteiro estão em `docs/compose/spec/formacao-fechada.md`. O roteiro de 05/10 (`segundo-cerebro-roadmap.md`) é histórico.
+
+- **Repositório separado** `segundo-cerebro` no GitHub do aluno, **criado na `lesson_15`**, com commits na `main`. Este repositório continua só para o estado do tutor.
+- **Fluxo Git de dev solo, a partir da `lesson_14`:**
+  - branches:
+    - `main`: produção, protegida, só recebe PR de `develop` com CI verde;
+    - `develop`: desenvolvimento;
+    - `feature/<fatia>` ou `fix/<assunto>`;
+  - toda fatia entra por PR com descrição e autorrevisão;
+  - no fim de cada ciclo, um PR `develop` → `main` publica uma release com tag;
+  - o aluno executa os comandos e abre os PRs; o tutor explica antes (regra 1), revisa e nunca faz commit pelo aluno;
+  - a proteção da `main` é configurada pelo próprio aluno.
+- **Dados:**
+  - o repositório público usa só um **estudo fictício** (gerado com `scripts/init_study.py`);
+  - o estudo real só é lido localmente;
+  - registros do tutor, o perfil do aluno e o cofre nunca vão para o repositório;
+  - mandar conteúdo do estudo real à Claude API exige consentimento explícito.
+- **O app escreve em um só lugar:** o resultado da revisão de card, gravado pelas funções da skill (`state_io` + `validate_study`). Ele nunca cria evidência nem altera domínio.
+- **VPS:** contratada e paga pelo aluno. O tutor não contrata, não digita credenciais e não altera configurações de conta.
 - **React e TypeScript:** o conhecimento prévio da Mate Academy não conta como domínio. Antes da `lesson_10`, rodar um `/diagnostic` curto (que posiciona, sem gerar evidência) e seguir as regras 1 e 2 para todo conceito ainda não ensinado nesta formação.
 
-## Bloco de lógica (decisão do aluno, 2026-10-06)
+## Bloco de lógica (decisão do aluno, 2026-10-06; âncora atualizada em 2026-10-08)
 
-Entre a `lesson_02` e a `lesson_14` há três ciclos de **lógica, decomposição, estruturas de dados e algoritmos** (`topic_logica-algoritmos`; `lesson_15` a `lesson_17`). Proposta: `docs/compose/spec/bloco-logica-roadmap.md`. A formação passa a ter 16 ciclos, até 01/08/2027.
+Depois da `lesson_02` vêm três ciclos de **lógica, decomposição, estruturas de dados e algoritmos** (`topic_logica-algoritmos`; `lesson_15` a `lesson_17`). Os exercícios usam os dados do estudo fictício, já no repositório do app. Em seguida vem a `lesson_19-python-intermediario`.
 
 - **Decompor antes de codar:** todo exercício do bloco começa com entrada, regra, saída, exemplos com a saída esperada calculada à mão (incluindo casos-limite) e plano em português. Só depois vem o código.
 - **Método:** prever → rodar → investigar → modificar → criar, tabela de rastreio e exemplos resolvidos que vão sumindo.
 - **Prática sugerida:** missões do Python Lab (só referência, sem sincronizar), *Entendendo Algoritmos* (Bhargava) e *Estruturas de Dados e Algoritmos com JavaScript* (Groner; ler o conceito e implementar em Python).
-- **Lógica em espiral:** depois do bloco, toda sexta-feira tem um exercício curto de lógica até o fim da formação.
+- **Lógica em espiral:** depois do bloco, toda semana tem um exercício curto de lógica até o fim da formação.
 - **O estágio** (GFI, análise e desenvolvimento de sistemas) pode virar contexto de transferência quando a stack for conhecida. Dados da empresa nunca entram no estudo.
 
 ## Captura contínua no Segundo Cérebro (decisão do aluno, 2026-10-05)
 
 Ao **fechar ou interromper cada sessão de estudo**, gravar uma nota de sessão no cofre, na mesma virada do fechamento, sem esperar pedido.
+
+**Vigência (decisão de 2026-10-08):** esta captura e o diário no Obsidian continuam até a aba Segundo Cérebro do app funcionar, o que está previsto para a `lesson_21-rag-segundo-cerebro`. No fecho dessa lição, a regra é revista: é uma revisão prevista no plano, não um pedido de mudança. O cofre Obsidian, também chamado "Segundo Cérebro", **não** é fonte de dados do app.
 
 - Pasta: `C:\Users\lucka\Documents\Segundo Cérebro\70 - Sessões Claude\`. Nome: `AAAA-MM-DD Python - <assunto curto>.md`. Seguir o template `00 - Sistema/Templates/Sessão Claude.md`, o `CLAUDE.md` do cofre e a skill `segundo-cerebro`.
 - Frontmatter: `tipo: sessao`, `status: ativo`, `criado`, `origem` (este repositório), `projeto: "[[Segundo Cérebro]]"`, `session_id` canônico e `tags` (`python`, `formacao`, o tópico).

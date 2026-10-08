@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 207,
-  "updated_at": "2026-10-08T17:37:00-03:00",
+  "revision": 209,
+  "updated_at": "2026-10-08T19:58:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -347,6 +347,87 @@
         "confidence": "medium",
         "diagnostic_id": "diagnostic_2026-10-06-logica-01"
       }
+    },
+    {
+      "topic_id": "topic_python-intermediario",
+      "name": "Python intermediario: classes, tipos, pacotes e logging",
+      "phase": 5,
+      "objective": "Modelar dados com classes e dataclasses tipadas, organizar o codigo em pacote com pyproject, registrar execucao com logging e sinalizar falhas com excecoes proprias.",
+      "prerequisite_topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "classes/dataclasses com type hints",
+        "pacote importavel com pyproject",
+        "logging no lugar de print",
+        "excecao propria testada"
+      ],
+      "progress_note": "2026-10-08: topico criado no fechamento da formacao (formacao-fechada.md). Dominio 0, sem heranca."
+    },
+    {
+      "topic_id": "topic_devops-deploy",
+      "name": "Docker, deploy em VPS e operacao",
+      "phase": 7,
+      "objective": "Empacotar a aplicacao em containers, orquestrar com Docker Compose, configurar por variaveis de ambiente e publicar numa VPS acessada por SSH.",
+      "prerequisite_topic_ids": [
+        "topic_integracao-fastapi"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "Dockerfile da API e do front",
+        "docker compose com db, api e web",
+        "segredos fora do codigo (.env)",
+        "deploy na VPS por git clone + compose up",
+        "logs consultados"
+      ],
+      "progress_note": "2026-10-08: topico criado no fechamento da formacao (formacao-fechada.md). Dominio 0, sem heranca."
+    },
+    {
+      "topic_id": "topic_ia-aplicada",
+      "name": "IA aplicada: LLMs, RAG e agentes integrados a sistemas",
+      "phase": 9,
+      "objective": "Integrar a Claude API a um sistema real: saida estruturada validada, respostas ancoradas em fontes com citacao e agente com ferramentas que age no sistema com confirmacao humana.",
+      "prerequisite_topic_ids": [
+        "topic_integracao-fastapi",
+        "topic_http-apis"
+      ],
+      "mastery": 0,
+      "retention": "unknown",
+      "status": "not_started",
+      "last_practice": null,
+      "evidence_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "saida estruturada validada com Pydantic",
+        "custo e tokens medidos",
+        "resposta com citacao verificavel",
+        "agente com ferramentas e confirmacao humana",
+        "riscos de injecao de prompt tratados"
+      ],
+      "progress_note": "2026-10-08: topico criado no fechamento da formacao (formacao-fechada.md). Dominio 0, sem heranca."
     }
   ],
   "evidences": [
@@ -3195,8 +3276,8 @@
     },
     {
       "lesson_id": "lesson_05-sql-memorias",
-      "title": "SQL relacional: memorias versionadas do Segundo Cerebro",
-      "objective": "Modelar memorias versionadas, temas, fontes e o modulo de manutencao em SQLite e consultar por tema, data e texto.",
+      "title": "SQL relacional e PostgreSQL: o banco da formacao",
+      "objective": "Modelar o estudo (topicos, licoes, sessoes, evidencias, cards, pontos fracos) em PostgreSQL rodando num container e escrever o importador que recarrega o banco a partir dos JSON canonicos.",
       "prerequisite_lesson_ids": [
         "lesson_14-git-fluxo-profissional"
       ],
@@ -3208,27 +3289,27 @@
         "transfer"
       ],
       "delivery_criteria": [
-        "tabelas relacionadas",
-        "consultas com join e por data",
-        "busca de texto (FTS5)",
-        "resultado explicado",
+        "PostgreSQL em container (docker compose so com o banco)",
+        "tabelas relacionadas com chaves",
+        "importador que recarrega o banco inteiro",
+        "consultas com join e filtro por data explicadas",
         "entrega por PR"
       ],
       "topic_id": "topic_sql-relacional",
       "programming_plan": {
-        "project_anchor": "banco SQLite do Segundo Cerebro",
+        "project_anchor": "banco do app da formacao (copia de leitura do estudo ficticio)",
         "revisit": "indice.json do ciclo 4",
         "new_constraint": "banco relacional com historico de versoes",
         "expected_transfer": "modelar sozinho o dominio de manutencao"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
       "former_id": "lesson_05-automacao-confiavel",
-      "progress_note": "2026-10-08: ID renomeado de lesson_05-automacao-confiavel para lesson_05-sql-memorias (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
+      "progress_note": "2026-10-08: ID renomeado de lesson_05-automacao-confiavel para lesson_05-sql-memorias (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_06-http-apis",
       "title": "HTTP e APIs REST: importador do GitHub",
-      "objective": "Consumir a API do GitHub para importar commits e repositorios do aluno, tratando contratos, paginacao e falhas HTTP.",
+      "objective": "Consumir a API do GitHub para importar PRs e commits do repositorio do projeto e liga-los a sessao em que foram feitos, tratando timeout, erros de rede e paginacao.",
       "prerequisite_lesson_ids": [
         "lesson_05-sql-memorias"
       ],
@@ -3248,17 +3329,18 @@
       ],
       "topic_id": "topic_http-apis",
       "programming_plan": {
-        "project_anchor": "importador GitHub do Segundo Cerebro",
+        "project_anchor": "importador de PRs e commits do GitHub no app",
         "revisit": "leitura de arquivos e tratamento de excecoes",
         "new_constraint": "fonte remota que pode falhar",
         "expected_transfer": "consumir uma segunda API com outro contrato"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_07-fastapi-dados",
       "title": "Integracao de sistemas e API propria (FastAPI)",
-      "objective": "Servir a API do Segundo Cerebro com FastAPI, integrando cofre, tutor, GitHub e manutencao em um fluxo com falhas rastreaveis e modelos tipados.",
+      "objective": "Servir a API do app da formacao com FastAPI: progresso, licoes, sessoes, evidencias, pontos fracos e cards devidos, com modelos Pydantic e falhas tratadas; a unica escrita e o resultado da revisao de card, gravado pelas funcoes da skill.",
       "prerequisite_lesson_ids": [
         "lesson_06-http-apis"
       ],
@@ -3279,19 +3361,20 @@
       ],
       "topic_id": "topic_integracao-fastapi",
       "programming_plan": {
-        "project_anchor": "API do Segundo Cerebro",
+        "project_anchor": "API do app da formacao",
         "revisit": "cliente HTTP do ciclo 6",
         "new_constraint": "servir uma API em vez de consumir",
         "expected_transfer": "explicar o contrato da propria API e diagnosticar uma falha de integracao"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_08-selenium-captura",
-      "title": "Automacao web com Selenium: captura de paginas",
-      "objective": "Capturar paginas publicas para o Segundo Cerebro com Selenium, usando esperas explicitas e verificacoes.",
+      "title": "Automacao: tarefa agendada e captura de fontes com Selenium",
+      "objective": "Automatizar a rotina do app: tarefa diaria que calcula os cards vencidos e captura com Selenium de uma pagina de documentacao registrada como fonte, com esperas explicitas e falha diagnosticada.",
       "prerequisite_lesson_ids": [
-        "lesson_07-fastapi-dados"
+        "lesson_18-docker-vps-deploy"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3301,22 +3384,23 @@
         "transfer"
       ],
       "delivery_criteria": [
-        "navegacao automatizada",
-        "esperas explicitas",
-        "conteudo publico ou ficticio",
+        "tarefa agendada rodando no container",
+        "lista de cards vencidos verificada com valor esperado",
+        "captura com esperas explicitas",
+        "fonte registrada",
         "falha diagnosticada",
         "entrega por PR"
       ],
       "topic_id": "topic_selenium-qualidade",
       "programming_plan": {
-        "project_anchor": "captura web do Segundo Cerebro",
+        "project_anchor": "automacoes do app da formacao",
         "revisit": "importador via API do ciclo 6",
         "new_constraint": "site sem API",
         "expected_transfer": "automatizar um segundo site sozinho"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
       "former_id": "lesson_08-llm-estruturado",
-      "progress_note": "2026-10-08: ID renomeado de lesson_08-llm-estruturado para lesson_08-selenium-captura (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
+      "progress_note": "2026-10-08: ID renomeado de lesson_08-llm-estruturado para lesson_08-selenium-captura (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_09-manutencao-sonhar",
@@ -3325,7 +3409,7 @@
       "prerequisite_lesson_ids": [
         "lesson_08-selenium-captura"
       ],
-      "status": "planned",
+      "status": "archived",
       "session_ids": [],
       "required_evidence_types": [
         "feynman",
@@ -3348,14 +3432,14 @@
       },
       "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
       "former_id": "lesson_09-seguranca-custo",
-      "progress_note": "2026-10-08: ID renomeado de lesson_09-seguranca-custo para lesson_09-manutencao-sonhar (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
+      "progress_note": "2026-10-08: ID renomeado de lesson_09-seguranca-custo para lesson_09-manutencao-sonhar (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados. | 2026-10-08: arquivada no fechamento da formacao (manutencao e sonhar sairam do MVP; nunca teve sessao). Ciclo ocupado pela lesson_18-docker-vps-deploy."
     },
     {
       "lesson_id": "lesson_10-react-typescript-1",
       "title": "Frontend React e TypeScript I",
-      "objective": "Criar a interface React em TypeScript (Vite) que consome a API do Segundo Cerebro para busca e linha do tempo, com estados de carregamento e erro.",
+      "objective": "Front-end suficiente em React + TypeScript (Vite, react-ts): painel da formacao e tela de revisao de cards consumindo a API, com estados de carregando e erro e tipos que espelham os modelos da API. Comeca por diagnostico de React e TypeScript.",
       "prerequisite_lesson_ids": [
-        "lesson_09-manutencao-sonhar"
+        "lesson_22-agente-tutor-mcp"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3374,20 +3458,20 @@
       ],
       "topic_id": "topic_frontend-react",
       "programming_plan": {
-        "project_anchor": "interface web do Segundo Cerebro",
+        "project_anchor": "telas de painel e revisao do app",
         "revisit": "testes da API pelo terminal e modelos Pydantic",
         "new_constraint": "consumir a API no navegador (inclui CORS)",
         "expected_transfer": "criar uma tela nova sem modelo"
       },
       "diagnostic_note": "Antes da primeira sessao: /diagnostic curto de React e TypeScript (base previa da Mate Academy). Diagnostico posiciona; nao gera dominio nem evidencia.",
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
       "former_id": "lesson_10-agente-ferramentas",
-      "progress_note": "2026-10-08: ID renomeado de lesson_10-agente-ferramentas para lesson_10-react-typescript-1 (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
+      "progress_note": "2026-10-08: ID renomeado de lesson_10-agente-ferramentas para lesson_10-react-typescript-1 (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_11-react-typescript-2",
       "title": "Frontend React e TypeScript II e fluxo ponta a ponta",
-      "objective": "Completar a interface com captura, leitura do relatorio sonhar e navegacao, com o fluxo frontend-API-banco funcionando e falhas tratadas.",
+      "objective": "Aba Segundo Cerebro (busca e pergunta com citacao) e revisao com o agente funcionando ponta a ponta, com falhas tratadas na tela.",
       "prerequisite_lesson_ids": [
         "lesson_10-react-typescript-1"
       ],
@@ -3406,19 +3490,19 @@
       ],
       "topic_id": "topic_frontend-react",
       "programming_plan": {
-        "project_anchor": "interface web do Segundo Cerebro",
+        "project_anchor": "aba Segundo Cerebro e revisao com o agente",
         "revisit": "telas de leitura do ciclo 10",
         "new_constraint": "tela que escreve dados",
         "expected_transfer": "diagnosticar uma falha que atravessa frontend, API e banco"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
       "former_id": "lesson_11-agente-controle",
-      "progress_note": "2026-10-08: ID renomeado de lesson_11-agente-controle para lesson_11-react-typescript-2 (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
+      "progress_note": "2026-10-08: ID renomeado de lesson_11-agente-controle para lesson_11-react-typescript-2 (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_12-qualidade-ci",
       "title": "Qualidade: pytest, debugging, refatoracao e CI completo",
-      "objective": "Cobrir regras, API e importadores com pytest, refatorar sem mudar comportamento e ampliar o CI para lint, tipos e build do frontend.",
+      "objective": "Testes das regras, da API (TestClient) e dos importadores; CI cobrindo lint, tipos (Python e tsc) e build do front; seguranca do app: segredos, dependencias e dados ficticios no repositorio.",
       "prerequisite_lesson_ids": [
         "lesson_11-react-typescript-2"
       ],
@@ -3437,19 +3521,19 @@
       ],
       "topic_id": "topic_selenium-qualidade",
       "programming_plan": {
-        "project_anchor": "qualidade do Segundo Cerebro",
+        "project_anchor": "qualidade e seguranca do app",
         "revisit": "CI minimo do ciclo 5",
         "new_constraint": "CI que barra PR quebrado",
         "expected_transfer": "diagnosticar sozinho um PR com CI vermelho"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
       "former_id": "lesson_12-docker-ci",
-      "progress_note": "2026-10-08: ID renomeado de lesson_12-docker-ci para lesson_12-qualidade-ci (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
+      "progress_note": "2026-10-08: ID renomeado de lesson_12-docker-ci para lesson_12-qualidade-ci (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_13-portfolio",
       "title": "GitHub, testes tecnicos e portfolio do Segundo Cerebro",
-      "objective": "Publicar o MVP do Segundo Cerebro como portfolio, resolver testes tecnicos de entrada e explicar decisoes tecnicas com clareza.",
+      "objective": "Fechar o MVP: README, repositorio publico so com dados ficticios, demo de 3 a 5 minutos, release final e simulacoes de teste tecnico.",
       "prerequisite_lesson_ids": [
         "lesson_12-qualidade-ci"
       ],
@@ -3469,21 +3553,21 @@
       ],
       "topic_id": "topic_selenium-qualidade",
       "programming_plan": {
-        "project_anchor": "MVP do Segundo Cerebro",
+        "project_anchor": "release do MVP do app da formacao",
         "revisit": "todo o projeto",
         "new_constraint": "apresentacao para recrutador",
         "expected_transfer": "explicar uma decisao tecnica nao ensaiada"
       },
-      "roadmap_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
       "former_id": "lesson_13-deploy-portfolio",
-      "progress_note": "2026-10-08: ID renomeado de lesson_13-deploy-portfolio para lesson_13-portfolio (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados."
+      "progress_note": "2026-10-08: ID renomeado de lesson_13-deploy-portfolio para lesson_13-portfolio (o ID antigo vinha do roteiro anterior a 05/10). Conteudo, dominio e evidencias inalterados. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_14-git-fluxo-profissional",
       "title": "Git profissional de dev solo: branches, PR, CI e releases",
-      "objective": "Criar o repositorio segundo-cerebro com main protegida e develop, entregar fatias por feature branch e pull request com CI e publicar releases com tag.",
+      "objective": "Converter o repositorio segundo-cerebro (criado na lesson_15) para o fluxo profissional de dev solo: main protegida, develop, feature/* por PR com descricao e autorrevisao, CI minimo com pytest e tag v0.1.",
       "prerequisite_lesson_ids": [
-        "lesson_17-algoritmos-debugging"
+        "lesson_19-python-intermediario"
       ],
       "status": "planned",
       "session_ids": [],
@@ -3500,12 +3584,13 @@
       ],
       "topic_id": "topic_workflow-profissional",
       "programming_plan": {
-        "project_anchor": "repositorio segundo-cerebro",
+        "project_anchor": "repositorio segundo-cerebro ja existente",
         "revisit": "commits e push do ciclo 3 (topic_workflow-profissional, dominio 80)",
         "new_constraint": "branches separadas de producao e desenvolvimento, PR, CI e release",
         "expected_transfer": "toda fatia seguinte entra por PR sem roteiro de comandos"
       },
-      "roadmap_note": " | 2026-10-06: pre-requisito passou de lesson_02 para lesson_17 (bloco de logica)."
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_15-logica-decomposicao",
@@ -3530,7 +3615,7 @@
       ],
       "topic_id": "topic_logica-algoritmos",
       "programming_plan": {
-        "project_anchor": "pasta de notas de exemplo no formato do cofre (ficticias no repositorio; cofre real so lido localmente)",
+        "project_anchor": "repositorio segundo-cerebro criado nesta licao; perguntas sobre o estudo ficticio gerado com init_study no repositorio segundo-cerebro (estudo real so lido localmente): cards vencidos, evidencias por topico, pontos fracos ativos",
         "revisit": "condicionais (weak_condicionais-ordem-guarda) e valor esperado (weak_verificacao-valor-esperado)",
         "new_constraint": "problema novo decomposto antes de codar, com casos-limite",
         "expected_transfer": "decompor sozinho um problema de outro contexto (Python Lab 006/007 ou tarefa do estagio sem dados da empresa)",
@@ -3553,7 +3638,7 @@
         ]
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida."
+      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_16-estruturas-dados",
@@ -3576,13 +3661,13 @@
       ],
       "topic_id": "topic_logica-algoritmos",
       "programming_plan": {
-        "project_anchor": "indice das notas de exemplo (tag -> notas, pasta -> quantidade, duplicadas, links quebrados): embriao do importador do Segundo Cerebro",
+        "project_anchor": "indices do estudo ficticio: topico -> evidencias, licao -> sessoes, card -> historico",
         "revisit": "decomposicao e rastreio da lesson_15; CSV/JSON da lesson_02",
         "new_constraint": "dados aninhados e escolha de estrutura por custo",
         "expected_transfer": "aplicar os padroes em dados de outro dominio (Python Lab 001/002/003/005)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": null
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
     },
     {
       "lesson_id": "lesson_17-algoritmos-debugging",
@@ -3605,13 +3690,163 @@
       ],
       "topic_id": "topic_logica-algoritmos",
       "programming_plan": {
-        "project_anchor": "ordenar e buscar nas notas de exemplo; defeitos plantados no indice da lesson_16",
+        "project_anchor": "ordenar e buscar sessoes e datas de revisao do estudo ficticio; defeitos plantados nos indices da licao 16",
         "revisit": "estruturas da lesson_16 com restricao de custo; modelo de erros (weak_error-model-tempo-deteccao)",
         "new_constraint": "custo em passos e diagnostico por hipotese",
         "expected_transfer": "diagnosticar sozinho defeito em codigo alheio (Python Lab 004/008)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": null
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
+    },
+    {
+      "lesson_id": "lesson_19-python-intermediario",
+      "title": "Python intermediario: os modelos da formacao",
+      "objective": "Reescrever os dados da formacao (topico, licao, sessao, card) como dataclasses tipadas num pacote com pyproject, com logging e excecoes proprias.",
+      "prerequisite_lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "modelos como dataclasses com type hints",
+        "pacote importavel e instalavel",
+        "logging configurado",
+        "excecao propria com teste",
+        "entrega por commit no repositorio"
+      ],
+      "topic_id": "topic_python-intermediario",
+      "programming_plan": {
+        "project_anchor": "pacote do app da formacao (modelos do estudo ficticio)",
+        "revisit": "funcoes e estruturas do bloco de logica",
+        "new_constraint": "dados com forma declarada (tipos e classes)",
+        "expected_transfer": "modelar sozinho uma entidade nova (fonte ou ponto fraco)"
+      },
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)"
+    },
+    {
+      "lesson_id": "lesson_18-docker-vps-deploy",
+      "title": "Docker e deploy numa VPS",
+      "objective": "Empacotar API, banco e front com Docker Compose, configurar por .env e publicar o app numa VPS contratada pelo aluno, acessada por tunel SSH.",
+      "prerequisite_lesson_ids": [
+        "lesson_07-fastapi-dados"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "Dockerfile da API",
+        "docker compose (db, api, web)",
+        "segredos em .env fora do repositorio",
+        "deploy por git clone + docker compose up",
+        "acesso por tunel SSH",
+        "logs consultados"
+      ],
+      "topic_id": "topic_devops-deploy",
+      "programming_plan": {
+        "project_anchor": "app da formacao rodando na VPS",
+        "revisit": "PostgreSQL em container do ciclo 9",
+        "new_constraint": "rodar fora da propria maquina",
+        "expected_transfer": "republicar uma fatia nova sozinho"
+      },
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)"
+    },
+    {
+      "lesson_id": "lesson_20-llm-estruturado",
+      "title": "LLM com saida estruturada (Claude API)",
+      "objective": "Chamar a Claude API a partir do app com saida estruturada validada por Pydantic, medindo tokens e custo, avaliando respostas com casos esperados e tratando injecao de prompt.",
+      "prerequisite_lesson_ids": [
+        "lesson_08-selenium-captura"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "cliente da Claude API com chave em .env",
+        "saida estruturada validada",
+        "tokens e custo registrados",
+        "casos de avaliacao com resultado esperado",
+        "consentimento antes de enviar dados reais"
+      ],
+      "topic_id": "topic_ia-aplicada",
+      "programming_plan": {
+        "project_anchor": "servico de IA do app (estudo ficticio)",
+        "revisit": "cliente HTTP e modelos Pydantic",
+        "new_constraint": "resposta nao deterministica que precisa ser verificada",
+        "expected_transfer": "estruturar uma segunda tarefa de IA sozinho"
+      },
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)"
+    },
+    {
+      "lesson_id": "lesson_21-rag-segundo-cerebro",
+      "title": "Segundo Cerebro: perguntas sobre a formacao com citacao",
+      "objective": "Construir a aba Segundo Cerebro no back-end: busca de texto do PostgreSQL sobre sessoes, licoes e cards e resposta da Claude API que cita o trecho e a origem.",
+      "prerequisite_lesson_ids": [
+        "lesson_20-llm-estruturado"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "busca full-text no PostgreSQL",
+        "contexto montado so com os trechos encontrados",
+        "resposta com citacao verificavel",
+        "pergunta sem resposta tratada"
+      ],
+      "topic_id": "topic_ia-aplicada",
+      "programming_plan": {
+        "project_anchor": "aba Segundo Cerebro do app",
+        "revisit": "SQL do ciclo 9 e servico de IA do ciclo 14",
+        "new_constraint": "resposta ancorada em fonte",
+        "expected_transfer": "responder sobre um conjunto de documentos diferente"
+      },
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)"
+    },
+    {
+      "lesson_id": "lesson_22-agente-tutor-mcp",
+      "title": "Agente tutor com ferramentas",
+      "objective": "Implementar o agente tutor que conduz a revisao de um card (retrieval_first) usando ferramentas da API do app e so grava o resultado depois da confirmacao do aluno. Servidor MCP como extra opcional.",
+      "prerequisite_lesson_ids": [
+        "lesson_21-rag-segundo-cerebro"
+      ],
+      "status": "planned",
+      "session_ids": [],
+      "required_evidence_types": [
+        "feynman",
+        "application",
+        "transfer"
+      ],
+      "delivery_criteria": [
+        "ferramentas definidas e testadas",
+        "laco do agente com limite de passos",
+        "confirmacao humana antes de gravar",
+        "gravacao pelas funcoes da skill (state_io + validate)",
+        "nenhuma evidencia ou dominio alterado pelo app"
+      ],
+      "topic_id": "topic_ia-aplicada",
+      "programming_plan": {
+        "project_anchor": "revisao de cards com o agente",
+        "revisit": "API do ciclo 11 e servico de IA",
+        "new_constraint": "a IA age no sistema",
+        "expected_transfer": "dar ao agente uma ferramenta nova sozinho"
+      },
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)"
     }
   ],
   "weak_points": [
@@ -3770,7 +4005,7 @@
       "name": "Backlog pos-transicao — agentes com ferramentas",
       "phase": 99,
       "lesson_ids": [],
-      "status": "planned",
+      "status": "archived",
       "objective": "Possivel especializacao posterior; fora do nucleo atual. Inclui servidor MCP do Segundo Cerebro, busca por embeddings/RAG e LLM na sintese sonhar.",
       "delivery_criteria": [
         "tres a cinco ferramentas",
@@ -3778,14 +4013,15 @@
         "guardrails",
         "aprovacao humana",
         "avaliacao"
-      ]
+      ],
+      "archive_note": "2026-10-08: absorvido pelo nucleo da formacao fechada (agentes nas lessons 20-22; Docker, CI e deploy nas lessons 12 e 18) dentro de project_segundo-cerebro."
     },
     {
       "project_id": "project_capstone-producao",
       "name": "Backlog pos-transicao — deploy e cloud",
       "phase": 99,
       "lesson_ids": [],
-      "status": "planned",
+      "status": "archived",
       "objective": "Possivel especializacao posterior; fora do nucleo de transicao atual.",
       "delivery_criteria": [
         "Docker",
@@ -3796,37 +4032,46 @@
         "demo",
         "limitacoes conhecidas",
         "registro de delegacao e verificacao"
-      ]
+      ],
+      "archive_note": "2026-10-08: absorvido pelo nucleo da formacao fechada (agentes nas lessons 20-22; Docker, CI e deploy nas lessons 12 e 18) dentro de project_segundo-cerebro."
     },
     {
       "project_id": "project_segundo-cerebro",
-      "name": "Segundo Cerebro - MVP",
+      "name": "Segundo Cerebro - app da formacao (MVP)",
       "phase": 4,
       "lesson_ids": [
-        "lesson_02-arquivos-erros",
+        "lesson_15-logica-decomposicao",
+        "lesson_16-estruturas-dados",
+        "lesson_17-algoritmos-debugging",
+        "lesson_19-python-intermediario",
         "lesson_14-git-fluxo-profissional",
         "lesson_05-sql-memorias",
         "lesson_06-http-apis",
         "lesson_07-fastapi-dados",
+        "lesson_18-docker-vps-deploy",
         "lesson_08-selenium-captura",
-        "lesson_09-manutencao-sonhar",
+        "lesson_20-llm-estruturado",
+        "lesson_21-rag-segundo-cerebro",
+        "lesson_22-agente-tutor-mcp",
         "lesson_10-react-typescript-1",
         "lesson_11-react-typescript-2",
         "lesson_12-qualidade-ci",
         "lesson_13-portfolio"
       ],
       "status": "planned",
-      "objective": "Memoria pessoal em Python (memorias versionadas, busca, sintese periodica sonhar) com API FastAPI e interface React/TypeScript, sobre dados reais do aluno; modulo de manutencao com dados ficticios. Projeto de portfolio da formacao.",
+      "objective": "App da propria formacao sobre a skill ai-tutor: o aluno estuda dentro do app (painel, revisao de cards com agente tutor) e a aba Segundo Cerebro responde perguntas sobre o que a formacao registrou, citando a origem. Python, FastAPI, PostgreSQL, Claude API, React + TypeScript, Docker e deploy em VPS. Repositorio publico so com estudo ficticio. MVP e regras de negocio: docs/compose/spec/formacao-fechada.md.",
       "delivery_criteria": [
-        "importa cofre, registros do tutor, commits e manutencao",
-        "memorias versionadas consultaveis por data",
-        "busca de texto com trecho e link",
-        "relatorio sonhar",
-        "interface React/TypeScript",
-        "pytest e CI verde em main",
-        "repositorio separado segundo-cerebro com PRs e releases",
-        "dados de exemplo ficticios no repositorio publico",
-        "README e demo"
+        "importador do estudo para PostgreSQL (copia de leitura)",
+        "API FastAPI da formacao",
+        "revisao de cards gravada pelas funcoes da skill",
+        "importador de PRs e commits do GitHub",
+        "tarefa diaria e captura de fonte com Selenium",
+        "Segundo Cerebro com resposta citando a origem",
+        "agente tutor com ferramentas e confirmacao humana",
+        "React + TS: painel, revisao e Segundo Cerebro",
+        "pytest, CI e PR em toda fatia",
+        "Docker Compose e deploy na VPS por tunel SSH",
+        "README, demo e so dados ficticios"
       ],
       "repository": "repositorio separado segundo-cerebro no GitHub do aluno (a criar na lesson_14)",
       "modules": [
@@ -3839,7 +4084,8 @@
         "API FastAPI",
         "interface React/TypeScript"
       ],
-      "decision_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)"
+      "decision_note": "roadmap segundo-cerebro aprovado pelo aluno em 2026-10-05 (docs/compose/spec/segundo-cerebro-roadmap.md)",
+      "progress_note": "2026-10-08: redefinido como app da formacao (formacao-fechada.md); repositorio criado na lesson_15; lesson_09 saiu."
     }
   ],
   "next_focus": "lesson_15-logica-decomposicao",

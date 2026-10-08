@@ -4,6 +4,49 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Formação fechada — 2026-10-08 (`state` 207 → 209, `study-config.json`)
+
+- Não é sessão de aprendizagem. Nenhuma evidência, domínio, ponto fraco ou sessão foi alterado.
+- **Pedido do aluno.** Ele sente que estuda mas "ainda não desenvolveu nada" e quer construir o projeto desde já, usando-o para fechar a lacuna de lógica. Pediu uma avaliação sincera e um plano para seguir até o fim, sem mudanças constantes.
+- **Levantamento de vagas.** Foram lidas 10 vagas completas no LinkedIn público, mais 45 títulos.
+  - React + TS é o front mais comum.
+  - PostgreSQL, Docker e o fluxo de PR são recorrentes.
+  - IA aplicada apareceu em 3 de 10.
+  - Python aparece forte em automação, integração e IA, e não como back-end de "full stack júnior".
+- **Decisões do aluno:**
+  - especialista em Python, automação e IA, com front e DevOps só "suficientes" (a amplitude full stack vem da faculdade de ADS);
+  - o projeto passa a ser o **app da própria formação**, sobre a skill `ai-tutor`, com a aba Segundo Cérebro consultando o estudo (sem Obsidian como fonte);
+  - Claude API como provedor;
+  - 10 h por semana, sem dias fixos;
+  - Obsidian mantido até a aba do app funcionar;
+  - pediu para **fechar a formação e não permitir mudanças até o fim**.
+- **Avaliação do tutor:**
+  - o formato em T está alinhado ao mercado;
+  - o MVP original era grande demais e foi reduzido por regras de negócio: JSON como fonte da verdade, uma única escrita (a revisão de card, pelas funções da skill), busca full-text em vez de embeddings, túnel SSH, três telas e MCP opcional;
+  - faltava Python intermediário;
+  - o maior risco é a carga semanal: cerca de 2,5 h por semana de 21/09 a 08/10.
+- **Estado (`atomic_update_json`, 207 → 208 → 209):**
+  - novos tópicos: `topic_python-intermediario`, `topic_devops-deploy` e `topic_ia-aplicada`, todos com domínio 0;
+  - novas lições: `lesson_19-python-intermediario`, `lesson_18-docker-vps-deploy`, `lesson_20-llm-estruturado`, `lesson_21-rag-segundo-cerebro` e `lesson_22-agente-tutor-mcp`;
+  - `lesson_09-manutencao-sonhar` → `archived`;
+  - objetivos das lições `14`, `05`, `06`, `07`, `08`, `10`, `11`, `12` e `13` reancorados no app;
+  - âncoras das lições `15`, `16` e `17` passam a ser o estudo fictício no repositório;
+  - cadeia de pré-requisitos: 15 → 16 → 17 → 19 → 14 → 05 → 06 → 07 → 18 → 08 → 20 → 21 → 22 → 10 → 11 → 12 → 13;
+  - `project_segundo-cerebro` redefinido; `project_agente-operacional` e `project_capstone-producao` arquivados (absorvidos pelo núcleo);
+  - `next_focus` continua `lesson_15`.
+- **`study-config.json`** (`FileLock` e substituição atômica):
+  - `topic` e `goal` reescritos;
+  - `weekly_hours` passou de 7 para 10;
+  - `preferred_times` sem dias fixos;
+  - `cycle_calendar` estendido a 20 ciclos, até 2027-10-24;
+  - `deadline` reescrito.
+- **Documentos:**
+  - novo plano único `docs/compose/spec/formacao-fechada.md`, com MVP, regras de negócio, roteiro, regra de fechamento e o levantamento com fontes;
+  - `segundo-cerebro-roadmap.md` e `bloco-logica-roadmap.md` marcados como substituídos;
+  - `AGENTS.md` com a nova seção "Formação fechada", o projeto reescrito e a vigência do Obsidian até a `lesson_21`;
+  - `curriculum.md` reescrito à mão.
+- `validate_study`: PASS.
+
 ## Carga semanal: 8 h → 7 h — 2026-10-08 (`study-config.json`)
 
 - Não é sessão de aprendizagem. Decisão do aluno, depois de ver a comparação com o planejamento: o conteúdo está cerca de 46 dias à frente do calendário (concluído até o ciclo 4; o calendário está no ciclo 2), mas as horas registradas caíram de 7,8–11 h por semana (31/08 a 20/09) para cerca de 2,5 h (21/09 a 08/10).

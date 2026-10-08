@@ -1,5 +1,8 @@
 # Bloco de lógica, decomposição e estruturas de dados — proposta
 
+> [!warning] Substituído por [`formacao-fechada.md`](formacao-fechada.md) em 2026-10-08
+> O método e as três lições continuam. Mudam três coisas: a âncora passa a ser o repositório do app da formação (criado na `lesson_15`), o calendário vai a 20 ciclos e a carga a 10 h por semana.
+
 Status: **aprovada pelo aluno em 2026-10-06** e gravada no estado canônico (`revision` 184). `study-config.json` passou a ter 16 ciclos, até 01/08/2027.
 
 ## Por que

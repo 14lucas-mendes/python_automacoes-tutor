@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 206,
-  "updated_at": "2026-10-08T17:52:00-03:00",
+  "revision": 207,
+  "updated_at": "2026-10-08T17:37:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -3042,7 +3042,7 @@
         "topic_label_visible": true,
         "reason": "weak_condicionais-ordem-guarda ainda ativo; interleaving nao se aplica com pre-requisito ativo."
       },
-      "checkpoint": "Aberta em 2026-10-08T16:25 com 90 min. Aluno nao se opos a ordem sugerida: diagnostico primeiro, depois cond-01 e cond-05; tempos-01..08 ficam para a proxima. Sondagem 1 apresentada. | 16:38 sondagem 1 registrada; apresentada a 1b (saida esperada a mao). | 16:42 1b registrada; apresentada 1c (contar so python). | 16:46 1c correta; apresentada 1d (dicionario completo). | 16:49 1d correta; apresentada sondagem 2 (rastreio). | 16:54 sondagem 2 registrada; apresentada 2b. | 16:58 2b correta; apresentada sondagem 3 (codigo). | 17:08 sondagem 3 registrada (exe_01.py em formacao_python/src/logica); apresentada sondagem 4. | 17:12 sondagem 4 registrada; aspas ensinadas; 4b com pista direcional. | 17:17 diagnostico concluido (partial, medium; entrada topic_logica-algoritmos). Iniciada revisao: card_cond-01 apresentado (retrieval_first). | 17:22 cond-01 correto sem ajuda (step 0 -> 1, due 2026-10-11). card_cond-05 apresentado. | 17:27 cond-05 correto sem ajuda (step 0 -> 1, due 2026-10-11). Follow-up: o que provaria a transformacao (ligado a sondagem 1d/4). | 17:31 follow-up cond-05 correto (degrau 2). Perguntado ao aluno: fechar agora ou ~15 min de tempos-01..03. | Aluno escolheu seguir ('Prossiga') com tempos-01..03. 17:36 tempos-01 correto (step 1 -> 2, due 2026-10-15). tempos-02 apresentado. | 17:40 tempos-02: respondeu sobre presenca do traceback; degrau 1 (reformulacao) apresentado. | 17:45 tempos-02 parcial apos degrau 1 (confunde SyntaxError com nome desconhecido/NameError); card fica no step 2 (due 2026-10-15). Explicacao com demo executada; pergunta de checagem (variacao) apresentada. | 17:52 checagem SyntaxError correta (guiada, logo apos explicacao). tempos-03 adiado. Fechada em 2026-10-08T17:52 (~87 de 90 min). Ultimo comportamento proprio: exe_01.py (laco aninhado + acumuladores, saida 3/2/1) e correcao de 'pyhton' com pista direcional. Suporte mais recente no nucleo: degrau 6 (explicacao SyntaxError x NameError). Sem bloqueio. Nenhuma evidencia: diagnostico e recuperacao nao sao evidencia.",
+      "checkpoint": "Aberta em 2026-10-08T16:25 com 90 min. Aluno nao se opos a ordem sugerida: diagnostico primeiro, depois cond-01 e cond-05; tempos-01..08 ficam para a proxima. Sondagem 1 apresentada. | 16:38 sondagem 1 registrada; apresentada a 1b (saida esperada a mao). | 16:42 1b registrada; apresentada 1c (contar so python). | 16:46 1c correta; apresentada 1d (dicionario completo). | 16:49 1d correta; apresentada sondagem 2 (rastreio). | 16:54 sondagem 2 registrada; apresentada 2b. | 16:58 2b correta; apresentada sondagem 3 (codigo). | 17:08 sondagem 3 registrada (exe_01.py em formacao_python/src/logica); apresentada sondagem 4. | 17:12 sondagem 4 registrada; aspas ensinadas; 4b com pista direcional. | 17:17 diagnostico concluido (partial, medium; entrada topic_logica-algoritmos). Iniciada revisao: card_cond-01 apresentado (retrieval_first). | 17:22 cond-01 correto sem ajuda (step 0 -> 1, due 2026-10-11). card_cond-05 apresentado. | 17:27 cond-05 correto sem ajuda (step 0 -> 1, due 2026-10-11). Follow-up: o que provaria a transformacao (ligado a sondagem 1d/4). | 17:31 follow-up cond-05 correto (degrau 2). Perguntado ao aluno: fechar agora ou ~15 min de tempos-01..03. | Aluno escolheu seguir ('Prossiga') com tempos-01..03. 17:36 tempos-01 correto (step 1 -> 2, due 2026-10-15). tempos-02 apresentado. | 17:40 tempos-02: respondeu sobre presenca do traceback; degrau 1 (reformulacao) apresentado. | 17:45 tempos-02 parcial apos degrau 1 (confunde SyntaxError com nome desconhecido/NameError); card fica no step 2 (due 2026-10-15). Explicacao com demo executada; pergunta de checagem (variacao) apresentada. | 17:52 checagem SyntaxError correta (guiada, logo apos explicacao). tempos-03 adiado. Fechada em 2026-10-08T17:52 (~87 de 90 min). Ultimo comportamento proprio: exe_01.py (laco aninhado + acumuladores, saida 3/2/1) e correcao de 'pyhton' com pista direcional. Suporte mais recente no nucleo: degrau 6 (explicacao SyntaxError x NameError). Sem bloqueio. Nenhuma evidencia: diagnostico e recuperacao nao sao evidencia. | Correcao 2026-10-08T17:37: os horarios intermediarios a partir de 16:38 foram estimados pelo tutor sem ler o relogio e ficaram adiantados; registros posteriores a 17:37 foram limitados a 17:37. Duracao real: cerca de 70 de 90 min (16:25 ate antes de 17:37).",
       "evidence_ids": [],
       "difficulty": "recall",
       "next_step": "Abrir lesson_15 com aula antes de avaliar (regra 1): exemplos com saida esperada EM NUMEROS antes do codigo + assert; tabela de rastreio montada pelo aluno; dicionario com chave nova (ensinar antes; generalizar contar_tags). Cards vencidos: tempos-03..08, dictreader-chaves/fieldnames/restval (08/10), cond-02..04 (09/10).",
@@ -3055,7 +3055,7 @@
         "fora do estudo: E:/Lucas/Documents/formacao_python/src/logica/exe_01.py (criado pelo aluno)",
         "fora do estudo: nota de sessao no cofre Segundo Cerebro (70 - Sessoes Claude)"
       ],
-      "ended_at": "2026-10-08T17:52:00-03:00"
+      "ended_at": "2026-10-08T17:37:00-03:00"
     }
   ],
   "lessons": [
@@ -4263,7 +4263,7 @@
       "prompt": "card_tempos-02: sem o cabecalho 'Traceback (most recent call last)', o que isso prova? | resposta: 'O Traceback indica que o erro surgiu na chamada mais recente ao rodar o programa. Nao necessariamente indica que o erro esta na linha apontada, mas que o erro apareceu ali na ultima chamada.' Respondeu sobre a PRESENCA do traceback, nao sobre a ausencia; nucleo (ausencia = reprovado na analise, nenhuma linha executou) nao apareceu. Degrau 1 (reformular) aplicado em seguida.",
       "outcome": "incorrect",
       "support_level": 0,
-      "recorded_at": "2026-10-08T17:40:00-03:00"
+      "recorded_at": "2026-10-08T17:37:00-03:00"
     },
     {
       "retrieval_id": "retrieval_44568f97-caf9-4702-9f85-f48c566e402a",
@@ -4272,7 +4272,7 @@
       "prompt": "card_tempos-02 reformulado (degrau 1) com exemplo de saida SyntaxError sem cabecalho Traceback (o exemplo exibia o nome 'SyntaxError'). | resposta: 'o erro e de sintaxe e o programa nem chegou a rodar por que ele nao reconhece o nome de uma variavel ou funcao na linha quando executada.' Parcial: 'nem chegou a rodar' correto e proprio; justificativa contradiz (nome desconhecido = NameError, excecao durante a execucao, com Traceback). Mesma confusao de momento de deteccao de weak_error-model-tempo-deteccao. Explicacao simples + demo executada (sintaxe.py x nome.py) em seguida.",
       "outcome": "partial",
       "support_level": 1,
-      "recorded_at": "2026-10-08T17:45:00-03:00"
+      "recorded_at": "2026-10-08T17:37:00-03:00"
     },
     {
       "retrieval_id": "retrieval_68b9b2fe-6721-4be0-b4c9-d1b7ffaa161f",
@@ -4281,7 +4281,7 @@
       "prompt": "Checagem apos explicacao de tempos-02 (variacao): prever print('comecou'); x = 10; print(x +). | resposta: 'SyntaxError, comecou nem e impresso e nao aparece Traceback'. Correto; conferido por execucao pelo tutor (SyntaxError: invalid syntax, nada impresso). Guiado: veio logo apos a explicacao (degrau 6), nao conta como recuperacao autonoma.",
       "outcome": "correct",
       "support_level": 5,
-      "recorded_at": "2026-10-08T17:52:00-03:00"
+      "recorded_at": "2026-10-08T17:37:00-03:00"
     }
   ]
 }

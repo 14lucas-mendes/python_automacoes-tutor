@@ -102,7 +102,7 @@ O trabalho real está cerca de 6 semanas à frente do calendário. Por isso o bl
 
 ## Em aberto
 
-- **Horas semanais:** dependem da carga do estágio, ainda indefinida. Mantém-se 8 h e os dias protegidos atuais até o aluno informar a nova rotina. Sessões de 45 a 60 min continuam válidas: o protocolo é flexível.
+- **Horas semanais:** resolvido em 2026-10-08. O aluno passou de 8 h para **7 h** por semana, por equilíbrio. O estágio ainda não começou e, quando começar, fica dentro do período de trabalho, sem somar carga ao estudo. Os dias protegidos continuam os mesmos. Sessões de 45 a 60 min continuam válidas: o protocolo é flexível.
 - **Estágio como transferência:** quando a stack for conhecida, tarefas parecidas com as do estágio podem entrar como contexto de transferência. Dados da empresa nunca entram no repositório nem no tutor.
 - **Python Lab:** continua só como referência (decisão de 2026-10-04). Não há missões de busca e ordenação; se o aluno criar alguma no Lab, ela pode entrar como prática sugerida da lição 17.
 

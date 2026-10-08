@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 11,
+  "revision": 12,
   "updated_at": "2026-10-06T19:28:00-03:00",
   "declared_preferences": [
     {
@@ -118,7 +118,7 @@
         "result": "positive",
         "note": "Em 1 e 2 descreveu a regra e deixou valores como 'n'/sem numero; quando a pergunta pediu numero explicito (1c, 1d, 2b) calculou certo de primeira. 1b foi lida como pedido de estrutura (aluno: 'nao tinha entendido a pergunta')."
       },
-      "recorded_at": "2026-10-08T17:52:00-03:00"
+      "recorded_at": "2026-10-08T17:37:00-03:00"
     }
   ],
   "inferences": [],

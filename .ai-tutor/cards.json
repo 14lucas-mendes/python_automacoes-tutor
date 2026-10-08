@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 29,
+  "revision": 30,
   "cards": [
     {
       "card_id": "card_tempos-01",
@@ -35,7 +35,7 @@
       "front": "A mensagem de erro nao traz o cabecalho \"Traceback (most recent call last)\". O que isso prova?",
       "back": "Que o codigo foi reprovado na analise. Nenhuma linha executou, por isso nao existe rastro de chamadas.",
       "created_at": "2026-09-12T17:03:14.792180-03:00",
-      "updated_at": "2026-10-08T17:45:00-03:00",
+      "updated_at": "2026-10-08T17:37:00-03:00",
       "due_at": "2026-10-15",
       "difficulty": "medium",
       "spaced_repetition_step": 2,
@@ -616,5 +616,5 @@
       "status": "new"
     }
   ],
-  "updated_at": "2026-10-08T17:45:00-03:00"
+  "updated_at": "2026-10-08T17:37:00-03:00"
 }

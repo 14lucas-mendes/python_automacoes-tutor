@@ -4,9 +4,17 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Carga semanal: 8 h → 7 h — 2026-10-08 (`study-config.json`)
+
+- Não é sessão de aprendizagem. Decisão do aluno, depois de ver a comparação com o planejamento: o conteúdo está cerca de 46 dias à frente do calendário (concluído até o ciclo 4; o calendário está no ciclo 2), mas as horas registradas caíram de 7,8–11 h por semana (31/08 a 20/09) para cerca de 2,5 h (21/09 a 08/10).
+- Motivo declarado: 7 h é mais equilibrado. O estágio ainda não começou e, quando começar, fica dentro do período de trabalho, sem somar carga ao estudo.
+- `weekly_hours` passou de 8 para 7, gravado com `FileLock` e substituição atômica (o arquivo não tem `revision`). `validate_study`: PASS. Calendário de ciclos, prazo e dias protegidos inalterados. A pendência "horas semanais" do `bloco-logica-roadmap.md` foi fechada.
+- Projeção do tutor: os ciclos foram dimensionados para cerca de 24 h (8 h × 3 semanas); com 7 h, cada ciclo leva uns 3,4 dias a mais. Nos 12 ciclos restantes, isso consome cerca de 41 dos 46 dias de folga, desde que as 7 h sejam cumpridas.
+
 ## `session_2026-10-08-diagnostico-logica-01`
 
-- Status: concluída (16:25–17:52, cerca de 87 de 90 min). `state` 188 → 206, `cards` 25 → 29, `learner-profile` 10 → 11. Skill em uso: commit `bd567cd`.
+- Status: concluída (começou às 16:25 e terminou antes das 17:37, cerca de 70 de 90 min). `state` 188 → 207, `cards` 25 → 30, `learner-profile` 10 → 12. Skill em uso: commit `bd567cd`.
+- Correção de horários (revisões 207/30/12): os horários intermediários gravados a partir de 16:38 foram estimados pelo tutor sem consultar o relógio e ficaram adiantados (iam até 17:52). Os registros posteriores a 17:37 foram limitados a 17:37, a hora real da correção.
 - Lições: `lesson_15-logica-decomposicao` (diagnóstico; segue `planned`) e `lesson_02-arquivos-erros` (cards).
 - Objetivo: retomar e concluir o `diagnostic_2026-10-06-logica-01`; depois, recuperar `cond-01` e `cond-05` (`retrieval_first`). O aluno pediu para seguir com `tempos-01..03`.
 - **Diagnóstico** (não é evidência, não altera domínio). Concluído com estimativa `partial`, confiança `medium`, e `entry_topic_id: topic_logica-algoritmos`.

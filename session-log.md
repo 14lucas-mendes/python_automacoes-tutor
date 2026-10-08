@@ -4,6 +4,34 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-08-diagnostico-logica-01`
+
+- Status: concluída (16:25–17:52, cerca de 87 de 90 min). `state` 188 → 206, `cards` 25 → 29, `learner-profile` 10 → 11. Skill em uso: commit `bd567cd`.
+- Lições: `lesson_15-logica-decomposicao` (diagnóstico; segue `planned`) e `lesson_02-arquivos-erros` (cards).
+- Objetivo: retomar e concluir o `diagnostic_2026-10-06-logica-01`; depois, recuperar `cond-01` e `cond-05` (`retrieval_first`). O aluno pediu para seguir com `tempos-01..03`.
+- **Diagnóstico** (não é evidência, não altera domínio). Concluído com estimativa `partial`, confiança `medium`, e `entry_topic_id: topic_logica-algoritmos`.
+
+  | Sondagem | Observado | Estimativa |
+  |---|---|---|
+  | 1. Decompor a contagem de tags, sem código | Saída em dicionário `tag → contagem`, acumulador e nota vazia percebidos sem pista; lista de tags assumida como entrada pronta; laço ambíguo; valores deixados como `n` | `partial` |
+  | 1b. Dicionário final com números | Mudou a forma da saída e não deu números; o aluno disse depois que não entendeu a pergunta (falha do material) | `weak`, `low` |
+  | 1c–1d. Contar `python`; dicionário completo | `A, B, D`; `{"python": 3, "estudo": 2, "git": 1}` | `likely_known` |
+  | 2. Prever o laço com acumulador e `if`/`else` | Descreveu a regra ("quase um caixa registrador"), sem dar o valor | `partial` |
+  | 2b. Rastrear com a tabela fornecida | 12 → 11 → 41 → 40, correto | `likely_known`, `medium` |
+  | 3. `contar_tags` em `formação_python/src/logica/exe_01.py` | Laço aninhado e acumuladores corretos, sem pista; tags fixas no código; chave `pyhton`; declarado concluído sem comparar com o esperado | `partial`, `high` |
+  | 4–4b. Comparar a saída com o esperado | Primeiro apontou as aspas (lacuna do material, ensinada); com pista direcional, achou `pyhton`, corrigiu no `return` e rodou de novo | `weak` → `partial` |
+
+  Ponto de entrada da `lesson_15`: laço, acumulador e `if` já servem de base. Focar em (1) exemplos com a saída esperada **em números** antes do código; (2) comparação explícita com `assert`; (3) tabela de rastreio montada pelo aluno; (4) generalizar, montando o dicionário com chave nova (ensinar antes, regra 1; ponte para a `lesson_16`).
+- **Cards** (recuperação; não é evidência):
+  - `cond-01`: correto, sem ajuda. Passo 0 → 1; volta em 11/10.
+  - `cond-05`: correto, sem ajuda. É o primeiro acerto em quatro revisões. Na pergunta seguinte, sobre o que provaria a transformação (degrau 2), respondeu certo: "teste com o formato de saída desejado". Passo 0 → 1; volta em 11/10.
+  - `tempos-01`: correto, sem ajuda (sintaxe × exceção). Passo 1 → 2; volta em 15/10.
+  - `tempos-02`: respondeu sobre a **presença** do traceback. Depois da reformulação (degrau 1), ficou parcial: acertou "nem chegou a rodar", mas justificou com nome desconhecido, que é `NameError`. É a mesma confusão de `weak_error-model-tempo-deteccao`. O tutor explicou com a analogia do teatro e uma demonstração executada (`sintaxe.py` × `nome.py`). A checagem com `print(x +)` saiu correta, mas guiada (degrau 6). Fica no passo 2; volta em 15/10.
+  - `tempos-03`: adiado.
+- Evidências: nenhuma. Domínio inalterado. Os pontos fracos `weak_verificacao-valor-esperado`, `weak_condicionais-ordem-guarda` e `weak_error-model-tempo-deteccao` seguem ativos.
+- Perfil: uma observação `strategy_outcome`. Pedir o valor concreto de forma explícita funcionou depois das respostas descritivas.
+- Próximo passo: abrir a `lesson_15` com aula antes de avaliar, nos quatro focos acima. Cards vencidos: `tempos-03..08`, os três de `dictreader` (08/10) e `cond-02..04` (09/10).
+
 ## IDs herdados renomeados — 2026-10-08 (`state` 187 → 188, `sources` 5 → 6)
 
 - Não é sessão de aprendizagem. Pedido do aluno, depois da revisão de 07/10: os IDs vinham do roteiro anterior a 05/10 e não diziam o que a lição ou o tópico cobrem. Nenhuma das lições tinha começado; nenhum dos tópicos tinha evidência.

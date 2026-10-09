@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 209,
-  "updated_at": "2026-10-08T19:58:00-03:00",
+  "revision": 221,
+  "updated_at": "2026-10-09T19:56:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -3137,6 +3137,45 @@
         "fora do estudo: nota de sessao no cofre Segundo Cerebro (70 - Sessoes Claude)"
       ],
       "ended_at": "2026-10-08T17:37:00-03:00"
+    },
+    {
+      "session_id": "session_2026-10-09-lesson15-abertura-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-10-09T18:05:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_15-logica-decomposicao",
+        "lesson_01-python-core"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos",
+        "topic_python-fundamentos"
+      ],
+      "objective": "(1) Recuperar cond-02, cond-03 e cond-04 (retrieval_first, ~10 min). (2) Abrir a lesson_15: criar a pasta local segundo-cerebro com estudo ficticio (init_study) e decompor antes do codigo o primeiro problema do app (quantos cards estao vencidos hoje): entrada, regra, saida, exemplos com saida esperada a mao (casos-limite) e plano em portugues; implementar e verificar com assert.",
+      "cognitive_core": "Revisao: ordem de condicoes sobrepostas, guarda antes do acesso, verificar antes de gravar. Licao: decompor o problema (exemplos esperados calculados a mao, casos-limite) e escrever a verificacao com valor esperado escolhido pelo aluno.",
+      "mode": "learning",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_python-fundamentos"
+        ],
+        "topic_label_visible": true,
+        "reason": "weak_condicionais-ordem-guarda ainda ativo; interleaving nao se aplica com pre-requisito ativo."
+      },
+      "checkpoint": "Aberta em 2026-10-09T18:05 com 90 min. Ordem aceita pelo aluno: cond-02..04, depois abertura da lesson_15 (pasta segundo-cerebro + estudo ficticio + problema 'cards vencidos hoje'). tempos-03..08 e dictreader-* ficam para a proxima. card_cond-02 apresentado. | 18:11 cond-02 correto sem ajuda (step 1 -> 2, due 2026-10-16). card_cond-03 apresentado. | 18:14 cond-03 correto sem ajuda (guarda if len(lista) > 0 antes de lista[0]; step 1 -> 2, due 2026-10-16). card_cond-04 apresentado. | 18:17 cond-04 correto sem ajuda (step 1 -> 2, due 2026-10-16). Revisao concluida (3/3 corretos). Inicio da abertura da lesson_15. | 18:30 Decomposicao 1 (contar cards vencidos), 1a versao: entrada = lista de cards (dicionarios); regra = percorrer, se data atual < due_at nao venceu, se maior venceu; saida = nova lista e 'um dicionario com o id de cada card vencido'. Lacunas: data atual usada na regra mas nao declarada como entrada (dica previa no enunciado: 'os cards sozinhos bastam?'); caso igual (vence hoje) nao tratado; saida nao responde 'quantos' e mistura lista/dicionario. Tutor: degrau 1 (reformulou a pergunta da saida) + degrau 3 (de onde vem a data; teste hoje x amanha). Caso igual deixado para a etapa de exemplos. | 18:36 Entrada corrigida apos degrau 3: contar_vencidos(cards, data atual) - data como parametro porque o resultado mudaria de um dia para outro (correto). Saida = int. Pedidos 3-4 exemplos com esperado a mao (2+ casos-limite). Aluno pediu explicacao de caso-limite: falha do material (definicao com exemplos de dados incomuns nao bastou). 18:38 Reexplicado com analogia da balanca de mala (limite 23 kg: normal, nenhuma mala, exatamente 23, acima) - pre-requisito ensinado em contexto diferente; efeito registrado: as familias genericas (vazio, exatamente na fronteira) foram dadas pelo tutor, entao identificar a familia nao ganha credito independente nesta tentativa; aplicar aos cards segue com o aluno. | 19:01 (relogio lido) Exemplo do aluno: um so exemplo com dois cards ['' , '2026-10-09'], hoje '2026-10-09', esperado 2, testando 'card sem data de vencimento' e 'data atual igual a de vencimento'; duvida sobre horario. Proprio: caso 'sem data' (nao estava na analogia; o formato da skill permite due_at null) e igualdade conta como vencido. Faltou: separar um caso por exemplo, declarar a regra para card sem data, lista vazia, 3-4 exemplos. Tutor: ensinou 'um caso por exemplo' (isolar a causa da falha) e informou que due_at e so data (sem hora) e pode ser null; degrau 1 reformulando 'nada para contar' = lista inteira vazia. Correcao de horarios: 18:14, 18:17, 18:30, 18:36 e 18:38 foram estimados sem ler o relogio; a ordem esta certa, os minutos podem estar adiantados ou atrasados. Orcamento: ~35 min restantes ate 19:35. | 19:10 Tabela reescrita um caso por linha: (1) sem data -> 1; (2) vence hoje -> 1; (3) [] -> esperado 1, com nota 'devolver mensagem de que nao ha cards'. Regra do None escrita pelo aluno, com justificativa propria: sem data nao da para comprovar, entao deve ser revisado (correto, defensavel). Linha 3 incorreta: esperado 1 para lista vazia (contagem deveria ser 0) e mistura a saida int com mensagem ao usuario. Tutor: degrau 3 (contar de verdade os cards de uma lista vazia). | 19:12 Linha 3 corrigida pelo aluno apos degrau 3: 'erro de digitacao, esperado e zero ou None'. Tutor explicou 0 x None (quantos = 0 e uma resposta; None = sem resposta) e que a mensagem ao usuario pertence a tela, nao a contagem. Decomposicao do problema 1 completa: contar_vencidos(cards, hoje) -> int; vence hoje conta; due_at None conta (regra do aluno); [] -> 0. Ensinado pre-requisito (regra 1): comparacao de datas ISO como texto, com demo executada (2026-10-05 <= 2026-10-09 True; 2026-10-12 False; 2026-09-30 True; contraexemplo 9/10/2026 <= 10/10/2026 False). Tarefa apresentada: implementar contar_vencidos + asserts com os 4 exemplos em segundo-cerebro/exercicios/contar_vencidos.py. | ~19:20 Aluno perguntou como obter a data atual: ensinado date.today().isoformat() (pre-requisito, demo executada) e reforcado que fica fora da funcao. Depois perguntou a estrutura do arquivo (funcao x testes): falha do material; explicado com receita/prova e exemplo dobrar(x) (pre-requisito, sem codigo da tarefa). 19:48 (relogio) 1a versao do aluno: E:/Lucas/Documents/segundo-cerebro/exercicios/contar_vencidos.py (sha256 4f534e07...). Rodada pelo tutor: AssertionError por chave diferente ('card_vencidos' no esperado x 'cards_vencidos' no retorno). Proprio: laco + acumulador, guarda de lista vazia antes do laco, tratamento de None previsto. Defeitos: comparacao invertida (hoje < due_at conta os NAO vencidos: devolve 2, o certo para a lista dele em 09/10 seria 4) e o esperado escrito tambem e 2 -> corrigida a chave, o teste passaria com resultado errado (weak_verificacao-valor-esperado); usa date.today() no teste (contradiz a decisao de reprodutibilidade); saida dict/string em vez de int; teste do None depois da comparacao (None quebraria antes; weak_condicionais-ordem-guarda); um teste so, sem as linhas da tabela. Tutor: apontou locais e criterios (degrau 1) + pergunta direcional para contar a mao os vencidos da lista (degrau 3). Orcamento de 90 min estourado (~103 min). | 19:53 Contagem a mao dos vencidos da lista do aluno em 09/10: 4 (a, c, d, h) - correto, com tabela card a card montada pelo tutor (degrau 4). Pergunta direcional apresentada e nao respondida: avaliar a linha 18 com card_b ('2026-10-09' < '2026-10-12'). Fechada a pedido do aluno em 2026-10-09T19:56 (~111 min de 90). Volta no domingo 2026-10-11; vai tentar corrigir no trabalho num interpretador Python online (so codigo e dados ficticios). Ultimo comportamento proprio: laco + acumulador + guarda de lista vazia antes do laco em contar_vencidos; regra do due_at None com justificativa propria; caso 'sem data' achado sem pista. Suporte mais recente no nucleo: degrau 4 (tabela de contagem). Versao atual: E:/Lucas/Documents/segundo-cerebro/exercicios/contar_vencidos.py sha256 07d6ae0a... (chave corrigida; teste passa com resultado errado 2 em vez de 4). Proxima entrega minima: (1) comparacao da linha 18 no sentido certo; (2) saida int, sem dict/texto; (3) 4 asserts, um por linha da tabela, com data fixa '2026-10-09'; (4) None verificado antes da comparacao. Sem bloqueio. Nenhuma evidencia: decomposicao e codigo guiados (degraus 1-4).",
+      "ended_at": "2026-10-09T19:56:00-03:00",
+      "evidence_ids": [],
+      "difficulty": "medium",
+      "files_changed": [
+        "E:/Lucas/Documents/segundo-cerebro/exercicios/contar_vencidos.py",
+        "lessons/15-logica-decomposicao.md"
+      ],
+      "next_step": "Retomar contar_vencidos.py: linha 18, saida int, 4 asserts da tabela com data fixa, None antes da comparacao; depois Feynman curto e problema 2 (evidencias por topico). Cards: tempos-03..08 e dictreader-*."
     }
   ],
   "lessons": [
@@ -3174,7 +3213,8 @@
       "session_ids": [
         "session_2026-09-03-python-core-01",
         "session_2026-09-07-python-core-tests",
-        "session_2026-10-02-condicionais-01"
+        "session_2026-10-02-condicionais-01",
+        "session_2026-10-09-lesson15-abertura-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -3599,9 +3639,10 @@
       "prerequisite_lesson_ids": [
         "lesson_02-arquivos-erros"
       ],
-      "status": "planned",
+      "status": "in_progress",
       "session_ids": [
-        "session_2026-10-08-diagnostico-logica-01"
+        "session_2026-10-08-diagnostico-logica-01",
+        "session_2026-10-09-lesson15-abertura-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -3638,7 +3679,7 @@
         ]
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
+      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto."
     },
     {
       "lesson_id": "lesson_16-estruturas-dados",
@@ -4528,6 +4569,33 @@
       "outcome": "correct",
       "support_level": 5,
       "recorded_at": "2026-10-08T17:37:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_d253e04c-cb0b-494a-a3b8-a04415457ae2",
+      "session_id": "session_2026-10-09-lesson15-abertura-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-02 (retrieval_first): por que 'louvor' nunca aparece em if nota>=5 / elif nota>=9 e qual a regra de ordem. | resposta: a primeira condicao e satisfeita sempre que nota>=5 e o Python nao le o que esta abaixo; nota>=9 e a condicao mais restrita e deve vir primeiro (ordem invertida). Correto, sem ajuda.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-09T18:11:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_d241d1cf-5502-436f-81b3-beb1f554cb6f",
+      "session_id": "session_2026-10-09-lesson15-abertura-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-03 (retrieval_first): o que garantir antes de lista[0] e a condicao que protege. | resposta: garantir que a lista nao esteja vazia; codigo: if len(lista) > 0: print(lista[0]). Correto, sem ajuda (guarda antes do acesso).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-09T18:14:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_1e9cd126-abe7-49e9-841e-3086f46ea9f9",
+      "session_id": "session_2026-10-09-lesson15-abertura-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-04 (retrieval_first): por que gravar antes de verificar e problema e qual a ordem. | resposta: gravar e acao sem volta, nao da para desfazer; primeiro verificar os dados e confirmar a exatidao, depois gravar; conferir antes de qualquer acao de salvar. Correto, sem ajuda.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-09T18:17:00-03:00"
     }
   ]
 }

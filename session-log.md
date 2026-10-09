@@ -4,6 +4,63 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-09-lesson15-abertura-01`
+
+- Status: concluída, das 18:05 às 19:56 (cerca de 111 de 90 min). Fechada a pedido do aluno, que volta no domingo, 11/10.
+  - `state` 209 → 221, `cards` 30 → 33, `learner-profile` 12 → 13.
+  - Skill em uso: commit `bd567cd`.
+- Correção de horários: 18:14, 18:17, 18:30, 18:36 e 18:38 foram estimados sem ler o relógio. A ordem dos eventos está certa; os minutos não. Os horários 18:05, 18:11, 19:01, 19:10, 19:48, 19:51 e 19:56 foram lidos do relógio.
+- Lições:
+  - `lesson_15-logica-decomposicao`: passa de `planned` para **`in_progress`**. Ganhou o arquivo `lessons/15-logica-decomposicao.md`.
+  - `lesson_01-python-core`: cards.
+- **Revisão** (`retrieval_first`; não é evidência). Os três saíram corretos, sem ajuda:
+  - `cond-02` (ordem: a condição mais restrita vem primeiro);
+  - `cond-03` (`if len(lista) > 0:` antes de `lista[0]`);
+  - `cond-04` (gravar não tem volta; conferir antes).
+  - Os três passam do passo 1 para o 2 e voltam em 16/10. Em 01/10, `cond-03` estava incorreta e `cond-04` parcial.
+- **Problema 1: "quantos cards estão vencidos numa data?"** O método é decompor antes de codar.
+  - **Entrada.** A primeira versão não incluía a data. Depois de uma pergunta direcional (degrau 3: "o teste daria o mesmo resultado amanhã?"), o aluno concluiu sozinho que a data deve ser parâmetro.
+  - **Saída.** Primeiro misturou lista e dicionário. Depois de uma reformulação (degrau 1), ficou um inteiro.
+  - **Caso-limite.** O termo não foi entendido de primeira (falha do material). O tutor reexplicou com a balança de mala (23 kg).
+    - Efeito registrado: as famílias genéricas ("vazio" e "em cima da linha") foram dadas pelo tutor.
+    - Achado próprio do aluno: o card **sem data**. Foi além da analogia, e o formato da skill realmente permite `due_at` nulo.
+    - Regra própria, com justificativa: "se não posso comprovar a data, ele deve ser revisado".
+  - **Tabela final:**
+
+    | # | Caso | Esperado |
+    |---|---|---|
+    | 1 | normal | 1 |
+    | 2 | vence hoje | 1 |
+    | 3 | `None` | 1 |
+    | 4 | `[]` | 0 |
+
+    Na linha 4, o aluno escreveu primeiro `1` e uma mensagem ao usuário. Depois corrigiu para "zero ou `None`". O tutor explicou a diferença entre `0` e `None` e por que a mensagem pertence à tela.
+  - **Pré-requisitos ensinados** (regra 7):
+    - comparação de datas ISO como texto, com demonstração executada e o contraexemplo `"9/10/2026"`;
+    - `date.today().isoformat()`, que fica fora da função;
+    - a estrutura do arquivo (função × testes), com o exemplo `dobrar(x)`, depois de o aluno perguntar.
+- **Código.** Pasta nova `E:/Lucas/Documents/segundo-cerebro/exercicios/contar_vencidos.py`, ainda sem Git. Versão atual: SHA-256 `07d6ae0a42d42b4f64101cbed1c9f929cb44d3a5cd055f44b5543e3ffe2c690f`.
+  - Próprio, sem pista: laço com acumulador; guarda da lista vazia **antes** do laço; o `None` previsto.
+  - Defeitos encontrados pelo tutor ao rodar:
+    - comparação invertida: `hoje < card["due_at"]` conta os **não** vencidos;
+    - saída em `dict` ou texto, e não em `int`;
+    - `date.today()` dentro do teste;
+    - a verificação de `None` depois da comparação;
+    - um teste só.
+  - Depois do primeiro apontamento (degrau 1), o aluno corrigiu só a chave do dicionário (`card_vencidos` × `cards_vencidos`). O teste passou **com o resultado errado**: o código e o esperado davam 2, e o certo é 4. É o padrão de `weak_verificacao-valor-esperado`.
+  - Com uma tabela de contagem, card por card, montada pelo tutor (degrau 4), contou **4** na hora.
+  - Ficou sem resposta a pergunta direcional da linha 18 (`"2026-10-09" < "2026-10-12"` com o `card_b`).
+- **Evidência: nenhuma.** A decomposição e o código foram guiados (degraus 1 a 4). Prestação de contas (regra 9): `topic_logica-algoritmos` segue em **0**. Nenhum dos dois elementos do 60 foi cumprido: nem a explicação Feynman autônoma nem a aplicação autônoma. Os pontos fracos continuam inalterados.
+- **Learner profile:** uma observação. A estratégia "teste que passa com esperado errado + tabela card a card" deu resultado positivo.
+- **Próxima entrega mínima,** no domingo:
+  1. corrigir o sentido da comparação da linha 18;
+  2. fazer a saída ser `int`;
+  3. escrever 4 `assert`, um por linha da tabela, com a data fixa `"2026-10-09"`;
+  4. verificar o `None` **antes** da comparação.
+
+  Depois vêm o Feynman curto e o problema 2 (evidências por tópico). Pendências: `git init`, o estudo fictício (`init_study`) e o remoto `segundo-cerebro`. Cards: `tempos-03..08` e `dictreader-*`.
+- O aluno vai tentar corrigir no trabalho, num interpretador Python online. Pode, porque o código só tem dados fictícios. Ao voltar, deve colar a versão de lá no arquivo local, para o tutor conferir.
+
 ## Formação fechada — 2026-10-08 (`state` 207 → 209, `study-config.json`)
 
 - Não é sessão de aprendizagem. Nenhuma evidência, domínio, ponto fraco ou sessão foi alterado.

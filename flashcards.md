@@ -129,8 +129,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
 - Status: `learning`
-- Próxima revisão: `2026-10-09`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-16`
+- Intervalo: `7 dias`
 
 ## card_cond-03
 
@@ -142,8 +142,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-boolean-ops`
 - Status: `learning`
-- Próxima revisão: `2026-10-09`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-16`
+- Intervalo: `7 dias`
 
 ## card_cond-04
 
@@ -155,8 +155,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
 - Status: `learning`
-- Próxima revisão: `2026-10-09`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-16`
+- Intervalo: `7 dias`
 
 ## card_cond-05
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 12,
+  "revision": 13,
   "updated_at": "2026-10-06T19:28:00-03:00",
   "declared_preferences": [
     {
@@ -119,6 +119,18 @@
         "note": "Em 1 e 2 descreveu a regra e deixou valores como 'n'/sem numero; quando a pergunta pediu numero explicito (1c, 1d, 2b) calculou certo de primeira. 1b foi lida como pedido de estrutura (aluno: 'nao tinha entendido a pergunta')."
       },
       "recorded_at": "2026-10-08T17:37:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_f9e416ff-c552-40d3-973a-7a6ddbfefaf8",
+      "session_id": "session_2026-10-09-lesson15-abertura-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "strategy_outcome",
+      "value": {
+        "strategy": "apontar que o teste passa com esperado errado + tabela card a card com sim/nao",
+        "result": "positive",
+        "note": "Corrigiu so a digitacao da chave e o teste passou com 2 (errado). Com a tabela card a card, contou 4 de imediato. O esperado do assert tinha sido escrito sem conta, igual ao resultado do codigo."
+      },
+      "recorded_at": "2026-10-09T19:56:00-03:00"
     }
   ],
   "inferences": [],

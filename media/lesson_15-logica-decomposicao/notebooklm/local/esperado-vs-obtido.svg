@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 920" width="1100" height="920" role="img" aria-labelledby="t d">
+<title id="t">De onde vem o esperado?</title>
+<desc id="d">Diagrama: a regra decidida antes de rodar gera o esperado; a função gera o obtido; o assert compara os dois. Iguais: o código segue a regra. AssertionError: investigue o código. Armadilha: copiar o obtido para o esperado faz o teste conferir o código com ele mesmo.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker></defs>
+<rect width="1100" height="920" fill="#121212"/>
+<text x="40" y="56" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="36" fill="#e9ecef"><tspan x="40" dy="0">De onde vem o esperado?</tspan></text>
+<text x="40" y="90" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="20" fill="#adb5bd"><tspan x="40" dy="0">Um assert só prova algo quando ESPERADO e OBTIDO vêm de lugares diferentes.</tspan></text>
+<rect x="40" y="120" width="470" height="175" rx="14" fill="#13324b" stroke="#74c0fc" stroke-width="2"/>
+<text x="60" y="157" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="22" fill="#74c0fc"><tspan x="60" dy="0">① REGRA — antes de rodar</tspan></text>
+<text x="60" y="195" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="20" fill="#e9ecef"><tspan x="60" dy="0">Card vence 09/10. Hoje é 09/10.</tspan><tspan x="60" dy="25.0">Vence hoje → precisa revisar.</tspan><tspan x="60" dy="25.0">Conta 1.</tspan></text>
+<rect x="590" y="120" width="470" height="175" rx="14" fill="#13324b" stroke="#74c0fc" stroke-width="2"/>
+<text x="610" y="157" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="22" fill="#74c0fc"><tspan x="610" dy="0">② CÓDIGO — a função</tspan></text>
+<text x="610" y="193" font-family="Cascadia Code, Consolas, monospace" font-size="18" fill="#e9ecef"><tspan x="610" dy="0">contar_vencidos(</tspan><tspan x="610" dy="22.5">&#160;&#160;[{&quot;due_at&quot;:&#160;&quot;2026-10-09&quot;}],</tspan><tspan x="610" dy="22.5">&#160;&#160;&quot;2026-10-09&quot;)</tspan></text>
+<line x1="275" y1="295" x2="275" y2="345" stroke="#e9ecef" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="825" y1="295" x2="825" y2="345" stroke="#e9ecef" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="130" y="345" width="290" height="70" rx="14" fill="none" stroke="#e9ecef" stroke-width="2"/>
+<text x="150" y="389" font-family="Cascadia Code, Consolas, monospace" font-size="24" fill="#e9ecef"><tspan x="150" dy="0">esperado&#160;=&#160;1</tspan></text>
+<rect x="680" y="345" width="290" height="70" rx="14" fill="none" stroke="#e9ecef" stroke-width="2"/>
+<text x="700" y="389" font-family="Cascadia Code, Consolas, monospace" font-size="24" fill="#e9ecef"><tspan x="700" dy="0">obtido&#160;=&#160;?</tspan></text>
+<line x1="680" y1="395" x2="420" y2="395" stroke="#ff8787" stroke-width="2.5" marker-end="url(#ah)" stroke-dasharray="9 6"/>
+<text x="455" y="378" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="18" fill="#ff8787"><tspan x="455" dy="0">✗ NÃO copie</tspan></text>
+<line x1="275" y1="415" x2="420" y2="480" stroke="#e9ecef" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="825" y1="415" x2="680" y2="480" stroke="#e9ecef" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="330" y="480" width="440" height="70" rx="14" fill="none" stroke="#e9ecef" stroke-width="2"/>
+<text x="350" y="524" font-family="Cascadia Code, Consolas, monospace" font-size="24" fill="#e9ecef"><tspan x="350" dy="0">assert&#160;obtido&#160;==&#160;esperado</tspan></text>
+<line x1="450" y1="550" x2="300" y2="610" stroke="#e9ecef" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="650" y1="550" x2="800" y2="610" stroke="#e9ecef" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="40" y="610" width="470" height="95" rx="14" fill="#16351d" stroke="#69db7c" stroke-width="2"/>
+<text x="60" y="647" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="22" fill="#69db7c"><tspan x="60" dy="0">✓ Iguais</tspan></text>
+<text x="60" y="680" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="20" fill="#e9ecef"><tspan x="60" dy="0">O código segue a regra.</tspan></text>
+<rect x="590" y="610" width="470" height="95" rx="14" fill="#3d2410" stroke="#ffa94d" stroke-width="2"/>
+<text x="610" y="647" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="22" fill="#ffa94d"><tspan x="610" dy="0">✗ AssertionError</tspan></text>
+<text x="610" y="678" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="18" fill="#e9ecef"><tspan x="610" dy="0">Investigue o CÓDIGO. O esperado só</tspan><tspan x="610" dy="22.5">muda se a própria regra estiver errada.</tspan></text>
+<rect x="40" y="740" width="1020" height="150" rx="14" fill="#3d1616" stroke="#ff8787" stroke-width="2" stroke-dasharray="10 7"/>
+<text x="60" y="777" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="22" fill="#ff8787"><tspan x="60" dy="0">⚠ Armadilha: tirar o esperado rodando o código</tspan></text>
+<text x="60" y="813" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="18" fill="#e9ecef"><tspan x="60" dy="0">rodar → ver 0 → escrever == 0  ⇒  o teste confere o código com ele mesmo: sempre verde.</tspan></text>
+<text x="60" y="848" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="18" fill="#e9ecef"><tspan x="60" dy="0">É como perguntar ao caixa qual é o troco certo e conferir o troco dele com a resposta dele.</tspan></text>
+<text x="60" y="876" font-family="Segoe Print, Comic Sans MS, Atkinson Hyperlegible, sans-serif" font-size="16" fill="#adb5bd"><tspan x="60" dy="0">Em 11/10: o caso &quot;vence hoje&quot; ganhou == 0 assim; pela regra é 1.</tspan></text>
+</svg>

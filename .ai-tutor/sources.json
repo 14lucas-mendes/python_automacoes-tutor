@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 6,
+  "revision": 7,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -175,7 +175,8 @@
       "accessed_at": "2026-09-18",
       "source_type": "official documentation",
       "lesson_ids": [
-        "lesson_02-arquivos-erros"
+        "lesson_02-arquivos-erros",
+        "lesson_15-logica-decomposicao"
       ],
       "topic_ids": [
         "topic_automacao-confiavel"
@@ -207,7 +208,8 @@
       "accessed_at": "2026-10-01",
       "source_type": "official documentation",
       "lesson_ids": [
-        "lesson_02-arquivos-erros"
+        "lesson_02-arquivos-erros",
+        "lesson_15-logica-decomposicao"
       ],
       "topic_ids": [
         "topic_python-fundamentos"
@@ -293,7 +295,24 @@
         "topic_workflow-profissional"
       ],
       "authority_reason": "Referencia oficial de --oneline e da notacao de intervalo origin..HEAD."
+    },
+    {
+      "source_id": "source_python-assert",
+      "title": "7.3. The assert statement (The Python Language Reference)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement",
+      "publication_date": null,
+      "accessed_at": "2026-10-11",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_15-logica-decomposicao"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos",
+        "topic_automacao-confiavel"
+      ],
+      "authority_reason": "Referencia oficial da linguagem: assert expr1, expr2 equivale a 'if not expr1: raise AssertionError(expr2)' (com __debug__ verdadeiro; desligado com -O)."
     }
   ],
-  "updated_at": "2026-10-08T00:20:00-03:00"
+  "updated_at": "2026-10-11T20:05:00-03:00"
 }

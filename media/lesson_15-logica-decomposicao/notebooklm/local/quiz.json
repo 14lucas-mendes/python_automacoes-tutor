@@ -1,0 +1,283 @@
+{
+  "schema_version": 2,
+  "lesson_id": "lesson_15-logica-decomposicao",
+  "note": "Quiz dos 3 pontos fracos da lesson_15. Perguntas separadas do gabarito (answer_key), como manda o contrato de saida. Codigo verificado por execucao em Python 3.11 (11/10/2026). Nada aqui e evidencia.",
+  "evidence_eligible": false,
+  "questions": [
+    {
+      "question_id": "q15-esperado-fonte",
+      "weak_point_id": "weak_verificacao-valor-esperado",
+      "source_ids": [
+        "source_python-assert"
+      ],
+      "question": "Você vai testar o caso \"vence hoje\": um card com due_at \"2026-10-09\" e hoje = \"2026-10-09\". De onde sai o número que vai depois do == no assert?",
+      "options": [
+        "Rodo a função uma vez e copio o número que ela devolver.",
+        "Tanto faz: se o teste passar, o número estava certo.",
+        "Da regra decidida antes de rodar: vence hoje → precisa revisar → 1.",
+        "Do print que aparece no terminal quando rodo o arquivo."
+      ],
+      "targets_misconception": [
+        "Copiar da execução faz o teste conferir o código com ele mesmo (foi o que aconteceu em 11/10, no caso vence-hoje).",
+        "Verde não prova que está certo: só prova que obtido e esperado são iguais.",
+        "O print também é saída do código; continua sendo a mesma fonte."
+      ]
+    },
+    {
+      "question_id": "q15-verde-errado",
+      "weak_point_id": "weak_verificacao-valor-esperado",
+      "source_ids": [
+        "source_python-assert"
+      ],
+      "question": "O código diz que há 2 cards vencidos. O assert espera 2 e passa. Contando card por card, à mão, você acha 4. O que aconteceu?",
+      "options": [
+        "Código e esperado erraram juntos: o esperado não veio de uma fonte independente.",
+        "O teste prova que o código está certo; a contagem à mão é que errou.",
+        "O assert não funciona com números inteiros.",
+        "Rodando de novo, o resultado muda e vira 4."
+      ],
+      "targets_misconception": [
+        "Confiar no verde mais que na regra é justamente o erro que o teste deveria evitar.",
+        "assert compara qualquer valor com ==, inclusive inteiros.",
+        "Com a mesma entrada, a função devolve sempre o mesmo resultado."
+      ]
+    },
+    {
+      "question_id": "q15-falhou-o-que-muda",
+      "weak_point_id": "weak_verificacao-valor-esperado",
+      "source_ids": [
+        "source_python-assert"
+      ],
+      "question": "Um assert falhou: \"esperava 1, veio 0\". O 1 saiu da sua regra. O que você faz primeiro?",
+      "options": [
+        "Troco o 1 por 0 para o teste passar.",
+        "Apago o assert, porque ele está atrapalhando.",
+        "Troco o == por != no assert.",
+        "Investigo a função; só mudo o esperado se descobrir que a própria regra estava errada."
+      ],
+      "targets_misconception": [
+        "Trocar o esperado para passar transforma o teste numa cópia do código.",
+        "Sem o assert, o defeito continua lá, só que escondido.",
+        "!= inverte o sentido: o teste passaria justamente quando o código erra."
+      ]
+    },
+    {
+      "question_id": "q15-lista-vazia",
+      "weak_point_id": "weak_python-test-literal-lista",
+      "source_ids": [
+        "source_python-assert",
+        "source_python-datastructures"
+      ],
+      "question": "Qual assert testa a linha da tabela \"lista vazia → 0\", com hoje = \"2026-10-09\"?",
+      "options": [
+        "assert contar_vencidos(str([]), \"2026-10-09\") == 0",
+        "assert contar_vencidos([], \"2026-10-09\") == 0",
+        "assert contar_vencidos(cards, \"2026-10-09\") == int([])",
+        "assert contar_vencidos(\"[]\", \"2026-10-09\") == 0"
+      ],
+      "targets_misconception": [
+        "str([]) vira o texto \"[]\": a função percorre os caracteres e quebra com TypeError (verificado).",
+        "int([]) levanta TypeError; e cards não é a lista vazia.",
+        "\"[]\" entre aspas é texto, não lista (TypeError ao rodar, verificado)."
+      ]
+    },
+    {
+      "question_id": "q15-um-card",
+      "weak_point_id": "weak_python-test-literal-lista",
+      "source_ids": [
+        "source_python-assert",
+        "source_python-datastructures"
+      ],
+      "question": "Você quer testar um card que venceu em \"2026-10-05\", com hoje = \"2026-10-09\" (esperado: 1). Qual chamada entrega o dado certo à função?",
+      "options": [
+        "contar_vencidos({\"card_id\": \"a\", \"due_at\": \"2026-10-05\"}, \"2026-10-09\")",
+        "contar_vencidos(cards, \"2026-10-05\")",
+        "contar_vencidos(str([{\"card_id\": \"a\", \"due_at\": \"2026-10-05\"}]), \"2026-10-09\")",
+        "contar_vencidos([{\"card_id\": \"a\", \"due_at\": \"2026-10-05\"}], \"2026-10-09\")"
+      ],
+      "targets_misconception": [
+        "Dicionário sem lista: o for percorre as chaves e card[\"due_at\"] quebra com TypeError (verificado).",
+        "Lista grande com a data variando foi o caminho de 11/10; com 6 cards, o esperado fica difícil de calcular à mão.",
+        "str(...) transforma a lista em texto (TypeError ao rodar, verificado)."
+      ]
+    },
+    {
+      "question_id": "q15-por-que-pequena",
+      "weak_point_id": "weak_python-test-literal-lista",
+      "source_ids": [
+        "source_python-assert"
+      ],
+      "question": "Por que cada linha da tabela ganha a SUA lista pequena, em vez de usar a lista grande de 6 cards trocando a data?",
+      "options": [
+        "Porque com 1 ou 2 cards o esperado se calcula de cabeça e, se falhar, você sabe qual caso quebrou.",
+        "Porque a função não aceita listas com mais de 2 itens.",
+        "Porque o assert só aceita listas de um item.",
+        "É só estilo; tanto faz."
+      ],
+      "targets_misconception": [
+        "A função aceita listas de qualquer tamanho.",
+        "O assert compara qualquer expressão; não limita o tamanho da lista.",
+        "Não é estilo: muda o quanto o teste consegue apontar."
+      ]
+    },
+    {
+      "question_id": "q15-frete",
+      "weak_point_id": "weak_condicionais-ordem-guarda",
+      "source_ids": [
+        "source_python-controlflow"
+      ],
+      "question": "Regra da loja: compra de 200 ou mais tem frete grátis; abaixo de 200, o frete é 20. Nunca as duas coisas. Qual estrutura combina com isso?",
+      "options": [
+        "if total >= 200 or total < 200: frete = 0",
+        "Dois if separados, um para cada regra, sem ligação entre eles",
+        "if total >= 200: frete = 0, e depois elif total < 200 (ou else): frete = 20",
+        "Um if só: if total >= 200: frete = 0"
+      ],
+      "targets_misconception": [
+        "or com ações diferentes é o padrão do card cond-01 (02/10 e 11/10). E essa condição é sempre verdadeira.",
+        "if separados funcionam por sorte quando as condições não se cruzam, mas não dizem \"é um OU outro\"; se um dia se cruzarem, os dois blocos rodam.",
+        "Esquece o caso abaixo de 200: o frete fica sem valor."
+      ]
+    },
+    {
+      "question_id": "q15-prever-dupla",
+      "weak_point_id": "weak_condicionais-ordem-guarda",
+      "source_ids": [
+        "source_python-controlflow"
+      ],
+      "question": "Preveja a saída para pedidos = [{\"valor\": 0}]. Regra: pedido de valor 0 é brinde, e SÓ brinde.",
+      "code": "brinde = 0\npequeno = 0\nfor p in pedidos:\n    if p[\"valor\"] == 0:\n        brinde += 1\n    if p[\"valor\"] < 50:\n        pequeno += 1\nprint(\"brinde\", brinde, \"pequeno\", pequeno)",
+      "options": [
+        "brinde 1 pequeno 0",
+        "brinde 1 pequeno 1",
+        "brinde 0 pequeno 1",
+        "Dá erro"
+      ],
+      "targets_misconception": [
+        "Achar que o Python para no primeiro verdadeiro: isso só acontece com elif.",
+        "A primeira pergunta também é feita, e é verdadeira.",
+        "O código roda: são comparações válidas entre números."
+      ]
+    },
+    {
+      "question_id": "q15-corrigir-dupla",
+      "weak_point_id": "weak_condicionais-ordem-guarda",
+      "source_ids": [
+        "source_python-controlflow"
+      ],
+      "question": "No código da pergunta anterior, qual mudança faz o pedido de valor 0 contar só como brinde?",
+      "options": [
+        "Trocar o segundo if por elif, mantendo o teste de brinde primeiro.",
+        "Juntar tudo: if p[\"valor\"] == 0 or p[\"valor\"] < 50: brinde += 1",
+        "Usar elif, mas com o teste de pequeno (< 50) primeiro e o de brinde depois.",
+        "Trocar < 50 por <= 50."
+      ],
+      "targets_misconception": [
+        "or com ações diferentes: todo pedido pequeno vira brinde (com [0, 30, 120], brinde 2; verificado).",
+        "Ordem trocada: o 0 cai em \"pequeno\" e o brinde nunca é contado (brinde 0; verificado).",
+        "Mexe no limite, não na estrutura: o 0 continua entrando nos dois if."
+      ]
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "q15-esperado-fonte",
+      "correct_index": 2,
+      "explanation": "O esperado vem da regra, calculado antes de rodar. Se ele vier da execução, o teste compara o código com ele mesmo e fica verde mesmo com o código errado. É como perguntar ao caixa qual é o troco certo e conferir o troco dele com a resposta dele.",
+      "per_option": [
+        "Copiar da execução faz o teste conferir o código com ele mesmo (foi o que aconteceu em 11/10, no caso vence-hoje).",
+        "Verde não prova que está certo: só prova que obtido e esperado são iguais.",
+        null,
+        "O print também é saída do código; continua sendo a mesma fonte."
+      ]
+    },
+    {
+      "question_id": "q15-verde-errado",
+      "correct_index": 0,
+      "explanation": "Um assert só confere se dois valores são iguais. Se o esperado foi escrito sem conta, ou igual ao que o código devolveu, os dois erram juntos e o teste fica verde. A contagem à mão, card por card, é a fonte independente.",
+      "per_option": [
+        null,
+        "Confiar no verde mais que na regra é justamente o erro que o teste deveria evitar.",
+        "assert compara qualquer valor com ==, inclusive inteiros.",
+        "Com a mesma entrada, a função devolve sempre o mesmo resultado."
+      ]
+    },
+    {
+      "question_id": "q15-falhou-o-que-muda",
+      "correct_index": 3,
+      "explanation": "A falha é o teste fazendo o trabalho dele: apontou uma diferença entre a regra e o código. Quem se ajusta é o código. O esperado só muda se você revisar a regra e concluir que ela estava errada, nunca para \"fazer passar\".",
+      "per_option": [
+        "Trocar o esperado para passar transforma o teste numa cópia do código.",
+        "Sem o assert, o defeito continua lá, só que escondido.",
+        "!= inverte o sentido: o teste passaria justamente quando o código erra.",
+        null
+      ]
+    },
+    {
+      "question_id": "q15-lista-vazia",
+      "correct_index": 1,
+      "explanation": "A lista vazia se escreve [] direto dentro dos parênteses. str([]) e \"[]\" são o TEXTO de dois caracteres, não uma lista; int([]) nem existe (TypeError). E cards é a lista grande, não o caso vazio.",
+      "per_option": [
+        "str([]) vira o texto \"[]\": a função percorre os caracteres e quebra com TypeError (verificado).",
+        null,
+        "int([]) levanta TypeError; e cards não é a lista vazia.",
+        "\"[]\" entre aspas é texto, não lista (TypeError ao rodar, verificado)."
+      ]
+    },
+    {
+      "question_id": "q15-um-card",
+      "correct_index": 3,
+      "explanation": "A função espera uma LISTA de cards. Um card só continua precisando dos colchetes: [ {…} ]. Sem eles, o for percorre as chaves do dicionário (textos) e quebra. Trocar a data usando a lista grande muda o caso inteiro.",
+      "per_option": [
+        "Dicionário sem lista: o for percorre as chaves e card[\"due_at\"] quebra com TypeError (verificado).",
+        "Lista grande com a data variando foi o caminho de 11/10; com 6 cards, o esperado fica difícil de calcular à mão.",
+        "str(...) transforma a lista em texto (TypeError ao rodar, verificado).",
+        null
+      ]
+    },
+    {
+      "question_id": "q15-por-que-pequena",
+      "correct_index": 0,
+      "explanation": "Teste pequeno = esperado fácil de calcular à mão + falha que aponta um caso só. Na lista grande, um erro fica misturado com os outros e o esperado depende de contar 6 cards (em 11/10, dois esperados saíram errados assim).",
+      "per_option": [
+        null,
+        "A função aceita listas de qualquer tamanho.",
+        "O assert compara qualquer expressão; não limita o tamanho da lista.",
+        "Não é estilo: muda o quanto o teste consegue apontar."
+      ]
+    },
+    {
+      "question_id": "q15-frete",
+      "correct_index": 2,
+      "explanation": "Casos que se excluem (é um OU outro, nunca os dois) pedem if/elif (ou if/else): o Python para no primeiro verdadeiro. O or junta condições que levam à MESMA ação; aqui as ações são diferentes.",
+      "per_option": [
+        "or com ações diferentes é o padrão do card cond-01 (02/10 e 11/10). E essa condição é sempre verdadeira.",
+        "if separados funcionam por sorte quando as condições não se cruzam, mas não dizem \"é um OU outro\"; se um dia se cruzarem, os dois blocos rodam.",
+        null,
+        "Esquece o caso abaixo de 200: o frete fica sem valor."
+      ]
+    },
+    {
+      "question_id": "q15-prever-dupla",
+      "correct_index": 1,
+      "explanation": "São dois if separados: o Python faz as duas perguntas para o mesmo pedido. 0 == 0 é verdadeiro (brinde +1) e 0 < 50 também (pequeno +1). O pedido é contado duas vezes, contra a regra.",
+      "per_option": [
+        "Achar que o Python para no primeiro verdadeiro: isso só acontece com elif.",
+        null,
+        "A primeira pergunta também é feita, e é verdadeira.",
+        "O código roda: são comparações válidas entre números."
+      ]
+    },
+    {
+      "question_id": "q15-corrigir-dupla",
+      "correct_index": 0,
+      "explanation": "Com if/elif, o Python para no primeiro verdadeiro. E a condição mais específica (== 0) vem primeiro, porque todo 0 também é < 50. Verificado: com valores [0, 30, 120], dá brinde 1 e pequeno 1.",
+      "per_option": [
+        null,
+        "or com ações diferentes: todo pedido pequeno vira brinde (com [0, 30, 120], brinde 2; verificado).",
+        "Ordem trocada: o 0 cai em \"pequeno\" e o brinde nunca é contado (brinde 0; verificado).",
+        "Mexe no limite, não na estrutura: o 0 continua entrando nos dois if."
+      ]
+    }
+  ]
+}

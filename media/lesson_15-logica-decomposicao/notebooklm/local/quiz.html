@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz da Lição 15</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #15171a; --panel: #1c1f23; --line: #2c3036;
+  --fg: #eceae4; --fg-2: #b9b7ae; --fg-3: #8b8a83;
+  --accent: #6fa8f0; --good: #3fb950; --bad: #f0883e; --code: #101215;
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #f6f6f3; --panel: #ffffff; --line: #e1e0da; --fg: #17181a; --fg-2: #4d4d48; --fg-3: #74736d;
+    --accent: #2a78d6; --good: #1a7f37; --bad: #bc4c00; --code: #f0efea;
+  }
+}
+:root[data-theme="dark"] { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 var(--f-body); }
+#quiz { display: grid; gap: 12px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 16px 64px; display: grid; gap: 18px; }
+h1 { font-size: 1.6rem; margin: 0; }
+h2 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-3); margin: 18px 0 0; }
+p { margin: 0; }
+.lead { color: var(--fg-2); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 12px; }
+.num { font-family: var(--f-mono); color: var(--fg-3); font-size: 0.85rem; }
+pre { margin: 0; background: var(--code); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; overflow-x: auto; font: 0.88rem/1.5 var(--f-mono); }
+.opts { display: grid; gap: 8px; }
+button.opt { text-align: left; font: inherit; color: var(--fg); background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; cursor: pointer; display: grid; gap: 4px; }
+button.opt:hover:not(:disabled) { border-color: var(--accent); }
+button.opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.opt:disabled { cursor: default; }
+button.opt code { font-family: var(--f-mono); font-size: 0.86rem; white-space: pre-wrap; word-break: break-word; }
+.opt .tag { font-size: 0.8rem; font-weight: 700; }
+.opt.right { border-color: var(--good); }
+.opt.right .tag { color: var(--good); }
+.opt.wrong { border-color: var(--bad); }
+.opt.wrong .tag { color: var(--bad); }
+.opt .why { font-size: 0.86rem; color: var(--fg-2); }
+.expl { border-left: 3px solid var(--accent); padding-left: 12px; color: var(--fg-2); }
+.score { font-size: 1.05rem; }
+.foot { font-size: 0.82rem; color: var(--fg-3); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header style="display:grid;gap:6px">
+    <span class="num">lesson_15 · pontos fracos · quiz</span>
+    <h1>Quiz da Lição 15: testes que provam alguma coisa</h1>
+    <p class="lead">Nove perguntas sobre os três tropeços do <code>contar_vencidos</code>. Escolha uma opção: a explicação só aparece depois da sua escolha, e não dá para trocar. Errar aqui não vale nota; serve para mostrar onde reforçar.</p>
+  </header>
+  <div id="quiz"></div>
+  <div class="card" id="fim" hidden>
+    <p class="score" id="placar"></p>
+    <p><b>Leve para a próxima sessão:</b> sem olhar este quiz, explique com as suas palavras por que o esperado de um <code>assert</code> precisa vir da regra, e não da execução do código. O tutor vai pedir essa explicação; é ela, não o quiz, que pode contar como evidência.</p>
+  </div>
+  <p class="foot">Fontes: documentação oficial do Python (<code>assert</code>, controle de fluxo, estruturas de dados). Código das perguntas verificado por execução em 11/10/2026. Material de estudo: não é evidência e não altera o domínio.</p>
+</div>
+<script id="data" type="application/json">{"schema_version": 2, "lesson_id": "lesson_15-logica-decomposicao", "note": "Quiz dos 3 pontos fracos da lesson_15. Perguntas separadas do gabarito (answer_key), como manda o contrato de saida. Codigo verificado por execucao em Python 3.11 (11/10/2026). Nada aqui e evidencia.", "evidence_eligible": false, "questions": [{"question_id": "q15-esperado-fonte", "weak_point_id": "weak_verificacao-valor-esperado", "source_ids": ["source_python-assert"], "question": "Você vai testar o caso \"vence hoje\": um card com due_at \"2026-10-09\" e hoje = \"2026-10-09\". De onde sai o número que vai depois do == no assert?", "options": ["Rodo a função uma vez e copio o número que ela devolver.", "Tanto faz: se o teste passar, o número estava certo.", "Da regra decidida antes de rodar: vence hoje → precisa revisar → 1.", "Do print que aparece no terminal quando rodo o arquivo."], "targets_misconception": ["Copiar da execução faz o teste conferir o código com ele mesmo (foi o que aconteceu em 11/10, no caso vence-hoje).", "Verde não prova que está certo: só prova que obtido e esperado são iguais.", "O print também é saída do código; continua sendo a mesma fonte."]}, {"question_id": "q15-verde-errado", "weak_point_id": "weak_verificacao-valor-esperado", "source_ids": ["source_python-assert"], "question": "O código diz que há 2 cards vencidos. O assert espera 2 e passa. Contando card por card, à mão, você acha 4. O que aconteceu?", "options": ["Código e esperado erraram juntos: o esperado não veio de uma fonte independente.", "O teste prova que o código está certo; a contagem à mão é que errou.", "O assert não funciona com números inteiros.", "Rodando de novo, o resultado muda e vira 4."], "targets_misconception": ["Confiar no verde mais que na regra é justamente o erro que o teste deveria evitar.", "assert compara qualquer valor com ==, inclusive inteiros.", "Com a mesma entrada, a função devolve sempre o mesmo resultado."]}, {"question_id": "q15-falhou-o-que-muda", "weak_point_id": "weak_verificacao-valor-esperado", "source_ids": ["source_python-assert"], "question": "Um assert falhou: \"esperava 1, veio 0\". O 1 saiu da sua regra. O que você faz primeiro?", "options": ["Troco o 1 por 0 para o teste passar.", "Apago o assert, porque ele está atrapalhando.", "Troco o == por != no assert.", "Investigo a função; só mudo o esperado se descobrir que a própria regra estava errada."], "targets_misconception": ["Trocar o esperado para passar transforma o teste numa cópia do código.", "Sem o assert, o defeito continua lá, só que escondido.", "!= inverte o sentido: o teste passaria justamente quando o código erra."]}, {"question_id": "q15-lista-vazia", "weak_point_id": "weak_python-test-literal-lista", "source_ids": ["source_python-assert", "source_python-datastructures"], "question": "Qual assert testa a linha da tabela \"lista vazia → 0\", com hoje = \"2026-10-09\"?", "options": ["assert contar_vencidos(str([]), \"2026-10-09\") == 0", "assert contar_vencidos([], \"2026-10-09\") == 0", "assert contar_vencidos(cards, \"2026-10-09\") == int([])", "assert contar_vencidos(\"[]\", \"2026-10-09\") == 0"], "targets_misconception": ["str([]) vira o texto \"[]\": a função percorre os caracteres e quebra com TypeError (verificado).", "int([]) levanta TypeError; e cards não é a lista vazia.", "\"[]\" entre aspas é texto, não lista (TypeError ao rodar, verificado)."]}, {"question_id": "q15-um-card", "weak_point_id": "weak_python-test-literal-lista", "source_ids": ["source_python-assert", "source_python-datastructures"], "question": "Você quer testar um card que venceu em \"2026-10-05\", com hoje = \"2026-10-09\" (esperado: 1). Qual chamada entrega o dado certo à função?", "options": ["contar_vencidos({\"card_id\": \"a\", \"due_at\": \"2026-10-05\"}, \"2026-10-09\")", "contar_vencidos(cards, \"2026-10-05\")", "contar_vencidos(str([{\"card_id\": \"a\", \"due_at\": \"2026-10-05\"}]), \"2026-10-09\")", "contar_vencidos([{\"card_id\": \"a\", \"due_at\": \"2026-10-05\"}], \"2026-10-09\")"], "targets_misconception": ["Dicionário sem lista: o for percorre as chaves e card[\"due_at\"] quebra com TypeError (verificado).", "Lista grande com a data variando foi o caminho de 11/10; com 6 cards, o esperado fica difícil de calcular à mão.", "str(...) transforma a lista em texto (TypeError ao rodar, verificado)."]}, {"question_id": "q15-por-que-pequena", "weak_point_id": "weak_python-test-literal-lista", "source_ids": ["source_python-assert"], "question": "Por que cada linha da tabela ganha a SUA lista pequena, em vez de usar a lista grande de 6 cards trocando a data?", "options": ["Porque com 1 ou 2 cards o esperado se calcula de cabeça e, se falhar, você sabe qual caso quebrou.", "Porque a função não aceita listas com mais de 2 itens.", "Porque o assert só aceita listas de um item.", "É só estilo; tanto faz."], "targets_misconception": ["A função aceita listas de qualquer tamanho.", "O assert compara qualquer expressão; não limita o tamanho da lista.", "Não é estilo: muda o quanto o teste consegue apontar."]}, {"question_id": "q15-frete", "weak_point_id": "weak_condicionais-ordem-guarda", "source_ids": ["source_python-controlflow"], "question": "Regra da loja: compra de 200 ou mais tem frete grátis; abaixo de 200, o frete é 20. Nunca as duas coisas. Qual estrutura combina com isso?", "options": ["if total >= 200 or total < 200: frete = 0", "Dois if separados, um para cada regra, sem ligação entre eles", "if total >= 200: frete = 0, e depois elif total < 200 (ou else): frete = 20", "Um if só: if total >= 200: frete = 0"], "targets_misconception": ["or com ações diferentes é o padrão do card cond-01 (02/10 e 11/10). E essa condição é sempre verdadeira.", "if separados funcionam por sorte quando as condições não se cruzam, mas não dizem \"é um OU outro\"; se um dia se cruzarem, os dois blocos rodam.", "Esquece o caso abaixo de 200: o frete fica sem valor."]}, {"question_id": "q15-prever-dupla", "weak_point_id": "weak_condicionais-ordem-guarda", "source_ids": ["source_python-controlflow"], "question": "Preveja a saída para pedidos = [{\"valor\": 0}]. Regra: pedido de valor 0 é brinde, e SÓ brinde.", "code": "brinde = 0\npequeno = 0\nfor p in pedidos:\n    if p[\"valor\"] == 0:\n        brinde += 1\n    if p[\"valor\"] < 50:\n        pequeno += 1\nprint(\"brinde\", brinde, \"pequeno\", pequeno)", "options": ["brinde 1 pequeno 0", "brinde 1 pequeno 1", "brinde 0 pequeno 1", "Dá erro"], "targets_misconception": ["Achar que o Python para no primeiro verdadeiro: isso só acontece com elif.", "A primeira pergunta também é feita, e é verdadeira.", "O código roda: são comparações válidas entre números."]}, {"question_id": "q15-corrigir-dupla", "weak_point_id": "weak_condicionais-ordem-guarda", "source_ids": ["source_python-controlflow"], "question": "No código da pergunta anterior, qual mudança faz o pedido de valor 0 contar só como brinde?", "options": ["Trocar o segundo if por elif, mantendo o teste de brinde primeiro.", "Juntar tudo: if p[\"valor\"] == 0 or p[\"valor\"] < 50: brinde += 1", "Usar elif, mas com o teste de pequeno (< 50) primeiro e o de brinde depois.", "Trocar < 50 por <= 50."], "targets_misconception": ["or com ações diferentes: todo pedido pequeno vira brinde (com [0, 30, 120], brinde 2; verificado).", "Ordem trocada: o 0 cai em \"pequeno\" e o brinde nunca é contado (brinde 0; verificado).", "Mexe no limite, não na estrutura: o 0 continua entrando nos dois if."]}], "answer_key": [{"question_id": "q15-esperado-fonte", "correct_index": 2, "explanation": "O esperado vem da regra, calculado antes de rodar. Se ele vier da execução, o teste compara o código com ele mesmo e fica verde mesmo com o código errado. É como perguntar ao caixa qual é o troco certo e conferir o troco dele com a resposta dele.", "per_option": ["Copiar da execução faz o teste conferir o código com ele mesmo (foi o que aconteceu em 11/10, no caso vence-hoje).", "Verde não prova que está certo: só prova que obtido e esperado são iguais.", null, "O print também é saída do código; continua sendo a mesma fonte."]}, {"question_id": "q15-verde-errado", "correct_index": 0, "explanation": "Um assert só confere se dois valores são iguais. Se o esperado foi escrito sem conta, ou igual ao que o código devolveu, os dois erram juntos e o teste fica verde. A contagem à mão, card por card, é a fonte independente.", "per_option": [null, "Confiar no verde mais que na regra é justamente o erro que o teste deveria evitar.", "assert compara qualquer valor com ==, inclusive inteiros.", "Com a mesma entrada, a função devolve sempre o mesmo resultado."]}, {"question_id": "q15-falhou-o-que-muda", "correct_index": 3, "explanation": "A falha é o teste fazendo o trabalho dele: apontou uma diferença entre a regra e o código. Quem se ajusta é o código. O esperado só muda se você revisar a regra e concluir que ela estava errada, nunca para \"fazer passar\".", "per_option": ["Trocar o esperado para passar transforma o teste numa cópia do código.", "Sem o assert, o defeito continua lá, só que escondido.", "!= inverte o sentido: o teste passaria justamente quando o código erra.", null]}, {"question_id": "q15-lista-vazia", "correct_index": 1, "explanation": "A lista vazia se escreve [] direto dentro dos parênteses. str([]) e \"[]\" são o TEXTO de dois caracteres, não uma lista; int([]) nem existe (TypeError). E cards é a lista grande, não o caso vazio.", "per_option": ["str([]) vira o texto \"[]\": a função percorre os caracteres e quebra com TypeError (verificado).", null, "int([]) levanta TypeError; e cards não é a lista vazia.", "\"[]\" entre aspas é texto, não lista (TypeError ao rodar, verificado)."]}, {"question_id": "q15-um-card", "correct_index": 3, "explanation": "A função espera uma LISTA de cards. Um card só continua precisando dos colchetes: [ {…} ]. Sem eles, o for percorre as chaves do dicionário (textos) e quebra. Trocar a data usando a lista grande muda o caso inteiro.", "per_option": ["Dicionário sem lista: o for percorre as chaves e card[\"due_at\"] quebra com TypeError (verificado).", "Lista grande com a data variando foi o caminho de 11/10; com 6 cards, o esperado fica difícil de calcular à mão.", "str(...) transforma a lista em texto (TypeError ao rodar, verificado).", null]}, {"question_id": "q15-por-que-pequena", "correct_index": 0, "explanation": "Teste pequeno = esperado fácil de calcular à mão + falha que aponta um caso só. Na lista grande, um erro fica misturado com os outros e o esperado depende de contar 6 cards (em 11/10, dois esperados saíram errados assim).", "per_option": [null, "A função aceita listas de qualquer tamanho.", "O assert compara qualquer expressão; não limita o tamanho da lista.", "Não é estilo: muda o quanto o teste consegue apontar."]}, {"question_id": "q15-frete", "correct_index": 2, "explanation": "Casos que se excluem (é um OU outro, nunca os dois) pedem if/elif (ou if/else): o Python para no primeiro verdadeiro. O or junta condições que levam à MESMA ação; aqui as ações são diferentes.", "per_option": ["or com ações diferentes é o padrão do card cond-01 (02/10 e 11/10). E essa condição é sempre verdadeira.", "if separados funcionam por sorte quando as condições não se cruzam, mas não dizem \"é um OU outro\"; se um dia se cruzarem, os dois blocos rodam.", null, "Esquece o caso abaixo de 200: o frete fica sem valor."]}, {"question_id": "q15-prever-dupla", "correct_index": 1, "explanation": "São dois if separados: o Python faz as duas perguntas para o mesmo pedido. 0 == 0 é verdadeiro (brinde +1) e 0 < 50 também (pequeno +1). O pedido é contado duas vezes, contra a regra.", "per_option": ["Achar que o Python para no primeiro verdadeiro: isso só acontece com elif.", null, "A primeira pergunta também é feita, e é verdadeira.", "O código roda: são comparações válidas entre números."]}, {"question_id": "q15-corrigir-dupla", "correct_index": 0, "explanation": "Com if/elif, o Python para no primeiro verdadeiro. E a condição mais específica (== 0) vem primeiro, porque todo 0 também é < 50. Verificado: com valores [0, 30, 120], dá brinde 1 e pequeno 1.", "per_option": [null, "or com ações diferentes: todo pedido pequeno vira brinde (com [0, 30, 120], brinde 2; verificado).", "Ordem trocada: o 0 cai em \"pequeno\" e o brinde nunca é contado (brinde 0; verificado).", "Mexe no limite, não na estrutura: o 0 continua entrando nos dois if."]}]}</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const titles = {"weak_verificacao-valor-esperado": "De onde vem o esperado", "weak_python-test-literal-lista": "A lista dentro do assert", "weak_condicionais-ordem-guarda": "Um OU outro: if/elif"};
+  const key = Object.fromEntries(D.answer_key.map((a) => [a.question_id, a]));
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const looksCode = (s) => /^(assert |contar_vencidos\(|if )/.test(s);
+  let html = "", last = null, answered = 0, right = 0;
+  D.questions.forEach((q, i) => {
+    if (q.weak_point_id !== last) { html += `<h2>${esc(titles[q.weak_point_id] || q.weak_point_id)}</h2>`; last = q.weak_point_id; }
+    html += `<section class="card" data-q="${esc(q.question_id)}">
+      <span class="num">Pergunta ${i + 1} de ${D.questions.length}</span>
+      <p>${esc(q.question)}</p>
+      ${q.code ? `<pre>${esc(q.code)}</pre>` : ""}
+      <div class="opts" role="group" aria-label="Opções da pergunta ${i + 1}">
+        ${q.options.map((o, j) => `<button type="button" class="opt" data-j="${j}"><span class="tag" aria-live="polite"></span>${looksCode(o) ? `<code>${esc(o)}</code>` : `<span>${esc(o)}</span>`}<span class="why" hidden></span></button>`).join("")}
+      </div>
+      <p class="expl" hidden></p>
+    </section>`;
+  });
+  document.getElementById("quiz").innerHTML = html;
+  document.querySelectorAll("section[data-q]").forEach((sec) => {
+    const k = key[sec.dataset.q];
+    sec.querySelectorAll("button.opt").forEach((b) => b.addEventListener("click", () => {
+      const pick = +b.dataset.j;
+      sec.querySelectorAll("button.opt").forEach((o) => {
+        const j = +o.dataset.j;
+        o.disabled = true;
+        const why = o.querySelector(".why"), tag = o.querySelector(".tag");
+        if (j === k.correct_index) { o.classList.add("right"); tag.textContent = j === pick ? "✓ Sua escolha — correta" : "✓ Correta"; }
+        else if (j === pick) { o.classList.add("wrong"); tag.textContent = "✗ Sua escolha"; }
+        if (k.per_option[j]) { why.textContent = k.per_option[j]; why.hidden = j !== pick; }
+      });
+      const ex = sec.querySelector(".expl"); ex.textContent = k.explanation; ex.hidden = false;
+      answered++; if (pick === k.correct_index) right++;
+      if (answered === D.questions.length) {
+        document.getElementById("placar").textContent = `Você acertou ${right} de ${D.questions.length}.`;
+        document.getElementById("fim").hidden = false;
+      }
+    }));
+  });
+})();
+</script>
+</body>
+</html>

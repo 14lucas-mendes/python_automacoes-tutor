@@ -4,6 +4,22 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Mídias dos pontos fracos — 2026-10-11 (`/media`, `media-index` 13 → 14, `sources` 6 → 7)
+
+- Não é sessão de aprendizagem. Nenhuma evidência, domínio ou ponto fraco foi alterado. As mídias têm `evidence_eligible: false`.
+- **Pedido do aluno:** mídias para trabalhar os pontos fracos. Entre os seis ativos, escolheu os três que travam o `contar_vencidos`:
+  - `weak_verificacao-valor-esperado`;
+  - `weak_python-test-literal-lista`;
+  - `weak_condicionais-ordem-guarda`.
+- **Pacote local** `media/lesson_15-logica-decomposicao/notebooklm/` (`media_9e5caffe-…`), criado com `create_learning_pack`:
+  - **principal:** quiz de 9 perguntas, 3 por ponto fraco (`local/quiz.json`, com gabarito separado, e `local/quiz.html`, interativo, em tema escuro). Cada distrator corresponde a um equívoco registrado: esperado copiado da execução, `str([])`/`int([])`, dicionário sem lista, lista grande com a data variando, `or` no lugar de `elif`, ordem trocada;
+  - **complementar:** o diagrama "De onde vem o esperado?" (`esperado-vs-obtido.excalidraw`, em tema escuro, mais a prévia `.svg`), com texto alternativo em `image-brief.md`.
+- **Fonte nova:** `source_python-assert` (Python Language Reference, 7.3), lida na documentação oficial em 11/10.
+- **Verificação:** todo o código das perguntas foi executado em Python 3.11. As prévias foram renderizadas e conferidas. As posições das respostas certas foram embaralhadas para não formar padrão.
+- **Limite pedagógico:** o pacote não mostra a correção do `contar_vencidos` ("sem data" × "venceu"). A pergunta `q15-corrigir-dupla` ensina a mesma ideia em outro contexto (pedidos).
+- **NotebookLM:** ainda sem consentimento de envio (`consented: false`).
+- **Próximo passo:** depois do uso, pedir uma explicação autônoma, sem as mídias, de por que o esperado vem da regra.
+
 ## `session_2026-10-11-lesson15-problema1-01`
 
 - Status: concluída, das 17:56 às 19:37 (cerca de 101 de 90 min). Fechada a pedido do aluno.

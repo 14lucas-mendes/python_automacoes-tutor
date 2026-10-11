@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 221,
-  "updated_at": "2026-10-09T19:56:00-03:00",
+  "revision": 231,
+  "updated_at": "2026-10-11T19:37:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -327,7 +327,7 @@
       "mastery": 0,
       "retention": "unknown",
       "status": "not_started",
-      "last_practice": null,
+      "last_practice": "2026-10-11",
       "evidence_ids": [],
       "required_evidence_types": [
         "feynman",
@@ -3176,6 +3176,51 @@
         "lessons/15-logica-decomposicao.md"
       ],
       "next_step": "Retomar contar_vencidos.py: linha 18, saida int, 4 asserts da tabela com data fixa, None antes da comparacao; depois Feynman curto e problema 2 (evidencias por topico). Cards: tempos-03..08 e dictreader-*."
+    },
+    {
+      "session_id": "session_2026-10-11-lesson15-problema1-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-10-11T17:56:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_15-logica-decomposicao",
+        "lesson_01-python-core"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos",
+        "topic_python-fundamentos"
+      ],
+      "objective": "(1) Recuperar cond-01 e cond-05 (retrieval_first, ~5 min). (2) Fechar o problema 1 da lesson_15 (contar_vencidos.py): sentido da comparacao, saida int, None/vazio verificado antes da comparacao, um assert por linha da tabela com data fixa 2026-10-09; Feynman curto. (3) Se houver tempo, decompor o problema 2 (evidencias por topico) antes do codigo.",
+      "cognitive_core": "Revisao: escolher if separados x if/elif; o que prova uma verificacao. Licao: corrigir a regra 'vencido' e escrever verificacoes com valor esperado calculado a mao; decompor um problema novo antes do codigo.",
+      "mode": "learning",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_python-fundamentos"
+        ],
+        "topic_label_visible": true,
+        "reason": "weak_condicionais-ordem-guarda ainda ativo; interleaving nao se aplica com pre-requisito ativo."
+      },
+      "checkpoint": "Aberta em 2026-10-11T17:56 com 90 min. contar_vencidos.py inalterado desde 09/10 (sha256 7fb9eb97...; card_e usa due_at \"\" e nao None). card_cond-01 apresentado (retrieval_first). | 18:00 cond-01 parcial sem ajuda (juntas correto; exclusivas -> 'if com OU'). Degrau 1: reformulacao com exemplo aprovado/reprovado. | 18:05 apos degrau 1 escreveu em Python if nota >= 6 / elif nota < 6 (correto; typo 'reprovodo'; else seria opcional). card_cond-01: parcial na 1a tentativa -> fica no step 1, due 2026-10-14. card_cond-05 apresentado. | 18:08 cond-05 correto sem ajuda (step 1 -> 2, due 2026-10-18). Revisao concluida (cond-01 parcial, cond-05 correto). Inicio do problema 1. | 18:28 versao do aluno (sha256 91bf4a33...): saida int (ok); data fixa no assert (2026-10-11, ok); if __name__ == '__main__' por iniciativa propria; comparacao trocada para 'hoje > due_at' (estrito: vence-hoje fica de fora); vazio ainda devolve texto; None ainda depois da comparacao e card_e usa '' (passa por acaso: qualquer data > ''); 1 assert com a lista grande (esperado 5, correto para 10-11 pela regra do aluno; nao ha card vencendo em 10-11). Aluno pediu ajuda: nao entendeu como criar os outros 3 asserts. Pre-requisito ensinado (regra 7): forma do assert com lista literal pequena por linha da tabela, exemplos executados somar_lista e contar_cor (incluindo um assert com esperado errado de proposito -> AssertionError). Defeito do >= nao revelado: os asserts devem revela-lo. | 18:41 versao sha256 3c6f3916...: em vez de uma lista pequena por linha da tabela, manteve a lista grande e variou a data (10-11, 10-05, 10-12, ''); linha 20 trocada para == '' -> card_e contado 2x; assert 1 (esperado 5, correto pela regra) FALHOU com 6 - o teste pegou o defeito e o aluno nao trocou o esperado. Esperados 2 e 3 nao batem com a regra (certos: 3 e 6). Mensagens copiadas 'esperava 5'. Aluno pediu: 'apenas verifique e me diga onde estou errando'. Instrucao dos asserts nao foi entendida -> falha do material. Devolutiva (degrau 4 no codigo): contagem dupla do card_e com demo '2026-10-11' > '' == True; '>' estrito deixa de fora o vence-hoje; testes devem seguir a tabela. Fornecido o assert da linha 1 como modelo de forma (regra 7). | 19:08 versao 42ff37d2...: 5 asserts, um card por assert, data fixa 2026-10-09 (forma ok); linha 28 (vence hoje) com esperado 0, contra a tabela do aluno (1); linha 3 (None) ausente; linha 30 falhou (vazio devolvia texto). Pergunta do tutor: como chegou ao 0? | 19:11 aluno: 'cheguei ao resultado testando para saber qual seria o resultado esperado'. Corrigiu sozinho o retorno do vazio para 0 apos a falha do teste (versao 99b9dbf5..., todos passam, main imprime 4). Confirmado o padrao de weak_verificacao-valor-esperado: esperado tirado da execucao do codigo. Reexplicacao simples (regra 8) com a analogia do troco do proprio card cond-05. | 19:15 versao 3018a621...: linha do vence-hoje com esperado 1 pela regra (correto) e funcao trocada para >= pelo aluno; mas card sem data ('') fazia a funcao devolver None e o assert novo esperava None (esperado acompanhando o codigo). Degrau 3 (lembrar a regra do aluno): 'pela sua regra, um card sem data da quanto?' -> '1' (correto). Ensinado: null do JSON vira None, diferente de ''. | 19:35 versao 6ddabb82...: verificacao do sem data movida para ANTES da comparacao (ajuste 4 feito), assert do sem data com esperado 1 (pela regra), asserts movidos para dentro do if __name__; ainda usa '' e nao None; falha AssertionError na linha 34: '' contado 2x (if separados: == '' soma 1 e hoje >= '' soma mais 1). Ligacao com cond-01 de hoje (situacoes exclusivas -> if/elif). Sessao passou dos 90 min (99). | Fechada a pedido do aluno em 2026-10-11T19:37 (~101 de 90 min). Ultimo comportamento proprio: esperado do sem-data = 1 tirado da regra apos degrau 3; verificacao do sem-data movida para antes da comparacao; >= no lugar de >. Suporte mais recente no nucleo: degrau 3 (pergunta exclusivas -> if/elif apresentada, nao respondida). Bloqueio aberto: '' contado 2x (if separados), teste ainda usa '' em vez de None. Prestacao de contas (regra 9): topic_logica-algoritmos segue 0; nenhum elemento do 60 cumprido (nem Feynman autonomo nem aplicacao autonoma).",
+      "evidence_ids": [],
+      "ended_at": "2026-10-11T19:37:00-03:00",
+      "difficulty": "medium",
+      "next_step": "Retomar contar_vencidos.py (sha256 6ddabb82...): responder se 'sem data' e 'venceu' sao exclusivos e escolher a estrutura (if/elif); trocar '' por None no teste; todos os asserts passando com esperados da tabela. Depois Feynman curto (por que o esperado vem da regra e nao do codigo) e problema 2 (evidencias por topico), decomposto antes do codigo. Cards: tempos-03..08 e dictreader-* atrasados; cond-01 em 14/10.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        "session-log.md",
+        "lessons/15-logica-decomposicao.md",
+        "flashcards.md",
+        "fora do estudo: E:/Lucas/Documents/segundo-cerebro/exercicios/contar_vencidos.py (editado pelo aluno)",
+        "fora do estudo: nota de sessao no cofre Segundo Cerebro"
+      ]
     }
   ],
   "lessons": [
@@ -3214,7 +3259,8 @@
         "session_2026-09-03-python-core-01",
         "session_2026-09-07-python-core-tests",
         "session_2026-10-02-condicionais-01",
-        "session_2026-10-09-lesson15-abertura-01"
+        "session_2026-10-09-lesson15-abertura-01",
+        "session_2026-10-11-lesson15-problema1-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -3642,7 +3688,8 @@
       "status": "in_progress",
       "session_ids": [
         "session_2026-10-08-diagnostico-logica-01",
-        "session_2026-10-09-lesson15-abertura-01"
+        "session_2026-10-09-lesson15-abertura-01",
+        "session_2026-10-11-lesson15-problema1-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -3679,7 +3726,7 @@
         ]
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto."
+      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto. | 2026-10-11: problema 1 quase fechado - saida int, vazio=0, >= e asserts por linha da tabela com data fixa; falta exclusao sem-data/venceu (if/elif) e None no teste. Padrao observado: esperado tirado da execucao do codigo (weak_verificacao-valor-esperado). Sem evidencia."
     },
     {
       "lesson_id": "lesson_16-estruturas-dados",
@@ -4596,6 +4643,24 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-10-09T18:17:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_6fd403fa-5cf6-4efb-b5f3-df56f933ce9c",
+      "session_id": "session_2026-10-11-lesson15-problema1-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "card_cond-01 (retrieval_first): juntas -> if separados ou if/elif? e se for uma OU outra? | resposta: juntas = if separados (um avalia cafe, outro pao) - correto; 'se posso ter um e nao necessariamente o outro' = um if so com o operador OU - nao responde ao caso exclusivo (esperado if/elif). Mesmo padrao de 02/10 (or no lugar de if/elif). Parcial, sem ajuda.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-11T18:00:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_00ee0850-f7ae-47bb-a2bf-c7290c652424",
+      "session_id": "session_2026-10-11-lesson15-problema1-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "card_cond-05 (retrieval_first): ler o JSON e comparar com a mesma lista prova a transformacao? | resposta: nao prova, so que a lista gravada confere com a lida; prova um teste comparando o gravado com o resultado esperado. Correto, sem ajuda.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-11T18:08:00-03:00"
     }
   ]
 }

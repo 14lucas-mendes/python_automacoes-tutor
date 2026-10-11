@@ -116,7 +116,7 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
 - Status: `learning`
-- Próxima revisão: `2026-10-11`
+- Próxima revisão: `2026-10-14`
 - Intervalo: `3 dias`
 
 ## card_cond-02
@@ -168,8 +168,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `learning`
-- Próxima revisão: `2026-10-11`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-18`
+- Intervalo: `7 dias`
 
 ## card_dictreader-chaves-01
 

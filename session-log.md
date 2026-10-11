@@ -4,6 +4,45 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-11-lesson15-problema1-01`
+
+- Status: concluída, das 17:56 às 19:37 (cerca de 101 de 90 min). Fechada a pedido do aluno.
+  - `state` 221 → 231, `cards` 33 → 35, `learner-profile` 13 → 14.
+  - Skill em uso: commit `bd567cd`.
+  - Horários lidos do relógio: 17:56, 18:28, 18:41, 19:08, 19:10, 19:15, 19:34 e 19:36. Os horários intermediários da revisão (18:00, 18:05, 18:08) são aproximados.
+- Lições:
+  - `lesson_15-logica-decomposicao`: continua `in_progress`;
+  - `lesson_01-python-core` e `lesson_02-arquivos-erros`: cards.
+- **Revisão** (`retrieval_first`; não é evidência):
+  - `cond-01` **parcial**. "Juntas → `if` separados" estava certo. No caso "uma OU outra", respondeu "um `if` só com o operador OU", o mesmo padrão de 02/10. O tutor reformulou com aprovado/reprovado (degrau 1), e o aluno escreveu `if nota >= 6` / `elif nota < 6`, que está correto. O card fica no passo 1 e volta em 14/10.
+  - `cond-05` **correto** sem ajuda: ler de volta não prova a transformação; prova a comparação com o resultado esperado. Passa do passo 1 para o 2 e volta em 18/10.
+- **Problema 1: `contar_vencidos.py`.** Versões do aluno, por SHA-256: `91bf4a33` → `3c6f3916` → `42ff37d2` → `99b9dbf5` → `3018a621` → `6ddabb82` (a final).
+  - **Feito pelo aluno:**
+    - saída como `int`;
+    - `if __name__ == "__main__":` por iniciativa própria;
+    - data fixa nos `assert`;
+    - `return 0` para a lista vazia, corrigido sozinho depois de o teste falhar;
+    - `>` trocado por `>=`;
+    - a verificação do "sem data" movida para **antes** da comparação.
+  - **Pré-requisito ensinado** (regra 7): a forma de "um `assert` por linha da tabela, com a sua própria lista pequena". Houve dois exemplos executados (`somar_lista` e `contar_cor`), um deles com o esperado errado de propósito, para mostrar o `AssertionError`.
+    - A primeira explicação não foi entendida: o aluno manteve a lista grande e variou a data. **Falha do material.** O tutor deu o `assert` da linha 1 como modelo.
+  - **Padrão central**, ligado a `weak_verificacao-valor-esperado`:
+    - no caso "vence hoje", o esperado foi escrito como `0`. O aluno explicou como chegou a ele: "testando para saber qual seria o resultado esperado";
+    - o tutor explicou com a analogia do troco, a mesma do `cond-05`. Depois disso, o aluno corrigiu o esperado para `1` pela regra;
+    - no caso "sem data", voltou a acompanhar o código: a função passou a devolver `None`, e o `assert` esperava `None`;
+    - lembrado da própria regra ("se não posso comprovar a data, ele deve ser revisado"), respondeu **1** sem rodar (degrau 3).
+  - **Bloqueio aberto:** o card com `""` é contado duas vezes, porque são dois `if` separados (`== ""` e `hoje >= ""`). O tutor ligou isso ao `cond-01` de hoje (casos exclusivos → `if`/`elif`); a pergunta ficou sem resposta. O teste ainda usa `""` em vez de `None`.
+  - Pré-requisito ensinado: `null` no JSON vira `None` no Python, o que é diferente de `""`.
+- **Evidência: nenhuma.** Todo o trabalho no núcleo teve apontamentos de degrau 3 ou 4. Prestação de contas (regra 9): `topic_logica-algoritmos` segue em **0**. Nenhum dos dois elementos do 60 foi cumprido: nem a explicação Feynman autônoma nem a aplicação autônoma. Os pontos fracos continuam inalterados.
+- **Learner profile:** uma observação. A estratégia "perguntar de onde veio o esperado + analogia do troco + lembrar a regra do próprio aluno" deu resultado positivo.
+- **Próxima entrega mínima:**
+  1. responder se "sem data" e "venceu" são exclusivos e escolher a estrutura;
+  2. trocar `""` por `None` no teste;
+  3. fazer todos os `assert` passarem com os esperados da tabela.
+
+  Depois vêm o Feynman curto (por que o esperado vem da regra, e não do código) e o problema 2 (evidências por tópico), decomposto antes do código.
+- Cards atrasados: `tempos-03..08` e `dictreader-*`.
+
 ## `session_2026-10-09-lesson15-abertura-01`
 
 - Status: concluída, das 18:05 às 19:56 (cerca de 111 de 90 min). Fechada a pedido do aluno, que volta no domingo, 11/10.

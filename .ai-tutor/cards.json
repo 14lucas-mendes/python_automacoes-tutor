@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 33,
+  "revision": 35,
   "cards": [
     {
       "card_id": "card_tempos-01",
@@ -183,14 +183,14 @@
       "front": "Duas situacoes podem acontecer juntas (tem cafe, tem pao). Uso if separados ou if/elif? E se for uma OU outra?",
       "back": "Se podem acontecer juntas: if separados (o Python testa todos). Se sao exclusivas: if/elif/else ou match (para no primeiro verdadeiro).",
       "created_at": "2026-10-01T20:13:06-03:00",
-      "updated_at": "2026-10-08T17:22:00-03:00",
-      "due_at": "2026-10-11",
+      "updated_at": "2026-10-11T18:05:00-03:00",
+      "due_at": "2026-10-14",
       "difficulty": "medium",
       "spaced_repetition_step": 1,
       "interval_days": 3,
-      "review_count": 3,
-      "objective_correctness": true,
-      "last_result": "correct",
+      "review_count": 4,
+      "objective_correctness": false,
+      "last_result": "partial",
       "confidence": null,
       "status": "learning"
     },
@@ -267,12 +267,12 @@
       "front": "Comparar o JSON lido de volta com a mesma lista prova que a transformacao esta certa? O que prova?",
       "back": "Nao: so prova que o arquivo guardou o que recebeu. Prova a transformacao comparar com um valor esperado escrito a mao a partir da fonte (ex.: OS-101 com 3 pecas) - o troco calculado de cabeca.",
       "created_at": "2026-10-01T20:13:06-03:00",
-      "updated_at": "2026-10-08T17:27:00-03:00",
-      "due_at": "2026-10-11",
+      "updated_at": "2026-10-11T18:08:00-03:00",
+      "due_at": "2026-10-18",
       "difficulty": "medium",
-      "spaced_repetition_step": 1,
-      "interval_days": 3,
-      "review_count": 3,
+      "spaced_repetition_step": 2,
+      "interval_days": 7,
+      "review_count": 4,
       "objective_correctness": true,
       "last_result": "correct",
       "confidence": null,
@@ -616,5 +616,5 @@
       "status": "new"
     }
   ],
-  "updated_at": "2026-10-09T18:17:00-03:00"
+  "updated_at": "2026-10-11T18:08:00-03:00"
 }

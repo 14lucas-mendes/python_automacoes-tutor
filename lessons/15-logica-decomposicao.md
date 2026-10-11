@@ -2,6 +2,20 @@
 
 **Status:** em andamento desde 2026-10-09 (`session_2026-10-09-lesson15-abertura-01`). Tópico: `topic_logica-algoritmos`. Ciclo 5 da formação fechada.
 
+## Onde paramos (2026-10-11)
+
+Feito: saída `int`, lista vazia → `0`, `>=` no lugar de `>`, verificação do "sem data" **antes** da comparação, um `assert` por linha da tabela com a data fixa `"2026-10-09"`.
+
+Falta:
+
+1. "sem data" e "venceu" se excluem → `if`/`elif` (hoje o card com `""` conta 2);
+2. o teste do "sem data" usar `None` (o `null` do JSON), não `""`;
+3. todos os `assert` passando com os esperados **da tabela**, sem rodar o código para descobrir o esperado.
+
+**Conceito reforçado em 11/10: de onde vem o esperado.** O esperado sai da **regra**; o obtido sai do **código**. Se o esperado for copiado da execução, o teste confere o código com ele mesmo — como perguntar ao caixa qual é o troco certo e conferir o troco dele com a resposta dele.
+
+Pré-requisito ensinado em 11/10: `null` no JSON vira `None` no Python; `None` ("sem valor") ≠ `""` (texto vazio). Texto vazio vem antes de qualquer texto: `"2026-10-09" >= ""` é `True`.
+
 ## Onde paramos (2026-10-09)
 
 **Problema 1: "contar cards vencidos".** A decomposição foi feita com ajuda:

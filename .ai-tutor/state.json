@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 231,
-  "updated_at": "2026-10-11T19:37:00-03:00",
+  "revision": 242,
+  "updated_at": "2026-10-12T18:47:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -13,7 +13,7 @@
       "mastery": 80,
       "retention": "medium",
       "status": "mastered",
-      "last_practice": "2026-10-01",
+      "last_practice": "2026-10-12",
       "evidence_ids": [
         "evidence_python-core-pares-01",
         "evidence_python-core-modulo-01",
@@ -77,7 +77,11 @@
         "evidence_debugging-diagnosis-19",
         "evidence_condicionais-ordem-feynman-01",
         "evidence_condicionais-ordem-aplicacao-01",
-        "evidence_condicionais-guarda-aplicacao-01"
+        "evidence_condicionais-guarda-aplicacao-01",
+        "evidence_condicionais-curto-circuito-01",
+        "evidence_curto-circuito-diagnostico-01",
+        "evidence_curto-circuito-variacao-01",
+        "evidence_curto-circuito-and-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -324,11 +328,13 @@
       "prerequisite_topic_ids": [
         "topic_python-fundamentos"
       ],
-      "mastery": 0,
+      "mastery": 20,
       "retention": "unknown",
-      "status": "not_started",
-      "last_practice": "2026-10-11",
-      "evidence_ids": [],
+      "status": "in_progress",
+      "last_practice": "2026-10-12",
+      "evidence_ids": [
+        "evidence_logica-esperado-feynman-01"
+      ],
       "required_evidence_types": [
         "feynman",
         "application",
@@ -2216,6 +2222,91 @@
       },
       "result": "correct",
       "error": "A redacao da secao Como rodar reaproveita o relato do teste feito pelo tutor; por isso nao conta para weak_caminho-relativo-pasta-trabalho. Commitado pelo aluno depois do fechamento: 1739cc4 (main sincronizada com origin/main)."
+    },
+    {
+      "evidence_id": "evidence_logica-esperado-feynman-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-12-lesson15-problema1-02",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Pergunta so com o enunciado, sem midias: explicar a um colega por que o assert com esperado copiado da execucao nao prova a funcao e de onde o esperado deveria vir. Resposta: 'o teste nao deve funcionar por tentativa e erro... nao posso rodar a funcao... alterando esse valor apenas para que os testes passem... os testes tem que vir de um valor esperado anterior. Ja tem que estar esse dado pronto... Se os testes nao baterem, eu tenho que ajustar o valor esperado.'",
+      "recorded_at": "2026-10-12T18:15:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-12-lesson15-problema1-02",
+        "location": "conversa da sessao"
+      },
+      "result": "partial",
+      "error": "Ideia central correta (esperado definido antes, nao copiado da execucao). Falta dizer a fonte (a regra/conta a mao) e por que o teste copiado nao prova nada (compara o codigo com ele mesmo). A ultima frase contradiz a ideia: com o esperado vindo da regra, quando o teste nao bate quem se ajusta e o codigo, nao o esperado (leitura literal; pode ser lapso, a confirmar)."
+    },
+    {
+      "evidence_id": "evidence_condicionais-curto-circuito-01",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-10-12-lesson15-problema1-02",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Checagem de depuracao (prever sem rodar): com a ordem invertida 'if card[\"due_at\"] <= hoje or card[\"due_at\"] == None:' e o card {'due_at': None}, passa, conta errado ou da erro? Resposta: 'Passa porque a condicao verifica um ou o outro; o card possui o valor None e por isso a resposta e True e o bloco e executado.' Curto-circuito ensinado em 02/10 (cena 6, source_python-boolean-ops).",
+      "recorded_at": "2026-10-12T18:31:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-12-lesson15-problema1-02",
+        "location": "conversa da sessao; verificado em verif_or.py: TypeError '<=' not supported between instances of 'NoneType' and 'str'"
+      },
+      "result": "incorrect",
+      "error": "O or avalia da esquerda para a direita e so pula a segunda condicao quando a primeira ja e verdadeira; com a ordem invertida, a primeira (None <= '2026-10-09') e calculada antes e levanta TypeError. A resposta trata o or como se olhasse as duas condicoes ao mesmo tempo, sem ordem."
+    },
+    {
+      "evidence_id": "evidence_curto-circuito-diagnostico-01",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-10-12-lesson15-problema1-02",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Aluno rodou a ordem invertida e leu o traceback sem ajuda: 'Esse e um erro de excecao. Acontece porque o valor None nao pode ser comparado com uma string. Na primeira expressao ... estou comparando None com hoje ... Da um TypeError.' Traceback: line 17, TypeError '<=' not supported between instances of 'NoneType' and 'str'.",
+      "recorded_at": "2026-10-12T18:35:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-12-lesson15-problema1-02",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/contar_vencidos.py (versao experimental invertida)"
+      },
+      "result": "correct",
+      "error": "Diagnostico correto da causa (tipo, linha e operandos). O porque da ordem (o or so pula a segunda condicao quando a primeira e verdadeira; a primeira e sempre avaliada) ainda nao foi dito pelo aluno; ensinado em seguida."
+    },
+    {
+      "evidence_id": "evidence_curto-circuito-variacao-01",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-10-12-lesson15-problema1-02",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Variacao em contexto novo, sem rodar: fila = []; if fila[0] == 'urgente' or len(fila) == 0: print('atender agora'). Resposta: da erro; 'a lista esta vazia, entao essa expressao e falsa. Por ser falso, ele nem roda o lado direito'; a ordem esta invertida: primeiro verificar se ha itens, depois se o primeiro e urgente; 'o erro seria TypeError tambem'.",
+      "recorded_at": "2026-10-12T18:38:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-12-lesson15-problema1-02",
+        "location": "conversa; verificado: IndexError: list index out of range; True or ... nao calcula a segunda; False or ... calcula"
+      },
+      "result": "partial",
+      "error": "Certo: da erro e a guarda (ha itens?) deve vir antes de fila[0]. Errado: fila[0] numa lista vazia nao vale False, levanta IndexError (nao TypeError - mesma troca do cond-03 em 01/10); e o or so pula a segunda condicao quando a primeira e VERDADEIRA, nao falsa."
+    },
+    {
+      "evidence_id": "evidence_curto-circuito-and-01",
+      "topic_id": "topic_python-fundamentos",
+      "session_id": "session_2026-10-12-lesson15-problema1-02",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Sem rodar: fila = []; if len(fila) > 0 and fila[0] == 'urgente': print(...). O Python chega a calcular fila[0]? Resposta: 'a primeira expressao da False e ele passa para a condicao a direita, que vai gerar IndexError porque a lista e vazia'. Curto-circuito do and ensinado em 02/10 (cena 6); explicacao do or dada minutos antes.",
+      "recorded_at": "2026-10-12T18:42:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-12-lesson15-problema1-02",
+        "location": "conversa; verificado: sem saida e sem erro; False and ... nao calcula a segunda"
+      },
+      "result": "incorrect",
+      "error": "No and, primeira condicao False encerra a avaliacao: fila[0] nunca e calculado, nada e impresso e nao ha erro. Aplicou ao and a regra do or (falso -> olha a segunda). Melhora observada: IndexError e o motivo (lista vazia nao tem item) agora corretos. Declaracao do aluno logo depois: 'pensei que a regra valia para o OR; nao prestei atencao; foi um detalhe de atencao meu' (registrada; classificacao mantida pela leitura literal da resposta)."
     }
   ],
   "sessions": [
@@ -3221,6 +3312,56 @@
         "fora do estudo: E:/Lucas/Documents/segundo-cerebro/exercicios/contar_vencidos.py (editado pelo aluno)",
         "fora do estudo: nota de sessao no cofre Segundo Cerebro"
       ]
+    },
+    {
+      "session_id": "session_2026-10-12-lesson15-problema1-02",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-10-12T18:12:00-03:00",
+      "ended_at": "2026-10-12T18:47:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 45,
+      "lesson_ids": [
+        "lesson_15-logica-decomposicao"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos",
+        "topic_python-fundamentos"
+      ],
+      "objective": "(1) Feynman autonomo, sem midias: por que o esperado do assert vem da regra e nao da execucao do codigo. (2) Fechar o problema 1 (contar_vencidos.py, sha256 6ddabb82...): decidir se 'sem data' e 'venceu' sao exclusivos e escolher a estrutura; teste do sem-data com None; todos os asserts passando com os esperados da tabela.",
+      "cognitive_core": "Explicar com as proprias palavras a independencia entre esperado (regra) e obtido (codigo); estruturar condicoes exclusivas e verificar com esperados escolhidos pela regra.",
+      "mode": "learning",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "weak_condicionais-ordem-guarda e weak_verificacao-valor-esperado ativos; aquisicao em curso, interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-10-12T18:12 com 45 min (pedido do aluno). Pergunta Feynman apresentada antes de olhar o codigo. | 18:14 Feynman autonomo (so o enunciado): parcial - esperado definido antes (certo), sem dizer a fonte (regra) nem o porque; ultima frase 'se os testes nao baterem, ajusto o valor esperado' contradiz. evidence_logica-esperado-feynman-01. Dominio 0 -> 20 (primeira evidencia valida; reconhece a ideia). Pergunta direcional (degrau 3) sobre a ultima frase. | 18:16 apos degrau 3: 'nao ajusto o teste, ajusto a funcao... o valor esperado ja e o meu teste' - autocorrecao correta, guiada (nao conta como Feynman autonomo). Inicio do codigo: tarefa sem-data x venceu + None no teste + todos passando, sem pista sobre a estrutura. | 18:25 versao 0277c644...: um if so, 'if card[\"due_at\"] == None or card[\"due_at\"] <= hoje: contador += 1' - mesma acao para os dois casos (uso correto de or), None testado primeiro; todos os asserts passam sem mudar esperados; print da lista grande = 5 (correto pela regra em 10-12). Passo 2 nao feito: teste do sem-data ainda usa '' (passa porque '' <= qualquer data). Pedido: trocar para None e PREVER antes de rodar. | 18:29 versao f4898339...: teste do sem-data com None, todos passam (verificado). Previsao do aluno: 'vai passar, porque o None e verificado primeiro' (correta, sem ajuda); declarou que ja tinha testado com None antes e 'nao tinha entendido exatamente o porque'. Problema 1 fechado (os 4 ajustes). Checagem de depuracao: prever a ordem invertida (<= antes do == None). | 18:31 previsao da ordem invertida: 'passa, o or verifica um ou o outro' - incorreta (TypeError); evidence_condicionais-curto-circuito-01. Pedido: rodar a versao invertida e colar o erro antes da explicacao. | 18:34 rodou a versao invertida, colou o TypeError e diagnosticou sozinho (excecao, None nao compara com str, primeira expressao) - evidence_curto-circuito-diagnostico-01 correta. Tutor explicou o curto-circuito do or (analogia do produto sem etiqueta) e apresentou variacao: lista vazia com lista[0] antes do len. | 18:37 variacao da fila: parcial (erro e ordem certos; 'fila[0] vazia = falso, por ser falso nao roda a direita' e TypeError errados) - evidence_curto-circuito-variacao-01. Tutor mostrou a execucao (IndexError; True or / False or) e explicou. | 18:42 and com lista vazia: incorreta (achou que False passa para a direita e da IndexError; o and para no False) - evidence_curto-circuito-and-01. IndexError agora nomeado certo. Tutor mostrou a execucao e a tabela and x or (convite E documento / cartao OU dinheiro). | 18:44 aluno dispensou o card and/or (declarou lapso de atencao). Decisao: sem card; uma pergunta rapida de and/or na abertura da proxima sessao (retrieval_first) para confirmar. | 18:45 aluno perguntou se falta muito/tempo e pouco; resposta: hoje nada essencial pendente; lesson_15 ~3-4 sessoes; formacao ~2 ciclos adiantada, risco = horas semanais. Fechada a pedido do aluno em 2026-10-12T18:47 (~35 de 45 min). Arquivo final f4898339... (ordem restaurada: None primeiro). Ultimo comportamento proprio: diagnostico correto do TypeError lendo o traceback. Suporte mais recente no nucleo: explicacao do curto-circuito and/or (degrau 6 sobre esse conceito). Prestacao de contas (regra 9): topic_logica-algoritmos 0 -> 20; metade Feynman do 60 nao cumprida (parcial); aplicacao autonoma nao cumprida. topic_python-fundamentos segue 80 (curto-circuito nao fazia parte das evidencias do 80; 1 correta, 1 parcial, 1 incorreta hoje).",
+      "evidence_ids": [
+        "evidence_logica-esperado-feynman-01",
+        "evidence_condicionais-curto-circuito-01",
+        "evidence_curto-circuito-diagnostico-01",
+        "evidence_curto-circuito-variacao-01",
+        "evidence_curto-circuito-and-01"
+      ],
+      "difficulty": "medium",
+      "next_step": "Abertura: 1 pergunta rapida de and/or (retrieval_first, combinada com o aluno em vez de card). Depois: Feynman autonomo 'por que o esperado vem da regra' (nova tentativa) e problema 2 da lesson_15 (evidencias por topico) decomposto sozinho antes do codigo: entrada, regra, saida, 3-5 exemplos com esperado a mao. Cards: cond-01 (14/10), tempos-03..08 e dictreader-* atrasados.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/learner-profile.json",
+        "session-log.md",
+        "lessons/15-logica-decomposicao.md",
+        "flashcards.md",
+        "media/lesson_15-logica-decomposicao/notebooklm/local/quiz.html (tema escuro fixo, pedido antes da sessao)",
+        "fora do estudo: E:/Lucas/Documents/segundo-cerebro/exercicios/contar_vencidos.py (editado pelo aluno)",
+        "fora do estudo: nota de sessao no cofre Segundo Cerebro"
+      ]
     }
   ],
   "lessons": [
@@ -3689,7 +3830,8 @@
       "session_ids": [
         "session_2026-10-08-diagnostico-logica-01",
         "session_2026-10-09-lesson15-abertura-01",
-        "session_2026-10-11-lesson15-problema1-01"
+        "session_2026-10-11-lesson15-problema1-01",
+        "session_2026-10-12-lesson15-problema1-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -3726,7 +3868,7 @@
         ]
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto. | 2026-10-11: problema 1 quase fechado - saida int, vazio=0, >= e asserts por linha da tabela com data fixa; falta exclusao sem-data/venceu (if/elif) e None no teste. Padrao observado: esperado tirado da execucao do codigo (weak_verificacao-valor-esperado). Sem evidencia."
+      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto. | 2026-10-11: problema 1 quase fechado - saida int, vazio=0, >= e asserts por linha da tabela com data fixa; falta exclusao sem-data/venceu (if/elif) e None no teste. Padrao observado: esperado tirado da execucao do codigo (weak_verificacao-valor-esperado). Sem evidencia. | 2026-10-12: problema 1 FECHADO (sha256 f4898339...): um if com or (mesma acao), None primeiro como guarda, 6 asserts com esperados da tabela. Feynman do esperado parcial (evidence_logica-esperado-feynman-01). Proximo: problema 2."
     },
     {
       "lesson_id": "lesson_16-estruturas-dados",
@@ -4035,7 +4177,10 @@
       "category": "conceptual",
       "cause": "Ordem e estrutura de condicionais nunca ensinadas explicitamente nesta formacao (lacuna do material): if solto x if/elif/else/match exclusivos, condicoes sobrepostas (especifica antes da geral), case _ por ultimo, curto-circuito de and/or e 'verificar antes de usar' (guarda antes de lista[0]; acao irreversivel so depois da checagem). Em 01/10 chegou a ordem certa por tentativa e erro, sem entender por que funcionou; buscou explicacao de outra IA depois. Aluno pediu aula explicativa, exercicios e midias.",
       "supporting_evidence_ids": [
-        "evidence_ordens-falhas-ordem-01"
+        "evidence_ordens-falhas-ordem-01",
+        "evidence_condicionais-curto-circuito-01",
+        "evidence_curto-circuito-variacao-01",
+        "evidence_curto-circuito-and-01"
       ],
       "entered_at": "2026-10-01",
       "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes estruturando condicoes com guarda antes do uso e acao so apos a verificacao, uma em contexto novo.",
@@ -4047,7 +4192,8 @@
       "category": "conceptual",
       "cause": "Construir verificacao com fonte independente (valor esperado escrito a mao comparado com o resultado) nao havia sido ensinado (lacuna do material). Em 28/09 explicou que ida-e-volta nao prova a transformacao, mas em 29/09-01/10 nao soube construir a alternativa; apontou a entrada (ler_ordens_servico) como fonte verdadeira.",
       "supporting_evidence_ids": [
-        "evidence_ordens-verificacao-esperado-01"
+        "evidence_ordens-verificacao-esperado-01",
+        "evidence_logica-esperado-feynman-01"
       ],
       "entered_at": "2026-10-01",
       "exit_condition": "Duas verificacoes autonomas corretas com valor esperado independente em sessoes diferentes, uma em contexto novo, incluindo saida explicita de falha.",

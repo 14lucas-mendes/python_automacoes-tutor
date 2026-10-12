@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 14,
+  "revision": 15,
   "updated_at": "2026-10-06T19:28:00-03:00",
   "declared_preferences": [
     {
@@ -143,6 +143,18 @@
         "note": "Declarou ter escolhido o esperado 'testando para saber qual seria o resultado esperado'. Depois da analogia corrigiu o vence-hoje para 1 pela regra; no caso sem data voltou a acompanhar o codigo (None) e, lembrado da propria regra, respondeu 1 sem rodar."
       },
       "recorded_at": "2026-10-11T19:37:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_0f1378ce-91d2-4ad5-bb32-e2772cf7e098",
+      "session_id": "session_2026-10-12-lesson15-problema1-02",
+      "topic_id": "topic_python-fundamentos",
+      "type": "strategy_outcome",
+      "value": {
+        "strategy": "falha controlada: prever sem rodar, depois inverter a ordem no proprio codigo e rodar",
+        "result": "positive",
+        "note": "Previu errado ('passa, o or verifica um ou o outro'), mas ao rodar a versao invertida leu o traceback e explicou sozinho o TypeError. Nas previsoes seguintes sem rodar, trocou a regra de parada do or e do and; disse que no and foi falta de atencao e dispensou o card."
+      },
+      "recorded_at": "2026-10-12T18:47:00-03:00"
     }
   ],
   "inferences": [],

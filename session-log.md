@@ -4,6 +4,43 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-12-lesson15-problema1-02`
+
+- Status: concluída, das 18:12 às 18:47 (cerca de 35 de 45 min, orçamento pedido pelo aluno). Fechada a pedido do aluno.
+  - `state` 231 → 242, `learner-profile` 14 → 15.
+  - Skill em uso: commit `bd567cd`.
+  - Horários lidos do relógio.
+- Antes da sessão, a pedido do aluno: o `quiz.html` da lição 15 passou a ser **sempre escuro**. Antes, ele seguia o tema claro do Windows.
+- Lição `lesson_15-logica-decomposicao`: continua `in_progress`.
+- **Feynman, só com o enunciado e sem mídias:** "por que copiar o esperado da execução não prova a função". Resultado **parcial**, registrado em `evidence_logica-esperado-feynman-01`.
+  - Certo: o esperado tem que estar pronto antes, sem tentativa e erro.
+  - Faltou: a fonte (a regra) e o porquê (o teste confere o código com ele mesmo).
+  - A última frase contradizia o resto: "se os testes não baterem, ajusto o valor esperado".
+  - Depois de uma pergunta direcional (degrau 3), corrigiu: "não ajusto o teste, ajusto a função". É prática guiada.
+- **Problema 1, fechado.** Versão final `f4898339…`:
+  - um `if` só, `card["due_at"] == None or card["due_at"] <= hoje`, que é um uso correto do `or` (as duas condições levam à mesma ação);
+  - o `None` vem primeiro, como guarda;
+  - 6 `assert` passando, com os esperados da tabela e sem mudar nenhum;
+  - o `None` substituiu o `""` no teste.
+  - Previsão própria correta: "vai passar porque o `None` é verificado primeiro". O aluno declarou que antes não sabia o porquê.
+- **Curto-circuito.** Foram registradas evidências de `topic_python-fundamentos`, ensinado em 02/10:
+  - `evidence_condicionais-curto-circuito-01` (**incorreta**): previu que a ordem invertida "passa, o `or` verifica um ou o outro";
+  - `evidence_curto-circuito-diagnostico-01` (**correta**, sozinho): rodou a versão invertida e explicou o `TypeError` pelo traceback;
+  - `evidence_curto-circuito-variacao-01` (**parcial**): na fila vazia com `fila[0]` antes do `len`, acertou "dá erro" e a ordem certa, mas disse "vazia = falso, por ser falso não roda a direita" e `TypeError` em vez de `IndexError`;
+  - `evidence_curto-circuito-and-01` (**incorreta**): com `and`, achou que `False` passa para a direita. O `IndexError` saiu certo desta vez.
+  - O tutor explicou com execução e com a tabela `and` × `or` (convite E documento / cartão OU dinheiro).
+  - O aluno disse que no `and` foi "detalhe de atenção" e **dispensou o card**. Combinado: uma pergunta rápida de `and`/`or` na abertura da próxima sessão.
+- **Domínio (regra 9):**
+  - `topic_logica-algoritmos`: **0 → 20**, a primeira evidência válida. Para o 60, a explicação Feynman ainda não saiu correta sozinha e a aplicação sozinha ainda não foi feita;
+  - `topic_python-fundamentos`: segue em **80**. O curto-circuito não fazia parte das evidências do 80;
+  - `weak_condicionais-ordem-guarda` e `weak_verificacao-valor-esperado` ganharam evidências de apoio e seguem ativos.
+- **Pergunta do aluno, "falta muito?".** Hoje nada essencial ficou pendente. A lição 15 leva umas 3 ou 4 sessões. A formação está uns 2 ciclos adiantada, e o risco são as horas semanais.
+- **Learner profile:** uma observação. A falha controlada (prever, inverter, rodar) deu resultado positivo no diagnóstico.
+- **Próximo passo:**
+  1. a pergunta de `and`/`or`;
+  2. uma nova tentativa sozinho da explicação "o esperado vem da regra";
+  3. o problema 2 decomposto sozinho antes do código.
+
 ## Mídias dos pontos fracos — 2026-10-11 (`/media`, `media-index` 13 → 14, `sources` 6 → 7)
 
 - Não é sessão de aprendizagem. Nenhuma evidência, domínio ou ponto fraco foi alterado. As mídias têm `evidence_eligible: false`.

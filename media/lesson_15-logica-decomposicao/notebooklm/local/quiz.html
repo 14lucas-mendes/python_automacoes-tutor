@@ -13,14 +13,7 @@
   --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
   --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
 }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    color-scheme: light;
-    --bg: #f6f6f3; --panel: #ffffff; --line: #e1e0da; --fg: #17181a; --fg-2: #4d4d48; --fg-3: #74736d;
-    --accent: #2a78d6; --good: #1a7f37; --bad: #bc4c00; --code: #f0efea;
-  }
-}
-:root[data-theme="dark"] { color-scheme: dark; }
+/* Sempre escuro, mesmo com o sistema no tema claro (sensibilidade a luminosidade alta). */
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 var(--f-body); }
 #quiz { display: grid; gap: 12px; }

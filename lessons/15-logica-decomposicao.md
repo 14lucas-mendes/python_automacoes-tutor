@@ -2,6 +2,21 @@
 
 **Status:** em andamento desde 2026-10-09 (`session_2026-10-09-lesson15-abertura-01`). Tópico: `topic_logica-algoritmos`. Ciclo 5 da formação fechada.
 
+## Onde paramos (2026-10-12)
+
+**Problema 1: fechado.** A versão final (`f4898339…`) usa um `if` só, `card["due_at"] == None or card["due_at"] <= hoje`. O `or` funciona aqui porque as duas condições levam à mesma ação. O `None` vem primeiro, como **guarda**, e 6 `assert` passam com os esperados da tabela.
+
+**Curto-circuito** (revisto em 12/10):
+- `or` para quando a primeira é **True**;
+- `and` para quando a primeira é **False**.
+
+Com a ordem invertida, a comparação impossível (`None <= "texto"` → `TypeError`; `fila[0]` com a fila vazia → `IndexError`) acontece antes da guarda.
+
+**Próximo:**
+1. uma pergunta rápida de `and`/`or`;
+2. o Feynman "o esperado vem da regra", feito sozinho;
+3. o **problema 2** (evidências por tópico), decomposto sozinho antes do código.
+
 ## Onde paramos (2026-10-11)
 
 Feito: saída `int`, lista vazia → `0`, `>=` no lugar de `>`, verificação do "sem data" **antes** da comparação, um `assert` por linha da tabela com a data fixa `"2026-10-09"`.

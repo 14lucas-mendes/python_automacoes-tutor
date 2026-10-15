@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 248,
-  "updated_at": "2026-10-13T16:02:00-03:00",
+  "revision": 250,
+  "updated_at": "2026-10-15T20:25:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -332,11 +332,12 @@
       "mastery": 40,
       "retention": "unknown",
       "status": "in_progress",
-      "last_practice": "2026-10-13",
+      "last_practice": "2026-10-15",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
-        "evidence_logica-decomposicao-problema2-01"
+        "evidence_logica-decomposicao-problema2-01",
+        "evidence_logica-gavetas-problema2-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -350,7 +351,7 @@
         "estrutura de dados justificada",
         "defeito diagnosticado com hipotese"
       ],
-      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente.",
+      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma.",
       "diagnostic": {
         "estimate": "partial",
         "confidence": "medium",
@@ -2361,6 +2362,23 @@
       },
       "result": "partial",
       "error": "Guiada (degraus 1-3): entrada com um topico x saida com todos; esperado 2 para um dict de uma evidencia; mesma entrada com dois esperados; javascript = 0 com uma evidencia de javascript na lista (esperado sem conferir pela regra). Tudo corrigido pelo aluno depois de reformulacao, recuperacao e pergunta direcional. Proprio: lista vazia no plano, caso topic_id vazio, decisao do 0 com motivo, deteccao do descompasso 'python' x 'topic_python'."
+    },
+    {
+      "evidence_id": "evidence_logica-gavetas-problema2-02",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-13-lesson15-problema2-01",
+      "kind": "application",
+      "autonomous": false,
+      "transfer": false,
+      "context": "Problema 2 da lesson_15: implementar calcular_topicos(lista, topicos) -> dict topico -> quantidade com uma gaveta (chave) por topico, depois da pergunta das gavetas.",
+      "recorded_at": "2026-10-15T20:25:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-13-lesson15-problema2-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/exe_01.py (sha256 494f60e31d199eb9...); saida conferida pelo tutor com python -I"
+      },
+      "result": "partial",
+      "error": "Depois do degrau 3 (pergunta das gavetas): uma gaveta por topico correta e saida certa para a lista do arquivo, mas as chaves estao escritas a mao em vez de geradas de topicos (quebra com outra lista de topicos), caso vazio devolve texto e asserts ainda nao escritos."
     }
   ],
   "sessions": [
@@ -3422,6 +3440,8 @@
       "status": "interrupted",
       "transitions": [
         "in_progress",
+        "interrupted",
+        "resumed",
         "interrupted"
       ],
       "started_at": "2026-10-13T13:45:00-03:00",
@@ -3445,14 +3465,15 @@
         "topic_label_visible": true,
         "reason": "weak_condicionais-ordem-guarda e weak_verificacao-valor-esperado ativos; aquisicao em curso, interleaving nao se aplica."
       },
-      "checkpoint": "Aberta em 2026-10-13T13:45 com 120 min (pedido do aluno). Sem sessao retomavel. Pergunta de and/or apresentada primeiro (retrieval_first). | 13:50 and/or: correto sem ajuda (roda; False no and encerra; vai ao print fim) - evidence_curto-circuito-and-02 + retrieval correct. Pergunta Feynman 'de onde vem o esperado' apresentada, so o enunciado. | 13:56 Feynman 'fonte do esperado': correto, autonomo (regra como fonte do 1; codigo se ajusta ao esperado) - evidence_logica-esperado-feynman-02. Regra 9: metade Feynman do 60 em topic_logica-algoritmos cumprida; falta a aplicacao autonoma (alvo: problema 2). Problema 2 apresentado: decompor sozinho antes do codigo (formato de 1 evidencia mostrado, sem exemplos). | 14:00 aluno perguntou se cria as evidencias ou se ha lista pronta; resposta: ele cria (escolher exemplos faz parte da tarefa), ev_01 e so o formato, uma lista pequena por exemplo. Nenhuma pista sobre casos-limite. Aluno aprovou gravar o estado (modo so-olhar ativo na conversa). | 14:05-15:00 decomposicao do problema 2. 1a versao: entrada = lista + UM topico, saida = dicionario de todos os topicos, asserts == int com um dict solto e esperado 2 tirado da lista grande; plano com lista vazia -> 0; caso-limite topic_id vazio pensado sozinho. Degrau 1 (reformulacao: painel 'cada topico'): entrada passou a lista de evidencias + lista de topicos, saida = dicionario topico -> quantidade, topico sem evidencia aparece (decisao propria, boa). Decidiu 0 e nao None, com motivo ('topico nao iniciado'). Degrau 2 (recuperar: cada exemplo com sua lista, como no problema 1). Exemplos completos: mesma entrada com dois esperados diferentes e javascript = 0 com uma evidencia de javascript na lista. Degrau 3 (apontar a contradicao; maquina de cafe). Corrigiu: ex.2 sem a evidencia de javascript -> 0; ex.1 com topicos sem javascript (a evidencia de javascript fica ignorada: caso extra valido). Decomposicao final correta, guiada (degraus 1-3). evidence_logica-decomposicao-problema2-01. | 15:13 pre-requisito ensinado (regras 1 e 7): chave nova em dicionario (= cria, += le e soma; KeyError na chave inexistente), 2 exemplos executados (estoque, placar). Previsao sem rodar: KeyError na linha 4 ('c'), autocorrigido sozinho antes de enviar (primeiro disse linha 2). Checagem de pre-requisito recem-ensinado, nao evidencia. | 15:18 aluno detectou sozinho o descompasso 'python' x 'topic_python' (topicos x topic_id) antes de rodar. Degrau 3: qual lista pode mudar? Resposta correta: ajustar a lista de topicos para corresponder a de evidencias. | 15:58 codigo em andamento exe_01.py (sha256 a4d0cff5...): um contador unico cont_pyhton para todos os topicos, retorno {topico: cont} (so o ultimo topico), item['evicence_id'] (erro de digitacao -> KeyError), if == None: return 0 dentro do laco (regra fora da decomposicao), entrada vazia devolve texto em vez de dicionario; asserts ainda nao escritos (exemplos em docstrings, ainda com 'python' e [[). Aluno pediu ajuda so para pensar onde erra, sem resposta nem codigo: 3 perguntas de localizacao (quantas gavetas x 4 topicos; rodar e ler o traceback; caso vazio x decisao do 0). Degrau 3. | Interrompida a pedido do aluno em 2026-10-13T16:02 (~137 de 120 min). Ultimo comportamento proprio: deteccao do descompasso de nomes e decisao de qual lista ajustar. Suporte mais recente no nucleo: perguntas de localizacao (degrau 3). Bloqueio aberto: um contador para varios topicos (falta uma gaveta por topico). Regra 9: topic_logica-algoritmos 20 -> 40 (aplicacao parcial com ajuda direcional, evidence_logica-decomposicao-problema2-01); Feynman do 60 cumprido hoje (evidence_logica-esperado-feynman-02); falta a aplicacao autonoma do 60.",
+      "checkpoint": "Aberta em 2026-10-13T13:45 com 120 min (pedido do aluno). Sem sessao retomavel. Pergunta de and/or apresentada primeiro (retrieval_first). | 13:50 and/or: correto sem ajuda (roda; False no and encerra; vai ao print fim) - evidence_curto-circuito-and-02 + retrieval correct. Pergunta Feynman 'de onde vem o esperado' apresentada, so o enunciado. | 13:56 Feynman 'fonte do esperado': correto, autonomo (regra como fonte do 1; codigo se ajusta ao esperado) - evidence_logica-esperado-feynman-02. Regra 9: metade Feynman do 60 em topic_logica-algoritmos cumprida; falta a aplicacao autonoma (alvo: problema 2). Problema 2 apresentado: decompor sozinho antes do codigo (formato de 1 evidencia mostrado, sem exemplos). | 14:00 aluno perguntou se cria as evidencias ou se ha lista pronta; resposta: ele cria (escolher exemplos faz parte da tarefa), ev_01 e so o formato, uma lista pequena por exemplo. Nenhuma pista sobre casos-limite. Aluno aprovou gravar o estado (modo so-olhar ativo na conversa). | 14:05-15:00 decomposicao do problema 2. 1a versao: entrada = lista + UM topico, saida = dicionario de todos os topicos, asserts == int com um dict solto e esperado 2 tirado da lista grande; plano com lista vazia -> 0; caso-limite topic_id vazio pensado sozinho. Degrau 1 (reformulacao: painel 'cada topico'): entrada passou a lista de evidencias + lista de topicos, saida = dicionario topico -> quantidade, topico sem evidencia aparece (decisao propria, boa). Decidiu 0 e nao None, com motivo ('topico nao iniciado'). Degrau 2 (recuperar: cada exemplo com sua lista, como no problema 1). Exemplos completos: mesma entrada com dois esperados diferentes e javascript = 0 com uma evidencia de javascript na lista. Degrau 3 (apontar a contradicao; maquina de cafe). Corrigiu: ex.2 sem a evidencia de javascript -> 0; ex.1 com topicos sem javascript (a evidencia de javascript fica ignorada: caso extra valido). Decomposicao final correta, guiada (degraus 1-3). evidence_logica-decomposicao-problema2-01. | 15:13 pre-requisito ensinado (regras 1 e 7): chave nova em dicionario (= cria, += le e soma; KeyError na chave inexistente), 2 exemplos executados (estoque, placar). Previsao sem rodar: KeyError na linha 4 ('c'), autocorrigido sozinho antes de enviar (primeiro disse linha 2). Checagem de pre-requisito recem-ensinado, nao evidencia. | 15:18 aluno detectou sozinho o descompasso 'python' x 'topic_python' (topicos x topic_id) antes de rodar. Degrau 3: qual lista pode mudar? Resposta correta: ajustar a lista de topicos para corresponder a de evidencias. | 15:58 codigo em andamento exe_01.py (sha256 a4d0cff5...): um contador unico cont_pyhton para todos os topicos, retorno {topico: cont} (so o ultimo topico), item['evicence_id'] (erro de digitacao -> KeyError), if == None: return 0 dentro do laco (regra fora da decomposicao), entrada vazia devolve texto em vez de dicionario; asserts ainda nao escritos (exemplos em docstrings, ainda com 'python' e [[). Aluno pediu ajuda so para pensar onde erra, sem resposta nem codigo: 3 perguntas de localizacao (quantas gavetas x 4 topicos; rodar e ler o traceback; caso vazio x decisao do 0). Degrau 3. | Interrompida a pedido do aluno em 2026-10-13T16:02 (~137 de 120 min). Ultimo comportamento proprio: deteccao do descompasso de nomes e decisao de qual lista ajustar. Suporte mais recente no nucleo: perguntas de localizacao (degrau 3). Bloqueio aberto: um contador para varios topicos (falta uma gaveta por topico). Regra 9: topic_logica-algoritmos 20 -> 40 (aplicacao parcial com ajuda direcional, evidence_logica-decomposicao-problema2-01); Feynman do 60 cumprido hoje (evidence_logica-esperado-feynman-02); falta a aplicacao autonoma do 60. | Retomada em 2026-10-15T19:25 com 45 min (pedido do aluno; skill bd567cd). exe_01.py inalterado desde 13/10 (sha256 a4d0cff5...). Retomar pela pergunta das gavetas. | 19:27 pergunta das gavetas (degrau 3 retomado de 13/10): 'Eu preciso de uma gaveta para cada topico' - correto (nao disse quantas o codigo tinha: uma). Pre-requisito relembrado (dicionario: = cria, += 1 soma, KeyError), regra 7. Tarefa: reescrever com uma gaveta por topico, prever e rodar. | ~20:20 aluno trabalhou sozinho e trouxe a versao 494f60e3...: dict result com as 4 chaves escritas a mao valendo 0, laco topicos x lista, result[topico] += 1; tirou evicence_id e o return 0 do laco. Saida conferida pelo tutor: {'topic_python': 2, 'topic_sql': 2, 'topic_git': 1, 'topic_javascript': 1}. Faltam: gavetas criadas a partir do parametro topicos (hoje fixas), caso vazio devolve texto, asserts nao escritos. Pergunta de previsao apresentada e nao respondida: calcular_topicos(lista, ['topic_python','topic_rust']). | Interrompida a pedido do aluno em 2026-10-15T20:25:00-03:00 (~60 de 45 min); volta amanha. Ultimo comportamento proprio: implementou uma gaveta por topico com dicionario. Suporte mais recente no nucleo: degrau 3 (pergunta das gavetas). Bloqueio aberto: chaves fixas no codigo, nao geradas de topicos.",
       "evidence_ids": [
         "evidence_curto-circuito-and-02",
         "evidence_logica-esperado-feynman-02",
-        "evidence_logica-decomposicao-problema2-01"
+        "evidence_logica-decomposicao-problema2-01",
+        "evidence_logica-gavetas-problema2-02"
       ],
       "difficulty": "medium",
-      "next_step": "Retomar exe_01.py pela pergunta das gavetas: quantos contadores o codigo tem x 4 topicos do painel (rastreio a mao do exemplo 1). Depois: rodar e ler o traceback (evicence_id), tirar o return 0 do laco, caso vazio devolvendo dicionario, exemplos com 'topic_*' e um assert por exemplo; prever antes de rodar. Cards atrasados: cond-01 (14/10), tempos-03..08, dictreader-*.",
+      "next_step": "Retomar pela previsao de calcular_topicos(lista, ['topic_python', 'topic_rust']) antes de rodar; depois gerar as gavetas a partir de topicos, caso vazio devolvendo dicionario e um assert por exemplo (exemplos com 'topic_*'), prevendo antes de rodar. Cards atrasados: cond-01, tempos-03..08, dictreader-*.",
       "files_changed": [
         ".ai-tutor/state.json",
         ".ai-tutor/learner-profile.json",

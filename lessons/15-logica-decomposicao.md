@@ -2,6 +2,22 @@
 
 **Status:** em andamento desde 2026-10-09 (`session_2026-10-09-lesson15-abertura-01`). Tópico: `topic_logica-algoritmos`. Ciclo 5 da formação fechada.
 
+## Onde paramos (2026-10-15), sessão interrompida e retomável
+
+Sessão de 13/10 retomada em 15/10, das 19:25 às 20:25 (cerca de 60 de 45 min).
+
+- **Gavetas:** "Eu preciso de uma gaveta para cada tópico" (correto, depois da pergunta direcional de 13/10).
+- **Código do aluno** (`exe_01.py`, `494f60e3…`): um dicionário `result` com uma chave por tópico começando em `0`, e `result[topico] += 1` dentro do laço. Saiu o `evicence_id` e o `return 0`. A saída com a lista do arquivo está certa: `{'topic_python': 2, 'topic_sql': 2, 'topic_git': 1, 'topic_javascript': 1}`.
+- **Bloqueio aberto:** as quatro chaves estão **escritas à mão**, e não criadas a partir do parâmetro `topicos`. Com outra lista de tópicos, a função erra. O próprio exemplo 1 da tabela abaixo (tópicos sem `javascript`) não passaria.
+- Evidência `evidence_logica-gavetas-problema2-02`: aplicação **parcial**, depois do degrau 3. `topic_logica-algoritmos` continua em 40.
+  - ✅ A metade **Feynman** do 60 foi cumprida em 13/10.
+  - ⏳ Falta a **aplicação autônoma**.
+
+**Próximo:** prever, antes de rodar, o que sai de `calcular_topicos(lista, ["topic_python", "topic_rust"])`. Depois:
+1. criar as gavetas a partir de `topicos`;
+2. fazer o caso vazio devolver um dicionário;
+3. escrever um `assert` por exemplo, prevendo o resultado antes de rodar.
+
 ## Onde paramos (2026-10-13), sessão interrompida e retomável
 
 **Problema 2: evidências por tópico.** A decomposição está pronta, feita com ajuda dos degraus 1 a 3:

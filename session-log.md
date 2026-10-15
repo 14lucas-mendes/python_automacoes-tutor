@@ -4,6 +4,30 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-13-lesson15-problema2-01` (retomada em 2026-10-15)
+
+- Status: **retomada** às 19:25 e **interrompida de novo, retomável**, às 20:25 (cerca de 60 de 45 min, orçamento pedido pelo aluno). Interrompida a pedido do aluno, que volta amanhã.
+  - `state` 248 → 250 (249 na retomada), `learner-profile` 16 → 17.
+  - Skill em uso: commit `bd567cd`.
+- Lição `lesson_15-logica-decomposicao`: continua `in_progress`.
+- **Pergunta das gavetas** (degrau 3, retomada de 13/10): "Eu preciso de uma gaveta para cada tópico". Correto. Ele não disse quantas gavetas o código tinha (uma).
+- **Pré-requisito relembrado** (regra 7): dicionário, com `=` criando a chave, `+= 1` somando e `KeyError` quando a chave não existe.
+- **Código do aluno**, feito sozinho em cerca de 50 min: `exe_01.py` (`494f60e3…`).
+  - Um dicionário `result` com as 4 chaves escritas à mão valendo `0`, um laço `topicos × lista` e `result[topico] += 1`.
+  - Tirou o `evicence_id` e o `return 0` de dentro do laço.
+  - O tutor rodou com `python -I` e conferiu a saída: `{'topic_python': 2, 'topic_sql': 2, 'topic_git': 1, 'topic_javascript': 1}`.
+  - Registrado em `evidence_logica-gavetas-problema2-02` (aplicação parcial, depois do degrau 3).
+- **Faltam:**
+  - criar as gavetas a partir de `topicos`, porque hoje estão fixas e o exemplo 1 não passaria;
+  - fazer o caso vazio devolver um dicionário, e não um texto;
+  - escrever os `assert`.
+  - Ficou sem resposta a pergunta de previsão `calcular_topicos(lista, ["topic_python", "topic_rust"])`.
+- **Domínio (regra 9):** `topic_logica-algoritmos` segue em **40**.
+  - ✅ A metade **Feynman** do 60 foi cumprida em 13/10.
+  - ⏳ Falta a **aplicação autônoma**.
+- **Learner profile:** uma observação, `help_usage`. Depois da pergunta das gavetas, trabalhou sozinho além do orçamento e voltou com o código rodando, pedindo verificação.
+- **Próximo passo:** a previsão com `topic_rust`, antes de rodar. Depois: gavetas a partir de `topicos`, caso vazio e um `assert` por exemplo. Cards atrasados: `cond-01`, `tempos-03..08` e `dictreader-*`.
+
 ## Formação sem prazo definido — 2026-10-15
 
 - Fora de sessão de estudo. Decisão do aluno: "não vou assumir um prazo para terminar. Quero deixar sem prazo definido."

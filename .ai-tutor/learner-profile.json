@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 16,
+  "revision": 17,
   "updated_at": "2026-10-13T16:02:00-03:00",
   "declared_preferences": [
     {
@@ -166,6 +166,17 @@
         "note": "Com o codigo travado, pediu explicitamente: 'nao quero uma resposta, nem ajuda no codigo; so ajuda para pensar no que e onde estou errando'. Recebeu perguntas de localizacao. Antes disso, detectou sozinho o descompasso 'python' x 'topic_python'."
       },
       "recorded_at": "2026-10-13T16:02:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_2931cf48-51b5-47e1-855e-072d099cada6",
+      "session_id": "session_2026-10-13-lesson15-problema2-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "help_usage",
+      "value": {
+        "help_level": 3,
+        "note": "Depois da pergunta das gavetas, trabalhou sozinho cerca de 50 min (passou dos 45 combinados) e voltou com o codigo rodando, pedindo ao tutor para verificar; ainda sem asserts."
+      },
+      "recorded_at": "2026-10-15T20:25:00-03:00"
     }
   ],
   "inferences": [],

@@ -26,7 +26,11 @@
   - ✅ A metade **Feynman** do 60 foi cumprida em 13/10.
   - ⏳ Falta a **aplicação autônoma**.
 - **Learner profile:** uma observação, `help_usage`. Depois da pergunta das gavetas, trabalhou sozinho além do orçamento e voltou com o código rodando, pedindo verificação.
-- **Próximo passo:** a previsão com `topic_rust`, antes de rodar. Depois: gavetas a partir de `topicos`, caso vazio e um `assert` por exemplo. Cards atrasados: `cond-01`, `tempos-03..08` e `dictreader-*`.
+- **Revisão das 20:52** (`resumed → interrupted`, `state` 250 → 251). Depois do encerramento, o aluno trabalhou sozinho e pediu revisão.
+  - Versão `def56e11…`: as gavetas são **criadas a partir de `topicos`**. Com `["topic_python", "topic_rust"]`, o tutor obteve `{python: 2, rust: 0}`, e o exemplo 1 passa.
+  - Regra nova, só no código: evidência com `evidence_id` vazio não conta.
+  - Registrado em `evidence_logica-gavetas-problema2-03` (parcial, depois da devolutiva que apontou as chaves fixas).
+- **Próximo passo:** escrever na decomposição a regra do `evidence_id` vazio; fazer o caso vazio devolver um dicionário; escrever um `assert` por exemplo, prevendo antes de rodar. Cards atrasados: `cond-01`, `tempos-03..08` e `dictreader-*`.
 
 ## Formação sem prazo definido — 2026-10-15
 

@@ -13,8 +13,13 @@ Sessão de 13/10 retomada em 15/10, das 19:25 às 20:25 (cerca de 60 de 45 min).
   - ✅ A metade **Feynman** do 60 foi cumprida em 13/10.
   - ⏳ Falta a **aplicação autônoma**.
 
-**Próximo:** prever, antes de rodar, o que sai de `calcular_topicos(lista, ["topic_python", "topic_rust"])`. Depois:
-1. criar as gavetas a partir de `topicos`;
+**Atualização das 20:52** (o aluno trabalhou sozinho depois de encerrar e pediu revisão): `exe_01.py`, `def56e11…`.
+- ✅ As gavetas agora são **criadas a partir de `topicos`** (`result[topico] = 0` dentro do laço). Com `["topic_python", "topic_rust"]`, sai `{python: 2, rust: 0}`, e o exemplo 1 passa.
+- **Regra nova, criada só no código:** evidência com `evidence_id` vazio não conta. Ela ainda não está na decomposição.
+- Evidência `evidence_logica-gavetas-problema2-03`: aplicação parcial, depois da devolutiva.
+
+**Próximo:**
+1. decidir e escrever na decomposição a regra do `evidence_id` vazio, com um exemplo de caso-limite;
 2. fazer o caso vazio devolver um dicionário;
 3. escrever um `assert` por exemplo, prevendo o resultado antes de rodar.
 

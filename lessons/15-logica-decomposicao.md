@@ -2,6 +2,31 @@
 
 **Status:** em andamento desde 2026-10-09 (`session_2026-10-09-lesson15-abertura-01`). Tópico: `topic_logica-algoritmos`. Ciclo 5 da formação fechada.
 
+## Onde paramos (2026-10-13), sessão interrompida e retomável
+
+**Problema 2: evidências por tópico.** A decomposição está pronta, feita com ajuda dos degraus 1 a 3:
+
+- **Entrada:** a lista de evidências e a lista de tópicos pedidos. Os nomes dos tópicos são iguais ao `topic_id` (`"topic_python"`). O próprio aluno percebeu o descompasso entre `"python"` e `"topic_python"`.
+- **Saída:** um dicionário `tópico → quantidade`. Um tópico pedido sem evidência vale **0**, porque é um tópico não iniciado (decisão do aluno).
+
+| # | Evidências | Tópicos | Esperado | Testa |
+|---|---|---|---|---|
+| 1 | 2 de python, 2 de sql, 1 de git, 1 de javascript | python, sql, git | `{python: 2, sql: 2, git: 1}` | caso normal; o tópico que não foi pedido fica de fora |
+| 2 | 2 de python, 2 de sql, 1 de git | python, sql, git, javascript | `{…, javascript: 0}` | tópico pedido sem evidência |
+
+**Pré-requisito ensinado** (regras 1 e 7): criar uma chave nova num dicionário.
+- `d[chave] = 0` **cria** a chave.
+- `d[chave] += 1` **lê** o valor e soma; se a chave não existe, dá `KeyError`.
+- Houve dois exemplos executados, `estoque` e `placar`.
+
+**Código em andamento:** `segundo-cerebro/exercicios/exe_01.py` (`a4d0cff5…`). O bloqueio é que existe **um contador para todos os tópicos**, quando o painel precisa de uma "gaveta" para cada tópico.
+
+**Próximo:** retomar pela pergunta "quantas gavetas o seu código tem, para 4 tópicos?", com o rastreio à mão do exemplo 1. Depois:
+1. rodar o código e ler o traceback;
+2. tirar o `return 0` de dentro do laço;
+3. fazer o caso vazio devolver um dicionário;
+4. escrever um `assert` por exemplo, prevendo o resultado antes de rodar.
+
 ## Onde paramos (2026-10-12)
 
 **Problema 1: fechado.** A versão final (`f4898339…`) usa um `if` só, `card["due_at"] == None or card["due_at"] <= hoje`. O `or` funciona aqui porque as duas condições levam à mesma ação. O `None` vem primeiro, como **guarda**, e 6 `assert` passam com os esperados da tabela.

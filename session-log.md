@@ -4,6 +4,50 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Pedido de mudança estrutural — 2026-10-15 (unificar a formação de Engenharia de IA)
+
+- Fora de sessão de estudo. Nenhum arquivo `.ai-tutor/*.json` foi alterado.
+- **Regra citada:** formação fechada (`formacao-fechada.md`, seção 6, e `AGENTS.md`). O pedido é registrado, **não é aplicado nesta conversa** e será avaliado no fecho da `lesson_15-logica-decomposicao`, com justificativa escrita.
+- **Pedido do aluno:** unificar neste repositório a formação de Engenharia de IA (`14lucas-mendes/fundamentos-engenharia-ia`), que seria arquivada. Os módulos entram como aprofundamento das lições 20, 21, 22 e 12, sem lição nova, troca de ordem, mudança de stack ou mudança no MVP. A formação de Claude Code fica de fora.
+- **Arquivo:** [`docs/compose/spec/pedido-unificacao-engenharia-ia.md`](docs/compose/spec/pedido-unificacao-engenharia-ia.md), com o mapeamento módulo → lição e o parecer prévio do tutor (aceitar, limitando cada módulo à capacidade que o app usa).
+- Pendências para o fecho, se aceito: commitar as 4 mudanças pendentes do repositório de IA antes de arquivar e conferir o `validate_study` dele.
+
+## `session_2026-10-13-lesson15-problema2-01`
+
+- Status: **interrompida e retomável**, das 13:45 às 16:02 (cerca de 137 de 120 min, orçamento pedido pelo aluno). Interrompida a pedido do aluno.
+  - `state` 242 → 248, `learner-profile` 15 → 16.
+  - Skill em uso: commit `bd567cd`.
+  - Horários lidos do relógio: 13:43, 15:04, 15:13, 15:59 e 16:02. Os outros são aproximados.
+  - O **modo só-olhar** foi ligado no meio da sessão. As gravações seguintes foram feitas com a aprovação explícita do aluno ("aprovo, pode gravar"; "pode gravar").
+- Lição `lesson_15-logica-decomposicao`: continua `in_progress`.
+- **`and`/`or`, a pergunta combinada em vez de card** (`retrieval_first`): `pedidos = []` com `len(pedidos) > 0 and pedidos[0] == "cafe"`. Resposta **correta e sem ajuda**: roda sem erro, o `and` para no `False` e o programa vai direto ao `print("fim")`. Registrada em `evidence_curto-circuito-and-02`; a evidência de 12/10 tinha saído incorreta.
+- **Feynman, só com o enunciado:** de onde vem o `1` do `assert` e por que não copiar o resultado da execução. Resposta **correta e autônoma**, registrada em `evidence_logica-esperado-feynman-02`.
+  - O `1` vem da regra: "se o card pertence à data do dia avaliado, ele está vencido".
+  - "O meu código precisa ser ajustado de acordo com o resultado que eu espero." A contradição de 12/10 não reapareceu.
+- **Problema 2: evidências por tópico.** Decomposição **guiada** (degraus 1 a 3), registrada em `evidence_logica-decomposicao-problema2-01` (parcial).
+  - Primeira versão: a entrada era **um** tópico, mas a saída era um dicionário com **todos**. Os `assert` comparavam com um inteiro, usando um dicionário solto e esperando 2, número tirado da lista grande.
+  - Depois da reformulação com o painel (degrau 1), o aluno passou a receber a lista de evidências e a lista de tópicos. Decidiu sozinho que o tópico sem evidência vale `0`, e não `None`, porque é um "tópico não iniciado".
+  - Os exemplos completos tinham **a mesma entrada com dois esperados diferentes**. Além disso, davam `javascript: 0` com uma evidência de `javascript` na lista. O tutor apontou a contradição com a analogia da máquina de café (degrau 3), e o aluno corrigiu os dois exemplos.
+  - **Próprio do aluno:** a lista vazia no plano; o caso do `topic_id` vazio; a **detecção do descompasso entre `"python"` e `"topic_python"`** antes de rodar; a decisão de ajustar a lista de tópicos, e não a de evidências.
+- **Pré-requisito ensinado** (regras 1 e 7): criar uma chave nova num dicionário (`=` cria; `+= 1` lê e soma; `KeyError` quando a chave não existe). Houve dois exemplos executados. Na previsão, o aluno respondeu "`KeyError` na linha 4" e se corrigiu sozinho antes de enviar; isso não conta como evidência.
+- **Código em andamento:** `segundo-cerebro/exercicios/exe_01.py` (`a4d0cff5…`). Tem um contador só para todos os tópicos, o erro de digitação `evicence_id`, um `return 0` dentro do laço e a entrada vazia devolvendo texto. Os `assert` ainda não foram escritos.
+  - O aluno pediu "ajuda só para pensar onde estou errando", sem resposta e sem código.
+  - Recebeu três perguntas de localização: quantas gavetas o código tem para 4 tópicos; rodar o código e ler o traceback; o caso vazio contra a decisão do `0`.
+- **Domínio (regra 9):**
+  - `topic_logica-algoritmos`: **20 → 40**, porque aplicou parcialmente o procedimento com ajuda direcional;
+    - ✅ a metade **Feynman** do nível 60 foi **cumprida** hoje;
+    - ⏳ falta a **aplicação autônoma**, que pode vir do código do problema 2 ou do problema 3 feito sem pistas sobre o núcleo;
+  - `topic_python-fundamentos`: segue em **80**;
+  - `weak_verificacao-valor-esperado` ganhou uma evidência de apoio (o esperado sem conferir pela regra) e segue ativo.
+- **Learner profile:** uma observação, `help_usage`. O aluno pediu ajuda só para localizar o erro, sem resposta.
+- **Próximo passo:** retomar pela pergunta das gavetas, com o rastreio à mão do exemplo 1. Depois:
+  1. o traceback;
+  2. o `return 0` dentro do laço;
+  3. o caso vazio;
+  4. um `assert` por exemplo, com a previsão antes de rodar.
+
+  Cards: `cond-01` (14/10), `tempos-03..08` e `dictreader-*` atrasados.
+
 ## `session_2026-10-12-lesson15-problema1-02`
 
 - Status: concluída, das 18:12 às 18:47 (cerca de 35 de 45 min, orçamento pedido pelo aluno). Fechada a pedido do aluno.

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 15,
-  "updated_at": "2026-10-06T19:28:00-03:00",
+  "revision": 16,
+  "updated_at": "2026-10-13T16:02:00-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -155,6 +155,17 @@
         "note": "Previu errado ('passa, o or verifica um ou o outro'), mas ao rodar a versao invertida leu o traceback e explicou sozinho o TypeError. Nas previsoes seguintes sem rodar, trocou a regra de parada do or e do and; disse que no and foi falta de atencao e dispensou o card."
       },
       "recorded_at": "2026-10-12T18:47:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_9664a0c3-f13d-41d8-9c5d-c64dd09f35f9",
+      "session_id": "session_2026-10-13-lesson15-problema2-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "help_usage",
+      "value": {
+        "help_level": 3,
+        "note": "Com o codigo travado, pediu explicitamente: 'nao quero uma resposta, nem ajuda no codigo; so ajuda para pensar no que e onde estou errando'. Recebeu perguntas de localizacao. Antes disso, detectou sozinho o descompasso 'python' x 'topic_python'."
+      },
+      "recorded_at": "2026-10-13T16:02:00-03:00"
     }
   ],
   "inferences": [],

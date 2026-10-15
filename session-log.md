@@ -4,6 +4,15 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Formação sem prazo definido — 2026-10-15
+
+- Fora de sessão de estudo. Decisão do aluno: "não vou assumir um prazo para terminar. Quero deixar sem prazo definido."
+- **Por que foi aplicada agora:** o prazo não está entre os itens congelados da formação fechada (`formacao-fechada.md`, seção 6: tópicos e lições, ordem, MVP, stack e carga) e já era só referência. A **carga de 10 h por semana continua congelada**.
+- `study-config.json`: `deadline` passou a `null`, o `cycle_calendar` (janelas de 21 dias até 2027-10-24) foi retirado e o `program_start_note` ganhou o registro. Gravado com `FileLock` e substituição atômica (o arquivo não tem `revision`).
+- `curriculum.md`: a seção "Calendário de referência" virou "Sem prazo definido", e a coluna "Janela" saiu da tabela. O número do ciclo indica só a ordem das lições.
+- `formacao-fechada.md` (seção 4), `AGENTS.md` e o pedido de unificação foram ajustados.
+- `validate_study`: PASS.
+
 ## Pedido de mudança estrutural — 2026-10-15 (unificar a formação de Engenharia de IA)
 
 - Fora de sessão de estudo. Nenhum arquivo `.ai-tutor/*.json` foi alterado.

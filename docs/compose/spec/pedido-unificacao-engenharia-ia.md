@@ -63,7 +63,7 @@ O ponto fraco da formação de IA `weak_01ebbe5b…` (fronteira modelo × sistem
 
 ### 3.4 Carga
 
-A soma planejada era 10 h + 3 h por semana. Com a unificação, fica uma meta só, as 10 h já congeladas. Como o aluno não tem prazo para a transição de carreira, o calendário continua só como referência, e o avanço continua dependendo de evidência.
+A soma planejada era 10 h + 3 h por semana. Com a unificação, fica uma meta só, as 10 h já congeladas. Desde 2026-10-15 a formação não tem prazo definido (decisão do aluno, aplicada à parte, porque o prazo não era item congelado). O avanço continua dependendo de evidência.
 
 ## 4. Avaliação no fecho da `lesson_15` (para o tutor)
 
@@ -76,7 +76,7 @@ A regra lista três bloqueios reais. Este pedido não é exatamente nenhum deles
 **Parecer prévio do tutor (2026-10-15):** recomendar **aceitar**, com o limite de escopo da seção 3.2.
 - A favor: na prática, a formação de IA já está parada; a sobreposição é real; a stack fica com uma API só; nada congelado muda.
 - Riscos: excesso de conteúdo nas lições 20 a 22 (tratado pelo limite de escopo) e perder o histórico do repositório de IA se ele for arquivado com mudanças não commitadas.
-- Esperar o fecho custa zero: a `lesson_20` é o ciclo 14, por volta de meados de 2027.
+- Esperar o fecho custa zero: a `lesson_20` é o ciclo 14, ainda distante.
 
 Se aceito, aplicar nesta ordem:
 

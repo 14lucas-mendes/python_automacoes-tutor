@@ -10,11 +10,11 @@ A amplitude full stack vem da faculdade de ADS. Esta formação dá a profundida
 
 **Carga:** 10 h por semana, sem dias fixos. A meta é semanal e aparece no painel.
 
-## Calendário de referência
+## Sem prazo definido
 
-Início: **2026-08-31**, a primeira sessão (canônico em `study-config.json`: `program_start_date` e `cycle_calendar`). São 20 ciclos de 21 dias, com fim de referência em **24/10/2027**. As janelas de cada ciclo estão na tabela "Ciclos e lições". O calendário é informativo: o avanço depende de evidência, não de data.
+Início: **2026-08-31**, a primeira sessão (canônico em `study-config.json`: `program_start_date`).
 
-Em 2026-10-08, o conteúdo dos ciclos 1 a 4 já estava concluído, enquanto o calendário ainda estava no ciclo 2.
+**Decisão do aluno (2026-10-15):** a formação não tem prazo para terminar. O antigo fim de referência (24/10/2027) e as janelas de 21 dias de cada ciclo foram retirados. O número do ciclo na tabela abaixo indica só a **ordem** das lições. O avanço depende de evidência, e a carga de 10 h por semana continua congelada.
 
 ## Regra de avanço e uso de IA
 
@@ -22,28 +22,28 @@ Uma competência só avança com evidência demonstrada: explicação autônoma,
 
 ## Ciclos e lições
 
-| Fase | Ciclo | Janela | Lição canônica | Marco observável (entrega no app) |
-|---|---|---|---|---|
-| Fundamentos | 1 | 31/08 – 20/09/2026 | `lesson_00-diagnostico`, `lesson_01-python-core` | Ambiente profissional e Python core com testes. Concluídos. |
-| | 2 | 21/09 – 11/10/2026 | `lesson_03-testes-git` | Debugging sistemático. Concluído em 2026-09-12. |
-| | 3 | 12/10 – 01/11/2026 | `lesson_04-descoberta-processo` | Git e GitHub com preflight reconstruído sem comandos. Concluído em 2026-09-17. |
-| | 4 | 02/11 – 22/11/2026 | `lesson_02-arquivos-erros` | Arquivos, CSV, JSON e exceções. Concluído em 2026-10-06 (`evidence_lesson02-readme-01`). |
-| Lógica | 5 | 23/11 – 13/12/2026 | `lesson_15-logica-decomposicao` | **Cria o repositório `segundo-cerebro`.** Perguntas sobre o estudo fictício (cards vencidos, evidências por tópico), com plano escrito, saída esperada à mão e `assert`. |
-| | 6 | 14/12/2026 – 03/01/2027 | `lesson_16-estruturas-dados` | Índices do estudo: tópico → evidências, lição → sessões; estrutura justificada; casos-limite tratados. |
-| | 7 | 04/01 – 24/01/2027 | `lesson_17-algoritmos-debugging` | Ordenar e buscar sessões e datas; busca binária e ordenação testadas; defeitos diagnosticados com hipótese. |
-| Python intermediário | 8 | 25/01 – 14/02/2027 | `lesson_19-python-intermediario` | Modelos da formação como dataclasses tipadas, pacote com `pyproject`, logging e exceções próprias. |
-| Sistema base | 9 | 15/02 – 07/03/2027 | `lesson_14-git-fluxo-profissional` + `lesson_05-sql-memorias` | `main` protegida, `develop`, PR, CI mínimo e `v0.1`. PostgreSQL num container (1º Docker) e importador do estudo. |
-| | 10 | 08/03 – 28/03/2027 | `lesson_06-http-apis` | PRs e commits do GitHub importados e ligados às sessões; timeout, erros e paginação tratados. |
-| | 11 | 29/03 – 18/04/2027 | `lesson_07-fastapi-dados` | API da formação com modelos Pydantic; a única escrita é a revisão de card, pelas funções da skill. |
-| | 12 | 19/04 – 09/05/2027 | `lesson_18-docker-vps-deploy` | Compose completo (db, api, web), `.env`, deploy na VPS por túnel SSH; daí em diante toda fatia é publicada. |
-| Automação | 13 | 10/05 – 30/05/2027 | `lesson_08-selenium-captura` | Tarefa diária de cards vencidos e captura de fonte com Selenium, com falha diagnosticada. |
-| IA aplicada | 14 | 31/05 – 20/06/2027 | `lesson_20-llm-estruturado` | Claude API com saída estruturada, custo e tokens medidos, avaliação com casos esperados, injeção de prompt tratada. |
-| | 15 | 21/06 – 11/07/2027 | `lesson_21-rag-segundo-cerebro` | Busca full-text no PostgreSQL e resposta com citação verificável. |
-| | 16 | 12/07 – 01/08/2027 | `lesson_22-agente-tutor-mcp` | Agente tutor com ferramentas na revisão de card e confirmação humana (MCP como extra opcional). |
-| Interface suficiente | 17 | 02/08 – 22/08/2027 | `lesson_10-react-typescript-1` | Diagnóstico de React antes; painel e revisão em React + TS. |
-| | 18 | 23/08 – 12/09/2027 | `lesson_11-react-typescript-2` | Aba Segundo Cérebro e revisão com o agente, ponta a ponta. |
-| Qualidade e entrega | 19 | 13/09 – 03/10/2027 | `lesson_12-qualidade-ci` | Testes, CI com lint, tipos e build do front; segurança do app. |
-| | 20 | 04/10 – 24/10/2027 | `lesson_13-portfolio` | README, demo de 3 a 5 min, release do MVP e simulações de teste técnico. |
+| Fase | Ciclo | Lição canônica | Marco observável (entrega no app) |
+|---|---|---|---|
+| Fundamentos | 1 | `lesson_00-diagnostico`, `lesson_01-python-core` | Ambiente profissional e Python core com testes. Concluídos. |
+| | 2 | `lesson_03-testes-git` | Debugging sistemático. Concluído em 2026-09-12. |
+| | 3 | `lesson_04-descoberta-processo` | Git e GitHub com preflight reconstruído sem comandos. Concluído em 2026-09-17. |
+| | 4 | `lesson_02-arquivos-erros` | Arquivos, CSV, JSON e exceções. Concluído em 2026-10-06 (`evidence_lesson02-readme-01`). |
+| Lógica | 5 | `lesson_15-logica-decomposicao` | **Cria o repositório `segundo-cerebro`.** Perguntas sobre o estudo fictício (cards vencidos, evidências por tópico), com plano escrito, saída esperada à mão e `assert`. |
+| | 6 | `lesson_16-estruturas-dados` | Índices do estudo: tópico → evidências, lição → sessões; estrutura justificada; casos-limite tratados. |
+| | 7 | `lesson_17-algoritmos-debugging` | Ordenar e buscar sessões e datas; busca binária e ordenação testadas; defeitos diagnosticados com hipótese. |
+| Python intermediário | 8 | `lesson_19-python-intermediario` | Modelos da formação como dataclasses tipadas, pacote com `pyproject`, logging e exceções próprias. |
+| Sistema base | 9 | `lesson_14-git-fluxo-profissional` + `lesson_05-sql-memorias` | `main` protegida, `develop`, PR, CI mínimo e `v0.1`. PostgreSQL num container (1º Docker) e importador do estudo. |
+| | 10 | `lesson_06-http-apis` | PRs e commits do GitHub importados e ligados às sessões; timeout, erros e paginação tratados. |
+| | 11 | `lesson_07-fastapi-dados` | API da formação com modelos Pydantic; a única escrita é a revisão de card, pelas funções da skill. |
+| | 12 | `lesson_18-docker-vps-deploy` | Compose completo (db, api, web), `.env`, deploy na VPS por túnel SSH; daí em diante toda fatia é publicada. |
+| Automação | 13 | `lesson_08-selenium-captura` | Tarefa diária de cards vencidos e captura de fonte com Selenium, com falha diagnosticada. |
+| IA aplicada | 14 | `lesson_20-llm-estruturado` | Claude API com saída estruturada, custo e tokens medidos, avaliação com casos esperados, injeção de prompt tratada. |
+| | 15 | `lesson_21-rag-segundo-cerebro` | Busca full-text no PostgreSQL e resposta com citação verificável. |
+| | 16 | `lesson_22-agente-tutor-mcp` | Agente tutor com ferramentas na revisão de card e confirmação humana (MCP como extra opcional). |
+| Interface suficiente | 17 | `lesson_10-react-typescript-1` | Diagnóstico de React antes; painel e revisão em React + TS. |
+| | 18 | `lesson_11-react-typescript-2` | Aba Segundo Cérebro e revisão com o agente, ponta a ponta. |
+| Qualidade e entrega | 19 | `lesson_12-qualidade-ci` | Testes, CI com lint, tipos e build do front; segurança do app. |
+| | 20 | `lesson_13-portfolio` | README, demo de 3 a 5 min, release do MVP e simulações de teste técnico. |
 
 Notas:
 - A partir da `lesson_14`, toda fatia entra por feature branch e PR para `develop`. No fim de cada ciclo, um PR de `develop` para `main` publica uma release com tag.

@@ -99,7 +99,9 @@ O repositório `segundo-cerebro` passa a ser **o app da própria formação**, c
 
 ## 4. Roteiro fechado
 
-20 ciclos de 21 dias, com fim de referência em **24/10/2027**. O avanço depende só de evidência; o calendário é referência. Os IDs das lições são estáveis.
+20 ciclos, **sem prazo definido** (decisão do aluno, 2026-10-15). O número do ciclo indica só a ordem das lições. O avanço depende só de evidência. Os IDs das lições são estáveis.
+
+Até 2026-10-15 havia ciclos de 21 dias com fim de referência em 24/10/2027. O prazo não estava entre os itens congelados (seção 6) e era só uma referência; por isso foi retirado sem pedido de mudança.
 
 | Fase | Ciclo | Lição | Entrega no app |
 |---|---|---|---|

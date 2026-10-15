@@ -79,7 +79,7 @@ Atualizar `[[MOC - Sistema de Estudos]]`. O diário é projeção, não evidênc
 
 ## Formação fechada (decisão do aluno, 2026-10-08)
 
-A formação está **fechada**. O plano único é `docs/compose/spec/formacao-fechada.md`: especialista em Python, automação e IA, em 20 ciclos até 24/10/2027 (referência), com 10 h por semana sem dias fixos.
+A formação está **fechada**. O plano único é `docs/compose/spec/formacao-fechada.md`: especialista em Python, automação e IA, em 20 ciclos **sem prazo definido** (decisão do aluno, 2026-10-15; o fim de referência em 24/10/2027 foi retirado), com 10 h por semana sem dias fixos. O número do ciclo indica só a ordem das lições.
 
 - **Congelado até a `lesson_13-portfolio` ser concluída:**
   - tópicos e lições;

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 18,
+  "revision": 19,
   "updated_at": "2026-10-13T16:02:00-03:00",
   "declared_preferences": [
     {
@@ -10,6 +10,15 @@
       "value": "nao informar confianca ao revisar cards; o tutor nao pede mais",
       "source": "learner",
       "recorded_at": "2026-10-06T19:28:00-03:00",
+      "status": "active",
+      "supersedes_id": null
+    },
+    {
+      "preference_id": "preference_cee26130-66d9-44e4-a3dd-9a72d72915d5",
+      "dimension": "card_review_pacing",
+      "value": "cerca de 5 cards vencidos no inicio de cada sessao, como revisao (retrieval_first); nao revisar todos de uma vez",
+      "source": "learner",
+      "recorded_at": "2026-10-16T20:05:00-03:00",
       "status": "active",
       "supersedes_id": null
     }

@@ -4,6 +4,12 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Preferência de revisão de cards — 2026-10-16
+
+- Fora de sessão. Pedido do aluno: os cards vencidos entram aos poucos, **cerca de 5 no início de cada sessão**, como revisão (`retrieval_first`), em vez de todos de uma vez.
+- Gravado em `learner-profile.json` como preferência declarada `card_review_pacing` (revisão 18 → 19). `validate_study`: PASS.
+- Não muda a escada de espaçamento, que continua `fixed` em 1/3/7/16/35/60 dias. Os cards que não forem revisados continuam vencidos e entram nas sessões seguintes, começando pelos mais atrasados.
+
 ## `session_2026-10-13-lesson15-problema2-01` (retomada e concluída em 2026-10-16)
 
 - Status: **retomada** às 18:29 e **concluída** às 19:59 (90 min, o padrão). Concluída a pedido do aluno.

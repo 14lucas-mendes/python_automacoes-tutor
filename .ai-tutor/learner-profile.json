@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 17,
+  "revision": 18,
   "updated_at": "2026-10-13T16:02:00-03:00",
   "declared_preferences": [
     {
@@ -177,6 +177,17 @@
         "note": "Depois da pergunta das gavetas, trabalhou sozinho cerca de 50 min (passou dos 45 combinados) e voltou com o codigo rodando, pedindo ao tutor para verificar; ainda sem asserts."
       },
       "recorded_at": "2026-10-15T20:25:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_99bc13f1-459f-4d29-bbd0-cfba4236455b",
+      "session_id": "session_2026-10-13-lesson15-problema2-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "incorrect",
+        "note": "Com so o enunciado do caso vazio, inventou esperados ({'lista': 0}) e ajustou o codigo ate passar; a previsao veio depois do ajuste. Corrigiu com a imagem do painel."
+      },
+      "recorded_at": "2026-10-16T19:59:00-03:00"
     }
   ],
   "inferences": [],

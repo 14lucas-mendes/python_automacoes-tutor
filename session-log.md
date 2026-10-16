@@ -4,6 +4,41 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-13-lesson15-problema2-01` (retomada e concluída em 2026-10-16)
+
+- Status: **retomada** às 18:29 e **concluída** às 19:59 (90 min, o padrão). Concluída a pedido do aluno.
+  - `state` 251 → 253 (252 na retomada), `learner-profile` 17 → 18.
+  - Skill em uso: commit `bd567cd`.
+- Lição `lesson_15-logica-decomposicao`: continua `in_progress`. O **problema 2 está fechado** no código (`exe_01.py`, `6088b9fd…`).
+- **Regra do `evidence_id` vazio:**
+  - A primeira resposta misturou duas situações: "tópico sem evidência" (que aparece com `0`) e "evidência sem número".
+  - Depois de uma pergunta direcional (degrau 3), classificou a linha do `javascript` como "ficha sem número", o que está certo. A analogia, porém, saiu invertida (`topic_id` = ficha).
+  - Conferindo pelo próprio resultado, acertou: "as chaves são os tópicos e o valor é a quantidade de vezes que esses tópicos aparecem na minha lista".
+  - Regra escrita: "conta quando ela existe". A direção está certa; o ajuste de precisão é "quando o `evidence_id` não está vazio".
+- **`assert`:**
+  - Primeiro, um `assert` com a lista grande e mensagem em f-string.
+  - Depois, um `assert` **isolado** da ficha sem número, com listas escritas direto na chamada e no `assert`. Registrado em `evidence_logica-caso-limite-assert-01`: **autônomo e correto**. É a primeira saída de `weak_python-test-literal-lista`; falta outra, em outra sessão.
+  - Não declarou a previsão antes de rodar.
+- **Caso vazio, só com o enunciado:**
+  - Escreveu os esperados `{"lista": 0}` e `{"topicos": 0}` e ajustou a função até eles passarem. Registrado em `evidence_logica-caso-vazio-01`: **incorreto**, porque as chaves não são tópicos e isso quebra o contrato da saída. Vira evidência de apoio de `weak_verificacao-valor-esperado`.
+  - Com o degrau 3 (o painel de quem começa sem evidências e o contrato de 13/10), calculou `{"topic_python": 0, "topic_sql": 0}` e `{}`, ambos certos.
+- **Rastreio do laço vazio:**
+  - Disse que o `return {topico: 0}` executava, embora tenha dito também que o laço da lista vazia "nem chega a rodar". Registrado em `evidence_logica-rastreio-laco-vazio-01`: **incorreto**.
+  - O tutor explicou com a imagem da fila sem ninguém e com a prova dos próprios testes.
+  - O aluno apagou o código morto sem prever o resultado, os testes passaram, e ele pediu a explicação.
+  - O tutor montou a tabela de rastreio dos casos 3 e 4. A explicação Feynman que veio em seguida foi correta, mas **guiada** (`evidence_logica-laco-vazio-feynman-01`).
+- **Domínio (regra 9):** `topic_logica-algoritmos` segue em **40**.
+  - ✅ A metade **Feynman** do 60 foi cumprida em 13/10.
+  - ⏳ Falta a **aplicação autônoma**.
+- **Learner profile:** uma observação, `autonomous_attempt` incorreta. Inventou os esperados do caso vazio e ajustou o código até passar; a previsão veio depois do ajuste.
+- **O que falta para concluir a `lesson_15`:**
+  - problema 3 com plano antes do código (hoje são 2 de 3);
+  - uma tabela de rastreio montada pelo aluno e conferida por execução;
+  - aplicação autônoma para o domínio 60;
+  - aplicação autônoma em contexto novo para o 80;
+  - criar o repositório Git `segundo-cerebro`.
+- **Próximo passo:** criar o repositório e depois fazer o problema 3 só com o enunciado. Cards atrasados: `cond-01`, `tempos-03..08` e `dictreader-*`.
+
 ## `session_2026-10-13-lesson15-problema2-01` (retomada em 2026-10-15)
 
 - Status: **retomada** às 19:25 e **interrompida de novo, retomável**, às 20:25 (cerca de 60 de 45 min, orçamento pedido pelo aluno). Interrompida a pedido do aluno, que volta amanhã.

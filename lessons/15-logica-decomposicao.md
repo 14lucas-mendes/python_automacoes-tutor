@@ -2,6 +2,48 @@
 
 **Status:** em andamento desde 2026-10-09 (`session_2026-10-09-lesson15-abertura-01`). Tópico: `topic_logica-algoritmos`. Ciclo 5 da formação fechada.
 
+## Onde paramos (2026-10-16): problema 2 fechado, sessão concluída
+
+A sessão `session_2026-10-13-lesson15-problema2-01` foi concluída em 16/10, às 19:59, depois de quatro trechos (13, 15, 15 à noite e 16/10).
+
+**Código final** (`exe_01.py`, `6088b9fd…`):
+- uma gaveta por tópico, criada a partir de `topicos`;
+- uma evidência com `evidence_id` vazio não conta;
+- o caso vazio segue o contrato: com a lista de evidências vazia, cada tópico sai com `0`; com a lista de tópicos vazia, sai `{}`;
+- 4 `assert` com mensagem, dentro do bloco `__main__`;
+- sem código morto.
+
+**Conceitos trabalhados em 16/10:**
+- **Duas situações diferentes:** "tópico sem evidência" (a gaveta aparece com `0`) não é o mesmo que "evidência sem `evidence_id`" (a ficha não entra na gaveta).
+- **Caso-limite:** uma entrada na beirada da regra, onde é mais fácil a regra falhar.
+- **Contrato da saída:** cada chave do resultado é um tópico pedido. Um `{"lista": 0}` quebra esse contrato.
+- **Laço sobre lista vazia:** dá zero voltas. O que está recuado dentro dele não executa.
+- **Código morto:** código que nunca é executado. O teste passar com e sem ele é um sinal.
+- **`assert` que passa fica em silêncio.** Só aparece mensagem quando ele falha.
+
+**Evidências de 16/10:**
+- `evidence_logica-caso-limite-assert-01`: `assert` isolado com literais, **autônomo e correto**. É a primeira saída de `weak_python-test-literal-lista`; falta outra, em outra sessão.
+- `evidence_logica-caso-vazio-01`: caso vazio só com o enunciado, **incorreto**. Os esperados estavam fora do contrato, e o código foi ajustado a eles.
+- `evidence_logica-rastreio-laco-vazio-01`: rastreio do laço vazio, **incorreto**.
+- `evidence_logica-laco-vazio-feynman-01`: explicação **guiada**, correta.
+
+**Domínio (regra 9):** `topic_logica-algoritmos` segue em **40**.
+- ✅ A metade **Feynman** do 60 foi cumprida em 13/10.
+- ⏳ Falta a **aplicação autônoma**.
+
+### O que falta para concluir a lição
+
+| Requisito | Situação |
+|---|---|
+| Plano escrito antes do código em pelo menos 3 problemas | 2 de 3 (problemas 1 e 2). Falta o **problema 3**: pontos fracos ativos. |
+| Tabelas de rastreio conferidas por execução | Falta uma tabela **montada pelo aluno**. A de 16/10 foi feita pelo tutor. |
+| Funções testadas com valor esperado à mão | Cumprido nos problemas 1 e 2. |
+| Domínio 60 em `topic_logica-algoritmos` | Feynman ✅; falta uma aplicação autônoma correta. |
+| Domínio 80 | Falta uma aplicação autônoma em contexto novo (Python Lab 006/007 ou tarefa do estágio sem dados da empresa). |
+| Repositório `segundo-cerebro` (roteiro da formação) | A pasta existe, mas ainda não é repositório Git. |
+
+**Próximo:** criar o repositório Git `segundo-cerebro` (o aluno executa os comandos). Depois, o problema 3 só com o enunciado: decomposição, casos-limite, previsão antes de rodar, `assert` e uma tabela de rastreio feita pelo aluno.
+
 ## Onde paramos (2026-10-15), sessão interrompida e retomável
 
 Sessão de 13/10 retomada em 15/10, das 19:25 às 20:25 (cerca de 60 de 45 min).

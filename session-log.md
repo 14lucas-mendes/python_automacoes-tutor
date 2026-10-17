@@ -9,6 +9,13 @@
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Executado a pedido do aluno, depois do merge do PR [14lucas-mendes/ai-tutor-skill#3](https://github.com/14lucas-mendes/ai-tutor-skill/pull/3).
 - **Skill alinhada: commit `6a43e26`.** Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS antes e depois da mudança.
   - Na máquina do aluno, a pasta instalada ainda precisa de `git -C <skill_root> pull`. Até lá, o tutor local segue o comportamento antigo.
+  - **Feito em 2026-10-17, na máquina do aluno:**
+    - o estudo avançou da `203d57e` para a `c467df4` com `git pull --ff-only`;
+    - a skill instalada avançou de `bd567cd` para **`6a43e26`**;
+    - na skill, `unittest` passou (145 testes) e o `validate_skill` deu PASS;
+    - no estudo, o `validate_study` deu PASS;
+    - a junction `~/.claude/skills/ai-tutor` aponta para a fonte única.
+    - A partir daqui, o tutor local segue `theory_first`.
 - **Mudança na skill:** o aluno escolhe a abordagem de ensino, e o padrão passa a ser `theory_first`, a aula completa do zero antes da prática. Isso já era o que pediam as regras 1 e 2 deste estudo, que a skill antiga contrariava com a "exposição mínima".
 - **Não é mudança estrutural** pela regra da formação fechada: tópicos, ordem, escopo, stack e carga continuam iguais. A abordagem é "adaptar a aula dentro de cada lição", que continua livre.
 - **`study-config.json`:** `teaching_policy: {"approach": "theory_first"}`, gravado por `scripts.migrate_state` (`_upgrade_v2_support_files`). Nenhum outro arquivo canônico mudou.

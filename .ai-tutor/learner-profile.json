@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 19,
+  "revision": 20,
   "updated_at": "2026-10-13T16:02:00-03:00",
   "declared_preferences": [
     {
@@ -197,6 +197,17 @@
         "note": "Com so o enunciado do caso vazio, inventou esperados ({'lista': 0}) e ajustou o codigo ate passar; a previsao veio depois do ajuste. Corrigiu com a imagem do painel."
       },
       "recorded_at": "2026-10-16T19:59:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_48ad8a20-e21d-49fc-8323-93a0ed9b009c",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "help_usage",
+      "value": {
+        "help_level": 4,
+        "note": "Problema 3: a saida chegou a {id: topico} depois de tres perguntas direcionais e de rodar um print que contrariou a previsao; os esperados so ficaram certos com a analogia da peneira. No Git, executou antes de mandar o plano pedido."
+      },
+      "recorded_at": "2026-10-17T20:00:00-03:00"
     }
   ],
   "inferences": [],

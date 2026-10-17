@@ -146,6 +146,35 @@ A lição só passa a `completed` com domínio 80 em `topic_logica-algoritmos` e
 
 Checkpoints das sessões, do mais recente para o mais antigo. Evidências e domínio valem só pelo `state.json`.
 
+### Onde paramos (2026-10-17): decomposição do problema 3 fechada, sessão interrompida e retomável
+
+`session_2026-10-17-lesson15-problema3-01`, das 18:34 às 20:00.
+
+- **Cards:** `tempos-03` ✅. Não deram certo: `cond-01` (resposta invertida) e os três de Git, que o aluno não lembrou. Esses quatro voltam em 18/10.
+- **Repositório criado e publicado pelo aluno:** [`14lucas-mendes/second-brain-agent`](https://github.com/14lucas-mendes/second-brain-agent), público, com a branch `main` ligada a `origin/main`. O primeiro commit, `ac8833d`, tem só os exercícios com dados fictícios (`evidence_git-repo-second-brain-01`). Ele não mandou o plano antes de executar e ainda falta o `.gitignore`.
+- **Problema 3, decomposição fechada** (guiada, `evidence_logica-decomposicao-problema3-01`):
+  - **Entrada:** a lista de pontos fracos e o status pedido (`"active"` ou `"resolved"`). Usar o status como parâmetro foi decisão do aluno.
+  - **Regra:** entra no resultado quem tem o status pedido. Ponto fraco sem status, sem tópico ou sem id fica de fora.
+  - **Saída:** `{weak_point_id: topic_id}`. Um id é único, então nenhum ponto fraco apaga outro.
+  - **Caminho até a saída:**
+    1. `{tópico: status}`: dois pontos fracos do mesmo tópico, e um apaga o outro;
+    2. contagem por tópico: virou o problema 2;
+    3. `{"weak_point_id": ...}` repetido: o `print` mostrou só o último;
+    4. `{id: tópico}` ✅.
+  - **Esperados finais:** os dois ativos do mesmo tópico entram juntos; o resolvido entra só quando o pedido é `"resolved"`; status vazio, status pedido vazio e lista vazia dão `{}`.
+- **Conceitos de hoje:**
+  - **Chave repetida num dicionário:** a última substitui a anterior, sem aviso.
+  - **Filtrar é peneirar:** o que não passa fica de fora. Não entra com uma etiqueta como `"sem status ativo"`, `None` ou `0`.
+  - **"Quais" × "quantos":** "quais" identifica cada item; "quantos" só conta.
+- **Domínio (regra 9):** `topic_logica-algoritmos` segue em **40**.
+  - ✅ A metade Feynman do 60 foi cumprida em 13/10.
+  - ⏳ Falta a aplicação autônoma. O código do problema 3 pode cumprir essa parte se o aluno fizer sozinho, a partir da decomposição dele.
+
+**Próximo:**
+1. abrir com uns 5 cards;
+2. escrever o código do problema 3, com `assert` em listas literais e mensagem, prevendo o resultado antes de rodar;
+3. montar uma tabela de rastreio própria, conferida rodando.
+
 ### Onde paramos (2026-10-16): problema 2 fechado, sessão concluída
 
 A sessão `session_2026-10-13-lesson15-problema2-01` foi concluída em 16/10, às 19:59, depois de quatro trechos (13, 15, 15 à noite e 16/10).

@@ -4,6 +4,38 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-17-lesson15-problema3-01`
+
+- Status: **interrompida e retomável**, das 18:34 às 20:00 (cerca de 86 de 90 min). Interrompida a pedido do aluno.
+  - `state` 253 → 260, `cards` 35 → 40, `learner-profile` 19 → 20.
+  - Skill em uso: commit `6a43e26`, com `theory_first`. O tema já tinha teoria escrita, então a sessão retomou a prática sem recomeçar a aula.
+- Lição `lesson_15-logica-decomposicao`: continua `in_progress`.
+- **Cards (5, preferência `card_review_pacing`):**
+  - `cond-01`: ❌ **incorreto**. A resposta saiu invertida ("juntas: `if/elif`; uma ou outra: um `if` com `or`"). Volta em 18/10.
+  - `tempos-03`: ✅ **correto**. Volta em 24/10.
+  - `git-remote-familia-01`, `git-remote-v-01` e `git-push-u-01`: ❌ não lembrados. Voltam em 18/10.
+  - Cada card recebeu uma explicação simples depois da tentativa.
+- **Repositório do app criado pelo aluno**, antes de mandar o plano pedido: [`14lucas-mendes/second-brain-agent`](https://github.com/14lucas-mendes/second-brain-agent).
+  - É público, com a branch `main` ligada a `origin/main`.
+  - O primeiro commit, `ac8833d`, tem só `exercicios/` com dados fictícios. Conferido pelo tutor.
+  - Registrado em `evidence_git-repo-second-brain-01`: autônomo, correto, em uso real.
+  - **Não conta** para a saída de `weak_git-formas-exatas-comandos`, porque os comandos tinham sido explicados nos cards minutos antes.
+  - O `project_segundo-cerebro` ganhou o campo `repository`.
+- **Problema 3: decomposição só com o enunciado.** Registrada em `evidence_logica-decomposicao-problema3-01`: **guiada**, parcial.
+  - **Próprio do aluno:** o status como parâmetro e a exclusão dos dados com defeito.
+  - **Erros e como foram resolvidos:**
+    - os exemplos tinham um item cada, e não uma lista;
+    - a saída `{tópico: status}` apagava pontos fracos do mesmo tópico. Com uma pergunta direcional, ele propôs contar por tópico;
+    - com a pergunta "quais × quantos", propôs `{"weak_point_id": ...}` com a chave repetida. Previu que o `print` mostraria as duas chaves; rodou e viu só `weak_02`;
+    - chegou a `{id: tópico}`;
+    - os esperados tinham etiquetas fora do contrato (`"sem status ativo"`, `None`, `0`) e ids e tópicos trocados. Ficaram todos certos depois do degrau 4 e da analogia da peneira.
+  - Também vira evidência de apoio de `weak_verificacao-valor-esperado`.
+- **Domínio (regra 9):** `topic_logica-algoritmos` segue em **40**.
+  - ✅ A metade **Feynman** do 60 foi cumprida em 13/10.
+  - ⏳ Falta a **aplicação autônoma**. O alvo é o código do problema 3.
+- **Learner profile:** uma observação, `help_usage` de nível 4.
+- **Próximo passo:** uns 5 cards; depois o código do problema 3 a partir da decomposição do aluno, com `assert` em listas literais, previsão antes de rodar e uma tabela de rastreio própria. Opcional: `.gitignore`.
+
 ## Alinhamento com a skill: teoria primeiro — 2026-10-17
 
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Executado a pedido do aluno, depois do merge do PR [14lucas-mendes/ai-tutor-skill#3](https://github.com/14lucas-mendes/ai-tutor-skill/pull/3).

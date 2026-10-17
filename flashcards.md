@@ -38,8 +38,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`, `source_python-traceback`
 - Status: `review`
-- Próxima revisão: `2026-10-01`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-24`
+- Intervalo: `7 dias`
 
 ## card_tempos-04
 
@@ -116,8 +116,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
 - Status: `learning`
-- Próxima revisão: `2026-10-14`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-18`
+- Intervalo: `1 dias`
 
 ## card_cond-02
 
@@ -311,7 +311,7 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-remote`
 - Status: `new`
-- Próxima revisão: `2026-10-11`
+- Próxima revisão: `2026-10-18`
 - Intervalo: `1 dias`
 
 ## card_git-remote-v-01
@@ -324,7 +324,7 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-remote`
 - Status: `new`
-- Próxima revisão: `2026-10-11`
+- Próxima revisão: `2026-10-18`
 - Intervalo: `1 dias`
 
 ## card_git-log-oneline-01
@@ -363,7 +363,7 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-push`
 - Status: `new`
-- Próxima revisão: `2026-10-12`
+- Próxima revisão: `2026-10-18`
 - Intervalo: `1 dias`
 
 ## card_git-log-intervalo-01

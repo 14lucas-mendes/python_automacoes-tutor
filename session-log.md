@@ -4,6 +4,21 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Alinhamento com a skill: teoria primeiro — 2026-10-17
+
+- Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Executado a pedido do aluno, depois do merge do PR [14lucas-mendes/ai-tutor-skill#3](https://github.com/14lucas-mendes/ai-tutor-skill/pull/3).
+- **Skill alinhada: commit `6a43e26`.** Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS antes e depois da mudança.
+  - Na máquina do aluno, a pasta instalada ainda precisa de `git -C <skill_root> pull`. Até lá, o tutor local segue o comportamento antigo.
+- **Mudança na skill:** o aluno escolhe a abordagem de ensino, e o padrão passa a ser `theory_first`, a aula completa do zero antes da prática. Isso já era o que pediam as regras 1 e 2 deste estudo, que a skill antiga contrariava com a "exposição mínima".
+- **Não é mudança estrutural** pela regra da formação fechada: tópicos, ordem, escopo, stack e carga continuam iguais. A abordagem é "adaptar a aula dentro de cada lição", que continua livre.
+- **`study-config.json`:** `teaching_policy: {"approach": "theory_first"}`, gravado por `scripts.migrate_state` (`_upgrade_v2_support_files`). Nenhum outro arquivo canônico mudou.
+- **`lessons/15-logica-decomposicao.md`:** reorganizado em **Teoria**, **Plano de prática** e **Progresso**, sem perder conteúdo.
+  - A Teoria é um resumo dos conceitos já ensinados de 09 a 16/10 (decomposição, esperado × obtido, caso-limite, contrato da saída, `assert`, tabela de rastreio, guarda e curto-circuito, `None` × `""`, datas ISO, dicionário com chave nova, laço vazio e código morto), com erros comuns, três checagens e a ponte para o `segundo-cerebro`.
+  - O tema já tem evidência, então não recomeça do zero. O problema 3 não aparece na teoria, para continuar sendo feito só com o enunciado.
+  - É material do tutor e não é evidência.
+- **`AGENTS.md`:** o protocolo de aula passa a descrever a teoria completa, o override por lição e a divisão da lição em sessões. O campo `teaching_policy` entrou na seção Estado.
+- As lições concluídas (`lessons/00` e `lessons/03`) não foram reescritas.
+
 ## Preferência de revisão de cards — 2026-10-16
 
 - Fora de sessão. Pedido do aluno: os cards vencidos entram aos poucos, **cerca de 5 no início de cada sessão**, como revisão (`retrieval_first`), em vez de todos de uma vez.

@@ -26,5 +26,8 @@
     "target_horizon_days": null
   },
   "program_start_date": "2026-08-31",
-  "program_start_note": "Data oficial escolhida pelo aluno em 2026-09-29: primeira sessao (session_2026-08-31-diagnostico). Ciclos de 21 dias contados a partir dela; calendario informativo, o avanco continua dependendo de evidencia. Em 2026-10-06 o aluno aprovou o bloco de logica (3 ciclos) e o calendario passou a 16 ciclos, ate 2027-08-01. Em 2026-10-08 a formacao foi fechada (formacao-fechada.md): 20 ciclos, ate 2027-10-24, 10 h por semana sem dias fixos. Em 2026-10-15 o aluno decidiu deixar a formacao sem prazo definido: deadline passou a null e o cycle_calendar (janelas de 21 dias ate 2027-10-24) foi retirado. Os numeros de ciclo continuam so como ordem das licoes; a carga de 10 h por semana continua congelada."
+  "program_start_note": "Data oficial escolhida pelo aluno em 2026-09-29: primeira sessao (session_2026-08-31-diagnostico). Ciclos de 21 dias contados a partir dela; calendario informativo, o avanco continua dependendo de evidencia. Em 2026-10-06 o aluno aprovou o bloco de logica (3 ciclos) e o calendario passou a 16 ciclos, ate 2027-08-01. Em 2026-10-08 a formacao foi fechada (formacao-fechada.md): 20 ciclos, ate 2027-10-24, 10 h por semana sem dias fixos. Em 2026-10-15 o aluno decidiu deixar a formacao sem prazo definido: deadline passou a null e o cycle_calendar (janelas de 21 dias ate 2027-10-24) foi retirado. Os numeros de ciclo continuam so como ordem das licoes; a carga de 10 h por semana continua congelada.",
+  "teaching_policy": {
+    "approach": "theory_first"
+  }
 }

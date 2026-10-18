@@ -40,7 +40,7 @@
 
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Executado a pedido do aluno, depois do merge do PR [14lucas-mendes/ai-tutor-skill#3](https://github.com/14lucas-mendes/ai-tutor-skill/pull/3).
 - **Skill alinhada: commit `6a43e26`.** Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS antes e depois da mudança.
-  - Na máquina do aluno, a pasta instalada ainda precisa de `git -C <skill_root> pull`. Até lá, o tutor local segue o comportamento antigo.
+  - Na máquina do aluno, `git -C <skill_root> pull` feito em 2026-10-18: **skill em uso: commit `6a43e26`**.
   - **Feito em 2026-10-17, na máquina do aluno:**
     - o estudo avançou da `203d57e` para a `c467df4` com `git pull --ff-only`;
     - a skill instalada avançou de `bd567cd` para **`6a43e26`**;

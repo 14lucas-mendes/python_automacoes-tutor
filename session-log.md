@@ -4,7 +4,24 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
-## Pedido do aluno: rever o rigor do critério 40 → 60 — 2026-10-19
+## Alinhamento com a skill: critério do 60 e conferência antes da devolutiva — 2026-10-19
+
+- Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Responde ao pedido abaixo, depois do merge do PR [14lucas-mendes/ai-tutor-skill#4](https://github.com/14lucas-mendes/ai-tutor-skill/pull/4).
+- **Skill em uso: commit `d9605d4`** (pull feito pelo aluno em 19/10). Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS.
+- **Decisão do aluno:** a matriz **não** foi afrouxada. Ficaram de fora o "Feynman correto + aplicação parcial = 60" e um nível 50. Entraram duas regras, só em texto:
+  - **Aplicação padrão:** o 60 exige a aplicação que cumpre o objetivo da lição de ponta a ponta. Quando o objetivo tem várias partes, ela cobre todas.
+    - Comportamentos menores, como prever uma saída, rastrear um laço ou escrever um `assert` isolado, são **evidência de apoio**, gravada com `kind: "supporting"`. O validador barra um 60 apoiado só nela.
+    - Quando um acerto autônomo não conta, o tutor diz qual é o critério e por quê.
+  - **Conferência antes da devolutiva:** diante de uma aplicação autônoma parcial ou incorreta, o tutor pede **uma vez por tarefa**, com a frase fixa "Confira sua solução contra cada regra e exemplo do enunciado.", sem apontar o que falta.
+    - Esse pedido não aplica teto. Se o aluno achar e corrigir sozinho, a correção é uma nova evidência **autônoma**.
+    - Apontar a categoria do erro, como "confira os casos-limite", já é degrau 3. Se a revisão continuar parcial, segue a escada de ajuda.
+  - O nível 40 passa a descrever também a aplicação autônoma com um elemento material faltando.
+- **Leitura das evidências existentes** (nada foi reclassificado no `state.json`):
+  - `evidence_logica-previsao-return-laco-01` está gravada como `application`, mas é **evidência de apoio**, porque é uma previsão isolada. **Não conta para o 60** de `topic_logica-algoritmos`, embora o validador a aceitasse.
+  - Para o 60, continua valendo: ✅ Feynman autônomo (13/10); ⏳ falta uma **aplicação padrão** autônoma e correta, ou seja, um problema da lição feito de ponta a ponta só com o enunciado.
+  - Na próxima variação, se ela sair parcial, o tutor faz primeiro a conferência genérica, e uma correção do aluno sem mais ajuda conta como autônoma.
+- **`AGENTS.md`:** acrescentado o resumo das duas regras na seção de operação com a skill.
+
 
 - **Pedido**, nas palavras do aluno: "essa condição do 40 para 60 não está muito rígida? Eu fiz praticamente tudo sozinho [...] o fator principal deve ser se eu entendi o que eu fiz [...] em vez de somente a prática em si."
 - **Onde a regra mora:** a matriz de domínio é da skill (`references/learning-contract.md`, na fonte única `ai-tutor-skill`). Ela não pertence aos itens congelados da formação fechada. Mudar a matriz exige branch e PR na skill, com o CI verde, e não se faz por decisão do tutor no meio de uma sessão.

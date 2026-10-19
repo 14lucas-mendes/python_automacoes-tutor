@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 260,
-  "updated_at": "2026-10-17T20:00:00-03:00",
+  "revision": 267,
+  "updated_at": "2026-10-19T18:45:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -13,7 +13,7 @@
       "mastery": 80,
       "retention": "medium",
       "status": "mastered",
-      "last_practice": "2026-10-17",
+      "last_practice": "2026-10-19",
       "evidence_ids": [
         "evidence_python-core-pares-01",
         "evidence_python-core-modulo-01",
@@ -107,7 +107,7 @@
       "mastery": 80,
       "retention": "medium",
       "status": "mastered",
-      "last_practice": "2026-10-17",
+      "last_practice": "2026-10-19",
       "evidence_ids": [
         "evidence_diagnostico-workflow-01",
         "evidence_diagnostico-workflow-02",
@@ -334,7 +334,7 @@
       "mastery": 40,
       "retention": "unknown",
       "status": "in_progress",
-      "last_practice": "2026-10-17",
+      "last_practice": "2026-10-19",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -344,7 +344,10 @@
         "evidence_logica-caso-vazio-01",
         "evidence_logica-rastreio-laco-vazio-01",
         "evidence_logica-laco-vazio-feynman-01",
-        "evidence_logica-decomposicao-problema3-01"
+        "evidence_logica-decomposicao-problema3-01",
+        "evidence_logica-problema3-codigo-01",
+        "evidence_logica-previsao-return-laco-01",
+        "evidence_logica-problema3-codigo-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -358,7 +361,7 @@
         "estrutura de dados justificada",
         "defeito diagnosticado com hipotese"
       ],
-      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma. | 2026-10-16: segue em 40. Caso vazio autonomo saiu incorreto (esperados fora do contrato) e o rastreio do laco vazio tambem; corrigidos com ajuda. Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma (alvo: problema 3). | 2026-10-17: segue em 40. Decomposicao do problema 3 guiada (degraus 3-4); o codigo do problema 3 ainda pode ser a aplicacao autonoma.",
+      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma. | 2026-10-16: segue em 40. Caso vazio autonomo saiu incorreto (esperados fora do contrato) e o rastreio do laco vazio tambem; corrigidos com ajuda. Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma (alvo: problema 3). | 2026-10-17: segue em 40. Decomposicao do problema 3 guiada (degraus 3-4); o codigo do problema 3 ainda pode ser a aplicacao autonoma. | 2026-10-19: segue em 40. Codigo do problema 3 autonomo e parcial (faltaram duas exclusoes da regra citada na tarefa); previsao autonoma correta do return dentro do laco; versao final guiada e correta. Aluno contestou o rigor do 60 (registrado no session-log).",
       "diagnostic": {
         "estimate": "partial",
         "confidence": "medium",
@@ -2505,6 +2508,57 @@
       "error": "Autonomo na 1a versao: status como parametro (generalizacao propria) e dados com defeito excluidos; mas exemplos com um item (nao lista), saida {topico: status} que apaga pontos fracos do mesmo topico e exemplo sem esperado. Depois, com degraus 3-4: propos contagem por topico (virou problema 2), depois {'weak_point_id': ...} repetido (previu que o print mostraria as duas chaves; mostrou so a ultima), chegou a {id: topico}. Esperados com etiquetas fora do contrato ('sem status ativo', None, 0) e ids/topicos trocados; corrigidos com a imagem da peneira. Exemplos ainda escritos item a item.",
       "session_id": "session_2026-10-17-lesson15-problema3-01",
       "recorded_at": "2026-10-17T20:00:00-03:00"
+    },
+    {
+      "evidence_id": "evidence_logica-problema3-codigo-01",
+      "kind": "application",
+      "autonomous": true,
+      "result": "partial",
+      "context": "Problema 3 da lesson_15, so a partir da decomposicao do aluno: verifica_status(lista, status) -> {weak_point_id: topic_id}, com 5 asserts e esperados calculados a mao (declarado pelo aluno).",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-17-lesson15-problema3-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/exe_02.py (sha256 f53d196579a12b20...); execucao do tutor com python -I"
+      },
+      "error": "Filtro por status e saida {id: topico} corretos, todos os exemplos da decomposicao passam. Faltaram duas das tres exclusoes da regra que o tutor citou na tarefa (sem topico, sem id): com id vazio entraria {'': ...} no painel. Melhorias: len(lista) == 0 desnecessario, dois lacos com .copy(), previsao nao declarada, 3 de 5 chamadas sem lista literal.",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "transfer": false,
+      "recorded_at": "2026-10-19T18:45:00-03:00"
+    },
+    {
+      "evidence_id": "evidence_logica-previsao-return-laco-01",
+      "kind": "application",
+      "autonomous": true,
+      "result": "correct",
+      "context": "Prever, sem rodar, o que verifica_status devolve para uma lista mista (um item valido e um com id vazio), com o 'return {}' dentro do laco.",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-17-lesson15-problema3-01",
+        "location": "conversa; exe_02.py sha256 cbafcc5c4429e825..."
+      },
+      "error": "Previu 'vai devolver um dicionario {} vazio' (correto: o return encerra a funcao no segundo item). Nao disse o que a regra pedia; o tutor completou. Em 16/10 o rastreio do return dentro do laco tinha saido incorreto.",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "transfer": false,
+      "recorded_at": "2026-10-19T18:45:00-03:00"
+    },
+    {
+      "evidence_id": "evidence_logica-problema3-codigo-02",
+      "kind": "application",
+      "autonomous": false,
+      "result": "correct",
+      "context": "Problema 3: completar as exclusoes (sem id, sem topico) e pular so o item invalido em listas mistas, depois do feedback do tutor.",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-17-lesson15-problema3-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/exe_02.py (sha256 4b2587c81168dc20...); execucao do tutor com python -I"
+      },
+      "error": "Guiada (degraus 3-4: feedback apontou as exclusoes faltando e o caso misto). Versao final: um laco, condicao unica com and, status vazio -> {}; 8 asserts passam; casos mistos de id e de topico conferidos pelo tutor. Falta um assert para o misto de topico.",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "transfer": false,
+      "recorded_at": "2026-10-19T18:45:00-03:00"
     }
   ],
   "sessions": [
@@ -3621,14 +3675,16 @@
     },
     {
       "session_id": "session_2026-10-17-lesson15-problema3-01",
-      "status": "interrupted",
+      "status": "completed",
       "transitions": [
         "in_progress",
-        "interrupted"
+        "interrupted",
+        "resumed",
+        "completed"
       ],
       "started_at": "2026-10-17T18:34:00-03:00",
-      "ended_at": null,
-      "resumable": true,
+      "ended_at": "2026-10-19T18:45:00-03:00",
+      "resumable": false,
       "time_budget_minutes": 90,
       "lesson_ids": [
         "lesson_15-logica-decomposicao"
@@ -3649,20 +3705,25 @@
         "topic_label_visible": true,
         "reason": "Pontos fracos ativos (verificacao-valor-esperado, condicionais-ordem-guarda); aquisicao em curso, interleaving nao se aplica."
       },
-      "checkpoint": "Aberta em 2026-10-17T18:34 com 90 min (padrao), skill 6a43e26, teaching_policy theory_first (topico ja ensinado, Teoria escrita na licao: retomar com recuperacao curta, sem reiniciar a aula). Preferencia card_review_pacing: 5 cards na abertura; escolhidos cond-01 (weak_condicionais-ordem-guarda), tempos-03 (mais atrasado) e tres de git (weak_git-formas-exatas-comandos e a tarefa de hoje). | 18:36-18:47 cards: cond-01 incorreto (invertido), tempos-03 correto, git-remote-familia-01, git-remote-v-01 e git-push-u-01 nao lembrados; explicacoes simples dadas depois de cada tentativa. | 18:57 repositorio criado e publicado pelo aluno antes de mandar o plano pedido: 14lucas-mendes/second-brain-agent (publico), origin ok, main rastreando origin/main, commit ac8833d so com exercicios ficticios (evidence_git-repo-second-brain-01). | 19:00 problema 3 so com o enunciado; decomposicao: status como parametro (proprio), exclusao de dados com defeito (proprio); saida {topico: status} com colisao; degrau 3 (dois pontos fracos no mesmo topico) -> contagem por topico; degrau 3 ('quais' x 'quantos') -> {'weak_point_id': ...} repetido; previsao do print incorreta, rodou e viu so weak_02; chegou a {id: topico}. Exemplos com etiquetas fora do contrato e ids trocados; degrau 4 (onde olhar) e analogia da peneira -> todos os esperados certos. (evidence_logica-decomposicao-problema3-01, guiada). | Interrompida a pedido do aluno em 20:00 (~86 de 90 min). Ultimo comportamento proprio: esperados finais pela regra da peneira. Suporte mais recente: degrau 4 + analogia. Pendente: codigo do problema 3 com asserts (exemplos como listas), previsao antes de rodar e tabela de rastreio do aluno. Teoria da licao escrita; pratica em curso.",
+      "checkpoint": "Aberta em 2026-10-17T18:34 com 90 min (padrao), skill 6a43e26, teaching_policy theory_first (topico ja ensinado, Teoria escrita na licao: retomar com recuperacao curta, sem reiniciar a aula). Preferencia card_review_pacing: 5 cards na abertura; escolhidos cond-01 (weak_condicionais-ordem-guarda), tempos-03 (mais atrasado) e tres de git (weak_git-formas-exatas-comandos e a tarefa de hoje). | 18:36-18:47 cards: cond-01 incorreto (invertido), tempos-03 correto, git-remote-familia-01, git-remote-v-01 e git-push-u-01 nao lembrados; explicacoes simples dadas depois de cada tentativa. | 18:57 repositorio criado e publicado pelo aluno antes de mandar o plano pedido: 14lucas-mendes/second-brain-agent (publico), origin ok, main rastreando origin/main, commit ac8833d so com exercicios ficticios (evidence_git-repo-second-brain-01). | 19:00 problema 3 so com o enunciado; decomposicao: status como parametro (proprio), exclusao de dados com defeito (proprio); saida {topico: status} com colisao; degrau 3 (dois pontos fracos no mesmo topico) -> contagem por topico; degrau 3 ('quais' x 'quantos') -> {'weak_point_id': ...} repetido; previsao do print incorreta, rodou e viu so weak_02; chegou a {id: topico}. Exemplos com etiquetas fora do contrato e ids trocados; degrau 4 (onde olhar) e analogia da peneira -> todos os esperados certos. (evidence_logica-decomposicao-problema3-01, guiada). | Interrompida a pedido do aluno em 20:00 (~86 de 90 min). Ultimo comportamento proprio: esperados finais pela regra da peneira. Suporte mais recente: degrau 4 + analogia. Pendente: codigo do problema 3 com asserts (exemplos como listas), previsao antes de rodar e tabela de rastreio do aluno. Teoria da licao escrita; pratica em curso. | Retomada em 2026-10-19T17:16 com 90 min (padrao), skill 6a43e26, estudo em 269eac3. Cards: cond-01 e os tres de git (vencidos desde 18/10) + tempos-04 (mais atrasado). Depois: codigo do problema 3. | 17:17-17:25 cards: cond-01 parcial (juntas: 'apenas um if'; uma ou outra: if/elif certo), git-remote-familia-01 parcial (add sem o nome), git-remote-v-01 correto, git-push-u-01 correto, tempos-04 parcial (vago). | 17:25-18:07 exe_02.py v1 sozinho, sem pistas (evidence_logica-problema3-codigo-01, autonoma, parcial). Aluno declarou esperados calculados a mao antes de rodar. | 18:12 feedback; 18:31 v2: um laco, mas return {} para id/topico vazio dentro do laco; 8 asserts passam. Pergunta do caso misto: previsao correta (evidence_logica-previsao-return-laco-01). 18:38 corrigiu o id; 18:41 corrigiu o topico (evidence_logica-problema3-codigo-02, guiada). | Concluida a pedido do aluno em 2026-10-19T18:45:00-03:00. Aluno contestou o rigor do criterio 40 -> 60; registrado como pedido, sem mudar a regra.",
       "evidence_ids": [
         "evidence_git-repo-second-brain-01",
-        "evidence_logica-decomposicao-problema3-01"
+        "evidence_logica-decomposicao-problema3-01",
+        "evidence_logica-problema3-codigo-01",
+        "evidence_logica-previsao-return-laco-01",
+        "evidence_logica-problema3-codigo-02"
       ],
       "difficulty": "medium",
-      "next_step": "Abrir com ~5 cards vencidos (cond-01 e os tres de git voltam em 18/10). Depois: codigo do problema 3 so a partir da decomposicao do aluno (funcao(lista, status) -> {id: topico}), asserts com listas literais e mensagem, previsao antes de rodar e uma tabela de rastreio montada pelo aluno e conferida por execucao. Opcional: .gitignore no second-brain-agent.",
+      "next_step": "Abrir com ~5 cards vencidos. Depois: variacao nova so com o enunciado (candidata a aplicacao autonoma do 60) e a tabela de rastreio do aluno conferida por execucao. Opcional: assert do misto de topico e .gitignore no second-brain-agent.",
       "files_changed": [
         ".ai-tutor/state.json",
         ".ai-tutor/cards.json",
         ".ai-tutor/learner-profile.json",
         "session-log.md",
         "lessons/15-logica-decomposicao.md",
-        "fora do estudo: E:/Lucas/Documents/segundo-cerebro (repositorio Git criado pelo aluno, publicado em second-brain-agent)"
+        "fora do estudo: E:/Lucas/Documents/segundo-cerebro (repositorio Git criado pelo aluno, publicado em second-brain-agent)",
+        "flashcards.md",
+        "fora do estudo: E:/Lucas/Documents/segundo-cerebro/exercicios/exe_02.py (criado pelo aluno)"
       ]
     }
   ],
@@ -5169,6 +5230,51 @@
       "outcome": "incorrect",
       "support_level": 0,
       "recorded_at": "2026-10-17T18:47:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_357af2a1-98a6-4ce2-be50-b182fa5418a1",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_cond-01: Duas situacoes podem acontecer juntas (tem cafe, tem pao). Uso if separados ou if/elif? E se for uma OU outra? | resposta: Juntas: apenas um if (errado; sao if separados). Uma ou outra: if/elif (certo).",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-19T17:18:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_f630cf6d-9c24-4521-ab29-108ae2879f72",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-remote-familia-01: Qual subcomando cria um remoto novo e qual corrige a URL de um remoto que ja existe? | resposta: Cria: git remote add <url> (faltou o nome do remoto). Corrige: git remote set-url <nome-remoto> <nova-url> (certo).",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-19T17:22:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_8b73119b-9f00-465b-974d-379179d31be1",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-remote-v-01: Como listar os remotos do repositorio junto com as URLs? | resposta: git remote -v (forma exata).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-19T17:23:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_79e7398d-f26d-479b-87cb-6c77e3561de2",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-push-u-01: O que o -u faz em git push -u origin master? | resposta: Vincula a branch local com a branch remota (upstream). Correto; nao citou a consequencia (push/pull sem repetir o remoto), omissao opcional.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-19T17:24:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_aff4b2ac-47bc-4454-ba19-f6f2d12d4abd",
+      "session_id": "session_2026-10-17-lesson15-problema3-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-04: NameError significa o que? | resposta: 'O nome de uma variavel nao corresponde ao que esta sendo executado': direcao certa (nome), mas vago; faltou 'o nome nao existe / nao foi definido naquele ponto'.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-19T17:25:00-03:00"
     }
   ]
 }

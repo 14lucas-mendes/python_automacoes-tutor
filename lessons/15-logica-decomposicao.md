@@ -146,6 +146,37 @@ A lição só passa a `completed` com domínio 80 em `topic_logica-algoritmos` e
 
 Checkpoints das sessões, do mais recente para o mais antigo. Evidências e domínio valem só pelo `state.json`.
 
+### Onde paramos (2026-10-19): problema 3 fechado no código, sessão concluída
+
+A sessão `session_2026-10-17-lesson15-problema3-01` foi retomada e concluída em 19/10, das 17:16 às 18:45.
+
+- **Cards:** `git-remote-v-01` ✅ e `git-push-u-01` ✅. Ficaram parciais:
+  - `cond-01`: "juntas: apenas um `if`" (o certo é um `if` para cada situação);
+  - `git-remote-familia-01`: o `add` saiu sem o nome do remoto;
+  - `tempos-04`: a resposta ficou vaga.
+- **`exe_02.py` v1, feito sozinho** (`evidence_logica-problema3-codigo-01`): autônomo e **parcial**.
+  - O filtro por status e a saída `{id: tópico}` estão certos, e os 5 `assert` passam com esperados calculados à mão.
+  - Faltaram as exclusões de "sem tópico" e "sem id", que estavam na regra citada na tarefa.
+- **Previsão correta, autônoma** (`evidence_logica-previsao-return-laco-01`): um `return {}` dentro do laço encerra a função no primeiro item inválido. Em 16/10 essa leitura tinha saído errada.
+- **Versão final, guiada e correta** (`evidence_logica-problema3-codigo-02`, `4b2587c8…`):
+  - um laço só, com a condição `item["status"] == status and item["weak_point_id"] != "" and item["topic_id"] != ""`;
+  - status pedido vazio dá `{}`;
+  - item inválido é só pulado, e as listas mistas funcionam.
+- **Conceitos de hoje:**
+  - **Um `if` por situação independente;** com `and`, uma situação depende da outra.
+  - **`return` dentro do laço** encerra a função inteira. Para pular um item, o certo é não deixá-lo entrar, e não sair da função.
+  - **Testes com um item por lista** não pegam defeitos que só aparecem em listas mistas.
+- **Domínio (regra 9):** `topic_logica-algoritmos` segue em **40**.
+  - ✅ A metade Feynman do 60 foi cumprida em 13/10.
+  - ⏳ Falta a aplicação autônoma correta. Candidata: uma **variação nova só com o enunciado**.
+- O aluno contestou o rigor do critério 40 → 60. Ficou registrado no `session-log.md`.
+
+**O que falta para concluir a lição:**
+- ✅ 3 problemas com plano antes do código;
+- ⏳ uma tabela de rastreio feita pelo aluno;
+- ⏳ o domínio 60, que depende de uma aplicação autônoma correta;
+- ⏳ o domínio 80, que depende de uma aplicação em contexto novo.
+
 ### Onde paramos (2026-10-17): decomposição do problema 3 fechada, sessão interrompida e retomável
 
 `session_2026-10-17-lesson15-problema3-01`, das 18:34 às 20:00.

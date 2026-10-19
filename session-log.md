@@ -4,6 +4,47 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Pedido do aluno: rever o rigor do critério 40 → 60 — 2026-10-19
+
+- **Pedido**, nas palavras do aluno: "essa condição do 40 para 60 não está muito rígida? Eu fiz praticamente tudo sozinho [...] o fator principal deve ser se eu entendi o que eu fiz [...] em vez de somente a prática em si."
+- **Onde a regra mora:** a matriz de domínio é da skill (`references/learning-contract.md`, na fonte única `ai-tutor-skill`). Ela não pertence aos itens congelados da formação fechada. Mudar a matriz exige branch e PR na skill, com o CI verde, e não se faz por decisão do tutor no meio de uma sessão.
+- **O que o tutor reviu na aplicação** (regra 9, sem inflar nem desqualificar):
+  - Pela matriz, o 60 já mede o entendimento: uma das duas metades é a **explicação Feynman**, cumprida em 13/10.
+  - A outra metade pede **uma** aplicação autônoma correta.
+  - A v1 do `exe_02.py` foi autônoma, mas deixou de fora duas exclusões que a tarefa citava de forma explícita (sem tópico, sem id). Com id vazio, ela poria `{"": ...}` no painel, o que é um problema de confiabilidade. Pelo contrato, isso é **parcial** ("falta um elemento material que impede cumprir o objetivo com segurança ou confiabilidade").
+  - A classificação ficou mantida. O tutor reconheceu que é um caso de fronteira.
+- **Evidências da semana a favor de manter a aplicação no critério:** em 16 e 17/10, entendimento e código divergiram nos dois sentidos.
+  - o código passava, mas a previsão do laço vazio e a da chave repetida saíram erradas;
+  - em 19/10, a previsão do `return` dentro do laço saiu certa.
+- **Recomendação do tutor:** não afrouxar a matriz. O caminho mais curto é uma variação nova só com o enunciado na próxima sessão, que leva uns 20 minutos. Se ela sair correta, o tópico vai a 60 na hora.
+- **Se o aluno quiser mudar a regra mesmo assim:** abrir um issue ou PR em `14lucas-mendes/ai-tutor-skill`, propondo a mudança na matriz ou na leitura de "parcial", e avaliar com calma, fora da sessão. A autoridade final é dele.
+
+## `session_2026-10-17-lesson15-problema3-01` (retomada e concluída em 2026-10-19)
+
+- Status: **retomada** às 17:16 e **concluída** às 18:45 (cerca de 89 de 90 min). Concluída a pedido do aluno.
+  - `state` 260 → 267, `cards` 40 → 45, `learner-profile` 20 → 21.
+  - Skill em uso: commit `6a43e26`. O estudo avançou para a `269eac3`, que veio do GitHub.
+- **Cards:**
+  - ✅ `git-remote-v-01` e `git-push-u-01`, que tinham falhado em 17/10 (voltam em 26/10);
+  - parciais `cond-01`, `git-remote-familia-01` e `tempos-04` (voltam em 22/10).
+- **`exe_02.py` v1**, feito sozinho em cerca de 40 min: autônomo e **parcial** (`evidence_logica-problema3-codigo-01`).
+  - O filtro e a saída `{id: tópico}` estão certos, com 5 `assert`.
+  - O aluno declarou que os esperados foram calculados à mão antes de rodar.
+  - Faltaram as exclusões de "sem tópico" e "sem id".
+- **Feedback:**
+  - v2 com um laço só, mas com o `return {}` para item inválido dentro do laço.
+  - Na pergunta do caso misto, previu que o código devolveria `{}`, o que está certo. Registrado em `evidence_logica-previsao-return-laco-01` (autônoma).
+  - Corrigiu o id e depois o tópico (`evidence_logica-problema3-codigo-02`, guiada e correta).
+- **Domínio (regra 9):** `topic_logica-algoritmos` segue em **40**.
+  - ✅ A metade **Feynman** do 60 foi cumprida em 13/10.
+  - ⏳ Falta a **aplicação autônoma correta**.
+- **Learner profile:** uma observação, `autonomous_attempt` parcial.
+- **Próximo passo:**
+  1. uns 5 cards;
+  2. uma variação nova só com o enunciado;
+  3. a tabela de rastreio do aluno.
+  - Opcional: o `assert` do caso misto de tópico e um `.gitignore`.
+
 ## `session_2026-10-17-lesson15-problema3-01`
 
 - Status: **interrompida e retomável**, das 18:34 às 20:00 (cerca de 86 de 90 min). Interrompida a pedido do aluno.

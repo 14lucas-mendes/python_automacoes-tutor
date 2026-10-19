@@ -8,6 +8,12 @@
 
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Responde ao pedido abaixo, depois do merge do PR [14lucas-mendes/ai-tutor-skill#4](https://github.com/14lucas-mendes/ai-tutor-skill/pull/4).
 - **Skill em uso: commit `d9605d4`** (pull feito pelo aluno em 19/10). Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS.
+  - **Na máquina do aluno**, conferido em 2026-10-19 às 20:36:
+    - até então, a pasta instalada ainda estava em `6a43e26`;
+    - o `git pull --ff-only` levou a skill a **`d9605d4`**;
+    - na skill, `unittest` passou (146 testes) e o `validate_skill` deu PASS;
+    - o estudo avançou para a `a9d25fb`, e o `validate_study` deu PASS.
+    - A partir daqui, o tutor local aplica a aplicação padrão, o `kind: "supporting"` e a conferência antes da devolutiva.
 - **Decisão do aluno:** a matriz **não** foi afrouxada. Ficaram de fora o "Feynman correto + aplicação parcial = 60" e um nível 50. Entraram duas regras, só em texto:
   - **Aplicação padrão:** o 60 exige a aplicação que cumpre o objetivo da lição de ponta a ponta. Quando o objetivo tem várias partes, ela cobre todas.
     - Comportamentos menores, como prever uma saída, rastrear um laço ou escrever um `assert` isolado, são **evidência de apoio**, gravada com `kind: "supporting"`. O validador barra um 60 apoiado só nela.

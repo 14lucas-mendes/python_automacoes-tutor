@@ -90,6 +90,40 @@ Se aceito, aplicar nesta ordem:
    4. marcar o repositório como arquivado no GitHub (pelo aluno, ou pelo tutor com `gh repo archive` só com confirmação explícita).
 5. Rodar `validate_study` neste estudo.
 
+## 4.1 Complemento do aluno (2026-10-19): foco em agentes
+
+Nas palavras do aluno: "quero que a minha formação de engenharia de IA foque em agentes, engenharia de loop, programação agêntica e harness engineering, orquestração de agentes, arquitetura de agentes de IA e coisas relacionadas."
+
+**Achado relacionado:** existe uma quarta formação, parada, em `E:\Lucas\Documents\Faculdade AI\harnnes-engeniring`, chamada "Harness Engineering para agentes de IA".
+- Ela foi criada em 21 e 22/09, tem 4 fases e meta de até 2 h por semana.
+- Não tem nenhuma sessão nem evidência, e a pasta não é repositório Git.
+- O currículo dela cobre exatamente esse foco: anatomia do harness, modelo × harness, desenho, primeira versão própria, avaliação e melhoria.
+
+**Avaliação do tutor (prévia, para o fecho da `lesson_15`).** O foco cabe em duas camadas, sem mexer no que está congelado.
+
+1. **Dentro da formação fechada (lições 20 a 22), como lente das aulas.** Adaptar a aula dentro da lição é livre.
+   - **`lesson_20`:** o modelo recebe tokens e devolve tokens; todo o resto é harness. A fronteira entre modelo e sistema é o critério transversal, junto com saída estruturada, avaliação e injeção de prompt tratadas no sistema.
+   - **`lesson_21`:** contexto e memória como peças do harness, com recuperação e citação.
+   - **`lesson_22`:** o núcleo agêntico.
+     - o *agent loop* com condição de parada;
+     - o desenho de ferramentas e o ciclo `tool_use → aplicação executa → tool_result`;
+     - permissões e confirmação humana;
+     - a pergunta "workflow ou agente?";
+     - a arquitetura do agente da revisão de card;
+     - avaliação do agente;
+     - orquestração e subagentes **só como explicação**, porque a regra 9 do MVP deixa isso fora.
+   - A primeira versão do **próprio harness**, a fase 3 do currículo de harness, é o agente da `lesson_22`.
+2. **Depois da `lesson_13`, quando o congelamento acaba: uma trilha de especialização em agentes.**
+   - Ela reúne o que não cabe no MVP: orquestração de vários agentes e subagentes, arquiteturas de agentes, engenharia do loop em profundidade, MCP com servidor próprio, avaliação e melhoria do harness em execução (a fase 4 do currículo de harness) e programação agêntica com ferramentas de código.
+   - Abrir essa trilha antes do fim exigiria lição nova, o que é mudança estrutural. Pela regra, isso não se justifica sem um bloqueio real.
+
+**Por que não antecipar:** um agente é um programa que chama APIs, guarda estado, usa ferramentas e precisa ser testado e publicado. Sem a base dos ciclos 8 a 12 (Python intermediário, SQL, HTTP, FastAPI e deploy), o harness vira só teoria. A ordem atual prepara o terreno para esse foco.
+
+**Se aceito no fecho da `lesson_15`, somar ao roteiro da seção 4:**
+1. escrever a lente agêntica nas lições 20 a 22 do `curriculum.md` e do `formacao-fechada.md`;
+2. registrar a trilha pós-MVP de agentes como continuação prevista, e não como lição nova antes da `lesson_13`;
+3. tratar a pasta `harnnes-engeniring` como **material de referência** da trilha, sem domínio nem evidência a migrar, e arquivá-la junto com `fundamentos-engenharia-ia`.
+
 ## 5. Estágio no TI da CPTM
 
 O estágio ainda não começou e a stack não é conhecida (o aluno acredita que seja JavaScript). Se for confirmada, é um bloqueio real previsto pela regra ("o estágio exigir outra stack"). O caminho natural seria antecipar o bloco de React + TypeScript (`lesson_10` e `lesson_11`). Isso é um **pedido separado**, a ser aberto só depois que a stack for confirmada.

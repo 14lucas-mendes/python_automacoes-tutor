@@ -4,6 +4,18 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Complemento ao pedido de unificação: foco em agentes — 2026-10-19
+
+- Fora de sessão. O aluno concordou com a avaliação da unificação e com o momento dela (fecho da `lesson_15`). Ele acrescentou que a parte de engenharia de IA deve focar em "agentes, engenharia de loop, programação agêntica e harness engineering, orquestração de agentes, arquitetura de agentes de IA e coisas relacionadas".
+- **Regra citada:** formação fechada. O complemento foi **registrado e não aplicado**, e será avaliado junto com o pedido no fecho da `lesson_15`.
+- **Achado:** a pasta `harnnes-engeniring` é uma quarta formação, parada desde 22/09, sem sessão nem evidência, e o currículo dela cobre esse foco.
+- **Avaliação prévia do tutor:**
+  - dentro das lições 20 a 22, entra como lente das aulas, e a `lesson_22` vira o núcleo agêntico;
+  - depois da `lesson_13`, entra como trilha de especialização em agentes, com orquestração e subagentes, harness em profundidade e MCP;
+  - antecipar exigiria lição nova, o que é mudança estrutural sem bloqueio real.
+- Detalhes na seção 4.1 de [`docs/compose/spec/pedido-unificacao-engenharia-ia.md`](docs/compose/spec/pedido-unificacao-engenharia-ia.md).
+- O repositório `fundamentos-engenharia-ia` ainda tem 4 arquivos com mudanças pendentes, fora de qualquer commit. O aluno ainda não decidiu sobre eles.
+
 ## Alinhamento com a skill: critério do 60 e conferência antes da devolutiva — 2026-10-19
 
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Responde ao pedido abaixo, depois do merge do PR [14lucas-mendes/ai-tutor-skill#4](https://github.com/14lucas-mendes/ai-tutor-skill/pull/4).
@@ -28,6 +40,9 @@
   - Na próxima variação, se ela sair parcial, o tutor faz primeiro a conferência genérica, e uma correção do aluno sem mais ajuda conta como autônoma.
 - **`AGENTS.md`:** acrescentado o resumo das duas regras na seção de operação com a skill.
 
+## Pedido do aluno: rever o rigor do critério 40 → 60 — 2026-10-19
+
+<!-- Título restaurado em 2026-10-19: o commit a9d25fb tinha apagado esta linha sem querer. -->
 
 - **Pedido**, nas palavras do aluno: "essa condição do 40 para 60 não está muito rígida? Eu fiz praticamente tudo sozinho [...] o fator principal deve ser se eu entendi o que eu fiz [...] em vez de somente a prática em si."
 - **Onde a regra mora:** a matriz de domínio é da skill (`references/learning-contract.md`, na fonte única `ai-tutor-skill`). Ela não pertence aos itens congelados da formação fechada. Mudar a matriz exige branch e PR na skill, com o CI verde, e não se faz por decisão do tutor no meio de uma sessão.

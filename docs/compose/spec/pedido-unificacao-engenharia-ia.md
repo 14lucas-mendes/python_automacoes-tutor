@@ -17,12 +17,12 @@ O aluno tem três formações em aberto: Python (este repositório), Engenharia 
 | | `python_automacoes-tutor` | `fundamentos-engenharia-ia` |
 |---|---|---|
 | Estado | revisão 248 (a sessão de 13/10 ainda não foi commitada); 3 tópicos com domínio 80 | M01 em 20; demais tópicos em 0 |
-| Última sessão | 2026-10-13 (`lesson_15`, interrompida e retomável) | 2026-10-03 (M01, interrompida) |
-| Ritmo real recente | cerca de 6,4 h na semana de 09 a 13/10 | nenhuma sessão desde 03/10 |
+| Última sessão | 2026-10-13 (`lesson_15`, interrompida e retomável) | 2026-10-08 (M01, retomada e concluída; corrigido em 2026-10-19, antes constava 03/10) |
+| Ritmo real recente | cerca de 6,4 h na semana de 09 a 13/10 | nenhuma sessão desde 08/10 |
 | Carga planejada | 10 h/semana | 3 h/semana |
 | API de LLM | Claude API (stack congelada) | OpenAI |
 | Projeto | app `segundo-cerebro` | exercícios por módulo + capstone |
-| Pendências locais | — | 4 arquivos não commitados (estado, perfil, lição M01, log de 03/10) |
+| Pendências locais | — | nenhuma: as 4 mudanças da sessão de 08/10 entraram no commit `6c7ac9b` em 2026-10-19 |
 
 **Sobreposição.** O currículo da formação de IA diz que esta formação "deixa IA, agentes e MCP fora do núcleo". Isso ficou desatualizado em 2026-10-08: desde o fechamento, as lições 20, 21 e 22 cobrem saída estruturada, avaliação, injeção de prompt, RAG e agente com ferramentas. Cerca de metade dos módulos da formação de IA duplica essas lições.
 
@@ -84,7 +84,7 @@ Se aceito, aplicar nesta ordem:
 2. Atualizar `curriculum.md` e `formacao-fechada.md` com o mapeamento da seção 3.2 (sem tocar nos IDs das lições, na ordem ou no MVP).
 3. Registrar a decisão no `session-log.md` e no `AGENTS.md`.
 4. No repositório de IA:
-   1. commitar as 4 mudanças pendentes;
+   1. ~~commitar as 4 mudanças pendentes~~: feito em 2026-10-19 (`6c7ac9b`);
    2. rodar o `validate_study` lá e anotar o resultado;
    3. commitar o README de arquivamento;
    4. marcar o repositório como arquivado no GitHub (pelo aluno, ou pelo tutor com `gh repo archive` só com confirmação explícita).

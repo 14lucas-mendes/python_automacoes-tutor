@@ -14,7 +14,10 @@
   - depois da `lesson_13`, entra como trilha de especialização em agentes, com orquestração e subagentes, harness em profundidade e MCP;
   - antecipar exigiria lição nova, o que é mudança estrutural sem bloqueio real.
 - Detalhes na seção 4.1 de [`docs/compose/spec/pedido-unificacao-engenharia-ia.md`](docs/compose/spec/pedido-unificacao-engenharia-ia.md).
-- O repositório `fundamentos-engenharia-ia` ainda tem 4 arquivos com mudanças pendentes, fora de qualquer commit. O aluno ainda não decidiu sobre eles.
+- O repositório `fundamentos-engenharia-ia` tinha 4 arquivos com mudanças pendentes, que registravam a sessão M01 retomada e concluída em **08/10**.
+  - Por pedido do aluno, entraram no commit `6c7ac9b` e foram enviados ao GitHub, depois de um `validate_study` com PASS naquele estudo.
+  - Nenhuma evidência nova; o M01 continua em 20.
+  - **Correção de registro:** o pedido dizia que a última sessão de IA tinha sido em 03/10. A data certa é 08/10, e a tabela do pedido foi corrigida.
 
 ## Alinhamento com a skill: critério do 60 e conferência antes da devolutiva — 2026-10-19
 

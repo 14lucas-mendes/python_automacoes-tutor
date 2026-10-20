@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 274,
-  "updated_at": "2026-10-20T18:43:00-03:00",
+  "revision": 275,
+  "updated_at": "2026-10-20T19:05:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -3798,7 +3798,7 @@
         "evidence_logica-rastreio-execucao-01"
       ],
       "difficulty": "medium",
-      "next_step": "Abrir com ~5 cards vencidos. Depois: transferencia para o 80 com a missao 006 do Python Lab (classificar ordens), so com o enunciado: decomposicao antes do codigo, asserts proprios com esperado a mao, previsao, e o /test do Lab como conferencia extra; sem abrir reference_solution nem hints. Se sair correta, a lesson_15 fecha (diario no Obsidian) e entra a avaliacao do pedido de unificacao.",
+      "next_step": "Abrir com ~5 cards vencidos. Depois: transferencia para o 80 'classificar ordens de servico' (adaptada da missao 006 do Python Lab em 20/10, porque no Lab ela so abre depois das anteriores; o Lab nao foi alterado), no repositorio formacao-python, so com o enunciado da secao 'Transferencia para o 80' da licao: decomposicao, asserts proprios com esperado a mao, previsao e rastreio com print. Guarda devolve 'sem_itens' em vez de ValueError (raise ainda nao ensinado). Se sair correta, a lesson_15 fecha.",
       "files_changed": [
         ".ai-tutor/state.json",
         ".ai-tutor/cards.json",
@@ -4297,7 +4297,7 @@
         "project_anchor": "repositorio segundo-cerebro criado nesta licao; perguntas sobre o estudo ficticio gerado com init_study no repositorio segundo-cerebro (estudo real so lido localmente): cards vencidos, evidencias por topico, pontos fracos ativos",
         "revisit": "condicionais (weak_condicionais-ordem-guarda) e valor esperado (weak_verificacao-valor-esperado)",
         "new_constraint": "problema novo decomposto antes de codar, com casos-limite",
-        "expected_transfer": "decompor sozinho um problema de outro contexto (Python Lab 006/007 ou tarefa do estagio sem dados da empresa)",
+        "expected_transfer": "Transferencia 'classificar ordens de servico' no repositorio formacao-python (adaptada da missao 006 do Python Lab em 2026-10-20; guarda devolve 'sem_itens'), ou tarefa do estagio sem dados da empresa.",
         "weak_point_exits": [
           {
             "weak_point_id": "weak_verificacao-valor-esperado",

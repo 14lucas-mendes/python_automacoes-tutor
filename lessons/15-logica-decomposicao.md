@@ -127,6 +127,41 @@ Perguntas candidatas, uma por problema:
 - Comparar datas em outro formato.
 - Escrever o `assert` com o valor que o código devolveu, em vez do valor calculado à mão.
 
+### Transferência para o 80: classificar ordens de serviço
+
+Adaptada da missão 006 do Python Lab em 2026-10-20. No Lab, a missão só abre depois das anteriores, e o Lab é só referência: nada foi alterado nele.
+- **Contexto novo:** ordens de serviço de manutenção, no repositório real `formacao-python` (`E:\Lucas\Documents\formação_python`), que já trata ordens desde o módulo 02. Não é o app nem são os dados de cards.
+- **Onde fazer:** criar `src/modulo-03/classificar_ordens.py` no `formacao-python`. O aluno cria o arquivo e faz o commit.
+- **Ajuste em relação ao Lab:** a missão original rejeita a lista vazia com `raise ValueError`. Lançar exceções ainda não foi ensinado nesta formação (regra 1), então a guarda devolve uma categoria própria, `"sem_itens"`. O núcleo continua o mesmo: guarda antes do acesso e ordem das condições.
+- **Não abrir** o `reference_solution.py`, o `hints.json` nem os testes da missão 006 antes de terminar.
+
+**Enunciado, só ele:**
+
+> Uma central de manutenção recebe ordens de serviço e precisa classificá-las antes de encaminhar. Implemente `classificar_ordem(ordem)`.
+>
+> **Entrada:** um dicionário com:
+> - `tipo`: `"falha"`, `"preventiva"` ou outro texto;
+> - `prioridade`: `"urgente"` ou outro texto;
+> - `itens`: uma lista de dicionários. Cada item pode ter `bloqueado`, com `True` ou `False`.
+>
+> Exemplo: `{"tipo": "falha", "prioridade": "urgente", "itens": [{"bloqueado": False}]}`
+>
+> **Saída:** um texto, uma categoria entre:
+> - `"sem_itens"`, se a ordem não tem a chave `itens` ou se a lista está vazia;
+> - `"bloqueada"`, se o primeiro item está bloqueado;
+> - `"emergencia"`, se o tipo é `falha` e a prioridade é `urgente`;
+> - `"corretiva"`, se o tipo é `falha`;
+> - `"preventiva"`, se o tipo é `preventiva`;
+> - `"administrativa"`, nos demais casos.
+>
+> Uma ordem pode se encaixar em mais de uma regra ao mesmo tempo. Decida a ordem das verificações e justifique na decomposição.
+
+**Entregue, nesta ordem:**
+1. decomposição (entrada, regra na ordem das verificações, saída, de 3 a 5 exemplos com o esperado à mão, incluindo casos-limite, e plano);
+2. código com um `assert` por exemplo, com a mensagem mostrando o esperado e o obtido;
+3. previsão antes de rodar;
+4. tabela de rastreio de um exemplo, conferida com `print`.
+
 ### Critérios de evidência
 
 - `application` (autônoma): o plano escrito antes do código em pelo menos 3 problemas; as funções testadas com valor esperado escolhido pelo aluno.
@@ -174,7 +209,7 @@ Checkpoints das sessões, do mais recente para o mais antigo. Evidências e dom�
 
 **Próximo:**
 1. abrir com uns 5 cards;
-2. fazer a **missão 006 do Python Lab** (classificar ordens de serviço) só com o enunciado: decomposição, `assert` próprios, previsão e, por último, o `/test` do Lab. Sem abrir o `reference_solution.py` nem o `hints.json`.
+2. fazer a **transferência "classificar ordens de serviço"** (seção do Plano de prática; adaptada da missão 006 em 20/10, porque no Lab ela só abre depois das anteriores) só com o enunciado, no `formacao-python`: decomposição, `assert` próprios, previsão e rastreio.
 
 Se sair correta, a lição fecha e entra a avaliação do pedido de unificação.
 

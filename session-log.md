@@ -4,6 +4,16 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Ajuste da transferência para o 80 — 2026-10-20
+
+- Fora de sessão, a pedido do aluno: no Python Lab, a missão 006 só abre depois que as anteriores são concluídas.
+- O Lab continua **só como referência**: nada foi alterado nele, nem a ordem das missões nem o `progress.json`.
+- A missão foi **adaptada** como tarefa de transferência na seção "Transferência para o 80" da `lesson_15`:
+  - o contexto é ordens de serviço, no repositório real `formacao-python`;
+  - o arquivo é `src/modulo-03/classificar_ordens.py`, criado pelo aluno.
+- **Ajuste:** a guarda devolve `"sem_itens"`, e não `raise ValueError`, porque lançar exceções ainda não foi ensinado nesta formação (regra 1). O núcleo é o mesmo: guarda antes do acesso e ordem das condições.
+- `state` 274 → 275: `next_step` da sessão de 20/10 e `programming_plan.expected_transfer` da lição. `validate_study`: PASS.
+
 ## `session_2026-10-20-lesson15-variacao-01`
 
 - Status: **concluída**, das 18:00 às 18:43 (cerca de 43 de 90 min). Concluída a pedido do aluno.

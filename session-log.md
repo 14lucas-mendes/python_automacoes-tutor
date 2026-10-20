@@ -4,6 +4,28 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-20-lesson15-variacao-01`
+
+- Status: **concluída**, das 18:00 às 18:43 (cerca de 43 de 90 min). Concluída a pedido do aluno.
+  - `state` 267 → 274, `cards` 45 → 50, `learner-profile` 21 → 22.
+  - Skill em uso: commit `d9605d4`.
+- Lição `lesson_15-logica-decomposicao`: continua `in_progress`. **Os três critérios de entrega estão cumpridos.**
+- **Cards:** 5 de 5 corretos (`tempos-05` a `tempos-08` e `dictreader-chaves-01`).
+- **Problema 4, em modo avaliação, só com o enunciado:** quantos cards vencidos há em cada status (`exe_03.py`, `73bd869b…`).
+  - **Entrega completa:** decomposição com as decisões escritas, 5 exemplos com o esperado à mão, plano, função, 5 `assert` com mensagem, previsão e tabela de rastreio.
+  - O tutor conferiu: tudo passa, e a tabela bate com a execução.
+  - **Pergunta neutra sobre ajuda de IA**, feita porque o formato do texto mudou: "Foi feito por mim". Vale o que o aluno declarou.
+  - A conferência genérica foi pedida uma vez ("Codigo terminado", sem mudança no arquivo).
+  - Registrado em `evidence_logica-problema4-aplicacao-01`: **aplicação padrão, autônoma e correta**.
+  - Depois do feedback, o `print` dentro do laço confirmou a tabela linha por linha (`evidence_logica-rastreio-execucao-01`, de apoio).
+- **Domínio (regra 9):** `topic_logica-algoritmos` subiu de **40 para 60**.
+  - ✅ Feynman autônomo (13/10).
+  - ✅ Aplicação padrão (20/10).
+  - ⏳ Falta a transferência a um contexto novo para o 80.
+- **Ponto fraco resolvido:** `weak_python-test-literal-lista`, por `evidence_logica-caso-limite-assert-01` (16/10) e `evidence_logica-problema4-aplicacao-01` (20/10).
+- **Learner profile:** uma observação, `autonomous_attempt` correta.
+- **Próximo passo:** uns 5 cards; depois a missão 006 do Python Lab como transferência para o 80, só com o enunciado. Se sair correta, a `lesson_15` fecha (com o diário no Obsidian) e o pedido de unificação é avaliado.
+
 ## Complemento ao pedido de unificação: foco em agentes — 2026-10-19
 
 - Fora de sessão. O aluno concordou com a avaliação da unificação e com o momento dela (fecho da `lesson_15`). Ele acrescentou que a parte de engenharia de IA deve focar em "agentes, engenharia de loop, programação agêntica e harness engineering, orquestração de agentes, arquitetura de agentes de IA e coisas relacionadas".

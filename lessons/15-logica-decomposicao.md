@@ -146,6 +146,38 @@ A lição só passa a `completed` com domínio 80 em `topic_logica-algoritmos` e
 
 Checkpoints das sessões, do mais recente para o mais antigo. Evidências e domínio valem só pelo `state.json`.
 
+### Onde paramos (2026-10-20): problema 4 autônomo, lógica em 60, sessão concluída
+
+`session_2026-10-20-lesson15-variacao-01`, das 18:00 às 18:43.
+
+- **Cards:** `tempos-05`, `tempos-06`, `tempos-07`, `tempos-08` e `dictreader-chaves-01`, todos ✅.
+- **Problema 4: quantos cards vencidos há em cada status?** Modo avaliação, só com o enunciado (`exe_03.py`, `73bd869b…`).
+  - **Decomposição antes do código**, com as decisões do aluno: "sem data conta", "vence hoje entra", "o futuro fica de fora".
+  - **5 exemplos com o esperado à mão:** caso normal, vence hoje, futuro, `None` e lista vazia.
+  - **Função:** gavetas fixas para os três status, `None` testado antes do `<=` e proteção contra status desconhecido. Os 5 `assert` têm mensagem.
+  - **Previsão** "os cinco passam" ✅, e a tabela de rastreio do caso 1 estava certa.
+  - O aluno declarou que fez sozinho. A conferência genérica foi pedida uma vez, e ele considerou a entrega completa.
+  - Registrado em `evidence_logica-problema4-aplicacao-01`: **aplicação padrão, autônoma e correta**.
+- **A tabela foi conferida por execução,** com um `print` dentro do laço, e bateu linha por linha (`evidence_logica-rastreio-execucao-01`, de apoio).
+- **Domínio (regra 9):** `topic_logica-algoritmos` subiu de **40 para 60**.
+  - ✅ Feynman autônomo (13/10).
+  - ✅ Aplicação padrão autônoma e correta (20/10).
+  - ⏳ Para o 80, falta uma aplicação autônoma em **contexto novo**.
+- **Ponto fraco resolvido:** `weak_python-test-literal-lista`, com duas aplicações autônomas corretas em sessões diferentes (16/10 e 20/10).
+
+**O que falta para concluir a lição:**
+- ✅ 3 problemas com plano antes do código (são 4);
+- ✅ tabela de rastreio conferida por execução;
+- ✅ funções testadas com esperado à mão;
+- ✅ domínio 60;
+- ⏳ domínio 80: a transferência.
+
+**Próximo:**
+1. abrir com uns 5 cards;
+2. fazer a **missão 006 do Python Lab** (classificar ordens de serviço) só com o enunciado: decomposição, `assert` próprios, previsão e, por último, o `/test` do Lab. Sem abrir o `reference_solution.py` nem o `hints.json`.
+
+Se sair correta, a lição fecha e entra a avaliação do pedido de unificação.
+
 ### Onde paramos (2026-10-19): problema 3 fechado no código, sessão concluída
 
 A sessão `session_2026-10-17-lesson15-problema3-01` foi retomada e concluída em 19/10, das 17:16 às 18:45.

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 21,
+  "revision": 22,
   "updated_at": "2026-10-13T16:02:00-03:00",
   "declared_preferences": [
     {
@@ -219,6 +219,17 @@
         "note": "Escreveu sozinho o exe_02.py (filtro + 5 asserts) em cerca de 40 min; faltaram duas exclusoes da propria regra. Ao fechar, contestou o rigor do criterio 40 -> 60."
       },
       "recorded_at": "2026-10-19T18:45:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_61dacbed-c41c-4b2d-b4c5-e73a5bc2029a",
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Problema 4 inteiro sozinho em cerca de 25 min (decomposicao, codigo, asserts, previsao e rastreio), com a decomposicao antes do codigo; acertou os 5 cards da abertura."
+      },
+      "recorded_at": "2026-10-20T18:43:00-03:00"
     }
   ],
   "inferences": [],

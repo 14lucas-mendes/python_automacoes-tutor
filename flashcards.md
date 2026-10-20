@@ -64,8 +64,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-10-01`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-27`
+- Intervalo: `7 dias`
 
 ## card_tempos-06
 
@@ -77,8 +77,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-10-01`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-27`
+- Intervalo: `7 dias`
 
 ## card_tempos-07
 
@@ -90,8 +90,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-10-01`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-27`
+- Intervalo: `7 dias`
 
 ## card_tempos-08
 
@@ -103,8 +103,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-10-06`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-05`
+- Intervalo: `16 dias`
 
 ## card_cond-01
 
@@ -181,8 +181,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `new`
-- Próxima revisão: `2026-10-08`
-- Intervalo: `1 dias`
+- Próxima revisão: `2026-10-23`
+- Intervalo: `3 dias`
 
 ## card_dictreader-fieldnames-01
 

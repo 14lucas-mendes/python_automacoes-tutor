@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 267,
-  "updated_at": "2026-10-19T18:45:00-03:00",
+  "revision": 274,
+  "updated_at": "2026-10-20T18:43:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -13,7 +13,7 @@
       "mastery": 80,
       "retention": "medium",
       "status": "mastered",
-      "last_practice": "2026-10-19",
+      "last_practice": "2026-10-20",
       "evidence_ids": [
         "evidence_python-core-pares-01",
         "evidence_python-core-modulo-01",
@@ -154,7 +154,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-10-06",
+      "last_practice": "2026-10-20",
       "evidence_ids": [
         "evidence_csv-ciclo4-01",
         "evidence_csv-ciclo4-02",
@@ -331,10 +331,10 @@
       "prerequisite_topic_ids": [
         "topic_python-fundamentos"
       ],
-      "mastery": 40,
+      "mastery": 60,
       "retention": "unknown",
       "status": "in_progress",
-      "last_practice": "2026-10-19",
+      "last_practice": "2026-10-20",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -347,7 +347,9 @@
         "evidence_logica-decomposicao-problema3-01",
         "evidence_logica-problema3-codigo-01",
         "evidence_logica-previsao-return-laco-01",
-        "evidence_logica-problema3-codigo-02"
+        "evidence_logica-problema3-codigo-02",
+        "evidence_logica-problema4-aplicacao-01",
+        "evidence_logica-rastreio-execucao-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -361,7 +363,7 @@
         "estrutura de dados justificada",
         "defeito diagnosticado com hipotese"
       ],
-      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma. | 2026-10-16: segue em 40. Caso vazio autonomo saiu incorreto (esperados fora do contrato) e o rastreio do laco vazio tambem; corrigidos com ajuda. Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma (alvo: problema 3). | 2026-10-17: segue em 40. Decomposicao do problema 3 guiada (degraus 3-4); o codigo do problema 3 ainda pode ser a aplicacao autonoma. | 2026-10-19: segue em 40. Codigo do problema 3 autonomo e parcial (faltaram duas exclusoes da regra citada na tarefa); previsao autonoma correta do return dentro do laco; versao final guiada e correta. Aluno contestou o rigor do 60 (registrado no session-log).",
+      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma. | 2026-10-16: segue em 40. Caso vazio autonomo saiu incorreto (esperados fora do contrato) e o rastreio do laco vazio tambem; corrigidos com ajuda. Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma (alvo: problema 3). | 2026-10-17: segue em 40. Decomposicao do problema 3 guiada (degraus 3-4); o codigo do problema 3 ainda pode ser a aplicacao autonoma. | 2026-10-19: segue em 40. Codigo do problema 3 autonomo e parcial (faltaram duas exclusoes da regra citada na tarefa); previsao autonoma correta do return dentro do laco; versao final guiada e correta. Aluno contestou o rigor do 60 (registrado no session-log). | 2026-10-20: 40 -> 60. Feynman autonomo (evidence_logica-esperado-feynman-02, 13/10) + aplicacao padrao autonoma e correta (evidence_logica-problema4-aplicacao-01). Falta o 80: aplicacao autonoma transferida a contexto novo (alvo: missao 006 do Python Lab).",
       "diagnostic": {
         "estimate": "partial",
         "confidence": "medium",
@@ -2559,6 +2561,40 @@
       "session_id": "session_2026-10-17-lesson15-problema3-01",
       "transfer": false,
       "recorded_at": "2026-10-19T18:45:00-03:00"
+    },
+    {
+      "evidence_id": "evidence_logica-problema4-aplicacao-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "result": "correct",
+      "context": "Problema 4 da lesson_15 (aplicacao padrao, modo assessment, so o enunciado): contar cards vencidos por status numa data. Decomposicao com regra e decisoes escritas (sem data conta, vence hoje entra, futuro fica fora), 5 exemplos com esperado a mao (caso normal, vence hoje, futuro, None, lista vazia), plano, funcao contar_vencidos_por_status, 5 asserts com mensagem, previsao 'os cinco passam' e tabela de rastreio do caso 1 corretas.",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-20-lesson15-variacao-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/exe_03.py (sha256 73bd869b458e25e8...); execucao do tutor com python -I"
+      },
+      "error": "Aluno declarou que fez sozinho, sem IA (pergunta neutra do tutor por causa da mudanca de formato do texto). Conferencia generica pedida uma vez: considerou completo. A conferencia da tabela por print, pedida na tarefa, veio depois do feedback (registrada a parte como supporting); nao afeta a aplicacao padrao.",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "recorded_at": "2026-10-20T18:43:00-03:00"
+    },
+    {
+      "evidence_id": "evidence_logica-rastreio-execucao-01",
+      "kind": "supporting",
+      "autonomous": true,
+      "transfer": false,
+      "result": "correct",
+      "context": "Conferir por execucao a tabela de rastreio do caso 1 do problema 4, com print dentro do laco (card, vencido, result).",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-20-lesson15-variacao-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/exe_03.py (sha256 3bbdddefe19059d7...); execucao do tutor com python -I"
+      },
+      "error": "Feito depois do feedback que apontou o item faltando; a saida bateu linha por linha com a tabela prevista a mao.",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "recorded_at": "2026-10-20T18:43:00-03:00"
     }
   ],
   "sessions": [
@@ -3725,6 +3761,53 @@
         "flashcards.md",
         "fora do estudo: E:/Lucas/Documents/segundo-cerebro/exercicios/exe_02.py (criado pelo aluno)"
       ]
+    },
+    {
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-10-20T18:00:00-03:00",
+      "ended_at": "2026-10-20T18:43:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_15-logica-decomposicao"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos",
+        "topic_python-fundamentos",
+        "topic_automacao-confiavel"
+      ],
+      "objective": "(1) 5 cards vencidos (retrieval_first): tempos-05, tempos-06, tempos-07, tempos-08, dictreader-chaves-01. (2) Variacao nova da lesson_15 so com o enunciado, como aplicacao padrao: decomposicao, funcao, asserts com esperados a mao, previsao antes de rodar e tabela de rastreio de um exemplo, conferida por execucao.",
+      "cognitive_core": "Decompor e implementar sozinho um problema novo que combina comparacao de datas (problema 1) e contagem por chave (problema 2), verificando com esperados escolhidos pela regra e rastreando a execucao.",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Avaliacao da aplicacao padrao do 60 num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-10-20T18:00 com 90 min (padrao), skill d9605d4 (aplicacao padrao, supporting, conferencia antes da devolutiva), theory_first com Teoria ja escrita. Variacao em modo assessment: so o enunciado; se sair parcial, uma conferencia generica antes de qualquer devolutiva. | 18:02-18:08 cards: tempos-05, tempos-06, tempos-07, tempos-08 e dictreader-chaves-01 corretos. | 18:08 problema 4 so com o enunciado. 18:31 entrega completa (decomposicao, exe_03.py, previsao, tabela); 5 asserts passam; tabela bate com a execucao. Pergunta neutra sobre ajuda de IA: 'Foi feito por mim'. Conferencia generica pedida uma vez: 'Codigo terminado' (sem mudanca). Classificada como aplicacao padrao autonoma e correta: logica 40 -> 60. 18:41 print de rastreio dentro do laco: bate linha por linha (supporting). weak_python-test-literal-lista resolvido. Missao 006 do Python Lab apresentada como transferencia para o 80 e nao iniciada. | Concluida a pedido do aluno em 2026-10-20T18:43:00-03:00.",
+      "evidence_ids": [
+        "evidence_logica-problema4-aplicacao-01",
+        "evidence_logica-rastreio-execucao-01"
+      ],
+      "difficulty": "medium",
+      "next_step": "Abrir com ~5 cards vencidos. Depois: transferencia para o 80 com a missao 006 do Python Lab (classificar ordens), so com o enunciado: decomposicao antes do codigo, asserts proprios com esperado a mao, previsao, e o /test do Lab como conferencia extra; sem abrir reference_solution nem hints. Se sair correta, a lesson_15 fecha (diario no Obsidian) e entra a avaliacao do pedido de unificacao.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        "session-log.md",
+        "lessons/15-logica-decomposicao.md",
+        "flashcards.md",
+        "fora do estudo: E:/Lucas/Documents/segundo-cerebro/exercicios/exe_03.py (criado pelo aluno)"
+      ]
     }
   ],
   "lessons": [
@@ -4196,7 +4279,8 @@
         "session_2026-10-11-lesson15-problema1-01",
         "session_2026-10-12-lesson15-problema1-02",
         "session_2026-10-13-lesson15-problema2-01",
-        "session_2026-10-17-lesson15-problema3-01"
+        "session_2026-10-17-lesson15-problema3-01",
+        "session_2026-10-20-lesson15-variacao-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -4233,7 +4317,7 @@
         ]
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto. | 2026-10-11: problema 1 quase fechado - saida int, vazio=0, >= e asserts por linha da tabela com data fixa; falta exclusao sem-data/venceu (if/elif) e None no teste. Padrao observado: esperado tirado da execucao do codigo (weak_verificacao-valor-esperado). Sem evidencia. | 2026-10-12: problema 1 FECHADO (sha256 f4898339...): um if com or (mesma acao), None primeiro como guarda, 6 asserts com esperados da tabela. Feynman do esperado parcial (evidence_logica-esperado-feynman-01). Proximo: problema 2. | 2026-10-13 (session_2026-10-13-lesson15-problema2-01, interrompida, retomavel): problema 2 decomposto com ajuda (degraus 1-3); pre-requisito chave nova em dicionario ensinado; codigo exe_01.py em andamento (um contador para todos os topicos)."
+      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto. | 2026-10-11: problema 1 quase fechado - saida int, vazio=0, >= e asserts por linha da tabela com data fixa; falta exclusao sem-data/venceu (if/elif) e None no teste. Padrao observado: esperado tirado da execucao do codigo (weak_verificacao-valor-esperado). Sem evidencia. | 2026-10-12: problema 1 FECHADO (sha256 f4898339...): um if com or (mesma acao), None primeiro como guarda, 6 asserts com esperados da tabela. Feynman do esperado parcial (evidence_logica-esperado-feynman-01). Proximo: problema 2. | 2026-10-13 (session_2026-10-13-lesson15-problema2-01, interrompida, retomavel): problema 2 decomposto com ajuda (degraus 1-3); pre-requisito chave nova em dicionario ensinado; codigo exe_01.py em andamento (um contador para todos os topicos). | 2026-10-20: os tres criterios de entrega cumpridos (plano antes do codigo em 4 problemas; tabela de rastreio conferida por execucao; funcoes testadas com esperado a mao). topic_logica-algoritmos em 60; falta o 80 (transferencia) para concluir."
     },
     {
       "lesson_id": "lesson_16-estruturas-dados",
@@ -4473,8 +4557,9 @@
         "evidence_csv-justificativa-03"
       ],
       "exit_condition": "Duas aplicacoes autonomas corretas em sessoes diferentes, com lista literal na chamada e no assert, sem str/int em volta.",
-      "status": "active",
-      "entered_at": "2026-09-07"
+      "status": "resolved",
+      "entered_at": "2026-09-07",
+      "resolution_note": "2026-10-20: saida cumprida com duas aplicacoes autonomas corretas em sessoes diferentes, com listas literais na chamada e no assert: evidence_logica-caso-limite-assert-01 (session_2026-10-13-lesson15-problema2-01) e evidence_logica-problema4-aplicacao-01 (session_2026-10-20-lesson15-variacao-01)."
     },
     {
       "weak_point_id": "weak_csv-return-flow",
@@ -5275,6 +5360,51 @@
       "outcome": "partial",
       "support_level": 0,
       "recorded_at": "2026-10-19T17:25:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_c248670f-a3f3-4d9a-91da-5297c8da8b62",
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-05: TypeError significa o que? | resposta: Erro de tipo: operacao com dados de tipos diferentes (incompativeis). Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-20T18:03:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_531f01d5-304f-4316-a68f-8b887e1fca5b",
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-06: O que uma funcao Python devolve quando termina sem `return`? | resposta: Devolve None. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-20T18:03:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_ada955ed-6923-489e-a7fb-88bc74551913",
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-07: Uma variavel recebeu None de uma funcao. O que acontece ao concatena-la com um texto? | resposta: TypeError: nao da para concatenar None com string. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-20T18:05:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_b9404a54-85d1-4d55-a544-ff82d2643ed5",
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-08: A linha apontada pelo traceback e sempre a linha do defeito? | resposta: Nao necessariamente: aponta onde o erro foi disparado, nao onde esta o defeito. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-20T18:06:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_0bda1ead-c5dc-41ea-be06-c0b9e3f11817",
+      "session_id": "session_2026-10-20-lesson15-variacao-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-chaves-01: No csv.DictReader, o que vira as CHAVES de cada linha? | resposta: Os cabecalhos viram as chaves; as linhas seguintes viram os valores. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-20T18:08:00-03:00"
     }
   ]
 }

@@ -4,6 +4,32 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Alinhamento com a skill: ajuda que não tira a autonomia e transferência — 2026-10-22
+
+- Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Executado a pedido do aluno, depois do merge do PR [14lucas-mendes/ai-tutor-skill#5](https://github.com/14lucas-mendes/ai-tutor-skill/pull/5).
+- **Skill alinhada: commit `e87e2d7`.** Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS.
+  - Na máquina do aluno, a pasta instalada ainda precisa de `git -C <skill_root> pull`. Até lá, o tutor local segue a regra anterior.
+- **Pedido do aluno:** a transferência para o 80 costuma sair parcial, e ele propôs aceitar ajuda no 80 e exigir autonomia só no 100.
+- **Decisão do aluno**, depois da avaliação do tutor:
+  - **não** exigir autonomia só no 100, porque contraria o objetivo de "autonomia real, sem dependência de vibe coding";
+  - **não** contar transferência feita depois do degrau 3;
+  - **não** mudar agora a regra de avanço (fechar a lição com 60 e a transferência pendente). Ela só volta à mesa diante de um bloqueio real.
+- **Regras novas da skill:**
+  - **Ajuda que não tira a autonomia:** em qualquer nível, a tentativa continua autônoma quando a única ajuda foi:
+    - reformular a tarefa (degrau 1);
+    - recuperar um pré-requisito (degrau 2);
+    - a conferência genérica;
+    - explicar o **contexto** (domínio, significado dos campos e formatos, termos do lugar).
+
+    Nenhuma dessas ajudas pode entregar a decisão, o plano, os critérios, a análise ou o código. A ajuda dada fica registrada na evidência. É a regra 7 deste estudo levada para a skill.
+  - **Transferência:**
+    - precisa ser uma **aplicação padrão** autônoma e correta, num contexto em que a capacidade do tópico ainda não foi demonstrada neste estudo;
+    - se sair parcial: conferência genérica, depois devolutiva, depois uma **tarefa diferente no mesmo contexto**, que conta para o 80;
+    - refazer a mesma tarefa continua guiado, e não é preciso um terceiro contexto.
+  - **Transferência é a marca `transfer: true`** numa evidência `application`, e não um tipo. As 3 evidências antigas com `kind: "transfer"` (`evidence_git-transferencia-01`, `evidence_git-transferencia-02` e `evidence_ordens-transformacao-01`) ficam como estão e não contam para o 80. Os tópicos já em 80 não são afetados: todos têm aplicação autônoma correta com `transfer: true`, e o `validate_study` passa.
+- **Efeito na `lesson_15`:** se a transferência "classificar ordens de serviço" sair parcial, depois da conferência e da devolutiva, uma tarefa diferente com ordens de serviço conta para o 80. Uma pergunta sobre o significado de um campo da ordem não tira a autonomia.
+- **`AGENTS.md`:** acrescentado o resumo das regras na seção de operação com a skill.
+
 ## Ajuste da transferência para o 80 — 2026-10-20
 
 - Fora de sessão, a pedido do aluno: no Python Lab, a missão 006 só abre depois que as anteriores são concluídas.

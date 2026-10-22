@@ -39,6 +39,10 @@ O tutor deste estudo segue o `SKILL.md` e os contratos de `skill_root` (`C:\User
   - comportamentos menores (prever uma saída, um `assert` isolado) são gravados com `kind: "supporting"` e não contam para o 60;
   - diante de uma aplicação autônoma parcial ou incorreta, o tutor pede **uma vez por tarefa** "Confira sua solução contra cada regra e exemplo do enunciado.", antes de qualquer devolutiva e sem apontar o que falta. A correção feita sem mais ajuda é uma nova evidência autônoma. Pista mais estreita é degrau 3.
   - `evidence_logica-previsao-return-laco-01` (19/10) é de apoio, embora esteja gravada como `application`.
+- **Ajuda que não tira a autonomia e transferência** (skill `e87e2d7`, 2026-10-22):
+  - em qualquer nível, reformular a tarefa, recuperar um pré-requisito, a conferência genérica e explicar o contexto (domínio, campos, termos) **não** tiram a autonomia, desde que não entreguem decisão, plano, critérios, análise ou código. Registrar na evidência a ajuda dada. A regra 7 continua valendo e agora é também da skill.
+  - o 80 exige uma aplicação padrão autônoma e correta num contexto em que a capacidade do tópico ainda não foi demonstrada. Se sair parcial: conferência, devolutiva e depois uma tarefa diferente no mesmo contexto, que conta. Refazer a mesma tarefa continua guiado.
+  - transferência é `transfer: true` numa `application`; `kind: "transfer"` não conta para o 80.
 - **`retrieval_first`** na revisão (`references/learning-strategies.md`): gravar uma tentativa curta em `state.json.retrieval_attempts` **antes** de reexplicar. A recuperação não altera `mastery` sozinha.
 - **Learner Profile:** ao fechar/interromper sessão com sinal relevante, anexar **uma** observação factual em `learner-profile.json` via `scripts.learner_profile.update_profile_file` com `expected_revision`. Não gravar cada mensagem, não inferir estilo fixo, não usar o perfil para decidir `practice_strategy` ainda.
 - **Interleaving** só se `scripts/practice_strategy.py` liberar `interleaved`; registrar modo e racional na sessão.

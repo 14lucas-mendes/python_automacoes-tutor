@@ -110,6 +110,27 @@ A formação está **fechada**. O plano único é `docs/compose/spec/formacao-fe
   4. Só aceita diante de um bloqueio real: o estágio exigir outra stack, uma tecnologia ser descontinuada, ou a evidência mostrar que falta um pré-requisito.
 - O próprio aluno pediu este fechamento ("feche essa formação e não permita que eu mude até ela ser concluída"). A autoridade final continua sendo dele.
 
+## Critérios de domínio congelados (decisão do aluno, 2026-10-22)
+
+Os critérios de domínio estão **congelados até a `lesson_17-algoritmos-debugging` ser concluída**, ou seja, até o fim do bloco de lógica. Motivo: entre 17 e 22/10 foram três ajustes de critério (PRs #3 a #5 da skill), e agora as regras precisam rodar algumas lições antes de nova mudança.
+
+- **Congelado** (skill `e87e2d7`, `references/learning-contract.md`):
+  - a matriz de domínio (20/40/60/80/100) e o significado de cada nível;
+  - a aplicação padrão e a evidência de apoio (`supporting`);
+  - a escada de ajuda, os tetos e a ajuda que não tira a autonomia;
+  - a conferência antes da devolutiva;
+  - as regras de transferência para o 80;
+  - a regra de avanço: a lição só fecha com domínio 80.
+- **Continua livre:**
+  - corrigir um **defeito** nas regras: duas regras que se contradizem, um texto que o validador contraria, ou um registro errado. Corrigir defeito não muda o rigor;
+  - aplicar as regras dentro de cada sessão, com a prestação de contas da regra 9.
+- **Pedido de mudança de critério:**
+  1. O tutor cita esta regra e registra o pedido no `session-log.md`.
+  2. **Não aplica o pedido na mesma conversa**, nem por PR na skill.
+  3. Avalia o pedido no fechamento da `lesson_17`, com os dados das lições do período.
+  4. Antes disso, só aceita diante de um **bloqueio real**: uma transferência pendente há mais de 3 sessões ou 2 semanas, apesar das regras atuais.
+- O próprio aluno pediu este congelamento. A autoridade final continua sendo dele.
+
 ## Projeto Segundo Cérebro: o app da formação (decisões de 2026-10-05 e 2026-10-08)
 
 O projeto é `project_segundo-cerebro`: **o app da própria formação**, construído sobre a skill `ai-tutor`. O aluno estuda dentro do app, e a aba "Segundo Cérebro" responde perguntas sobre o que a formação registrou, citando a origem. A base é o próprio estudo, não o Obsidian. **Todo exercício se vincula a ele.** MVP, regras de negócio e roteiro estão em `docs/compose/spec/formacao-fechada.md`. O roteiro de 05/10 (`segundo-cerebro-roadmap.md`) é histórico.

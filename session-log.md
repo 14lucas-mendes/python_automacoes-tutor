@@ -4,6 +4,15 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Critérios de domínio congelados — 2026-10-22
+
+- Fora de sessão, a pedido do aluno: "congele os critérios de domínio por algumas lições". Nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado.
+- **Até quando:** até a `lesson_17-algoritmos-debugging` ser concluída, que é o fim do bloco de lógica (lições 15 a 17).
+- **O que congela:** a matriz de domínio, a aplicação padrão e o `supporting`, a escada de ajuda e a ajuda que não tira a autonomia, a conferência antes da devolutiva, as regras de transferência e a regra de avanço. Tudo isso conforme a skill `e87e2d7`.
+- **O que continua livre:** corrigir defeitos nas regras (contradição, texto contrariado pelo validador, registro errado), sem mudar o rigor.
+- **Pedidos de mudança:** registrados aqui e avaliados no fechamento da `lesson_17`. Antes disso, só diante de um bloqueio real: transferência pendente há mais de 3 sessões ou 2 semanas.
+- Detalhes em `AGENTS.md`, seção "Critérios de domínio congelados".
+
 ## Alinhamento com a skill: ajuda que não tira a autonomia e transferência — 2026-10-22
 
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Executado a pedido do aluno, depois do merge do PR [14lucas-mendes/ai-tutor-skill#5](https://github.com/14lucas-mendes/ai-tutor-skill/pull/5).

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 287,
+  "revision": 289,
   "updated_at": "2026-10-22T19:20:00-03:00",
   "topics": [
     {
@@ -4360,7 +4360,7 @@
         "project_anchor": "repositorio segundo-cerebro criado nesta licao; perguntas sobre o estudo ficticio gerado com init_study no repositorio segundo-cerebro (estudo real so lido localmente): cards vencidos, evidencias por topico, pontos fracos ativos",
         "revisit": "condicionais (weak_condicionais-ordem-guarda) e valor esperado (weak_verificacao-valor-esperado)",
         "new_constraint": "problema novo decomposto antes de codar, com casos-limite",
-        "expected_transfer": "Transferencia 'classificar ordens de servico' no repositorio formacao-python (adaptada da missao 006 do Python Lab em 2026-10-20; guarda devolve 'sem_itens'), ou tarefa do estagio sem dados da empresa.",
+        "expected_transfer": "Transferencia 'classificar ordens de servico' no repositorio formacao-python (adaptada da missao 006 do Python Lab em 2026-10-20; guarda devolve 'sem_itens'): saiu parcial em 2026-10-22. Pela skill e87e2d7 (application com transfer: true, aplicacao padrao autonoma e correta em contexto novo): conferencia, devolutiva e depois uma tarefa DIFERENTE com ordens de servico, so com o enunciado, conta para o 80; refazer a mesma tarefa e guiado; nao e preciso terceiro contexto.",
         "weak_point_exits": [
           {
             "weak_point_id": "weak_verificacao-valor-esperado",

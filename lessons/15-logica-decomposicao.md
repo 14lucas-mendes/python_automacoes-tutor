@@ -134,6 +134,7 @@ Adaptada da missão 006 do Python Lab em 2026-10-20. No Lab, a missão só abre 
 - **Onde fazer:** criar `src/modulo-03/classificar_ordens.py` no `formacao-python`. O aluno cria o arquivo e faz o commit.
 - **Ajuste em relação ao Lab:** a missão original rejeita a lista vazia com `raise ValueError`. Lançar exceções ainda não foi ensinado nesta formação (regra 1), então a guarda devolve uma categoria própria, `"sem_itens"`. O núcleo continua o mesmo: guarda antes do acesso e ordem das condições.
 - **Não abrir** o `reference_solution.py`, o `hints.json` nem os testes da missão 006 antes de terminar.
+- **Resultado em 22/10:** parcial (`evidence_logica-transferencia-ordens-01`). A v2 desta mesma tarefa é guiada. Pela skill `e87e2d7`, o 80 vem de uma **tarefa diferente com ordens de serviço**, só com o enunciado (ver "Critérios de evidência").
 
 **Enunciado, só ele:**
 
@@ -166,7 +167,15 @@ Adaptada da missão 006 do Python Lab em 2026-10-20. No Lab, a missão só abre 
 
 - `application` (autônoma): o plano escrito antes do código em pelo menos 3 problemas; as funções testadas com valor esperado escolhido pelo aluno.
 - `feynman` (autônoma): explicar por que decompor e escrever o esperado antes de rodar evita o erro de "parece certo".
-- `transfer`: decompor sozinho um problema de outro contexto.
+- **Transferência para o 80** (skill `e87e2d7`): é uma `application` com `transfer: true`, e não um tipo à parte. Ela precisa ser uma **aplicação padrão**, autônoma e correta, num contexto em que a lógica ainda não foi aplicada neste estudo. As ordens de serviço contam como contexto novo.
+  - **Se sair parcial:** conferência genérica, depois devolutiva, depois uma **tarefa diferente no mesmo contexto**, que conta para o 80. Refazer a mesma tarefa depois da devolutiva é prática guiada. Não é preciso um terceiro contexto.
+  - **Não tiram a autonomia,** desde que não entreguem a decisão, o plano, os critérios, a análise ou o código:
+    - reformular a tarefa;
+    - recuperar um pré-requisito;
+    - a conferência genérica;
+    - explicar o contexto (o que significa cada campo da ordem, por exemplo).
+
+    A ajuda dada fica registrada na evidência.
 - Saídas dos pontos fracos: ver `programming_plan.weak_point_exits` no `state.json`.
 
 ### Atualização de estado

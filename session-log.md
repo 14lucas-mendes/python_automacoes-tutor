@@ -4,6 +4,30 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Alinhamento com a skill `e87e2d7`: conferência completa e `lesson_15` — 2026-10-22
+
+- Fora de sessão, a pedido do aluno ("pegue as atualizações... e atualize a formação"). Não é sessão de aprendizagem: nenhuma evidência, domínio, card ou ponto fraco mudou.
+- **Skill:**
+  - o `git fetch` não trouxe nada novo: `main` = `origin/main` = **`e87e2d7`** (PR [14lucas-mendes/ai-tutor-skill#5](https://github.com/14lucas-mendes/ai-tutor-skill/pull/5)), já instalada às 19:04;
+  - na skill: `unittest` com 147 testes OK e `validate_skill` PASS; no estudo, `validate_study` PASS.
+- **Clone `E:\Lucas\Documents\ai-tutor-plugin`, não adotado:**
+  - branch `feat/mcp-plugin`, com 79 arquivos alterados sem commit, de 20/10;
+  - a base é `d9605d4`, anterior à `e87e2d7`;
+  - ele move `scripts/` para `src/ai_tutor_core/`, o que quebraria os comandos deste `AGENTS.md`;
+  - é trabalho em andamento fora da fonte única, então nada dele entrou no estudo.
+- **O que o alinhamento anterior (`47650d6`) não tinha feito, e foi feito agora:**
+  - `lessons/15-logica-decomposicao.md`, "Critérios de evidência":
+    - o antigo item "`transfer`" virou a regra nova: `application` com `transfer: true`, aplicação padrão autônoma e correta em contexto novo;
+    - entraram a variação no mesmo contexto depois de uma tentativa parcial e as ajudas que não tiram a autonomia;
+  - na seção da transferência: o resultado de 22/10 e o caminho para o 80;
+  - `state` 287 → 289: `programming_plan.expected_transfer` da `lesson_15` e `updated_at`.
+- **Conferido sem mudança:**
+  - os três tópicos em 80 têm `application` autônoma e correta com `transfer: true`;
+  - as 3 evidências antigas com `kind: "transfer"` ficam como estão e não contam para o 80;
+  - a regra nova não é aplicada para trás: o domínio só cai diante de duas evidências recentes de perda (contrato de aprendizagem, *Retention*);
+  - o campo `required_evidence_types` das lições e tópicos continua listando `transfer` como **requisito**, e não como tipo de evidência a gravar.
+- **Congelamento dos critérios** (registrado logo antes, às 19:17): este alinhamento só aplica à `lesson_15` as regras da `e87e2d7`, que são as congeladas. O rigor não muda.
+
 ## Critérios de domínio congelados — 2026-10-22
 
 - Fora de sessão, a pedido do aluno: "congele os critérios de domínio por algumas lições". Nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado.
@@ -12,6 +36,7 @@
 - **O que continua livre:** corrigir defeitos nas regras (contradição, texto contrariado pelo validador, registro errado), sem mudar o rigor.
 - **Pedidos de mudança:** registrados aqui e avaliados no fechamento da `lesson_17`. Antes disso, só diante de um bloqueio real: transferência pendente há mais de 3 sessões ou 2 semanas.
 - Detalhes em `AGENTS.md`, seção "Critérios de domínio congelados".
+
 
 ## Alinhamento com a skill: ajuda que não tira a autonomia e transferência — 2026-10-22
 

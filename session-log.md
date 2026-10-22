@@ -8,7 +8,7 @@
 
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Executado a pedido do aluno, depois do merge do PR [14lucas-mendes/ai-tutor-skill#5](https://github.com/14lucas-mendes/ai-tutor-skill/pull/5).
 - **Skill alinhada: commit `e87e2d7`.** Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS.
-  - Na máquina do aluno, a pasta instalada ainda precisa de `git -C <skill_root> pull`. Até lá, o tutor local segue a regra anterior.
+  - Na máquina do aluno, `git -C <skill_root> pull` feito em 2026-10-22: **skill em uso: commit `e87e2d7`**.
 - **Pedido do aluno:** a transferência para o 80 costuma sair parcial, e ele propôs aceitar ajuda no 80 e exigir autonomia só no 100.
 - **Decisão do aluno**, depois da avaliação do tutor:
   - **não** exigir autonomia só no 100, porque contraria o objetivo de "autonomia real, sem dependência de vibe coding";

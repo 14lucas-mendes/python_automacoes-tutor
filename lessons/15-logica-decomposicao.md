@@ -181,6 +181,45 @@ A lição só passa a `completed` com domínio 80 em `topic_logica-algoritmos` e
 
 Checkpoints das sessões, do mais recente para o mais antigo. Evidências e domínio valem só pelo `state.json`.
 
+### Onde paramos (2026-10-22): transferência parcial, sessão interrompida e retomável
+
+`session_2026-10-22-lesson15-transferencia-01`, das 16:36 às 18:44, interrompida a pedido do aluno ("Amanhã eu corrijo").
+
+- **Cards:** `tempos-04` ✅, `git-remote-familia-01` ✅, `dictreader-fieldnames-01` ❌ (não lembrado; volta em 23/10), `dictreader-restval-01` ✅ e `git-log-oneline-01` ✅.
+  - O `cond-01`, que vencia hoje, ficou **para depois** da transferência, para não dar pista sobre a ordem das verificações.
+- **Pré-requisito ensinado** (regras 1 e 7): o operador `in` / `not in` em dicionário, que só olha as **chaves**. Dois exemplos executados (estoque e perfil com `KeyError`). Na checagem de entendimento, que não é evidência, acertou 3 de 3.
+- **Duas dúvidas sobre o enunciado**, respondidas sem falar da ordem das regras: a saída é **uma** palavra, entregue com `return`; a entrada é **uma** ordem, e a lista fica dentro dela, em `itens`.
+- **Transferência "classificar ordens de serviço"**, em modo avaliação (`src/modulo-03/classificar_ordens.py` no `formacao-python`, `c2f10399…`):
+  - ✅ **A ordem das verificações saiu certa e sem pista:**
+    1. a guarda `"itens" not in ordem or ...`, antes do acesso;
+    2. bloqueado antes do tipo;
+    3. falha com urgente antes de falha.
+  - ❌ `if __name__ == "__name__"`: os 5 `assert` nunca rodaram, e o "Todos os testes passaram" sai sempre. Com `__main__`, o caso 3 falha.
+  - ❌ O esperado do caso 3 (`"preventiva"`, com o item bloqueado) contradiz a ordem decidida pelo próprio aluno.
+  - ❌ A lista vazia `[]` foi comparada com `""` e escapa da guarda (`StopIteration`). Nenhum `assert` cobre `sem_itens`.
+  - ❌ Os textos estão fora do contrato (`"bloqueado"`, `"adiministrativa"`).
+  - ❌ Faltaram a previsão e a tabela à mão.
+  - A conferência genérica foi pedida uma vez: "Acredito que esteja completa".
+  - Registrado em `evidence_logica-transferencia-ordens-01`: **transferência autônoma parcial**.
+- **Domínio (regra 9):** continua em **60**.
+  - ✅ Feynman autônomo (13/10).
+  - ✅ Aplicação padrão (20/10).
+  - ⏳ Transferência autônoma correta.
+
+**Checklist da v2**, prática guiada que não conta para o 80:
+1. corrigir a condição do `__main__` e mostrar a mensagem final só quando os testes passarem;
+2. refazer o esperado do caso 3 pela própria ordem;
+3. fazer a guarda pegar a lista vazia;
+4. escrever os `assert` de "sem chave" e de "lista vazia";
+5. usar os textos do contrato;
+6. escrever a previsão;
+7. fazer a tabela à mão de um caso.
+
+**Próximo:**
+1. retomar esta sessão com uns 5 cards, incluindo `cond-01` e `fieldnames-01`;
+2. fazer a v2 guiada;
+3. depois, fazer uma **tarefa diferente com ordens de serviço**, só com o enunciado. Pela skill `e87e2d7`, alinhada às 19:04 de 22/10, ela conta para o 80, sem precisar de outro contexto.
+
 ### Onde paramos (2026-10-20): problema 4 autônomo, lógica em 60, sessão concluída
 
 `session_2026-10-20-lesson15-variacao-01`, das 18:00 às 18:43.

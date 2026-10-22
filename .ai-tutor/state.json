@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 275,
-  "updated_at": "2026-10-20T19:05:00-03:00",
+  "revision": 287,
+  "updated_at": "2026-10-22T19:20:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -334,7 +334,7 @@
       "mastery": 60,
       "retention": "unknown",
       "status": "in_progress",
-      "last_practice": "2026-10-20",
+      "last_practice": "2026-10-22",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -349,7 +349,8 @@
         "evidence_logica-previsao-return-laco-01",
         "evidence_logica-problema3-codigo-02",
         "evidence_logica-problema4-aplicacao-01",
-        "evidence_logica-rastreio-execucao-01"
+        "evidence_logica-rastreio-execucao-01",
+        "evidence_logica-transferencia-ordens-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -363,7 +364,7 @@
         "estrutura de dados justificada",
         "defeito diagnosticado com hipotese"
       ],
-      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma. | 2026-10-16: segue em 40. Caso vazio autonomo saiu incorreto (esperados fora do contrato) e o rastreio do laco vazio tambem; corrigidos com ajuda. Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma (alvo: problema 3). | 2026-10-17: segue em 40. Decomposicao do problema 3 guiada (degraus 3-4); o codigo do problema 3 ainda pode ser a aplicacao autonoma. | 2026-10-19: segue em 40. Codigo do problema 3 autonomo e parcial (faltaram duas exclusoes da regra citada na tarefa); previsao autonoma correta do return dentro do laco; versao final guiada e correta. Aluno contestou o rigor do 60 (registrado no session-log). | 2026-10-20: 40 -> 60. Feynman autonomo (evidence_logica-esperado-feynman-02, 13/10) + aplicacao padrao autonoma e correta (evidence_logica-problema4-aplicacao-01). Falta o 80: aplicacao autonoma transferida a contexto novo (alvo: missao 006 do Python Lab).",
+      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma. | 2026-10-16: segue em 40. Caso vazio autonomo saiu incorreto (esperados fora do contrato) e o rastreio do laco vazio tambem; corrigidos com ajuda. Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma (alvo: problema 3). | 2026-10-17: segue em 40. Decomposicao do problema 3 guiada (degraus 3-4); o codigo do problema 3 ainda pode ser a aplicacao autonoma. | 2026-10-19: segue em 40. Codigo do problema 3 autonomo e parcial (faltaram duas exclusoes da regra citada na tarefa); previsao autonoma correta do return dentro do laco; versao final guiada e correta. Aluno contestou o rigor do 60 (registrado no session-log). | 2026-10-20: 40 -> 60. Feynman autonomo (evidence_logica-esperado-feynman-02, 13/10) + aplicacao padrao autonoma e correta (evidence_logica-problema4-aplicacao-01). Falta o 80: aplicacao autonoma transferida a contexto novo (alvo: missao 006 do Python Lab). | 2026-10-22: segue em 60. Transferencia (ordens de servico) autonoma e parcial: ordem das verificacoes certa; asserts nunca executados (__name__), um esperado contra a propria regra, lista vazia sem guarda. Falta o 80: transferencia autonoma correta.",
       "diagnostic": {
         "estimate": "partial",
         "confidence": "medium",
@@ -2595,6 +2596,23 @@
       "topic_id": "topic_logica-algoritmos",
       "session_id": "session_2026-10-20-lesson15-variacao-01",
       "recorded_at": "2026-10-20T18:43:00-03:00"
+    },
+    {
+      "evidence_id": "evidence_logica-transferencia-ordens-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": true,
+      "result": "partial",
+      "context": "Transferencia para o 80 da lesson_15 (modo assessment, so o enunciado, contexto novo: ordens de servico no repositorio formacao-python): classificar_ordem(ordem) -> uma de seis categorias, com regras sobrepostas e guarda. Decomposicao antes do codigo, funcao, 5 asserts com mensagem e tabela impressa por print.",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-22-lesson15-transferencia-01",
+        "location": "E:/Lucas/Documents/formação_python/src/modulo-03/classificar_ordens.py (sha256 c2f10399f7861eec...); execucao do tutor com python -I"
+      },
+      "error": "Nucleo da ordem certo e sem pista: guarda com 'not in' + or antes do acesso, bloqueado antes do tipo, falha+urgente antes de falha. Faltas: if __name__ == '__name__' faz os 5 asserts nunca rodarem ('Todos os testes passaram' e um print incondicional; com __main__ o assert do caso 3 falha: esperado preventiva, obtido bloqueado); esperado_3 contradiz a ordem que o proprio aluno decidiu (esperado nao veio da regra); lista vazia comparada com '' (texto) e nao tratada: itens [] levanta StopIteration; nenhum assert do caso sem_itens, embora a decomposicao tivesse dois; textos fora do contrato ('bloqueado', 'adiministrativa'; na decomposicao 'sem itens', 'emergência', 'administrativo'); decomposicao com dois exemplos de mesma entrada e esperados diferentes e sem justificativa da ordem; previsao antes de rodar e tabela a mao nao entregues. Conferencia generica pedida uma vez: 'Acredito que esteja completa'. Item sem a chave bloqueado nao conta (enunciado ambiguo, .get nao ensinado). Ajuda dada antes da entrega (nenhuma tira a autonomia): pre-requisito 'in' em dicionario (degrau 2, regra 7) e duas reformulacoes do enunciado sobre entrada e saida (degrau 1); nada sobre a ordem das verificacoes.",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "recorded_at": "2026-10-22T18:38:00-03:00"
     }
   ],
   "sessions": [
@@ -3808,6 +3826,50 @@
         "flashcards.md",
         "fora do estudo: E:/Lucas/Documents/segundo-cerebro/exercicios/exe_03.py (criado pelo aluno)"
       ]
+    },
+    {
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "status": "interrupted",
+      "transitions": [
+        "in_progress",
+        "interrupted"
+      ],
+      "started_at": "2026-10-22T16:36:00-03:00",
+      "ended_at": "2026-10-22T18:44:00-03:00",
+      "resumable": true,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_15-logica-decomposicao"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 5 cards vencidos (retrieval_first), sem cards de condicionais antes da transferencia para nao dar pista: tempos-04, git-remote-familia-01, dictreader-fieldnames-01, dictreader-restval-01, git-log-oneline-01. (2) Transferencia para o 80 'classificar ordens de servico' no repositorio formacao-python, so com o enunciado: decomposicao com ordem das verificacoes justificada, asserts com esperado a mao, previsao e rastreio com print.",
+      "cognitive_core": "Decompor sozinho um problema de outro contexto (ordens de servico) com regras sobrepostas e guarda: escolher a ordem das verificacoes (guarda antes do acesso, especifica antes da geral), escrever esperados pela regra e verificar com asserts.",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Transferencia do 80 num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-10-22T16:36 com 90 min (padrao), skill d9605d4, theory_first com Teoria ja escrita. Cards de condicionais (cond-01 vencido hoje) ficam para depois da transferencia, para nao dar pista sobre a ordem das verificacoes. | 16:40-16:57 cards: tempos-04 correto (exemplo opcional print(\"nome\") nao dava NameError; aspas explicadas), git-remote-familia-01 correto (formas exatas), dictreader-fieldnames-01 nao lembrado (explicado com execucao), dictreader-restval-01 correto, git-log-oneline-01 correto. | Pre-requisito ensinado antes da transferencia (regras 1 e 7): operador in/not in em dicionario (so olha chaves), 2 exemplos executados (estoque, perfil com KeyError). Checagem de entendimento (nao evidencia): 3 de 3 certas, incluindo 'escuro' e valor, nao chave. Enunciado da transferencia apresentado as 16:57, so ele. | Duas duvidas sobre o enunciado respondidas (degrau 1, reformulacao, sem teto): a saida e uma palavra entre as seis, com return; a entrada e UMA ordem (dicionario), a lista fica dentro, em itens; analogia do carimbo e exemplo de formato em outro assunto (classificar_temperatura). Nada sobre a ordem das verificacoes. | 18:18 decomposicao entregue antes do codigo (parte 1 de 4), guardada sem devolutiva: modo avaliacao, so observar ate a entrega completa. | 18:36 v1 entregue (classificar_ordens.py, sha256 c2f10399...): ordem das verificacoes certa (guarda com not in + or antes do acesso; bloqueado; falha+urgente antes de falha; preventiva; demais). Tutor rodou: saida igual a captura do aluno. Lacunas observadas, NAO apontadas: if __name__ == '__name__' (asserts nunca executam; 'Todos os testes passaram' sai sempre); esperado_3 'preventiva' com item bloqueado contradiz o proprio retorno 'bloqueado'; lista vazia [] nao tratada (comparada com ''; next(iter([])) daria StopIteration) e sem exemplo sem_itens nos asserts; textos fora do contrato ('bloqueado' x 'bloqueada', 'adiministrativa'); item sem a chave bloqueado nao tratado; previsao antes de rodar nao escrita; tabela so por print, sem tabela a mao. Conferencia generica pedida (uma vez por tarefa), sem apontar nada. | 18:38 conferencia: 'Acredito que esteja completa' (sem mudanca). Classificada: evidence_logica-transferencia-ordens-01, transferencia autonoma PARCIAL. Dominio segue 60 (regra 9: Feynman ok, aplicacao padrao ok, transferencia nao cumprida). Devolutiva simples com demonstracoes executadas pelo tutor (copia com __main__ -> AssertionError no caso 3; itens [] -> StopIteration). | 18:40 aluno escolheu corrigir agora: checklist da v2 em 7 itens (ligar os testes e o print final so se passarem; refazer esperado_3 pela propria ordem; guarda da lista vazia; asserts para sem chave e lista vazia; textos do contrato; previsao; tabela a mao de um caso). Daqui em diante pratica guiada (learning), nao conta para o 80. | Interrompida a pedido do aluno em 2026-10-22T18:44:00-03:00 ('Amanha eu corrijo'). Ultimo comportamento proprio: ordem das verificacoes certa sem pista em contexto novo. Suporte mais recente no nucleo: devolutiva completa dos 5 pontos com demonstracoes executadas (o que segue e guiado). Bloqueio aberto: nenhum de entendimento; falta executar a v2. Teoria escrita; pratica em curso.",
+      "evidence_ids": [
+        "evidence_logica-transferencia-ordens-01"
+      ],
+      "difficulty": "medium",
+      "next_step": "Retomar esta sessao: uns 5 cards vencidos (incluindo cond-01 e dictreader-fieldnames-01); depois a v2 guiada de classificar_ordens.py pelo checklist de 7 itens (refazer a mesma tarefa continua guiado, nao conta para o 80). Depois: uma tarefa DIFERENTE com ordens de servico (mesmo contexto), so com o enunciado, como aplicacao padrao; pela skill e87e2d7 (alinhada as 19:04 de 2026-10-22, depois desta sessao) ela conta para o 80 se sair autonoma e correta.",
+      "files_changed": [
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        ".ai-tutor/state.json",
+        "flashcards.md",
+        "fora do estudo: E:/Lucas/Documents/formação_python/src/modulo-03/classificar_ordens.py (criado pelo aluno)",
+        "lessons/15-logica-decomposicao.md",
+        "session-log.md"
+      ]
     }
   ],
   "lessons": [
@@ -4280,7 +4342,8 @@
         "session_2026-10-12-lesson15-problema1-02",
         "session_2026-10-13-lesson15-problema2-01",
         "session_2026-10-17-lesson15-problema3-01",
-        "session_2026-10-20-lesson15-variacao-01"
+        "session_2026-10-20-lesson15-variacao-01",
+        "session_2026-10-22-lesson15-transferencia-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -4317,7 +4380,7 @@
         ]
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto. | 2026-10-11: problema 1 quase fechado - saida int, vazio=0, >= e asserts por linha da tabela com data fixa; falta exclusao sem-data/venceu (if/elif) e None no teste. Padrao observado: esperado tirado da execucao do codigo (weak_verificacao-valor-esperado). Sem evidencia. | 2026-10-12: problema 1 FECHADO (sha256 f4898339...): um if com or (mesma acao), None primeiro como guarda, 6 asserts com esperados da tabela. Feynman do esperado parcial (evidence_logica-esperado-feynman-01). Proximo: problema 2. | 2026-10-13 (session_2026-10-13-lesson15-problema2-01, interrompida, retomavel): problema 2 decomposto com ajuda (degraus 1-3); pre-requisito chave nova em dicionario ensinado; codigo exe_01.py em andamento (um contador para todos os topicos). | 2026-10-20: os tres criterios de entrega cumpridos (plano antes do codigo em 4 problemas; tabela de rastreio conferida por execucao; funcoes testadas com esperado a mao). topic_logica-algoritmos em 60; falta o 80 (transferencia) para concluir."
+      "progress_note": "2026-10-07: plano de saida de tres pontos fracos ligado as tarefas da licao (programming_plan.weak_point_exits). As condicoes de saida dos pontos fracos nao mudaram; o plano so indica onde cada uma pode ser cumprida. | 2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-09: aberta (session_2026-10-09-lesson15-abertura-01). Problema 1 'contar cards vencidos' decomposto com ajuda (entrada com data como parametro, saida int, 4 exemplos incl. vence hoje, due_at None e lista vazia); 1a implementacao em segundo-cerebro/exercicios/contar_vencidos.py com comparacao invertida e esperado errado que coincidem. Pasta segundo-cerebro criada localmente, ainda sem git, sem estudo ficticio e sem remoto. | 2026-10-11: problema 1 quase fechado - saida int, vazio=0, >= e asserts por linha da tabela com data fixa; falta exclusao sem-data/venceu (if/elif) e None no teste. Padrao observado: esperado tirado da execucao do codigo (weak_verificacao-valor-esperado). Sem evidencia. | 2026-10-12: problema 1 FECHADO (sha256 f4898339...): um if com or (mesma acao), None primeiro como guarda, 6 asserts com esperados da tabela. Feynman do esperado parcial (evidence_logica-esperado-feynman-01). Proximo: problema 2. | 2026-10-13 (session_2026-10-13-lesson15-problema2-01, interrompida, retomavel): problema 2 decomposto com ajuda (degraus 1-3); pre-requisito chave nova em dicionario ensinado; codigo exe_01.py em andamento (um contador para todos os topicos). | 2026-10-20: os tres criterios de entrega cumpridos (plano antes do codigo em 4 problemas; tabela de rastreio conferida por execucao; funcoes testadas com esperado a mao). topic_logica-algoritmos em 60; falta o 80 (transferencia) para concluir. | 2026-10-22: transferencia 'classificar ordens de servico' autonoma e parcial (evidence_logica-transferencia-ordens-01): ordem certa; asserts nunca rodaram (__name__), esperado do caso 3 contra a propria regra, lista vazia sem guarda. Correcao guiada pendente; o 80 pede uma tarefa diferente com ordens de servico, so com o enunciado (skill e87e2d7)."
     },
     {
       "lesson_id": "lesson_16-estruturas-dados",
@@ -5405,6 +5468,51 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-10-20T18:08:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_882ecba1-ae52-412a-b117-949985ac843b",
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-04: NameError significa o que? | resposta: nome (variavel, funcao, classe) nao encontrado porque nao existe no codigo. Correto. Exemplo opcional dado (name='Lucas'; print(\"nome\")) nao provoca NameError: aspas fazem do nome um texto; explicado depois.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-22T16:40:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_8e3ab145-e0d8-463b-9b2a-3e0a2176bd6b",
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-remote-familia-01: Subcomando que cria remoto e o que corrige a URL | resposta: git remote add origin <url>; git remote set-url origin <url>. Correto, formas exatas.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-22T16:43:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_06229b59-1a21-439d-b08c-e7b33be24722",
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-fieldnames-01: fieldnames explicito: o que acontece com a primeira linha? | resposta: 'Nao lembro'. Explicacao com execucao depois.",
+      "outcome": "incorrect",
+      "support_level": 0,
+      "recorded_at": "2026-10-22T16:46:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_295821eb-f4ff-4985-88c7-6c8f3d17bf59",
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-restval-01: Linha com menos celulas que o cabecalho: o que vai na chave sem valor? | resposta: 'recebe None'. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-22T16:50:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_e09b3afe-493d-4111-9b3f-ab1a5fcd76c8",
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-log-oneline-01: Flag do git log para um commit por linha, forma exata | resposta: git log --oneline. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-22T16:52:00-03:00"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 22,
-  "updated_at": "2026-10-13T16:02:00-03:00",
+  "revision": 23,
+  "updated_at": "2026-10-22T18:44:00-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -230,6 +230,17 @@
         "note": "Problema 4 inteiro sozinho em cerca de 25 min (decomposicao, codigo, asserts, previsao e rastreio), com a decomposicao antes do codigo; acertou os 5 cards da abertura."
       },
       "recorded_at": "2026-10-20T18:43:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_c1dd3f8e-a94b-4495-ac16-76265605a9ae",
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "partial",
+        "note": "Transferencia em contexto novo: acertou sozinho a ordem das verificacoes, mas considerou a entrega completa apos a conferencia generica sem notar que os asserts nunca rodaram (__name__) nem que a propria tabela impressa contradizia um esperado; pediu duas vezes esclarecimento do enunciado (entrada e saida) antes de comecar."
+      },
+      "recorded_at": "2026-10-22T18:44:00-03:00"
     }
   ],
   "inferences": [],

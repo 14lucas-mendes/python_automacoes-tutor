@@ -51,8 +51,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-10-22`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-29`
+- Intervalo: `7 dias`
 
 ## card_tempos-05
 
@@ -194,7 +194,7 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `new`
-- Próxima revisão: `2026-10-08`
+- Próxima revisão: `2026-10-23`
 - Intervalo: `1 dias`
 
 ## card_dictreader-restval-01
@@ -207,8 +207,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `new`
-- Próxima revisão: `2026-10-08`
-- Intervalo: `1 dias`
+- Próxima revisão: `2026-10-25`
+- Intervalo: `3 dias`
 
 ## card_dictreader-restkey-01
 
@@ -311,8 +311,8 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-remote`
 - Status: `new`
-- Próxima revisão: `2026-10-22`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-29`
+- Intervalo: `7 dias`
 
 ## card_git-remote-v-01
 
@@ -337,8 +337,8 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-log`
 - Status: `new`
-- Próxima revisão: `2026-10-12`
-- Intervalo: `1 dias`
+- Próxima revisão: `2026-10-25`
+- Intervalo: `3 dias`
 
 ## card_git-diff-staged-01
 

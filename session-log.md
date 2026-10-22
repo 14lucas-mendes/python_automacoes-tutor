@@ -30,6 +30,38 @@
 - **Efeito na `lesson_15`:** se a transferência "classificar ordens de serviço" sair parcial, depois da conferência e da devolutiva, uma tarefa diferente com ordens de serviço conta para o 80. Uma pergunta sobre o significado de um campo da ordem não tira a autonomia.
 - **`AGENTS.md`:** acrescentado o resumo das regras na seção de operação com a skill.
 
+## `session_2026-10-22-lesson15-transferencia-01`
+
+- Status: **interrompida e retomável**, das 16:36 às 18:44. Interrompida a pedido do aluno: "Amanhã eu corrijo".
+  - `state` 275 → 287, `cards` 50 → 55, `learner-profile` 22 → 23.
+  - Skill em uso: commit `d9605d4`.
+- Lição `lesson_15-logica-decomposicao`: continua `in_progress`.
+- **Cards:** 4 de 5 corretos (`tempos-04`, `git-remote-familia-01`, `dictreader-restval-01` e `git-log-oneline-01`). O `dictreader-fieldnames-01` não foi lembrado e volta em 23/10.
+  - O `cond-01`, que vencia hoje, foi adiado de propósito para depois da transferência, para não dar pista.
+- **Pré-requisito ensinado** (regras 1 e 7): o operador `in` / `not in` em dicionário. Na checagem, que não é evidência, acertou 3 de 3.
+- **Duas dúvidas sobre o enunciado**, respondidas como reformulação (degrau 1): a saída é uma palavra; a entrada é uma ordem só.
+- **Transferência "classificar ordens de serviço"**, em modo avaliação, no `formacao-python` (`src/modulo-03/classificar_ordens.py`, `c2f10399…`):
+  - ✅ A ordem das verificações saiu certa e sem pista: guarda antes do acesso, bloqueado antes do tipo, específica antes da geral.
+  - ❌ `__name__ == "__name__"`: os `assert` nunca rodaram.
+  - ❌ O esperado do caso 3 contradiz a ordem decidida pelo próprio aluno.
+  - ❌ A lista vazia não é pega pela guarda.
+  - ❌ Os textos estão fora do contrato.
+  - ❌ Faltaram a previsão e a tabela à mão.
+  - A conferência genérica foi pedida uma vez: "Acredito que esteja completa".
+  - Registrado em `evidence_logica-transferencia-ordens-01`: **transferência autônoma parcial**.
+  - O tutor demonstrou dois dos erros numa cópia: com `__main__`, `AssertionError` no caso 3; com `itens: []`, `StopIteration`.
+- **Domínio (regra 9):** `topic_logica-algoritmos` **continua em 60**.
+  - ✅ Feynman autônomo (13/10).
+  - ✅ Aplicação padrão (20/10).
+  - ⏳ Transferência autônoma correta.
+- **Ponto fraco** `weak_condicionais-ordem-guarda`: continua ativo. A ordem saiu certa, mas a aplicação foi parcial, e a guarda da lista vazia falhou.
+- **Learner profile:** uma observação, `autonomous_attempt` parcial.
+- **Próximo passo:**
+  1. retomar esta sessão com uns 5 cards (incluindo `cond-01` e `fieldnames-01`);
+  2. fazer a v2 guiada pelo checklist de 7 itens da lição;
+  3. depois, uma **tarefa diferente com ordens de serviço**, só com o enunciado. Corrigido no commit desta sessão: pela skill `e87e2d7`, alinhada às 19:04, depois do fechamento, ela conta para o 80 e não é preciso outro contexto.
+- **Ajuda dada antes da entrega**, registrada na evidência: o pré-requisito `in` (degrau 2) e duas reformulações do enunciado (degrau 1). Nenhuma tira a autonomia.
+
 ## Ajuste da transferência para o 80 — 2026-10-20
 
 - Fora de sessão, a pedido do aluno: no Python Lab, a missão 006 só abre depois que as anteriores são concluídas.

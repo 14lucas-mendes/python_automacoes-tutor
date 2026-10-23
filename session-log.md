@@ -4,6 +4,33 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-22-lesson15-transferencia-01` (retomada em 23/10) — lição concluída
+
+- Status: **concluída**. Retomada em 23/10 das 14:15 às 15:45 (cerca de 90 min). Skill em uso: commit `e87e2d7`, com os critérios congelados até a `lesson_17`.
+  - `state` 289 → 305, `cards` 55 → 60, `learner-profile` 23 → 24.
+- **Cards:** `cond-01` ✅, `fieldnames-01` ❌, `main-guard-01` ✅, `restkey-01` ❌ e `git-diff-staged-01` 🟡. Os três últimos voltam em 24/10.
+- **v2 guiada do `classificar_ordens.py`:** os 7 itens do checklist estão feitos e todas as previsões saíram certas. Também ficou registrado `evidence_logica-previsao-ordens-v2-01`, de apoio.
+  - O aluno fez sozinho o commit `4f2e3b1` no `formacao-python` (`add .` → `status` → `commit` → `log --oneline -1`). O push está pendente.
+- **Tarefa 2 da transferência, "filas do fim de turno":** tarefa diferente no mesmo contexto, pela skill `e87e2d7`. Modo avaliação, só com o enunciado (`contar_filas.py`, `b92c9bd1…`).
+  - **Entrega completa:**
+    - decomposição com a ordem das verificações justificada;
+    - 5 exemplos, sendo 4 casos-limite;
+    - `assert` dentro do `__main__`;
+    - previsão certa;
+    - tabela à mão conferida pelo `print` no laço.
+  - **Pergunta neutra sobre ajuda,** feita porque o estilo mudou e porque `continue`, `break`, a variável de sinal e o parâmetro padrão nunca foram ensinados aqui: "fiz consultando a documentação, o continue e break foram pesquisas adicionais. Não tive ajuda". Vale o que o aluno declarou.
+  - Registrado em `evidence_logica-transferencia-filas-01`: **transferência autônoma e correta**.
+- **Domínio (regra 9):** `topic_logica-algoritmos` subiu de **60 para 80**.
+  - ✅ Feynman autônomo (13/10).
+  - ✅ Aplicação padrão (20/10).
+  - ✅ Transferência (23/10).
+- **`lesson_15` concluída**, com o diário gravado no cofre. `next_focus` passou a ser `lesson_16-estruturas-dados`.
+- **Pontos fracos resolvidos:** `weak_condicionais-ordem-guarda` e `weak_verificacao-valor-esperado`.
+- **Learner profile:** uma observação, `autonomous_attempt` correta.
+- **Próximo passo:**
+  1. avaliar o pedido de unificação, previsto para o fecho da `lesson_15`, com justificativa escrita;
+  2. abrir a `lesson_16`, começando pela teoria completa.
+
 ## Alinhamento com a skill `e87e2d7`: conferência completa e `lesson_15` — 2026-10-22
 
 - Fora de sessão, a pedido do aluno ("pegue as atualizações... e atualize a formação"). Não é sessão de aprendizagem: nenhuma evidência, domínio, card ou ponto fraco mudou.

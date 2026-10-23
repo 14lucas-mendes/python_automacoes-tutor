@@ -1,6 +1,6 @@
 # Lição `lesson_15-logica-decomposicao`
 
-**Status:** em andamento desde 2026-10-09 (`session_2026-10-09-lesson15-abertura-01`). Tópico: `topic_logica-algoritmos`. Ciclo 5 da formação fechada.
+**Status:** **concluída em 2026-10-23**, depois de aberta em 2026-10-09 (`session_2026-10-09-lesson15-abertura-01`). Tópico: `topic_logica-algoritmos`, domínio **80**. Ciclo 5 da formação fechada.
 
 Estrutura: **Teoria** (para reler), **Plano de prática** e **Progresso** (onde paramos). O checkpoint mais recente é o primeiro item de Progresso.
 
@@ -163,6 +163,38 @@ Adaptada da missão 006 do Python Lab em 2026-10-20. No Lab, a missão só abre 
 3. previsão antes de rodar;
 4. tabela de rastreio de um exemplo, conferida com `print`.
 
+### Transferência para o 80, tarefa 2: filas do fim de turno
+
+Apresentada em 2026-10-23, depois da v2 guiada do `classificar_ordens.py`. É uma **tarefa diferente no mesmo contexto** de ordens de serviço (skill `e87e2d7`). Esta tem laço, dicionário de saída e listas dentro da ordem. Modo avaliação, só com o enunciado.
+
+- **Onde fazer:** criar `src/modulo-03/contar_filas.py` no `formacao-python`.
+
+**Enunciado, só ele:**
+
+> No fim do turno, a central quer saber quantas ordens de serviço vão para cada fila. Implemente `contar_filas(ordens)`.
+>
+> **Entrada:** uma **lista** de ordens. Cada ordem é um dicionário com:
+> - `status`: `"aberta"`, `"fechada"` ou outro texto;
+> - `pecas`: uma lista de dicionários, cada um com `nome` (texto) e `estoque` (número inteiro, 0 ou mais). Algumas ordens **não têm** a chave `pecas`.
+>
+> Exemplo: `[{"status": "aberta", "pecas": [{"nome": "correia", "estoque": 0}]}]`
+>
+> **Saída:** um dicionário **sempre** com as três chaves `"aguardando_peca"`, `"pronta"` e `"ignorada"`, e o valor de cada uma é a quantidade de ordens naquela fila. Cada ordem entra em **uma** fila só.
+>
+> **Regras:**
+> - uma ordem com `status` diferente de `"aberta"` vai para `"ignorada"`;
+> - uma ordem aberta sem a chave `pecas`, ou com a lista vazia, vai para `"pronta"`, porque não depende de peça;
+> - uma ordem aberta em que **alguma** peça tem `estoque` igual a 0 vai para `"aguardando_peca"`;
+> - uma ordem aberta em que todas as peças têm `estoque` maior que 0 vai para `"pronta"`.
+>
+> Decida a ordem das verificações e justifique na decomposição.
+
+**Entregue nesta ordem:**
+1. decomposição: entrada, regra na ordem das verificações com a justificativa, saída, de 3 a 5 exemplos com o esperado à mão (incluindo casos-limite) e plano;
+2. código com um `assert` por exemplo, dentro do `if __name__ == "__main__":`, com a mensagem mostrando o esperado e o obtido;
+3. previsão antes de rodar;
+4. tabela de rastreio à mão de um exemplo com **pelo menos duas ordens**, conferida com `print` dentro do laço.
+
 ### Critérios de evidência
 
 - `application` (autônoma): o plano escrito antes do código em pelo menos 3 problemas; as funções testadas com valor esperado escolhido pelo aluno.
@@ -189,6 +221,46 @@ A lição só passa a `completed` com domínio 80 em `topic_logica-algoritmos` e
 ## Progresso
 
 Checkpoints das sessões, do mais recente para o mais antigo. Evidências e domínio valem só pelo `state.json`.
+
+### Onde paramos (2026-10-23): transferência correta, lógica em 80, lição concluída
+
+`session_2026-10-22-lesson15-transferencia-01`, retomada das 14:15 às 15:45 e concluída.
+
+- **Cards:**
+  - `cond-01` ✅ (com o termo "exclusiva" invertido);
+  - `dictreader-fieldnames-01` ❌;
+  - `main-guard-01` ✅;
+  - `dictreader-restkey-01` ❌;
+  - `git-diff-staged-01` 🟡.
+
+  Os três últimos voltam em 24/10.
+- **v2 guiada do `classificar_ordens.py`:** os 7 itens do checklist estão feitos.
+  - `__main__` corrigido, com a tabela e a mensagem final dentro do bloco;
+  - guarda com `== []`;
+  - o caso sobreposto preventiva + bloqueada virou `assert` com o esperado `"bloqueada"`;
+  - `assert` de "sem chave" e de "lista vazia";
+  - textos do contrato, corrigidos por iniciativa do aluno;
+  - todas as previsões certas.
+
+  O tutor também confirmou que importar o módulo não imprime nada. O aluno fez o commit `4f2e3b1` sozinho; o push está pendente.
+- **Tarefa 2, "filas do fim de turno"** (`contar_filas.py`, `b92c9bd1…`), em modo avaliação e só com o enunciado:
+  - **Decomposição com a ordem justificada:** status → chave `pecas` → peça zerada → resto.
+  - **Exemplos:** 5, sendo 4 casos-limite.
+  - **Código:** laço com laço interno e 5 `assert` dentro do `__main__`.
+  - **Verificação:** previsão certa e tabela à mão conferida pelo `print` no laço.
+  - **Caso extra do tutor**, uma lista mista: correto.
+  - **Pergunta neutra sobre ajuda:** o aluno consultou a documentação e pesquisou `continue` e `break`, sem IA.
+  - Registrado em `evidence_logica-transferencia-filas-01`: **transferência autônoma e correta**.
+- **Domínio (regra 9):** `topic_logica-algoritmos` subiu de **60 para 80**.
+  - ✅ Feynman autônomo (13/10).
+  - ✅ Aplicação padrão (20/10).
+  - ✅ Transferência em contexto novo (23/10).
+- **Pontos fracos resolvidos:** `weak_condicionais-ordem-guarda` e `weak_verificacao-valor-esperado`.
+- **Lição concluída:** domínio 80 e os três critérios de entrega cumpridos.
+
+**Próximo:**
+1. avaliar o pedido de unificação, previsto para o fecho desta lição;
+2. abrir a `lesson_16-estruturas-dados`, que é tema novo e começa pela teoria completa.
 
 ### Onde paramos (2026-10-22): transferência parcial, sessão interrompida e retomável
 

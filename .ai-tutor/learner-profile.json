@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 23,
-  "updated_at": "2026-10-22T18:44:00-03:00",
+  "revision": 24,
+  "updated_at": "2026-10-23T15:45:00-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -241,6 +241,17 @@
         "note": "Transferencia em contexto novo: acertou sozinho a ordem das verificacoes, mas considerou a entrega completa apos a conferencia generica sem notar que os asserts nunca rodaram (__name__) nem que a propria tabela impressa contradizia um esperado; pediu duas vezes esclarecimento do enunciado (entrada e saida) antes de comecar."
       },
       "recorded_at": "2026-10-22T18:44:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_1c599a35-117b-4d68-867d-e6eca7f0be90",
+      "session_id": "session_2026-10-22-lesson15-transferencia-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Um dia depois da transferencia parcial, fez a v2 guiada sem atrito (previsoes certas) e a tarefa 2 inteira sozinho em cerca de 45 min, consultando a documentacao e pesquisando continue/break por conta propria; trouxe a tabela de rastreio a mao junto com a decomposicao."
+      },
+      "recorded_at": "2026-10-23T15:45:00-03:00"
     }
   ],
   "inferences": [],

@@ -116,8 +116,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
 - Status: `learning`
-- Próxima revisão: `2026-10-22`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-10-30`
+- Intervalo: `7 dias`
 
 ## card_cond-02
 
@@ -194,7 +194,7 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `new`
-- Próxima revisão: `2026-10-23`
+- Próxima revisão: `2026-10-24`
 - Intervalo: `1 dias`
 
 ## card_dictreader-restval-01
@@ -220,7 +220,7 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `new`
-- Próxima revisão: `2026-10-09`
+- Próxima revisão: `2026-10-24`
 - Intervalo: `1 dias`
 
 ## card_reader-tipos-01
@@ -285,8 +285,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-modules`
 - Status: `new`
-- Próxima revisão: `2026-10-10`
-- Intervalo: `1 dias`
+- Próxima revisão: `2026-10-26`
+- Intervalo: `3 dias`
 
 ## card_print-return-01
 
@@ -350,7 +350,7 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-diff`
 - Status: `new`
-- Próxima revisão: `2026-10-12`
+- Próxima revisão: `2026-10-24`
 - Intervalo: `1 dias`
 
 ## card_git-push-u-01

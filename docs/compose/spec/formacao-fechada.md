@@ -134,6 +134,16 @@ Até 2026-10-15 havia ciclos de 21 dias com fim de referência em 24/10/2027. O 
   - tabela de rastreio;
   - depois do bloco, um exercício curto de lógica por semana.
 
+- **IA aplicada unificada** (decisão do aluno, 2026-10-23, no fecho da `lesson_15`; ver [`pedido-unificacao-engenharia-ia.md`](pedido-unificacao-engenharia-ia.md), seções 6 e 7):
+  - a antiga formação de Engenharia de IA entra **dentro** das lições 20, 21, 22 e 12, sem mudar IDs, ordem, MVP, stack ou carga;
+  - `lesson_20`: M01, M02, M03, M10 e M11 (contexto e tokens, chave no backend, prompt como contrato validado, avaliação, injeção tratada no sistema);
+  - `lesson_21`: M05 (histórico × resumo × recuperação);
+  - `lesson_22`: M04, M06, M07 e M08, com o **núcleo agêntico**: *agent loop* com parada, ferramentas, permissões e confirmação humana, "workflow ou agente?" e avaliação. Orquestração e subagentes entram só como explicação;
+  - `lesson_12`: M10 e M11 (eval no CI, segurança);
+  - M09 vai para o backlog;
+  - limite de escopo: cada módulo entra como capacidade observável que o app usa; evidências e domínio da formação de IA não migram;
+  - detalhes no `curriculum.md`, seção "IA aplicada: conteúdo unificado e lente agêntica".
+
 ## 5. Carga e orçamento
 
 - **10 h por semana, sem dias fixos.** A meta é semanal e aparece no painel contra o realizado.
@@ -165,3 +175,19 @@ Até 2026-10-15 havia ciclos de 21 dias com fim de referência em 24/10/2027. O 
 ## 7. O que foi preservado
 
 Sessões, evidências, domínios, pontos fracos e lições concluídas. O `topic_python-fundamentos` continua em 80, e o `next_focus` continua `lesson_15-logica-decomposicao`. Os pontos fracos ativos continuam ligados às tarefas do bloco de lógica (`programming_plan.weak_point_exits` da `lesson_15`).
+
+## 8. Continuação prevista: trilha de especialização em agentes
+
+Registrada em 2026-10-23 com a unificação (foco pedido pelo aluno em 19/10). **Não é uma lição nem um ID.** Ela só começa depois que a `lesson_13-portfolio` for concluída e o congelamento acabar. Então vira lições novas, pelo rito normal de currículo.
+
+**Conteúdo previsto,** o que não cabe no MVP:
+- orquestração de vários agentes e subagentes;
+- arquiteturas de agentes;
+- engenharia do loop em profundidade;
+- programação agêntica com ferramentas de código;
+- MCP com servidor próprio;
+- avaliação e melhoria do harness em execução.
+
+**Base:** o agente da `lesson_22` é a primeira versão do próprio harness. A pasta `E:\Lucas\Documents\Faculdade AI\harnnes-engeniring` é o **material de referência**, sem domínio nem evidência a migrar.
+
+**Por que não antes:** um agente é um programa que chama APIs, guarda estado, usa ferramentas e precisa ser testado e publicado. Os ciclos 8 a 13 dão essa base.

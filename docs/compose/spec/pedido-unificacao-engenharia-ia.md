@@ -1,6 +1,6 @@
 # Pedido de mudança: unificar a formação de Engenharia de IA nesta formação
 
-Status: **registrado em 2026-10-15, aguardando avaliação no fecho da `lesson_15-logica-decomposicao`.**
+Status: registrado em 2026-10-15. Avaliado em 2026-10-23, no fecho da `lesson_15-logica-decomposicao`, com a recomendação de aceitar (seção 6). **Aceito pelo aluno em 2026-10-23** ("Confirmo a unificação como recomendada") e **aplicado no mesmo dia** (seção 7). O arquivamento no GitHub fica com o aluno.
 
 Este documento segue a regra de formação fechada ([`formacao-fechada.md`](formacao-fechada.md), seção 6, e `AGENTS.md`): o pedido é registrado agora, **não é aplicado nesta conversa** e só é avaliado no fecho da lição atual, com justificativa escrita.
 
@@ -127,3 +127,86 @@ Nas palavras do aluno: "quero que a minha formação de engenharia de IA foque e
 ## 5. Estágio no TI da CPTM
 
 O estágio ainda não começou e a stack não é conhecida (o aluno acredita que seja JavaScript). Se for confirmada, é um bloqueio real previsto pela regra ("o estágio exigir outra stack"). O caminho natural seria antecipar o bloco de React + TypeScript (`lesson_10` e `lesson_11`). Isso é um **pedido separado**, a ser aberto só depois que a stack for confirmada.
+
+## 6. Avaliação no fecho da `lesson_15` (2026-10-23)
+
+A `lesson_15` foi concluída em 2026-10-23, com lógica em 80 (commit `6022145`). Esta é a avaliação prevista pela regra de formação fechada ([`formacao-fechada.md`](formacao-fechada.md), seção 6).
+
+### 6.1 Fatos conferidos hoje
+
+- **`fundamentos-engenharia-ia`** (`E:\Lucas\Documents\Faculdade AI\Fundamentos da Engenharia de IA`):
+  - sem sessão nova desde 08/10, ou seja, parado há duas semanas;
+  - árvore limpa, igual a `origin/main` (`6c7ac9b`);
+  - `validate_study`: PASS;
+  - domínio: só o `topic_modelos_tokens_contexto` em 20; o resto em 0.
+- **`harnnes-engeniring`:**
+  - nenhuma sessão e nenhuma evidência (`state` revisão 2);
+  - a pasta não é repositório Git.
+- **Esta formação:**
+  - nada do que foi aprendido na `lesson_15` mostrou falta de pré-requisito para as lições 20 a 22;
+  - o ritmo recente subiu: cerca de 5,8 h na semana de 19/10.
+
+### 6.2 A regra e este pedido
+
+A regra só aceita mudança diante de um **bloqueio real**: o estágio exigir outra stack, uma tecnologia ser descontinuada, ou a evidência mostrar que falta um pré-requisito. **Este pedido não é nenhum dos três.**
+
+Esse critério, porém, protege **os itens congelados**. Conferi cada um:
+
+| Congelado | Muda com a unificação? |
+|---|---|
+| tópicos e lições | não: nenhum ID novo, nenhum removido |
+| ordem das lições | não |
+| escopo e regras de negócio do MVP | não: subagentes e o servidor MCP continuam fora (regra 9 do MVP) |
+| stack (Claude API) | não: a formação de IA usava OpenAI, e essa fonte fica de fora |
+| carga de 10 h por semana | não: as 3 h da formação de IA deixam de existir, e a meta continua uma só |
+
+O que muda está todo na parte **livre** da regra:
+- **"adaptar a aula dentro de cada lição":** o conteúdo e a lente agêntica nas lições 20, 21, 22 e 12;
+- **fora desta formação:** arquivar dois programas paralelos que estão parados.
+
+**Conclusão:** aceitar **não abre precedente** contra o fechamento. Nenhum item congelado é tocado, e o pedido só passou pelo rito de mudança por cautela.
+
+### 6.3 Decisão recomendada: aceitar, com limites
+
+1. **Unificação (seções 3.1 a 3.4):** aceitar.
+   - Cada módulo entra só como **capacidade observável** usada pelo app (limite da seção 3.2), dentro do orçamento das lições.
+   - O que não couber vai para o backlog.
+   - Evidências e domínio da formação de IA **não migram**.
+2. **Foco em agentes (seção 4.1):** aceitar nas duas camadas.
+   - **Lente agêntica nas lições 20 a 22.** A `lesson_22` vira o núcleo: *agent loop* com condição de parada, desenho de ferramentas, permissões e confirmação humana, "workflow ou agente?" e avaliação do agente.
+   - **Trilha de especialização em agentes depois da `lesson_13`.** Ela fica registrada como **continuação prevista**, sem criar lição nem ID agora, porque isso seria mudança estrutural.
+   - A pasta `harnnes-engeniring` vira **material de referência** dessa trilha.
+3. **Seção 5 (estágio):** continua como pedido **separado**, a abrir só quando a stack for confirmada. Esta avaliação não a decide.
+
+**Riscos e como ficam tratados:**
+- **Excesso de conteúdo nas lições 20 a 22:** o limite de escopo e o backlog cuidam disso.
+- **Perder histórico:** o repositório de IA está limpo e no remoto. Arquivar não apaga nada.
+- **Distração antes da hora:** nada disso entra antes do ciclo 14 (`lesson_20`). O efeito imediato é só documental.
+
+### 6.4 Aplicação, se o aluno confirmar
+
+A decisão final é do aluno. Com a confirmação, nesta ordem:
+
+1. Mudar o status deste documento para **aceito**.
+2. Escrever o mapeamento da seção 3.2 e a lente agêntica:
+   - nas lições 20, 21, 22 e 12 do `curriculum.md`;
+   - na seção 4 do `formacao-fechada.md`;
+   - sem mudar IDs, ordem nem MVP.
+3. Registrar a trilha pós-MVP de agentes como continuação prevista no `formacao-fechada.md`.
+4. Registrar a decisão no `session-log.md` e no `AGENTS.md`.
+5. No repositório de IA, commitar um README de arquivamento.
+6. **Pelo aluno:** arquivar `fundamentos-engenharia-ia` no GitHub. O tutor só faz isso com `gh repo archive` diante de um pedido explícito.
+7. Em `harnnes-engeniring`, uma nota de referência. A pasta não é Git, então nada é arquivado no GitHub.
+8. Rodar `validate_study` neste estudo e no de IA.
+
+## 7. Aplicação (2026-10-23)
+
+Feita depois da confirmação do aluno, seguindo a seção 6.4:
+
+1. Status deste documento: **aceito**.
+2. `curriculum.md`: nova seção "IA aplicada: conteúdo unificado e lente agêntica", com o mapeamento dos módulos para as lições 20, 21, 22 e 12. Os IDs, a ordem e o MVP não mudaram.
+3. `formacao-fechada.md`: o mesmo mapeamento na seção 4. Também ganhou a seção 8, "Continuação prevista: trilha de especialização em agentes", para depois da `lesson_13`, sem lição nem ID criados.
+4. `AGENTS.md` e `session-log.md`: decisão registrada.
+5. `fundamentos-engenharia-ia`: README de arquivamento commitado e enviado ao GitHub. **Arquivar o repositório no GitHub fica com o aluno.**
+6. `harnnes-engeniring`: nota `ARQUIVADO-REFERENCIA.md`, porque a pasta não é Git.
+7. `validate_study`: PASS neste estudo e no de IA.

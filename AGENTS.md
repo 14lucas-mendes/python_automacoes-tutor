@@ -110,6 +110,18 @@ A formação está **fechada**. O plano único é `docs/compose/spec/formacao-fe
   4. Só aceita diante de um bloqueio real: o estágio exigir outra stack, uma tecnologia ser descontinuada, ou a evidência mostrar que falta um pré-requisito.
 - O próprio aluno pediu este fechamento ("feche essa formação e não permita que eu mude até ela ser concluída"). A autoridade final continua sendo dele.
 
+## Engenharia de IA unificada (decisão do aluno, 2026-10-23)
+
+O pedido de 15/10, complementado em 19/10, foi avaliado no fecho da `lesson_15` e **aceito**. Ver `docs/compose/spec/pedido-unificacao-engenharia-ia.md`, seções 6 e 7.
+
+- **Esta é a única formação.**
+  - `fundamentos-engenharia-ia` está encerrado, com README de arquivamento; o arquivamento no GitHub é feito pelo aluno.
+  - `harnnes-engeniring` é só material de referência.
+  - Nada migra como evidência ou domínio.
+- **Os módulos de IA entram dentro das lições 20, 21, 22 e 12,** como capacidades observáveis do app. A `lesson_22` é o núcleo agêntico. Os IDs, a ordem, o MVP, a stack e a carga não mudam. O mapeamento está no `curriculum.md`.
+- **A trilha de especialização em agentes** é continuação prevista **depois da `lesson_13`** (`formacao-fechada.md`, seção 8). Criar lição nova para ela antes disso é mudança estrutural.
+- **O pedido sobre o estágio continua separado.** Ele só é aberto quando a stack do estágio for confirmada.
+
 ## Critérios de domínio congelados (decisão do aluno, 2026-10-22)
 
 Os critérios de domínio estão **congelados até a `lesson_17-algoritmos-debugging` ser concluída**, ou seja, até o fim do bloco de lógica. Motivo: entre 17 e 22/10 foram três ajustes de critério (PRs #3 a #5 da skill), e agora as regras precisam rodar algumas lições antes de nova mudança.

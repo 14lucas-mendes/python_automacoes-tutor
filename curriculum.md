@@ -48,6 +48,36 @@ Uma competência só avança com evidência demonstrada: explicação autônoma,
 Notas:
 - A partir da `lesson_14`, toda fatia entra por feature branch e PR para `develop`. No fim de cada ciclo, um PR de `develop` para `main` publica uma release com tag.
 - `lesson_09-manutencao-sonhar` foi **arquivada** em 2026-10-08. Ela nunca teve sessão.
+- `lesson_15-logica-decomposicao` foi **concluída** em 2026-10-23, com `topic_logica-algoritmos` em 80. A próxima é a `lesson_16-estruturas-dados`.
+
+## IA aplicada: conteúdo unificado e lente agêntica (decisão do aluno, 2026-10-23)
+
+Depois do pedido de unificação aceito no fecho da `lesson_15` (`docs/compose/spec/pedido-unificacao-engenharia-ia.md`), a antiga formação de Engenharia de IA deixou de existir em paralelo. O conteúdo dela entra **dentro das lições existentes**.
+
+**O que não muda:** os IDs, a ordem, o MVP, a stack (só Claude API) e a carga. Esta seção só adapta a aula dentro de cada lição.
+
+**Limite de escopo:** cada módulo entra como a **capacidade observável** que o app usa, com checkpoint e Feynman dentro da lição. O que não couber vai para o backlog. Evidências e domínio da formação de IA **não migram**.
+
+| Lição | Módulos da antiga formação de IA | Como entram |
+|---|---|---|
+| `lesson_20-llm-estruturado` | M01, M02, M03, M10, M11 | Chamada sem estado e histórico reenviado; janela de contexto e custo em tokens; a chave só no backend (`.env`); prompt como contrato de saída validado com Pydantic e fallback no código; casos esperados e comparação de versões; injeção de prompt tratada no sistema. |
+| `lesson_21-rag-segundo-cerebro` | M05 | Comparar histórico, resumo e recuperação antes da busca full-text com citação. Contexto e memória como peças do harness. |
+| `lesson_22-agente-tutor-mcp` | M04, M06, M07, M08 | **Núcleo agêntico** (detalhado abaixo). |
+| `lesson_12-qualidade-ci` | M10, M11 | Eval do LLM rodando no CI e segurança do app. |
+| backlog | M09 | IDEs, CLIs e modelos locais, depois do MVP. |
+
+**Núcleo agêntico da `lesson_22`:**
+- o *agent loop* com condição de parada;
+- o desenho de ferramentas e o ciclo `tool_use → aplicação executa → tool_result`;
+- permissões e confirmação humana;
+- "workflow ou agente?": o caminho é conhecido de antemão?
+- a arquitetura e a avaliação do agente da revisão de card;
+- conceitos de MCP (host, client e server; MCP × skill × plugin);
+- orquestração e subagentes **só como explicação**, porque a regra 9 do MVP os deixa fora.
+
+**Lente das três lições:** o modelo recebe tokens e devolve tokens; o resto é harness. Em cada entrega, o aluno classifica o que é do modelo e o que é do código.
+
+**Depois da `lesson_13`:** uma trilha de especialização em agentes, registrada como continuação prevista na seção 8 do `formacao-fechada.md`. A pasta `harnnes-engeniring` é o material de referência dela.
 
 ## Projeto principal: o app da formação
 
@@ -94,6 +124,7 @@ Projetos anteriores arquivados, sem perda de histórico:
 - **Histórico de revisões de roteiro:**
   - 2026-10-05: Segundo Cérebro como projeto (`segundo-cerebro-roadmap.md`);
   - 2026-10-06: bloco de lógica (`bloco-logica-roadmap.md`);
-  - 2026-10-08: formação fechada (`formacao-fechada.md`).
+  - 2026-10-08: formação fechada (`formacao-fechada.md`);
+  - 2026-10-23: Engenharia de IA unificada dentro das lições 20, 21, 22 e 12, com lente agêntica (`pedido-unificacao-engenharia-ia.md`).
 
 <!-- IDs, evidências, sessões e critérios canônicos estão em .ai-tutor/state.json. -->

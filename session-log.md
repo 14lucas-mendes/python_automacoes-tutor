@@ -4,6 +4,33 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Unificação aceita e aplicada — 2026-10-23
+
+- O aluno confirmou: "Confirmo a unificação como recomendada. Pode aplicar os passos da seção 6.4 (o arquivamento no GitHub eu faço)."
+- **Aplicado:**
+  - pedido com status **aceito**, e a aplicação descrita na seção 7;
+  - `curriculum.md` com a seção "IA aplicada: conteúdo unificado e lente agêntica";
+  - `formacao-fechada.md` com o mapeamento na seção 4 e a seção 8, "trilha de especialização em agentes", prevista para depois da `lesson_13`;
+  - `AGENTS.md` com a seção "Engenharia de IA unificada";
+  - README de arquivamento no `fundamentos-engenharia-ia`;
+  - nota de referência na pasta `harnnes-engeniring`.
+- **Não mudou:** estado canônico, IDs, ordem das lições, MVP, stack e carga. Nenhuma evidência ou domínio migrou.
+- **Pendente, com o aluno:** arquivar `14lucas-mendes/fundamentos-engenharia-ia` no GitHub.
+
+## Avaliação do pedido de unificação no fecho da `lesson_15` — 2026-10-23
+
+- Fora de sessão, a pedido do aluno, como prevê a regra de formação fechada (seção 6 do `formacao-fechada.md`). Não é sessão de aprendizagem.
+- **Fatos conferidos:**
+  - `fundamentos-engenharia-ia` está parado desde 08/10, limpo, com `validate_study` PASS e M01 em 20;
+  - `harnnes-engeniring` não tem sessão nem Git.
+- **Avaliação:** o pedido não é nenhum dos três bloqueios reais da regra. Mesmo assim, **não toca nenhum item congelado**: lições, ordem, MVP, stack e carga ficam iguais. Tudo o que muda está na parte livre ("adaptar a aula dentro de cada lição") ou fora desta formação.
+- **Recomendação do tutor: aceitar, com limites.**
+  - Os módulos entram como capacidade observável nas lições 20, 21, 22 e 12, sem migrar evidência.
+  - A lente agêntica entra nas lições 20 a 22, com a `lesson_22` como núcleo.
+  - A trilha de agentes fica registrada como continuação prevista depois da `lesson_13`, sem lição nova agora.
+  - A seção 5 (estágio) continua como pedido separado.
+- **Aplicação:** espera a confirmação do aluno. A justificativa completa e a ordem dos passos estão na seção 6 de [`docs/compose/spec/pedido-unificacao-engenharia-ia.md`](docs/compose/spec/pedido-unificacao-engenharia-ia.md).
+
 ## `session_2026-10-22-lesson15-transferencia-01` (retomada em 23/10) — lição concluída
 
 - Status: **concluída**. Retomada em 23/10 das 14:15 às 15:45 (cerca de 90 min). Skill em uso: commit `e87e2d7`, com os critérios congelados até a `lesson_17`.

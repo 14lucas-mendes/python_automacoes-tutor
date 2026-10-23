@@ -4,6 +4,22 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Mídia de revisão da `lesson_15` — 2026-10-23
+
+- Fora de sessão, a pedido do aluno. Ele escolheu dois formatos: mapa Excalidraw e pacote NotebookLM.
+- **Novo pacote:** `media/lesson_15-logica-decomposicao/notebooklm` (`media_78a0dc9f…`, `prepared`).
+  - **Material principal:** `revisao-lesson15.excalidraw`, com prévia SVG escura. São 6 colunas, cada uma ligando a etapa ao conceito, à dificuldade (com data) e à solução, mais a linha do tempo do domínio e uma pergunta de recuperação.
+  - **Material complementar:** `audio-script.md`, o roteiro e o texto de apoio do Resumo em áudio do NotebookLM.
+  - **Fontes:** 5 páginas da documentação oficial do Python, mais o registro da lição (`study_lesson15-percurso`).
+- O pacote de 11/10 foi para `notebooklm-2026-10-11`, e o `local_path` no `media-index` foi corrigido.
+- **Envio ao NotebookLM,** com o consentimento do aluno dado no momento: "Consinto em enviar ao NotebookLM o source-pack.md e o prompts.md do pacote da lesson_15".
+  - Feito pelo navegador próprio do app. O login foi do aluno, que passou por uma verificação de selfie em outro aparelho.
+  - Notebook "lesson_15 · revisão". O `source-pack.md` foi colado como fonte do tipo texto (6270 caracteres), e o `prompts.md` foi para o campo de foco do áudio.
+- **Áudio gerado e observado:** "A armadilha do código silencioso no Python", formato Deep Dive, 20 min 46 s, status `generated`.
+  - O conteúdo **não foi conferido pelo tutor**: não há transcrição, e o tutor não ouve áudio. O aluno ouve e aponta o que não bater.
+  - O arquivo não foi baixado.
+- `media-index` 14 → 16; `validate_study`: PASS. Mídia não é evidência.
+
 ## Pedido de mudança: unificar Claude Code e Harness Engineering — 2026-10-23
 
 - Fora de sessão. O aluno pediu: "eu quero unificar todas as formações que eu tenho numa só. Então, inclua a do Claude Code e inclua também a do Harness Engineer."

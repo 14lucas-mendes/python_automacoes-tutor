@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "artifact_id": "media_9e5caffe-1059-4466-b4fa-366061abcbf2",
+  "lesson_id": "lesson_15-logica-decomposicao",
+  "objective": "Trabalhar tres pontos fracos que travam a lesson_15 no contar_vencidos: (1) o valor esperado vem da regra calculada a mao, nunca da execucao do codigo (weak_verificacao-valor-esperado); (2) cada caso da tabela vira um assert com sua propria lista literal pequena, sem str/int em volta (weak_python-test-literal-lista); (3) casos que se excluem pedem if/elif com a condicao mais especifica primeiro, e nao if separados nem or (weak_condicionais-ordem-guarda).",
+  "source_ids": [
+    "source_python-assert",
+    "source_python-controlflow",
+    "source_python-datastructures"
+  ],
+  "source_hashes": {
+    "source_python-assert": "a1afd4fb1b0253303873b67587c4bcb665910b75f04210abd0da06a472090ac7",
+    "source_python-controlflow": "d2c3cc3716b90c3bfa1d8ffc273a09d9e0b06f5b32f1fbfe338da93de7a1d91a",
+    "source_python-datastructures": "a1d601afeabb4cebb97e6d2ecb376abb7c900bdecac5b5eb23a0a6a025eb0505"
+  },
+  "requested_formats": [
+    "quiz",
+    "image"
+  ],
+  "external_upload": {
+    "provider": "notebooklm",
+    "consented": false,
+    "consented_at": null,
+    "files": [
+      "source-pack.md",
+      "prompts.md"
+    ]
+  },
+  "evidence_eligible": false,
+  "status": "verified",
+  "outputs": [
+    {
+      "path": "local/quiz.json",
+      "format": "quiz",
+      "role": "primary",
+      "note": "9 perguntas (3 por ponto fraco), gabarito separado em answer_key; distratores ligados a equivocos registrados (11/10, 09/10, 02/10, 07/09)."
+    },
+    {
+      "path": "local/quiz.html",
+      "format": "quiz",
+      "role": "primary",
+      "note": "Renderizacao interativa do mesmo quiz.json (tema escuro); explicacao so aparece depois da escolha."
+    },
+    {
+      "path": "local/esperado-vs-obtido.excalidraw",
+      "format": "image",
+      "role": "complementary",
+      "note": "Diagrama Excalidraw, tema escuro."
+    },
+    {
+      "path": "local/esperado-vs-obtido.svg",
+      "format": "image",
+      "role": "complementary",
+      "note": "Previa SVG escura do mesmo diagrama."
+    },
+    {
+      "path": "local/image-brief.md",
+      "format": "image",
+      "role": "complementary",
+      "note": "Texto alternativo, contribuicao distinta e verificacao."
+    }
+  ],
+  "representation_plan": {
+    "primary": "quiz (discriminacao de equivocos, um ponto fraco por bloco)",
+    "complementary": {
+      "artifact": "diagrama esperado-vs-obtido",
+      "complements": "quiz deste pacote",
+      "rationale": "O equivoco central (esperado tirado da execucao) e uma relacao entre duas fontes; uma imagem mostra o circuito e a armadilha de uma vez.",
+      "distinct_contribution": "Mostra espacialmente as duas fontes independentes, o assert como ponto de encontro e a seta da armadilha que fecha o circulo; o quiz so testa decisao a decisao."
+    }
+  },
+  "verification": "Verificado em 2026-10-11 contra source_python-assert (secao 7.3 lida na documentacao oficial), source_python-controlflow e source_python-datastructures; todo codigo das perguntas executado em Python 3.11 (str([])/\"[]\"/dict sem lista -> TypeError; int([]) -> TypeError; if separados (1,1); if/elif (1,0); or -> brinde 2 em [0,30,120]; elif invertido -> brinde 0; comparacoes ISO e ''). Previas renderizadas e conferidas (Edge headless). O pacote nao mostra a correcao do contar_vencidos (sem data x venceu); a q15-corrigir-dupla ensina a mesma ideia em outro contexto (pedidos).",
+  "verified_at": "2026-10-11T19:58:00-03:00"
+}

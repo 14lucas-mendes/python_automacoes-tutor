@@ -1,17 +1,17 @@
 # Grounded Generation Prompts
 
-Learning objective: Trabalhar tres pontos fracos que travam a lesson_15 no contar_vencidos: (1) o valor esperado vem da regra calculada a mao, nunca da execucao do codigo (weak_verificacao-valor-esperado); (2) cada caso da tabela vira um assert com sua propria lista literal pequena, sem str/int em volta (weak_python-test-literal-lista); (3) casos que se excluem pedem if/elif com a condicao mais especifica primeiro, e nao if separados nem or (weak_condicionais-ordem-guarda).
-Use only these source IDs: source_python-assert, source_python-controlflow, source_python-datastructures
+Learning objective: Revisar a lesson_15 inteira depois do fechamento (23/10): o caminho regra -> exemplos com esperado a mao -> plano -> codigo -> assert -> rastreio, os conceitos que sustentam esse caminho (guarda e curto-circuito, ordem especifica antes da geral, gaveta por chave, laco vazio, bloco __main__) e as dificuldades reais do aluno em cada problema, com como cada uma foi resolvida.
+Use only these source IDs: source_python-assert, source_python-boolean-ops, source_python-controlflow, source_python-datastructures, source_python-modules, study_lesson15-percurso
 If a requested claim is absent, state that it is unsupported instead of inventing it.
 Generated material is not learning evidence; end with an autonomous retrieval or transfer task.
 
-## quiz
+## mind_map
 
-Create questions that test misconceptions; keep the answer key hidden until an attempt.
+Create a concept map showing labeled relationships and cite each branch.
 
-## image
+## audio
 
-Create a didactic image with accurate labels and provide complete alt text.
+Create an audio overview in Brazilian Portuguese and provide a transcript or notes.
 
 ## Provider note
 

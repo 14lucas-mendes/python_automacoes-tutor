@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2030 1060" width="2030" height="1060" role="img" aria-labelledby="t d" font-family="Segoe Print, Comic Sans MS, Virgil, sans-serif">
+<title id="t">lesson_15 · revisão</title>
+<desc id="d">Mapa de revisão da lesson_15 em seis colunas: regra e saída, exemplos à mão, ordem das regras, código, assert e __main__, casos-limite. Cada coluna liga a etapa ao conceito, à dificuldade do aluno com data e à solução. Embaixo, a linha do tempo do domínio (20, 40, 60, 80) e uma pergunta de recuperação.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#adb5bd"/></marker></defs>
+<rect width="2030" height="1060" fill="#121212"/>
+<text x="40" y="54" font-size="34" fill="#f8f9fa" font-weight="700">lesson_15 · Decompor, planejar e rastrear (revisão)</text>
+<text x="40" y="86" font-size="18" fill="#adb5bd">Concluída em 23/10/2026 · lógica 80. Cada coluna: a etapa → o conceito → a minha dificuldade → como resolvi.</text>
+<rect x="40" y="120" width="300" height="50" rx="12" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="52" y="147" font-size="17" fill="#fcc419" font-weight="700">1 · Regra e saída</text>
+<line x1="340" y1="145" x2="370" y2="145" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="190" y1="170" x2="190" y2="230" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="230" width="300" height="170" rx="12" fill="#16304a" stroke="#4dabf7" stroke-width="2"/>
+<text x="52" y="257" font-size="17" fill="#4dabf7" font-weight="700">Contrato da saída</text>
+<text x="52" y="281" font-size="15" fill="#e9ecef">A saída promete um formato: no</text>
+<text x="52" y="300" font-size="15" fill="#e9ecef">problema 2, cada chave é um</text>
+<text x="52" y="318" font-size="15" fill="#e9ecef">tópico pedido.</text>
+<line x1="190" y1="400" x2="190" y2="430" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="430" width="300" height="180" rx="12" fill="#3d1a1a" stroke="#ff6b6b" stroke-width="2"/>
+<text x="52" y="457" font-size="17" fill="#ff6b6b" font-weight="700">⚠ 16/10 · caso vazio</text>
+<text x="52" y="481" font-size="15" fill="#e9ecef">Inventei {&#x27;lista&#x27;: 0} e</text>
+<text x="52" y="500" font-size="15" fill="#e9ecef">ajustei o código até o teste</text>
+<text x="52" y="518" font-size="15" fill="#e9ecef">passar: fora do contrato.</text>
+<line x1="190" y1="610" x2="190" y2="640" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="640" width="300" height="140" rx="12" fill="#173521" stroke="#51cf66" stroke-width="2"/>
+<text x="52" y="667" font-size="17" fill="#51cf66" font-weight="700">✓ Resolvi</text>
+<text x="52" y="691" font-size="15" fill="#e9ecef">O esperado sai do contrato:</text>
+<text x="52" y="710" font-size="15" fill="#e9ecef">tópicos sem evidência →</text>
+<text x="52" y="728" font-size="15" fill="#e9ecef">{&#x27;topic_python&#x27;: 0}; sem</text>
+<text x="52" y="747" font-size="15" fill="#e9ecef">tópicos → {}.</text>
+<rect x="370" y="120" width="300" height="50" rx="12" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="382" y="147" font-size="17" fill="#fcc419" font-weight="700">2 · Exemplos à mão</text>
+<line x1="670" y1="145" x2="700" y2="145" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="520" y1="170" x2="520" y2="230" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="370" y="230" width="300" height="170" rx="12" fill="#16304a" stroke="#4dabf7" stroke-width="2"/>
+<text x="382" y="257" font-size="17" fill="#4dabf7" font-weight="700">Esperado × obtido</text>
+<text x="382" y="281" font-size="15" fill="#e9ecef">O esperado vem da REGRA,</text>
+<text x="382" y="300" font-size="15" fill="#e9ecef">calculado antes de rodar. O</text>
+<text x="382" y="318" font-size="15" fill="#e9ecef">obtido vem do CÓDIGO.</text>
+<line x1="520" y1="400" x2="520" y2="430" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="370" y="430" width="300" height="180" rx="12" fill="#3d1a1a" stroke="#ff6b6b" stroke-width="2"/>
+<text x="382" y="457" font-size="17" fill="#ff6b6b" font-weight="700">⚠ 09–11/10 · problema 1</text>
+<text x="382" y="481" font-size="15" fill="#e9ecef">Tirei o esperado da execução:</text>
+<text x="382" y="500" font-size="15" fill="#e9ecef">um erro de comparação</text>
+<text x="382" y="518" font-size="15" fill="#e9ecef">coincidiu com um esperado</text>
+<text x="382" y="537" font-size="15" fill="#e9ecef">errado. &#x27;&#x27; no lugar de None</text>
+<text x="382" y="556" font-size="15" fill="#e9ecef">escondia o caso sem data.</text>
+<line x1="520" y1="610" x2="520" y2="640" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="370" y="640" width="300" height="140" rx="12" fill="#173521" stroke="#51cf66" stroke-width="2"/>
+<text x="382" y="667" font-size="17" fill="#51cf66" font-weight="700">✓ Resolvi</text>
+<text x="382" y="691" font-size="15" fill="#e9ecef">Tabela à mão antes do código;</text>
+<text x="382" y="710" font-size="15" fill="#e9ecef">None no teste. &#x27;Se não bater,</text>
+<text x="382" y="728" font-size="15" fill="#e9ecef">ajusto a função, não o</text>
+<text x="382" y="747" font-size="15" fill="#e9ecef">esperado.&#x27;</text>
+<rect x="700" y="120" width="300" height="50" rx="12" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="712" y="147" font-size="17" fill="#fcc419" font-weight="700">3 · Ordem das regras</text>
+<line x1="1000" y1="145" x2="1030" y2="145" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="850" y1="170" x2="850" y2="230" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="700" y="230" width="300" height="170" rx="12" fill="#16304a" stroke="#4dabf7" stroke-width="2"/>
+<text x="712" y="257" font-size="17" fill="#4dabf7" font-weight="700">Guarda e curto-circuito</text>
+<text x="712" y="281" font-size="15" fill="#e9ecef">Guarda antes do acesso. Regra</text>
+<text x="712" y="300" font-size="15" fill="#e9ecef">específica antes da geral. or</text>
+<text x="712" y="318" font-size="15" fill="#e9ecef">para no 1º True; and para no</text>
+<text x="712" y="337" font-size="15" fill="#e9ecef">1º False.</text>
+<line x1="850" y1="400" x2="850" y2="430" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="700" y="430" width="300" height="180" rx="12" fill="#3d1a1a" stroke="#ff6b6b" stroke-width="2"/>
+<text x="712" y="457" font-size="17" fill="#ff6b6b" font-weight="700">⚠ 12/10 e 22/10</text>
+<text x="712" y="481" font-size="15" fill="#e9ecef">Com &lt;= antes de == None previ</text>
+<text x="712" y="500" font-size="15" fill="#e9ecef">&#x27;passa&#x27;: deu TypeError.</text>
+<text x="712" y="518" font-size="15" fill="#e9ecef">Esperei &#x27;preventiva&#x27; para uma</text>
+<text x="712" y="537" font-size="15" fill="#e9ecef">ordem com item bloqueado.</text>
+<line x1="850" y1="610" x2="850" y2="640" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="700" y="640" width="300" height="140" rx="12" fill="#173521" stroke="#51cf66" stroke-width="2"/>
+<text x="712" y="667" font-size="17" fill="#51cf66" font-weight="700">✓ Resolvi</text>
+<text x="712" y="691" font-size="15" fill="#e9ecef">None primeiro. Bloqueada antes</text>
+<text x="712" y="710" font-size="15" fill="#e9ecef">do tipo: ordem travada não vai</text>
+<text x="712" y="728" font-size="15" fill="#e9ecef">a setor nenhum.</text>
+<rect x="1030" y="120" width="300" height="50" rx="12" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="1042" y="147" font-size="17" fill="#fcc419" font-weight="700">4 · Código</text>
+<line x1="1330" y1="145" x2="1360" y2="145" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="1180" y1="170" x2="1180" y2="230" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1030" y="230" width="300" height="170" rx="12" fill="#16304a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1042" y="257" font-size="17" fill="#4dabf7" font-weight="700">Gaveta por chave · laço</text>
+<text x="1042" y="281" font-size="15" fill="#e9ecef">d[k] = 0 cria; d[k] += 1 soma</text>
+<text x="1042" y="300" font-size="15" fill="#e9ecef">(KeyError se não existe). Laço</text>
+<text x="1042" y="318" font-size="15" fill="#e9ecef">sobre [] dá 0 voltas. return</text>
+<text x="1042" y="337" font-size="15" fill="#e9ecef">encerra a função.</text>
+<line x1="1180" y1="400" x2="1180" y2="430" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1030" y="430" width="300" height="180" rx="12" fill="#3d1a1a" stroke="#ff6b6b" stroke-width="2"/>
+<text x="1042" y="457" font-size="17" fill="#ff6b6b" font-weight="700">⚠ 13/10 e 19/10</text>
+<text x="1042" y="481" font-size="15" fill="#e9ecef">Um contador só para todos os</text>
+<text x="1042" y="500" font-size="15" fill="#e9ecef">tópicos. Um return {} dentro</text>
+<text x="1042" y="518" font-size="15" fill="#e9ecef">do laço encerrava a função</text>
+<text x="1042" y="537" font-size="15" fill="#e9ecef">cedo.</text>
+<line x1="1180" y1="610" x2="1180" y2="640" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1030" y="640" width="300" height="140" rx="12" fill="#173521" stroke="#51cf66" stroke-width="2"/>
+<text x="1042" y="667" font-size="17" fill="#51cf66" font-weight="700">✓ Resolvi</text>
+<text x="1042" y="691" font-size="15" fill="#e9ecef">Uma gaveta por tópico, criada</text>
+<text x="1042" y="710" font-size="15" fill="#e9ecef">a partir da entrada; exclusão</text>
+<text x="1042" y="728" font-size="15" fill="#e9ecef">vira condição, não return.</text>
+<rect x="1360" y="120" width="300" height="50" rx="12" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="1372" y="147" font-size="17" fill="#fcc419" font-weight="700">5 · assert e __main__</text>
+<line x1="1660" y1="145" x2="1690" y2="145" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="1510" y1="170" x2="1510" y2="230" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1360" y="230" width="300" height="170" rx="12" fill="#16304a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1372" y="257" font-size="17" fill="#4dabf7" font-weight="700">Testes que rodam</text>
+<text x="1372" y="281" font-size="15" fill="#e9ecef">assert obtido == esperado,</text>
+<text x="1372" y="300" font-size="15" fill="#e9ecef">f&#x27;...&#x27; fica em silêncio quando</text>
+<text x="1372" y="318" font-size="15" fill="#e9ecef">passa. O bloco __main__ só</text>
+<text x="1372" y="337" font-size="15" fill="#e9ecef">roda com o arquivo executado</text>
+<text x="1372" y="356" font-size="15" fill="#e9ecef">direto.</text>
+<line x1="1510" y1="400" x2="1510" y2="430" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1360" y="430" width="300" height="180" rx="12" fill="#3d1a1a" stroke="#ff6b6b" stroke-width="2"/>
+<text x="1372" y="457" font-size="17" fill="#ff6b6b" font-weight="700">⚠ 22/10 · transferência</text>
+<text x="1372" y="481" font-size="15" fill="#e9ecef">if __name__ == &#x27;__name__&#x27;: os</text>
+<text x="1372" y="500" font-size="15" fill="#e9ecef">asserts nunca rodaram, e</text>
+<text x="1372" y="518" font-size="15" fill="#e9ecef">&#x27;Todos os testes passaram&#x27;</text>
+<text x="1372" y="537" font-size="15" fill="#e9ecef">saía sempre.</text>
+<line x1="1510" y1="610" x2="1510" y2="640" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1360" y="640" width="300" height="140" rx="12" fill="#173521" stroke="#51cf66" stroke-width="2"/>
+<text x="1372" y="667" font-size="17" fill="#51cf66" font-weight="700">✓ Resolvi (23/10)</text>
+<text x="1372" y="691" font-size="15" fill="#e9ecef">&#x27;__main__&#x27;, com a tabela e a</text>
+<text x="1372" y="710" font-size="15" fill="#e9ecef">mensagem final dentro do</text>
+<text x="1372" y="728" font-size="15" fill="#e9ecef">bloco; importar não imprime</text>
+<text x="1372" y="747" font-size="15" fill="#e9ecef">nada.</text>
+<rect x="1690" y="120" width="300" height="50" rx="12" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="1702" y="147" font-size="17" fill="#fcc419" font-weight="700">6 · Casos-limite</text>
+<line x1="1840" y1="170" x2="1840" y2="230" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1690" y="230" width="300" height="170" rx="12" fill="#16304a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1702" y="257" font-size="17" fill="#4dabf7" font-weight="700">Beiradas da regra</text>
+<text x="1702" y="281" font-size="15" fill="#e9ecef">Lista vazia, chave ausente,</text>
+<text x="1702" y="300" font-size="15" fill="#e9ecef">sem data, vence hoje. Cada</text>
+<text x="1702" y="318" font-size="15" fill="#e9ecef">caso-limite vira assert, não</text>
+<text x="1702" y="337" font-size="15" fill="#e9ecef">só linha de tabela.</text>
+<line x1="1840" y1="400" x2="1840" y2="430" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1690" y="430" width="300" height="180" rx="12" fill="#3d1a1a" stroke="#ff6b6b" stroke-width="2"/>
+<text x="1702" y="457" font-size="17" fill="#ff6b6b" font-weight="700">⚠ 22/10 · guarda furada</text>
+<text x="1702" y="481" font-size="15" fill="#e9ecef">ordem[&#x27;itens&#x27;] == &#x27;&#x27; deixava</text>
+<text x="1702" y="500" font-size="15" fill="#e9ecef">[] passar (StopIteration);</text>
+<text x="1702" y="518" font-size="15" fill="#e9ecef">sem_itens só na tabela; textos</text>
+<text x="1702" y="537" font-size="15" fill="#e9ecef">fora do contrato.</text>
+<line x1="1840" y1="610" x2="1840" y2="640" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1690" y="640" width="300" height="140" rx="12" fill="#173521" stroke="#51cf66" stroke-width="2"/>
+<text x="1702" y="667" font-size="17" fill="#51cf66" font-weight="700">✓ Resolvi</text>
+<text x="1702" y="691" font-size="15" fill="#e9ecef">== [] na guarda; asserts 6 e 7</text>
+<text x="1702" y="710" font-size="15" fill="#e9ecef">(sem chave e lista vazia);</text>
+<text x="1702" y="728" font-size="15" fill="#e9ecef">&#x27;bloqueada&#x27; e</text>
+<text x="1702" y="747" font-size="15" fill="#e9ecef">&#x27;administrativa&#x27;.</text>
+<text x="40" y="840" font-size="20" fill="#f8f9fa" font-weight="700">Linha do tempo do domínio</text>
+<rect x="62" y="864" width="16" height="16" rx="12" fill="#fcc419" stroke="#fcc419" stroke-width="2"/>
+<text x="48" y="905" font-size="15" fill="#f8f9fa" font-weight="700">09/10</text>
+<text x="48" y="926" font-size="14" fill="#adb5bd">abertura</text>
+<line x1="82" y1="872" x2="424" y2="872" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="428" y="864" width="16" height="16" rx="12" fill="#fcc419" stroke="#fcc419" stroke-width="2"/>
+<text x="414" y="905" font-size="15" fill="#f8f9fa" font-weight="700">12/10</text>
+<text x="414" y="926" font-size="14" fill="#adb5bd">Feynman parcial · 20</text>
+<line x1="448" y1="872" x2="790" y2="872" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="794" y="864" width="16" height="16" rx="12" fill="#fcc419" stroke="#fcc419" stroke-width="2"/>
+<text x="780" y="905" font-size="15" fill="#f8f9fa" font-weight="700">13/10</text>
+<text x="780" y="926" font-size="14" fill="#adb5bd">Feynman ok · 40</text>
+<line x1="814" y1="872" x2="1156" y2="872" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1160" y="864" width="16" height="16" rx="12" fill="#fcc419" stroke="#fcc419" stroke-width="2"/>
+<text x="1146" y="905" font-size="15" fill="#f8f9fa" font-weight="700">20/10</text>
+<text x="1146" y="926" font-size="14" fill="#adb5bd">aplicação padrão · 60</text>
+<line x1="1180" y1="872" x2="1522" y2="872" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1526" y="864" width="16" height="16" rx="12" fill="#fcc419" stroke="#fcc419" stroke-width="2"/>
+<text x="1512" y="905" font-size="15" fill="#f8f9fa" font-weight="700">22/10</text>
+<text x="1512" y="926" font-size="14" fill="#adb5bd">transferência parcial</text>
+<line x1="1546" y1="872" x2="1888" y2="872" stroke="#adb5bd" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="1892" y="864" width="16" height="16" rx="12" fill="#fcc419" stroke="#fcc419" stroke-width="2"/>
+<text x="1878" y="905" font-size="15" fill="#f8f9fa" font-weight="700">23/10</text>
+<text x="1878" y="926" font-size="14" fill="#adb5bd">transferência ok · 80</text>
+<rect x="40" y="950" width="1950" height="74" rx="12" fill="#1f2226" stroke="#868e96" stroke-width="2"/>
+<text x="54" y="977" font-size="17" fill="#f8f9fa" font-weight="700">Antes de olhar as colunas: por que &#x27;pecas&#x27; not in ordem vem antes de ordem[&#x27;pecas&#x27;]? E de onde sai o esperado de um assert?</text>
+<text x="54" y="1004" font-size="14" fill="#adb5bd">Responda em voz alta ou por escrito; depois confira nas colunas 3 e 2. Este mapa é material do tutor: não é evidência.</text>
+</svg>

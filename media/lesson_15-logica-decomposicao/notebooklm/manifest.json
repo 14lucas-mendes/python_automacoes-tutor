@@ -1,74 +1,74 @@
 {
   "schema_version": 2,
-  "artifact_id": "media_9e5caffe-1059-4466-b4fa-366061abcbf2",
+  "artifact_id": "media_78a0dc9f-2734-4c8c-a867-1bda418e7c3f",
   "lesson_id": "lesson_15-logica-decomposicao",
-  "objective": "Trabalhar tres pontos fracos que travam a lesson_15 no contar_vencidos: (1) o valor esperado vem da regra calculada a mao, nunca da execucao do codigo (weak_verificacao-valor-esperado); (2) cada caso da tabela vira um assert com sua propria lista literal pequena, sem str/int em volta (weak_python-test-literal-lista); (3) casos que se excluem pedem if/elif com a condicao mais especifica primeiro, e nao if separados nem or (weak_condicionais-ordem-guarda).",
+  "objective": "Revisar a lesson_15 inteira depois do fechamento (23/10): o caminho regra -> exemplos com esperado a mao -> plano -> codigo -> assert -> rastreio, os conceitos que sustentam esse caminho (guarda e curto-circuito, ordem especifica antes da geral, gaveta por chave, laco vazio, bloco __main__) e as dificuldades reais do aluno em cada problema, com como cada uma foi resolvida.",
   "source_ids": [
     "source_python-assert",
+    "source_python-boolean-ops",
     "source_python-controlflow",
-    "source_python-datastructures"
+    "source_python-datastructures",
+    "source_python-modules",
+    "study_lesson15-percurso"
   ],
   "source_hashes": {
-    "source_python-assert": "a1afd4fb1b0253303873b67587c4bcb665910b75f04210abd0da06a472090ac7",
-    "source_python-controlflow": "d2c3cc3716b90c3bfa1d8ffc273a09d9e0b06f5b32f1fbfe338da93de7a1d91a",
-    "source_python-datastructures": "a1d601afeabb4cebb97e6d2ecb376abb7c900bdecac5b5eb23a0a6a025eb0505"
+    "source_python-assert": "25687d3c8f8150a28ea7e0f1d75f8f2eb9f5d92005e73f0e10c2fb7bdb5f4f26",
+    "source_python-boolean-ops": "0a631b93059cd9d5663a31055f6fbb2de2d37f38a24df0b407f49831b8b1fe78",
+    "source_python-controlflow": "7058a2387d362ae2901783216d8a8d8d47f0fd1c7980d9ba33ead19b3f4b613a",
+    "source_python-datastructures": "cbe67a2841fd0147cb84c58a8bfbdaa5865ef3b71299f7e28531f868e7269143",
+    "source_python-modules": "46c6ff0a5849e30f09934403a17d558547bb28ff9ceaa85c53bd931c88a8611b",
+    "study_lesson15-percurso": "faceb0dab843ad018e799fcd00c35102e1d3af95dc6de3834b15000c422deed0"
   },
   "requested_formats": [
-    "quiz",
-    "image"
+    "mind_map",
+    "audio"
   ],
   "external_upload": {
     "provider": "notebooklm",
-    "consented": false,
-    "consented_at": null,
+    "consented": true,
+    "consented_at": "2026-10-23T19:32:00-03:00",
     "files": [
       "source-pack.md",
       "prompts.md"
-    ]
+    ],
+    "consent_text": "Consinto em enviar ao NotebookLM o source-pack.md e o prompts.md do pacote da lesson_15. Vou entrar na conta Google no navegador do app.",
+    "notebook_url": "https://notebook.google.com/notebook/66525890-d7ab-4336-b8f6-e2d9aa43ad74",
+    "notebook_title": "lesson_15 · revisão",
+    "how": "Navegador proprio do app (login feito pelo aluno). source-pack.md colado integralmente como fonte 'Texto copiado' (6270 caracteres, conferido; o painel nao permite escolher arquivo). O texto do prompts.md (objetivo, regras e secao audio) foi colado no campo de foco do Resumo em Audio, formato Analise detalhada, portugues (Brasil), duracao padrao. Nenhum outro arquivo enviado; compartilhamento nao alterado.",
+    "uploaded_at": "2026-10-23T19:32:00-03:00"
   },
   "evidence_eligible": false,
-  "status": "verified",
+  "status": "generated",
   "outputs": [
     {
-      "path": "local/quiz.json",
-      "format": "quiz",
+      "path": "local/revisao-lesson15.excalidraw",
+      "format": "mind_map",
       "role": "primary",
-      "note": "9 perguntas (3 por ponto fraco), gabarito separado em answer_key; distratores ligados a equivocos registrados (11/10, 09/10, 02/10, 07/09)."
+      "note": "Mapa Excalidraw, tema escuro: 6 colunas (etapa -> conceito -> dificuldade com data -> solucao), linha do tempo do dominio e pergunta de recuperacao."
     },
     {
-      "path": "local/quiz.html",
-      "format": "quiz",
+      "path": "local/revisao-lesson15.svg",
+      "format": "mind_map",
       "role": "primary",
-      "note": "Renderizacao interativa do mesmo quiz.json (tema escuro); explicacao so aparece depois da escolha."
+      "note": "Previa SVG escura do mesmo mapa, com title e desc (texto alternativo). Conferida renderizada no painel do app."
     },
     {
-      "path": "local/esperado-vs-obtido.excalidraw",
-      "format": "image",
+      "path": "local/audio-script.md",
+      "format": "audio",
       "role": "complementary",
-      "note": "Diagrama Excalidraw, tema escuro."
+      "note": "Roteiro do Resumo em audio do NotebookLM e texto de apoio. Contribuicao distinta: revisao sem tela e em sequencia narrativa, com tres perguntas finais sem resposta."
     },
     {
-      "path": "local/esperado-vs-obtido.svg",
-      "format": "image",
+      "path": "https://notebook.google.com/notebook/66525890-d7ab-4336-b8f6-e2d9aa43ad74",
+      "format": "audio",
       "role": "complementary",
-      "note": "Previa SVG escura do mesmo diagrama."
-    },
-    {
-      "path": "local/image-brief.md",
-      "format": "image",
-      "role": "complementary",
-      "note": "Texto alternativo, contribuicao distinta e verificacao."
+      "note": "Resumo em Audio 'A armadilha do codigo silencioso no Python' (Deep Dive, 1 fonte, 20min46s), observado pronto no notebook em 2026-10-23T19:53:00-03:00. Conteudo NAO conferido pelo tutor: nao ha transcricao na pagina e o tutor nao escuta audio. O aluno deve ouvir e apontar qualquer afirmacao que nao bata com o mapa ou o source-pack. Arquivo nao baixado."
     }
   ],
   "representation_plan": {
-    "primary": "quiz (discriminacao de equivocos, um ponto fraco por bloco)",
-    "complementary": {
-      "artifact": "diagrama esperado-vs-obtido",
-      "complements": "quiz deste pacote",
-      "rationale": "O equivoco central (esperado tirado da execucao) e uma relacao entre duas fontes; uma imagem mostra o circuito e a armadilha de uma vez.",
-      "distinct_contribution": "Mostra espacialmente as duas fontes independentes, o assert como ponto de encontro e a seta da armadilha que fecha o circulo; o quiz so testa decisao a decisao."
-    }
+    "primary": "mind_map (Excalidraw): relacoes entre etapa, conceito, dificuldade e solucao, numa visao so",
+    "complementary": "audio (NotebookLM): a mesma licao em sequencia narrativa, para ouvir sem tela; termina em recuperacao autonoma",
+    "rationale": "O mapa mostra a estrutura de uma vez; o audio conta a ordem dos acontecimentos e cobra recuperacao. Sem formato redundante."
   },
-  "verification": "Verificado em 2026-10-11 contra source_python-assert (secao 7.3 lida na documentacao oficial), source_python-controlflow e source_python-datastructures; todo codigo das perguntas executado em Python 3.11 (str([])/\"[]\"/dict sem lista -> TypeError; int([]) -> TypeError; if separados (1,1); if/elif (1,0); or -> brinde 2 em [0,30,120]; elif invertido -> brinde 0; comparacoes ISO e ''). Previas renderizadas e conferidas (Edge headless). O pacote nao mostra a correcao do contar_vencidos (sem data x venceu); a q15-corrigir-dupla ensina a mesma ideia em outro contexto (pedidos).",
-  "verified_at": "2026-10-11T19:58:00-03:00"
+  "generated_at": "2026-10-23T19:53:00-03:00"
 }

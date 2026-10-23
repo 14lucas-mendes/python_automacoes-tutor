@@ -4,6 +4,16 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Pedido de mudança: unificar Claude Code e Harness Engineering — 2026-10-23
+
+- Fora de sessão. O aluno pediu: "eu quero unificar todas as formações que eu tenho numa só. Então, inclua a do Claude Code e inclua também a do Harness Engineer."
+- **Regra citada:** formação fechada (`AGENTS.md` e `formacao-fechada.md`, seção 6). O pedido foi **registrado e não aplicado** nesta conversa. Ele será avaliado no fecho da `lesson_16-estruturas-dados`, com justificativa escrita.
+- **Achados:**
+  - `formacao-claude` tem 26 tópicos em 0, sem lições nem evidências, e 1 sessão interrompida desde 09/10;
+  - `harnnes-engeniring` não tem sessões;
+  - há sobreposição com as lições 12, 14, 17 e 20 a 22 e com a trilha de agentes.
+- Detalhes em [`docs/compose/spec/pedido-unificacao-claude-code-harness.md`](docs/compose/spec/pedido-unificacao-claude-code-harness.md).
+
 ## Unificação aceita e aplicada — 2026-10-23
 
 - O aluno confirmou: "Confirmo a unificação como recomendada. Pode aplicar os passos da seção 6.4 (o arquivamento no GitHub eu faço)."

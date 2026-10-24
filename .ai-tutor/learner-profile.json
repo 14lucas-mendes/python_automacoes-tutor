@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 24,
-  "updated_at": "2026-10-23T15:45:00-03:00",
+  "revision": 25,
+  "updated_at": "2026-10-24T13:32:00-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -252,6 +252,16 @@
         "note": "Um dia depois da transferencia parcial, fez a v2 guiada sem atrito (previsoes certas) e a tarefa 2 inteira sozinho em cerca de 45 min, consultando a documentacao e pesquisando continue/break por conta propria; trouxe a tabela de rastreio a mao junto com a decomposicao."
       },
       "recorded_at": "2026-10-23T15:45:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_e70c5348-7851-416c-945f-6d3163419165",
+      "session_id": "session_2026-10-24-lesson16-teoria-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "strategy_outcome",
+      "value": {
+        "note": "Na checagem len({'Se','Se','Luz'}) deu o numero certo (2) por um raciocinio errado (contou os repetidos). Depois de uma explicacao curta com analogia (lista de presenca), acertou a variacao com o porque certo. Uma checagem com resultado coincidente nao mostrou o modelo mental; a variacao que separa os dois raciocinios mostrou."
+      },
+      "recorded_at": "2026-10-24T13:32:00-03:00"
     }
   ],
   "inferences": [],

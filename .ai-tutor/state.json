@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 305,
-  "updated_at": "2026-10-23T15:45:00-03:00",
+  "revision": 313,
+  "updated_at": "2026-10-24T13:32:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -3913,6 +3913,48 @@
         "lessons/15-logica-decomposicao.md",
         "session-log.md"
       ]
+    },
+    {
+      "session_id": "session_2026-10-24-lesson16-teoria-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-10-24T12:30:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_16-estruturas-dados"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 5 cards vencidos (retrieval_first): reader-tipos-01, dictreader-fieldnames-02, next-default-01, fatiar-pop-01, print-return-01. (2) Abrir a lesson_16 com a teoria completa (theory_first, tema novo): problema e porque, as quatro estruturas (lista, dicionario, tupla, conjunto), como escolher, vocabulario, exemplos, erros comuns, checagens de entendimento e ponte para o projeto. Com 60 min, a pratica fica para a sessao seguinte da mesma licao.",
+      "cognitive_core": "Na pratica (proxima sessao): escolher e justificar a estrutura e implementar sozinho os padroes acumular, contar, agrupar, filtrar, buscar e maior/menor em dados aninhados do estudo ficticio. Nesta sessao, so a teoria e as checagens (nao sao evidencia).",
+      "mode": "learning",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Aquisicao de tema novo num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-10-24T12:30 com 60 min (informado pelo aluno), skill e87e2d7, theory_first. Tema novo: lesson_16 sem arquivo de licao nem teoria escrita; teoria completa antes da pratica. | 12:33-13:00 cards (retrieval_first): reader-tipos-01 correto; dictreader-fieldnames-02 nao lembrou; next-default-01 parcial (StopIteration certo, mas achava que next 'pega tudo depois do cabecalho' e nao disse o valor padrao); fatiar-pop-01 parcial (indices e remocao certos; faltou copia nova x original modificado e o retorno do pop); print-return-01 correto. Explicacoes simples com analogia (regra 8). Os tres que falharam voltam em 25/10. | 13:00-13:30 teoria completa da lesson_16 escrita em lessons/16-estruturas-dados.md e dada no chat. Parte 1: problema e porque, lista/dicionario/tupla/conjunto (tupla e conjunto novos na formacao), quatro perguntas para escolher, custo de achar, vocabulario, exemplo basico (biblioteca) e aprofundado (dados aninhados de onibus, agrupar por parada), erros comuns. Parte 2: padroes acumular, contar, agrupar, filtrar, buscar (break), maior/menor e regra de empate. Checagens (nao sao evidencia): 1 certa (lista para notas em ordem com repeticao); 2 numero certo por raciocinio errado (contou os repetidos de 'Se'), corrigido depois da explicacao e confirmado numa variacao (3); 3 disse que da erro mas sem o KeyError nem o porque: tutor rodou e mostrou KeyError 'Se'; empate: '<=' para o menor com o ultimo empatado, certo. | Encerrada em 13:32 (~62 min de 60). Teoria escrita completa; pratica pendente. Nenhuma evidencia; dominio inalterado.",
+      "evidence_ids": [],
+      "difficulty": "medium",
+      "ended_at": "2026-10-24T13:32:00-03:00",
+      "next_step": "Proxima sessao da lesson_16: recuperacao curta da teoria (retrieval_first, antes de reexplicar), depois Indice 1 so com o enunciado (topico -> evidencias do estudo ficticio): decomposicao, estrutura justificada por escrito, casos-limite (vazio, chave ausente) e asserts com esperado a mao. Cards de 25/10: dictreader-fieldnames-02, next-default-01, fatiar-pop-01 e os que ja venceram. O pedido de unificar Claude Code e Harness sera avaliado no fecho da lesson_16.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        "flashcards.md",
+        "lessons/16-estruturas-dados.md",
+        "session-log.md",
+        "fora do estudo: nota de sessao no cofre"
+      ]
     }
   ],
   "lessons": [
@@ -4432,8 +4474,10 @@
       "prerequisite_lesson_ids": [
         "lesson_15-logica-decomposicao"
       ],
-      "status": "planned",
-      "session_ids": [],
+      "status": "in_progress",
+      "session_ids": [
+        "session_2026-10-24-lesson16-teoria-01"
+      ],
       "required_evidence_types": [
         "feynman",
         "application",
@@ -4452,7 +4496,8 @@
         "expected_transfer": "aplicar os padroes em dados de outro dominio (Python Lab 001/002/003/005)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-10-24: teoria completa escrita (partes 1 e 2) em lessons/16-estruturas-dados.md; pratica pendente.",
+      "file": "lessons/16-estruturas-dados.md"
     },
     {
       "lesson_id": "lesson_17-algoritmos-debugging",
@@ -5607,6 +5652,51 @@
       "outcome": "partial",
       "support_level": 0,
       "recorded_at": "2026-10-23T14:27:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_a1f83ff6-146a-4f4e-b12d-bf94c3d78e9a",
+      "session_id": "session_2026-10-24-lesson16-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_reader-tipos-01: o leitor converte '4.5' em numero? | resposta: 'Nao converte'. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-24T12:39:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_d98eb207-941e-45d0-8636-8ecdbe2fb4e0",
+      "session_id": "session_2026-10-24-lesson16-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-fieldnames-02: nomes das colunas de um DictReader e valor em arquivo vazio | resposta: 'Nao me lembro'.",
+      "outcome": "not_attempted",
+      "support_level": 0,
+      "recorded_at": "2026-10-24T12:41:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_ff3efe47-f273-45bb-a8fd-fd62be71c14d",
+      "session_id": "session_2026-10-24-lesson16-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_next-default-01: next(leitor) em arquivo vazio e como evitar | resposta: 'nao me lembro'; disse que next 'pega tudo o que estiver depois dos titulos' (equivoco: next devolve uma linha so, a proxima); chutou erro 'como None ou StopIteration' (StopIteration certo, mas em duvida com None); nao disse como evitar (next(leitor, None)). Parcial.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-24T12:44:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_bdcb2de4-ccd8-4846-b5a3-1b70951fb851",
+      "session_id": "session_2026-10-24-lesson16-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_fatiar-pop-01: result[1:] x result.pop(0) | resposta: fatia 'a partir do segundo elemento, tudo que vem depois' (correto, apos autocorrigir o indice); pop 'remove o primeiro elemento da minha lista' (correto: modifica a lista). Nao disse que a fatia e uma lista NOVA que deixa a original inteira, nem que pop devolve o item retirado. Parcial.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-24T12:47:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_8d70dabc-94da-4be9-bf29-f81838bfe195",
+      "session_id": "session_2026-10-24-lesson16-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_print-return-01: print x return | resposta: print so mostra no console e nao devolve o valor; return devolve o valor gerado para quem chamou; print serve para verificar/debugar. Correto (chamou print de 'metodo'; e funcao: detalhe de precisao, opcional).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-24T12:49:00-03:00"
     }
   ]
 }

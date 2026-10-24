@@ -232,9 +232,9 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
-- Status: `new`
-- Próxima revisão: `2026-10-09`
-- Intervalo: `1 dias`
+- Status: `review`
+- Próxima revisão: `2026-10-27`
+- Intervalo: `3 dias`
 
 ## card_dictreader-fieldnames-02
 
@@ -245,8 +245,8 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
-- Status: `new`
-- Próxima revisão: `2026-10-09`
+- Status: `review`
+- Próxima revisão: `2026-10-25`
 - Intervalo: `1 dias`
 
 ## card_next-default-01
@@ -258,8 +258,8 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-builtins`, `source_python-csv-module`
-- Status: `new`
-- Próxima revisão: `2026-10-10`
+- Status: `review`
+- Próxima revisão: `2026-10-25`
 - Intervalo: `1 dias`
 
 ## card_fatiar-pop-01
@@ -271,8 +271,8 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-datastructures`
-- Status: `new`
-- Próxima revisão: `2026-10-10`
+- Status: `review`
+- Próxima revisão: `2026-10-25`
 - Intervalo: `1 dias`
 
 ## card_main-guard-01
@@ -297,9 +297,9 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-datastructures`
-- Status: `new`
-- Próxima revisão: `2026-10-11`
-- Intervalo: `1 dias`
+- Status: `review`
+- Próxima revisão: `2026-10-27`
+- Intervalo: `3 dias`
 
 ## card_git-remote-familia-01
 

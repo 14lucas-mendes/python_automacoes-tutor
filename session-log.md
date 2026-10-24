@@ -4,6 +4,24 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-24-lesson16-teoria-01`
+
+- Status: concluída (12:30–13:32, ~62 min de 60 informados pelo aluno). Skill `e87e2d7`, `theory_first`.
+- Lição: `lesson_16-estruturas-dados`, aberta hoje (tema novo: teoria completa antes da prática).
+- **Cards (retrieval_first), 5 vencidos:**
+  - `reader-tipos-01`: correto ("não converte"). Volta em 27/10.
+  - `dictreader-fieldnames-02`: não lembrou. Explicado `fieldnames` e `None` no arquivo vazio. Volta em 25/10.
+  - `next-default-01`: parcial. Acertou `StopIteration`, mas achava que o `next` "pega tudo depois do cabeçalho" e não disse o valor padrão. Volta em 25/10.
+  - `fatiar-pop-01`: parcial. Índices e remoção certos; faltou "fatia é cópia nova, `pop` muda a original e devolve o item". Volta em 25/10.
+  - `print-return-01`: correto (chamou `print` de método: detalhe de precisão). Volta em 27/10.
+- **Teoria escrita** em [`lessons/16-estruturas-dados.md`](lessons/16-estruturas-dados.md):
+  - parte 1: lista, dicionário, tupla e conjunto (tupla e conjunto novos nesta formação), quatro perguntas para escolher, custo de achar, exemplo da biblioteca e dados aninhados de ônibus;
+  - parte 2: acumular, contar, agrupar, filtrar, buscar, maior/menor e a regra de empate.
+- **Checagens** (não são evidência): ver o Progresso da lição. Ponto de atenção: no `len` do conjunto, o número saiu certo por raciocínio errado; a variação mostrou o modelo correto depois da explicação.
+- **Evidência:** nenhuma. Domínio inalterado (`topic_logica-algoritmos` segue 80, da `lesson_15`).
+- **Learner profile:** 1 observação (`strategy_outcome`) sobre a checagem com resultado coincidente.
+- **Próximo passo:** recuperação curta da teoria e o Índice 1 (tópico → evidências) só com o enunciado. O pedido de unificar Claude Code e Harness continua para o fecho da `lesson_16`.
+
 ## Mídia de revisão da `lesson_15` — 2026-10-23
 
 - Fora de sessão, a pedido do aluno. Ele escolheu dois formatos: mapa Excalidraw e pacote NotebookLM.

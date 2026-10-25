@@ -4,6 +4,19 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-25-lesson16-indice1-01`
+
+- Status: **interrompida e retomável** (11:45–12:01, 30 min informados; o aluno encerrou por tempo). Skill `e87e2d7`, `theory_first` com Teoria já escrita.
+- Lição: `lesson_16-estruturas-dados`.
+- **Cards (retrieval_first):**
+  - `dictreader-fieldnames-02`: correto, um dia depois de não lembrar. Volta em 01/11.
+  - `next-default-01`: correto e completo (`StopIteration`, `next(leitor, None)`, avisar o usuário). Volta em 28/10.
+  - `fatiar-pop-01`: parcial de novo. Cópia × original certo, mas disse "não tenho mais esse dado": o `pop` devolve o item. Volta em 26/10.
+- **Recuperação da teoria** (`retrieval_attempts`): parcial. Nomeou as 4 estruturas; lista e tupla certas; dicionário vago ("busca precisa"); conjunto não lembrado. O tutor completou depois da tentativa.
+- **Índice 1** (tópico → evidências): enunciado entregue e gravado na lição. A decomposição ainda não começou.
+- **Evidência:** nenhuma. Domínio inalterado.
+- **Próximo passo:** retomar esta sessão pela decomposição do Índice 1, sem andaime.
+
 ## `session_2026-10-24-lesson16-teoria-01`
 
 - Status: concluída (12:30–13:32, ~62 min de 60 informados pelo aluno). Skill `e87e2d7`, `theory_first`.

@@ -194,6 +194,30 @@ Nenhum dos dois está errado; errado é **não decidir**. A regra de empate vai 
 
 ## Plano de prática
 
+### Índice 1: tópico → evidências (enunciado entregue em 2026-10-25)
+
+O app precisa responder "quais evidências tem este tópico?" sem percorrer todas as evidências a cada pergunta. Monte o índice uma vez.
+
+```python
+topicos = ["topic_python", "topic_sql", "topic_git"]
+
+evidencias = [
+    {"evidence_id": "ev_01", "topic_id": "topic_python"},
+    {"evidence_id": "ev_02", "topic_id": "topic_git"},
+    {"evidence_id": "ev_03", "topic_id": "topic_python"},
+    {"evidence_id": "ev_04", "topic_id": "topic_react"},
+]
+```
+
+Regras:
+
+1. A saída tem **todos** os tópicos de `topicos`, mesmo os sem evidência.
+2. Para cada tópico, os IDs das evidências dele, **na ordem em que aparecem** em `evidencias`.
+3. Evidência de um tópico que não está em `topicos` fica **fora** do índice.
+4. Escreva, num comentário, **por que** escolheu cada estrutura da saída.
+
+Antes do código: entrada, regra, saída, exemplos com o esperado calculado a mão (incluindo casos-limite) e plano em português. Depois: a função, os `assert` com os seus esperados e uma execução.
+
 ### Andaime (usar só se precisar)
 
 1. Reformular a pergunta do índice em português.
@@ -224,6 +248,14 @@ Nenhum dos dois está errado; errado é **não decidir**. A regra de empate vai 
 - Diante de entrega parcial: uma vez por tarefa, "Confira sua solução contra cada regra e exemplo do enunciado." antes de qualquer devolutiva.
 
 ## Progresso
+
+### Onde paramos (2026-10-25): Índice 1 entregue, sessão interrompida e retomável
+
+- Sessão `session_2026-10-25-lesson16-indice1-01` (30 min, interrompida às 12:01 a pedido do aluno, `resumable: true`).
+- Cards: `fieldnames` e `next` com padrão certos; fatia × `pop` parcial (o `pop` **devolve** o item).
+- Recuperação da teoria: parcial. Lista e tupla certas; dicionário vago; conjunto não lembrado. O tutor completou.
+- **Enunciado do Índice 1 entregue** (seção *Índice 1*, no Plano de prática). Nenhuma tentativa ainda e nada revelado além do enunciado.
+- **Retomar:** a decomposição do aluno, sem andaime; depois função, `assert` e execução.
 
 ### Onde paramos (2026-10-24): teoria completa, prática pendente
 

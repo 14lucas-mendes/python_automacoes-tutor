@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 313,
-  "updated_at": "2026-10-24T13:32:00-03:00",
+  "revision": 319,
+  "updated_at": "2026-10-25T12:01:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -3955,6 +3955,47 @@
         "session-log.md",
         "fora do estudo: nota de sessao no cofre"
       ]
+    },
+    {
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "status": "interrupted",
+      "transitions": [
+        "in_progress",
+        "interrupted"
+      ],
+      "started_at": "2026-10-25T11:45:00-03:00",
+      "ended_at": null,
+      "resumable": true,
+      "time_budget_minutes": 30,
+      "lesson_ids": [
+        "lesson_16-estruturas-dados"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) Os 3 cards que voltaram hoje (retrieval_first): dictreader-fieldnames-02, next-default-01, fatiar-pop-01. (2) Recuperacao curta da teoria da lesson_16 antes de reexplicar. (3) Indice 1 (topico -> evidencias) so com o enunciado: decomposicao, estrutura justificada, casos-limite e asserts com esperado a mao. Com 30 min, o Indice 1 pode continuar na proxima sessao.",
+      "cognitive_core": "Decompor e implementar sozinho um indice por chave (topico -> lista de IDs de evidencia), escolhendo e justificando a estrutura, com topico sem evidencia e evidencia de topico desconhecido tratados pela regra.",
+      "mode": "learning",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Primeira pratica de tema recem-ensinado num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-10-25T11:45 com 30 min (informado pelo aluno), skill e87e2d7, theory_first com Teoria ja escrita (24/10): retomar com recuperacao curta, sem reiniciar a aula. | 11:46-11:58 cards (retrieval_first): dictreader-fieldnames-02 correto (volta 01/11); next-default-01 correto e completo (volta 28/10); fatiar-pop-01 parcial: copia x original certo, mas 'nao tenho mais esse dado' (pop devolve o item; segunda vez sem o retorno; volta 26/10). | 11:58-12:00 recuperacao da teoria (retrieval_attempts): nomeou as 4 estruturas; lista e tupla certas; dicionario vago ('busca precisa'); conjunto nao lembrou: parcial. Tutor completou dicionario (procurar pela chave) e conjunto (presenca e tirar repetidos). | 12:00 enunciado do Indice 1 entregue e gravado na licao (topicos x evidencias, 4 regras). Interrompida em 12:01 a pedido do aluno (tempo esgotado), antes da decomposicao. Nenhuma tentativa do nucleo ainda: nada foi revelado alem do enunciado. Retomar pela decomposicao do Indice 1, sem andaime.",
+      "evidence_ids": [],
+      "difficulty": "medium",
+      "next_step": "Retomar esta sessao: Indice 1 so com o enunciado (lessons/16-estruturas-dados.md, secao Indice 1): decomposicao do aluno (entrada, regra, saida, exemplos com esperado a mao e casos-limite, plano), depois funcao, asserts e execucao. Antes, card fatiar-pop-01 (vence 26/10) e outros vencidos, uns 5.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        "flashcards.md",
+        "lessons/16-estruturas-dados.md",
+        "session-log.md",
+        "fora do estudo: nota de sessao no cofre"
+      ]
     }
   ],
   "lessons": [
@@ -4476,7 +4517,8 @@
       ],
       "status": "in_progress",
       "session_ids": [
-        "session_2026-10-24-lesson16-teoria-01"
+        "session_2026-10-24-lesson16-teoria-01",
+        "session_2026-10-25-lesson16-indice1-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -5697,6 +5739,42 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-10-24T12:49:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_756083f6-1dde-432b-a52e-ee03f1237cd1",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-fieldnames-02: fieldnames e valor no arquivo vazio | resposta: 'fieldnames, que captura a primeira linha do csv e a transforma nas chaves'; 'se a lista estiver vazia vale None' (quis dizer arquivo vazio). Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-25T11:48:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_144875b2-679e-40a5-926a-797a90aea1c6",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_next-default-01: next(leitor) em arquivo vazio | resposta: StopIteration; evitar com next(leitor, None): devolve o padrao None, o codigo nao para e da para avisar o usuario. Correto (chamou next de 'metodo': e funcao embutida).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-25T11:51:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_88a21a15-b65c-4710-b32f-9efd0f2d4551",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_fatiar-pop-01: result[1:] x pop(0) | resposta: fatia cria copia a partir do indice 1; pop remove e modifica a original (correto, melhorou desde 24/10). Mas disse 'nao tenho mais esse dado': pop devolve o item retirado, que pode ser guardado numa variavel. Parcial (segunda vez sem o retorno do pop).",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-25T11:54:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_483a749c-9006-476d-a537-fd4b42c9e02e",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "topic_id": "topic_logica-algoritmos",
+      "prompt": "Teoria lesson_16: as quatro estruturas e quando usar cada uma | resposta: nomeou as 4; lista = ordem importa e pode repetir (correto); dicionario = 'quando a busca e precisa e a ordem nao importa' (direcao certa, vago: nao disse 'procurar pelo nome/chave'); tupla = 'informacoes precisas que nao mudam' (correto: grupo fixo); conjunto: nao lembrou. Parcial.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-25T12:00:00-03:00"
     }
   ]
 }

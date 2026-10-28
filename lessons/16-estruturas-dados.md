@@ -249,6 +249,20 @@ Antes do código: entrada, regra, saída, exemplos com o esperado calculado a m�
 
 ## Progresso
 
+### Onde paramos (2026-10-28): Índice 1 no código e Feynman, as duas metades do 60
+
+- Sessão `session_2026-10-28-lesson16-indice1-codigo-01` (17:45–18:50, ~65 min de 45), concluída.
+- Cards: `git log origin/master..HEAD` incorreto (volta 29/10); chaves do `DictReader` correto; última linha × bloco do erro parcial.
+- **Índice 1, código** (`segundo-cerebro/exercicios/indice_01.py`, sha256 `4b6dee9d…`):
+  - `classificar_indice(evidencias, topicos)`: cria todos os tópicos com `[]`, percorre as evidências na ordem e só acrescenta se o tópico estiver no índice;
+  - comentário justifica o dicionário e a lista;
+  - 5 `assert` com os esperados da v2, todos passando; o tutor rodou com `python -I` e dois casos extras, corretos.
+  - Opcional: o `if len(evidencias) == 0` é redundante.
+  - Evidência: `evidence_logica-indice1-codigo-01` (`application`, autônoma, correta).
+- **Feynman:** a gaveteira etiquetada; sem criar os tópicos antes, o `topic_sql` some e o `topic_react` entraria. O aluno ditou a uma IA, que transcreveu e estruturou; o conteúdo é dele. Evidência: `evidence_logica-feynman-indice-01`.
+- **Regra 9:** as duas metades do 60 da lição estão cumpridas. O tópico segue em 80.
+- **Para fechar a lição:** os Índices 2 (dados aninhados) e 3 (maior/menor e empate), o `indice.json` verificado e a transferência para outro domínio.
+
 ### Onde paramos (2026-10-27): decomposição do Índice 1 correta, código pendente
 
 - Retomada da sessão `session_2026-10-25-lesson16-indice1-01` (20:53–21:48), concluída.

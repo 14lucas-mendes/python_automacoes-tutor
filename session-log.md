@@ -4,6 +4,22 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-28-lesson16-indice1-codigo-01`
+
+- Status: concluída (17:45–18:50, ~65 min de 45 informados). Skill `e87e2d7`. Modo `assessment` para o Índice 1.
+- **Cards (retrieval_first):**
+  - `git-log-intervalo-01`: incorreto. Descreveu o `git log` comum, sem o intervalo (o que tem no local e falta no remoto). Volta em 29/10.
+  - `dictreader-chaves-01`: correto (a redação mistura chave e valor). Volta em 04/11.
+  - `tempos-03`: parcial. A última linha ficou vaga (faltou tipo + detalhe); o bloco acima estava certo. Volta em 04/11.
+- **Índice 1, código:** `segundo-cerebro/exercicios/indice_01.py`, com 5 `assert` passando. O tutor rodou com `python -I` e com dois casos extras, corretos.
+  - `evidence_logica-indice1-codigo-01`: aplicação padrão autônoma e correta.
+- **Feynman:** a analogia da gaveteira; as duas consequências de não criar os tópicos antes.
+  - A resposta mudou de estilo, e a pergunta neutra foi feita. Resposta: "Eu fui ditando e ela escreveu para mim o que eu falei corrigindo ortografia." Vale o declarado.
+  - `evidence_logica-feynman-indice-01`: autônoma e correta.
+- **Regra 9:** Feynman ✅ e aplicação padrão ✅ da `lesson_16`. `topic_logica-algoritmos` segue em 80.
+- **Fora do estudo:** `indice_01.py` e `indice_01.md` ainda sem commit no `segundo-cerebro` (o commit é do aluno).
+- **Próximo passo:** os Índices 2 e 3, só com o enunciado, com o `indice.json`; depois a transferência.
+
 ## `session_2026-10-25-lesson16-indice1-01`, retomada em 2026-10-27
 
 - Retomada às 20:53, com 90 min pelo padrão; o aluno reduziu para 60. Concluída às 21:48.

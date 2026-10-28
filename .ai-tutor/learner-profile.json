@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 26,
-  "updated_at": "2026-10-27T21:48:00-03:00",
+  "revision": 27,
+  "updated_at": "2026-10-28T18:50:00-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -272,6 +272,17 @@
         "note": "So com a conferencia generica ('confira contra cada regra e exemplo'), achou e corrigiu sozinho tres violacoes das regras na propria decomposicao do Indice 1. Declarou usar uma IA apenas para formatar o texto em markdown."
       },
       "recorded_at": "2026-10-27T21:48:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_e2bae520-d47a-4aa6-9b31-7007f518e4e9",
+      "session_id": "session_2026-10-28-lesson16-indice1-codigo-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Implementou o Indice 1 a partir da propria decomposicao, sem ajuda e com os 5 asserts passando. Fez o Feynman ditando a uma IA que transcreveu e estruturou o texto (declarado); as respostas dos cards, digitadas, sao curtas e as vezes vagas."
+      },
+      "recorded_at": "2026-10-28T18:50:00-03:00"
     }
   ],
   "inferences": [],

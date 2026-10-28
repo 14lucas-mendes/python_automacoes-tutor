@@ -38,7 +38,7 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`, `source_python-traceback`
 - Status: `review`
-- Próxima revisão: `2026-10-24`
+- Próxima revisão: `2026-11-04`
 - Intervalo: `7 dias`
 
 ## card_tempos-04
@@ -180,9 +180,9 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
-- Status: `new`
-- Próxima revisão: `2026-10-23`
-- Intervalo: `3 dias`
+- Status: `review`
+- Próxima revisão: `2026-11-04`
+- Intervalo: `7 dias`
 
 ## card_dictreader-fieldnames-01
 
@@ -375,6 +375,6 @@
 - Tópico: `topic_workflow-profissional`
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-log`
-- Status: `new`
-- Próxima revisão: `2026-10-12`
+- Status: `review`
+- Próxima revisão: `2026-10-29`
 - Intervalo: `1 dias`

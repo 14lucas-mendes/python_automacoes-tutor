@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 72,
+  "revision": 75,
   "cards": [
     {
       "card_id": "card_tempos-01",
@@ -57,14 +57,14 @@
       "front": "O que a ultima linha de uma mensagem de erro informa, e o que informa o bloco acima dela?",
       "back": "A ultima linha informa o tipo da excecao e o detalhe. O bloco acima e o stack traceback: arquivo, linha e a cadeia de chamadas, lida de cima para baixo.",
       "created_at": "2026-09-12T17:03:14.792180-03:00",
-      "updated_at": "2026-10-17T18:43:00-03:00",
-      "due_at": "2026-10-24",
+      "updated_at": "2026-10-28T17:50:00-03:00",
+      "due_at": "2026-11-04",
       "difficulty": "medium",
       "spaced_repetition_step": 2,
       "interval_days": 7,
-      "review_count": 2,
-      "objective_correctness": true,
-      "last_result": "correct",
+      "review_count": 3,
+      "objective_correctness": null,
+      "last_result": "partial",
       "confidence": null,
       "status": "review"
     },
@@ -288,16 +288,16 @@
       "front": "No csv.DictReader, o que vira as CHAVES de cada linha?",
       "back": "Os nomes das colunas, tirados da primeira linha do arquivo quando fieldnames nao e passado. Essa primeira linha e omitida dos resultados.",
       "created_at": "2026-09-18T21:00:00-03:00",
-      "updated_at": "2026-10-20T18:08:00-03:00",
-      "due_at": "2026-10-23",
+      "updated_at": "2026-10-28T17:49:00-03:00",
+      "due_at": "2026-11-04",
       "difficulty": "easy",
-      "spaced_repetition_step": 1,
-      "interval_days": 3,
-      "review_count": 1,
+      "spaced_repetition_step": 2,
+      "interval_days": 7,
+      "review_count": 2,
       "objective_correctness": true,
       "last_result": "correct",
       "confidence": null,
-      "status": "new"
+      "status": "review"
     },
     {
       "card_id": "card_dictreader-fieldnames-01",
@@ -604,16 +604,16 @@
       "front": "O que mostra git log --oneline origin/master..HEAD?",
       "back": "Os commits que estao no HEAD local e ainda nao estao em origin/master, ou seja, o que ainda nao subiu.",
       "created_at": "2026-10-07T23:40:00-03:00",
-      "updated_at": "2026-10-07T23:40:00-03:00",
-      "due_at": "2026-10-12",
+      "updated_at": "2026-10-28T17:47:00-03:00",
+      "due_at": "2026-10-29",
       "difficulty": "hard",
-      "spaced_repetition_step": 0,
+      "spaced_repetition_step": 1,
       "interval_days": 1,
-      "review_count": 0,
-      "objective_correctness": null,
-      "last_result": null,
+      "review_count": 1,
+      "objective_correctness": false,
+      "last_result": "incorrect",
       "confidence": null,
-      "status": "new"
+      "status": "review"
     }
   ],
   "updated_at": "2026-10-23T14:27:00-03:00"

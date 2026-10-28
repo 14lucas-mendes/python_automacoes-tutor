@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 328,
-  "updated_at": "2026-10-27T21:48:00-03:00",
+  "revision": 335,
+  "updated_at": "2026-10-28T18:50:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -334,7 +334,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-10-27",
+      "last_practice": "2026-10-28",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -353,7 +353,9 @@
         "evidence_logica-transferencia-ordens-01",
         "evidence_logica-previsao-ordens-v2-01",
         "evidence_logica-transferencia-filas-01",
-        "evidence_logica-indice1-decomposicao-01"
+        "evidence_logica-indice1-decomposicao-01",
+        "evidence_logica-indice1-codigo-01",
+        "evidence_logica-feynman-indice-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2667,6 +2669,40 @@
       },
       "result": "correct",
       "error": "v1 parcial: saida como lista de dicionarios; exemplos incluiam topic_react (contra a regra 3) e omitiam topic_sql (contra a regra 1); evidencias vazias -> [] e retorno imediato se qualquer lista vazia (contra a regra 1). Depois da conferencia generica, sem outra ajuda, v2 correta: dict topico -> lista, topic_sql: [], react fora, evidencias vazias com os topicos em lista vazia, caso de ordem ev_03 antes de ev_01, plano coerente. Decomposicao isolada e evidencia de apoio, nao a aplicacao padrao (falta o codigo)."
+    },
+    {
+      "evidence_id": "evidence_logica-indice1-codigo-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-28-lesson16-indice1-codigo-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Indice 1 da lesson_16 (topico -> lista de IDs de evidencia), em assessment, so com o enunciado e a decomposicao v2 do proprio aluno: classificar_indice(evidencias, topicos) inicializa todos os topicos com lista vazia, percorre evidencias na ordem e so acrescenta se o topic_id estiver no indice; comentario justifica dicionario (olhar o topico e ja ver a lista) e lista (ordem, zero ou varias); 5 asserts com os esperados da v2 (normal, topicos vazia, evidencias vazia, ambas vazias, ordem). Aplicacao padrao do plano da licao (indice de ponta a ponta, estrutura justificada, vazio e chave ausente tratados).",
+      "recorded_at": "2026-10-28T18:32:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-28-lesson16-indice1-codigo-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/indice_01.py (sha256 4b6dee9d10b3c02d...); 'Todos os testes passaram'; tutor rodou com python -I e dois casos extras (topico desconhecido no meio, ordem de topicos diferente; so topico desconhecido): corretos"
+      },
+      "result": "correct",
+      "error": "Opcional: o 'if len(evidencias) == 0: return result' e redundante (o for sobre lista vazia ja nao faz nada), sem efeito no resultado. Empate e dados aninhados nao entram neste indice; ficam para os indices 2 e 3."
+    },
+    {
+      "evidence_id": "evidence_logica-feynman-indice-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-28-lesson16-indice1-codigo-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Feynman da lesson_16: por que o indice e dicionario com listas e nao lista simples, e o que daria errado sem criar os topicos antes. Analogia propria da gaveteira etiquetada (chave = etiqueta do topico, lista = folhas na ordem; gaveta vazia = []); lista unica obriga a vasculhar tudo a cada pergunta; sem criar antes, topic_sql some e topic_react entraria se a gaveta fosse criada na hora. O aluno declarou ter ditado a explicacao a uma IA, que transcreveu, corrigiu a ortografia e estruturou o texto; o conteudo e dele. Vale o declarado.",
+      "recorded_at": "2026-10-28T18:49:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-28-lesson16-indice1-codigo-01",
+        "location": "explicacao colada no chat em 2026-10-28"
+      },
+      "result": "correct",
+      "error": ""
     }
   ],
   "sessions": [
@@ -4018,6 +4054,52 @@
         "session-log.md",
         "fora do estudo: notas de sessao no cofre"
       ]
+    },
+    {
+      "session_id": "session_2026-10-28-lesson16-indice1-codigo-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-10-28T17:45:00-03:00",
+      "ended_at": "2026-10-28T18:50:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 45,
+      "lesson_ids": [
+        "lesson_16-estruturas-dados"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 3 cards vencidos (retrieval_first): git-log-intervalo-01, dictreader-chaves-01, tempos-03. (2) Indice 1: implementar a funcao a partir da decomposicao v2 do aluno, com comentario justificando a estrutura, asserts com os esperados dele e execucao. (3) Feynman curto sobre a escolha da estrutura.",
+      "cognitive_core": "Implementar sozinho o indice topico -> lista de IDs (inicializar todos os topicos, percorrer evidencias na ordem, ignorar topico desconhecido) e justificar a estrutura; verificar com asserts e execucao.",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Aplicacao padrao da lesson_16 num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-10-28T17:45 com 45 min (informado pelo aluno), skill e87e2d7, theory_first com Teoria escrita. Cards sem condicionais/guarda antes do codigo. Indice 1 em assessment: so a decomposicao do aluno como base; se a entrega sair parcial, uma conferencia generica antes de qualquer devolutiva. | 17:46-17:55 cards: git-log-intervalo-01 incorreto (descreveu o git log comum, sem o intervalo; volta 29/10); dictreader-chaves-01 correto (redacao mistura chave e valor); tempos-03 parcial (ultima linha vaga: faltou tipo + detalhe; bloco acima certo). | 18:32 Indice 1 entregue completo (indice_01.py, sha256 4b6dee9d...): passa; casos extras do tutor corretos. Estilo consistente com os exercicios anteriores dele; sem pergunta de ajuda. Registrada evidence_logica-indice1-codigo-01: aplicacao padrao autonoma correta. Regra 9: aplicacao padrao da lesson_16 cumprida; falta o Feynman. | 18:49 Feynman entregue (texto estruturado: pergunta neutra; declarou que ditou a uma IA que transcreveu, corrigiu ortografia e estruturou; conteudo dele). Correto: evidence_logica-feynman-indice-01. Regra 9: as duas metades do 60 da lesson_16 cumpridas (aplicacao padrao Indice 1 + Feynman). Topico segue 80; fechar a licao exige transferencia, indice.json e os casos de empate e aninhado (Indices 2 e 3). | Encerrada em 18:50 a pedido do aluno (~65 min de 45).",
+      "evidence_ids": [
+        "evidence_logica-indice1-codigo-01",
+        "evidence_logica-feynman-indice-01"
+      ],
+      "difficulty": "medium",
+      "next_step": "Nova sessao da lesson_16: Indice 2 (licao -> sessoes, lesson_ids como lista: dado aninhado) e/ou Indice 3 (card -> historico, com maior/menor e regra de empate), so com o enunciado, gerando indice.json verificado com esperado a mao. Depois, a transferencia para o 80 em outro dominio (Python Lab 001/002/003/005 ou trabalho). Antes, uns 5 cards (git-log-intervalo-01 volta 29/10).",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        "flashcards.md",
+        "lessons/16-estruturas-dados.md",
+        "session-log.md",
+        "fora do estudo: E:/Lucas/Documents/segundo-cerebro/exercicios/indice_01.py (criado pelo aluno, sem commit)",
+        "fora do estudo: nota de sessao no cofre"
+      ]
     }
   ],
   "lessons": [
@@ -4540,7 +4622,8 @@
       "status": "in_progress",
       "session_ids": [
         "session_2026-10-24-lesson16-teoria-01",
-        "session_2026-10-25-lesson16-indice1-01"
+        "session_2026-10-25-lesson16-indice1-01",
+        "session_2026-10-28-lesson16-indice1-codigo-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -5824,6 +5907,33 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-10-27T21:02:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_c4b86c09-0bc5-4ad4-8cb7-625e61317ca0",
+      "session_id": "session_2026-10-28-lesson16-indice1-codigo-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-log-intervalo-01: git log --oneline origin/master..HEAD | resposta: 'mostra um historico dos commits, a primeira linha e o ultimo commit'. Descreveu o git log comum; nao disse o que o intervalo origin/master..HEAD filtra (commits locais que o remoto ainda nao tem). Incorreto.",
+      "outcome": "incorrect",
+      "support_level": 0,
+      "recorded_at": "2026-10-28T17:47:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_76cf68d0-eafc-4d84-bf49-461e22171b4a",
+      "session_id": "session_2026-10-28-lesson16-indice1-codigo-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-chaves-01: chaves do DictReader | resposta: 'vira os valores das chaves que corresponde ao cabecalho'. Ideia central certa (as chaves vem do cabecalho); redacao mistura chave e valor. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-28T17:49:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_5f319301-d24e-4cdf-8aeb-a40b07e4573c",
+      "session_id": "session_2026-10-28-lesson16-indice1-codigo-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-03: ultima linha x bloco acima | resposta: ultima linha 'informa um erro de excecao com Traceback' (vago: nao disse tipo + detalhe); bloco acima 'aonde o erro foi disparado, o que nem sempre e onde esta o erro' (correto, com nuance boa). Parcial.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-10-28T17:50:00-03:00"
     }
   ]
 }

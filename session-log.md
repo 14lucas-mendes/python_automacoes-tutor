@@ -4,6 +4,23 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-25-lesson16-indice1-01`, retomada em 2026-10-27
+
+- Retomada às 20:53, com 90 min pelo padrão; o aluno reduziu para 60. Concluída às 21:48.
+- **Cards (retrieval_first):**
+  - `fatiar-pop-01`: correto e completo, agora com o retorno do `pop`. Deslize: "itens à esquerda". Volta em 30/10.
+  - `tempos-01`: correto. Volta em 12/11.
+  - `tempos-02`: correto (antes, parcial). Volta em 12/11.
+- **Índice 1:**
+  - o aluno pediu o enunciado de novo, e ele foi reformulado (degrau 1, não tira a autonomia);
+  - decomposição v1 parcial (contra as regras 1 e 3; vazio devolvido se qualquer lista estivesse vazia);
+  - **conferência genérica pedida uma vez**;
+  - v2 correta, sem outra ajuda.
+  - A v2 mudou de estilo, e a pergunta neutra foi feita. Resposta: "Apenas usei uma IA para criar a edição do texto em markdown; os casos pensados são meus." Vale o declarado.
+- **Evidência:** `evidence_logica-indice1-decomposicao-01` (`supporting`, autônoma, correta). A decomposição sozinha não é a aplicação padrão.
+- **Regra 9:** na `lesson_16` ainda faltam as duas metades do 60, a aplicação padrão (falta o código) e a explicação Feynman. `topic_logica-algoritmos` segue em 80.
+- **Próximo passo:** o código do Índice 1 a partir da própria v2, com comentário, `assert`, execução e um Feynman curto.
+
 ## `session_2026-10-25-lesson16-indice1-01`
 
 - Status: **interrompida e retomável** (11:45–12:01, 30 min informados; o aluno encerrou por tempo). Skill `e87e2d7`, `theory_first` com Teoria já escrita.

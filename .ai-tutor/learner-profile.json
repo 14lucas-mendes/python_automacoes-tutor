@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 25,
-  "updated_at": "2026-10-24T13:32:00-03:00",
+  "revision": 26,
+  "updated_at": "2026-10-27T21:48:00-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -262,6 +262,16 @@
         "note": "Na checagem len({'Se','Se','Luz'}) deu o numero certo (2) por um raciocinio errado (contou os repetidos). Depois de uma explicacao curta com analogia (lista de presenca), acertou a variacao com o porque certo. Uma checagem com resultado coincidente nao mostrou o modelo mental; a variacao que separa os dois raciocinios mostrou."
       },
       "recorded_at": "2026-10-24T13:32:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_48aed119-b30c-488e-a406-53d4bfd887e6",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "strategy_outcome",
+      "value": {
+        "note": "So com a conferencia generica ('confira contra cada regra e exemplo'), achou e corrigiu sozinho tres violacoes das regras na propria decomposicao do Indice 1. Declarou usar uma IA apenas para formatar o texto em markdown."
+      },
+      "recorded_at": "2026-10-27T21:48:00-03:00"
     }
   ],
   "inferences": [],

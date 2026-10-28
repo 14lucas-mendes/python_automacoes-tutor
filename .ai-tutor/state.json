@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 319,
-  "updated_at": "2026-10-25T12:01:00-03:00",
+  "revision": 328,
+  "updated_at": "2026-10-27T21:48:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -334,7 +334,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-10-23",
+      "last_practice": "2026-10-27",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -352,7 +352,8 @@
         "evidence_logica-rastreio-execucao-01",
         "evidence_logica-transferencia-ordens-01",
         "evidence_logica-previsao-ordens-v2-01",
-        "evidence_logica-transferencia-filas-01"
+        "evidence_logica-transferencia-filas-01",
+        "evidence_logica-indice1-decomposicao-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2649,6 +2650,23 @@
       "topic_id": "topic_logica-algoritmos",
       "session_id": "session_2026-10-22-lesson15-transferencia-01",
       "recorded_at": "2026-10-23T15:45:00-03:00"
+    },
+    {
+      "evidence_id": "evidence_logica-indice1-decomposicao-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "kind": "supporting",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Indice 1 da lesson_16 (topico -> evidencias), so com o enunciado: decomposicao (entrada, regra, saida, exemplos com esperado a mao, plano). Ajuda dada: reformulacao do enunciado (degrau 1) e a conferencia generica uma vez. O aluno declarou ter usado uma IA so para formatar o texto em markdown; os casos sao dele.",
+      "recorded_at": "2026-10-27T21:46:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-25-lesson16-indice1-01",
+        "location": "decomposicao v1 e v2 coladas no chat em 2026-10-27"
+      },
+      "result": "correct",
+      "error": "v1 parcial: saida como lista de dicionarios; exemplos incluiam topic_react (contra a regra 3) e omitiam topic_sql (contra a regra 1); evidencias vazias -> [] e retorno imediato se qualquer lista vazia (contra a regra 1). Depois da conferencia generica, sem outra ajuda, v2 correta: dict topico -> lista, topic_sql: [], react fora, evidencias vazias com os topicos em lista vazia, caso de ordem ev_03 antes de ev_01, plano coerente. Decomposicao isolada e evidencia de apoio, nao a aplicacao padrao (falta o codigo)."
     }
   ],
   "sessions": [
@@ -3958,15 +3976,17 @@
     },
     {
       "session_id": "session_2026-10-25-lesson16-indice1-01",
-      "status": "interrupted",
+      "status": "completed",
       "transitions": [
         "in_progress",
-        "interrupted"
+        "interrupted",
+        "resumed",
+        "completed"
       ],
       "started_at": "2026-10-25T11:45:00-03:00",
-      "ended_at": null,
-      "resumable": true,
-      "time_budget_minutes": 30,
+      "ended_at": "2026-10-27T21:48:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
       "lesson_ids": [
         "lesson_16-estruturas-dados"
       ],
@@ -3984,17 +4004,19 @@
         "topic_label_visible": true,
         "reason": "Primeira pratica de tema recem-ensinado num unico topico; interleaving nao se aplica."
       },
-      "checkpoint": "Aberta em 2026-10-25T11:45 com 30 min (informado pelo aluno), skill e87e2d7, theory_first com Teoria ja escrita (24/10): retomar com recuperacao curta, sem reiniciar a aula. | 11:46-11:58 cards (retrieval_first): dictreader-fieldnames-02 correto (volta 01/11); next-default-01 correto e completo (volta 28/10); fatiar-pop-01 parcial: copia x original certo, mas 'nao tenho mais esse dado' (pop devolve o item; segunda vez sem o retorno; volta 26/10). | 11:58-12:00 recuperacao da teoria (retrieval_attempts): nomeou as 4 estruturas; lista e tupla certas; dicionario vago ('busca precisa'); conjunto nao lembrou: parcial. Tutor completou dicionario (procurar pela chave) e conjunto (presenca e tirar repetidos). | 12:00 enunciado do Indice 1 entregue e gravado na licao (topicos x evidencias, 4 regras). Interrompida em 12:01 a pedido do aluno (tempo esgotado), antes da decomposicao. Nenhuma tentativa do nucleo ainda: nada foi revelado alem do enunciado. Retomar pela decomposicao do Indice 1, sem andaime.",
-      "evidence_ids": [],
+      "checkpoint": "Aberta em 2026-10-25T11:45 com 30 min (informado pelo aluno), skill e87e2d7, theory_first com Teoria ja escrita (24/10): retomar com recuperacao curta, sem reiniciar a aula. | 11:46-11:58 cards (retrieval_first): dictreader-fieldnames-02 correto (volta 01/11); next-default-01 correto e completo (volta 28/10); fatiar-pop-01 parcial: copia x original certo, mas 'nao tenho mais esse dado' (pop devolve o item; segunda vez sem o retorno; volta 26/10). | 11:58-12:00 recuperacao da teoria (retrieval_attempts): nomeou as 4 estruturas; lista e tupla certas; dicionario vago ('busca precisa'); conjunto nao lembrou: parcial. Tutor completou dicionario (procurar pela chave) e conjunto (presenca e tirar repetidos). | 12:00 enunciado do Indice 1 entregue e gravado na licao (topicos x evidencias, 4 regras). Interrompida em 12:01 a pedido do aluno (tempo esgotado), antes da decomposicao. Nenhuma tentativa do nucleo ainda: nada foi revelado alem do enunciado. Retomar pela decomposicao do Indice 1, sem andaime. | Retomada em 2026-10-27T20:53 com 90 min (padrao; o aluno nao informou outro tempo). Cards antes do Indice 1, sem cards de condicionais/guarda para nao dar pista: fatiar-pop-01, git-log-intervalo-01, tempos-01, tempos-02, dictreader-chaves-01. Depois a decomposicao do Indice 1 so com o enunciado. | 20:54 o aluno reduziu a retomada para 60 min. | 20:55-21:46 cards: fatiar-pop-01 correto e completo (com o retorno do pop), tempos-01 correto, tempos-02 correto. Indice 1: pediu o enunciado de novo (reformulado, degrau 1). Decomposicao v1 parcial; conferencia generica pedida uma vez; v2 correta (mudou de estilo: pergunta neutra; declarou IA so para formatar o markdown, casos dele; vale o declarado). Registrada evidence_logica-indice1-decomposicao-01 (supporting). Proximo: codigo, asserts com os esperados dele e execucao. | Encerrada em 21:48 a pedido do aluno (~55 min de 60 nesta retomada). Decomposicao do Indice 1 correta (supporting); codigo, comentario de justificativa, asserts e execucao pendentes.",
+      "evidence_ids": [
+        "evidence_logica-indice1-decomposicao-01"
+      ],
       "difficulty": "medium",
-      "next_step": "Retomar esta sessao: Indice 1 so com o enunciado (lessons/16-estruturas-dados.md, secao Indice 1): decomposicao do aluno (entrada, regra, saida, exemplos com esperado a mao e casos-limite, plano), depois funcao, asserts e execucao. Antes, card fatiar-pop-01 (vence 26/10) e outros vencidos, uns 5.",
+      "next_step": "Nova sessao da lesson_16: implementar o Indice 1 a partir da propria decomposicao v2 (funcao, comentario justificando a estrutura, asserts com os esperados dele, execucao) num arquivo novo em segundo-cerebro/exercicios; depois Feynman curto. Antes, uns 5 cards vencidos (evitar cond-03 antes do codigo).",
       "files_changed": [
         ".ai-tutor/state.json",
         ".ai-tutor/cards.json",
         "flashcards.md",
         "lessons/16-estruturas-dados.md",
         "session-log.md",
-        "fora do estudo: nota de sessao no cofre"
+        "fora do estudo: notas de sessao no cofre"
       ]
     }
   ],
@@ -5775,6 +5797,33 @@
       "outcome": "partial",
       "support_level": 0,
       "recorded_at": "2026-10-25T12:00:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_27347cf4-88e3-465d-8d18-978b89ff440d",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_fatiar-pop-01: result[1:] x pop(0) (27/10) | resposta: fatia cria copia a partir do indice 1; pop modifica a original e DEVOLVE o item, que pode ser guardado. Correto e completo. Deslize: 'itens a esquerda a partir do indice 01' (sao os da direita; 'a partir do indice 1' esta certo).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-27T20:59:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_f4350beb-2d0b-4630-9cf0-b081d5d0510d",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-01: dois tipos de erro | resposta: 'erros de sintaxe: SyntaxError, e erros de excecao como TypeError'. Correto (nao disse quando cada um aparece; a frente nao pedia).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-27T21:01:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_9d995240-ff28-43dc-ac70-c86afceb2ed9",
+      "session_id": "session_2026-10-25-lesson16-indice1-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-02: sem cabecalho Traceback | resposta: 'o codigo nem chegou a rodar, em geral por erro de sintaxe'. Correto (antes: parcial).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-27T21:02:00-03:00"
     }
   ]
 }

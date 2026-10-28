@@ -249,6 +249,19 @@ Antes do código: entrada, regra, saída, exemplos com o esperado calculado a m�
 
 ## Progresso
 
+### Onde paramos (2026-10-27): decomposição do Índice 1 correta, código pendente
+
+- Retomada da sessão `session_2026-10-25-lesson16-indice1-01` (20:53–21:48), concluída.
+- Cards: fatia × `pop` (agora com o retorno do `pop`), os dois tipos de erro e o que prova a falta do `Traceback`. Os três certos.
+- **Índice 1, decomposição:**
+  - v1 parcial: saída como lista de dicionários, `topic_react` na saída, `topic_sql` ausente, e vazio devolvido se qualquer lista estivesse vazia;
+  - a conferência genérica foi pedida uma vez;
+  - v2 correta, sem outra ajuda: dicionário tópico → lista, `topic_sql: []`, `topic_react` fora, evidências vazias com os tópicos em listas vazias, e o caso de ordem `ev_03` antes de `ev_01`.
+  - O aluno declarou ter usado uma IA só para formatar o markdown; os casos são dele.
+- **Evidência:** `evidence_logica-indice1-decomposicao-01` (`supporting`). Ainda não é a aplicação padrão.
+- **Falta para a aplicação padrão:** a função, o comentário justificando a estrutura, os `assert` com os esperados da v2 e a execução.
+- **Falta para o 60:** também a explicação Feynman.
+
 ### Onde paramos (2026-10-25): Índice 1 entregue, sessão interrompida e retomável
 
 - Sessão `session_2026-10-25-lesson16-indice1-01` (30 min, interrompida às 12:01 a pedido do aluno, `resumable: true`).

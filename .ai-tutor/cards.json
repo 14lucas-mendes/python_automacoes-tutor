@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 75,
+  "revision": 80,
   "cards": [
     {
       "card_id": "card_tempos-01",
@@ -204,16 +204,16 @@
       "front": "Em `if nota >= 5: ... elif nota >= 9: ...`, por que 'louvor' nunca aparece? Qual a regra de ordem?",
       "back": "Toda nota >= 9 tambem e >= 5, entao a primeira condicao sempre ganha. Com condicoes sobrepostas, a mais especifica vem primeiro.",
       "created_at": "2026-10-01T20:13:06-03:00",
-      "updated_at": "2026-10-09T18:11:00-03:00",
-      "due_at": "2026-10-16",
+      "updated_at": "2026-10-29T21:27:00-03:00",
+      "due_at": "2026-11-14",
       "difficulty": "medium",
-      "spaced_repetition_step": 2,
-      "interval_days": 7,
-      "review_count": 3,
+      "spaced_repetition_step": 3,
+      "interval_days": 16,
+      "review_count": 4,
       "objective_correctness": true,
       "last_result": "correct",
       "confidence": null,
-      "status": "learning"
+      "status": "review"
     },
     {
       "card_id": "card_cond-03",
@@ -246,16 +246,16 @@
       "front": "Por que gravar o arquivo antes de verificar o resultado e um problema? Qual a ordem certa?",
       "back": "Se a verificacao falhar, o arquivo errado ja substituiu o bom. Ordem: tratar falhas -> transformar -> verificar -> so entao gravar (acao irreversivel por ultimo).",
       "created_at": "2026-10-01T20:13:06-03:00",
-      "updated_at": "2026-10-09T18:17:00-03:00",
-      "due_at": "2026-10-16",
+      "updated_at": "2026-10-29T21:28:00-03:00",
+      "due_at": "2026-11-14",
       "difficulty": "medium",
-      "spaced_repetition_step": 2,
-      "interval_days": 7,
-      "review_count": 3,
+      "spaced_repetition_step": 3,
+      "interval_days": 16,
+      "review_count": 4,
       "objective_correctness": true,
       "last_result": "correct",
       "confidence": null,
-      "status": "learning"
+      "status": "review"
     },
     {
       "card_id": "card_cond-05",
@@ -309,16 +309,16 @@
       "front": "Se voce passa fieldnames explicitamente para o DictReader, o que acontece com a primeira linha do arquivo?",
       "back": "Ela deixa de ser omitida: entra nos resultados como um registro, porque os nomes ja foram dados por voce.",
       "created_at": "2026-09-18T21:00:00-03:00",
-      "updated_at": "2026-10-23T14:20:00-03:00",
-      "due_at": "2026-10-24",
+      "updated_at": "2026-10-29T21:31:00-03:00",
+      "due_at": "2026-10-30",
       "difficulty": "medium",
       "spaced_repetition_step": 1,
       "interval_days": 1,
-      "review_count": 2,
+      "review_count": 3,
       "objective_correctness": false,
       "last_result": "incorrect",
       "confidence": null,
-      "status": "new"
+      "status": "review"
     },
     {
       "card_id": "card_dictreader-restval-01",
@@ -351,16 +351,16 @@
       "front": "Uma linha tem MAIS celulas que o cabecalho. Onde o excedente aparece no dicionario?",
       "back": "Numa chave literalmente chamada None, que e o restkey padrao, guardando a lista de excedentes.",
       "created_at": "2026-09-18T21:00:00-03:00",
-      "updated_at": "2026-10-23T14:24:00-03:00",
-      "due_at": "2026-10-24",
+      "updated_at": "2026-10-29T21:32:00-03:00",
+      "due_at": "2026-10-30",
       "difficulty": "hard",
       "spaced_repetition_step": 1,
       "interval_days": 1,
-      "review_count": 1,
+      "review_count": 2,
       "objective_correctness": false,
       "last_result": "incorrect",
       "confidence": null,
-      "status": "new"
+      "status": "review"
     },
     {
       "card_id": "card_reader-tipos-01",
@@ -604,14 +604,14 @@
       "front": "O que mostra git log --oneline origin/master..HEAD?",
       "back": "Os commits que estao no HEAD local e ainda nao estao em origin/master, ou seja, o que ainda nao subiu.",
       "created_at": "2026-10-07T23:40:00-03:00",
-      "updated_at": "2026-10-28T17:47:00-03:00",
-      "due_at": "2026-10-29",
+      "updated_at": "2026-10-29T21:26:00-03:00",
+      "due_at": "2026-11-05",
       "difficulty": "hard",
-      "spaced_repetition_step": 1,
-      "interval_days": 1,
-      "review_count": 1,
-      "objective_correctness": false,
-      "last_result": "incorrect",
+      "spaced_repetition_step": 2,
+      "interval_days": 7,
+      "review_count": 2,
+      "objective_correctness": true,
+      "last_result": "correct",
       "confidence": null,
       "status": "review"
     }

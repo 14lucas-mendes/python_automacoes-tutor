@@ -4,6 +4,24 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-29-lesson16-indice3-01`
+
+- Status: concluída (21:19–22:35, ~76 min de 60 informados). Skill `e87e2d7`. Modo `assessment`.
+- **Cards (retrieval_first):**
+  - `git-log-intervalo-01`: correto (incorreto em 28/10). Volta em 05/11.
+  - `cond-02`: correto. Volta em 14/11.
+  - `cond-04`: correto, com uma imprecisão. Volta em 14/11.
+  - `dictreader-fieldnames-01`: incorreto. A resposta saiu pela metade e foi refeita; descreveu o comportamento padrão. Volta em 30/10.
+  - `dictreader-restkey-01`: incorreto (confundiu com `restval`). Volta em 30/10.
+  - `cond-05` foi trocado para não dar pista da verificação do JSON.
+- **Índice 2 pulado** (repetiria o exemplo `por_parada` da teoria).
+- **Índice 3:** enunciado gravado na lição; decomposição entregue em 3 partes.
+  - Na v1 faltava o `indice.json`; a conferência genérica foi pedida uma vez; a v2 saiu completa.
+  - Declaração do aluno: "eu que fiz sozinho, apenas pedi para editar o formato do texto em markdown".
+  - `evidence_logica-indice3-decomposicao-01` (`supporting`).
+- **Regra 9:** o 60 da `lesson_16` já estava cumprido (28/10). Falta fechar a lição: o código do Índice 3 com o `indice.json`, e a transferência.
+- **Próximo passo:** o código do Índice 3.
+
 ## `session_2026-10-28-lesson16-indice1-codigo-01`
 
 - Status: concluída (17:45–18:50, ~65 min de 45 informados). Skill `e87e2d7`. Modo `assessment` para o Índice 1.

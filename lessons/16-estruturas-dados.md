@@ -218,6 +218,36 @@ Regras:
 
 Antes do código: entrada, regra, saída, exemplos com o esperado calculado a mão (incluindo casos-limite) e plano em português. Depois: a função, os `assert` com os seus esperados e uma execução.
 
+### Índice 3: card → resumo do histórico (enunciado entregue em 2026-10-29)
+
+O app precisa mostrar, para cada card, um resumo das revisões, e destacar o card com mais acertos.
+
+```python
+cards = [
+    {"card_id": "card_a", "revisoes": [
+        {"data": "2026-10-20", "resultado": "correct"},
+        {"data": "2026-10-27", "resultado": "correct"},
+        {"data": "2026-10-25", "resultado": "incorrect"},
+    ]},
+    {"card_id": "card_b", "revisoes": [
+        {"data": "2026-10-26", "resultado": "correct"},
+        {"data": "2026-10-22", "resultado": "correct"},
+    ]},
+    {"card_id": "card_c", "revisoes": []},
+]
+```
+
+Regras:
+
+1. Para **cada card**: quantas revisões teve, quantos acertos (`"correct"`) e a data da **última** revisão.
+2. "Última" é a **maior data**, não a que está no fim da lista: as revisões podem vir fora de ordem.
+3. Card sem revisões: 0 revisões, 0 acertos e última = `None`.
+4. Além disso, o **card com mais acertos**. Empate: fica o que aparece **primeiro** em `cards`. Sem nenhum card: `None`.
+5. O formato da saída é escolha sua, justificada num comentário.
+6. Grave o resultado num `indice.json` e verifique o arquivo **relido** contra o esperado calculado a mão.
+
+Antes do código: entrada, regra, saída, exemplos com o esperado a mão (casos-limite incluídos) e plano em português.
+
 ### Andaime (usar só se precisar)
 
 1. Reformular a pergunta do índice em português.
@@ -248,6 +278,20 @@ Antes do código: entrada, regra, saída, exemplos com o esperado calculado a m�
 - Diante de entrega parcial: uma vez por tarefa, "Confira sua solução contra cada regra e exemplo do enunciado." antes de qualquer devolutiva.
 
 ## Progresso
+
+### Onde paramos (2026-10-29): decomposição do Índice 3 correta, código pendente
+
+- Sessão `session_2026-10-29-lesson16-indice3-01` (21:19–22:35, ~76 min de 60), concluída.
+- Cards: `git log` com intervalo, ordem das condições e gravar por último certos. `fieldnames` explícito e `restkey` incorretos; voltam em 30/10.
+- **O Índice 2 foi pulado**, porque repetiria o exemplo `por_parada` da teoria. O Índice 3 cobre dados aninhados, contar, maior, empate e `indice.json`.
+- **Índice 3, decomposição:**
+  - a v1 não tinha a regra 6 (gravar o `indice.json` e verificar o arquivo relido);
+  - a conferência genérica foi pedida uma vez;
+  - a v2 saiu completa.
+  - Já estavam certos na v1: o formato justificado, a maior data, o card sem revisões, os cards vazios, o empate com `>` e o `melhor_acertos = -1`.
+  - O aluno declarou usar uma IA só para o formato.
+  - Evidência: `evidence_logica-indice3-decomposicao-01` (`supporting`).
+- **Falta para fechar a lição:** o código do Índice 3 com o `indice.json` verificado, e a transferência.
 
 ### Onde paramos (2026-10-28): Índice 1 no código e Feynman, as duas metades do 60
 

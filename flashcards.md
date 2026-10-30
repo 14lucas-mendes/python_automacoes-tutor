@@ -128,9 +128,9 @@
 - Tópico: `topic_python-fundamentos`
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
-- Status: `learning`
-- Próxima revisão: `2026-10-16`
-- Intervalo: `7 dias`
+- Status: `review`
+- Próxima revisão: `2026-11-14`
+- Intervalo: `16 dias`
 
 ## card_cond-03
 
@@ -154,9 +154,9 @@
 - Tópico: `topic_python-fundamentos`
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
-- Status: `learning`
-- Próxima revisão: `2026-10-16`
-- Intervalo: `7 dias`
+- Status: `review`
+- Próxima revisão: `2026-11-14`
+- Intervalo: `16 dias`
 
 ## card_cond-05
 
@@ -193,8 +193,8 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
-- Status: `new`
-- Próxima revisão: `2026-10-24`
+- Status: `review`
+- Próxima revisão: `2026-10-30`
 - Intervalo: `1 dias`
 
 ## card_dictreader-restval-01
@@ -219,8 +219,8 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
-- Status: `new`
-- Próxima revisão: `2026-10-24`
+- Status: `review`
+- Próxima revisão: `2026-10-30`
 - Intervalo: `1 dias`
 
 ## card_reader-tipos-01
@@ -376,5 +376,5 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-log`
 - Status: `review`
-- Próxima revisão: `2026-10-29`
-- Intervalo: `1 dias`
+- Próxima revisão: `2026-11-05`
+- Intervalo: `7 dias`

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 343,
-  "updated_at": "2026-10-29T22:35:00-03:00",
+  "revision": 353,
+  "updated_at": "2026-10-30T20:58:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -334,7 +334,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-10-29",
+      "last_practice": "2026-10-30",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -356,7 +356,8 @@
         "evidence_logica-indice1-decomposicao-01",
         "evidence_logica-indice1-codigo-01",
         "evidence_logica-feynman-indice-01",
-        "evidence_logica-indice3-decomposicao-01"
+        "evidence_logica-indice3-decomposicao-01",
+        "evidence_logica-indice3-codigo-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2721,6 +2722,23 @@
       },
       "result": "correct",
       "error": "v1 parcial: faltava a regra 6 do enunciado (gravar indice.json e verificar o arquivo relido contra o esperado), nas regras e no plano. Depois da conferencia generica, sem outra ajuda, v2 completa: regra 7 e passos 8-9 (json.dump, json.load, comparar com o esperado a mao). Resto correto ja na v1: formato justificado (dict com resumos por id + mais_acertos), maior data e nao a ultima posicao, card sem revisoes, cards vazia, empate com > (o primeiro fica), melhor_acertos = -1 para o primeiro card com 0 acertos virar lider. Decomposicao e apoio; falta o codigo."
+    },
+    {
+      "evidence_id": "evidence_logica-indice3-codigo-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-10-30-lesson16-indice3-codigo-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Indice 3 da lesson_16, em assessment, a partir da decomposicao v2 do aluno: resumo_revisoes(cards) sobre dados aninhados (lista de revisoes dentro de cada card): conta revisoes e acertos, maior data com ultima None ate a primeira, mais acertos com > e melhor_acertos = -1 (empate fica o primeiro), cards vazia; comentario do formato; indice.json gravado com json.dump, relido com json.load e comparado ao esperado a mao; asserts do caso normal (com empate), lista vazia e card sem revisoes. Pergunta neutra feita ('ficheiro', ensure_ascii, indent): o aluno declarou que nao usou ajuda e que ja usava esses parametros em aulas anteriores. Vale o declarado.",
+      "recorded_at": "2026-10-30T20:55:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-10-30-lesson16-indice3-codigo-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/resumo_revisoes.py (sha256 8f7a9392f00ab3e5...); saida 'Todos os testes passaram' (print do terminal do aluno); tutor rodou com python -I em pasta isolada e caso extra (empate entre y e z, fora de ordem): correto"
+      },
+      "result": "correct",
+      "error": "A entrega declarada pronta tinha o erro de digitacao 'as arquvo' (ValueError: I/O operation on closed file) e veio sem a saida do terminal; ao executar, pedido so como item da entrega, o aluno corrigiu sozinho. Opcional: if len(cards)==0 e redundante."
     }
   ],
   "sessions": [
@@ -4161,6 +4179,53 @@
         "session-log.md",
         "fora do estudo: nota de sessao no cofre"
       ]
+    },
+    {
+      "session_id": "session_2026-10-30-lesson16-indice3-codigo-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "interrupted",
+        "resumed",
+        "completed"
+      ],
+      "started_at": "2026-10-30T19:07:00-03:00",
+      "ended_at": "2026-10-30T20:58:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 90,
+      "lesson_ids": [
+        "lesson_16-estruturas-dados"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 5 cards vencidos (retrieval_first): dictreader-fieldnames-01, dictreader-restkey-01, dictreader-restval-01, git-diff-staged-01, git-log-oneline-01. (2) Codigo do Indice 3 a partir da decomposicao v2 (funcao, comentario do formato, indice.json gravado e relido, asserts). (3) Transferencia para o 80 da licao em outro dominio, se houver tempo.",
+      "cognitive_core": "Implementar sozinho o indice sobre dados aninhados (contar, maior data, mais acertos com empate) e verificar o indice.json relido; depois aplicar os padroes em outro dominio sem andaime.",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Fechamento da lesson_16 num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-10-30T19:07 com 90 min (informado pelo aluno), skill e87e2d7. Em segundo-cerebro/exercicios ja existem resumo_revisoes.md e .py (criados pelo aluno fora da sessao): tratar como entrega quando ele apresentar. | Cards: dictreader-fieldnames-01 correto (volta 06/11). 19:12 pausa de 30 min pedida pelo aluno, com dictreader-restkey-01 perguntado e sem resposta. Retomar por esse card. | Retomada em 20:08. | Cards: restkey, restval, git-diff-staged, git-log-oneline corretos (5 de 5). Indice 3 entregue; tutor rodou a versao salva e viu o ValueError do typo 'arquvo'; pediu so a execucao (item 5); aluno corrigiu e mandou o print. evidence_logica-indice3-codigo-01 registrada (application, autonoma, correta). Proximo: transferencia. | Transferencia tabela de um campeonato entregue e gravada na licao; sem tentativa ainda. Encerrada em 20:58 a pedido do aluno.",
+      "evidence_ids": [
+        "evidence_logica-indice3-codigo-01"
+      ],
+      "difficulty": "medium",
+      "next_step": "Nova sessao da lesson_16: transferencia tabela de um campeonato so com o enunciado, em formacao-python: decomposicao, funcao, comentario das estruturas, asserts, execucao. Correta e autonoma, fecha a lesson_16 (com o exame do pedido de unificar Claude Code e Harness previsto para esse fecho). Antes, uns 5 cards vencidos.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        "flashcards.md",
+        "lessons/16-estruturas-dados.md",
+        "session-log.md",
+        "fora do estudo: segundo-cerebro/exercicios/resumo_revisoes.py e indice.json (criados pelo aluno, sem commit)",
+        "fora do estudo: nota de sessao no cofre"
+      ]
     }
   ],
   "lessons": [
@@ -4685,7 +4750,8 @@
         "session_2026-10-24-lesson16-teoria-01",
         "session_2026-10-25-lesson16-indice1-01",
         "session_2026-10-28-lesson16-indice1-codigo-01",
-        "session_2026-10-29-lesson16-indice3-01"
+        "session_2026-10-29-lesson16-indice3-01",
+        "session_2026-10-30-lesson16-indice3-codigo-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -6041,6 +6107,51 @@
       "outcome": "incorrect",
       "support_level": 0,
       "recorded_at": "2026-10-29T21:32:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_1b4675af-789f-401a-8fb6-e80074e7aeab",
+      "session_id": "session_2026-10-30-lesson16-indice3-codigo-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-fieldnames-01: fieldnames explicito | resposta: a primeira linha (cabecalho) vira dado comum; o que passo em fieldnames vira chave. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-30T19:09:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_050c615b-c157-4e27-ad28-c3a1d4b53e45",
+      "session_id": "session_2026-10-30-lesson16-indice3-codigo-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-restkey-01: mais celulas que o cabecalho | resposta: 'o excedente e transferido para uma chave com None'. Correto (nao citou que vai numa lista).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-30T20:08:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_d346e7a8-a3f8-41b8-9762-838a70ff5cb9",
+      "session_id": "session_2026-10-30-lesson16-indice3-codigo-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-restval-01: menos celulas que o cabecalho | resposta: 'como valor para a chave ele recebe None'. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-30T20:09:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_7b7cab1c-e505-4d60-8801-8b0ba4899dea",
+      "session_id": "session_2026-10-30-lesson16-indice3-codigo-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-diff-staged-01: git diff x --staged | resposta: sem argumentos compara arvore de trabalho com o indice; --staged (= --cached) compara o indice com HEAD. Correto (antes: parcial).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-30T20:11:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_3ef713f4-56ea-4c4b-bf2a-1b133582efd9",
+      "session_id": "session_2026-10-30-lesson16-indice3-codigo-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-log-oneline-01: flag de uma linha | resposta: git log --oneline. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-10-30T20:13:00-03:00"
     }
   ]
 }

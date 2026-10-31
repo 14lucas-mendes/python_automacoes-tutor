@@ -248,6 +248,40 @@ Regras:
 
 Antes do código: entrada, regra, saída, exemplos com o esperado a mão (casos-limite incluídos) e plano em português.
 
+### Transferência para o 80: tabela de um campeonato (enunciado entregue em 2026-10-30)
+
+Contexto novo: não é o estudo. Um campeonato amador quer a tabela depois de algumas rodadas.
+
+```python
+times = ["Atlas", "Boreal", "Cometa", "Delta", "Estrela"]
+
+rodadas = [
+    {"rodada": 1, "partidas": [
+        {"mandante": "Atlas", "visitante": "Boreal", "gols_mandante": 2, "gols_visitante": 1},
+        {"mandante": "Cometa", "visitante": "Delta", "gols_mandante": 0, "gols_visitante": 0},
+    ]},
+    {"rodada": 2, "partidas": [
+        {"mandante": "Boreal", "visitante": "Cometa", "gols_mandante": 3, "gols_visitante": 0},
+        {"mandante": "Delta", "visitante": "Atlas", "gols_mandante": 1, "gols_visitante": 1},
+        {"mandante": "Cometa", "visitante": "Fênix", "gols_mandante": 2, "gols_visitante": 0},
+    ]},
+    {"rodada": 3, "partidas": [
+        {"mandante": "Boreal", "visitante": "Delta", "gols_mandante": 1, "gols_visitante": 1},
+    ]},
+]
+```
+
+Regras:
+
+1. Para **cada time** de `times`: jogos, pontos (vitória 3, empate 1, derrota 0) e gols marcados.
+2. **Todo time** de `times` aparece, mesmo sem nenhum jogo.
+3. Uma partida com algum time **fora** de `times` é ignorada **inteira**: não conta para ninguém.
+4. O **líder**: mais pontos. Empate: mais gols marcados. Empate de novo: o que aparece primeiro em `times`. Sem times: `None`.
+5. Os times que **não jogaram**, sem repetição e em ordem alfabética.
+6. O formato da saída é escolha sua. Num comentário, justifique **cada estrutura** que escolheu.
+
+Antes do código: entrada, regra, saída, exemplos com o esperado a mão (casos-limite incluídos) e plano em português. Depois: a função, os `assert` e uma execução. Sem andaime.
+
 ### Andaime (usar só se precisar)
 
 1. Reformular a pergunta do índice em português.
@@ -278,6 +312,18 @@ Antes do código: entrada, regra, saída, exemplos com o esperado a mão (casos-
 - Diante de entrega parcial: uma vez por tarefa, "Confira sua solução contra cada regra e exemplo do enunciado." antes de qualquer devolutiva.
 
 ## Progresso
+
+### Onde paramos (2026-10-30): Índice 3 no código, transferência entregue
+
+- Sessão `session_2026-10-30-lesson16-indice3-codigo-01`, concluída, com pausa de 19:12 a 20:08.
+- Cards: 5 de 5 certos, incluindo `fieldnames` explícito, `restkey` e `restval`.
+- **Índice 3, código** (`segundo-cerebro/exercicios/resumo_revisoes.py`, sha256 `8f7a9392…`):
+  - dados aninhados, contagem, maior data, mais acertos com empate e `indice.json` relido e comparado ao esperado;
+  - a versão declarada pronta tinha `as arquvo` (`ValueError`); ao executar, o aluno corrigiu sozinho;
+  - pergunta neutra feita: declarou que não usou ajuda, e o `ensure_ascii` está mesmo nos códigos dele da `formação_python`.
+  - Evidência: `evidence_logica-indice3-codigo-01` (`application`, autônoma, correta).
+- **Critérios de entrega:** `indice.json` verificado ✅, estruturas justificadas ✅, casos-limite ✅.
+- **Falta para fechar a lição:** só a **transferência**, "tabela de um campeonato" (enunciado no Plano de prática). Nenhuma tentativa ainda.
 
 ### Onde paramos (2026-10-29): decomposição do Índice 3 correta, código pendente
 

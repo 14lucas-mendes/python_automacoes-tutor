@@ -4,6 +4,18 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-30-lesson16-indice3-codigo-01`
+
+- Status: concluída. Trechos: 19:07–19:12 e 20:08–20:58 (pausa pedida pelo aluno). Skill `e87e2d7`. Modo `assessment`.
+- **Cards (retrieval_first), 5 de 5 certos:** `dictreader-fieldnames-01`, `dictreader-restkey-01`, `dictreader-restval-01`, `git-diff-staged-01` e `git-log-oneline-01`.
+- **Índice 3, código:** `segundo-cerebro/exercicios/resumo_revisoes.py`, com `indice.json` relido e comparado ao esperado.
+  - A versão salva tinha o erro `as arquvo`. O tutor pediu só o item 5 da entrega (a execução), sem apontar o erro; o aluno corrigiu e mandou o print do terminal.
+  - Pergunta neutra ("ficheiro", `ensure_ascii`, `indent`). Declaração: "Eu não usei." O `ensure_ascii` existe mesmo em `formação_python/src` (conferido). Vale o declarado.
+  - `evidence_logica-indice3-codigo-01`: aplicação autônoma e correta.
+- **Transferência:** "tabela de um campeonato" entregue e gravada na lição; sem tentativa ainda.
+- **Regra 9:** Feynman ✅, aplicação padrão ✅ e critérios de entrega ✅. Falta a transferência para fechar a `lesson_16`.
+- **Próximo passo:** a decomposição da transferência, sem andaime, em `formação_python`.
+
 ## `session_2026-10-29-lesson16-indice3-01`
 
 - Status: concluída (21:19–22:35, ~76 min de 60 informados). Skill `e87e2d7`. Modo `assessment`.

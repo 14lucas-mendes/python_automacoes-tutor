@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 27,
-  "updated_at": "2026-10-28T18:50:00-03:00",
+  "revision": 28,
+  "updated_at": "2026-10-30T20:58:00-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -283,6 +283,17 @@
         "note": "Implementou o Indice 1 a partir da propria decomposicao, sem ajuda e com os 5 asserts passando. Fez o Feynman ditando a uma IA que transcreveu e estruturou o texto (declarado); as respostas dos cards, digitadas, sao curtas e as vezes vagas."
       },
       "recorded_at": "2026-10-28T18:50:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_1f08bab4-c86d-4c3b-84ea-81061effe38f",
+      "session_id": "session_2026-10-30-lesson16-indice3-codigo-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Declarou o Indice 3 terminado com um erro de digitacao que so aparece ao executar; ao rodar para mandar a saida, corrigiu sozinho. Os cards do DictReader errados em 29/10 sairam certos no dia seguinte, depois da explicacao com o exemplo executado."
+      },
+      "recorded_at": "2026-10-30T20:58:00-03:00"
     }
   ],
   "inferences": [],

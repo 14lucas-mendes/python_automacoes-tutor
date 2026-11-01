@@ -64,8 +64,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-10-27`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-16`
+- Intervalo: `16 dias`
 
 ## card_tempos-06
 
@@ -167,9 +167,9 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
-- Status: `learning`
-- Próxima revisão: `2026-10-18`
-- Intervalo: `7 dias`
+- Status: `review`
+- Próxima revisão: `2026-11-16`
+- Intervalo: `16 dias`
 
 ## card_dictreader-chaves-01
 
@@ -284,9 +284,9 @@
 - Tópico: `topic_automacao-confiavel`
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-modules`
-- Status: `new`
-- Próxima revisão: `2026-10-26`
-- Intervalo: `3 dias`
+- Status: `review`
+- Próxima revisão: `2026-11-07`
+- Intervalo: `7 dias`
 
 ## card_print-return-01
 
@@ -323,9 +323,9 @@
 - Tópico: `topic_workflow-profissional`
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-remote`
-- Status: `new`
-- Próxima revisão: `2026-10-26`
-- Intervalo: `7 dias`
+- Status: `review`
+- Próxima revisão: `2026-11-16`
+- Intervalo: `16 dias`
 
 ## card_git-log-oneline-01
 
@@ -362,9 +362,9 @@
 - Tópico: `topic_workflow-profissional`
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-push`
-- Status: `new`
-- Próxima revisão: `2026-10-26`
-- Intervalo: `7 dias`
+- Status: `review`
+- Próxima revisão: `2026-11-16`
+- Intervalo: `16 dias`
 
 ## card_git-log-intervalo-01
 

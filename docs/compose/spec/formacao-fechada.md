@@ -188,6 +188,9 @@ Registrada em 2026-10-23 com a unificação (foco pedido pelo aluno em 19/10). *
 - MCP com servidor próprio;
 - avaliação e melhoria do harness em execução.
 
+- **Claude Code como ferramenta** (aceito em 2026-10-31): setup, contexto e sessões, custos, skills, hooks, worktrees e execução não interativa;
+- **Harness Engineering** como parte desta trilha, não só como referência.
+
 **Base:** o agente da `lesson_22` é a primeira versão do próprio harness. A pasta `E:\Lucas\Documents\Faculdade AI\harnnes-engeniring` é o **material de referência**, sem domínio nem evidência a migrar.
 
 **Por que não antes:** um agente é um programa que chama APIs, guarda estado, usa ferramentas e precisa ser testado e publicado. Os ciclos 8 a 13 dão essa base.

@@ -1,6 +1,6 @@
 # Pedido de mudança: unificar Claude Code e Harness Engineering nesta formação
 
-Status: **registrado em 2026-10-23, aguardando avaliação no fecho da `lesson_16-estruturas-dados`.**
+Status: **aceito em parte em 2026-10-31**, no fecho da `lesson_16`. Avaliação na seção 4 e aplicação na seção 5.
 
 Este pedido segue a regra de formação fechada ([`formacao-fechada.md`](formacao-fechada.md), seção 6, e `AGENTS.md`):
 1. o tutor cita a regra e registra o pedido;
@@ -41,3 +41,28 @@ Nas palavras do aluno (2026-10-23): "eu quero unificar todas as formações que 
 5. **Histórico:** antes de arquivar o `formacao-claude`, conferir a branch de trabalho e o estado no remoto.
 
 **Nota prévia do tutor, que ainda não é a decisão:** há sobreposição real, e as duas formações estão paradas, o que favorece unificar. O ponto sensível é **onde** o conteúdo exclusivo de Claude Code entra sem criar lição antes da `lesson_13`. Uma saída possível é usar o Claude Code como lente em lições existentes (`lesson_14`, `lesson_12` e `lesson_22`) e deixar o resto na trilha pós-MVP, ao lado do harness. A avaliação fica para o fecho da `lesson_16`.
+
+## 4. Avaliação no fecho da `lesson_16` (2026-10-31)
+
+**Recomendação: aceitar em parte, sem tocar nenhum item congelado.**
+
+1. **Itens congelados:** nenhuma lição ou tópico novo antes da `lesson_13`. O Claude Code entra como **lente dentro de lições existentes**:
+   - `lesson_14`: Git, PR e CI com o Claude Code como ferramenta;
+   - `lesson_12`: testes, debugging e CI;
+   - `lesson_22`: ferramentas, MCP, hooks e skills como exemplos de harness.
+2. **Conteúdo exclusivo** (setup, contexto e sessões, custos, skills, hooks, worktrees, execução não interativa) e **Harness Engineering:** vão para a trilha de especialização em agentes, depois da `lesson_13` (`formacao-fechada.md`, seção 8).
+3. **Carga:** continua uma só, 10 h por semana, sem somar as 4 h + 2 h.
+4. **Critérios de domínio:** continuam congelados até a `lesson_17`. Nada é importado.
+5. **Evidências:** nada a migrar (domínio 0 nas duas).
+6. **Histórico:** antes de arquivar o `formacao-claude`, o aluno confere a branch de trabalho e o estado no remoto. O arquivamento no GitHub é feito por ele.
+
+**Justificativa:** há sobreposição real, as duas formações estão paradas e o aluno quer um contexto só. Como lente, o pedido cabe na regra ("não toca item congelado") sem atrasar o MVP. Criar lições agora seria mudança estrutural sem bloqueio real.
+
+**Confirmação do aluno (2026-10-31):** "Aceitar e encerrar".
+
+## 5. Aplicação (2026-10-31)
+
+- `curriculum.md`: Claude Code como lente nas lições 14, 12 e 22, e o changelog.
+- `formacao-fechada.md`, seção 8: conteúdo exclusivo de Claude Code e Harness Engineering na trilha.
+- `AGENTS.md`: a seção "Engenharia de IA unificada" passa a incluir esta decisão.
+- **Pendente do aluno:** conferir a branch e o remoto do `formacao-claude` e arquivar no GitHub. A sessão interrompida daquele estudo fica sem continuidade.

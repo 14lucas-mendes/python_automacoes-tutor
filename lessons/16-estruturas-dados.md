@@ -1,6 +1,6 @@
 # Lição `lesson_16-estruturas-dados`
 
-**Status:** em andamento desde 2026-10-24 (`session_2026-10-24-lesson16-teoria-01`). Tópico: `topic_logica-algoritmos`. Ciclo 6 da formação fechada.
+**Status:** **concluída em 2026-10-31**, depois de aberta em 2026-10-24 (`session_2026-10-24-lesson16-teoria-01`). Tópico: `topic_logica-algoritmos`. Ciclo 6 da formação fechada.
 
 **Objetivo observável:** escolher e justificar lista, dicionário, tupla ou conjunto e aplicar sem ajuda os padrões acumular, contar, agrupar por chave, filtrar, buscar e maior/menor, inclusive em dados aninhados.
 
@@ -312,6 +312,15 @@ Antes do código: entrada, regra, saída, exemplos com o esperado a mão (casos-
 - Diante de entrega parcial: uma vez por tarefa, "Confira sua solução contra cada regra e exemplo do enunciado." antes de qualquer devolutiva.
 
 ## Progresso
+
+### Onde paramos (2026-10-31): transferência correta, lição concluída
+
+- Sessão `session_2026-10-31-lesson16-transferencia-01`.
+- Cards: 5 de 5 certos.
+- **Transferência** (`formação_python/src/modulo-04/`, `README.md` e `tabela_campeonato.py`, sha256 `5c68783d…`): decomposição com o esperado por partida, `montar_tabela` com dados aninhados, partida de fora ignorada, líder com dois critérios de empate, `nao_jogaram` em ordem alfabética e estruturas justificadas. 5 `assert` passam; três casos extras do tutor corretos. O aluno declarou que a resolução é dele e que a IA só formatou o texto.
+- Evidência: `evidence_logica-transferencia-campeonato-01` (`transfer: true`).
+- **Lacuna do material:** `O(1)` e `O(n)` aparecem nos comentários, e o aluno as chamou de "buscas logarítmicas". Ponto fraco `weak_notacao-custo-big-o`, a ensinar na `lesson_17`.
+- **Regra 9:** Feynman ✅, aplicação padrão ✅, transferência ✅ e critérios de entrega ✅. Lição concluída; o tópico segue em 80.
 
 ### Onde paramos (2026-10-30): Índice 3 no código, transferência entregue
 

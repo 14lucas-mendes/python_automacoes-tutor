@@ -49,6 +49,7 @@ Notas:
 - A partir da `lesson_14`, toda fatia entra por feature branch e PR para `develop`. No fim de cada ciclo, um PR de `develop` para `main` publica uma release com tag.
 - `lesson_09-manutencao-sonhar` foi **arquivada** em 2026-10-08. Ela nunca teve sessão.
 - `lesson_15-logica-decomposicao` foi **concluída** em 2026-10-23, com `topic_logica-algoritmos` em 80. A próxima é a `lesson_16-estruturas-dados`.
+- `lesson_16-estruturas-dados` foi **concluída** em 2026-10-31. A próxima é a `lesson_17-algoritmos-debugging`.
 
 ## IA aplicada: conteúdo unificado e lente agêntica (decisão do aluno, 2026-10-23)
 
@@ -76,6 +77,8 @@ Depois do pedido de unificação aceito no fecho da `lesson_15` (`docs/compose/s
 - orquestração e subagentes **só como explicação**, porque a regra 9 do MVP os deixa fora.
 
 **Lente das três lições:** o modelo recebe tokens e devolve tokens; o resto é harness. Em cada entrega, o aluno classifica o que é do modelo e o que é do código.
+
+**Claude Code como lente (decisão do aluno, 2026-10-31):** entra nas lições existentes, sem lição nova: `lesson_14` (Git, PR e CI), `lesson_12` (testes, debugging e CI) e `lesson_22` (ferramentas, MCP, hooks e skills). Ver `pedido-unificacao-claude-code-harness.md`.
 
 **Depois da `lesson_13`:** uma trilha de especialização em agentes, registrada como continuação prevista na seção 8 do `formacao-fechada.md`. A pasta `harnnes-engeniring` é o material de referência dela.
 
@@ -126,5 +129,6 @@ Projetos anteriores arquivados, sem perda de histórico:
   - 2026-10-06: bloco de lógica (`bloco-logica-roadmap.md`);
   - 2026-10-08: formação fechada (`formacao-fechada.md`);
   - 2026-10-23: Engenharia de IA unificada dentro das lições 20, 21, 22 e 12, com lente agêntica (`pedido-unificacao-engenharia-ia.md`).
+  - 2026-10-31: Claude Code como lente nas lições 14, 12 e 22; exclusivo de Claude Code e Harness na trilha depois da `lesson_13` (`pedido-unificacao-claude-code-harness.md`).
 
 <!-- IDs, evidências, sessões e critérios canônicos estão em .ai-tutor/state.json. -->

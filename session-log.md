@@ -4,6 +4,20 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-10-31-lesson16-transferencia-01`
+
+- Status: concluída (19:46–21:16, ~90 min de 60 informados). Skill `e87e2d7`. Modo `assessment`.
+- **Cards (retrieval_first), 5 de 5 certos:** `cond-05`, `main-guard-01`, `git-remote-v-01`, `git-push-u-01` e `tempos-05`.
+- **Transferência "tabela de um campeonato"** (`formação_python/src/modulo-04/`):
+  - decomposição em `README.md`, entregue em duas partes (faltavam exemplos e plano; pedidos só como itens do enunciado), com esperados conferindo com o gabarito do tutor;
+  - `tabela_campeonato.py`: 5 `assert` passam; três casos extras corretos;
+  - pergunta neutra (`O(1)`, formato). Declaração: "a resolução é minha, a formatação do texto é usando IA". Vale o declarado.
+  - `evidence_logica-transferencia-campeonato-01`: `application`, autônoma, correta, `transfer: true`.
+- **Lacuna:** "O1 e On são buscas logarítmicas" está incorreto. Conteúdo ainda não ensinado: `weak_notacao-custo-big-o` (`conceptual`), sem nota baixa (regra 3).
+- **`lesson_16` CONCLUÍDA.** Regra 9: Feynman ✅, aplicação padrão ✅, transferência ✅ e critérios de entrega ✅. `topic_logica-algoritmos` segue em 80; o 100 será reavaliado no fecho da `lesson_17`.
+- **Pedido de unificação (Claude Code e Harness):** avaliado e **aceito em parte** pelo aluno. Claude Code como lente nas lições 14, 12 e 22; o resto na trilha depois da `lesson_13`. Pendente do aluno: arquivar o `formacao-claude`.
+- **Próximo passo:** abrir a `lesson_17-algoritmos-debugging` com a teoria completa.
+
 ## `session_2026-10-30-lesson16-indice3-codigo-01`
 
 - Status: concluída. Trechos: 19:07–19:12 e 20:08–20:58 (pausa pedida pelo aluno). Skill `e87e2d7`. Modo `assessment`.

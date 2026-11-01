@@ -119,6 +119,7 @@ O pedido de 15/10, complementado em 19/10, foi avaliado no fecho da `lesson_15` 
   - `harnnes-engeniring` é só material de referência.
   - Nada migra como evidência ou domínio.
 - **Os módulos de IA entram dentro das lições 20, 21, 22 e 12,** como capacidades observáveis do app. A `lesson_22` é o núcleo agêntico. Os IDs, a ordem, o MVP, a stack e a carga não mudam. O mapeamento está no `curriculum.md`.
+- **Claude Code e Harness Engineering (aceito em parte em 2026-10-31):** Claude Code entra como lente nas lições 14, 12 e 22, sem lição nova. O conteúdo exclusivo dele e o Harness ficam na trilha abaixo. `formacao-claude` será arquivada pelo aluno, depois de conferir a branch e o remoto. Ver `docs/compose/spec/pedido-unificacao-claude-code-harness.md`.
 - **A trilha de especialização em agentes** é continuação prevista **depois da `lesson_13`** (`formacao-fechada.md`, seção 8). Criar lição nova para ela antes disso é mudança estrutural.
 - **O pedido sobre o estágio continua separado.** Ele só é aberto quando a stack do estágio for confirmada.
 

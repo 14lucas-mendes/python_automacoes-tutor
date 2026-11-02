@@ -4,6 +4,22 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-02-lesson17-teoria-01`
+
+- Status: concluída (18:22–18:58, ~36 min de 45 informados). Skill `e87e2d7`. Modo `learning`. Encerrada a pedido do aluno.
+- **Cards (retrieval_first), 5 de 5 certos:** `cond-03`, `tempos-06`, `tempos-07`, `reader-tipos-01` e `print-return-01`.
+  - `cond-03`: `if len(lista) == 0`, guarda do caso vazio, forma inversa do verso do card. Correto. Volta em 18/11.
+  - `print-return-01`: correto, com duas imprecisões de redação: "serve apenas para debug" e "guarda o resultado". Volta em 09/11.
+- **`lesson_17` aberta (`theory_first`, tema novo):** `lessons/17-algoritmos-debugging.md`, com a teoria da parte 1: custo em passos (constante, linear, logarítmico) e busca linear × binária. O código da busca binária ficou de fora de propósito: é a tarefa da prática.
+- **Fontes novas:** `source_python-time-complexity` e `source_python-bisect`, conferidas em 02/11.
+- **Checagens (não são evidência):**
+  - linear de 1.000 para 2.000 itens: certo;
+  - rastreio do 46 em `precos`: certo, em 3 passos;
+  - lista fora de ordem: viu o desvio para o lado errado, usou `fim` = 5 (a quantidade, não a última posição) e sugeriu olhar a posição vizinha. Os dois pontos foram ensinados;
+  - binária de 1.000 para 2.000 itens: 10 → 11 passos, justificado por "mais uma divisão". Certo.
+- **Regra 9:** nenhum elemento do 60 ou do 80 da `lesson_17` foi cumprido. Evidência: nenhuma. `weak_notacao-custo-big-o` segue ativo; a saída vem na prática. `topic_logica-algoritmos` segue em 80.
+- **Próximo passo:** uns 5 cards vencidos, recuperação curta da parte 1, depois decompor e implementar a busca binária só com o enunciado, contando passos e comparando com a busca linear.
+
 ## `session_2026-10-31-lesson16-transferencia-01`
 
 - Status: concluída (19:46–21:16, ~90 min de 60 informados). Skill `e87e2d7`. Modo `assessment`.

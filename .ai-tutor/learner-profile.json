@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 29,
-  "updated_at": "2026-10-31T21:16:00-03:00",
+  "revision": 30,
+  "updated_at": "2026-11-02T18:57:57-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -305,6 +305,17 @@
         "note": "Transferencia do campeonato feita sozinho em contexto novo, com esperados a mao certos ja na primeira versao. Usa IA para formatar textos e comentarios (declarado); isso pode trazer termos que ele ainda nao domina, como O(1) e O(n)."
       },
       "recorded_at": "2026-10-31T21:16:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_e2b495f3-b94d-4f34-8a2d-4bb2836e2ebd",
+      "session_id": "session_2026-11-02-lesson17-teoria-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Nas checagens da teoria de custo, rastreou a busca binaria sozinho e justificou 10 para 11 passos com uma divisao a mais. Na lista fora de ordem viu o desvio para o lado errado, mas propos olhar a posicao vizinha e usou a quantidade de itens como fim."
+      },
+      "recorded_at": "2026-11-02T18:57:57-03:00"
     }
   ],
   "inferences": [],

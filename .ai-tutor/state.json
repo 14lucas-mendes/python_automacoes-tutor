@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 361,
-  "updated_at": "2026-10-31T21:16:00-03:00",
+  "revision": 371,
+  "updated_at": "2026-11-02T18:57:57-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -4293,6 +4293,50 @@
         "fora do estudo: formacao_python/src/modulo-04 (aluno, sem commit)",
         "fora do estudo: diario, MOC e nota de sessao no cofre"
       ]
+    },
+    {
+      "session_id": "session_2026-11-02-lesson17-teoria-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-11-02T18:22:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 45,
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 5 cards vencidos (retrieval_first): cond-03, tempos-06, tempos-07, reader-tipos-01, print-return-01. (2) Abrir a lesson_17 com a teoria (theory_first, tema novo), parte 1: custo em passos (constante, linear, logaritmico) e busca linear x binaria. Com 45 min, a pratica e as demais partes (ordenacao, recursao, debugging por hipotese) ficam para as sessoes seguintes da mesma licao.",
+      "cognitive_core": "Na pratica (proxima sessao): implementar busca binaria e comparar passos. Nesta sessao, so a teoria e as checagens (nao sao evidencia).",
+      "mode": "learning",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Aquisicao de tema novo num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-11-02T18:22 com 45 min (informado pelo aluno), skill e87e2d7, theory_first. Tema novo: lesson_17 sem arquivo de licao nem teoria escrita. | 18:24-18:33 cards 5 de 5 corretos (cond-03, tempos-06, tempos-07, reader-tipos-01, print-return-01). print-return com duas imprecisoes de redacao ('apenas para debug', 'guarda o resultado'). | Teoria parte 1 escrita na licao; fontes source_python-time-complexity e source_python-bisect registradas. | Teoria parte 1 dada em dois blocos, com 4 checagens (nao sao evidencia): linear 1.000 para 2.000 certo; rastreio de 46 certo; lista fora de ordem: viu que a busca vai para o lado errado, usou fim = 5 (quantidade, nao ultima posicao) e sugeriu olhar uma posicao ao lado, ambos ensinados; binaria 10 para 11 passos certo, com justificativa de uma divisao a mais. | Encerrada a pedido do aluno, dentro dos 45 min. Regra 9: nenhum elemento do 60/80 da lesson_17 cumprido ainda (so checagens, que nao sao evidencia). Teoria da parte 1 escrita; pratica pendente. Sem andaime usado; ultimo comportamento do aluno: rastreio manual correto da busca binaria.",
+      "evidence_ids": [],
+      "ended_at": "2026-11-02T18:57:57-03:00",
+      "difficulty": "medium",
+      "next_step": "Nova sessao da lesson_17: uns 5 cards vencidos, recuperacao curta da teoria da parte 1 (retrieval_first, antes de reexplicar), depois decompor e implementar a busca binaria so com o enunciado, com contagem de passos e comparacao com a busca linear, sobre datas do estudo ficticio. Teoria pendente: ordenacao, recursao e debugging por hipotese.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/sources.json",
+        ".ai-tutor/learner-profile.json",
+        "flashcards.md",
+        "curriculum.md",
+        "lessons/17-algoritmos-debugging.md",
+        "session-log.md",
+        "fora do estudo: nota de sessao no cofre"
+      ]
     }
   ],
   "lessons": [
@@ -4849,8 +4893,10 @@
       "prerequisite_lesson_ids": [
         "lesson_16-estruturas-dados"
       ],
-      "status": "planned",
-      "session_ids": [],
+      "status": "in_progress",
+      "session_ids": [
+        "session_2026-11-02-lesson17-teoria-01"
+      ],
       "required_evidence_types": [
         "feynman",
         "application",
@@ -4869,7 +4915,8 @@
         "expected_transfer": "diagnosticar sozinho defeito em codigo alheio (Python Lab 004/008)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro."
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente.",
+      "file": "lessons/17-algoritmos-debugging.md"
     },
     {
       "lesson_id": "lesson_19-python-intermediario",
@@ -6277,6 +6324,51 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-10-31T19:56:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_bf3f3938-8ec0-4ea1-91ce-8cd7da4198e8",
+      "session_id": "session_2026-11-02-lesson17-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_cond-03: lista[0] | resposta: garantir que a lista nao esta vazia; condicao if len(lista) == 0 (guarda do caso vazio, forma inversa do verso). Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-02T18:25:32-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_9da247ab-fbfb-443d-8faa-b408dbc00384",
+      "session_id": "session_2026-11-02-lesson17-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-06: funcao sem return | resposta: devolve None. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-02T18:28:57-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_fbfaa016-8f4d-4814-b260-4ff6613a1dba",
+      "session_id": "session_2026-11-02-lesson17-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-07: None concatenado com texto | resposta: gera TypeError, erro de tipo. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-02T18:30:01-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_5eb8df72-4adf-4cdf-a8fa-9c3a587dbbb6",
+      "session_id": "session_2026-11-02-lesson17-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_reader-tipos-01: leitor de CSV e '4.5' | resposta: nao converte, a conversao e manual. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-02T18:30:41-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_5ba21f83-fd4c-492a-8872-ae83ce44095c",
+      "session_id": "session_2026-11-02-lesson17-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_print-return-01: print x return | resposta: print so imprime no console e nao da para pegar o resultado da impressao. Correto, com duas imprecisoes de redacao: 'serve apenas para debug' e 'guarda o resultado' (print nao guarda nada).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-02T18:32:30-03:00"
     }
   ]
 }

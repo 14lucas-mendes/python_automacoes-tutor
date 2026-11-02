@@ -50,6 +50,7 @@ Notas:
 - `lesson_09-manutencao-sonhar` foi **arquivada** em 2026-10-08. Ela nunca teve sessão.
 - `lesson_15-logica-decomposicao` foi **concluída** em 2026-10-23, com `topic_logica-algoritmos` em 80. A próxima é a `lesson_16-estruturas-dados`.
 - `lesson_16-estruturas-dados` foi **concluída** em 2026-10-31. A próxima é a `lesson_17-algoritmos-debugging`.
+- `lesson_17-algoritmos-debugging` foi **aberta** em 2026-11-02: teoria da parte 1 escrita, prática pendente.
 
 ## IA aplicada: conteúdo unificado e lente agêntica (decisão do aluno, 2026-10-23)
 

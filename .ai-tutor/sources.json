@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 7,
+  "revision": 8,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -312,7 +312,39 @@
         "topic_automacao-confiavel"
       ],
       "authority_reason": "Referencia oficial da linguagem: assert expr1, expr2 equivale a 'if not expr1: raise AssertionError(expr2)' (com __debug__ verdadeiro; desligado com -O)."
+    },
+    {
+      "source_id": "source_python-time-complexity",
+      "title": "Time complexity of operations on built-in types (Python Documentation)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/builtins/time-complexity.html",
+      "publication_date": null,
+      "accessed_at": "2026-11-02",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "authority_reason": "Documentacao oficial do Python."
+    },
+    {
+      "source_id": "source_python-bisect",
+      "title": "bisect - Array bisection algorithm (Biblioteca padrao)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/library/bisect.html",
+      "publication_date": null,
+      "accessed_at": "2026-11-02",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "authority_reason": "Documentacao oficial do Python."
     }
   ],
-  "updated_at": "2026-10-11T20:05:00-03:00"
+  "updated_at": "2026-11-02T18:40:00-03:00"
 }

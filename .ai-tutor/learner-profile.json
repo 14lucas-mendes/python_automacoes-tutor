@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 30,
-  "updated_at": "2026-11-02T18:57:57-03:00",
+  "revision": 31,
+  "updated_at": "2026-11-04T19:39:38-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -316,6 +316,17 @@
         "note": "Nas checagens da teoria de custo, rastreou a busca binaria sozinho e justificou 10 para 11 passos com uma divisao a mais. Na lista fora de ordem viu o desvio para o lado errado, mas propos olhar a posicao vizinha e usou a quantidade de itens como fim."
       },
       "recorded_at": "2026-11-02T18:57:57-03:00"
+    },
+    {
+      "observation_id": "profile_observation_d8e7f73d-10f4-49fe-8bca-d9e13959af8e",
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Busca binaria feita sozinho na primeira entrega, decomposicao e codigo juntos, com rastreio a mao de casos-limite alem dos pedidos. Na recuperacao da teoria, de inicio, lembrou linear e logaritmico, mas nao o custo constante."
+      },
+      "recorded_at": "2026-11-04T19:39:38-03:00"
     }
   ],
   "inferences": [],

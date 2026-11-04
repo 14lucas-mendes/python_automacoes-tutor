@@ -51,8 +51,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-10-29`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-20`
+- Intervalo: `16 dias`
 
 ## card_tempos-05
 
@@ -116,8 +116,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
 - Status: `learning`
-- Próxima revisão: `2026-10-30`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-20`
+- Intervalo: `16 dias`
 
 ## card_cond-02
 
@@ -259,8 +259,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-builtins`, `source_python-csv-module`
 - Status: `review`
-- Próxima revisão: `2026-10-28`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-11-11`
+- Intervalo: `7 dias`
 
 ## card_fatiar-pop-01
 
@@ -272,8 +272,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-datastructures`
 - Status: `review`
-- Próxima revisão: `2026-10-30`
-- Intervalo: `3 dias`
+- Próxima revisão: `2026-11-11`
+- Intervalo: `7 dias`
 
 ## card_main-guard-01
 
@@ -311,8 +311,8 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-remote`
 - Status: `new`
-- Próxima revisão: `2026-10-29`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-20`
+- Intervalo: `16 dias`
 
 ## card_git-remote-v-01
 

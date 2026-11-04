@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 371,
-  "updated_at": "2026-11-02T18:57:57-03:00",
+  "revision": 383,
+  "updated_at": "2026-11-04T19:39:38-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -334,7 +334,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-10-31",
+      "last_practice": "2026-11-04",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -358,7 +358,8 @@
         "evidence_logica-feynman-indice-01",
         "evidence_logica-indice3-decomposicao-01",
         "evidence_logica-indice3-codigo-01",
-        "evidence_logica-transferencia-campeonato-01"
+        "evidence_logica-transferencia-campeonato-01",
+        "evidence_logica-busca-binaria-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2757,6 +2758,23 @@
       },
       "result": "correct",
       "error": "Opcional: laco do lider pode comecar no segundo time. Conceito fora do taught: comentario usa O(1)/O(n) e o aluno chamou de 'buscas logaritmicas' (incorreto; lacuna do material, ensinar na lesson_17, weak_notacao-custo-big-o)."
+    },
+    {
+      "evidence_id": "evidence_logica-busca-binaria-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Tarefa 1 da lesson_17 (sessao por data), so com o enunciado: decomposicao em exe_04.md com rastreio a mao de cada caso-limite, busca binaria busca_data e busca linear em exe_04.py (segundo-cerebro/exercicios), asserts com esperados a mao, comparacao de passos lado a lado e comentario sobre a lista ordenada. Cobre a parte de busca do objetivo da licao; ordenacao, recursao e debugging por hipotese ainda nao. Ajuda: so o esclarecimento do enunciado (linear em outra funcao, mesmo arquivo). Declaracao do aluno: ideia e conteudo dele, IA so na formatacao do texto (vale o declarado; a notacao tuple[str | None, int] veio dessa formatacao).",
+      "recorded_at": "2026-11-04T19:38:00-03:00",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-04-lesson17-busca-binaria-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/exe_04.py (sha256 4d91ca158060f9b8...) e exe_04.md (sha256 93c09006a2bc12ae...); tutor rodou python exe_04.py: 'Todos os testes passaram' e a comparacao impressa; esperados conferidos com o gabarito do tutor"
+      },
+      "result": "correct",
+      "error": "Nenhum erro. Opcional: os dois if (chute > data, chute < data) sao exclusivos e caberiam num elif; o passos += 1 repetido nos tres ramos pode ficar uma vez logo depois de calcular o meio; o len(lista) == 0 da linear e redundante, porque o for nao roda com lista vazia."
     }
   ],
   "sessions": [
@@ -4337,6 +4355,51 @@
         "session-log.md",
         "fora do estudo: nota de sessao no cofre"
       ]
+    },
+    {
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-11-04T18:22:00-03:00",
+      "ended_at": "2026-11-04T19:39:38-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 5 cards vencidos (retrieval_first): next-default-01, tempos-04, git-remote-familia-01, cond-01, fatiar-pop-01. (2) Recuperacao curta da teoria da parte 1 da lesson_17 antes de reexplicar. (3) Busca binaria so com o enunciado, sobre datas do estudo ficticio: decomposicao (entrada, regra, saida, exemplos com esperado a mao, casos-limite, plano) e, se houver tempo, o codigo com contagem de passos.",
+      "cognitive_core": "Decompor e implementar sozinho a busca binaria (marcadores inicio/fim/meio, parada, alvo ausente) com contagem de passos, e comparar com a busca linear.",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Pratica de tema novo num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-11-04T18:22 com 60 min (informado pelo aluno), skill e87e2d7, theory_first com Teoria da parte 1 escrita em 02/11. Pratica em assessment: so o enunciado; uma conferencia generica antes de qualquer devolutiva se sair parcial. | 18:23-18:31 cards 5 de 5 corretos (next-default-01, tempos-04, git-remote-familia-01 com a segunda parte pedida, cond-01, fatiar-pop-01). | Recuperacao da teoria parcial (retrieval registrado): linear certo com contagem; logaritmico certo na ideia, sem contagem; constante nao lembrou; sem exemplos. Reexplicados constante e a contagem 10 -> 11. | Tarefa 1 (sessao por data) entregue e gravada na licao; gabarito do tutor calculado a parte. | 18:37 o aluno perguntou se a linear ficava na mesma funcao: esclarecido pelo enunciado (mesmo arquivo, outra funcao; regra 2 devolve so os passos da binaria). Ajuda que nao tira autonomia (reformular a tarefa). | 19:34 entregues exe_04.md (sha256 93c09006...) e exe_04.py (sha256 4d91ca15...) em segundo-cerebro/exercicios: decomposicao com rastreios a mao e codigo; tutor rodou: todos os asserts passam, 10 casos da binaria e 10 da linear conferem com o gabarito do tutor; comparacao impressa lado a lado; comentario da ordenacao presente. Pergunta neutra sobre o processo antes de registrar a evidencia. | Resposta neutra: ideia e contexto dele, IA so na formatacao. evidence_logica-busca-binaria-01 registrada: application, autonoma, correta (parte de busca da licao). Regra 9: busca binaria implementada e testada com comparacao de passos cumprida; faltam ordenacao, dois defeitos com hipotese, Feynman e transferencia da lesson_17. | Encerrada a pedido do aluno (~75 min de 60). Ultimo comportamento do aluno: busca binaria autonoma e correta; sem andaime. Sem bloqueio aberto.",
+      "evidence_ids": [
+        "evidence_logica-busca-binaria-01"
+      ],
+      "difficulty": "medium",
+      "next_step": "Nova sessao da lesson_17: uns 5 cards vencidos, recuperacao curta (custo constante incluido, weak_notacao-custo-big-o), depois a teoria da parte 2 (ordenacao por selecao e sorted/key) com checagens; a pratica de ordenacao em seguida. Restam tambem recursao/dividir para conquistar e debugging por hipotese.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        "flashcards.md",
+        "lessons/17-algoritmos-debugging.md",
+        "session-log.md",
+        "fora do estudo: segundo-cerebro/exercicios/exe_04.md e exe_04.py (aluno, sem commit)",
+        "fora do estudo: nota de sessao no cofre"
+      ]
     }
   ],
   "lessons": [
@@ -4895,7 +4958,8 @@
       ],
       "status": "in_progress",
       "session_ids": [
-        "session_2026-11-02-lesson17-teoria-01"
+        "session_2026-11-02-lesson17-teoria-01",
+        "session_2026-11-04-lesson17-busca-binaria-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -4915,7 +4979,7 @@
         "expected_transfer": "diagnosticar sozinho defeito em codigo alheio (Python Lab 004/008)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente.",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia.",
       "file": "lessons/17-algoritmos-debugging.md"
     },
     {
@@ -6369,6 +6433,60 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-11-02T18:32:30-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_6c5c97a9-6a74-4f8c-ab2e-ab637f37eeff",
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_next-default-01: next(leitor) em arquivo vazio | resposta: sem valor padrao levanta StopIteration; com valor padrao None, devolve None e o codigo continua. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-04T18:23:59-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_b5ad41e9-eb48-4508-8c8e-3b7af5933566",
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-04: NameError | resposta: o nome usado (variavel, funcao, classe) nao foi atribuido ou criado naquele ponto do codigo. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-04T18:24:47-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_f59e5d7b-4c2b-4a04-ab84-0f3d7bf94684",
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-remote-familia-01: git remote add x set-url | resposta: git remote add origin <url> cria; depois de pedida a segunda parte do card, git remote set-url <nome-do-remote> <nova-URL> corrige. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-04T18:26:39-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_b22798b1-f4ca-4693-adac-d3d29aeb92f4",
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_cond-01: if separados x if/elif | resposta: juntas -> ifs separados; uma ou outra -> if/elif. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-04T18:27:59-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_bc5f7857-3fa4-4d99-9227-0906f580247c",
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_fatiar-pop-01: result[1:] x result.pop(0) | resposta: pop modifica a lista original e devolve o primeiro item; o fatiamento cria uma copia nova com os itens pedidos. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-04T18:30:34-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_812e479d-4b1f-4c2a-939f-bc54bb584c5d",
+      "session_id": "session_2026-11-04-lesson17-busca-binaria-01",
+      "topic_id": "topic_logica-algoritmos",
+      "prompt": "Recuperacao da teoria parte 1 (lesson_17): diferenca entre custo constante, linear e logaritmico, com exemplo Python e passos de 1.000 para 2.000 itens | resposta: linear certo com contagem (1.000 -> 2.000 passos); logaritmico certo na ideia (divide, cresce menos que os dados), sem a contagem 10 -> 11 e sem exemplo; constante nao lembrou; nenhum exemplo de Python. Parcial.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-11-04T18:33:22-03:00"
     }
   ]
 }

@@ -173,12 +173,52 @@ Na `lesson_16`, você escolheu dicionário e conjunto sem medir o custo. Agora d
 Comece a sessão seguinte com uma recuperação curta da teoria da parte 1, antes de qualquer código.
 
 - **Núcleo cognitivo:** decompor e implementar sozinho a busca binária, contar os passos e comparar com a busca linear.
-- **Tarefa independente:** enunciado entregue no início da prática, com dados do estudo fictício, diferente dos exemplos da teoria.
+
+### Tarefa 1: sessão por data (enunciado entregue em 2026-11-04)
+
+O app precisa achar a sessão de um dia. As sessões do estudo fictício já vêm **ordenadas por data**, sem datas repetidas:
+
+```python
+sessoes = [
+    {"session_id": "s01", "data": "2026-10-01"},
+    {"session_id": "s02", "data": "2026-10-04"},
+    {"session_id": "s03", "data": "2026-10-09"},
+    {"session_id": "s04", "data": "2026-10-12"},
+    {"session_id": "s05", "data": "2026-10-18"},
+    {"session_id": "s06", "data": "2026-10-23"},
+    {"session_id": "s07", "data": "2026-10-30"},
+    {"session_id": "s08", "data": "2026-11-02"},
+]
+```
+
+Regras:
+
+1. Uma função recebe a lista e uma data e faz **busca binária** pelo campo `"data"`.
+2. Ela devolve uma tupla `(session_id, passos)`. Sem sessão naquela data: `(None, passos)`.
+3. `passos` é quantas sessões a busca **olhou**. O meio é sempre `(inicio + fim) // 2`, como na teoria.
+4. Lista vazia: `(None, 0)`.
+5. Para as **mesmas** datas buscadas, conte também os passos de uma busca linear e mostre os dois lado a lado.
+6. Um comentário curto no código diz por que essa função só funciona com a lista ordenada.
+7. `assert` com os esperados calculados **à mão**: uma data que existe e casos-limite (primeira, última, antes de todas, entre duas, depois de todas, lista vazia).
+
+Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos-limite incluídos) e plano em português, num `.md` em `segundo-cerebro/exercicios/`.
 - **Próximas partes da teoria:** ordenação por seleção e `sorted`/`key`; recursão e dividir para conquistar; debugging por hipótese.
 - **Critérios de entrega da lição:** busca binária e ordenação implementadas e testadas com valor esperado; dois defeitos diagnosticados com hipótese escrita antes da correção; comparação de passos explicada.
 - **Saída de `weak_notacao-custo-big-o`:** explicar corretamente, com contagem de passos, a diferença entre custo constante, linear e logarítmico.
 
 ## Progresso
+
+### Onde paramos (2026-11-04): busca binária autônoma e correta
+
+- **Sessão:** `session_2026-11-04-lesson17-busca-binaria-01`, 18:22–19:37 (cerca de 75 min de 60).
+- **Cards:** 5 de 5 certos.
+- **Recuperação da parte 1:** parcial. Lembrou o custo linear com a contagem e a ideia do logarítmico, sem a conta. Não lembrou o constante. Os dois foram reexplicados.
+- **Tarefa 1 (sessão por data):** `segundo-cerebro/exercicios/exe_04.md` e `exe_04.py`. Decomposição com o rastreio à mão dos casos-limite, busca binária e linear, `assert` e comparação lado a lado. Todos passam e conferem com o gabarito do tutor. A IA só formatou o texto (declarado).
+  - `evidence_logica-busca-binaria-01`: aplicação autônoma e correta da parte de busca.
+  - Melhorias opcionais: `elif` nos dois ramos exclusivos, um só `passos += 1` e o `if` redundante da linear.
+- **Regra 9:** busca binária implementada e testada, com a comparação de passos ✅. Faltam: ordenação, dois defeitos com hipótese, Feynman e transferência.
+- **`weak_notacao-custo-big-o`:** continua ativo.
+- **Próximo:** teoria da parte 2 (ordenação por seleção, `sorted` e `key`).
 
 ### Onde paramos (2026-11-02): teoria da parte 1 aberta, prática pendente
 

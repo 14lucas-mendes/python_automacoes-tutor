@@ -4,6 +4,19 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-04-lesson17-busca-binaria-01`
+
+- Status: concluída (18:22–19:37, ~75 min de 60 informados). Skill `e87e2d7`. Modo `assessment`. Encerrada a pedido do aluno.
+- **Cards (retrieval_first), 5 de 5 certos:** `next-default-01`, `tempos-04`, `git-remote-familia-01` (segunda parte pedida), `cond-01` e `fatiar-pop-01`.
+- **Recuperação da teoria da parte 1:** parcial (registrada em `retrieval_attempts`). Linear certo, com a contagem; logarítmico certo na ideia, sem a conta 10 → 11; o constante não lembrou; nenhum exemplo de Python. Reexplicados o constante e a contagem.
+- **Tarefa 1, sessão por data:** enunciado gravado na lição. Pergunta do aluno sobre onde fica a linear, respondida pelo enunciado (mesmo arquivo, outra função). Essa ajuda não tira a autonomia.
+  - Entrega em `segundo-cerebro/exercicios/`: `exe_04.md` (decomposição com rastreio à mão de cada caso-limite, mais o caso de um item só) e `exe_04.py`.
+  - O tutor rodou: todos os `assert` passam, os 20 esperados conferem com o gabarito e a comparação aparece lado a lado.
+  - Pergunta neutra. Declaração: "a ideia, o contexto é meu. A formatação veio de IA". Vale o declarado.
+  - `evidence_logica-busca-binaria-01`: `application`, autônoma, correta. Opcionais: `elif`, um só `passos += 1` e o `if` redundante da linear.
+- **Regra 9:** busca binária implementada e testada, com comparação de passos ✅. Faltam: ordenação, dois defeitos com hipótese, Feynman e transferência. `topic_logica-algoritmos` segue em 80. `weak_notacao-custo-big-o` segue ativo.
+- **Próximo passo:** teoria da parte 2 (ordenação por seleção, `sorted` e `key`), depois a prática.
+
 ## `session_2026-11-02-lesson17-teoria-01`
 
 - Status: concluída (18:22–18:58, ~36 min de 45 informados). Skill `e87e2d7`. Modo `learning`. Encerrada a pedido do aluno.

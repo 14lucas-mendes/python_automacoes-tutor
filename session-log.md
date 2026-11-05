@@ -4,6 +4,20 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-05-lesson17-ordenacao-teoria-01`
+
+- Status: concluída (19:25–20:05, dentro dos 45 min informados). Skill `e87e2d7`. Modo `learning`. Encerrada a pedido do aluno.
+- **Cards (retrieval_first):** `dictreader-fieldnames-02`, `git-diff-staged-01` (segunda parte pedida), `dictreader-chaves-01` e `tempos-08` certos. `tempos-03` saiu **parcial** de novo: faltou o detalhe da última linha. Explicado com a multa de trânsito (tipo × detalhe); volta em 12/11.
+- **Recuperação do custo constante:** correta (1 passo, por chave ou posição, igual com 1.000 ou 2.000 itens). Não é evidência; `weak_notacao-custo-big-o` segue ativo.
+- **Teoria da parte 2 (`theory_first`, tema novo):** ordenação por seleção, custo quadrático, `sorted` × `.sort()`, `key`, `reverse`, `lambda` e estabilidade. Escrita na lição; fonte `source_python-sorting-howto`, conferida em 05/11.
+- **Checagens (não são evidência):**
+  - rastreio: pediu explicação mais simples; com a primeira volta feita junto, fez as outras sozinho;
+  - quadrático: disse "o dobro" (9.900); ensinado que quadruplica (19.900) e completou certo depois;
+  - `.sort()`: previu a saída de `sorted`; ensinado; a nova previsão saiu certa;
+  - `"10"` × `"9"`: não soube; ensinado.
+- **Regra 9:** só a busca binária da `lesson_17` está cumprida. Faltam ordenação, dois defeitos com hipótese, Feynman e transferência.
+- **Próximo passo:** recuperação curta da parte 2 e a Tarefa 2 (ordenação), só com o enunciado.
+
 ## `session_2026-11-04-lesson17-busca-binaria-01`
 
 - Status: concluída (18:22–19:37, ~75 min de 60 informados). Skill `e87e2d7`. Modo `assessment`. Encerrada a pedido do aluno.

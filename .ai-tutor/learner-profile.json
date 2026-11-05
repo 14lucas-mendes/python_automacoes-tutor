@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 31,
-  "updated_at": "2026-11-04T19:39:38-03:00",
+  "revision": 32,
+  "updated_at": "2026-11-05T20:04:54-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -327,6 +327,17 @@
         "note": "Busca binaria feita sozinho na primeira entrega, decomposicao e codigo juntos, com rastreio a mao de casos-limite alem dos pedidos. Na recuperacao da teoria, de inicio, lembrou linear e logaritmico, mas nao o custo constante."
       },
       "recorded_at": "2026-11-04T19:39:38-03:00"
+    },
+    {
+      "observation_id": "profile_observation_4aee4e7d-e7a8-4df3-9011-1ba67dcdf825",
+      "session_id": "session_2026-11-05-lesson17-ordenacao-teoria-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "help_usage",
+      "value": {
+        "help_level": 1,
+        "note": "Checagem da teoria (nao e evidencia): pediu explicacao mais simples do que fazer no rastreio; o tutor reformulou e demonstrou a primeira volta, e ele fez as outras sozinho e certo. Nas previsoes, trocou sort por sorted e disse que o quadratico dobra; acertou a nova previsao logo depois da explicacao."
+      },
+      "recorded_at": "2026-11-05T20:04:54-03:00"
     }
   ],
   "inferences": [],

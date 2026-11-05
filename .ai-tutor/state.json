@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 383,
-  "updated_at": "2026-11-04T19:39:38-03:00",
+  "revision": 393,
+  "updated_at": "2026-11-05T20:04:54-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -4400,6 +4400,49 @@
         "fora do estudo: segundo-cerebro/exercicios/exe_04.md e exe_04.py (aluno, sem commit)",
         "fora do estudo: nota de sessao no cofre"
       ]
+    },
+    {
+      "session_id": "session_2026-11-05-lesson17-ordenacao-teoria-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-11-05T19:25:00-03:00",
+      "ended_at": "2026-11-05T20:04:54-03:00",
+      "resumable": false,
+      "time_budget_minutes": 45,
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 5 cards vencidos (retrieval_first): dictreader-fieldnames-02, git-diff-staged-01, tempos-03, dictreader-chaves-01, tempos-08. (2) Recuperacao curta do custo constante (weak_notacao-custo-big-o) antes de reexplicar. (3) Teoria da parte 2 da lesson_17 (theory_first, tema novo): ordenacao por selecao, custo quadratico, sorted e key, com checagens. A pratica de ordenacao fica para a sessao seguinte.",
+      "cognitive_core": "Na pratica (proxima sessao): implementar uma ordenacao simples e comparar passos; usar sorted/key. Nesta sessao, so a teoria e as checagens (nao sao evidencia).",
+      "mode": "learning",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Aquisicao de tema novo num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-11-05T19:25 com 45 min (informado pelo aluno), skill e87e2d7, theory_first. Parte 2 (ordenacao) e tema novo: ainda sem teoria escrita. | 19:26-19:38 cards: dictreader-fieldnames-02, git-diff-staged-01 (segunda parte pedida), dictreader-chaves-01, tempos-08 corretos; tempos-03 parcial de novo (faltou o detalhe da ultima linha), explicado com a multa de transito. | Recuperacao do custo constante correta (1 passo por chave ou posicao, igual com 1.000 ou 2.000). | Teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key/reverse/lambda, estabilidade) escrita na licao; fonte source_python-sorting-howto. | Teoria parte 2 dada em 4 blocos; checagens (nao sao evidencia): pediu explicacao mais simples da checagem 1 (tutor fez a 1a volta junto); voltas 2 e 3 de [4, 9, 2, 7] certas sozinho. Checagem 2: disse que 200 itens dobram (9.900); ensinado que quadruplica (19.900, dobro de voltas x dobro de cada volta); depois completou certo. Checagem 3: previu [3, 7, 9], [7, 3, 9] (confundiu sort com sorted); ensinado; nova previsao com cidades certa. Checagem 4 (texto \"10\" x \"9\"): nao soube; ensinado (comparacao caractere a caractere, key=int). | Encerrada a pedido do aluno, dentro dos 45 min. Regra 9: so a busca binaria da lesson_17 cumprida; checagens nao sao evidencia. Teoria da parte 2 escrita e dada; pratica de ordenacao pendente.",
+      "evidence_ids": [],
+      "difficulty": "medium",
+      "next_step": "Nova sessao da lesson_17: uns 5 cards vencidos, recuperacao curta da parte 2 (quadratico: dobrar quadruplica; sort x sorted; texto x numero), depois a Tarefa 2 de ordenacao so com o enunciado (selecao implementada com contagem de comparacoes e sorted/key nos dados do estudo ficticio). Restam recursao/dividir para conquistar e debugging por hipotese.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/sources.json",
+        ".ai-tutor/learner-profile.json",
+        "flashcards.md",
+        "lessons/17-algoritmos-debugging.md",
+        "session-log.md",
+        "fora do estudo: nota de sessao no cofre"
+      ]
     }
   ],
   "lessons": [
@@ -4959,7 +5002,8 @@
       "status": "in_progress",
       "session_ids": [
         "session_2026-11-02-lesson17-teoria-01",
-        "session_2026-11-04-lesson17-busca-binaria-01"
+        "session_2026-11-04-lesson17-busca-binaria-01",
+        "session_2026-11-05-lesson17-ordenacao-teoria-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -4979,7 +5023,7 @@
         "expected_transfer": "diagnosticar sozinho defeito em codigo alheio (Python Lab 004/008)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia.",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente.",
       "file": "lessons/17-algoritmos-debugging.md"
     },
     {
@@ -6487,6 +6531,60 @@
       "outcome": "partial",
       "support_level": 0,
       "recorded_at": "2026-11-04T18:33:22-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_6694f622-b321-42b2-b290-2e2e2eab714c",
+      "session_id": "session_2026-11-05-lesson17-ordenacao-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-fieldnames-02: fieldnames | resposta: atributo fieldnames; num arquivo vazio vale None. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-05T19:27:58-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_20888441-ad67-44f9-ba10-9cd67ede3d43",
+      "session_id": "session_2026-11-05-lesson17-ordenacao-teoria-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-diff-staged-01: git diff x --staged | resposta: sem argumentos, o que mudou e ainda nao passou por git add; depois de pedida a segunda parte, --staged mostra o que entra no proximo commit. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-05T19:29:41-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_286c5036-10cc-4901-ae26-f4388359e668",
+      "session_id": "session_2026-11-05-lesson17-ordenacao-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-03: ultima linha x bloco acima | resposta: ultima linha informa o tipo de erro ('se e de sintaxe ou de excecao'); acima, o traceback com as linhas onde o erro foi sinalizado. Parcial: bloco acima certo; na ultima linha faltou o detalhe (mensagem depois dos dois-pontos), de novo.",
+      "outcome": "partial",
+      "support_level": 0,
+      "recorded_at": "2026-11-05T19:31:12-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_f4239151-c92b-4790-b65a-df7d8b6c1422",
+      "session_id": "session_2026-11-05-lesson17-ordenacao-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_dictreader-chaves-01: DictReader chaves | resposta: os titulos da primeira linha viram as chaves; as linhas abaixo, os valores. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-05T19:36:04-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_e9b6f1dc-0f9c-417a-b3b0-b1a0675bb41d",
+      "session_id": "session_2026-11-05-lesson17-ordenacao-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-08: linha do traceback x defeito | resposta: nao necessariamente; a linha so aponta onde o erro foi disparado. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-05T19:38:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_aa25593b-9218-4968-8e53-f4ebe4cf7f40",
+      "session_id": "session_2026-11-05-lesson17-ordenacao-teoria-01",
+      "topic_id": "topic_logica-algoritmos",
+      "prompt": "Recuperacao do custo constante (weak_notacao-custo-big-o) | resposta: sempre o mesmo, 1 passo, porque busca por chave ou posicao especifica; com 1.000 ou 2.000 itens os passos sao os mesmos. Correto (exemplo dado em palavras: chave ou posicao, sem codigo).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-05T19:40:03-03:00"
     }
   ]
 }

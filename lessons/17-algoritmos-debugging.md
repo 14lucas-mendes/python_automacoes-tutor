@@ -168,6 +168,149 @@ As sessões do estudo fictício têm datas como `"2026-10-31"`. Nesse formato (a
 
 Na `lesson_16`, você escolheu dicionário e conjunto sem medir o custo. Agora dá para explicar a escolha em passos: chave exata pede dicionário; "a partir de tal data" pede lista ordenada.
 
+### Parte 2: ordenação
+
+> Escrita em 2026-11-05 (`session_2026-11-05-lesson17-ordenacao-teoria-01`). Material do tutor: não é evidência. Os exemplos usam cartas, números soltos e produtos de papelaria, para não entregar a tarefa do projeto.
+>
+> Fonte verificada: Python Documentation, [Sorting Techniques](https://docs.python.org/3/howto/sorting.html) (`source_python-sorting-howto`).
+
+### Problema e porquê
+
+A busca binária só funciona com a lista **ordenada**, mas os dados quase nunca chegam assim. No Índice 3, as revisões vinham fora de ordem. Muita pergunta do dia a dia também depende de ordem: "os 5 cards mais atrasados", "o produto mais barato", "o ranking do campeonato".
+
+**Ordenar** é rearranjar os itens de uma lista segundo um critério: do menor para o maior (**ordem crescente**) ou do maior para o menor (**ordem decrescente**).
+
+### Como funciona: ordenação por seleção
+
+Pense em cartas viradas para cima na mesa. Você **seleciona** a menor, põe na ponta esquerda, e repete com as que sobraram. Daí o nome: **ordenação por seleção**.
+
+A lista fica dividida em duas partes:
+
+- o **trecho ordenado**, à esquerda, que cresce uma posição a cada rodada;
+- o **trecho não ordenado**, à direita, onde se procura o menor.
+
+Em cada rodada:
+
+1. percorra o trecho não ordenado e ache a posição do menor;
+2. **troque** esse menor com o primeiro item do trecho não ordenado;
+3. agora o trecho ordenado tem um item a mais.
+
+Rastreio de `[5, 2, 9, 1, 6]`:
+
+| Rodada | Trecho não ordenado | Menor | Troca | Lista depois | Comparações |
+|---|---|---|---|---|---:|
+| 1 | posições 0–4: 5, 2, 9, 1, 6 | 1 (posição 3) | posições 0 e 3 | `[1, 2, 9, 5, 6]` | 4 |
+| 2 | posições 1–4: 2, 9, 5, 6 | 2 (posição 1) | consigo mesmo | `[1, 2, 9, 5, 6]` | 3 |
+| 3 | posições 2–4: 9, 5, 6 | 5 (posição 3) | posições 2 e 3 | `[1, 2, 5, 9, 6]` | 2 |
+| 4 | posições 3–4: 9, 6 | 6 (posição 4) | posições 3 e 4 | `[1, 2, 5, 6, 9]` | 1 |
+
+Com 5 itens bastam 4 rodadas: quando sobra um item só, ele já está no lugar.
+
+**Trocar dois valores** em Python cabe numa linha: `a, b = b, a`. O lado direito monta a tupla `(b, a)` antes, e o lado esquerdo desempacota nela. Com `a = 1` e `b = 2`, depois da troca `a` vale 2 e `b` vale 1.
+
+O código da ordenação por seleção **não** aparece aqui de propósito: transformar esse rastreio em função é tarefa da prática.
+
+### Custo: quadrático
+
+Conte as comparações do rastreio: 4 + 3 + 2 + 1 = 10. Com `n` itens, a soma é `(n - 1) + (n - 2) + ... + 1`, que dá `n × (n − 1) / 2`.
+
+| Itens (`n`) | Comparações da seleção |
+|---:|---:|
+| 10 | 45 |
+| 100 | 4.950 |
+| 200 | 19.900 |
+| 1.000 | 499.500 |
+| 2.000 | 1.999.000 |
+
+Dobrar os dados **quadruplica** o trabalho, mais ou menos. Esse crescimento se chama **quadrático**, `O(n²)`: um laço que percorre a lista dentro de outro laço que também percorre a lista.
+
+| Custo | Notação | Dobrar os dados faz o trabalho... |
+|---|---|---|
+| constante | `O(1)` | ficar igual |
+| logarítmico | `O(log n)` | ganhar 1 passo |
+| linear | `O(n)` | dobrar |
+| quadrático | `O(n²)` | quadruplicar |
+
+### Vocabulário
+
+- **Ordenar:** rearranjar segundo um critério.
+- **Ordem crescente / decrescente:** do menor para o maior / do maior para o menor.
+- **Ordenação por seleção:** a cada rodada, achar o menor do trecho não ordenado e trocá-lo com o primeiro desse trecho.
+- **Trocar (`a, b = b, a`):** um valor vai para o lugar do outro.
+- **Quadrático, `O(n²)`:** dobrar os dados quadruplica o trabalho.
+- **`sorted(lista)`:** devolve uma lista **nova**, ordenada, e deixa a original intacta.
+- **`lista.sort()`:** ordena a própria lista (mutação) e devolve `None`.
+- **`key`:** função que recebe um item e devolve o valor usado na comparação.
+- **`reverse=True`:** ordem decrescente.
+- **`lambda`:** uma função curta, sem nome, escrita numa linha só. `lambda p: p["preco"]` faz o mesmo que um `def` que recebe `p` e devolve `p["preco"]`.
+- **Ordenação estável:** itens com a mesma chave mantêm a ordem em que estavam. O `sorted` do Python é estável, inclusive com `reverse=True`.
+
+### Exemplo básico: `sorted` e `.sort()`
+
+```python
+notas = [7, 3, 9]
+print(sorted(notas))   # [3, 7, 9]   (lista nova)
+print(notas)           # [7, 3, 9]   (original intacta)
+
+resultado = notas.sort()
+print(resultado)       # None        (sort não devolve a lista)
+print(notas)           # [3, 7, 9]   (a própria lista mudou)
+```
+
+É a mesma diferença do card de fatiar × `pop`: `sorted` cria uma cópia; `.sort()` mexe na original.
+
+### Exemplo aprofundado: `key`, `reverse` e empate
+
+```python
+produtos = [
+    {"nome": "caderno", "preco": 12.5},
+    {"nome": "caneta", "preco": 3.0},
+    {"nome": "mochila", "preco": 89.9},
+    {"nome": "lápis", "preco": 3.0},
+    {"nome": "régua", "preco": 5.5},
+]
+
+def pelo_preco(produto):
+    return produto["preco"]
+
+baratos = sorted(produtos, key=pelo_preco)
+# caneta, lápis, régua, caderno, mochila
+
+caros = sorted(produtos, key=pelo_preco, reverse=True)
+# mochila, caderno, régua, caneta, lápis
+
+por_nome = sorted(produtos, key=lambda p: p["nome"])
+# caderno, caneta, lápis, mochila, régua
+```
+
+1. Sem `key`, o Python não sabe comparar dois dicionários: `sorted(produtos)` levanta `TypeError: '<' not supported between instances of 'dict' and 'dict'`.
+2. `key=pelo_preco` entrega a **função**, sem parênteses. O `sorted` a chama uma vez para cada produto e compara os preços.
+3. Caneta e lápis custam 3.0. Como a ordenação é estável, a caneta, que vinha antes na lista original, continua antes, também com `reverse=True`.
+4. `lambda p: p["nome"]` é a mesma ideia do `def`, em uma linha.
+
+### Erros comuns e limites
+
+- **`lista = lista.sort()`:** a lista vira `None`, porque `.sort()` não devolve nada. É o mesmo problema da função sem `return`.
+- **Chamar a função na `key`:** `key=pelo_preco()` executa a função na hora, sem argumento, e dá `TypeError: pelo_preco() missing 1 required positional argument`. O certo é `key=pelo_preco`.
+- **Número guardado como texto:** `sorted(["10", "9", "100"])` dá `['10', '100', '9']`. Texto é comparado caractere por caractere, e `"1"` vem antes de `"9"`. Converta com `int()` ou use `key=int`.
+- **Datas:** no formato `"AAAA-MM-DD"`, a ordem do texto é a ordem do tempo. Em `"05/11/2026"`, não é.
+- **A seleção é lenta para listas grandes:** `O(n²)`. Na vida real, use `sorted`, que usa um algoritmo bem mais rápido. Aqui você implementa a seleção para entender o mecanismo e contar passos.
+
+### Checagens de entendimento
+
+Não são evidência.
+
+1. Rastreie a ordenação por seleção em `[4, 9, 2, 7]`: a lista depois de cada rodada e o total de comparações.
+2. Com 100 itens, a seleção faz 4.950 comparações. Com 200, quantas, mais ou menos, e por quê?
+3. Preveja a saída: `notas = [7, 3, 9]`, `resultado = notas.sort()`, `print(resultado, notas)`.
+4. Por que `sorted(["10", "9", "100"])` não dá `['9', '10', '100']`?
+
+### Ponte para o projeto
+
+As sessões e revisões do estudo fictício nem sempre chegam em ordem. Para usar a busca binária da Tarefa 1, primeiro se ordena a lista por data, com `key`. Ordena-se **uma vez**, e depois se fazem muitas buscas baratas.
+
+A revisão de cards de cada sessão faz exatamente isso: ordena os cards vencidos pela data (`due_at`) e pega os 5 mais atrasados.
+
 ## Plano de prática
 
 Comece a sessão seguinte com uma recuperação curta da teoria da parte 1, antes de qualquer código.
@@ -207,6 +350,18 @@ Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos
 - **Saída de `weak_notacao-custo-big-o`:** explicar corretamente, com contagem de passos, a diferença entre custo constante, linear e logarítmico.
 
 ## Progresso
+
+### Onde paramos (2026-11-05): teoria da parte 2 dada, prática de ordenação pendente
+
+- **Sessão:** `session_2026-11-05-lesson17-ordenacao-teoria-01`, 19:25–20:05, dentro dos 45 min.
+- **Cards:** 4 certos; `tempos-03` parcial de novo, porque faltou o detalhe da última linha.
+- **Recuperação:** custo constante correto (`weak_notacao-custo-big-o` continua ativo até uma evidência).
+- **Teoria da parte 2:** dada em quatro blocos. Checagens (não são evidência):
+  - rastreio de `[4, 9, 2, 7]`: pediu uma explicação mais simples; com a primeira volta feita junto, fez as outras sozinho e certo;
+  - 200 itens: disse que dobrava (9.900). Ensinado que quadruplica (19.900), e depois completou a tabela certo;
+  - `notas.sort()`: previu a saída de `sorted`. Ensinado; a nova previsão, com `cidades`, saiu certa;
+  - `"10"` × `"9"`: não soube; ensinada a comparação caractere a caractere e o `key=int`.
+- **Falta:** recuperação curta da parte 2 e a Tarefa 2 (ordenação), depois recursão e debugging por hipótese.
 
 ### Onde paramos (2026-11-04): busca binária autônoma e correta
 

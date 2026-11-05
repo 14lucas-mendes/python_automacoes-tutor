@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 8,
+  "revision": 9,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -344,7 +344,23 @@
         "topic_logica-algoritmos"
       ],
       "authority_reason": "Documentacao oficial do Python."
+    },
+    {
+      "source_id": "source_python-sorting-howto",
+      "title": "Sorting Techniques (Python Documentation, HOWTO)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/howto/sorting.html",
+      "publication_date": null,
+      "accessed_at": "2026-11-05",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "authority_reason": "Documentacao oficial do Python: sorted devolve lista nova, list.sort modifica e devolve None, key, reverse e estabilidade."
     }
   ],
-  "updated_at": "2026-11-02T18:40:00-03:00"
+  "updated_at": "2026-11-05T19:48:00-03:00"
 }

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 960" width="1800" height="960" role="img" aria-labelledby="t d" font-family="Segoe Print, Comic Sans MS, Virgil, sans-serif">
+<title id="t">lesson_17 · parte 2: ordenação</title>
+<desc id="d">À esquerda, o rastreio da ordenação por seleção em [5, 2, 9, 1, 6], volta a volta, com o trecho ordenado em verde e a troca de cada volta, o total de 10 comparações, a fórmula n vezes n menos 1 sobre 2 e por que dobrar os dados quadruplica o trabalho. À direita, sorted contra .sort(), um exemplo que imprime None e a lista ordenada, key e reverse com estabilidade, e três erros comuns. Embaixo, uma pergunta de recuperação.</desc>
+<rect width="1800" height="960" fill="#121212"/>
+<text x="40" y="52" font-size="32" fill="#f1f3f5" font-weight="700">lesson_17 · Parte 2 — ordenação</text>
+<text x="40" y="86" font-size="18" fill="#adb5bd">Seleção: a cada volta, ache o menor do trecho que falta e troque com o primeiro desse trecho.</text>
+<text x="40" y="138" font-size="20" fill="#f1f3f5" font-weight="700">Rastreio de [5, 2, 9, 1, 6]</text>
+<rect x="40" y="160" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="66.0" y="192.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">5</text>
+<rect x="110" y="160" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="136.0" y="192.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">2</text>
+<rect x="180" y="160" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="206.0" y="192.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">9</text>
+<rect x="250" y="160" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="276.0" y="192.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">1</text>
+<rect x="320" y="160" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="346.0" y="192.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">6</text>
+<text x="400" y="190" font-size="16" fill="#f1f3f5">início: nada no lugar ainda</text>
+<rect x="40" y="236" width="64" height="50" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="66.0" y="268.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">1</text>
+<rect x="110" y="236" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="136.0" y="268.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">2</text>
+<rect x="180" y="236" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="206.0" y="268.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">9</text>
+<rect x="250" y="236" width="64" height="50" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="276.0" y="268.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">5</text>
+<rect x="320" y="236" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="346.0" y="268.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">6</text>
+<text x="400" y="266" font-size="16" fill="#f1f3f5">volta 1: menor 1 (pos. 3) · troca 0 ↔ 3 · 4 comparações</text>
+<rect x="40" y="312" width="64" height="50" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="66.0" y="344.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">1</text>
+<rect x="110" y="312" width="64" height="50" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="136.0" y="344.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">2</text>
+<rect x="180" y="312" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="206.0" y="344.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">9</text>
+<rect x="250" y="312" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="276.0" y="344.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">5</text>
+<rect x="320" y="312" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="346.0" y="344.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">6</text>
+<text x="400" y="342" font-size="16" fill="#f1f3f5">volta 2: menor 2 (pos. 1) · fica no lugar · 3 comparações</text>
+<rect x="40" y="388" width="64" height="50" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="66.0" y="420.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">1</text>
+<rect x="110" y="388" width="64" height="50" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="136.0" y="420.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">2</text>
+<rect x="180" y="388" width="64" height="50" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="206.0" y="420.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">5</text>
+<rect x="250" y="388" width="64" height="50" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="276.0" y="420.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">9</text>
+<rect x="320" y="388" width="64" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="346.0" y="420.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">6</text>
+<text x="400" y="418" font-size="16" fill="#f1f3f5">volta 3: menor 5 (pos. 3) · troca 2 ↔ 3 · 2 comparações</text>
+<rect x="40" y="464" width="64" height="50" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="66.0" y="496.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">1</text>
+<rect x="110" y="464" width="64" height="50" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="136.0" y="496.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">2</text>
+<rect x="180" y="464" width="64" height="50" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="206.0" y="496.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">5</text>
+<rect x="250" y="464" width="64" height="50" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="276.0" y="496.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">6</text>
+<rect x="320" y="464" width="64" height="50" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="346.0" y="496.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">9</text>
+<text x="400" y="494" font-size="16" fill="#f1f3f5">volta 4: menor 6 (pos. 4) · troca 3 ↔ 4 · 1 comparação</text>
+<text x="40" y="558" font-size="14" fill="#adb5bd">verde = já no lugar · amarelo = os dois que trocaram nesta volta</text>
+<text x="40" y="594" font-size="18" fill="#f1f3f5" font-weight="700">Total: 4 + 3 + 2 + 1 = 10 comparações · com n itens: n × (n − 1) / 2</text>
+<rect x="40" y="618" width="860" height="130" rx="10" fill="#2a2140" stroke="#b197fc" stroke-width="2"/>
+<text x="58" y="646" font-size="18" fill="#b197fc" font-weight="700">Por que dobrar os dados quadruplica?</text>
+<text x="58" y="674" font-size="16" fill="#f1f3f5">100 itens → 4.950 comparações · 200 itens → 19.900 (≈ 4×)</text>
+<text x="58" y="700" font-size="16" fill="#f1f3f5">dobra o número de voltas × dobra o tamanho de cada volta = 2 × 2 = 4</text>
+<text x="58" y="726" font-size="16" fill="#f1f3f5">um laço dentro de outro laço → quadrático, O(n²)</text>
+<rect x="40" y="766" width="860" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="58" y="794" font-size="16" fill="#f1f3f5">Trocar dois valores numa linha:   a, b = b, a</text>
+<text x="960" y="138" font-size="20" fill="#f1f3f5" font-weight="700">Ordenar com o Python</text>
+<rect x="960" y="160" width="390" height="150" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="978" y="192" font-size="20" fill="#4dabf7" font-family="Consolas, Cascadia Mono, monospace">sorted(notas)</text>
+<text x="978" y="226" font-size="16" fill="#f1f3f5">devolve uma lista NOVA</text>
+<text x="978" y="252" font-size="16" fill="#f1f3f5">a original fica igual</text>
+<text x="978" y="278" font-size="16" fill="#adb5bd">como fatiar: result[1:]</text>
+<rect x="1370" y="160" width="390" height="150" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="1388" y="192" font-size="20" fill="#fcc419" font-family="Consolas, Cascadia Mono, monospace">notas.sort()</text>
+<text x="1388" y="226" font-size="16" fill="#f1f3f5">muda a PRÓPRIA lista</text>
+<text x="1388" y="252" font-size="16" fill="#f1f3f5">devolve None</text>
+<text x="1388" y="278" font-size="16" fill="#adb5bd">como pop: mutação</text>
+<rect x="960" y="330" width="800" height="112" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="978" y="358" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">notas = [7, 3, 9]</text>
+<text x="978" y="384" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">resultado = notas.sort()</text>
+<text x="978" y="410" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">print(resultado, notas)    # None [3, 7, 9]</text>
+<rect x="960" y="460" width="800" height="150" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="978" y="487" font-size="17" fill="#69db7c" font-weight="700">key = a função que diz o critério (sem parênteses)</text>
+<text x="978" y="518" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">sorted(produtos, key=pelo_preco)</text>
+<text x="978" y="544" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">sorted(produtos, key=lambda p: p[&quot;preco&quot;], reverse=True)</text>
+<text x="978" y="576" font-size="16" fill="#f1f3f5">empate mantém a ordem original: a ordenação é estável</text>
+<rect x="960" y="628" width="800" height="120" rx="10" fill="#3a1a1a" stroke="#ff8787" stroke-width="2"/>
+<text x="978" y="656" font-size="18" fill="#ff8787" font-weight="700">Erros comuns</text>
+<text x="978" y="681" font-size="15" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">lista = lista.sort()        → a lista vira None</text>
+<text x="978" y="705" font-size="15" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">key=pelo_preco()            → TypeError: tire os parênteses</text>
+<text x="978" y="729" font-size="15" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">sorted([&quot;10&quot;, &quot;9&quot;, &quot;100&quot;]) → [&#x27;10&#x27;, &#x27;100&#x27;, &#x27;9&#x27;]; use key=int</text>
+<rect x="40" y="850" width="1720" height="72" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="60" y="878" font-size="18" fill="#f1f3f5">Pergunta para você, sem olhar: rastreie a seleção em [6, 3, 8, 2], com a lista depois de</text>
+<text x="60" y="906" font-size="18" fill="#f1f3f5">cada volta e o total de comparações. E o que print(sorted([8, 2]), [8, 2].sort()) mostra?</text>
+</svg>

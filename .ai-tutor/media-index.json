@@ -286,8 +286,36 @@
         "audio_video_require_transcript": true
       },
       "evidence_eligible": false
+    },
+    {
+      "artifact_id": "media_5d0d3e34-1dd8-4ce3-8f35-096f23f3f46f",
+      "lesson_id": "lesson_17-algoritmos-debugging",
+      "type": "learning_pack",
+      "provider": "local+notebooklm",
+      "source_ids": [
+        "source_python-time-complexity",
+        "source_python-bisect",
+        "source_python-sorting-howto",
+        "study_lesson17-teoria"
+      ],
+      "objective": "Revisar as partes 1 e 2 da lesson_17 antes da pratica de ordenacao: os quatro custos (constante, logaritmico, linear, quadratico) contados em passos, a busca binaria rastreada a mao e por que exige lista ordenada, a ordenacao por selecao rastreada volta a volta, e sorted x .sort() com key, reverse e estabilidade. Nao mostrar codigo da busca binaria nem da ordenacao por selecao: implementar a selecao e a proxima tarefa do aluno.",
+      "requested_formats": [
+        "image",
+        "audio"
+      ],
+      "local_path": "media/lesson_17-algoritmos-debugging/notebooklm",
+      "url": "https://notebook.google.com/notebook/38b03b3b-c12e-4a2c-a596-ea2f76860351",
+      "status": "generated",
+      "verified": false,
+      "created_at": "2026-11-05T23:08:00.629459Z",
+      "verified_at": null,
+      "accessibility": {
+        "visuals_require_alt_text": true,
+        "audio_video_require_transcript": true
+      },
+      "evidence_eligible": false
     }
   ],
-  "revision": 18,
-  "updated_at": "2026-10-23T19:53:00-03:00"
+  "revision": 22,
+  "updated_at": "2026-11-05T20:31:00-03:00"
 }

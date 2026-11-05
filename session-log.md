@@ -4,6 +4,13 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Mídias da `lesson_17` (2026-11-05, depois da sessão)
+
+- Pedido do aluno: mídias no NotebookLM e no Excalidraw dos blocos de estudo da lição. Pacote `media_5d0d3e34-1dd8-4ce3-8f35-096f23f3f46f` em `media/lesson_17-algoritmos-debugging/notebooklm/`.
+- **Primário (local):** dois diagramas Excalidraw no tema escuro, com prévia SVG e texto alternativo, conferidos na tela: `lesson17-parte1-custo-busca` e `lesson17-parte2-ordenacao`. Nenhum mostra código da seleção nem da busca binária.
+- **Complementar (NotebookLM):** com consentimento do aluno para a lista exata (`source-pack.md` e `prompts.md`), o `source-pack.md` foi colado como fonte no notebook "lesson_17 · custo, busca e ordenação" e o foco do `prompts.md` no Resumo em Áudio (Análise detalhada, português, padrão). Áudio "Por que seu código Python trava" (30min29s) observado pronto. Conteúdo **não conferido** pelo tutor; o aluno ouve e aponta divergências. Compartilhamento não alterado.
+- Mídia não é evidência.
+
 ## `session_2026-11-05-lesson17-ordenacao-teoria-01`
 
 - Status: concluída (19:25–20:05, dentro dos 45 min informados). Skill `e87e2d7`. Modo `learning`. Encerrada a pedido do aluno.

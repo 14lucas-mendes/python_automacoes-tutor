@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 880" width="1800" height="880" role="img" aria-labelledby="t d" font-family="Segoe Print, Comic Sans MS, Virgil, sans-serif">
+<title id="t">lesson_17 · parte 1: custo em passos e busca binária</title>
+<desc id="d">À esquerda, os quatro custos (constante, logarítmico, linear, quadrático) com exemplo e passos para 1.000 e 2.000 itens. À direita, a busca binária procurando 31 em uma lista de 9 preços ordenados, em 3 passos, com os marcadores inicio, fim e meio; depois a busca por 20, que não existe, as regras do meio e um aviso sobre lista fora de ordem. Embaixo, uma pergunta de recuperação.</desc>
+<rect width="1800" height="880" fill="#121212"/>
+<text x="40" y="52" font-size="32" fill="#f1f3f5" font-weight="700">lesson_17 · Parte 1 — custo em passos e busca binária</text>
+<text x="40" y="86" font-size="18" fill="#adb5bd">Conte passos, não segundos. n = quantos itens a lista tem.</text>
+<text x="40" y="138" font-size="20" fill="#f1f3f5" font-weight="700">Os quatro custos: o que acontece quando os dados dobram</text>
+<rect x="40" y="160" width="780" height="96" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="58" y="190" font-size="20" fill="#4dabf7" font-weight="700">constante · O(1)</text>
+<text x="560" y="190" font-size="18" fill="#4dabf7" font-weight="700">dobrar: fica igual</text>
+<text x="58" y="216" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">lista[0] · dicionario[chave]</text>
+<text x="58" y="242" font-size="16" fill="#f1f3f5">1.000 itens → 1 passo · 2.000 → 1</text>
+<rect x="40" y="268" width="780" height="96" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="58" y="298" font-size="20" fill="#69db7c" font-weight="700">logarítmico · O(log n)</text>
+<text x="560" y="298" font-size="18" fill="#69db7c" font-weight="700">dobrar: +1 passo</text>
+<text x="58" y="324" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">busca binária (lista ordenada)</text>
+<text x="58" y="350" font-size="16" fill="#f1f3f5">1.000 → 10 passos · 2.000 → 11</text>
+<rect x="40" y="376" width="780" height="96" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="58" y="406" font-size="20" fill="#fcc419" font-weight="700">linear · O(n)</text>
+<text x="560" y="406" font-size="18" fill="#fcc419" font-weight="700">dobrar: dobra</text>
+<text x="58" y="432" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">busca linear · x in lista</text>
+<text x="58" y="458" font-size="16" fill="#f1f3f5">1.000 → 1.000 passos · 2.000 → 2.000</text>
+<rect x="40" y="484" width="780" height="96" rx="10" fill="#2a2140" stroke="#b197fc" stroke-width="2"/>
+<text x="58" y="514" font-size="20" fill="#b197fc" font-weight="700">quadrático · O(n²)</text>
+<text x="560" y="514" font-size="18" fill="#b197fc" font-weight="700">dobrar: quadruplica</text>
+<text x="58" y="540" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">ordenação por seleção (parte 2)</text>
+<text x="58" y="566" font-size="16" fill="#f1f3f5">1.000 → 499.500 · 2.000 → 1.999.000</text>
+<rect x="40" y="600" width="780" height="64" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="58" y="626" font-size="16" fill="#f1f3f5">Logaritmo aqui = quantas vezes dá para dividir por 2 até sobrar 1</text>
+<text x="58" y="650" font-size="16" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">8 → 4 → 2 → 1: três divisões, então log₂ 8 = 3</text>
+<rect x="40" y="682" width="780" height="50" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="58" y="712" font-size="16" fill="#f1f3f5">Uma linha não é um passo: x in lista é um laço escondido.</text>
+<text x="880" y="138" font-size="20" fill="#f1f3f5" font-weight="700">Busca binária: procurar 31 (lista ordenada)</text>
+<rect x="880" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="917.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">3</text>
+<rect x="972" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1009.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">7</text>
+<rect x="1064" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1095.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">12</text>
+<rect x="1156" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1187.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">18</text>
+<rect x="1248" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1279.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">25</text>
+<rect x="1340" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1371.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">31</text>
+<rect x="1432" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1463.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">40</text>
+<rect x="1524" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1555.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">46</text>
+<rect x="1616" y="160" width="86" height="52" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1647.0" y="193.6" font-size="20" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">58</text>
+<text x="918" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">0</text>
+<text x="1010" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">1</text>
+<text x="1102" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">2</text>
+<text x="1194" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">3</text>
+<text x="1286" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">4</text>
+<text x="1378" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">5</text>
+<text x="1470" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">6</text>
+<text x="1562" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">7</text>
+<text x="1654" y="232" font-size="14" fill="#adb5bd" font-family="Consolas, Cascadia Mono, monospace">8</text>
+<rect x="880" y="256" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="894.8" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">3</text>
+<rect x="922" y="256" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="936.8" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">7</text>
+<rect x="964" y="256" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="974.6" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">12</text>
+<rect x="1006" y="256" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1016.6" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">18</text>
+<rect x="1048" y="256" width="38" height="40" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="1058.6" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">25</text>
+<rect x="1090" y="256" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1100.6" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">31</text>
+<rect x="1132" y="256" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1142.6" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">40</text>
+<rect x="1174" y="256" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1184.6" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">46</text>
+<rect x="1216" y="256" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1226.6" y="281.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">58</text>
+<text x="1270" y="281" font-size="16" fill="#f1f3f5">passo 1: meio 4 → 25 &lt; 31 → inicio = 5</text>
+<rect x="880" y="310" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="899.0" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="922" y="310" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="941.0" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="964" y="310" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="983.0" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="1006" y="310" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1025.0" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="1048" y="310" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1067.0" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="1090" y="310" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1100.6" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">31</text>
+<rect x="1132" y="310" width="38" height="40" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="1142.6" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">40</text>
+<rect x="1174" y="310" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1184.6" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">46</text>
+<rect x="1216" y="310" width="38" height="40" rx="10" fill="#15283a" stroke="#4dabf7" stroke-width="2"/>
+<text x="1226.6" y="335.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">58</text>
+<text x="1270" y="335" font-size="16" fill="#f1f3f5">passo 2: meio 6 → 40 &gt; 31 → fim = 5</text>
+<rect x="880" y="364" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="899.0" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="922" y="364" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="941.0" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="964" y="364" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="983.0" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="1006" y="364" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1025.0" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="1048" y="364" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1067.0" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="1090" y="364" width="38" height="40" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="1100.6" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">31</text>
+<rect x="1132" y="364" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1151.0" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="1174" y="364" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1193.0" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<rect x="1216" y="364" width="38" height="40" rx="10" fill="#25262b" stroke="#868e96" stroke-width="2"/>
+<text x="1235.0" y="389.32" font-size="14" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace"></text>
+<text x="1270" y="389" font-size="16" fill="#f1f3f5">passo 3: meio 5 → 31 = 31 → achou em 3 passos</text>
+<text x="880" y="438" font-size="14" fill="#adb5bd">azul = trecho que ainda pode ter o alvo · amarelo = meio · vazio = descartado</text>
+<text x="880" y="472" font-size="16" fill="#f1f3f5">Procurar 20 (não existe): meios 4 → 1 → 2 → 3; então inicio 4 &gt; fim 3:</text>
+<text x="880" y="496" font-size="16" fill="#f1f3f5">o trecho acabou, 20 não existe (4 passos).</text>
+<rect x="880" y="520" width="880" height="122" rx="10" fill="#16301d" stroke="#69db7c" stroke-width="2"/>
+<text x="898" y="548" font-size="18" fill="#69db7c" font-weight="700">Regras</text>
+<text x="898" y="573" font-size="15" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">meio = (inicio + fim) // 2      // é divisão inteira: 7 // 2 = 3</text>
+<text x="898" y="599" font-size="15" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">fim começa na última posição: len(lista) - 1, não len(lista)</text>
+<text x="898" y="625" font-size="15" fill="#f1f3f5" font-family="Consolas, Cascadia Mono, monospace">meio &lt; alvo → inicio = meio + 1 · meio &gt; alvo → fim = meio - 1</text>
+<rect x="880" y="660" width="880" height="72" rx="10" fill="#3a1a1a" stroke="#ff8787" stroke-width="2"/>
+<text x="898" y="686" font-size="16" fill="#ff8787">Lista fora de ordem: a busca descarta a metade errada e diz</text>
+<text x="898" y="712" font-size="16" fill="#ff8787">&quot;não existe&quot; sem erro nenhum. Ordene antes ou use busca linear.</text>
+<rect x="40" y="770" width="1720" height="72" rx="10" fill="#3a3115" stroke="#fcc419" stroke-width="2"/>
+<text x="60" y="798" font-size="18" fill="#f1f3f5">Pergunta para você, sem olhar: com 4.000 itens, quantos passos no pior caso fazem</text>
+<text x="60" y="826" font-size="18" fill="#f1f3f5">a busca linear e a busca binária? E se a lista tivesse 8.000 itens?</text>
+</svg>

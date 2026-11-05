@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "artifact_id": "media_5d0d3e34-1dd8-4ce3-8f35-096f23f3f46f",
+  "lesson_id": "lesson_17-algoritmos-debugging",
+  "objective": "Revisar as partes 1 e 2 da lesson_17 antes da pratica de ordenacao: os quatro custos (constante, logaritmico, linear, quadratico) contados em passos, a busca binaria rastreada a mao e por que exige lista ordenada, a ordenacao por selecao rastreada volta a volta, e sorted x .sort() com key, reverse e estabilidade. Nao mostrar codigo da busca binaria nem da ordenacao por selecao: implementar a selecao e a proxima tarefa do aluno.",
+  "source_ids": [
+    "source_python-time-complexity",
+    "source_python-bisect",
+    "source_python-sorting-howto",
+    "study_lesson17-teoria"
+  ],
+  "source_hashes": {
+    "source_python-time-complexity": "a066147a7816567b8a98724538eec99138c0ce42ad40fea84d4857e714b13c9e",
+    "source_python-bisect": "c55ae94119b09fc77fee953c7ddc775cd5bb83a11e96d90412fb478c5fe5846b",
+    "source_python-sorting-howto": "cc0ae52fe50351639294b44861c5c4104010259084983bccbaa16972f2b652f3",
+    "study_lesson17-teoria": "cc954f882deef1e3ce62ac1d4edc81614492639bf5b1e5e889f2c001473989e3"
+  },
+  "requested_formats": [
+    "image",
+    "audio"
+  ],
+  "external_upload": {
+    "provider": "notebooklm",
+    "consented": true,
+    "consented_at": "2026-11-05T20:11:00-03:00",
+    "files": [
+      "source-pack.md",
+      "prompts.md"
+    ],
+    "consent_text": "Autorizo o envio (resposta do aluno a lista exata: source-pack.md e prompts.md do pacote da lesson_17).",
+    "notebook_url": "https://notebook.google.com/notebook/38b03b3b-c12e-4a2c-a596-ea2f76860351",
+    "notebook_title": "lesson_17 · custo, busca e ordenação",
+    "uploaded_at": "2026-11-05T20:16:00-03:00",
+    "how": "Navegador proprio do app (login feito pelo aluno). source-pack.md colado integralmente como fonte 'Texto copiado' (4853 caracteres, conferido no campo antes de inserir). O texto de foco do prompts.md foi colado no campo de foco do Resumo em Audio: Analise detalhada, portugues (Brasil), duracao Padrao, 1 fonte. Nenhum outro arquivo enviado; compartilhamento nao alterado. Notebook renomeado pelo tutor."
+  },
+  "evidence_eligible": false,
+  "status": "generated",
+  "outputs": [
+    {
+      "path": "local/lesson17-parte1-custo-busca.excalidraw",
+      "format": "image",
+      "role": "primary",
+      "note": "Excalidraw, tema escuro: os quatro custos com 1.000 e 2.000 itens e a busca binaria rastreada (31 e 20), regras do meio e aviso de lista fora de ordem; pergunta de recuperacao."
+    },
+    {
+      "path": "local/lesson17-parte1-custo-busca.svg",
+      "format": "image",
+      "role": "primary",
+      "note": "Previa SVG escura com title e desc (texto alternativo). Conferida renderizada no painel do app."
+    },
+    {
+      "path": "local/lesson17-parte2-ordenacao.excalidraw",
+      "format": "image",
+      "role": "primary",
+      "note": "Excalidraw, tema escuro: rastreio da selecao em [5, 2, 9, 1, 6], custo quadratico, sorted x .sort(), key/reverse/estabilidade e erros comuns; pergunta de recuperacao. Sem codigo da selecao."
+    },
+    {
+      "path": "local/lesson17-parte2-ordenacao.svg",
+      "format": "image",
+      "role": "primary",
+      "note": "Previa SVG escura com title e desc. Conferida renderizada no painel do app."
+    },
+    {
+      "path": "local/audio-script.md",
+      "format": "audio",
+      "role": "complementary",
+      "note": "Texto de foco do Resumo em Audio do NotebookLM. Contribuicao distinta: revisao sem tela, em sequencia narrativa, terminando com tres perguntas sem resposta."
+    },
+    {
+      "path": "https://notebook.google.com/notebook/38b03b3b-c12e-4a2c-a596-ea2f76860351",
+      "format": "audio",
+      "role": "complementary",
+      "note": "Resumo em Audio 'Por que seu codigo Python trava' (Deep Dive, 1 fonte, 30min29s), observado pronto no notebook em 2026-11-05T20:31:00-03:00. Conteudo NAO conferido pelo tutor: a pagina nao oferece transcricao e o tutor nao escuta audio. O titulo foi escolhido pelo NotebookLM e nao descreve bem o tema (custo, busca e ordenacao). O aluno deve ouvir e apontar qualquer afirmacao que nao bata com os diagramas ou o source-pack, inclusive se aparecer codigo da selecao. Arquivo nao baixado."
+    }
+  ],
+  "representation_plan": {
+    "primary": "image (Excalidraw): os rastreios e os custos numa visao so, para olhar o processo passo a passo",
+    "complementary": "audio (NotebookLM): as duas partes em sequencia narrativa, para ouvir sem tela; termina em recuperacao autonoma",
+    "rationale": "Os diagramas mostram o processo visual; o audio conta a ordem e cobra recuperacao. Sem formato redundante."
+  },
+  "generated_at": "2026-11-05T20:31:00-03:00"
+}

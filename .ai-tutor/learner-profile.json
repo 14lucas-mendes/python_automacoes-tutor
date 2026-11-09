@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 32,
-  "updated_at": "2026-11-05T20:04:54-03:00",
+  "revision": 33,
+  "updated_at": "2026-11-09T18:38:32-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -338,6 +338,17 @@
         "note": "Checagem da teoria (nao e evidencia): pediu explicacao mais simples do que fazer no rastreio; o tutor reformulou e demonstrou a primeira volta, e ele fez as outras sozinho e certo. Nas previsoes, trocou sort por sorted e disse que o quadratico dobra; acertou a nova previsao logo depois da explicacao."
       },
       "recorded_at": "2026-11-05T20:04:54-03:00"
+    },
+    {
+      "observation_id": "profile_observation_c9440ba4-eb60-4234-9e58-02d631af678a",
+      "session_id": "session_2026-11-09-lesson17-ordenacao-pratica-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Decomposicao da ordenacao: a primeira versao deixou sem calcular as comparacoes dos casos-limite; com so a conferencia generica, completou em 4 minutos e notou sozinho que a selecao faz o mesmo numero de comparacoes em qualquer ordem."
+      },
+      "recorded_at": "2026-11-09T18:38:32-03:00"
     }
   ],
   "inferences": [],

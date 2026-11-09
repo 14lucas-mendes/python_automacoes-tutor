@@ -194,8 +194,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `review`
-- Próxima revisão: `2026-11-06`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-25`
+- Intervalo: `16 dias`
 
 ## card_dictreader-restval-01
 
@@ -207,8 +207,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `review`
-- Próxima revisão: `2026-11-06`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-25`
+- Intervalo: `16 dias`
 
 ## card_dictreader-restkey-01
 
@@ -220,8 +220,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `review`
-- Próxima revisão: `2026-11-06`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-25`
+- Intervalo: `16 dias`
 
 ## card_reader-tipos-01
 
@@ -337,8 +337,8 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-log`
 - Status: `review`
-- Próxima revisão: `2026-11-06`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-25`
+- Intervalo: `16 dias`
 
 ## card_git-diff-staged-01
 
@@ -376,5 +376,5 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-log`
 - Status: `review`
-- Próxima revisão: `2026-11-05`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-25`
+- Intervalo: `16 dias`

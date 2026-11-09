@@ -345,11 +345,49 @@ Regras:
 7. `assert` com os esperados calculados **à mão**: uma data que existe e casos-limite (primeira, última, antes de todas, entre duas, depois de todas, lista vazia).
 
 Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos-limite incluídos) e plano em português, num `.md` em `segundo-cerebro/exercicios/`.
+
+### Tarefa 2: cards mais atrasados (enunciado entregue em 2026-11-09)
+
+Na revisão, o app mostra primeiro os cards com a data mais antiga. Os cards do estudo fictício chegam **fora de ordem**, sem datas repetidas:
+
+```python
+cards = [
+    {"card_id": "c1", "due_at": "2026-11-12"},
+    {"card_id": "c2", "due_at": "2026-11-03"},
+    {"card_id": "c3", "due_at": "2026-11-20"},
+    {"card_id": "c4", "due_at": "2026-11-01"},
+    {"card_id": "c5", "due_at": "2026-11-15"},
+    {"card_id": "c6", "due_at": "2026-11-07"},
+]
+```
+
+Regras:
+
+1. Uma função ordena os cards por `"due_at"`, da data mais antiga para a mais nova, com **ordenação por seleção** escrita por você. Dentro dela, nada de `sorted`, `.sort()` ou `min`.
+2. Ela devolve uma tupla `(lista_ordenada, comparacoes)`. `comparacoes` é quantas vezes duas datas foram comparadas.
+3. A lista recebida **não pode mudar**, como acontece com `sorted`.
+4. Lista vazia: `([], 0)`. Um card só: a lista com ele e `0` comparações.
+5. Um `assert` confere o resultado da sua função com `sorted(cards, key=...)`.
+6. Mostre os `card_id` dos 3 cards mais atrasados.
+7. `assert` com os esperados calculados **à mão**, incluindo os casos-limite: vazia, um card, lista já ordenada e lista em ordem inversa.
+
+Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos-limite incluídos) e plano em português, num `.md` em `segundo-cerebro/exercicios/`.
 - **Próximas partes da teoria:** ordenação por seleção e `sorted`/`key`; recursão e dividir para conquistar; debugging por hipótese.
 - **Critérios de entrega da lição:** busca binária e ordenação implementadas e testadas com valor esperado; dois defeitos diagnosticados com hipótese escrita antes da correção; comparação de passos explicada.
 - **Saída de `weak_notacao-custo-big-o`:** explicar corretamente, com contagem de passos, a diferença entre custo constante, linear e logarítmico.
 
 ## Progresso
+
+### Onde paramos (2026-11-09): decomposição da Tarefa 2 correta, código pendente
+
+- **Sessão:** `session_2026-11-09-lesson17-ordenacao-pratica-01`, 17:57–18:39, dentro dos 45 min.
+- **Cards:** 5 de 5 certos.
+- **Recuperação da parte 2:** correta. 200 itens dão 19.900 comparações, porque dobram as voltas e o tamanho de cada uma (2 × 2 = 4); o porquê foi pedido de novo.
+- **Tarefa 2 (cards mais atrasados):** `segundo-cerebro/exercicios/modulo 05/busca_ordenacao.md`.
+  - v1 parcial: faltavam as comparações calculadas à mão e os casos já ordenada e inversa (`evidence_logica-ordenacao-decomposicao-01`, apoio).
+  - v2, só com a conferência genérica: correta e autônoma. 15 comparações em qualquer ordem inicial (`evidence_logica-ordenacao-decomposicao-02`, apoio).
+- **Regra 9:** só a busca binária cumprida. A ordenação conta quando o código estiver pronto e verificado.
+- **Próximo:** o código, `busca_ordenacao.py`, a partir da decomposição v2.
 
 ### Onde paramos (2026-11-05): teoria da parte 2 dada, prática de ordenação pendente
 

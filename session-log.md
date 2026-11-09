@@ -4,6 +4,17 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-09-lesson17-ordenacao-pratica-01`
+
+- Status: concluída (17:57–18:39, dentro dos 45 min informados). Skill `e87e2d7`. Modo `assessment`. Encerrada a pedido do aluno.
+- **Cards (retrieval_first), 5 de 5 certos:** `git-log-intervalo-01`, `dictreader-fieldnames-01`, `dictreader-restval-01`, `dictreader-restkey-01` (lembrado que o valor é lista) e `git-log-oneline-01`.
+- **Recuperação da parte 2:** correta. 19.900 comparações e 2 × 2 = 4; o porquê foi pedido de novo.
+- **Tarefa 2, cards mais atrasados:** enunciado gravado na lição. Gabarito do tutor à parte: c4, c2, c6, c1, c5, c3, com 15 comparações também na já ordenada e na inversa.
+  - Decomposição v1 (`modulo 05/busca_ordenacao.md`): parcial, sem as comparações à mão nem os casos já ordenada e inversa. Trazia notas sem base no enunciado ("decrescente", empate). `evidence_logica-ordenacao-decomposicao-01` (`supporting`, parcial).
+  - Conferência genérica pedida uma vez. A v2, 4 minutos depois, saiu completa e correta, notando que a seleção compara `n × (n − 1) / 2` vezes em qualquer ordem. `evidence_logica-ordenacao-decomposicao-02` (`supporting`, autônoma, correta).
+- **Regra 9:** só a busca binária da `lesson_17` está cumprida; decomposição é apoio. `topic_logica-algoritmos` segue em 80.
+- **Próximo passo:** o código da Tarefa 2 a partir da decomposição v2, com a pergunta neutra sobre o processo antes de registrar.
+
 ## Mídias da `lesson_17` (2026-11-05, depois da sessão)
 
 - Pedido do aluno: mídias no NotebookLM e no Excalidraw dos blocos de estudo da lição. Pacote `media_5d0d3e34-1dd8-4ce3-8f35-096f23f3f46f` em `media/lesson_17-algoritmos-debugging/notebooklm/`.

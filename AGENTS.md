@@ -177,6 +177,13 @@ Depois da `lesson_02` vêm três ciclos de **lógica, decomposição, estruturas
 - **Lógica em espiral:** depois do bloco, toda semana tem um exercício curto de lógica até o fim da formação.
 - **O estágio** (GFI, análise e desenvolvimento de sistemas) pode virar contexto de transferência quando a stack for conhecida. Dados da empresa nunca entram no estudo.
 
+## Cópia do cofre no Drive (decisão do aluno, 2026-11-10)
+
+Todo arquivo que o tutor criar ou alterar no cofre `C:\Users\lucka\Documents\Segundo Cérebro` (nota de sessão, diário de lição, MOC, painel) é copiado, **na mesma virada**, para o mesmo caminho relativo em `G:\Meu Drive\Estudos\Segundo Cérebro`.
+- Exemplo: `70 - Sessões Claude\2026-11-10 Python - ....md` vai para `G:\Meu Drive\Estudos\Segundo Cérebro\70 - Sessões Claude\2026-11-10 Python - ....md`.
+- Depois de copiar, o tutor confere que os dois arquivos ficaram iguais (hash) e informa ao aluno.
+- O tutor não apaga nem reorganiza nada no Drive além do arquivo copiado.
+
 ## Captura contínua no Segundo Cérebro (decisão do aluno, 2026-10-05)
 
 Ao **fechar ou interromper cada sessão de estudo**, gravar uma nota de sessão no cofre, na mesma virada do fechamento, sem esperar pedido.

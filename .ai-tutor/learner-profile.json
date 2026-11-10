@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 33,
-  "updated_at": "2026-11-09T18:38:32-03:00",
+  "revision": 34,
+  "updated_at": "2026-11-10T17:32:11-03:00",
   "declared_preferences": [
     {
       "preference_id": "preference_d9f14733-d56f-410a-8cc1-9ad9db118091",
@@ -349,6 +349,17 @@
         "note": "Decomposicao da ordenacao: a primeira versao deixou sem calcular as comparacoes dos casos-limite; com so a conferencia generica, completou em 4 minutos e notou sozinho que a selecao faz o mesmo numero de comparacoes em qualquer ordem."
       },
       "recorded_at": "2026-11-09T18:38:32-03:00"
+    },
+    {
+      "observation_id": "profile_observation_7168998f-7ba4-40cf-a7c1-3babf6185f67",
+      "session_id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Trouxe o codigo da ordenacao pronto antes da sessao, seguindo a propria decomposicao; todos os casos extras do tutor passaram. Contestou a classificacao do Feynman v2 com argumento de conteudo; a objecao foi aceita depois de releitura pelos criterios literais."
+      },
+      "recorded_at": "2026-11-10T17:32:11-03:00"
     }
   ],
   "inferences": [],

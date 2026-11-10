@@ -4,6 +4,22 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-10-lesson17-ordenacao-codigo-01`
+
+- Status: concluída (16:46–17:31, ~45 min informados). Skill `e87e2d7`. Modo `assessment`. Encerrada a pedido do aluno.
+- **Cards (retrieval_first), 3 de 3 certos:** `main-guard-01` (o que a guarda protege é o bloco abaixo do `if`, não "a função"), `reader-tipos-01` e `print-return-01`.
+- **Tarefa 2, código:** `busca_ordenacao.py`, escrito antes da sessão a partir da decomposição v2 (sha256 `233cddfc...`).
+  - O tutor rodou o arquivo: todos os `assert` passam, e os 3 mais atrasados são c4, c2 e c6.
+  - Casos extras com `python -I` numa cópia isolada: original intacta, 2 itens e 12 listas aleatórias contra `sorted` e `n(n-1)/2`, todos corretos.
+  - Pergunta neutra. Declaração: "a IA só formatou o texto". Vale o declarado.
+  - `evidence_logica-ordenacao-codigo-01`: `application`, autônoma, correta. Opcionais: um `assert` da ordem escrita à mão, um `assert` de que a original não muda e o `if` redundante da lista vazia.
+- **Feynman, comparação de passos:**
+  - v1 parcial (`evidence_logica-feynman-custos-01`). Conferência genérica pedida uma vez.
+  - v2 corrigiu o constante (exemplo do primeiro nome da lista), o mecanismo da seleção e a frase da binária. O tutor a classificou como parcial pelo 1.000.000 do quadrático e deu a devolutiva.
+  - **Objeção do aluno:** "Se o conceito está certo eu não precisaria fazer essa explicação de novo". Relida pelos critérios literais, **foi aceita**: `n × n` é conta válida para um custo quadrático genérico, e a teoria da lição diz que a notação O ignora fatores constantes. `evidence_logica-feynman-custos-02` passou a `correct`, com notas de precisão (porquê resumido em "2 × 2", "busca quadrática", linear sem a contagem).
+- **Regra 9 (`lesson_17`):** busca binária e ordenação ✅, Feynman ✅. Faltam dois defeitos com hipótese e a transferência. `topic_logica-algoritmos` segue em 80. `weak_notacao-custo-big-o` segue ativo (primeira evidência autônoma correta; falta a segunda, em outra sessão).
+- **Próximo passo:** teoria da parte 3, sobre recursão, dividir para conquistar e debugging por hipótese.
+
 ## `session_2026-11-09-lesson17-ordenacao-pratica-01`
 
 - Status: concluída (17:57–18:39, dentro dos 45 min informados). Skill `e87e2d7`. Modo `assessment`. Encerrada a pedido do aluno.

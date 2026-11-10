@@ -233,8 +233,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `review`
-- Próxima revisão: `2026-11-09`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-26`
+- Intervalo: `16 dias`
 
 ## card_dictreader-fieldnames-02
 
@@ -285,8 +285,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-modules`
 - Status: `review`
-- Próxima revisão: `2026-11-07`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-26`
+- Intervalo: `16 dias`
 
 ## card_print-return-01
 
@@ -298,8 +298,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-datastructures`
 - Status: `review`
-- Próxima revisão: `2026-11-09`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-26`
+- Intervalo: `16 dias`
 
 ## card_git-remote-familia-01
 

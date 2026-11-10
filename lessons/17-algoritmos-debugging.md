@@ -378,6 +378,18 @@ Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos
 
 ## Progresso
 
+### Onde paramos (2026-11-10): ordenação no código e Feynman, faltam debugging e transferência
+
+- **Sessão:** `session_2026-11-10-lesson17-ordenacao-codigo-01`, 16:46–17:31.
+- **Cards:** 3 de 3 certos.
+- **Tarefa 2, código:** `segundo-cerebro/exercicios/modulo 05/busca_ordenacao.py`. Todos os `assert` passam, e os 3 mais atrasados são c4, c2 e c6. Os casos extras do tutor também saíram certos: lista original intacta, 2 itens e 12 listas aleatórias. A IA só formatou o texto (declarado).
+  - `evidence_logica-ordenacao-codigo-01`: aplicação autônoma e correta.
+- **Feynman (comparação de passos):**
+  - v1 parcial: constante explicado como "o valor não muda", seleção descrita como comparação de vizinhos.
+  - v2, só com a conferência: corrigiu os dois pontos. O tutor a classificou como parcial por causa do 1.000.000 no quadrático; **o aluno contestou, e a objeção foi aceita**. Para um custo quadrático genérico, `n × n` vale, e a teoria ignora fatores constantes. `evidence_logica-feynman-custos-02` ficou correta, com notas de precisão.
+- **Regra 9:** busca binária e ordenação ✅, Feynman ✅. Faltam dois defeitos com hipótese e a transferência.
+- **Próximo:** teoria da parte 3 (recursão, dividir para conquistar e debugging por hipótese).
+
 ### Onde paramos (2026-11-09): decomposição da Tarefa 2 correta, código pendente
 
 - **Sessão:** `session_2026-11-09-lesson17-ordenacao-pratica-01`, 17:57–18:39, dentro dos 45 min.

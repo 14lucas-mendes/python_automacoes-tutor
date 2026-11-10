@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 403,
-  "updated_at": "2026-11-09T18:38:32-03:00",
+  "revision": 413,
+  "updated_at": "2026-11-10T17:32:11-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -334,7 +334,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-11-09",
+      "last_practice": "2026-11-10",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -361,7 +361,10 @@
         "evidence_logica-transferencia-campeonato-01",
         "evidence_logica-busca-binaria-01",
         "evidence_logica-ordenacao-decomposicao-01",
-        "evidence_logica-ordenacao-decomposicao-02"
+        "evidence_logica-ordenacao-decomposicao-02",
+        "evidence_logica-ordenacao-codigo-01",
+        "evidence_logica-feynman-custos-01",
+        "evidence_logica-feynman-custos-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2811,6 +2814,57 @@
       "recorded_at": "2026-11-09T18:37:00-03:00",
       "result": "correct",
       "error": ""
+    },
+    {
+      "evidence_id": "evidence_logica-ordenacao-codigo-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Tarefa 2 da lesson_17 (cards mais atrasados), codigo a partir da decomposicao v2: ordena_data_cards em segundo-cerebro/exercicios/modulo 05/busca_ordenacao.py faz selecao numa copia (.copy()), conta as comparacoes e devolve (lista, comparacoes); asserts com 15 comparacoes a mao no caso normal, ja ordenada e inversa, 0 na vazia e com um card, conferencia com sorted(key=lambda), e imprime os 3 mais atrasados. Cobre a parte de ordenacao do objetivo da licao. Ajuda: nenhuma. Declaracao: IA so na formatacao do texto (vale o declarado).",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 05/busca_ordenacao.py (sha256 233cddfcbca4d318...); tutor rodou: 'Todos os testes passaram' e c4, c2, c6; casos extras com python -I em copia isolada: original intacta, 2 itens, 12 listas aleatorias contra sorted e n(n-1)/2, todos corretos"
+      },
+      "recorded_at": "2026-11-10T16:52:00-03:00",
+      "result": "correct",
+      "error": "Nenhum erro. Opcional: um assert com a ordem calculada a mao (c4, c2, c6, c1, c5, c3) e outro mostrando que a lista original nao mudou; o if da lista vazia e redundante, porque o laco nao roda com n = 0."
+    },
+    {
+      "evidence_id": "evidence_logica-feynman-custos-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Feynman da lesson_17 (comparacao de passos), v1 no chat, sem consulta: os quatro custos com 1.000 e 2.000 itens, por que a busca binaria precisa de lista ordenada e por que a selecao compara o mesmo numero de vezes numa lista ja ordenada.",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+        "location": "resposta no chat em 2026-11-10 por volta de 17:05"
+      },
+      "recorded_at": "2026-11-10T17:06:00-03:00",
+      "result": "partial",
+      "error": "Certo: logaritmico (dividir, 10 -> 11), linear (1.000 -> 2.000), numeros do quadratico (499.500 -> 1.999.000), por que a binaria precisa da ordem (comparar o meio e escolher o lado). Falta ou erra: constante explicado como 'busco por uma constante, o valor nao muda', sem o acesso direto por posicao ou chave e sem exemplo nem o 1 passo; quadratico chamado de 'busca' e justificado com 'dobro de itens, dobro de comparacoes', sem dizer que dobram as voltas e o tamanho de cada volta; selecao descrita como comparar o primeiro com o segundo, o segundo com o terceiro (vizinhos), quando ela compara o menor achado ate ali com cada item restante. Conferencia generica pedida uma vez."
+    },
+    {
+      "evidence_id": "evidence_logica-feynman-custos-02",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+      "kind": "feynman",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Feynman da lesson_17, v2 depois so da conferencia generica, colada em secoes: constante com exemplo (pegar o primeiro nome da lista, 10 ou 10 milhoes), logaritmico com dicionario aberto no meio e 10 -> 11, linear com dicionario lido pagina a pagina, binaria precisa de ordem (sem 'busco a constante'), selecao descrita certo (procura o menor da parte nao ordenada, poe no inicio, avanca e repete).",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+        "location": "resposta no chat em 2026-11-10 por volta de 17:15"
+      },
+      "recorded_at": "2026-11-10T17:16:00-03:00",
+      "result": "correct",
+      "error": "Reclassificada de partial para correct em 2026-11-10 depois de objecao do aluno, relida pelos criterios literais (ideia central, contexto, justificativa). Os quatro custos estao certos na relacao com o dobro dos dados (igual, +1, dobra, quadruplica), com exemplos e a contagem do logaritmico; a binaria e o mecanismo da selecao estao certos. O 1.000.000 -> 4.000.000 da secao do quadratico vale para um custo quadratico generico (n x n), que a teoria da licao trata como O(n2), ignorando fatores constantes; para a selecao especificamente a conta e n x (n - 1) / 2 (499.500 -> 1.999.000). Ficam como notas de precisao, sem rebaixar: o porque do x 4 resumido em '2 x 2' sem nomear voltas e tamanho de cada volta; chamar o quadratico de 'busca'; a secao linear sem a contagem 1.000 -> 2.000 que a v1 tinha."
     }
   ],
   "sessions": [
@@ -4525,6 +4579,53 @@
         "fora do estudo: segundo-cerebro/exercicios/modulo 05/busca_ordenacao.md (aluno, sem commit)",
         "fora do estudo: nota de sessao no cofre"
       ]
+    },
+    {
+      "session_id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-11-10T16:46:00-03:00",
+      "ended_at": "2026-11-10T17:32:11-03:00",
+      "resumable": false,
+      "time_budget_minutes": 45,
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 3 cards vencidos (retrieval_first): main-guard-01, reader-tipos-01, print-return-01. (2) Codigo da Tarefa 2 (busca_ordenacao.py) a partir da decomposicao v2: selecao com copia e contagem, asserts com esperados a mao, conferencia com sorted, os 3 mais atrasados; execucao e pergunta neutra sobre o processo.",
+      "cognitive_core": "Implementar sozinho a ordenacao por selecao numa copia, contando comparacoes, e verificar com asserts e sorted(key=...).",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Pratica de tema novo num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-11-10T16:46 com 45 min (informado pelo aluno), skill e87e2d7. Em segundo-cerebro/exercicios/modulo 05 ja existe busca_ordenacao.py (3078 bytes, 16:43), escrito pelo aluno antes da sessao: tratar como entrega quando ele apresentar. | 16:47-16:48 cards 3 de 3 corretos (main-guard-01 com imprecisao: o bloco abaixo do if, nao a funcao; reader-tipos-01; print-return-01). | 16:48 busca_ordenacao.py apresentado (sha256 233cddfc...): tutor rodou, todos os asserts passam, 3 mais atrasados c4, c2, c6; casos extras do tutor em copia isolada (python -I): lista original intacta, 2 itens, 12 listas aleatorias de 0 a 11 itens contra sorted e n(n-1)/2, todos corretos. Pergunta neutra sobre o processo antes de registrar. | Resposta neutra: IA so na formatacao. evidence_logica-ordenacao-codigo-01 registrada (application, autonoma, correta). Regra 9: busca binaria e ordenacao implementadas e testadas; faltam dois defeitos com hipotese, Feynman (comparacao de passos explicada) e transferencia. | Feynman v1 (comparacao de passos) no chat: parcial, evidence_logica-feynman-custos-01. Conferencia generica pedida uma vez, sem apontar o que falta. | 17:15 Feynman v2 depois da conferencia: parcial (evidence_logica-feynman-custos-02). Constante, log, linear, binaria e mecanismo da selecao certos; quadratico com 1.000.000 em vez de 499.500 e sem o porque. Devolutiva simples dada (tutor explicou o porque e a conta). | Objecao do aluno a classificacao do Feynman v2: aceita depois de reler pelos criterios literais. evidence_logica-feynman-custos-02 passa a correct (notas de precisao, sem rebaixar). Regra 9: metade Feynman do 60 da lesson_17 cumprida; faltam dois defeitos com hipotese e transferencia. | Encerrada a pedido do aluno (~45 min). Ultimo comportamento: Feynman v2 correto depois so da conferencia. Sem andaime na pratica.",
+      "evidence_ids": [
+        "evidence_logica-ordenacao-codigo-01",
+        "evidence_logica-feynman-custos-01",
+        "evidence_logica-feynman-custos-02"
+      ],
+      "difficulty": "medium",
+      "next_step": "Nova sessao da lesson_17: uns 5 cards vencidos, depois a teoria da parte 3 (theory_first, tema novo): recursao e dividir para conquistar, e debugging por hipotese (prever, rodar, comparar; print dirigido; teste que falha antes da correcao). Depois a pratica dos dois defeitos com hipotese escrita e a transferencia.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/learner-profile.json",
+        "flashcards.md",
+        "lessons/17-algoritmos-debugging.md",
+        "session-log.md",
+        "fora do estudo: segundo-cerebro/exercicios/modulo 05/busca_ordenacao.py (aluno, sem commit)",
+        "fora do estudo: nota de sessao no cofre"
+      ]
     }
   ],
   "lessons": [
@@ -5086,7 +5187,8 @@
         "session_2026-11-02-lesson17-teoria-01",
         "session_2026-11-04-lesson17-busca-binaria-01",
         "session_2026-11-05-lesson17-ordenacao-teoria-01",
-        "session_2026-11-09-lesson17-ordenacao-pratica-01"
+        "session_2026-11-09-lesson17-ordenacao-pratica-01",
+        "session_2026-11-10-lesson17-ordenacao-codigo-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -5106,7 +5208,7 @@
         "expected_transfer": "diagnosticar sozinho defeito em codigo alheio (Python Lab 004/008)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente. | 2026-11-09: Tarefa 2 (cards mais atrasados) entregue; decomposicao v1 parcial, v2 correta depois da conferencia. Codigo pendente.",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente. | 2026-11-09: Tarefa 2 (cards mais atrasados) entregue; decomposicao v1 parcial, v2 correta depois da conferencia. Codigo pendente. | 2026-11-10: codigo da ordenacao autonomo e correto (evidence_logica-ordenacao-codigo-01); Feynman v1 parcial, v2 correto depois de objecao aceita (evidence_logica-feynman-custos-02). Faltam dois defeitos com hipotese e transferencia.",
       "file": "lessons/17-algoritmos-debugging.md"
     },
     {
@@ -6722,6 +6824,33 @@
       "outcome": "correct",
       "support_level": 1,
       "recorded_at": "2026-11-09T18:11:35-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_4a41d55b-ee4d-48ce-bd16-42fea927e54a",
+      "session_id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_main-guard-01: guarda __main__ | resposta: rodar a funcao so no arquivo onde e chamada e nao quando importada por um modulo. Correto na ideia central; imprecisao: o que fica protegido e o bloco abaixo do if, e ele roda quando o arquivo e executado direto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-10T16:47:24-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_53d33e81-80a1-4e0c-bbec-9cfbd4f66072",
+      "session_id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_reader-tipos-01: leitor de CSV e '4.5' | resposta: nao, toda celula chega como texto; converto com float(). Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-10T16:47:57-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_bbb24e21-9180-4917-bb56-430fb73d4133",
+      "session_id": "session_2026-11-10-lesson17-ordenacao-codigo-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_print-return-01: print x return | resposta: print so mostra na tela, quem chamou recebe None. Correto (sem as imprecisoes de 02/11).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-10T16:48:17-03:00"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 413,
-  "updated_at": "2026-11-10T17:32:11-03:00",
+  "revision": 414,
+  "updated_at": "2026-11-10T17:50:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -5205,10 +5205,10 @@
         "project_anchor": "ordenar e buscar sessoes e datas de revisao do estudo ficticio; defeitos plantados nos indices da licao 16",
         "revisit": "estruturas da lesson_16 com restricao de custo; modelo de erros (weak_error-model-tempo-deteccao)",
         "new_constraint": "custo em passos e diagnostico por hipotese",
-        "expected_transfer": "diagnosticar sozinho defeito em codigo alheio (Python Lab 004/008)"
+        "expected_transfer": "diagnosticar sozinho defeito em codigo criado pelo tutor a partir do projeto Segundo Cerebro, num modulo ou conjunto de dados ainda nao usado na licao (Python Lab descontinuado em 2026-11-10)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente. | 2026-11-09: Tarefa 2 (cards mais atrasados) entregue; decomposicao v1 parcial, v2 correta depois da conferencia. Codigo pendente. | 2026-11-10: codigo da ordenacao autonomo e correto (evidence_logica-ordenacao-codigo-01); Feynman v1 parcial, v2 correto depois de objecao aceita (evidence_logica-feynman-custos-02). Faltam dois defeitos com hipotese e transferencia.",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente. | 2026-11-09: Tarefa 2 (cards mais atrasados) entregue; decomposicao v1 parcial, v2 correta depois da conferencia. Codigo pendente. | 2026-11-10: codigo da ordenacao autonomo e correto (evidence_logica-ordenacao-codigo-01); Feynman v1 parcial, v2 correto depois de objecao aceita (evidence_logica-feynman-custos-02). Faltam dois defeitos com hipotese e transferencia. | 2026-11-10: Python Lab retirado da formacao (decisao do aluno); a transferencia passa a usar codigo criado pelo tutor a partir do projeto.",
       "file": "lessons/17-algoritmos-debugging.md"
     },
     {

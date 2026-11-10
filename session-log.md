@@ -4,6 +4,11 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Pedidos de ajuste (2026-11-10, depois da sessão)
+
+- **Carga livre, sem meta de 10 h por semana:** pedido de mudança estrutural. A carga está congelada até a `lesson_13` (`AGENTS.md`, "Formação fechada"). Pela regra, o pedido **não foi aplicado nesta conversa**: fica registrado em `docs/compose/spec/pedido-carga-livre.md` e será avaliado no fechamento da `lesson_17`, com justificativa escrita.
+- **Python Lab fora da formação:** não é mudança estrutural, porque o Lab era só referência e não estava na lista congelada. **Aplicado:** `AGENTS.md` (bloco de lógica) e o `programming_plan.expected_transfer` da `lesson_17`. A prática e a transferência passam a usar código criado pelo tutor a partir do projeto. Os registros antigos que citam o Lab ficam como histórico.
+
 ## `session_2026-11-10-lesson17-ordenacao-codigo-01`
 
 - Status: concluída (16:46–17:31, ~45 min informados). Skill `e87e2d7`. Modo `assessment`. Encerrada a pedido do aluno.

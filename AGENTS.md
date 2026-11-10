@@ -173,7 +173,7 @@ Depois da `lesson_02` vêm três ciclos de **lógica, decomposição, estruturas
 
 - **Decompor antes de codar:** todo exercício do bloco começa com entrada, regra, saída, exemplos com a saída esperada calculada à mão (incluindo casos-limite) e plano em português. Só depois vem o código.
 - **Método:** prever → rodar → investigar → modificar → criar, tabela de rastreio e exemplos resolvidos que vão sumindo.
-- **Prática sugerida:** missões do Python Lab (só referência, sem sincronizar), *Entendendo Algoritmos* (Bhargava) e *Estruturas de Dados e Algoritmos com JavaScript* (Groner; ler o conceito e implementar em Python).
+- **Prática:** exemplos e exercícios de código criados pelo tutor a partir do projeto Segundo Cérebro, além de *Entendendo Algoritmos* (Bhargava) e *Estruturas de Dados e Algoritmos com JavaScript* (Groner; ler o conceito e implementar em Python). O **Python Lab foi descontinuado desta formação** (decisão do aluno, 2026-11-10): é um projeto à parte, sem missão, prática ou contexto de transferência aqui.
 - **Lógica em espiral:** depois do bloco, toda semana tem um exercício curto de lógica até o fim da formação.
 - **O estágio** (GFI, análise e desenvolvimento de sistemas) pode virar contexto de transferência quando a stack for conhecida. Dados da empresa nunca entram no estudo.
 

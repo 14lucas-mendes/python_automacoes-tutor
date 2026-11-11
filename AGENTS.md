@@ -78,6 +78,10 @@ O aluno está aprendendo Python do início. Termo desconhecido **não é falha d
 - Se o que falta é apenas a **forma exata** de um comando (nome, subcomando, flag), o tutor ensina, registra ponto fraco de `precision` e segue. Não criar tarefa de execução sintética para isso.
 - Consultar a documentação ao usar um comando é prática aceita. O critério é usar o comando certo, não recitá-lo de memória.
 
+## Pré-condição para gravar no cofre (decisão do aluno, 2026-11-11)
+
+Antes de gravar qualquer coisa no cofre (diário de lição, nota de sessão, `hot.md`, `pendencias.md`, log de decisões), conferir que o cofre local já recebeu a reestruturação de 2026-11-11: `20 - Áreas/Pessoal/Estudos/`, `hot.md` e `pendencias.md` existem, e `20 - Áreas/Sistema de Estudos/` não existe. Se a conferência falhar, **não gravar nada no cofre**: avisar o aluno para rodar `git pull` no cofre e só então gravar.
+
 ## Diário no Obsidian
 
 Quando uma lição passar a `completed` no estado canônico, gravar o diário **na mesma virada de fechamento**, sem esperar pedido. Não gravar diário se a lição continuar `in_progress`.
@@ -184,6 +188,7 @@ Todo arquivo que o tutor criar ou alterar no cofre `C:\Users\lucka\Documents\Seg
 - Exemplo: `70 - Sessões Claude\2026-11-10 Python - ....md` vai para `G:\Meu Drive\Estudos\Segundo Cérebro\70 - Sessões Claude\2026-11-10 Python - ....md`.
 - Depois de copiar, o tutor confere que os dois arquivos ficaram iguais (hash) e informa ao aluno.
 - O tutor não apaga nem reorganiza nada no Drive além do arquivo copiado.
+- Antes de copiar: se `20 - Áreas\Sistema de Estudos\` ainda existir no Drive, não copiar e avisar o aluno para mover a pasta para `20 - Áreas\Pessoal\Estudos\`. A cópia no caminho novo só começa depois disso.
 
 ## Captura contínua no Segundo Cérebro (decisão do aluno, 2026-10-05)
 
@@ -192,13 +197,13 @@ Ao **fechar ou interromper cada sessão de estudo**, gravar uma nota de sessão 
 **Vigência (decisão de 2026-10-08):** esta captura e o diário no Obsidian continuam até a aba Segundo Cérebro do app funcionar, o que está previsto para a `lesson_21-rag-segundo-cerebro`. No fecho dessa lição, a regra é revista: é uma revisão prevista no plano, não um pedido de mudança. O cofre Obsidian, também chamado "Segundo Cérebro", **não** é fonte de dados do app.
 
 - Pasta: `C:\Users\lucka\Documents\Segundo Cérebro\70 - Sessões Claude\`. Nome: `AAAA-MM-DD Python - <assunto curto>.md`. Seguir o template `00 - Sistema/Templates/Sessão Claude.md`, o `CLAUDE.md` do cofre e a skill `segundo-cerebro`. Antes de gravar, ler o `CLAUDE.md` e o `MAPA.md` do cofre: eles mandam no esquema.
-- Frontmatter: `tipo: sessao`, `status: ativo`, `criado`, `dominio: pessoal`, `area: "[[MOC - Sistema de Estudos]]"`, `origem` (este repositório), `projeto: "[[Segundo Cérebro]]"`, `session_id` canônico e `tags` (`python`, `formacao`, o tópico).
+- Frontmatter: `tipo: sessao`, `status: ativo` (vale sobre o `status: inbox` do template, como define o `CLAUDE.md` do cofre), `criado`, `dominio: pessoal`, `area: "[[MOC - Sistema de Estudos]]"`, `origem` (este repositório), `projeto: "[[Segundo Cérebro]]"`, `session_id` canônico e `tags` (`python`, `formacao`, o tópico).
 - Conteúdo factual, nas palavras observadas da sessão: como o aluno raciocinou, dúvidas que surgiram, erros e como foram resolvidos, decisões de estrutura de código (com trechos curtos do código **do aluno**), o que ficou pendente e links para o diário da lição e os arquivos ou PRs.
 - A nota é **projeção, não evidência**: não altera `mastery`, não muda a escada de ajuda e não substitui o diário de lição nem o `session-log.md`. Não copiar segredos nem dados pessoais de terceiros.
 - Linkar a nota em `[[Segundo Cérebro]]` (pelo painel) e no `[[MOC - Sistema de Estudos]]` quando a sessão fechar uma lição.
-- **Estado do cofre (decisão do aluno, 2026-11-11):** na mesma virada, atualizar `hot.md` (a linha da formação Python na seção Pessoal: lição ativa e próximo passo) e `pendencias.md` (seção Pessoal: riscar o que foi feito e acrescentar os próximos passos, cada um com `(desde AAAA-MM-DD)`).
+- **Estado do cofre (decisão do aluno, 2026-11-11):** na mesma virada, atualizar `hot.md` (a linha da formação Python na seção Pessoal: lição ativa e próximo passo) e `pendencias.md` (seção Pessoal: fechar as pendências feitas como manda o `CLAUDE.md` do cofre, marcando `- [x]`, e acrescentar os próximos passos, cada um com `(desde AAAA-MM-DD)`).
 - Na seção "Candidatas a nota permanente" do template, o tutor só lista ideias: uma frase e a sessão de origem. Notas permanentes são escritas pelo aluno.
-- Decisões do aluno sobre a formação também entram no log do mês do cofre, `80 - Decisões/AAAA-MM.md`.
+- Decisões do aluno sobre a formação também entram no log do mês do cofre, `80 - Decisões/AAAA-MM.md`, no formato que o `CLAUDE.md` do cofre define, inclusive para criar o arquivo de um mês novo.
 
 ## Mídia e geração externa
 

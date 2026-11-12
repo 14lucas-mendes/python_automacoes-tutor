@@ -12,8 +12,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-11-12`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-17`
+- Intervalo: `35 dias`
 
 ## card_tempos-02
 
@@ -25,8 +25,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`, `source_python-traceback`
 - Status: `review`
-- Próxima revisão: `2026-11-12`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-17`
+- Intervalo: `35 dias`
 
 ## card_tempos-03
 
@@ -38,8 +38,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`, `source_python-traceback`
 - Status: `review`
-- Próxima revisão: `2026-11-12`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-28`
+- Intervalo: `16 dias`
 
 ## card_tempos-04
 
@@ -259,8 +259,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-builtins`, `source_python-csv-module`
 - Status: `review`
-- Próxima revisão: `2026-11-11`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-28`
+- Intervalo: `16 dias`
 
 ## card_fatiar-pop-01
 
@@ -272,8 +272,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-datastructures`
 - Status: `review`
-- Próxima revisão: `2026-11-11`
-- Intervalo: `7 dias`
+- Próxima revisão: `2026-11-28`
+- Intervalo: `16 dias`
 
 ## card_main-guard-01
 

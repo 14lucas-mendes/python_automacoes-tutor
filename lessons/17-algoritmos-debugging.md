@@ -311,6 +311,124 @@ As sessões e revisões do estudo fictício nem sempre chegam em ordem. Para usa
 
 A revisão de cards de cada sessão faz exatamente isso: ordena os cards vencidos pela data (`due_at`) e pega os 5 mais atrasados.
 
+### Parte 3a: recursão e dividir para conquistar
+
+> Escrita em 2026-11-12 (`session_2026-11-12-lesson17-recursao-teoria-01`). Material do tutor: não é evidência. Os exemplos usam contagem regressiva, fatorial e números soltos, para não entregar a tarefa do projeto.
+>
+> Fonte verificada: Python Documentation, [Built-in Exceptions: RecursionError](https://docs.python.org/3/library/exceptions.html#RecursionError) (`source_python-recursionerror`).
+
+### Problema e porquê
+
+Alguns problemas são feitos de **versões menores de si mesmos**:
+
+- uma pasta pode ter pastas dentro, que têm pastas dentro, como o cofre: `20 - Áreas` → `Pessoal` → `Estudos`;
+- uma boneca russa (matrioska) tem outra boneca menor dentro, até a menor de todas, que não abre;
+- na busca binária, depois de olhar o meio, sobra **o mesmo problema** numa lista com metade do tamanho.
+
+Para esse tipo de problema existe a **recursão**: uma função que, para resolver o problema, **chama a si mesma** com um pedaço menor dele.
+
+### Como funciona: caso-base e caso recursivo
+
+Toda função recursiva tem duas partes:
+
+1. **Caso-base:** o pedaço tão pequeno que a resposta é direta, sem chamar ninguém. É a boneca que não abre. É ele que **faz a recursão parar**.
+2. **Caso recursivo:** a função faz um pouco do trabalho e chama a si mesma com um problema **menor**, que anda em direção ao caso-base.
+
+Quando uma função chama outra (ou a si mesma), a chamada de cima **fica esperando** a de baixo terminar. O Python guarda essas chamadas que esperam numa **pilha de chamadas**, como pratos empilhados: a última que entrou é a primeira que termina. É essa mesma pilha que o traceback mostra quando dá erro.
+
+### Vocabulário
+
+- **Recursão:** uma função que chama a si mesma.
+- **Caso-base:** a situação em que a função responde direto, sem se chamar de novo. Sem ele, a recursão não para.
+- **Caso recursivo:** a parte que chama a função de novo com um problema menor.
+- **Pilha de chamadas:** a lista das chamadas que estão esperando uma resposta. A mais recente fica em cima.
+- **`RecursionError`:** a exceção que o Python levanta quando a pilha passa do limite, que é 1000 chamadas por padrão (`sys.getrecursionlimit()`).
+- **Dividir para conquistar:** quebrar o problema em pedaços menores do mesmo tipo, resolver cada pedaço e juntar as respostas.
+
+### Exemplo básico, linha a linha: contagem regressiva
+
+```python
+def regressiva(n):
+    if n == 0:            # caso-base
+        print("Fogo!")
+        return
+    print(n)
+    regressiva(n - 1)     # caso recursivo: problema menor
+
+regressiva(3)
+# 3
+# 2
+# 1
+# Fogo!
+```
+
+1. `regressiva(3)`: 3 não é 0, então imprime `3` e chama `regressiva(2)`.
+2. `regressiva(2)`: imprime `2` e chama `regressiva(1)`.
+3. `regressiva(1)`: imprime `1` e chama `regressiva(0)`.
+4. `regressiva(0)`: caso-base. Imprime `Fogo!` e para.
+
+O `n - 1` é o que faz o problema **diminuir** até chegar no caso-base.
+
+### Exemplo aprofundado: fatorial e a pilha que volta
+
+O fatorial de 4 é `4 × 3 × 2 × 1 = 24`. Repare que `4! = 4 × 3!`: o problema contém uma versão menor dele.
+
+```python
+def fatorial(n):
+    if n == 1:                    # caso-base
+        return 1
+    return n * fatorial(n - 1)    # caso recursivo
+
+print(fatorial(4))   # 24
+```
+
+A pilha cresce na ida e se desfaz na volta:
+
+```text
+fatorial(4) espera 4 * fatorial(3)
+  fatorial(3) espera 3 * fatorial(2)
+    fatorial(2) espera 2 * fatorial(1)
+      fatorial(1) devolve 1            ← caso-base
+    fatorial(2) devolve 2 * 1 = 2
+  fatorial(3) devolve 3 * 2 = 6
+fatorial(4) devolve 4 * 6 = 24
+```
+
+Na ida ninguém termina: cada chamada fica esperando. Só quando o caso-base responde é que as contas acontecem, de baixo para cima.
+
+### Dividir para conquistar
+
+A **busca binária** que você implementou já é dividir para conquistar: olha o meio e resolve o mesmo problema numa metade. Você escreveu com `while`, mas ela também pode ser escrita com recursão, em que cada chamada recebe a metade que sobrou.
+
+Outro exemplo é o **quicksort**, uma ordenação bem mais rápida que a seleção. A ideia, rastreada à mão em `[5, 2, 9, 1, 6]`:
+
+1. Escolha um **pivô**, por exemplo o primeiro: `5`.
+2. Divida o resto em **menores** que o pivô, `[2, 1]`, e **maiores**, `[9, 6]`.
+3. Ordene cada parte **do mesmo jeito**, que é a recursão: `[2, 1]` vira `[1, 2]`, e `[9, 6]` vira `[6, 9]`.
+4. Junte: `[1, 2] + [5] + [6, 9] = [1, 2, 5, 6, 9]`.
+
+Caso-base: uma lista com 0 ou 1 item já está ordenada.
+
+### Erros comuns e limites
+
+- **Esquecer o caso-base** (ou nunca chegar nele): a função se chama para sempre, até `RecursionError: maximum recursion depth exceeded`.
+- **O problema não diminui:** chamar `regressiva(n)` em vez de `regressiva(n - 1)` dá o mesmo `RecursionError`.
+- **Esquecer o `return` no caso recursivo:** escrever `n * fatorial(n - 1)` sem `return` faz a chamada de baixo devolver `None`, e a de cima tenta `3 * None`: `TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'`. É o card da função sem `return`, agora dentro da recursão.
+- **Limite de profundidade:** o Python aceita cerca de 1000 chamadas empilhadas. Para percorrer uma lista grande item por item, um laço é melhor. A recursão brilha quando o problema se divide (metades, pastas dentro de pastas).
+
+### Checagens de entendimento
+
+Não são evidência.
+
+1. Preveja a saída de `regressiva(2)`.
+2. Na `fatorial`, qual é o caso-base? E o que acontece se ele for apagado?
+3. Desenhe a pilha de `fatorial(3)`: o que cada chamada espera e o que devolve.
+4. Por que esquecer o `return` no caso recursivo dá `TypeError`, e não um resultado errado?
+
+### Ponte para o projeto
+
+O cofre e o estudo têm estruturas aninhadas: pastas dentro de pastas, lições com sessões, cards com histórico de revisões. Percorrer uma estrutura de profundidade desconhecida é o caso típico da recursão. E a busca binária da Tarefa 1 pode ser reescrita com recursão, dividindo a lista de sessões a cada chamada.
+
 ## Plano de prática
 
 Comece a sessão seguinte com uma recuperação curta da teoria da parte 1, antes de qualquer código.
@@ -346,6 +464,33 @@ Regras:
 
 Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos-limite incluídos) e plano em português, num `.md` em `segundo-cerebro/exercicios/`.
 
+### Tarefa 3: busca binária recursiva (enunciado entregue em 2026-11-12)
+
+O app guarda as lições concluídas do estudo fictício, **ordenadas pela data de conclusão**, sem datas repetidas:
+
+```python
+licoes = [
+    {"lesson_id": "l01", "concluida_em": "2026-09-07"},
+    {"lesson_id": "l03", "concluida_em": "2026-09-12"},
+    {"lesson_id": "l04", "concluida_em": "2026-09-17"},
+    {"lesson_id": "l02", "concluida_em": "2026-10-06"},
+    {"lesson_id": "l15", "concluida_em": "2026-10-23"},
+    {"lesson_id": "l16", "concluida_em": "2026-10-31"},
+    {"lesson_id": "l17", "concluida_em": "2026-11-20"},
+]
+```
+
+Regras:
+
+1. Uma função acha a lição concluída numa data com **busca binária recursiva**: ela olha o meio do trecho e **chama a si mesma** com a metade que pode ter a data. Nada de `while` nem `for` dentro dela.
+2. Ela devolve o `lesson_id`, ou `None` se nenhuma lição foi concluída naquela data.
+3. A lista recebida não muda.
+4. Lista vazia: `None`.
+5. Um comentário no código diz qual é o caso-base (ou os casos-base) e por que o problema diminui a cada chamada.
+6. `assert` com os esperados calculados **à mão**: primeira, última, uma do meio, data antes de todas, data entre duas, data depois de todas, lista vazia e lista com uma lição só.
+
+Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos-limite incluídos) e plano em português, num `.md` em `segundo-cerebro/exercicios/`.
+
 ### Tarefa 2: cards mais atrasados (enunciado entregue em 2026-11-09)
 
 Na revisão, o app mostra primeiro os cards com a data mais antiga. Os cards do estudo fictício chegam **fora de ordem**, sem datas repetidas:
@@ -377,6 +522,21 @@ Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos
 - **Saída de `weak_notacao-custo-big-o`:** explicar corretamente, com contagem de passos, a diferença entre custo constante, linear e logarítmico.
 
 ## Progresso
+
+### Onde paramos (2026-11-12): recursão feita, faltam debugging e transferência
+
+- **Sessão:** `session_2026-11-12-lesson17-recursao-teoria-01`, 18:39–19:47 (cerca de 70 min de 60).
+- **Cards:** 5 de 5 certos. O `tempos-03` saiu certo pela primeira vez.
+- **Teoria da parte 3a (recursão):** dada em três blocos. Checagens (não são evidência):
+  - a volta da pilha de `fatorial(3)` saiu embaralhada; ensinada com a fila de recados, e a de `soma_ate(3)` saiu certa;
+  - no caso sem `return`, achou que a recursão ficava infinita; ensinado que o caso-base é alcançado e que o `None` vem da chamada do meio;
+  - `regressiva(2)`, o caso-base e o `RecursionError` sem caso-base saíram certos.
+- **Tarefa 3 (busca binária recursiva):**
+  - decomposição correta de primeira (`evidence_logica-recursao-decomposicao-01`, apoio);
+  - código v1: função certa, mas sem `assert` nem comentário (`evidence_logica-recursao-codigo-01`, parcial);
+  - código v2, só com a conferência: completo e correto (`evidence_logica-recursao-codigo-02`). Usa compreensão de lista, que ainda não foi ensinada e vai para a `lesson_19`.
+- **Regra 9:** busca binária, ordenação, recursão e Feynman ✅. Faltam dois defeitos com hipótese e a transferência.
+- **Próximo:** teoria da parte 3b (debugging por hipótese).
 
 ### Onde paramos (2026-11-10): ordenação no código e Feynman, faltam debugging e transferência
 

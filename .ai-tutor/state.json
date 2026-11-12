@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 414,
-  "updated_at": "2026-11-10T17:50:00-03:00",
+  "revision": 427,
+  "updated_at": "2026-11-12T19:45:43-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -334,7 +334,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-11-10",
+      "last_practice": "2026-11-12",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -364,7 +364,10 @@
         "evidence_logica-ordenacao-decomposicao-02",
         "evidence_logica-ordenacao-codigo-01",
         "evidence_logica-feynman-custos-01",
-        "evidence_logica-feynman-custos-02"
+        "evidence_logica-feynman-custos-02",
+        "evidence_logica-recursao-decomposicao-01",
+        "evidence_logica-recursao-codigo-01",
+        "evidence_logica-recursao-codigo-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -2865,6 +2868,57 @@
       "recorded_at": "2026-11-10T17:16:00-03:00",
       "result": "correct",
       "error": "Reclassificada de partial para correct em 2026-11-10 depois de objecao do aluno, relida pelos criterios literais (ideia central, contexto, justificativa). Os quatro custos estao certos na relacao com o dobro dos dados (igual, +1, dobra, quadruplica), com exemplos e a contagem do logaritmico; a binaria e o mecanismo da selecao estao certos. O 1.000.000 -> 4.000.000 da secao do quadratico vale para um custo quadratico generico (n x n), que a teoria da licao trata como O(n2), ignorando fatores constantes; para a selecao especificamente a conta e n x (n - 1) / 2 (499.500 -> 1.999.000). Ficam como notas de precisao, sem rebaixar: o porque do x 4 resumido em '2 x 2' sem nomear voltas e tamanho de cada volta; chamar o quadratico de 'busca'; a secao linear sem a contagem 1.000 -> 2.000 que a v1 tinha."
+    },
+    {
+      "evidence_id": "evidence_logica-recursao-decomposicao-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "kind": "supporting",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Tarefa 3 da lesson_17 (busca binaria recursiva nas licoes concluidas), decomposicao so com o enunciado: modulo 05/busca-binaria-recursiva.md (sha256 b90b05f3...). Entrada com esquerda/direita e direita=None, os dois casos-base (trecho vazio e achou), por que o trecho encolhe, rastreios a mao dos 9 casos (incluindo uma licao so, existe e nao existe) e pseudocodigo recursivo sem laco, com return nas chamadas recursivas. Todos os esperados conferem com o rastreio do tutor.",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-12-lesson17-recursao-teoria-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 05/busca-binaria-recursiva.md (sha256 b90b05f3be3600a0...)"
+      },
+      "recorded_at": "2026-11-12T19:42:00-03:00",
+      "result": "correct",
+      "error": ""
+    },
+    {
+      "evidence_id": "evidence_logica-recursao-codigo-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Tarefa 3 da lesson_17, codigo v1 mostrado a pedido do aluno no fim da sessao: busca_licao recursiva em modulo 05/busca_recursiva.py (sha256 ffc9ee6e...), com os dois casos-base, return nas chamadas recursivas e direita=None. O tutor rodou numa copia isolada: os 9 casos do enunciado devolvem o esperado e a lista nao muda.",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-12-lesson17-recursao-teoria-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 05/busca_recursiva.py (sha256 ffc9ee6e23a353b6...); main so imprime l16"
+      },
+      "recorded_at": "2026-11-12T19:44:00-03:00",
+      "result": "partial",
+      "error": "A funcao esta correta, mas a entrega ainda nao tem os asserts com os esperados a mao (regra 6) nem o comentario dos casos-base (regra 5); o main so imprime uma busca. Conferencia generica pedida uma vez; a correcao fica para a proxima sessao."
+    },
+    {
+      "evidence_id": "evidence_logica-recursao-codigo-02",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Tarefa 3 da lesson_17, codigo v2 depois so da conferencia generica: busca_licao recursiva (busca_recursiva.py, sha256 098a5416...) com comentario dos dois casos-base e de por que o trecho encolhe, os 9 asserts com os esperados a mao da decomposicao e assert de que a lista original nao muda. Cobre a parte de recursao e dividir para conquistar do objetivo da licao. Ajuda: so a conferencia generica. Declaracao: IA so na formatacao do texto (vale o declarado).",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-12-lesson17-recursao-teoria-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 05/busca_recursiva.py (sha256 098a54166631892d...); tutor rodou: 'Todos os testes passaram'"
+      },
+      "recorded_at": "2026-11-12T19:47:00-03:00",
+      "result": "correct",
+      "error": "Nenhum erro. Observacao: a copia da lista usa compreensao de lista ([dict(card) for card in licoes]), ainda nao ensinada nesta formacao; nao rebaixa, entra como conteudo a ensinar na lesson_19."
     }
   ],
   "sessions": [
@@ -4626,6 +4680,54 @@
         "fora do estudo: segundo-cerebro/exercicios/modulo 05/busca_ordenacao.py (aluno, sem commit)",
         "fora do estudo: nota de sessao no cofre"
       ]
+    },
+    {
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-11-12T18:39:00-03:00",
+      "ended_at": "2026-11-12T19:45:43-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) 5 cards vencidos (retrieval_first): next-default-01, fatiar-pop-01, tempos-01, tempos-02, tempos-03. (2) Teoria da parte 3a da lesson_17 (theory_first, tema novo): recursao (caso-base, caso recursivo, pilha de chamadas) e dividir para conquistar, com checagens. Debugging por hipotese fica para a parte 3b.",
+      "cognitive_core": "Na pratica (proxima sessao): reconhecer e escrever uma funcao recursiva pequena com caso-base. Nesta sessao, so a teoria e as checagens (nao sao evidencia).",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Aquisicao de tema novo num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-11-12T18:39 com 60 min (informado pelo aluno), skill e87e2d7, theory_first. Recursao e tema novo: sem teoria escrita. Encontrado .ai-tutor/state.json.tmp vazio (0 bytes, 10/11 18:40), nao criado pelos scripts do tutor; mantido sem mexer. | 18:40-18:44 cards 5 de 5 corretos (next-default-01, fatiar-pop-01, tempos-01, tempos-02 com imprecisao, tempos-03 correto pela primeira vez depois de dois parciais). | Teoria da parte 3a (recursao, caso-base, pilha de chamadas, dividir para conquistar com quicksort rastreado) escrita na licao; fonte source_python-recursionerror. | Teoria 3a dada em 3 blocos; checagens (nao sao evidencia): regressiva(2) certo; pilha de fatorial(3) com a ida certa e a volta embaralhada (fatorial(3) devolvendo antes e duas vezes), ensinado com a fila de recados; soma_ate(3) depois certo; sem return: rodou o codigo (TypeError) e explicou como recursao infinita que nunca chega ao caso-base, ensinado que o caso-base e alcancado e o None vem de fatorial(2); caso-base n == 1 e RecursionError sem ele, certo. | 19:16 Tarefa 3 (busca binaria recursiva nas licoes concluidas) entregue e gravada na licao; pratica em assessment a partir daqui. | 19:41 decomposicao da Tarefa 3 correta e autonoma na primeira versao: evidence_logica-recursao-decomposicao-01 (supporting). busca_recursiva.py ja existe (1025 bytes, 19:40), ainda nao apresentado. | 19:42 codigo v1 mostrado: funcao correta (casos do tutor em copia isolada certos), entrega parcial (sem asserts nem comentario dos casos-base). evidence_logica-recursao-codigo-01 (application, parcial). Conferencia generica pedida uma vez. | 19:44 codigo v2 depois so da conferencia: completo e correto. Pergunta neutra: IA so na formatacao. evidence_logica-recursao-codigo-02 (application, autonoma, correta). Regra 9: busca binaria, ordenacao, recursao e Feynman cumpridos; faltam dois defeitos com hipotese e transferencia. | Encerrada a pedido do aluno (~70 min de 60). Ultimo comportamento: codigo recursivo correto depois so da conferencia. Sem andaime.",
+      "evidence_ids": [
+        "evidence_logica-recursao-decomposicao-01",
+        "evidence_logica-recursao-codigo-01",
+        "evidence_logica-recursao-codigo-02"
+      ],
+      "difficulty": "medium",
+      "next_step": "Nova sessao da lesson_17: uns 5 cards vencidos, recuperacao curta da parte 3a (volta da pilha, None sem return), depois a teoria da parte 3b (theory_first, tema novo): debugging por hipotese (prever, rodar, comparar; print dirigido; teste que falha antes da correcao), com o modelo dos dois tempos de erro. Depois: dois defeitos com hipotese escrita e a transferencia em codigo criado pelo tutor a partir do projeto.",
+      "files_changed": [
+        ".ai-tutor/state.json",
+        ".ai-tutor/cards.json",
+        ".ai-tutor/sources.json",
+        ".ai-tutor/learner-profile.json",
+        "flashcards.md",
+        "lessons/17-algoritmos-debugging.md",
+        "session-log.md",
+        "fora do estudo: segundo-cerebro/exercicios/modulo 05/busca-binaria-recursiva.md e busca_recursiva.py (aluno, sem commit)",
+        "fora do estudo: nota de sessao, hot.md e pendencias.md no cofre e copia no Drive"
+      ]
     }
   ],
   "lessons": [
@@ -5188,7 +5290,8 @@
         "session_2026-11-04-lesson17-busca-binaria-01",
         "session_2026-11-05-lesson17-ordenacao-teoria-01",
         "session_2026-11-09-lesson17-ordenacao-pratica-01",
-        "session_2026-11-10-lesson17-ordenacao-codigo-01"
+        "session_2026-11-10-lesson17-ordenacao-codigo-01",
+        "session_2026-11-12-lesson17-recursao-teoria-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -5208,7 +5311,7 @@
         "expected_transfer": "diagnosticar sozinho defeito em codigo criado pelo tutor a partir do projeto Segundo Cerebro, num modulo ou conjunto de dados ainda nao usado na licao (Python Lab descontinuado em 2026-11-10)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente. | 2026-11-09: Tarefa 2 (cards mais atrasados) entregue; decomposicao v1 parcial, v2 correta depois da conferencia. Codigo pendente. | 2026-11-10: codigo da ordenacao autonomo e correto (evidence_logica-ordenacao-codigo-01); Feynman v1 parcial, v2 correto depois de objecao aceita (evidence_logica-feynman-custos-02). Faltam dois defeitos com hipotese e transferencia. | 2026-11-10: Python Lab retirado da formacao (decisao do aluno); a transferencia passa a usar codigo criado pelo tutor a partir do projeto.",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente. | 2026-11-09: Tarefa 2 (cards mais atrasados) entregue; decomposicao v1 parcial, v2 correta depois da conferencia. Codigo pendente. | 2026-11-10: codigo da ordenacao autonomo e correto (evidence_logica-ordenacao-codigo-01); Feynman v1 parcial, v2 correto depois de objecao aceita (evidence_logica-feynman-custos-02). Faltam dois defeitos com hipotese e transferencia. | 2026-11-10: Python Lab retirado da formacao (decisao do aluno); a transferencia passa a usar codigo criado pelo tutor a partir do projeto. | 2026-11-12: teoria da parte 3a (recursao) escrita e dada; Tarefa 3 (busca binaria recursiva): decomposicao correta e codigo correto depois da conferencia (evidence_logica-recursao-codigo-02). Faltam debugging por hipotese (teoria 3b e dois defeitos) e transferencia.",
       "file": "lessons/17-algoritmos-debugging.md"
     },
     {
@@ -6851,6 +6954,51 @@
       "outcome": "correct",
       "support_level": 0,
       "recorded_at": "2026-11-10T16:48:17-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_14cbb6be-ddfc-411a-8eb0-4b9f5fd82c9f",
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_next-default-01: next(leitor) em arquivo vazio | resposta: levanta StopIteration; evito com next(leitor, None). Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-12T18:39:40-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_a8c6d0e6-ed83-4268-bfe0-e973f268e819",
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_fatiar-pop-01: result[1:] x pop(0) | resposta: pop muda a lista original e devolve o item; fatiar cria copia. Correto.",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-12T18:40:40-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_6856dcb0-201e-455d-90b0-70cfee2d67b8",
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-01: dois tipos de erro | resposta: excecao e erro de sintaxe. Correto (nomeou os dois; o momento de cada um nao era pedido).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-12T18:41:19-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_a291f1ea-42f9-4bc2-b0e1-54a33624ead2",
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-02: sem cabecalho Traceback | resposta: o programa nem chegou a ser executado, por um erro no proprio programa. Correto na ideia central (nada executou); impreciso em 'erro no proprio programa' (foi reprovado na analise, erro de sintaxe).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-12T18:42:37-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_6f5363ae-cab6-4f53-8841-3df80ba5a19c",
+      "session_id": "session_2026-11-12-lesson17-recursao-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-03: ultima linha x bloco acima | resposta: a ultima linha informa o erro e o tipo de erro; o bloco acima mostra onde o erro foi disparado, apontando a linha. Correto (tipo + detalhe; antes parcial em 27/10 e 05/11).",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-12T18:44:32-03:00"
     }
   ]
 }

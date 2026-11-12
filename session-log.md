@@ -4,6 +4,21 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-12-lesson17-recursao-teoria-01`
+
+- Status: concluída (18:39–19:47, ~70 min de 60 informados). Skill `e87e2d7`. Modo `learning` na teoria e `assessment` na Tarefa 3. Encerrada a pedido do aluno.
+- **Cards (retrieval_first), 5 de 5 certos:** `next-default-01`, `fatiar-pop-01`, `tempos-01`, `tempos-02` (impreciso: "erro no próprio programa" é erro de sintaxe) e `tempos-03`, certo depois de dois parciais.
+- **Teoria da parte 3a (`theory_first`, tema novo):** recursão, caso-base, caso recursivo, pilha de chamadas, `RecursionError`, dividir para conquistar (busca binária e quicksort rastreado). Fonte `source_python-recursionerror`.
+- **Checagens (não são evidência):** `regressiva(2)` certo. A pilha de `fatorial(3)` teve a ida certa e a volta embaralhada; ensinado com a fila de recados, e `soma_ate(3)` saiu certo. No `fatorial` sem `return`, rodou e explicou como recursão infinita; ensinado que o caso-base é alcançado e o `None` vem de `fatorial(2)`. Caso-base e `RecursionError`: certos.
+- **Tarefa 3, busca binária recursiva nas lições concluídas** (`segundo-cerebro/exercicios/modulo 05/`):
+  - `busca-binaria-recursiva.md`: 9 rastreios à mão corretos de primeira. `evidence_logica-recursao-decomposicao-01` (`supporting`, correta).
+  - `busca_recursiva.py` v1: função certa nos 9 casos, mas sem `assert` nem comentário dos casos-base. `evidence_logica-recursao-codigo-01` (`application`, parcial). Conferência genérica pedida uma vez.
+  - v2, cerca de 2 minutos depois: completa e correta. Pergunta neutra (compreensão de lista não ensinada): "a IA só formatou o texto". Vale o declarado. `evidence_logica-recursao-codigo-02` (`application`, autônoma, correta).
+- **Regra 9 (`lesson_17`):** busca binária, ordenação, recursão e Feynman ✅. Faltam dois defeitos com hipótese e a transferência.
+- **Cofre:** pré-condição da reestruturação conferida; nota de sessão, `hot.md` e `pendencias.md` gravados e copiados para o Drive, com os hashes iguais.
+- **Observação:** `.ai-tutor/state.json.tmp` vazio (0 bytes, 10/11 18:40), não criado pelos scripts do tutor; mantido sem mexer.
+- **Próximo passo:** teoria da parte 3b (debugging por hipótese), depois os dois defeitos e a transferência.
+
 ## Pedidos de ajuste (2026-11-10, depois da sessão)
 
 - **Carga livre, sem meta de 10 h por semana:** pedido de mudança estrutural. A carga está congelada até a `lesson_13` (`AGENTS.md`, "Formação fechada"). Pela regra, o pedido **não foi aplicado nesta conversa**: fica registrado em `docs/compose/spec/pedido-carga-livre.md` e será avaliado no fechamento da `lesson_17`, com justificativa escrita.

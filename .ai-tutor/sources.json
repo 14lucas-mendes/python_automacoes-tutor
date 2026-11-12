@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 9,
+  "revision": 10,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -360,7 +360,23 @@
         "topic_logica-algoritmos"
       ],
       "authority_reason": "Documentacao oficial do Python: sorted devolve lista nova, list.sort modifica e devolve None, key, reverse e estabilidade."
+    },
+    {
+      "source_id": "source_python-recursionerror",
+      "title": "Built-in Exceptions: RecursionError (Python Documentation)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/library/exceptions.html#RecursionError",
+      "publication_date": null,
+      "accessed_at": "2026-11-12",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "authority_reason": "Documentacao oficial do Python: RecursionError deriva de RuntimeError e e levantada quando a profundidade maxima de recursao (sys.getrecursionlimit) e excedida."
     }
   ],
-  "updated_at": "2026-11-05T19:48:00-03:00"
+  "updated_at": "2026-11-12T18:50:00-03:00"
 }

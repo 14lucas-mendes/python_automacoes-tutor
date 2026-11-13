@@ -19,7 +19,7 @@ Estrutura: **Teoria** (para reler), **Plano de prática** e **Progresso**.
 
 > Escrita em 2026-11-02 para a abertura da lição (`theory_first`, tema novo). Material do tutor: **não é evidência** e não muda domínio. Os exemplos usam ônibus, um jogo de adivinhar e preços de propósito, para não entregar a tarefa do projeto.
 >
-> A teoria tem partes. A **parte 1** (custo em passos e busca) foi dada em 02/11. As partes seguintes (ordenação, recursão e dividir para conquistar, debugging por hipótese) abrem as próximas sessões.
+> A teoria tem partes: **parte 1** (custo em passos e busca) em 02/11, **parte 2** (ordenação) em 05/11, **parte 3a** (recursão e dividir para conquistar) em 12/11 e **parte 3b** (debugging por hipótese) em 13/11.
 
 ### Parte 1: custo em passos e busca
 
@@ -429,6 +429,177 @@ Não são evidência.
 
 O cofre e o estudo têm estruturas aninhadas: pastas dentro de pastas, lições com sessões, cards com histórico de revisões. Percorrer uma estrutura de profundidade desconhecida é o caso típico da recursão. E a busca binária da Tarefa 1 pode ser reescrita com recursão, dividindo a lista de sessões a cada chamada.
 
+### Parte 3b: debugging por hipótese
+
+> Escrita em 2026-11-13 (`theory_first`, tema novo). Exemplos com chuva e carrinho de compras, diferentes dos defeitos que serão plantados nos índices da `lesson_16`. Saídas conferidas por execução. Fonte: Python Documentation, [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html) (`source_python-errors-exceptions`).
+
+### Problema e porquê
+
+Um **defeito** (em inglês, *bug*) é um trecho de código que faz o programa se comportar diferente do esperado. O que você vê é o **sintoma** (um número errado, uma mensagem de erro); o que precisa achar é a **causa** (a linha e o motivo).
+
+O jeito mais comum de procurar a causa é a tentativa e erro: mudar uma coisa, rodar, mudar outra, rodar de novo. Funciona às vezes, mas tem três problemas:
+
+1. gasta tempo, porque cada mudança é um chute;
+2. quando "funciona", você não sabe **por quê**, e o defeito pode voltar;
+3. você pode mudar três coisas de uma vez, consertar uma e estragar outra.
+
+**Debugging por hipótese** é procurar a causa como um médico: ele não receita cinco remédios para ver qual funciona. Ele olha o sintoma, diz o que acha que é ("é infecção, porque tem febre e a garganta está vermelha"), pede o exame que confirma ou descarta, e só então trata.
+
+### Como funciona: o ciclo em quatro passos
+
+1. **Reproduzir.** Ache o menor exemplo que mostra o defeito e escreva três coisas: a entrada, o **esperado** (calculado à mão) e o **obtido** (o que o programa deu). Sem isso, você nem sabe se consertou.
+2. **Escrever a hipótese, com uma previsão.** Uma frase no formato: *"Acho que a causa é X, porque Y. Se eu estiver certo, quando eu fizer Z vou ver W."* A previsão é o que torna a hipótese testável.
+3. **Testar sem consertar ainda.** Rode o exame que a hipótese pediu (um `print` dirigido, um rastreio à mão, uma chamada isolada) e **compare** o previsto com o visto.
+   - Bateu: a hipótese está confirmada. Vá para o passo 4.
+   - Não bateu: a hipótese foi descartada. Isso **não é fracasso**: você eliminou um suspeito. Escreva a próxima hipótese.
+4. **Consertar com um teste que falha antes.** Escreva o `assert` do exemplo do passo 1 e rode: ele **tem que falhar** (prova que o teste enxerga o defeito). Conserte só a causa. Rode de novo: agora ele passa. Rode também os outros testes, para ver se nada quebrou.
+
+### Os três tempos do erro
+
+Antes de procurar, vale saber **quem avisa** e **quando**. O Python separa os erros em dois tempos, e existe um terceiro caso que ninguém avisa:
+
+| Tipo | Quando aparece | Quem avisa | Sinal |
+|---|---|---|---|
+| **Erro de sintaxe** (`SyntaxError`) | Antes de rodar: o Python lê o arquivo inteiro e reprova | O Python, sem executar nenhuma linha | Mensagem **sem** `Traceback (most recent call last)` |
+| **Exceção** (`TypeError`, `NameError`, `KeyError`...) | Durante a execução, na linha que falhou | O Python, com o rastro das chamadas | Mensagem **com** traceback |
+| **Erro de lógica** | Nunca: o programa termina normalmente | **Ninguém.** Só um teste com o esperado à mão pega | Resultado errado, sem mensagem |
+
+Exemplo de erro de sintaxe, conferido por execução. A terceira linha (`print("oi")`) **não** roda, porque nada roda:
+
+```python
+def f(:
+    return 1
+print("oi")
+```
+
+```
+  File "sint.py", line 1
+    def f(:
+          ^
+SyntaxError: invalid syntax
+```
+
+O erro de lógica é o mais perigoso, porque parece sucesso. É por isso que o método do bloco exige o esperado calculado à mão **antes** do código.
+
+### Vocabulário
+
+- **Defeito (*bug*):** o trecho de código errado.
+- **Sintoma:** o que se observa por fora (resultado errado, exceção).
+- **Causa:** a linha e o motivo que produzem o sintoma.
+- **Reproduzir:** fazer o defeito aparecer de propósito, com uma entrada conhecida.
+- **Hipótese:** um palpite sobre a causa, com uma previsão que pode dar errado.
+- **`print` dirigido:** um `print` colocado num ponto escolhido pela hipótese, mostrando só as variáveis de que ela fala. O contrário é espalhar `print` por todo lado.
+- **Teste de regressão:** o `assert` que falhava antes da correção e passa depois. Ele fica no código para avisar se o defeito voltar.
+
+### Exemplo básico, linha a linha: dias de chuva forte
+
+A função deveria contar quantos dias tiveram chuva **igual ou acima** do limite:
+
+```python
+def dias_com_chuva_forte(chuvas_mm, limite):
+    """Conta quantos dias tiveram chuva igual ou acima do limite."""
+    contagem = 0
+    for i in range(1, len(chuvas_mm)):
+        if chuvas_mm[i] >= limite:
+            contagem += 1
+    return contagem
+```
+
+**Passo 1, reproduzir.** Entrada `[12, 3, 15]` com limite `10`. Esperado à mão: o 12 e o 15 passam do limite, então **2**. Obtido: **1**. Nenhuma mensagem de erro: é erro de lógica.
+
+**Passo 2, primeira hipótese.** "Acho que a causa é o `>=`, que deveria ser `>`." Previsão: se fosse isso, só um dia com **exatamente** 10 mm seria contado errado. Mas na entrada não existe dia com 10 mm, e mesmo assim faltou um. A hipótese **não explica o sintoma**: descartada sem mexer no código.
+
+**Passo 2 de novo, segunda hipótese.** "Acho que o laço não olha todos os dias. Se for isso, um `print` dentro do laço vai mostrar menos de 3 dias."
+
+**Passo 3, testar.** `print` dirigido, só com o que a hipótese pede:
+
+```python
+    for i in range(1, len(chuvas_mm)):
+        print("olhando dia", i, "->", chuvas_mm[i], "mm")
+```
+
+Saída real:
+
+```
+olhando dia 1 -> 3 mm
+olhando dia 2 -> 15 mm
+1
+```
+
+Previsto: menos de 3 dias. Visto: 2 dias, e falta o dia 0 (os 12 mm). **Confirmada.** A causa é o `range(1, ...)`, que começa no índice 1.
+
+**Passo 4, consertar com teste que falha antes.**
+
+```python
+assert dias_com_chuva_forte([12, 3, 15], 10) == 2   # falha com o código antigo
+```
+
+Conserta só a causa, `range(len(chuvas_mm))`, apaga o `print` e roda: o `assert` passa. Um segundo teste protege o caso que escondia o defeito: chuva forte **só no primeiro dia**, `dias_com_chuva_forte([20, 1, 1], 10) == 1`.
+
+### Exemplo aprofundado: o erro explode longe da causa
+
+```python
+def preco_com_desconto(preco, cupom):
+    if cupom == "DEZ":
+        return preco * 0.9
+    elif cupom == "VINTE":
+        return preco * 0.8
+
+
+def total_carrinho(itens, cupom):
+    total = 0
+    for preco in itens:
+        total += preco_com_desconto(preco, cupom)
+    return total
+
+
+print(total_carrinho([100, 50], "DEZ"))
+print(total_carrinho([100, 50], ""))
+```
+
+Saída real (caminho do arquivo encurtado):
+
+```
+135.0
+Traceback (most recent call last):
+  File "carrinho.py", line 16, in <module>
+    print(total_carrinho([100, 50], ""))
+  File "carrinho.py", line 11, in total_carrinho
+    total += preco_com_desconto(preco, cupom)
+TypeError: unsupported operand type(s) for +=: 'int' and 'NoneType'
+```
+
+**Como ler.** A última linha diz o quê: somar um `int` com `None`. O bloco acima diz onde: na linha 11, dentro de `total_carrinho`. Mas a linha 11 é onde a conta **falhou**, não onde o `None` **nasceu**.
+
+**Hipótese.** "O `None` vem de `preco_com_desconto`: com cupom vazio, nenhum `if` é verdadeiro, a função chega ao fim sem `return` e devolve `None` sozinha. Se eu estiver certo, `print(preco_com_desconto(100, ""))` vai mostrar `None`."
+
+**Teste.** Saída real: `None`. **Confirmada.** O traceback apontou a vítima (`total_carrinho`); o culpado estava em outra função.
+
+**Conserto.** O teste que falha antes: `assert total_carrinho([100, 50], "") == 150`. A correção é um `return preco` no fim de `preco_com_desconto` (sem cupom válido, sem desconto). Repare no que **não** fazer: trocar a linha 11 por um `if valor is not None` esconderia o sintoma, e o carrinho sem cupom passaria a custar 0.
+
+### Erros comuns e limites
+
+- **Mudar várias coisas de uma vez.** Se funcionar, você não sabe qual mudança consertou. Uma hipótese, uma mudança.
+- **Consertar o sintoma, não a causa.** Um `try`/`except` ou um `if` que engole o erro deixa o programa quieto e errado.
+- **`print` em todo lugar.** Vira ruído. O `print` dirigido responde a uma pergunta da hipótese.
+- **Esquecer os `print` no código** depois de consertar.
+- **Consertar sem o teste que falha antes.** Se o `assert` já passava com o código errado, ele não testa o defeito.
+- **Acreditar na hipótese sem testar.** Ela é um palpite até a previsão bater.
+- **"Rodou sem erro, então está certo."** Erro de lógica roda sem erro. Quem pega é o esperado à mão.
+
+### Checagens de entendimento
+
+Não são evidência.
+
+1. No exemplo da chuva, a primeira hipótese foi descartada **sem mexer no código**. Como?
+2. Um arquivo dá `SyntaxError` e o `print` da primeira linha não aparece. Por quê?
+3. Por que o `assert` tem que **falhar** antes da correção?
+4. No carrinho, o traceback aponta a linha 11. Onde estava a causa, e por que a linha apontada é outra?
+
+### Ponte para o projeto
+
+Os índices que você escreveu na `lesson_16` (tópico → evidências e o resumo do histórico de cards) vão voltar com **defeitos plantados** pelo tutor. Para cada um: reproduzir com esperado e obtido, escrever a hipótese com previsão **antes** de rodar qualquer `print`, testar, e só então consertar com o teste que falha antes.
+
 ## Plano de prática
 
 Comece a sessão seguinte com uma recuperação curta da teoria da parte 1, antes de qualquer código.
@@ -491,6 +662,47 @@ Regras:
 
 Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos-limite incluídos) e plano em português, num `.md` em `segundo-cerebro/exercicios/`.
 
+### Defeito 1: índice de evidências que perde itens (enunciado entregue em 2026-11-13)
+
+O tutor reescreveu o Índice 1 da `lesson_16` (tópico → evidências) e **plantou um defeito**. Os `assert` antigos foram tirados.
+
+```python
+topicos = ["topic_python", "topic_sql", "topic_git"]
+
+evidencias = [
+    {"evidence_id": "ev_01", "topic_id": "topic_python"},
+    {"evidence_id": "ev_02", "topic_id": "topic_git"},
+    {"evidence_id": "ev_03", "topic_id": "topic_python"},
+    {"evidence_id": "ev_04", "topic_id": "topic_react"},
+]
+
+
+def classificar_indice(evidencias, topicos):
+    """Para cada topico, os IDs das evidencias dele, na ordem de evidencias."""
+    result = {}
+    for topico in topicos:
+        result[topico] = []
+    for evidencia in evidencias:
+        topico = evidencia["topic_id"]
+        if topico in result:
+            result[topico] = [evidencia["evidence_id"]]
+    return result
+
+
+print(classificar_indice(evidencias, topicos))
+```
+
+**Sintoma relatado:** "Na tela do tópico Python aparece só uma evidência, mas eu sei que registrei mais de uma."
+
+Siga o ciclo, **na ordem**, num `.md` em `segundo-cerebro/exercicios/modulo 05/`:
+
+1. **Reproduzir:** a entrada, o esperado calculado à mão e o obtido.
+2. **Hipótese com previsão**, escrita **antes** de rodar qualquer `print`: "acho que a causa é X, porque Y; se eu estiver certo, quando eu fizer Z vou ver W".
+3. **Testar sem consertar:** o `print` dirigido (ou rastreio) e o que apareceu. Se a previsão não bater, escreva a próxima hipótese.
+4. **Consertar com teste que falha antes:** o `assert` do passo 1 rodado **antes** da correção (copie a saída da falha), a correção só da causa e o `assert` passando depois.
+
+O código corrigido, com o teste de regressão, vai num `.py` na mesma pasta.
+
 ### Tarefa 2: cards mais atrasados (enunciado entregue em 2026-11-09)
 
 Na revisão, o app mostra primeiro os cards com a data mais antiga. Os cards do estudo fictício chegam **fora de ordem**, sem datas repetidas:
@@ -522,6 +734,23 @@ Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos
 - **Saída de `weak_notacao-custo-big-o`:** explicar corretamente, com contagem de passos, a diferença entre custo constante, linear e logarítmico.
 
 ## Progresso
+
+### Onde paramos (2026-11-13): debugging por hipótese e Defeito 1, faltam Defeito 2 e transferência
+
+- **Sessão:** `session_2026-11-13-lesson17-debugging-teoria-01`, 11:47–13:01 (cerca de 74 min de 60).
+- **Card:** `git-diff-staged-01` parcial. O `--staged` saiu certo; o `git diff` puro foi descrito como "tudo o que não foi commitado", sem separar o que já passou pelo `git add`.
+- **Recuperação da parte 3a:** sem pista, não lembrou as duas partes. Com o código de `regressiva`, explicou o caso-base e o problema que diminui; os nomes foram retomados.
+- **Teoria da parte 3b (debugging por hipótese):** dada em três blocos. Checagens (não são evidência):
+  - médico: sintoma, hipótese e previsão certos (a previsão é o exame, não o tratamento);
+  - chuva: causa certa, mas a previsão era "consertar e ver 2"; ensinado que o passo 3 observa sem mexer;
+  - carrinho: lugar do `None` certo, sem o porquê e sem previsão;
+  - `SyntaxError` e o `print` que não aparece: certo;
+  - `assert` que falha antes: ideia parcial, ensinada com o alarme de fumaça.
+- **Defeito 1 (índice de evidências com sobrescrita):** `segundo-cerebro/exercicios/modulo 05/defeito_01.md` e `.py`.
+  - v1: ciclo completo no `.md`, com previsão exata, mas o `.py` ainda tinha o defeito (`evidence_logica-debugging-defeito1-01`, parcial);
+  - v2, só com a conferência: correção aplicada e `assert` passando (`evidence_logica-debugging-defeito1-02`, correta).
+- **Regra 9:** busca binária, ordenação, recursão, Feynman e Defeito 1 ✅. Faltam o Defeito 2 e a transferência.
+- **Próximo:** recuperação curta do ciclo de quatro passos e Defeito 2, plantado no Índice 3 da `lesson_16`.
 
 ### Onde paramos (2026-11-12): recursão feita, faltam debugging e transferência
 

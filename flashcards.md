@@ -350,7 +350,7 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-diff`
 - Status: `review`
-- Próxima revisão: `2026-11-12`
+- Próxima revisão: `2026-11-20`
 - Intervalo: `7 dias`
 
 ## card_git-push-u-01

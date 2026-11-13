@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 35,
+  "revision": 36,
   "updated_at": "2026-11-12T19:45:43-03:00",
   "declared_preferences": [
     {
@@ -371,6 +371,17 @@
         "note": "Na teoria de recursao, errou a volta da pilha e a origem do None sem return; acertou a checagem seguinte logo depois da explicacao. Na pratica, decomposicao correta de primeira e codigo completo cerca de 2 minutos depois da conferencia generica; codigo usa compreensao de lista ainda nao ensinada, declarando IA so na formatacao."
       },
       "recorded_at": "2026-11-12T19:45:43-03:00"
+    },
+    {
+      "observation_id": "profile_observation_193187ab-81ff-4f61-994e-8d8e47d3a4c7",
+      "session_id": "session_2026-11-13-lesson17-debugging-teoria-01",
+      "topic_id": "topic_logica-algoritmos",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Na recuperacao da recursao, nao lembrou as duas partes sem pista e explicou-as com o codigo de exemplo. Na teoria de debugging, acertou a causa do defeito exemplo mas propos como previsao consertar e ver o resultado. No Defeito 1, escreveu o ciclo completo com previsao exata, mas entregou o .py sem aplicar a correcao; corrigiu cerca de 2 minutos depois da conferencia generica. IA so na formatacao do md (declarado)."
+      },
+      "recorded_at": "2026-11-13T13:01:00-03:00"
     }
   ],
   "inferences": [],

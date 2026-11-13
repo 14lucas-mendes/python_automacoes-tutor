@@ -4,6 +4,20 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-13-lesson17-debugging-teoria-01`
+
+- Status: concluída (11:47–13:01, ~74 min de 60 informados). Skill `e87e2d7`. Modo `learning` na teoria e `assessment` no Defeito 1. Encerrada a pedido do aluno.
+- **Card (retrieval_first), o único vencido:** `git-diff-staged-01` parcial. `--staged` certo; o `git diff` puro descrito como "alterado e não commitado", sem separar o que já passou pelo `git add`. Volta em 20/11.
+- **Recuperação da parte 3a:** sem pista, não lembrou as duas partes da recursão (`incorrect`). Com o código de `regressiva` e as metades apontadas, explicou caso-base e problema que diminui (`correct`, `support_level` 2).
+- **Teoria da parte 3b (`theory_first`, tema novo):** debugging por hipótese (reproduzir, hipótese com previsão, testar sem consertar, consertar com teste que falha antes), `print` dirigido, teste de regressão e os três tempos do erro (sintaxe, exceção, lógica). Exemplos da chuva e do carrinho, conferidos por execução. Fonte `source_python-errors-exceptions`.
+- **Checagens (não são evidência):** médico certo (previsão misturada com tratamento); chuva com a causa certa e a previsão "consertar e ver 2", ensinado que o teste observa sem mexer; carrinho com o lugar do `None` certo, sem porquê nem previsão; `SyntaxError` certo; `assert` que falha antes parcial, ensinado com o alarme de fumaça.
+- **Defeito 1, índice de evidências com sobrescrita plantada** (`segundo-cerebro/exercicios/modulo 05/`):
+  - v1: `defeito_01.md` com o ciclo completo e previsão exata (`antes=['ev_01']`, `depois=['ev_03']`), mas o `defeito_01.py` ainda com o defeito; o tutor rodou e o `assert` falhou. `evidence_logica-debugging-defeito1-01` (`application`, parcial). Conferência genérica pedida uma vez.
+  - v2, cerca de 2 minutos depois: correção `+=` aplicada e `assert` passando. Pergunta neutra: "IA só para formatar o texto do md". Vale o declarado. `evidence_logica-debugging-defeito1-02` (`application`, autônoma, correta).
+- **Regra 9 (`lesson_17`):** busca binária, ordenação, recursão, Feynman e Defeito 1 ✅. Faltam o Defeito 2 e a transferência. `topic_logica-algoritmos` segue em 80.
+- **Observação:** a hipótese "antes de qualquer `print`" não tem como ser conferida pelo tutor (o `.md` foi salvo depois); vale o declarado.
+- **Próximo passo:** recuperação curta do ciclo e Defeito 2, plantado no Índice 3 da `lesson_16`.
+
 ## Material em vídeo: Cod3r e Guanabara (2026-11-12, depois da sessão)
 
 - **Pedido do aluno:** reduzir formações paralelas. A Cod3r (Formação DEV e Formação AI) e o curso de Python do Guanabara entram como material da formação Python; Faculdade e ICC continuam independentes.

@@ -83,6 +83,21 @@ Depois do pedido de unificação aceito no fecho da `lesson_15` (`docs/compose/s
 
 **Depois da `lesson_13`:** uma trilha de especialização em agentes, registrada como continuação prevista na seção 8 do `formacao-fechada.md`. A pasta `harnnes-engeniring` é o material de referência dela.
 
+## Material em vídeo (decisão do aluno, 2026-11-12)
+
+A Formação Cod3r (Formação DEV e Formação AI) e o curso de Python do Gustavo Guanabara (Curso em Vídeo) viram biblioteca de vídeos desta formação, encaixada nas lições que já existem. Não criam lição nova, não substituem a teoria escrita e não contam como evidência. A Faculdade e a formação ICC continuam independentes.
+
+| Lição | Destaques |
+|---|---|
+| `lesson_19` | Guanabara Curso Python POO (aulas 1 a 12); Cod3r AI › Python; Cod3r DEV › POO e Paradigmas |
+| `lesson_14` e `lesson_05` | Cod3r DEV › Git & Github, Terminal, Banco Relacional e SQL |
+| `lesson_18` | Cod3r DEV › Dominando Docker e Deploy em Produção |
+| `lesson_20` a `lesson_22` | Cod3r AI › Fundamentos de IA, Engenharia de Prompt, API da OpenAI com Python, MCP para Programadores, agentes e engenharia de contexto |
+| `lesson_10` a `lesson_13` | Cod3r DEV › TypeScript, React, Testes com Jest, README e carreira |
+| lógica em espiral | Guanabara exercícios #028 a #115, com a correção do vídeo só depois da tentativa |
+
+O mapa completo, as regras e a ponte para a ICC estão em `docs/compose/spec/material-video-python.md`.
+
 ## Projeto principal: o app da formação
 
 `project_segundo-cerebro` é o **app da própria formação**, construído sobre a skill `ai-tutor`. O aluno estuda dentro do app (painel e revisão de cards com um agente tutor), e a aba **Segundo Cérebro** responde perguntas sobre o que a formação registrou, citando a origem.

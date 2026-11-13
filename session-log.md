@@ -4,6 +4,13 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Material em vídeo: Cod3r e Guanabara (2026-11-12, depois da sessão)
+
+- **Pedido do aluno:** reduzir formações paralelas. A Cod3r (Formação DEV e Formação AI) e o curso de Python do Guanabara entram como material da formação Python; Faculdade e ICC continuam independentes.
+- **Levantamento:** catálogos da Cod3r lidos no navegador do app, com login do aluno e sem abrir aulas (Formação DEV: 7 áreas, 159 cursos; Formação AI: 8 áreas, 52 cursos). Playlist do Guanabara: 175 vídeos (aulas #01 a #23, exercícios #001 a #115 e Curso Python POO).
+- **Decisão:** mapear pelos títulos, sem transcrições. Não é mudança estrutural (material dentro das lições existentes). Gravado em `docs/compose/spec/material-video-python.md`, `curriculum.md` e `AGENTS.md`.
+- **Skill `ai-tutor-video`** (fork de Kadu1992): avaliada e não instalada. Substituiria a cópia única, está 14 commits atrás, mexe em `state-contract` e `validate_study` e roda `pip install` sem confirmação.
+
 ## `session_2026-11-12-lesson17-recursao-teoria-01`
 
 - Status: concluída (18:39–19:47, ~70 min de 60 informados). Skill `e87e2d7`. Modo `learning` na teoria e `assessment` na Tarefa 3. Encerrada a pedido do aluno.

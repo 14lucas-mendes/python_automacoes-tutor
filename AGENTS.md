@@ -182,6 +182,16 @@ Depois da `lesson_02` vêm três ciclos de **lógica, decomposição, estruturas
 - **Lógica em espiral:** depois do bloco, toda semana tem um exercício curto de lógica até o fim da formação.
 - **O estágio** (GFI, análise e desenvolvimento de sistemas) pode virar contexto de transferência quando a stack for conhecida. Dados da empresa nunca entram no estudo.
 
+## Material em vídeo: Cod3r e Guanabara (decisão do aluno, 2026-11-12)
+
+A Formação Cod3r e o curso de Python do Gustavo Guanabara são biblioteca de vídeos desta formação. O mapa por lição está em `docs/compose/spec/material-video-python.md`.
+
+- Ao abrir cada lição, o tutor acrescenta ao arquivo dela o item "Material em vídeo", com os vídeos do mapa, e diz quais assistir antes da teoria e quais depois.
+- Vídeo é aquecimento ou revisão: não substitui a teoria escrita, não encurta a aula de tema novo e não é evidência.
+- Vídeo de exercício ou desafio que mostra a solução só depois da tentativa do aluno. Assistido antes, a tarefa vira prática guiada.
+- Sem transcrições por enquanto. A Cod3r exige login, e o tutor não extrai conteúdo dela. Transcrições do YouTube só por PR na skill, depois da `lesson_17` e a pedido do aluno, e fora do Git.
+- A skill `ai-tutor-video` (fork de Kadu1992) não é instalada: ela substituiria a cópia única da skill.
+
 ## Cópia do cofre no Drive (decisão do aluno, 2026-11-10)
 
 Todo arquivo que o tutor criar ou alterar no cofre `C:\Users\lucka\Documents\Segundo Cérebro` (nota de sessão, diário de lição, MOC, painel, `hot.md`, `pendencias.md`, log de decisões) é copiado, **na mesma virada**, para o mesmo caminho relativo em `G:\Meu Drive\Estudos\Segundo Cérebro`.

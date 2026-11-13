@@ -184,7 +184,7 @@ Depois da `lesson_02` vêm três ciclos de **lógica, decomposição, estruturas
 
 ## Material em vídeo: Cod3r e Guanabara (decisão do aluno, 2026-11-12)
 
-A Formação Cod3r e o curso de Python do Gustavo Guanabara são biblioteca de vídeos desta formação. O mapa por lição está em `docs/compose/spec/material-video-python.md`.
+A Formação Cod3r, o curso de Python do Gustavo Guanabara e o Curso de FastAPI 2025 de Eduardo Mendes são biblioteca de vídeos desta formação. O mesmo arquivo lista o material complementar (vídeo e escrito) achado para os maiores vazios e os temas que ainda não têm material. Material escrito segue as mesmas regras dos vídeos. O mapa por lição está em `docs/compose/spec/material-video-python.md`.
 
 - Ao abrir cada lição, o tutor acrescenta ao arquivo dela o item "Material em vídeo", com os vídeos do mapa, e diz quais assistir antes da teoria e quais depois.
 - Vídeo é aquecimento ou revisão: não substitui a teoria escrita, não encurta a aula de tema novo e não é evidência.

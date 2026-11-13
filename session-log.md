@@ -9,6 +9,8 @@
 - **Pedido do aluno:** reduzir formações paralelas. A Cod3r (Formação DEV e Formação AI) e o curso de Python do Guanabara entram como material da formação Python; Faculdade e ICC continuam independentes.
 - **Levantamento:** catálogos da Cod3r lidos no navegador do app, com login do aluno e sem abrir aulas (Formação DEV: 7 áreas, 159 cursos; Formação AI: 8 áreas, 52 cursos). Playlist do Guanabara: 175 vídeos (aulas #01 a #23, exercícios #001 a #115 e Curso Python POO).
 - **Decisão:** mapear pelos títulos, sem transcrições. Não é mudança estrutural (material dentro das lições existentes). Gravado em `docs/compose/spec/material-video-python.md`, `curriculum.md` e `AGENTS.md`.
+- **FastAPI:** a pedido do aluno, entrou o "Curso de FastAPI 2025" de Eduardo Mendes (15 aulas) como base de vídeo da `lesson_07`, com aulas também nas lições 05, 06, 12, 14 e 18. Foi listada a tabela de temas sem vídeo de consulta.
+- **Busca de material para os maiores vazios:** encontrados e conferidos o Curso Selenium com Python (Eduardo Mendes) com a documentação do Selenium 4, um tutorial do Agendador de Tarefas, guias de Requests e HTTPX e a paginação da API do GitHub, o curso gratuito Claude with the Anthropic API (Anthropic Academy) e a documentação de busca full-text do PostgreSQL 18 com dois guias em português. Ainda sem material: `cron`, vídeo de cliente HTTP e vídeo de busca full-text.
 - **Skill `ai-tutor-video`** (fork de Kadu1992): avaliada e não instalada. Substituiria a cópia única, está 14 commits atrás, mexe em `state-contract` e `validate_study` e roda `pip install` sem confirmação.
 
 ## `session_2026-11-12-lesson17-recursao-teoria-01`

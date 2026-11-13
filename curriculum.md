@@ -85,14 +85,18 @@ Depois do pedido de unificação aceito no fecho da `lesson_15` (`docs/compose/s
 
 ## Material em vídeo (decisão do aluno, 2026-11-12)
 
-A Formação Cod3r (Formação DEV e Formação AI) e o curso de Python do Gustavo Guanabara (Curso em Vídeo) viram biblioteca de vídeos desta formação, encaixada nas lições que já existem. Não criam lição nova, não substituem a teoria escrita e não contam como evidência. A Faculdade e a formação ICC continuam independentes.
+A Formação Cod3r (Formação DEV e Formação AI), o curso de Python do Gustavo Guanabara (Curso em Vídeo) e o Curso de FastAPI 2025 de Eduardo Mendes (incluído em 2026-11-12) viram biblioteca de vídeos desta formação, encaixada nas lições que já existem. Não criam lição nova, não substituem a teoria escrita e não contam como evidência. A Faculdade e a formação ICC continuam independentes.
 
 | Lição | Destaques |
 |---|---|
 | `lesson_19` | Guanabara Curso Python POO (aulas 1 a 12); Cod3r AI › Python; Cod3r DEV › POO e Paradigmas |
-| `lesson_14` e `lesson_05` | Cod3r DEV › Git & Github, Terminal, Banco Relacional e SQL |
-| `lesson_18` | Cod3r DEV › Dominando Docker e Deploy em Produção |
-| `lesson_20` a `lesson_22` | Cod3r AI › Fundamentos de IA, Engenharia de Prompt, API da OpenAI com Python, MCP para Programadores, agentes e engenharia de contexto |
+| `lesson_14` e `lesson_05` | Cod3r DEV › Git & Github, Terminal, Banco Relacional e SQL; FastAPI 2025 › aulas 04, 11 e 12 |
+| `lesson_06` e `lesson_07` | FastAPI 2025 (Eduardo Mendes), base da `lesson_07`; aula 02 para a `lesson_06` |
+| `lesson_18` | Cod3r DEV › Dominando Docker e Deploy em Produção; FastAPI 2025 › aulas 11 e 13 |
+| `lesson_08` | Curso Selenium com Python (Eduardo Mendes) e a documentação oficial do Selenium 4; tutorial do Agendador de Tarefas (Asimov Academy) |
+| `lesson_06` | Real Python (Requests e HTTPX), documentação do HTTPX e paginação da API do GitHub (escrito) |
+| `lesson_20` a `lesson_22` | Anthropic Academy › Claude with the Anthropic API (gratuito); Cod3r AI › Fundamentos de IA, Engenharia de Prompt, API da OpenAI com Python, MCP para Programadores, agentes e engenharia de contexto |
+| `lesson_21` | busca full-text: documentação do PostgreSQL 18 (capítulo 12) e dois guias em português |
 | `lesson_10` a `lesson_13` | Cod3r DEV › TypeScript, React, Testes com Jest, README e carreira |
 | lógica em espiral | Guanabara exercícios #028 a #115, com a correção do vídeo só depois da tentativa |
 

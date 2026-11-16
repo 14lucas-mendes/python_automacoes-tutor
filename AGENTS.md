@@ -54,6 +54,10 @@ O tutor deste estudo segue o `SKILL.md` e os contratos de `skill_root` (`C:\User
   - a estratégia depende da fase e do tipo de matéria; o tutor declara fase e estratégia em uma linha na abertura;
   - para entender um sistema ou conceito, o roteiro é: escopo, previsão do aluno, visual se pedido, explicação em camadas, microtarefa e perguntas de cenário;
   - recuperação antes de reler a teoria; quiz nunca conclui tópico.
+- **Revisão de código pragmática** (skill `5ab5de1`, 2026-11-16; seção Code review de `references/programming.md`):
+  - perguntar se o código fica fácil de mudar; duplicação só é apontada na terceira repetição, sem pedir abstração não ensinada;
+  - defeito pequeno dentro da mudança, o aluno corrige agora; o resto vira pendência no progresso da lição, fora dos 3 itens da devolutiva;
+  - princípio não ensinado é ensinado antes de ser cobrado e não rebaixa a nota; funcionalidade nova em fatia de ponta a ponta; explicar linha a linha vale como explicação de depuração.
 - **`retrieval_first`** na revisão (`references/learning-strategies.md`): gravar uma tentativa curta em `state.json.retrieval_attempts` **antes** de reexplicar. A recuperação não altera `mastery` sozinha.
 - **Learner Profile:** ao fechar/interromper sessão com sinal relevante, anexar **uma** observação factual em `learner-profile.json` via `scripts.learner_profile.update_profile_file` com `expected_revision`. Não gravar cada mensagem, não inferir estilo fixo, não usar o perfil para decidir `practice_strategy` ainda.
 - **Interleaving** só se `scripts/practice_strategy.py` liberar `interleaved`; registrar modo e racional na sessão.

@@ -4,6 +4,21 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Alinhamento com a skill: revisão de código pragmática — 2026-11-16
+
+- Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Merge do PR [#8](https://github.com/14lucas-mendes/ai-tutor-skill/pull/8) da skill.
+- **Skill em uso: commit `5ab5de1`** (pull feito pelo aluno em 16/11). Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS.
+- **Critérios congelados continuam intactos:** o PR #8 muda só a revisão de código. O congelamento segue até a `lesson_17` ser concluída.
+- **Revisão de código pragmática** (inspirada em *O Programador Pragmático*):
+  - a revisão pergunta se o código fica **fácil de mudar**, ou seja, se a próxima mudança provável toca um lugar só;
+  - **regra de três:** duplicação só é apontada na terceira repetição, e a revisão nunca pede abstração não ensinada;
+  - **janelas quebradas:** defeito pequeno dentro da mudança atual o aluno corrige na hora; o resto vira pendência no progresso da lição, sem passar dos 3 itens da devolutiva;
+  - **princípio ainda não ensinado** (por exemplo, exceções) é ensinado antes de ser cobrado e nunca rebaixa a classificação;
+  - em funcionalidade nova, a preferência é por uma **fatia de ponta a ponta** em vez de polir uma camada;
+  - explicar o código linha a linha (**pato de borracha**) vale como explicação de depuração.
+- O tutor continua revisando e explicando, e nunca faz commit pelo aluno.
+- **`AGENTS.md`:** acrescentado o resumo na seção de operação com a skill.
+
 ## Alinhamento com a skill: visuais sob pedido e estratégia por fase — 2026-11-16
 
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Merges dos PRs [#6](https://github.com/14lucas-mendes/ai-tutor-skill/pull/6) e [#7](https://github.com/14lucas-mendes/ai-tutor-skill/pull/7) da skill.

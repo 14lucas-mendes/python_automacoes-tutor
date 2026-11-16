@@ -4,6 +4,29 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## Alinhamento com a skill: visuais sob pedido e estratégia por fase — 2026-11-16
+
+- Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Merges dos PRs [#6](https://github.com/14lucas-mendes/ai-tutor-skill/pull/6) e [#7](https://github.com/14lucas-mendes/ai-tutor-skill/pull/7) da skill.
+- **Skill em uso: commit `27116f2`** (pull feito pelo aluno em 16/11). Na skill, `unittest` OK e `validate_skill` PASS; no estudo, `validate_study` PASS.
+- **Critérios congelados continuam intactos:** os dois PRs não mudam a matriz de domínio, a escada de ajuda, a conferência, a transferência nem a regra de avanço. O congelamento segue até a `lesson_17` ser concluída.
+- **PR #6, visuais de explicação** (decisões do aluno):
+  - só quando o aluno pede ("mostra visualmente", "desenha o fluxo", "mapeia o projeto");
+  - o formato depende da necessidade: Mermaid, tabela de rastreio ou ASCII, ou mapa de nós em HTML;
+  - depois do visual, de 1 a 3 perguntas de cenário, que não são evidência;
+  - no mapa do projeto, o aluno prevê o papel das partes antes de ver o mapa;
+  - inline não é salvo; o HTML fica em `media/visuals/<lesson-id>/`; ao salvar, o Mermaid vai para a seção Teoria da lição;
+  - arquivos leves e fora do `media-index.json`.
+- **PR #7, estratégia por fase** (modelo de Hattie & Donoghue, também usado por Júlio Santos):
+  - a fase de cada tópico vem do domínio: 0–20 superfície, 40–60 profundidade, 80 transferência, 100 manutenção;
+  - a estratégia depende da fase e do tipo de matéria (conceito, procedimento, sistema existente);
+  - o tutor declara a fase e a estratégia em uma linha na abertura da sessão;
+  - novo roteiro para entender um sistema ou conceito: escopo, previsão, visual só se pedido, explicação em camadas, microtarefa e perguntas de cenário;
+  - recuperação antes de reler a teoria;
+  - quiz nunca conclui tópico.
+- **Situação atual pela nova regra:** os quatro tópicos com domínio (`python-fundamentos`, `workflow-profissional`, `automacao-confiavel` e `logica-algoritmos`) estão em 80, fase de transferência. O caminho para o 100 é desempenho repetido em sessões e contextos diferentes, com detecção de limites. A `lesson_17` continua em andamento.
+- **Decisão registrada:** "Ilhas do Conhecimento" (mapas 3D) **não** entram. Já estavam fora do escopo do PR #6 (custo alto, dependência de biblioteca externa, consumo passivo, sem ganho comprovado para entender sistemas).
+- **`AGENTS.md`:** acrescentado o resumo das duas regras na seção de operação com a skill.
+
 ## `session_2026-11-13-lesson17-debugging-teoria-01`
 
 - Status: concluída (11:47–13:01, ~74 min de 60 informados). Skill `e87e2d7`. Modo `learning` na teoria e `assessment` no Defeito 1. Encerrada a pedido do aluno.

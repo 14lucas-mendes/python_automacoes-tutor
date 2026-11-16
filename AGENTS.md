@@ -43,6 +43,17 @@ O tutor deste estudo segue o `SKILL.md` e os contratos de `skill_root` (`C:\User
   - em qualquer nível, reformular a tarefa, recuperar um pré-requisito, a conferência genérica e explicar o contexto (domínio, campos, termos) **não** tiram a autonomia, desde que não entreguem decisão, plano, critérios, análise ou código. Registrar na evidência a ajuda dada. A regra 7 continua valendo e agora é também da skill.
   - o 80 exige uma aplicação padrão autônoma e correta num contexto em que a capacidade do tópico ainda não foi demonstrada. Se sair parcial: conferência, devolutiva e depois uma tarefa diferente no mesmo contexto, que conta. Refazer a mesma tarefa continua guiado.
   - transferência é `transfer: true` numa `application`; `kind: "transfer"` não conta para o 80.
+- **Visuais de explicação** (skill `02a8d88`, 2026-11-16; regras em `references/output-contract.md`):
+  - só quando o aluno pede ("mostra visualmente", "desenha o fluxo", "mapeia o projeto"); depois, de 1 a 3 perguntas de cenário, que não são evidência;
+  - no mapa de projeto, o aluno prevê o papel das partes antes de ver;
+  - inline não é salvo; o HTML fica em `media/visuals/<lesson-id>/`, autocontido e leve; ao salvar, o Mermaid vai para a Teoria da lição; nada entra no `media-index.json`;
+  - tema escuro por padrão; o estilo Excalidraw continua valendo para mídias de revisão, e nos visuais de explicação só se o aluno pedir;
+  - mapas 3D ("Ilhas do Conhecimento") não entram (decisão de 2026-11-16).
+- **Estratégia por fase** (skill `27116f2`, 2026-11-16; `phase_aware_strategy` em `references/learning-strategies.md`):
+  - a fase vem do domínio do tópico: 0–20 superfície, 40–60 profundidade, 80 transferência, 100 manutenção;
+  - a estratégia depende da fase e do tipo de matéria; o tutor declara fase e estratégia em uma linha na abertura;
+  - para entender um sistema ou conceito, o roteiro é: escopo, previsão do aluno, visual se pedido, explicação em camadas, microtarefa e perguntas de cenário;
+  - recuperação antes de reler a teoria; quiz nunca conclui tópico.
 - **`retrieval_first`** na revisão (`references/learning-strategies.md`): gravar uma tentativa curta em `state.json.retrieval_attempts` **antes** de reexplicar. A recuperação não altera `mastery` sozinha.
 - **Learner Profile:** ao fechar/interromper sessão com sinal relevante, anexar **uma** observação factual em `learner-profile.json` via `scripts.learner_profile.update_profile_file` com `expected_revision`. Não gravar cada mensagem, não inferir estilo fixo, não usar o perfil para decidir `practice_strategy` ainda.
 - **Interleaving** só se `scripts/practice_strategy.py` liberar `interleaved`; registrar modo e racional na sessão.

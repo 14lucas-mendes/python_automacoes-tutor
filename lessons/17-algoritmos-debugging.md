@@ -703,6 +703,61 @@ Siga o ciclo, **na ordem**, num `.md` em `segundo-cerebro/exercicios/modulo 05/`
 
 O código corrigido, com o teste de regressão, vai num `.py` na mesma pasta.
 
+### Defeito 2: resumo do histórico com a última revisão errada (enunciado entregue em 2026-11-16)
+
+O tutor reescreveu o Índice 3 da `lesson_16` (card → resumo do histórico), só com a parte dos resumos, e **plantou um defeito**. Não há `assert`.
+
+```python
+cards = [
+    {"card_id": "card_a", "revisoes": [
+        {"data": "2026-10-20", "resultado": "correct"},
+        {"data": "2026-10-27", "resultado": "correct"},
+        {"data": "2026-10-25", "resultado": "incorrect"},
+    ]},
+    {"card_id": "card_b", "revisoes": [
+        {"data": "2026-10-26", "resultado": "correct"},
+        {"data": "2026-10-22", "resultado": "correct"},
+    ]},
+    {"card_id": "card_c", "revisoes": []},
+]
+
+
+def resumo_revisoes(cards):
+    """Para cada card: revisoes, acertos e a data da ultima revisao (a maior)."""
+    resumos = {}
+    ultima = None
+    for card in cards:
+        acertos = 0
+        for revisao in card["revisoes"]:
+            if revisao["resultado"] == "correct":
+                acertos += 1
+            if ultima is None or revisao["data"] > ultima:
+                ultima = revisao["data"]
+        resumos[card["card_id"]] = {
+            "revisoes": len(card["revisoes"]),
+            "acertos": acertos,
+            "ultima": ultima,
+        }
+    return resumos
+
+
+for card_id, resumo in resumo_revisoes(cards).items():
+    print(card_id, resumo)
+```
+
+**Sintoma relatado:** "Um card que eu nunca revisei aparece com a última revisão em 27/10."
+
+Regra do Índice 3 que continua valendo: "última" é a **maior data** das revisões daquele card; card sem revisões tem `"ultima": None`.
+
+Antes do ciclo, uma linha no `.md`: o que este defeito tem **de parecido** e **de diferente** do Defeito 1. Depois, o ciclo **na ordem**, num `defeito_02.md` em `segundo-cerebro/exercicios/modulo 05/`:
+
+1. **Reproduzir:** a entrada, o esperado calculado à mão para **todos** os cards e o obtido.
+2. **Hipótese com previsão**, escrita **antes** de rodar qualquer `print`.
+3. **Testar sem consertar:** o `print` dirigido (ou rastreio) e o que apareceu. Se a previsão não bater, a próxima hipótese.
+4. **Consertar com teste que falha antes:** o `assert` rodado antes da correção (com a saída da falha), a correção só da causa e o `assert` passando depois.
+
+O código corrigido, com o teste de regressão, vai num `defeito_02.py` na mesma pasta.
+
 ### Tarefa 2: cards mais atrasados (enunciado entregue em 2026-11-09)
 
 Na revisão, o app mostra primeiro os cards com a data mais antiga. Os cards do estudo fictício chegam **fora de ordem**, sem datas repetidas:
@@ -734,6 +789,19 @@ Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos
 - **Saída de `weak_notacao-custo-big-o`:** explicar corretamente, com contagem de passos, a diferença entre custo constante, linear e logarítmico.
 
 ## Progresso
+
+### Onde paramos (2026-11-16): Defeito 2 feito, falta a transferência
+
+- **Sessão:** `session_2026-11-16-lesson17-debugging-pratica-01`, 20:50–21:53 (cerca de 63 min de 60). Skill `5ab5de1`.
+- **Fase e estratégia:** `topic_logica-algoritmos` em 80, fase de transferência; comparar com o Defeito 1 antes do Defeito 2.
+- **Cards:** 5 de 5 certos (`cond-02`, `cond-04`, `tempos-05`, `cond-05`, `git-remote-v-01`). O `git-push-u-01` ficou para a próxima.
+- **Recuperação da parte 3b:** sem pista, não lembrou os quatro passos. Com a pista do médico, a ordem saiu certa; reproduzir, hipótese antes do teste e o teste que falha antes foram retomados.
+- **Visual a pedido:** fluxograma do ciclo, só na conversa (não salvo). Pergunta de cenário certa: a previsão que não bate volta ao passo 2 sem mexer no código.
+- **Defeito 2 (`ultima` fora do laço dos cards):** `segundo-cerebro/exercicios/modulo 05/defeito_02.md` e `.py`.
+  - v1: ciclo completo e previsão exata card a card, mas sem a linha de parecido e diferente com o Defeito 1 (`evidence_logica-debugging-defeito2-01`, parcial);
+  - v2, só com a conferência: linha acrescentada (`evidence_logica-debugging-defeito2-02`, correta).
+- **Regra 9:** busca binária, ordenação, recursão, Feynman e os dois defeitos ✅. Os três critérios de entrega estão cumpridos; falta a transferência.
+- **Próximo:** recuperação curta do ciclo e a transferência: defeito em código novo do projeto, num módulo ou conjunto de dados ainda não usado, sem andaime.
 
 ### Onde paramos (2026-11-13): debugging por hipótese e Defeito 1, faltam Defeito 2 e transferência
 

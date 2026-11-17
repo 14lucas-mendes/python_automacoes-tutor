@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 435,
-  "updated_at": "2026-11-13T13:01:00-03:00",
+  "revision": 445,
+  "updated_at": "2026-11-16T21:53:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -334,7 +334,7 @@
       "mastery": 80,
       "retention": "unknown",
       "status": "mastered",
-      "last_practice": "2026-11-13",
+      "last_practice": "2026-11-16",
       "evidence_ids": [
         "evidence_logica-esperado-feynman-01",
         "evidence_logica-esperado-feynman-02",
@@ -369,7 +369,9 @@
         "evidence_logica-recursao-codigo-01",
         "evidence_logica-recursao-codigo-02",
         "evidence_logica-debugging-defeito1-01",
-        "evidence_logica-debugging-defeito1-02"
+        "evidence_logica-debugging-defeito1-02",
+        "evidence_logica-debugging-defeito2-01",
+        "evidence_logica-debugging-defeito2-02"
       ],
       "required_evidence_types": [
         "feynman",
@@ -383,7 +385,7 @@
         "estrutura de dados justificada",
         "defeito diagnosticado com hipotese"
       ],
-      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma. | 2026-10-16: segue em 40. Caso vazio autonomo saiu incorreto (esperados fora do contrato) e o rastreio do laco vazio tambem; corrigidos com ajuda. Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma (alvo: problema 3). | 2026-10-17: segue em 40. Decomposicao do problema 3 guiada (degraus 3-4); o codigo do problema 3 ainda pode ser a aplicacao autonoma. | 2026-10-19: segue em 40. Codigo do problema 3 autonomo e parcial (faltaram duas exclusoes da regra citada na tarefa); previsao autonoma correta do return dentro do laco; versao final guiada e correta. Aluno contestou o rigor do 60 (registrado no session-log). | 2026-10-20: 40 -> 60. Feynman autonomo (evidence_logica-esperado-feynman-02, 13/10) + aplicacao padrao autonoma e correta (evidence_logica-problema4-aplicacao-01). Falta o 80: aplicacao autonoma transferida a contexto novo (alvo: missao 006 do Python Lab). | 2026-10-22: segue em 60. Transferencia (ordens de servico) autonoma e parcial: ordem das verificacoes certa; asserts nunca executados (__name__), um esperado contra a propria regra, lista vazia sem guarda. Falta o 80: transferencia autonoma correta. | 2026-10-23: 60 -> 80. Feynman autonomo (evidence_logica-esperado-feynman-02, 13/10) + aplicacao padrao autonoma (evidence_logica-problema4-aplicacao-01, 20/10) + transferencia: aplicacao padrao autonoma e correta em contexto novo, tarefa diferente depois da parcial de 22/10 (evidence_logica-transferencia-filas-01). | 2026-11-13: segue em 80. Defeito 1 da lesson_17 diagnosticado por hipotese, correto depois da conferencia; a licao fecha com o Defeito 2 e a transferencia.",
+      "progress_note": "2026-10-06: topico criado a pedido do aluno (dificuldade em compor listas, dicionarios, condicionais e lacos, decompor problemas e debugar; sinais: cond-05 repetido 3x, weak points conceituais). Mede composicao, nao pecas isoladas: nao herda nem rebaixa os 80 de topic_python-fundamentos. Diagnostico antes da lesson_15. | 2026-10-13: 20 -> 40 (aplicacao parcial com ajuda direcional na decomposicao do problema 2). Feynman autonomo correto (esperado vem da regra) cumpre a metade Feynman do 60; falta uma aplicacao autonoma independente. | 2026-10-15: segue em 40. Implementou uma gaveta por topico depois do degrau 3 (parcial: chaves fixas). Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma. | 2026-10-16: segue em 40. Caso vazio autonomo saiu incorreto (esperados fora do contrato) e o rastreio do laco vazio tambem; corrigidos com ajuda. Feynman do 60 cumprido em 13/10; falta a aplicacao autonoma (alvo: problema 3). | 2026-10-17: segue em 40. Decomposicao do problema 3 guiada (degraus 3-4); o codigo do problema 3 ainda pode ser a aplicacao autonoma. | 2026-10-19: segue em 40. Codigo do problema 3 autonomo e parcial (faltaram duas exclusoes da regra citada na tarefa); previsao autonoma correta do return dentro do laco; versao final guiada e correta. Aluno contestou o rigor do 60 (registrado no session-log). | 2026-10-20: 40 -> 60. Feynman autonomo (evidence_logica-esperado-feynman-02, 13/10) + aplicacao padrao autonoma e correta (evidence_logica-problema4-aplicacao-01). Falta o 80: aplicacao autonoma transferida a contexto novo (alvo: missao 006 do Python Lab). | 2026-10-22: segue em 60. Transferencia (ordens de servico) autonoma e parcial: ordem das verificacoes certa; asserts nunca executados (__name__), um esperado contra a propria regra, lista vazia sem guarda. Falta o 80: transferencia autonoma correta. | 2026-10-23: 60 -> 80. Feynman autonomo (evidence_logica-esperado-feynman-02, 13/10) + aplicacao padrao autonoma (evidence_logica-problema4-aplicacao-01, 20/10) + transferencia: aplicacao padrao autonoma e correta em contexto novo, tarefa diferente depois da parcial de 22/10 (evidence_logica-transferencia-filas-01). | 2026-11-13: segue em 80. Defeito 1 da lesson_17 diagnosticado por hipotese, correto depois da conferencia; a licao fecha com o Defeito 2 e a transferencia. | 2026-11-16: segue em 80. Defeito 2 correto depois da conferencia; a lesson_17 fecha com a transferencia.",
       "diagnostic": {
         "estimate": "partial",
         "confidence": "medium",
@@ -2955,6 +2957,40 @@
       "recorded_at": "2026-11-13T13:00:00-03:00",
       "result": "correct",
       "error": "Nenhum erro. Observacao: so um assert de regressao; o caso que escondia o defeito (topico com uma evidencia so) nao precisava de teste proprio."
+    },
+    {
+      "evidence_id": "evidence_logica-debugging-defeito2-01",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Defeito 2 da lesson_17 (Indice 3 da lesson_16 com ultima = None fora do laco dos cards), v1: defeito_02.md com reproducao (esperado a mao dos 3 cards e obtido, diferencas em card_b e card_c), hipotese de estado que vaza entre cards com previsao card a card escrita antes do print (segundo o aluno), print dirigido no inicio e na gravacao de cada card confirmando, assert falhando copiado, correcao so da causa e assert passando; defeito_02.py corrigido e passando. Faltou a linha pedida de parecido e diferente com o Defeito 1. Ajuda: nenhuma. Declaracao: IA so na formatacao do md.",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-16-lesson17-debugging-pratica-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 05/defeito_02.md v1 (21:47) e E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 05/defeito_02.py; tutor rodou: 'todos os testes passaram.'"
+      },
+      "recorded_at": "2026-11-16T21:48:00-03:00",
+      "result": "partial",
+      "error": "Regra do enunciado nao cumprida: a linha de parecido e diferente com o Defeito 1, antes do ciclo. O diagnostico e o conserto estavam corretos."
+    },
+    {
+      "evidence_id": "evidence_logica-debugging-defeito2-02",
+      "topic_id": "topic_logica-algoritmos",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "kind": "application",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Defeito 2 da lesson_17, v2 depois so da conferencia generica: acrescentou a comparacao com o Defeito 1 (mesmo ciclo; aqui estado compartilhado entre iteracoes, nao sobrescrita de lista) e manteve o ciclo completo: reproducao, hipotese com previsao exata por card, print dirigido, assert que falha antes, correcao (ultima = None dentro do laco) e teste de regressao passando. Cumpre o segundo dos dois defeitos diagnosticados com hipotese escrita antes da correcao. Ajuda: so a conferencia generica. Declaracao: IA so na formatacao do texto do md (vale o declarado).",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-16-lesson17-debugging-pratica-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 05/defeito_02.md (sha256 5813211baf2dbdfb...) e E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 05/defeito_02.py (sha256 90eee536a52b5a78...); tutor rodou: 'todos os testes passaram.'"
+      },
+      "recorded_at": "2026-11-16T21:51:00-03:00",
+      "result": "correct",
+      "error": "Nenhum erro. Observacao: o teste de regressao cobre o caso do enunciado; um caso extra so com o card sem revisoes isolaria o None, sem ser exigido."
     }
   ],
   "sessions": [
@@ -4794,6 +4830,36 @@
         "reason": "Aquisicao de tema novo num unico topico; interleaving nao se aplica."
       },
       "checkpoint": "Aberta em 2026-11-13T11:47 com 60 min (informado pelo aluno), skill e87e2d7, theory_first. Debugging por hipotese e tema novo: sem teoria escrita. Um so card vencido hoje. | 11:48-11:51 card git-diff-staged-01 parcial (--staged certo; sem argumentos descrito como 'alterado e nao commitado'). | Recuperacao da 3a: sem pista nao lembrou as duas partes (incorrect); com o codigo de regressiva e as metades apontadas, explicou caso-base e o problema que diminui (correct, support 2); nomes ensinados de novo. | Teoria da parte 3b escrita na licao e dada em 3 blocos; checagens (nao sao evidencia): sintoma/hipotese/previsao do medico certo (previsao misturada com tratamento, ajustada); hipotese da chuva com a causa certa (range(1,...)), mas a previsao era consertar e ver 2, ensinado que o passo 3 observa sem mexer; carrinho: lugar certo do None sem o porque e sem previsao; SyntaxError e o print que nao aparece certo; assert que falha antes: ideia parcial, ensinado com o alarme de fumaca. | 12:25 Defeito 1 (indice de evidencias que perde itens, Indice 1 da lesson_16 com sobrescrita plantada) entregue na licao; pratica em assessment a partir daqui. | 12:56 Defeito 1 v1: md completo, .py ainda com o defeito (partial). Conferencia generica. 12:58 v2: .py corrigido e assert passando (correct, so com a conferencia). IA so na formatacao do md (declarado). | 13:01 encerrada a pedido do aluno (~74 min de 60). Regra 9: busca binaria, ordenacao, recursao, Feynman e Defeito 1 cumpridos; faltam Defeito 2 e transferencia. Proximo: Defeito 2 (Indice 3 da lesson_16, defeito plantado diferente), com recuperacao curta do ciclo de 4 passos."
+    },
+    {
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-11-16T20:50:00-03:00",
+      "ended_at": "2026-11-16T21:53:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_17-algoritmos-debugging"
+      ],
+      "topic_ids": [
+        "topic_logica-algoritmos"
+      ],
+      "objective": "(1) Cards vencidos (retrieval_first): cond-02, cond-04, tempos-05, cond-05, git-remote-v-01 (git-push-u-01 fica para a proxima, regra de uns 5). (2) Recuperacao curta do ciclo de 4 passos do debugging por hipotese. (3) Defeito 2 (Indice 3 da lesson_16 com variavel nao reiniciada entre cards), com hipotese escrita antes de rodar.",
+      "cognitive_core": "Diagnosticar sozinho um defeito plantado: reproduzir com esperado a mao, hipotese com previsao antes de qualquer print, teste sem consertar e conserto com teste que falha antes.",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_logica-algoritmos"
+        ],
+        "topic_label_visible": true,
+        "reason": "Um unico topico na pratica; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-11-16T20:50 com 60 min (informado pelo aluno). Skill 5ab5de1 (PR #8, revisao de codigo pragmatica, puxado pelo aluno depois do registro de 27116f2): unittest OK, validate_skill PASS, validate_study PASS; contratos de aprendizagem e de estado sem mudanca, criterios congelados intactos. theory_first; teoria 3b ja escrita. Fase pelo dominio: topic_logica-algoritmos em 80, transferencia (procedimento): comparar com o Defeito 1 antes do Defeito 2. | 20:52-21:00 cards 5 de 5 certos (cond-02 com imprecisao na nota 9, cond-04 sem a ordem completa, tempos-05, cond-05 sem 'esperado a mao da fonte', git-remote-v-01); git-push-u-01 fica para a proxima. | Recuperacao da 3b: sem pista nao lembrou (incorrect); com a pista do medico, ordem certa mas reproduzir como 'erros que aparecem', hipotese vinda de testes e sem teste que falha antes (partial, support 2); retomado. | 21:06 Defeito 2 entregue na licao. A pedido do aluno, visual inline do ciclo (SVG, nao salvo) e uma pergunta de cenario (volta ao passo 2 sem mexer no codigo): certa; nao e evidencia. | 21:48 Defeito 2 v1 partial (faltou a linha de parecido/diferente com o Defeito 1); conferencia generica; 21:49 v2 correta. IA so na formatacao do md (declarado). | 21:53 encerrada a pedido do aluno (~63 min de 60). Regra 9: os tres criterios de entrega da licao cumpridos (busca/ordenacao, comparacao de passos, dois defeitos); falta a transferencia. Proximo: card git-push-u-01 e outros vencidos, recuperacao curta do ciclo e a transferencia (defeito em codigo novo do projeto, sem andaime)."
     }
   ],
   "lessons": [
@@ -5358,7 +5424,8 @@
         "session_2026-11-09-lesson17-ordenacao-pratica-01",
         "session_2026-11-10-lesson17-ordenacao-codigo-01",
         "session_2026-11-12-lesson17-recursao-teoria-01",
-        "session_2026-11-13-lesson17-debugging-teoria-01"
+        "session_2026-11-13-lesson17-debugging-teoria-01",
+        "session_2026-11-16-lesson17-debugging-pratica-01"
       ],
       "required_evidence_types": [
         "feynman",
@@ -5378,7 +5445,7 @@
         "expected_transfer": "diagnosticar sozinho defeito em codigo criado pelo tutor a partir do projeto Segundo Cerebro, num modulo ou conjunto de dados ainda nao usado na licao (Python Lab descontinuado em 2026-11-10)"
       },
       "roadmap_note": "bloco de logica aprovado pelo aluno em 2026-10-06 (docs/compose/spec/bloco-logica-roadmap.md)",
-      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente. | 2026-11-09: Tarefa 2 (cards mais atrasados) entregue; decomposicao v1 parcial, v2 correta depois da conferencia. Codigo pendente. | 2026-11-10: codigo da ordenacao autonomo e correto (evidence_logica-ordenacao-codigo-01); Feynman v1 parcial, v2 correto depois de objecao aceita (evidence_logica-feynman-custos-02). Faltam dois defeitos com hipotese e transferencia. | 2026-11-10: Python Lab retirado da formacao (decisao do aluno); a transferencia passa a usar codigo criado pelo tutor a partir do projeto. | 2026-11-12: teoria da parte 3a (recursao) escrita e dada; Tarefa 3 (busca binaria recursiva): decomposicao correta e codigo correto depois da conferencia (evidence_logica-recursao-codigo-02). Faltam debugging por hipotese (teoria 3b e dois defeitos) e transferencia. | 2026-11-13: teoria da parte 3b (debugging por hipotese, os tres tempos do erro) escrita e dada; Defeito 1 (sobrescrita no indice de evidencias): v1 parcial (.py sem a correcao), v2 correta depois da conferencia (evidence_logica-debugging-defeito1-02). Faltam o Defeito 2 e a transferencia.",
+      "progress_note": "2026-10-08: formacao fechada (docs/compose/spec/formacao-fechada.md): especialista em Python, automacao e IA; projeto = app da propria formacao com aba Segundo Cerebro. | 2026-11-02: teoria da parte 1 (custo em passos e busca) escrita em lessons/17-algoritmos-debugging.md; pratica pendente. | 2026-11-04: Tarefa 1 (busca binaria por data) autonoma e correta: evidence_logica-busca-binaria-01. Faltam ordenacao, recursao, debugging por hipotese, Feynman e transferencia. | 2026-11-05: teoria da parte 2 (ordenacao por selecao, quadratico, sorted/key) escrita e dada; pratica pendente. | 2026-11-09: Tarefa 2 (cards mais atrasados) entregue; decomposicao v1 parcial, v2 correta depois da conferencia. Codigo pendente. | 2026-11-10: codigo da ordenacao autonomo e correto (evidence_logica-ordenacao-codigo-01); Feynman v1 parcial, v2 correto depois de objecao aceita (evidence_logica-feynman-custos-02). Faltam dois defeitos com hipotese e transferencia. | 2026-11-10: Python Lab retirado da formacao (decisao do aluno); a transferencia passa a usar codigo criado pelo tutor a partir do projeto. | 2026-11-12: teoria da parte 3a (recursao) escrita e dada; Tarefa 3 (busca binaria recursiva): decomposicao correta e codigo correto depois da conferencia (evidence_logica-recursao-codigo-02). Faltam debugging por hipotese (teoria 3b e dois defeitos) e transferencia. | 2026-11-13: teoria da parte 3b (debugging por hipotese, os tres tempos do erro) escrita e dada; Defeito 1 (sobrescrita no indice de evidencias): v1 parcial (.py sem a correcao), v2 correta depois da conferencia (evidence_logica-debugging-defeito1-02). Faltam o Defeito 2 e a transferencia. | 2026-11-16: Defeito 2 (ultima fora do laco dos cards): v1 parcial (faltou a comparacao com o Defeito 1), v2 correta depois da conferencia (evidence_logica-debugging-defeito2-02). Criterios de entrega cumpridos; falta a transferencia.",
       "file": "lessons/17-algoritmos-debugging.md"
     },
     {
@@ -7093,6 +7160,69 @@
       "outcome": "correct",
       "support_level": 2,
       "recorded_at": "2026-11-13T11:55:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_7dbfc31f-405b-4c95-9036-63ea8535d59c",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_cond-02: primeiro True ganha e o mais restritivo vem antes; imprecisao: disse que com nota 9 ele olha o de baixo (9 satisfaz >= 9)",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-16T20:52:39-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_14bcfb40-d9fa-4e61-8b60-6a3fdf2c91ff",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_cond-04: gravar e irreversivel, verificar antes de gravar; ordem completa sem tratar falhas e transformar",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-16T20:54:44-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_5b9d4a05-398d-48d8-bd20-37d97a119d3e",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-05: excecao de tipo incompativel com a operacao; sem exemplo concreto",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-16T20:57:04-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_5af0779a-feaf-4fe6-8e6f-9f6d43b087b9",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "topic_id": "topic_automacao-confiavel",
+      "prompt": "Card card_cond-05: so prova que o arquivo guardou o que recebeu; prova a transformacao comparar com o esperado; nao disse que o esperado e calculado a mao a partir da fonte",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-16T21:00:32-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_bee67654-400d-47fe-8c00-c18cddf47c63",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "topic_id": "topic_workflow-profissional",
+      "prompt": "Card card_git-remote-v-01: git remote -v",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-16T21:00:59-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_77651ae5-6e0b-41b2-8e99-36bd805190d7",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "topic_id": "topic_logica-algoritmos",
+      "prompt": "Recuperacao da parte 3b: os quatro passos do debugging por hipotese, na ordem. Resposta: nao lembrou.",
+      "outcome": "incorrect",
+      "support_level": 0,
+      "recorded_at": "2026-11-16T21:02:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_f000027f-ebb9-45e6-841e-6e5514b28ae3",
+      "session_id": "session_2026-11-16-lesson17-debugging-pratica-01",
+      "topic_id": "topic_logica-algoritmos",
+      "prompt": "Recuperacao da parte 3b, segunda tentativa com a pista do medico (sintoma, hipotese, exame, tratamento): ordem certa; passo 1 como 'os erros que o codigo apresenta' (sem entrada/esperado a mao/obtido); hipotese descrita como vinda de testes; passo 4 sem o teste que falha antes.",
+      "outcome": "partial",
+      "support_level": 2,
+      "recorded_at": "2026-11-16T21:06:00-03:00"
     }
   ]
 }

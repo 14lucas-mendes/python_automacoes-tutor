@@ -4,6 +4,20 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-16-lesson17-debugging-pratica-01`
+
+- Status: concluída (20:50–21:53, ~63 min de 60 informados). Modo `assessment`. Encerrada a pedido do aluno.
+- **Skill em uso: commit `5ab5de1`**, alinhamento registrado em "Alinhamento com a skill: revisão de código pragmática", logo abaixo.
+- **Fase e estratégia (PR #7):** `topic_logica-algoritmos` em 80, fase de transferência; comparar com o Defeito 1 antes do Defeito 2.
+- **Cards (retrieval_first), 5 de 5 certos:** `cond-02` (com a ordem corrigida, a nota 9 entra no primeiro ramo), `cond-04` (sem a ordem completa), `tempos-05`, `cond-05` (sem "esperado à mão a partir da fonte") e `git-remote-v-01`. `git-push-u-01` fica para a próxima (regra de uns 5).
+- **Recuperação da parte 3b:** sem pista, não lembrou (`incorrect`). Com a pista do médico, ordem certa, mas reproduzir como "os erros que aparecem", hipótese vinda de testes e sem o teste que falha antes (`partial`, `support_level` 2). Retomado.
+- **Visual a pedido (PR #6):** fluxograma do ciclo em SVG, só na conversa e não salvo. Pergunta de cenário certa; não é evidência.
+- **Defeito 2, `ultima = None` fora do laço dos cards** (`segundo-cerebro/exercicios/modulo 05/`):
+  - v1: reprodução com os 3 cards, hipótese com previsão exata card a card, `print` dirigido confirmando, `assert` falhando copiado, correção e teste passando. Faltou a linha de parecido e diferente com o Defeito 1. `evidence_logica-debugging-defeito2-01` (`application`, parcial). Conferência genérica pedida uma vez.
+  - v2, cerca de 1 minuto depois: comparação acrescentada ("estado compartilhado entre iterações, não sobrescrita de lista"). Pergunta neutra: "IA só para formatar o texto do md". Vale o declarado. `evidence_logica-debugging-defeito2-02` (`application`, autônoma, correta).
+- **Regra 9 (`lesson_17`):** busca binária, ordenação, recursão, Feynman e os dois defeitos ✅. Os três critérios de entrega da lição estão cumpridos; falta a transferência. `topic_logica-algoritmos` segue em 80.
+- **Próximo passo:** recuperação curta do ciclo e a transferência, num defeito em código novo do projeto, sem andaime. No fecho da `lesson_17`: diário no cofre, reavaliar o 100 do tópico e avaliar os critérios congelados e o pedido de carga livre.
+
 ## Alinhamento com a skill: revisão de código pragmática — 2026-11-16
 
 - Fora de sessão. Não é sessão de aprendizagem: nenhuma evidência, domínio, sessão, card ou ponto fraco foi alterado. Merge do PR [#8](https://github.com/14lucas-mendes/ai-tutor-skill/pull/8) da skill.

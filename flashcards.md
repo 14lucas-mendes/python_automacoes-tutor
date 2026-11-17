@@ -64,8 +64,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-11-16`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-21`
+- Intervalo: `35 dias`
 
 ## card_tempos-06
 
@@ -129,8 +129,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
 - Status: `review`
-- Próxima revisão: `2026-11-14`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-21`
+- Intervalo: `35 dias`
 
 ## card_cond-03
 
@@ -155,8 +155,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-controlflow`
 - Status: `review`
-- Próxima revisão: `2026-11-14`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-21`
+- Intervalo: `35 dias`
 
 ## card_cond-05
 
@@ -168,8 +168,8 @@
 - Lição: `lesson_02-arquivos-erros`
 - Fontes: `source_python-csv-module`
 - Status: `review`
-- Próxima revisão: `2026-11-16`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-21`
+- Intervalo: `35 dias`
 
 ## card_dictreader-chaves-01
 
@@ -324,8 +324,8 @@
 - Lição: `lesson_04-descoberta-processo`
 - Fontes: `source_git-remote`
 - Status: `review`
-- Próxima revisão: `2026-11-16`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-21`
+- Intervalo: `35 dias`
 
 ## card_git-log-oneline-01
 

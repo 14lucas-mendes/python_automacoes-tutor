@@ -129,6 +129,7 @@ A formação está **fechada**. O plano único é `docs/compose/spec/formacao-fe
   3. Avalia só no fecho da lição atual, com justificativa escrita.
   4. Só aceita diante de um bloqueio real: o estágio exigir outra stack, uma tecnologia ser descontinuada, ou a evidência mostrar que falta um pré-requisito.
 - O próprio aluno pediu este fechamento ("feche essa formação e não permita que eu mude até ela ser concluída"). A autoridade final continua sendo dele.
+- **Pedido de carga livre** (registrado em 2026-11-10): avaliado no fecho da `lesson_17` e **não aceito pela regra**, porque não é bloqueio real. A carga de 10 h continua como referência. Se o aluno passar por cima da regra, a mudança é aplicada numa conversa nova. Ver `docs/compose/spec/fecho-lesson17-avaliacoes.md`, seção 3.
 
 ## Engenharia de IA unificada (decisão do aluno, 2026-10-23)
 
@@ -144,6 +145,8 @@ O pedido de 15/10, complementado em 19/10, foi avaliado no fecho da `lesson_15` 
 - **O pedido sobre o estágio continua separado.** Ele só é aberto quando a stack do estágio for confirmada.
 
 ## Critérios de domínio congelados (decisão do aluno, 2026-10-22)
+
+> **Congelamento encerrado em 2026-11-17**, no fecho da `lesson_17`. Os critérios foram avaliados e **mantidos sem mudança** (`docs/compose/spec/fecho-lesson17-avaliacoes.md`, seção 2). Daqui em diante, mudança de critério segue o fluxo normal da skill: branch e PR, com o CI verde, a pedido do aluno. O texto abaixo fica como histórico.
 
 Os critérios de domínio estão **congelados até a `lesson_17-algoritmos-debugging` ser concluída**, ou seja, até o fim do bloco de lógica. Motivo: entre 17 e 22/10 foram três ajustes de critério (PRs #3 a #5 da skill), e agora as regras precisam rodar algumas lições antes de nova mudança.
 

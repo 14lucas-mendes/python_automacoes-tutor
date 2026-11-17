@@ -4,6 +4,23 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-17-lesson17-transferencia-01`: fechamento da `lesson_17`
+
+- Status: concluída (17:55–18:56, ~61 min de 60 informados). Modo `assessment`. Encerrada a pedido do aluno, com o fechamento da lição.
+- **Skill:** atualizada de `5ab5de1` para **`d7e71ef`** (PR [#9](https://github.com/14lucas-mendes/ai-tutor-skill/pull/9), só o README). `unittest` OK, `validate_skill` PASS, `validate_study` PASS.
+- **Fase e estratégia:** `topic_logica-algoritmos` em 80, fase de transferência; comparar com os Defeitos 1 e 2 e depois a tarefa no contexto novo.
+- **Card:** `git-push-u-01` certo (imprecisão: `main` no lugar de `master`). Volta em 22/12.
+- **Recuperação da parte 3b, sem pista:** nomes e ordem certos, sem a frase de cada passo (`partial`, `support_level` 0).
+- **Transferência:** defeito plantado (`or` no lugar de `and`) no cálculo da taxa de acerto sem pista, sobre as tentativas de recuperação, um conjunto de dados que a lição ainda não usou. O enunciado não trazia o roteiro dos quatro passos. `defeito_03.md` e `.py` completos e corretos na primeira versão, sem conferência nem ajuda. Pergunta neutra: "IA só para formatar o texto do md". Vale o declarado. `evidence_logica-debugging-transferencia-01` (`application`, autônoma, `transfer: true`, `limit_or_self_correction: true`).
+- **Fechamento da `lesson_17`** (justificativas em `docs/compose/spec/fecho-lesson17-avaliacoes.md`):
+  - lição `completed`: busca e ordenação, comparação de passos, dois defeitos e transferência;
+  - `topic_logica-algoritmos` **80 → 100**: o desempenho do 80 se repetiu em três sessões e três contextos (filas, campeonato, tentativas), com detecção de limite e autocorreção. Ressalva de retenção registrada;
+  - **critérios congelados:** avaliados e mantidos sem mudança; o congelamento terminou. Nenhum pedido de mudança de critério no período;
+  - **pedido de carga livre:** não aceito pela regra (não é bloqueio real). A carga de 10 h continua como referência; se o aluno passar por cima da regra, a mudança vai para uma conversa nova;
+  - `weak_notacao-custo-big-o` e `weak_error-model-tempo-deteccao` continuam ativos: as condições de saída não foram cumpridas;
+  - `next_focus`: `lesson_19-python-intermediario`.
+- **Próximo passo:** abrir a `lesson_19` em `theory_first`, com o item "Material em vídeo" (Guanabara POO 1–12; desafios 16–33 só depois da tentativa). A lógica em espiral começa: um exercício curto por semana.
+
 ## `session_2026-11-16-lesson17-debugging-pratica-01`
 
 - Status: concluída (20:50–21:53, ~63 min de 60 informados). Modo `assessment`. Encerrada a pedido do aluno.

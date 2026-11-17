@@ -1,6 +1,6 @@
 # Lição `lesson_17-algoritmos-debugging`
 
-**Status:** em andamento, aberta em 2026-11-02 (`session_2026-11-02-lesson17-teoria-01`). Tópico: `topic_logica-algoritmos`. Ciclo 7 da formação fechada.
+**Status:** concluída em 2026-11-17 (`session_2026-11-17-lesson17-transferencia-01`); aberta em 2026-11-02 (`session_2026-11-02-lesson17-teoria-01`). Tópico: `topic_logica-algoritmos`. Ciclo 7 da formação fechada.
 
 **Objetivo observável:** implementar e explicar busca linear × busca binária e uma ordenação simples, comparando passos; reconhecer recursão e dividir para conquistar num exemplo pequeno; diagnosticar defeitos com hipótese explícita (prever, rodar, comparar).
 
@@ -758,6 +758,46 @@ Antes do ciclo, uma linha no `.md`: o que este defeito tem **de parecido** e **d
 
 O código corrigido, com o teste de regressão, vai num `defeito_02.py` na mesma pasta.
 
+### Transferência: taxa de acerto sem pista (enunciado entregue em 2026-11-17)
+
+Contexto novo: as **tentativas de recuperação** do estudo fictício, um conjunto de dados que a lição ainda não usou. Cada tentativa tem o tópico, o resultado (`"correct"`, `"partial"` ou `"incorrect"`) e o nível de ajuda (`support_level`: `0` é sem pista; acima de `0`, houve pista).
+
+```python
+tentativas = [
+    {"topic_id": "topic_python", "outcome": "correct", "support_level": 0},
+    {"topic_id": "topic_python", "outcome": "partial", "support_level": 0},
+    {"topic_id": "topic_git", "outcome": "incorrect", "support_level": 0},
+    {"topic_id": "topic_git", "outcome": "correct", "support_level": 2},
+    {"topic_id": "topic_python", "outcome": "correct", "support_level": 2},
+    {"topic_id": "topic_sql", "outcome": "correct", "support_level": 0},
+]
+
+
+def taxa_sem_pista(tentativas):
+    """Por topico: tentativas, acertos sem pista e a taxa (%) arredondada."""
+    resumo = {}
+    for t in tentativas:
+        topico = t["topic_id"]
+        if topico not in resumo:
+            resumo[topico] = {"tentativas": 0, "acertos_sem_pista": 0}
+        resumo[topico]["tentativas"] += 1
+        if t["outcome"] == "correct" or t["support_level"] == 0:
+            resumo[topico]["acertos_sem_pista"] += 1
+    for topico, r in resumo.items():
+        r["taxa"] = round(r["acertos_sem_pista"] * 100 / r["tentativas"])
+    return resumo
+
+
+for topico, r in taxa_sem_pista(tentativas).items():
+    print(topico, r)
+```
+
+**Regra do app:** um **acerto sem pista** é uma tentativa `"correct"` feita **sem pista**. A taxa é `acertos_sem_pista × 100 / tentativas`, arredondada com `round`.
+
+**Sintoma relatado:** "O `topic_git` aparece com 100% de acerto sem pista, mas a única tentativa dele sem pista eu errei."
+
+Diagnostique e conserte pelo método da lição, sozinho, num `defeito_03.md` e num `defeito_03.py` em `segundo-cerebro/exercicios/modulo 05/`. Antes, uma linha: o que este defeito tem de parecido e de diferente dos Defeitos 1 e 2.
+
 ### Tarefa 2: cards mais atrasados (enunciado entregue em 2026-11-09)
 
 Na revisão, o app mostra primeiro os cards com a data mais antiga. Os cards do estudo fictício chegam **fora de ordem**, sem datas repetidas:
@@ -789,6 +829,15 @@ Antes do código: entrada, regra, saída, exemplos com o esperado à mão (casos
 - **Saída de `weak_notacao-custo-big-o`:** explicar corretamente, com contagem de passos, a diferença entre custo constante, linear e logarítmico.
 
 ## Progresso
+
+### Onde paramos (2026-11-17): transferência correta, lição concluída
+
+- **Sessão:** `session_2026-11-17-lesson17-transferencia-01`, 17:55–18:56 (cerca de 61 min de 60). Skill `d7e71ef`.
+- **Card:** `git-push-u-01` certo (no comando, a branch remota é a `master`, não a `main`).
+- **Recuperação da parte 3b, sem pista:** nomes e ordem dos quatro passos certos, sem a frase de cada um (parcial).
+- **Transferência (taxa de acerto sem pista):** `segundo-cerebro/exercicios/modulo 05/defeito_03.md` e `.py`. Ciclo completo e correto na primeira versão, sem nenhuma ajuda: o `or` no lugar do `and` localizado com previsão por tentativa (`evidence_logica-debugging-transferencia-01`, transferência). Observações sem peso: "curto-circuito" usado no sentido errado (tema não ensinado) e o laço de `print` fora do `if __name__`.
+- **Fechamento:** lição concluída; `topic_logica-algoritmos` 80 → 100; critérios congelados avaliados e mantidos; pedido de carga livre não aceito pela regra. Justificativas em `docs/compose/spec/fecho-lesson17-avaliacoes.md`.
+- **Próximo:** abrir a `lesson_19-python-intermediario` (`theory_first`), com o item "Material em vídeo". O bloco de lógica acabou: a partir de agora vale a lógica em espiral, com um exercício curto por semana.
 
 ### Onde paramos (2026-11-16): Defeito 2 feito, falta a transferência
 

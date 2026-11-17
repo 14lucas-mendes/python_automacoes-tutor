@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 124,
+  "revision": 125,
   "cards": [
     {
       "card_id": "card_tempos-01",
@@ -583,12 +583,12 @@
       "front": "O que o -u faz em git push -u origin master?",
       "back": "Registra origin/master como branch rastreada (upstream) da branch local; depois, git pull e git status usam esse vinculo sem precisar repetir o remoto.",
       "created_at": "2026-10-07T23:40:00-03:00",
-      "updated_at": "2026-10-31T19:54:00-03:00",
-      "due_at": "2026-11-16",
+      "updated_at": "2026-11-17T17:56:42-03:00",
+      "due_at": "2026-12-22",
       "difficulty": "medium",
-      "spaced_repetition_step": 3,
-      "interval_days": 16,
-      "review_count": 3,
+      "spaced_repetition_step": 4,
+      "interval_days": 35,
+      "review_count": 4,
       "objective_correctness": true,
       "last_result": "correct",
       "confidence": null,
@@ -616,5 +616,5 @@
       "status": "review"
     }
   ],
-  "updated_at": "2026-11-16T21:00:59-03:00"
+  "updated_at": "2026-11-17T17:56:42-03:00"
 }

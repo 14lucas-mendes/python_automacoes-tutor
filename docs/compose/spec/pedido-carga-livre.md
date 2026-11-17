@@ -30,6 +30,10 @@ Pontos para a avaliação:
 
 O que mudaria se o pedido for aceito: `study-config.json` (`weekly_hours` e a nota da meta), `AGENTS.md`, `curriculum.md`, `formacao-fechada.md` e o KPI de horas do painel, que passaria a mostrar só o realizado.
 
+## Resultado da avaliação (2026-11-17)
+
+Avaliado no fecho da `lesson_17`, em `fecho-lesson17-avaliacoes.md`, seção 3. Pela regra, o pedido **não é aceito**, porque não é um bloqueio real; a carga de 10 h continua como referência. A autoridade final é do aluno: se ele quiser passar por cima da regra, a mudança é aplicada numa conversa nova.
+
 ## Mudança aplicada na mesma data, que não é estrutural
 
 O **Python Lab** foi retirado da formação. Ele nunca fez parte do que está congelado: era só referência de prática. Agora a prática e a transferência usam exemplos e exercícios de código criados pelo tutor a partir do projeto. Atualizados: `AGENTS.md` (bloco de lógica) e o `programming_plan` da `lesson_17` no estado. Os registros antigos que citam o Lab ficam como histórico.

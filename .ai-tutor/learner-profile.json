@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 38,
+  "revision": 39,
   "updated_at": "2026-11-12T19:45:43-03:00",
   "declared_preferences": [
     {
@@ -404,6 +404,17 @@
         "note": "Na transferencia sem o roteiro dos quatro passos, aplicou o ciclo inteiro sozinho e acertou na primeira versao, sem conferencia; na recuperacao, lembrou os nomes e a ordem dos passos sem pista pela primeira vez, sem descrever cada um. IA so na formatacao do md (declarado)."
       },
       "recorded_at": "2026-11-17T18:56:00-03:00"
+    },
+    {
+      "observation_id": "profile_observation_fad29134-f6e2-4333-898a-159d0bfc2be5",
+      "session_id": "session_2026-11-19-lesson19-classes-teoria-01",
+      "topic_id": "topic_python-intermediario",
+      "type": "autonomous_attempt",
+      "value": {
+        "result": "correct",
+        "note": "Tema novo (classes): nas checagens trocou classe e instancia e descreveu a lista de classe como compartilhada entre metodos, corrigidos com a analogia da ficha e do mural; pediu o enunciado reformulado regra por regra e depois fez a Tarefa 1 completa e correta de primeira, usando Card(**item), recurso ainda nao ensinado. IA so na formatacao do md (declarado)."
+      },
+      "recorded_at": "2026-11-19T17:16:00-03:00"
     }
   ],
   "inferences": [],

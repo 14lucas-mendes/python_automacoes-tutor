@@ -51,6 +51,7 @@ Notas:
 - `lesson_15-logica-decomposicao` foi **concluída** em 2026-10-23, com `topic_logica-algoritmos` em 80. A próxima é a `lesson_16-estruturas-dados`.
 - `lesson_16-estruturas-dados` foi **concluída** em 2026-10-31. A próxima é a `lesson_17-algoritmos-debugging`.
 - `lesson_17-algoritmos-debugging` foi **concluída** em 2026-11-17, com `topic_logica-algoritmos` em 100. O bloco de lógica acabou; a próxima é a `lesson_19-python-intermediario`.
+- `lesson_19-python-intermediario` foi **aberta** em 2026-11-19: teoria das partes 1 e 2 (classes e dataclasses) escrita, Tarefa 1 correta; `topic_python-intermediario` em 40.
 
 ## IA aplicada: conteúdo unificado e lente agêntica (decisão do aluno, 2026-10-23)
 

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 450,
-  "updated_at": "2026-11-17T18:56:00-03:00",
+  "revision": 457,
+  "updated_at": "2026-11-19T17:16:00-03:00",
   "topics": [
     {
       "topic_id": "topic_python-fundamentos",
@@ -401,11 +401,13 @@
       "prerequisite_topic_ids": [
         "topic_logica-algoritmos"
       ],
-      "mastery": 0,
+      "mastery": 40,
       "retention": "unknown",
-      "status": "not_started",
-      "last_practice": null,
-      "evidence_ids": [],
+      "status": "in_progress",
+      "last_practice": "2026-11-19",
+      "evidence_ids": [
+        "evidence_intermediario-modelos-card-sessao-01"
+      ],
       "required_evidence_types": [
         "feynman",
         "application",
@@ -417,7 +419,7 @@
         "logging no lugar de print",
         "excecao propria testada"
       ],
-      "progress_note": "2026-10-08: topico criado no fechamento da formacao (formacao-fechada.md). Dominio 0, sem heranca."
+      "progress_note": "2026-10-08: topico criado no fechamento da formacao (formacao-fechada.md). Dominio 0, sem heranca.2026-11-19: 0 -> 40. Modelagem autonoma e correta de Card e Sessao como dataclasses tipadas (evidence_intermediario-modelos-card-sessao-01), registrada como supporting porque cobre so a parte de modelagem do objetivo; faltam pacote, logging e excecoes proprias, ainda nao ensinados. O 60 pede a aplicacao padrao com todas as partes e um Feynman autonomo."
     },
     {
       "topic_id": "topic_devops-deploy",
@@ -3008,8 +3010,25 @@
       },
       "recorded_at": "2026-11-17T18:49:00-03:00",
       "result": "correct",
-      "error": "Nenhum erro. Observacoes de precisao: chamou de 'curto-circuito' o fato de o or aceitar um lado so (curto-circuito e o Python parar de avaliar; nao foi ensinado e nao rebaixa); o laco de print no nivel do modulo, vindo do codigo do tutor, ficou fora do if __name__.",
+      "error": "Nenhum erro. Observacoes de precisao: chamou de 'curto-circuito' o fato de o or aceitar um lado so (curto-circuito e o Python parar de avaliar, como no card cond-03; imprecisao que nao rebaixa); o laco de print no nivel do modulo, vindo do codigo do tutor, ficou fora do if __name__.",
       "limit_or_self_correction": true
+    },
+    {
+      "evidence_id": "evidence_intermediario-modelos-card-sessao-01",
+      "topic_id": "topic_python-intermediario",
+      "session_id": "session_2026-11-19-lesson19-classes-teoria-01",
+      "kind": "supporting",
+      "autonomous": true,
+      "transfer": false,
+      "context": "Tarefa 1 da lesson_19: Card e Sessao como dataclasses tipadas (dataclass.md e dataclass.py; o enunciado pedia modelos.md/.py). Decomposicao com esperados a mao (vencidos em 19/11 com o caso da data igual) e plano; codigo com padroes 0 e None, str | None, field(default_factory=list), metodos vencido e esta_aberta, conversao dos dicionarios e todos os asserts da regra 7 passando. Ajuda: enunciado reformulado regra por regra a pedido do aluno (nao tira a autonomia). Declaracao: IA so na formatacao do md (vale o declarado). Registrada como supporting: cobre so a parte de modelagem do objetivo da licao, que tambem pede pacote, logging e excecoes proprias (ainda nao ensinados).",
+      "reference": {
+        "type": "session",
+        "id": "session_2026-11-19-lesson19-classes-teoria-01",
+        "location": "E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 06/dataclass.md (sha256 c6b7d261fe36dae9...) e E:/Lucas/Documents/segundo-cerebro/exercicios/modulo 06/dataclass.py (sha256 5c66e67d69ef6d12...); tutor rodou: 'Todos os testes passaram'"
+      },
+      "recorded_at": "2026-11-19T17:13:00-03:00",
+      "result": "correct",
+      "error": "Nenhum erro. Observacoes: Card(**item) desempacota o dicionario, recurso ainda nao ensinado nesta formacao (nao rebaixa; ensinado na devolutiva); nomes dos arquivos diferentes do enunciado; funcao de conversao sem dicas de tipo (nao exigido)."
     }
   ],
   "sessions": [
@@ -4909,6 +4928,36 @@
         "reason": "Um unico topico na pratica; interleaving nao se aplica."
       },
       "checkpoint": "Aberta em 2026-11-17T17:55 com 60 min (informado pelo aluno). Skill atualizada de 5ab5de1 para d7e71ef (PR #9, so README): unittest OK, validate_skill PASS, validate_study PASS. Fase pelo dominio: topic_logica-algoritmos em 80, transferencia (procedimento): listar semelhancas e diferencas com os defeitos ja resolvidos, depois a tarefa no contexto novo. Um so card vencido. | 17:57 card git-push-u-01 correto (imprecisao: main em vez de master). Recuperacao da 3b sem pista: nomes e ordem certos, sem a frase de cada passo (partial). | 18:02 transferencia entregue na licao. 18:47 defeito_03 completo e correto na primeira versao, sem ajuda (evidence_logica-debugging-transferencia-01, transfer: true). IA so na formatacao do md (declarado). | 18:56 encerrada a pedido do aluno (~61 min de 60) com o fechamento da lesson_17: licao concluida; topic_logica-algoritmos 80 -> 100; congelamento dos criterios encerrado (mantidos sem mudanca); pedido de carga livre avaliado (docs/compose/spec/fecho-lesson17-avaliacoes.md). Proximo: abrir a lesson_19-python-intermediario (theory_first) com o item Material em video."
+    },
+    {
+      "session_id": "session_2026-11-19-lesson19-classes-teoria-01",
+      "status": "completed",
+      "transitions": [
+        "in_progress",
+        "completed"
+      ],
+      "started_at": "2026-11-19T15:40:00-03:00",
+      "ended_at": "2026-11-19T17:16:00-03:00",
+      "resumable": false,
+      "time_budget_minutes": 60,
+      "lesson_ids": [
+        "lesson_19-python-intermediario"
+      ],
+      "topic_ids": [
+        "topic_python-intermediario"
+      ],
+      "objective": "(1) Cards vencidos (retrieval_first): tempos-06, tempos-07, cond-03. (2) Abrir a lesson_19 com o item Material em video. (3) Teoria da parte 1 (theory_first, tema novo): classes e objetos (classe, objeto, __init__, self, atributo, metodo, variavel de classe x de instancia), com checagens.",
+      "cognitive_core": "Nesta sessao, so a teoria e as checagens (nao sao evidencia). Na pratica, nas proximas sessoes: modelar os dados da formacao como classes e depois dataclasses tipadas.",
+      "mode": "assessment",
+      "practice_strategy": {
+        "mode": "blocked",
+        "topic_ids": [
+          "topic_python-intermediario"
+        ],
+        "topic_label_visible": true,
+        "reason": "Aquisicao de tema novo num unico topico; interleaving nao se aplica."
+      },
+      "checkpoint": "Aberta em 2026-11-19T15:40 com 60 min (informado pelo aluno). Skill d7e71ef, sem novidade no remoto. theory_first. Fase pelo dominio: topic_python-intermediario em 0, superficie-aquisicao (procedimento): teoria do zero e exemplo lido linha a linha, diferente da tarefa. Fonte nova: source_python-tutorial-classes. Correcao de registro: em evidence_logica-debugging-transferencia-01, curto-circuito ja tinha aparecido no card cond-03 (nao era tema nao ensinado); a classificacao nao muda. | 15:42-15:45 cards 3 de 3 certos (tempos-06, tempos-07, cond-03). | Teoria da parte 1 (classes e objetos) escrita e dada em 3 blocos; checagens (nao sao evidencia): ficha/instancia com a palavra instancia trocada (chamou a classe de instancia), ensinado; lotacao 25 certa; lista da PlaylistErrada no lugar certo, mas 'compartilhada entre metodos' em vez de entre objetos, ensinado com o mural. | Parte 2 (dicas de tipo e dataclasses) escrita e dada em 3 blocos; fonte source_python-dataclasses; checagens certas (dica documenta, com o complemento de editor/mypy; repr de Viagem('175T',10,40); default_factory). | 16:08 Tarefa 1 (Card e Sessao como dataclasses) entregue na licao; modo assessment na pratica. A pedido do aluno, enunciado reformulado regra por regra (ajuda que nao tira a autonomia: so o que e pedido, sem decisao, plano ou codigo; exemplo da regra 2 com outra data). Aluno comecou o modelos.md. | 17:10 Tarefa 1 entregue (dataclass.md/.py): completa e correta de primeira, sem conferencia; IA so na formatacao do md (declarado). topic_python-intermediario 0 -> 40. | 17:16 encerrada a pedido do aluno (~105 min desde 15:31, alem dos 60). Proximo: recuperacao curta das partes 1 e 2, teoria da parte 3 (modulos, pacote e pyproject) e renomear dataclass.md/.py para modelos."
     }
   ],
   "lessons": [
@@ -5505,8 +5554,10 @@
       "prerequisite_lesson_ids": [
         "lesson_17-algoritmos-debugging"
       ],
-      "status": "planned",
-      "session_ids": [],
+      "status": "in_progress",
+      "session_ids": [
+        "session_2026-11-19-lesson19-classes-teoria-01"
+      ],
       "required_evidence_types": [
         "feynman",
         "application",
@@ -5526,7 +5577,9 @@
         "new_constraint": "dados com forma declarada (tipos e classes)",
         "expected_transfer": "modelar sozinho uma entidade nova (fonte ou ponto fraco)"
       },
-      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)"
+      "roadmap_note": "formacao fechada aprovada pelo aluno em 2026-10-08 (docs/compose/spec/formacao-fechada.md)",
+      "file": "lessons/19-python-intermediario.md",
+      "progress_note": "2026-11-19: licao aberta (theory_first, tema novo: classes nunca ensinadas nesta formacao). Partes previstas da teoria: 1 classes e objetos; 2 dicas de tipo e dataclasses; 3 modulos, pacote e pyproject; 4 logging; 5 excecoes proprias com teste. | 2026-11-19: teoria das partes 1 (classes e objetos) e 2 (dicas de tipo e dataclasses) escrita e dada; Tarefa 1 (Card e Sessao) correta de primeira (evidence_intermediario-modelos-card-sessao-01, supporting). Proximo: parte 3 (modulos, pacote e pyproject)."
     },
     {
       "lesson_id": "lesson_18-docker-vps-deploy",
@@ -7291,6 +7344,33 @@
       "outcome": "partial",
       "support_level": 0,
       "recorded_at": "2026-11-17T18:00:00-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_e38d0927-8e13-481a-a791-9404c505f9cd",
+      "session_id": "session_2026-11-19-lesson19-classes-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-06: None automaticamente, sem aviso",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-19T15:35:28-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_a962fc83-4061-4901-8565-333c2edb8ecb",
+      "session_id": "session_2026-11-19-lesson19-classes-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_tempos-07: TypeError porque None nao e texto; sem dizer que None e um valor do tipo NoneType",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-19T15:35:51-03:00"
+    },
+    {
+      "retrieval_id": "retrieval_424dc633-d982-44e1-b825-801b041f49f6",
+      "session_id": "session_2026-11-19-lesson19-classes-teoria-01",
+      "topic_id": "topic_python-fundamentos",
+      "prompt": "Card card_cond-03: lista nao vazia com if len(lista) > 0; sem o uso combinado com and e o curto-circuito",
+      "outcome": "correct",
+      "support_level": 0,
+      "recorded_at": "2026-11-19T15:36:14-03:00"
     }
   ]
 }

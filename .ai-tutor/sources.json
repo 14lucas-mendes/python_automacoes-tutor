@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "study_id": "study_a0b79f6a-7ee0-41aa-b396-d19f057b3949",
-  "revision": 10,
+  "revision": 12,
   "sources": [
     {
       "source_id": "source_github-octoverse-2025",
@@ -376,7 +376,39 @@
         "topic_logica-algoritmos"
       ],
       "authority_reason": "Documentacao oficial do Python: RecursionError deriva de RuntimeError e e levantada quando a profundidade maxima de recursao (sys.getrecursionlimit) e excedida."
+    },
+    {
+      "source_id": "source_python-tutorial-classes",
+      "title": "9. Classes (The Python Tutorial)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "publication_date": null,
+      "accessed_at": "2026-11-19",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_19-python-intermediario"
+      ],
+      "topic_ids": [
+        "topic_python-intermediario"
+      ],
+      "authority_reason": "Tutorial oficial do Python: instanciacao e __init__ (9.3.2), objetos de instancia (9.3.3), x.f() equivale a MyClass.f(x) (9.3.4), variaveis de classe x de instancia com o erro da lista compartilhada (9.3.5) e self como convencao (9.4). Lido em 19/11/2026 (pagina da versao 3.15)."
+    },
+    {
+      "source_id": "source_python-dataclasses",
+      "title": "dataclasses - Data Classes (Python Documentation)",
+      "author_or_institution": "Python Software Foundation",
+      "url": "https://docs.python.org/3/library/dataclasses.html",
+      "publication_date": null,
+      "accessed_at": "2026-11-19",
+      "source_type": "official documentation",
+      "lesson_ids": [
+        "lesson_19-python-intermediario"
+      ],
+      "topic_ids": [
+        "topic_python-intermediario"
+      ],
+      "authority_reason": "Documentacao oficial: @dataclass gera __init__, __repr__ e __eq__ por padrao; campo e variavel de classe com anotacao de tipo; o decorador nao examina o tipo anotado (salvo ClassVar e InitVar); padrao nao hashavel levanta ValueError; default_factory chamado sem argumentos; slots=True gera __slots__. Lido em 19/11/2026 (pagina da versao 3.15)."
     }
   ],
-  "updated_at": "2026-11-12T18:50:00-03:00"
+  "updated_at": "2026-11-19T16:00:00-03:00"
 }

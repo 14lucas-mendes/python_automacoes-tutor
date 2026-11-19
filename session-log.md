@@ -4,6 +4,19 @@
      preserva este arquivo (não tem marca de gerado) e só atualiza o flashcards.md.
      Nunca usar `--force` neste estudo: substituiria esta narrativa por um resumo mecânico. -->
 
+## `session_2026-11-19-lesson19-classes-teoria-01`: abertura da `lesson_19`
+
+- Status: concluída (15:31–17:16, ~105 min; 60 informados). Skill `d7e71ef`, sem novidade no remoto. Modo `learning` na teoria e `assessment` na Tarefa 1. Encerrada a pedido do aluno.
+- **Fase e estratégia:** `topic_python-intermediario` em 0, superfície (aquisição), procedimento: teoria do zero, exemplos lidos linha a linha e diferentes da tarefa.
+- **Lição aberta:** `lessons/19-python-intermediario.md`, com o item "Material em vídeo" (Guanabara POO 1–5 antes ou depois da parte 1; desafios POO 16–33 só depois da tentativa). Fontes novas: `source_python-tutorial-classes` e `source_python-dataclasses`, lidas na documentação oficial.
+- **Correção de registro:** em `evidence_logica-debugging-transferencia-01`, "curto-circuito" já tinha aparecido no card `cond-03`; não era tema não ensinado. A classificação não muda.
+- **Cards (retrieval_first), 3 de 3 certos:** `tempos-06`, `tempos-07` e `cond-03`.
+- **Teoria das partes 1 (classes e objetos) e 2 (dicas de tipo e dataclasses):** ficha em branco e fichas preenchidas, `__init__`, `self`, métodos, variável de classe ou de instância (a lista compartilhada), dicas de tipo não conferidas ao rodar, `@dataclass`, valor padrão, `field(default_factory=list)` e `slots=True` como recurso extra. Exemplos conferidos por execução.
+- **Checagens (não são evidência):** classe chamada de "instância", ensinado; `lotacao` 25 certo; lista "compartilhada entre métodos", ensinado que é entre objetos; dica de tipo, `repr` e `default_factory` certos.
+- **Tarefa 1, Card e Sessão como dataclasses** (`segundo-cerebro/exercicios/modulo 06/dataclass.md` e `.py`; o enunciado pedia `modelos`): a pedido do aluno, o enunciado foi reformulado regra por regra (ajuda que não tira a autonomia). Decomposição e código completos e corretos de primeira, com todos os `assert`. Pergunta neutra: "IA só para formatar o texto do md". Vale o declarado. Usou `Card(**item)`, ainda não ensinado: não rebaixa e foi ensinado na devolutiva. `evidence_intermediario-modelos-card-sessao-01` (`supporting`: cobre só a modelagem do objetivo).
+- **Regra 9:** `topic_python-intermediario` 0 → 40. Modelos ✅; faltam pacote, logging, exceção própria e Feynman. O 60 pede a aplicação padrão com todas as partes.
+- **Próximo passo:** recuperação curta das partes 1 e 2, teoria da parte 3 (módulos, pacote e `pyproject`) e renomear os arquivos para `modelos`. A lógica em espiral (um exercício curto por semana) ainda não teve o primeiro exercício.
+
 ## `session_2026-11-17-lesson17-transferencia-01`: fechamento da `lesson_17`
 
 - Status: concluída (17:55–18:56, ~61 min de 60 informados). Modo `assessment`. Encerrada a pedido do aluno, com o fechamento da lição.

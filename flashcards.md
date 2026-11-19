@@ -77,8 +77,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-11-18`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-24`
+- Intervalo: `35 dias`
 
 ## card_tempos-07
 
@@ -90,8 +90,8 @@
 - Lição: `lesson_03-testes-git`
 - Fontes: `source_python-errors-exceptions`
 - Status: `review`
-- Próxima revisão: `2026-11-18`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-24`
+- Intervalo: `35 dias`
 
 ## card_tempos-08
 
@@ -142,8 +142,8 @@
 - Lição: `lesson_01-python-core`
 - Fontes: `source_python-boolean-ops`
 - Status: `learning`
-- Próxima revisão: `2026-11-18`
-- Intervalo: `16 dias`
+- Próxima revisão: `2026-12-24`
+- Intervalo: `35 dias`
 
 ## card_cond-04
 
